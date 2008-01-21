@@ -1,0 +1,236 @@
+<?php
+//Arguments
+//Example : http://localhost/Log?Name=MediaInfoGUI&Version=0.7.1.0&Lib=0.7.1.0
+strtok($_SERVER["REQUEST_URI"], "?");
+parse_str(strtok("?"), $Argument);
+//Language
+if (isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]{1}))
+ $Language=$_SERVER["HTTP_ACCEPT_LANGUAGE"]{0}.$_SERVER["HTTP_ACCEPT_LANGUAGE"]{1};
+else
+ $Language="en";
+if ($Language<>"en" && $Language<>"fr")
+ $Language="en";
+//LastVisited
+if (isset($HTTP_COOKIE_VARS["LastVisited"]))
+ $AlreadyVisited='Y';
+else
+ setcookie("LastVisited", time(), time()+2*24*60*60);
+?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head> 
+ <title>MediaInfo - ChangeLog</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php
+if (!isset($AlreadyVisited))
+ echo '<meta http-equiv="refresh" content="'.mt_rand(10, 20).'; URL=http://mediainfo.sourceforge.net/'.$Language.'" />
+';
+?>
+ <meta name="identifier-url" content="http://mediainfo.sourceforge.net" />
+ <meta name="revisit-after" content="7 days" />
+ <meta name="robots" content="index,follow" />
+ <link rel="stylesheet" type="text/css" href="/_/CSS/Default.css" title="Default" />
+ <link rel="icon" type="image/png" href="/_/Image/Icon.png" />
+ <link rel="shortcut icon" type="image/x-icon" href="/_/Image/Icon.ico" />
+</head>
+<?php
+//ChangeLog
+$Title="MediaInfo - ChangeLog";
+if (!isset($AlreadyVisited))
+ include $Path."/_/Ad/728_90_Google.html";
+?>
+<br />
+<table border="0" cellpadding="0" cellspacing="0">
+ <tbody>
+  <tr>
+   <td><?php if (!isset($AlreadyVisited))
+              include $Path."/_/Ad/250_250_Google.html";?></td>
+   <td>
+<div id="ShouldShow" class="Invisible">Yes</div>
+<div id="NewVersion">
+<div id="en"<?php if($Language<>'en') echo' class="Invisible"'; ?>>
+No new version available<br />
+<a href="http://mediainfo.sourceforge.net/en">Visit MediaInfo website</a><br />
+</div>
+<div id="fr"<?php if($Language<>'fr') echo' class="Invisible"'; ?>>
+Pas de nouvelle version disponible<br />
+<a href="http://mediainfo.sourceforge.net/fr">Visiter le site MediaInfo</a><br />
+</div>
+</div>
+<div id="ChangeLog"><pre>
+Changes:
+Version 0.7.4.0 2006-11-24
+---------------
++ Chinese (simplified) language
++ AVI with AAC-SBR : detection of real SamplingRate (not the sampling rate in header)
++ AVI with DV : basic information about audio
++ AVI with DV : detection of duplicated audio stream
++ Google Video : metadatas
++ AVI : now able to read metadatas at the end of the file
++ AVI : Bitrate computed is based on filesize in header instead of real filesize (for broked files)
++ AVI (DivX) : Menu detection (yes or no)
++ AVI : detection of VBR MP3 (useful for DVD players, sometimes they don't accept it)
++ AVI : detection of Delay between Audio and Video (for MPEG Audio, AC3 and DTS)
++ PlayStationPortable MPEG-4 files support
++ 3GPP5 files support
++ MPEG-4 : Detection of MP3, Vorbis streams embeded in a 'mp4a' atom
++ MPEG-4 : Detection of AVC streams embeded in a 'mp4v' atom
++ MPEG-2TS with MPEG-4 and AC3 detection
++ Speed improvements
+x AVI : infinite loop on one example file
+x AVI : some bad detections corrected
+x MPEG-PS : infinite loop in intra Matrix on one example file
+x MPEG TS : better detection of streams
+
+Version 0.7.3.1 2006-07-30
+---------------
++ Galician language
++ Swedish language
++ Chinese (traditional) language
++ MPEG-1/2 PS : more files have a duration
++ AVI with MPEG-4 Video based codecs (DivX, XviD...), more encoder string detections
+x Matroska, crash with big (>4GB) files
+
+Version 0.7.3.0 2006-07-19
+---------------
++ "ToolTip", move your mouse on a file in Windows explorer, info will be shown (Beta)
++ MPEG-1 and 2 Transport Stream support
++ MPEG-1 and 2 Video : Custom Matrix detection
++ MPEG-4 Video : Custom Matrix detection
++ Google Video (GVI) support
++ AMV/MTV (Chinese) detection (if you have specifications of theses formats, email me)
++ AVI/DivX/GoogleVideo and MPEG-4 Video : packed bistream detection.
+  Now you can know if your DVD player can read the file before burning. Next step: a database of DVD player capacities ;-)
++ MPEG-4 : Language
++ MPEG-4 : Text streams (subtitles)
+x #1485003 : MP3, "Title" tag was sometimes forgotten
+x #1485804 : Wrong bitrate and time in PCM files
+x #1485810 : wrong playtime on CBR MP3 files with big id3v2 tags
+x #1485803 : some WMA tags were forgotten
+x #1488449 : crash on very rare buggy MP3 files
+x #1482686 : ShellExtension, crash when moving a directory
+x #1488770 : PlayTime, some "minutes" formating were forgotten
+x #1485044 : some .ico files were detected as MPEG Audio
+x AVI, handle some malformed timestamps in tags (carriage return at the end...)
+x MPEG-1 and 2 : incoherancy of PlayTime
+
+Version 0.7.2.1 2005-05-08
+---------------
++ Dutch language
++ Romanian language
++ MPEG-4 : Chroma ("4:2:0"...)
++ MPEG-4 : Interlacement mode ("Top field first", "bottom field first", or "Progressive")
++ MPEG-2 : Chroma ("4:2:0"...)
++ MPEG-2 : Interlacement mode ("Top field first", "bottom field first", or "Progressive")
++ MPEG-2 : Profile and Level ("Main@Main"...)
++ MPEG-2 : Standard (NTSC, PAL, SECAM, or MAC)
+x #1482346 : Incorrect playback time in OGG files (was not enough precise).
+x #1482602 : MPEG-4 video false positive files
+
+Version 0.7.2.0 2005-04-30
+---------------
++ Polish language
++ Turkish language
++ Multi-plural languages support, example in Polish : 1 kanal, 2 kanaly, 6 kanalow
++ Genres can be translated by translators
++ AVI with DivX or XviD : encoder name, GMC/QPel/B-frames indicator if present (beta)
++ AVI and WAV with MP3 : encoder name, precise version and layer number, VBR indication
++ Matroska: support of anamorphic videos (right Aspect Ration even if pixel aspect ratio is not 1:1)
++ AVI/WAV : support of extended wave files (20 bit per sample and more than 2 channels) and channel position
++ AVI : support of Exif tag format
++ AVI : more tags are supported
++ Real : detect RealAudio Lossless Format
+x #1454010 : v0.7.1.2 was checking updates even if the user did not want
+x #1454009 : AC3, sometimes wrong AC3 playtime
+x #1469423 : MP3 with cyrilic filenames, Id3 tags can be read
+x #1464066 : Hang ups with raw h264 streams
+x x1462647 : Quicktime files with preview image, crash
+x x1445150 : crash with some malformed MusePack files (workaround, this is a the Musepack bug, not yet corrected)
+
+Version 0.7.1.2 2005-03-10
+---------------
++ #1438441: show TV format (PAL/NTSC) for DVD and DV
++ #1343147: Matroska, Show Chapter names
++ MPEG-1 and 2, more precise playtime
++ MPEG-1 and 2, Added Encoded_Application if it is in video user data
++ Quicktime: Support of Quicktime "wide" (header at the end of the file)
++ MPEG Audio: Detect small (examples, less than 200K) MPEG Audio files with Id3v1 tag
++ #1441661: AVI, Handling of DV Type 1
+x #1440480: No Audio Found in MPEG-2 after 0.7.0.4
+x #1438987: Infinite loop with some Matroska files
+x Matroska, Recorded date is now in UTC format, rather than the number of seconds since 1970
+x AC3 noted 5 channels (because of 5.1) are now noted 6 channels (more realistic)
+x Quicktime: "ima4" or "twos" codecs were detected as Video stream instead of Audio stream
+
+Version 0.7.1.1 2005-02-24
+---------------
++ Now ~900 codec names (Audio/video/Text) are known (instead of 500)
++ Turkish translation
++ Matroska : Framerate is now for all kinds of codec (and not only FourCC based ones)
++ MPEG-4 (m4V, Quicktime...) with unicode filename are now handled (before : crash on htis kind of file)
++ #1326802: MOV with 3GPP datas.
++ Meta-tags of Quickime HD files
++ #1244215: bit-rate details for MPEG-1 Video (VBR) (calculated with other CBR streams)
++ Detection of MXF files
++ #785338: Huge work on RealMedia parser (bitrate, channels, sampling rate, fps...)
++ #1428289: .divx files are handle by MediaInfo in the context menu
+x #1435086: Translation problems if the program is launched directly with a filename
+x #1361647: Complete rewrite of MPEG-4 (newest Quicktime, 3GPP, iTunes...) parser to be more robust.
+x Some minor (but crashing :( ) bug fixes
+x AVI with DV was not well parsed
+
+Version 0.7.1.0 2006-02-02
+---------------
++ Speed improvements
++ #1383832 : support of last version of Quicktime files
++ Support of Musepack files
++ Support of Flic (FLI/FLV) video files
++ Support of DTS-HD (DTS at 96 KHz / 24 bits)
++ Support of ID3 tags (v1 and v2) in .AAC files
++ Support of all Tags in AVI files
++ Detection of QuickTime image files and QuickTime compressed archives
++ Detection of AVC files (3GPP, 3GPP Mobile or JVT)
++ Detection of iTunes protected files
++ Detection of H264 files (Raw, 3GPP or JVT)
++ Detection of Dirac raw video files
++ Detection of TrueAudio files
++ Detection of WavePack files
++ Support of files with more than 8 audio streams or 32 text streams
+x #1381660 & #1370972 : Sheet export does not place all info in output
+x #1420653 : Sheet preferences were not updated
+x #1368901 : Sometimes thre was an error in "your system" tab
+x #1420672 : No WMV bitrate
+x Crash with some corrupted MPEG files
+x Crash with some MP3 files with corrupted ID3v2 tags
+x Crash with some Quicktime files with corrupted tags
+x #1257550 (again :) ) : with AVI, rounding of FPS had an impact of FrameCount, based on FPS. Now based on AVI file (better ;-) )
+x #1381652 : Reported some GIF files as Mpeg audio
+x #1381619 : UPX compressor is no more used, to prevent Virus checker to use 100% CPU
+x 2nd Video framerate forgotten
+x Video languages were not parsed (example : "en" should be "English")
+x FrameRate/String was forgeting measure (example : "at 25" should be "at 25 fps")
+x Some case sensitive problems (example : "KBps" instead of "Kbps", 8 times more)
+x DTS and AC3 channels position names were changed to be more human readable
+</pre></div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<?php
+if (!isset($AlreadyVisited))
+ include $Path."/_/Ad/728_90_Google.html";
+?>
+<table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+ <tbody>
+  <tr>
+   <td align="center">
+    <a href="http://sourceforge.net" rel="nofollow"><img src="http://sourceforge.net/sflogo.php?group_id=86862;type=1" alt="SourceForge" /></a>
+    <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" /></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" /></a>
+    <?php include $Path."/_/Ad/Xiti_Log.html"; ?>
+    <?php include $Path."/_/Ad/PhpMyVisites_Log.html"; ?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</html>
