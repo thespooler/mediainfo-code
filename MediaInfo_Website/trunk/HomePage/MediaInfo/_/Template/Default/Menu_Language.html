@@ -44,6 +44,8 @@
      $Menu_Language_ko=implode("/", $REQUEST_URI_Exploded);
      $REQUEST_URI_Exploded[1]="pt";
      $Menu_Language_pt=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="ca";
+     $Menu_Language_ca=implode("/", $REQUEST_URI_Exploded);
      ?>
      <a href="<?php echo $Menu_Language_en; ?>"><img title="English" alt="English" src="/_/Image/Default/Flag/UK.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
         href="<?php echo $Menu_Language_fr; ?>"><img title="Français" alt="Français" src="/_/Image/Default/Flag/France.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
@@ -58,7 +60,8 @@
         href="<?php echo $Menu_Language_zh_TW; ?>"><img title="Chinese (Traditional)" alt="Chinese (Traditional)" src="/_/Image/Default/Flag/Taiwan.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
         href="<?php echo $Menu_Language_bg; ?>"><img title="Bulgarian" alt="Bulgarian" src="/_/Image/Default/Flag/Bulgaria.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
         href="<?php echo $Menu_Language_ko; ?>"><img title="Korean" alt="Korean" src="/_/Image/Default/Flag/Korea.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
-        href="<?php echo $Menu_Language_pt; ?>"><img title="Portuguese" alt="Portuguese" src="/_/Image/Default/Flag/Portugal.png" /></a>
+        href="<?php echo $Menu_Language_pt; ?>"><img title="Portuguese" alt="Portuguese" src="/_/Image/Default/Flag/Portugal.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_ca; ?>"><img title="Català" alt="Català" src="/_/Image/Default/Flag/Catalonia.png" /></a>
     </div>
    </td>
    <td class="Flags" style="width: 1px;"></td>
