@@ -1,0 +1,73 @@
+﻿<table border="0" cellpadding="0" cellspacing="0">
+ <tbody>
+  <tr>
+   <td class="Top_Middle"></td>
+   <td class="Top_Right"></td>
+  </tr>
+ </tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0">
+ <tbody>
+  <tr>
+   <td colspan="3" class="Flags" style="height: 1px; width: 250px;"></td>
+  </tr>
+  <tr>
+   <td>
+    <div class="FlagsAround">
+     <?php
+     $REQUEST_URI_Exploded=explode ("/", $_SERVER["REQUEST_URI"]);
+     $REQUEST_URI_Exploded[1]="en";
+     $Menu_Language_en=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="fr";
+     $Menu_Language_fr=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="de";
+     $Menu_Language_de=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="it";
+     $Menu_Language_it=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="hu";
+     $Menu_Language_hu=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="ru";
+     $Menu_Language_ru=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="pl";
+     $Menu_Language_pl=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="nl";
+     $Menu_Language_nl=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="sv";
+     $Menu_Language_sv=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="zh-CN";
+     $Menu_Language_zh_CN=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="zh-TW";
+     $Menu_Language_zh_TW=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="bg";
+     $Menu_Language_br=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="ko";
+     $Menu_Language_ko=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="pt";
+     $Menu_Language_pt=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="ca";
+     $Menu_Language_ca=implode("/", $REQUEST_URI_Exploded);
+     ?>
+     <a href="<?php echo $Menu_Language_en; ?>"><img title="English" alt="English" src="/_/Image/Default/Flag/UK.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_fr; ?>"><img title="Français" alt="Français" src="/_/Image/Default/Flag/France.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_de; ?>"><img title="Deutsch" alt="Deutsch" src="/_/Image/Default/Flag/Germany.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_it; ?>"><img title="Italiano" alt="Italiano" src="/_/Image/Default/Flag/Italy.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_hu; ?>"><img title="Magyar" alt="Magyar" src="/_/Image/Default/Flag/Hungary.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><br /><a
+        href="<?php echo $Menu_Language_ru; ?>"><img title="Русский" alt="Русский" src="/_/Image/Default/Flag/Russia.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_pl; ?>"><img title="Polish" alt="Polish" src="/_/Image/Default/Flag/Poland.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_nl; ?>"><img title="Nederlands" alt="Nederlands" src="/_/Image/Default/Flag/Neederlands.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_sv; ?>"><img title="Sverige" alt="Sverige" src="/_/Image/Default/Flag/Sweden.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_zh_CN; ?>"><img title="Chinese (Simplified)" alt="Chinese (Simplified)" src="/_/Image/Default/Flag/China.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><br /><a
+        href="<?php echo $Menu_Language_zh_TW; ?>"><img title="Chinese (Traditional)" alt="Chinese (Traditional)" src="/_/Image/Default/Flag/Taiwan.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_bg; ?>"><img title="Bulgarian" alt="Bulgarian" src="/_/Image/Default/Flag/Bulgaria.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_ko; ?>"><img title="Korean" alt="Korean" src="/_/Image/Default/Flag/Korea.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_pt; ?>"><img title="Portuguese" alt="Portuguese" src="/_/Image/Default/Flag/Portugal.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_ca; ?>"><img title="Català" alt="Català" src="/_/Image/Default/Flag/Catalonia.png" /></a>
+    </div>
+   </td>
+   <td class="Flags" style="width: 1px;"></td>
+  </tr>
+  <tr>
+   <td colspan="2" class="Flags" style="height: 1px"></td>
+  </tr>
+ </tbody>
+</table>
