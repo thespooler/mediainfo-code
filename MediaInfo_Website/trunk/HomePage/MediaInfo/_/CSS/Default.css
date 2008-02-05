@@ -19,6 +19,7 @@ h4                              {font-size: small}
 
 .Banner_Bottom                  {background-image:url(/_/Image/Default/Bottom/Gradient.jpg); background-repeat:repeat-y}
 .Note                           {color:black; background:#AAAAAA}
+.Info                           {color:black; background:#AAAAFF}
 .Invisible                      {display:none}
 .Warning                        {color:black; background-color:#FF5555}
 

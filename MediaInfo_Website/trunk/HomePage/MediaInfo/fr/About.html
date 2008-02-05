@@ -1,10 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 <head>
  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
  <title></title>
 </head>
 <body>
+<?php
+if (stristr($_SERVER['HTTP_USER_AGENT'], "Macintosh")) {
+
+echo '<div class="Info" lang="en">A l\'attention des utilisateurs Mac,<br />La version GUI (Interface Graphique) de MediaInfo pour Mac n\'est pas encore prête.<br />En attendant, deux applications pour Mac utilisent déja la bibliothèque MediaInfo :<ul> <li><a href="http://laurent.ettouati.free.fr/VideoSpec">VideoSpec de Laurent Ettouati (en français)</a>.</li> <li><a href="http://massanti.com/mediainfo/">MediaInfo Mac de Diego Massati (en anglais)</a>.</li></ul>Note : aucune de ces deux applications n\'est officiellement supportée, merci de contacter leurs auteur respectif en cas de problème.<br /><br /></div>';
+
+}
+?>
 <h1 class="Invisible">MediaInfo, Media Info, MediaInfoDLL, MediaInfo.DLL, MediaInfo DLL, Media Info DLL</h1>
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
  <tbody>
