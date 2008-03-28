@@ -74,3 +74,27 @@ h4                              {font-size: small}
 #Contents .First                {margin-top:0em}
 #Contents .Paragraph_Block      {display:block; color:#000020; background-color:white; border-style:none none dotted  dotted; border-color:rgb(89, 93, 150); border-width:0px 0px 1px 1px; padding:1px 0em 0.5em 0.5em}
 #Contents #Adress               {color:#02021E; border-style:dashed dashed dashed solid; border-color:#FF9000; border-width:1px 1px 1px 3px; margin-left:10%; margin-right:50%; padding:4px 4px 4px 20px; background-color:#F7F5EF}
+#Contents .cppcode                         {
+	width: 99%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #84b0c7;
+	-moz-border-radius: 4px 4px 4px 4px;
+    background-color:#d5e1e8;
+}
+#Contents .cpplisting                         {
+	width: 99%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #84b0c7;
+	-moz-border-radius: 4px 4px 4px 4px;
+    background-color:#d5e1e8;
+	white-space: nowrap;
+	white-space: pre;
+}
+#Contents .cpplisting_comment                         {
+    color:green;
+}
+#Contents .cpplisting_toprovide                        {
+    color:red;
+}
