@@ -18,7 +18,7 @@ parse_str(strtok("?"), $Argument);
 if (isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]))
 {
  $Language=strtolower(substr($_SERVER["HTTP_ACCEPT_LANGUAGE"], 0, 2));
- if ($Language=="zh" && strlen($_SERVER["HTTP_ACCEPT_LANGUAGE"])>5 && $_SERVER["HTTP_ACCEPT_LANGUAGE"]{2}=="-")
+ if (($Language=="zh" || $Language=="pt") && strlen($_SERVER["HTTP_ACCEPT_LANGUAGE"])>5 && $_SERVER["HTTP_ACCEPT_LANGUAGE"]{2}=="-")
  {
    $Language_Country=strtoupper(substr($_SERVER["HTTP_ACCEPT_LANGUAGE"], 3, 2));
    $Language=$Language."-".$Language_Country;
