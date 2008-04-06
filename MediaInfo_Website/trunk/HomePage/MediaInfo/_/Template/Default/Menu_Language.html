@@ -48,6 +48,10 @@
      $Menu_Language_ca=implode("/", $REQUEST_URI_Exploded);
      $REQUEST_URI_Exploded[1]="lt";
      $Menu_Language_lt=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="pt-BR";
+     $Menu_Language_pt_BR=implode("/", $REQUEST_URI_Exploded);
+     $REQUEST_URI_Exploded[1]="th";
+     $Menu_Language_th=implode("/", $REQUEST_URI_Exploded);
      ?>
      <a href="<?php echo $Menu_Language_en; ?>"><img title="English" alt="English" src="/_/Image/Default/Flag/UK.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
         href="<?php echo $Menu_Language_fr; ?>"><img title="Français" alt="Français" src="/_/Image/Default/Flag/France.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
@@ -64,7 +68,9 @@
         href="<?php echo $Menu_Language_ko; ?>"><img title="Korean" alt="Korean" src="/_/Image/Default/Flag/Korea.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
         href="<?php echo $Menu_Language_pt; ?>"><img title="Portuguese" alt="Portuguese" src="/_/Image/Default/Flag/Portugal.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
         href="<?php echo $Menu_Language_ca; ?>"><img title="Català" alt="Català" src="/_/Image/Default/Flag/Catalonia.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
-        href="<?php echo $Menu_Language_lt; ?>"><img title="Lithuanian" alt="Lithuanian" src="/_/Image/Default/Flag/Lithuania.png" /></a>
+        href="<?php echo $Menu_Language_lt; ?>"><img title="Lithuanian" alt="Lithuanian" src="/_/Image/Default/Flag/Lithuania.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_pt_BR; ?>"><img title="Portuguese (Brazil)" alt="Portuguese (Brazil)" src="/_/Image/Default/Flag/Brazil.png" /></a><?php if (strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) echo " "; ?><a
+        href="<?php echo $Menu_Language_th; ?>"><img title="Thailandish" alt="Thailandish" src="/_/Image/Default/Flag/Thailand.png" /></a>
     </div>
    </td>
    <td class="Flags" style="width: 1px;"></td>
