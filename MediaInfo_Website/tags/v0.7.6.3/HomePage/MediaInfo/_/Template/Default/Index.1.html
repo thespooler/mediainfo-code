@@ -1,0 +1,31 @@
+<?php include $Path."/_/Template/Default/Head.html";
+if (isset($Body_Tag))
+ echo "<body ".$Body_Tag.">";
+else
+ echo "<body>";
+?>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tbody>
+  <tr style="height: 90px;">
+   <td style="width:230px"><a href="http://mediainfo.sourceforge.net"><img src="/_/Image/Default/Top/Logo_Left.png" alt="MediaInfo, multimedia data manager" height="90" width="230" /></a></td>
+   <td style="width:21px"><img src="/_/Image/Default/Top/Logo_Right.gif" height="90" width="21" alt="" /></td>
+   <td style="width:100%" class="Banner_Top_Background">
+    <?php if ($Menu[1]=="") {include $Path."/_/Ad/468_15_Google.html"; echo '<br />';} ?>
+    <?php include $Path."/_/Ad/468_60_Google.html"; ?>
+    <?php include $Path."/_/Template/Default/Path.html"; ?>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="3" class="Banner_Top_Gradient"></td>
+  </tr>
+ </tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tbody>
+  <tr>
+   <td rowspan="3" valign="top" id="Menu">
+    <?php include $Path."/_/Template/Default/Menu.html"; ?>
+   </td>
+   <td style="width: 8px;"></td>
+   <td valign="top">

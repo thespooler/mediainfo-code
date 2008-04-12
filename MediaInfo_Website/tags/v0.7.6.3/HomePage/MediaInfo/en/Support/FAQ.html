@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+ <title>FAQ</title>
+</head>
+<body>
+<div id="TOC">
+<h1>Frequently Asked Questions (FAQ)</h1>
+<ul>
+ <li><a href="#General">General</a>
+  <ul>
+   <li><a href="#URL">What is the canonical URL of the website?</a></li>
+   <li><a href="#MultipleNames">In the SourceForge repository, there are multiple names of files. Which one should I download?</a></li>
+   <li><a href="#MultipleVersions">In the SourceForge repository, there are multiple versions of files. Which one should I download?</a></li>
+   <li><a href="#NoSupport">Why is <i>format</i> not supported?</a></li>
+   <li><a href="#NoDetection">A file is not properly detected. What should I do?</a></li>
+   <li><a href="#NoTranslation">I would like to have MediaInfo translated into my language. Why don't you translate it into my language?</a></li>
+   <li><a href="#NoQuestion">My question is not here. What should I do?</a></li>
+  </ul>
+ </li>
+ <li><a href="#GUI">MediaInfo Graphical Interface (GUI)</a>
+  <ul>
+   <li><a href="#Licence_GUI">What is the licence?</a></li>
+   <li><a href="#BuildFromSources_GUI">How do I compile from source?</a></li>
+   <li><a href="#GUI_Linux">Why isn't there a GUI version of MediaInfo for Linux?</a></li>
+  </ul>
+ </li>
+ <li><a href="#Cmd">MediaInfo Command Line Interface (CLI)</a>
+  <ul>
+   <li><a href="#Licence_Cmd">What is the licence?</a></li>
+   <li><a href="#Cmd_Options">Why aren't there more options for the command line?</a></li>
+   <li><a href="#BuildFromSources_Cmd">How do I compile from source?</a></li>
+  </ul>
+ </li>
+ <li><a href="#Dll">MediaInfo Library (DLL)</a>
+  <ul>
+   <li><a href="#Licence_Dll">What is the licence?</a></li>
+   <li><a href="#NoSoftware">Why doesn't the DLL work with <i>software name</i>?</a></li>
+   <li><a href="#SDK">How do I import data from your DLL?</a></li>
+   <li><a href="#StaticLib">I'd rather have static libraries</a></li>
+   <li><a href="#BuildFromSources_DLL">How do I compile from source?</a></li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+<h2><a name="General"></a>General</h2>
+<div class="Paragraph_Block">
+<h3><a name="URL"></a>What is the canonical URL of the website?</h3>
+<div class="Paragraph_Block">
+http://mediainfo.sourceforge.net<br />
+</div>
+
+<h3><a name="MultipleNames"></a>In the SourceForge repository, there are multiple names of files. Which one should I download?</h3>
+<div class="Paragraph_Block">
+It depends on what you require:
+<ul>
+ <li>A graphical interface : MediaInfo GUI</li>
+ <li>A Command line interface : MediaInfo CLI</li>
+ <li>A DLL to interface with other software : MediaInfo DLL</li>
+</ul>
+<br />
+After this, you must select your operating system:
+<ul>
+ <li>Win : Windows 95 to Windows XP</li>
+ <li>Lin : Linux distribution</li>
+</ul>
+<br />
+And your platform:
+<ul>
+ <li>686 : Intel Pentium, AMD Athlon</li>
+ <li>AMD64 : Intel EMT64  enabled CPU, AMD Athlon64</li>
+</ul>
+</div>
+
+<h3><a name="MultipleVersions"></a>In the SourceForge repository, there are multiple versions of files. Which one should I download?</h3>
+<div class="Paragraph_Block">
+Always the latest version, except if:
+<ul>
+ <li>The version is tagged "beta". You can download this, but be warned, this is not a stable version.</li>
+ <li>The person who ask you to download specified the version. Download this version, as the developer may not have tested the latest version</li>
+</ul>
+</div>
+
+<h3><a name="NoSupport"></a>Why is <i>format</i> not supported?</h3>
+<div class="Paragraph_Block">
+Because I don't have specifications about it!<br />
+If you have documentation about the format, please <a href="javascript:writeTo(\'users.sourceforge.net\', \'zenitram\');">contact me</a>.
+</div>
+
+<h3><a name="NoDetection"></a>A file is not properly detected. What should I do?</h3>
+<div class="Paragraph_Block">
+I am interested in having your file. Please <a href="javascript:writeTo(\'users.sourceforge.net\', \'zenitram\');">contact me</a>.
+</div>
+
+<h3><a name="NoTranslation"></a>I would like to have MediaInfo translated into my language. Why don't you translate it into my language?</h3>
+<div class="Paragraph_Block">
+Because I don't speak your language! ;-)<br />
+If you have an hour, you can translate it (in the options dialog box), and send me the file (from ./plugins/ directory). This is not difficult; you only need some English knowledge.
+</div>
+
+<h3><a name="NoQuestion"></a>My question is not here. What should I do?</h3>
+<div class="Paragraph_Block">
+You might get help on the <a href="#">forums</a>.
+</div>
+</div>
+
+<h2><a name="GUI"></a>MediaInfo GUI</h2>
+<div class="Paragraph_Block">
+<h3><a name="Licence_GUI"></a>What is the licence?</h3>
+<div class="Paragraph_Block">
+MediaInfoGUI licence is GPL.
+</div>
+
+<h3><a name="BuildFromSources_GUI"></a>How do I compile from source?</h3>
+<div class="Paragraph_Block">
+Source code is downloadable here.<br />
+You need Borland C++ 6 to compile it.<br />
+There is a <a href="/Support/Build_From_Sources/ThirdParty">help file to assist in compiling dependencies</a>
+</div>
+
+<h3><a name="GUI_Linux"></a>Why isn't there a GUI version of MediaInfo for Linux?</h3>
+<div class="Paragraph_Block">
+VCL (the graphical library of Borland) is not portable (this is the only one), so I can't adapt the GUI for Linux.<br />
+If you know how to program with wxWidgets (a standard graphical library), and are interested in adapting MediaInfo to wxWidgets, then I am interested. Please <a href="javascript:writeTo(\'users.sourceforge.net\', \'zenitram\');">contact me</a>!<br />
+</div>
+</div>
+
+<h2><a name="Cmd"></a>MediaInfo Cmd</h2>
+<div class="Paragraph_Block">
+<h3><a name="Licence_Cmd"></a>What is the licence?</h3>
+<div class="Paragraph_Block">
+MediaInfoCmd licence is GPL.
+</div>
+
+<h3><a name="Cmd_Options"></a>Why aren't there more options for the command line?</h3>
+<div class="Paragraph_Block">
+I didn't spend much time coding it, due to less interest from users.<br />
+You can add a <a href="#">feature request</a>.
+</div>
+
+<h3><a name="BuildFromSources_Cmd"></a>How do I compile from source?</h3>
+<div class="Paragraph_Block">
+<a href="#">Source code is downloadable.</a><br />
+Note : there are a lot of dependencies, so you may have difficulty compiling them. There is a <a href="/Support/Build_From_Sources/ThirdParty">help file to assist in compiling dependencies</a>
+</div>
+</div>
+
+<h2><a name="Dll"></a>MediaInfo DLL</h2>
+<div class="Paragraph_Block">
+<h3><a name="Licence_Dll"></a>What is the licence?</h3>
+<div class="Paragraph_Block">
+MediaInfoDLL licence is LGPL.
+</div>
+
+<h3><a name="NoSoftware"></a>Why doesn't the DLL work with <i>software name</i>?</h3>
+<div class="Paragraph_Block">
+Maybe the software doesn't support the latest version of the DLL.<br />
+<ul>
+ <li>Try asking the software developer to modify his software</li>
+ <li>Try downloading an older version of the DLL</li>
+</ul>
+</div>
+
+<h3><a name="SDK"></a>How do I import data from your DLL?</h3>
+<div class="Paragraph_Block">
+Download the DLL package. There are some examples, in many different languages (standard C, standard C++, GCC, MinGW, Borland C++ Builder, Microsoft Visual C++, Microsoft Visual Basic, Microsoft C#, Microsoft J#)<br />
+There is also a <a href="/Support/SDK">SDK</a>.
+</div>
+
+<h3><a name="StaticLib"></a>I'd rather have static libraries</h3>
+<div class="Paragraph_Block">
+This is only possible with C++.<br />
+On the download page, there is package with:
+<ul>
+ <li>Library compiled with Borland C++ builder 6</li>
+ <li>Library compiled with Microsoft Visual C++ 9 (aka 2005). Warning : the project is statically linked to the multithreaded C++ library, and options are C++ compliant (Be careful. In standard C++, wchar_t is a type, not a short int).</li>
+</ul>
+If you want to use other compilers or options, you must <a href="/Support/Build_From_Sources">compile from source</a>.
+</div>
+
+<h3><a name="BuildFromSources_DLL"></a>How do I compile from source?</h3>
+<div class="Paragraph_Block">
+<a href="#">Source code is downloadable.</a><br />
+Note : there are a lot of dependencies, so you may have difficulty compiling them. There is a <a href="/Support/Build_From_Sources/ThirdParty">help file to assist in compiling dependencies</a>
+</div>
+</div>
+
+</body>
+</html>
