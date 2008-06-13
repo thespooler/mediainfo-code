@@ -71,7 +71,7 @@ if (strlen($Page_Exploded[1])!=2 && !(strlen($Page_Exploded[1])==5 && $Page_Expl
 {
  if (!is_file($Path."/en".$Page))
  {
-  header ("HTTP/1.1 301 Moved Permanently");
+  header ("HTTP/1.1 302 Found");
   header("Location: http://".$_SERVER['HTTP_HOST']);
  }
  else
