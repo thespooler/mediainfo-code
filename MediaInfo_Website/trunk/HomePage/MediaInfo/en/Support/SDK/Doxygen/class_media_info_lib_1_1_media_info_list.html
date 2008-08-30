@@ -85,9 +85,9 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info_lib_1_1_media_info_list.html#65aae5b8c40392619511ac142f1c16ce">Set</a> (const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;ToSet, size_t FilePos, <a class="el" href="namespace_media_info_lib.html#e210a533d4e4557d31ace26af0b512dc">stream_t</a> StreamKind, size_t StreamNumber, const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;Parameter, const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;OldValue=_T(&quot;&quot;))</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get information about a file (parameter is a string).  <a href="#65aae5b8c40392619511ac142f1c16ce"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info_lib_1_1_media_info_list.html#685ea88ce1479ac78fd0c8b2ec79b466">Output_Buffer_Get</a> (size_t &amp;Output_Buffer_Size)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info_lib_1_1_media_info_list.html#ec5462c498529a8fca8d0d460041be8f">Output_Buffer_Get</a> (size_t FilePos, size_t &amp;Output_Buffer_Size)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Output buffer retrieving.  <a href="#685ea88ce1479ac78fd0c8b2ec79b466"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Output buffer retrieving.  <a href="#ec5462c498529a8fca8d0d460041be8f"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info_lib_1_1_media_info_list.html#4a729a68e4e14f24d2c0bd7e9315a1e8">Option</a> (const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;Option, const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;Value=<a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a>(_T(&quot;&quot;)))</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info_lib_1_1_media_info_list.html#c83330ed1254fff62b78bcc6bab98568">State_Get</a> ()</td></tr>
@@ -275,6 +275,7 @@ Open a stream (Continue).
 <p>
 Open a stream and collect information about it (technical information and tags) <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>FilePos</em>&nbsp;</td><td>File position </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>Buffer</em>&nbsp;</td><td>pointer to the stream </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>Buffer_Size</em>&nbsp;</td><td>Count of bytes to read </td></tr>
   </table>
@@ -301,7 +302,12 @@ Open a stream and collect information about it (technical information and tags) 
 <p>
 Open a stream (Get the needed file Offset). 
 <p>
-Open a stream and collect information about it (technical information and tags) <dl class="return" compact><dt><b>Returns:</b></dt><dd>the needed offset of the file <br>
+Open a stream and collect information about it (technical information and tags) <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>FilePos</em>&nbsp;</td><td>File position </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>the needed offset of the file <br>
  File size if no more bytes are needed </dd></dl>
 
 </div>
@@ -325,7 +331,12 @@ Open a stream and collect information about it (technical information and tags) 
 <p>
 Open a stream (Finalize). 
 <p>
-Open a stream and collect information about it (technical information and tags) 
+Open a stream and collect information about it (technical information and tags) <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>FilePos</em>&nbsp;</td><td>File position </td></tr>
+  </table>
+</dl>
+
 </div>
 </div><p>
 <a class="anchor" name="b72b2138ca0d1360f9b6eb6a0404e327"></a><!-- doxytag: member="MediaInfoLib::MediaInfoList::Save" ref="b72b2138ca0d1360f9b6eb6a0404e327" args="(size_t FilePos)" -->
@@ -616,7 +627,8 @@ Get a piece of information about a file (parameter is a string) <dl compact><dt>
 <p>
 Set a piece of information about a file (parameter is an int). 
 <p>
-Set a piece of information about a file (parameter is an int) <dl compact><dt><b>Parameters:</b></dt><dd>
+Set a piece of information about a file (parameter is an int) <dl class="warning" compact><dt><b>Warning:</b></dt><dd>Not yet implemented, do not use it </dd></dl>
+<dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>ToSet</em>&nbsp;</td><td>Piece of information </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>FilePos</em>&nbsp;</td><td>File position <br>
@@ -691,6 +703,7 @@ Set a piece of information about a file (parameter is an int) <dl compact><dt><b
 <p>
 Get information about a file (parameter is a string). 
 <p>
+<dl class="warning" compact><dt><b>Warning:</b></dt><dd>Not yet implemented, do not use it </dd></dl>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>ToSet</em>&nbsp;</td><td>Piece of information </td></tr>
@@ -715,17 +728,26 @@ Get information about a file (parameter is a string).
 
 </div>
 </div><p>
-<a class="anchor" name="685ea88ce1479ac78fd0c8b2ec79b466"></a><!-- doxytag: member="MediaInfoLib::MediaInfoList::Output_Buffer_Get" ref="685ea88ce1479ac78fd0c8b2ec79b466" args="(size_t &amp;Output_Buffer_Size)" -->
+<a class="anchor" name="ec5462c498529a8fca8d0d460041be8f"></a><!-- doxytag: member="MediaInfoLib::MediaInfoList::Output_Buffer_Get" ref="ec5462c498529a8fca8d0d460041be8f" args="(size_t FilePos, size_t &amp;Output_Buffer_Size)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">char* MediaInfoLib::MediaInfoList::Output_Buffer_Get           </td>
           <td>(</td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>FilePos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">size_t &amp;&nbsp;</td>
-          <td class="paramname"> <em>Output_Buffer_Size</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"></td>
+          <td class="paramname"> <em>Output_Buffer_Size</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
         </tr>
       </table>
 </div>
@@ -736,6 +758,7 @@ Output buffer retrieving.
 <p>
 Output buffer retrieving, used for File_Duplicate option. <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>FilePos</em>&nbsp;</td><td>File position </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>Output_Buffer_Size</em>&nbsp;</td><td>A pointer to the variable that receives the size of the buffer <br>
  Note: you must use all the size of the buffer before the next call to this procedure </td></tr>
   </table>
@@ -919,7 +942,7 @@ Get the count of opened files.
 <hr>The documentation for this class was generated from the following file:<ul>
 <li>F:/Programmation/MediaInfoLib/Source/MediaInfo/<a class="el" href="_media_info_list_8h-source.html">MediaInfoList.h</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Wed Mar 26 13:09:56 2008 for MediaInfoLib by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Sat Aug 30 12:38:07 2008 for MediaInfoLib by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
 </body>

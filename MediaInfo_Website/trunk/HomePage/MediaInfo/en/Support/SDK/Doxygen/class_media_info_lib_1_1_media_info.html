@@ -87,9 +87,12 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info_lib_1_1_media_info.html#cc4cd5db99a340446955f556894a3990">Set</a> (const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;ToSet, <a class="el" href="namespace_media_info_lib.html#e210a533d4e4557d31ace26af0b512dc">stream_t</a> StreamKind, size_t StreamNumber, const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;Parameter, const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;OldValue=_T(&quot;&quot;))</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set information about a file (parameter is a string).  <a href="#cc4cd5db99a340446955f556894a3990"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info_lib_1_1_media_info.html#627aaa159ed5b74ff4311c8e69bc9368">Output_Buffer_Get</a> (const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;Value, unsigned char **Output_Buffer=NULL)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info_lib_1_1_media_info.html#27ca9fcac41f96a7d62adfef256419c2">Output_Buffer_Get</a> (const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;Value)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Output buffer pointer and size retrieving.  <a href="#627aaa159ed5b74ff4311c8e69bc9368"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Output the written size when "File_Duplicate" option is used.  <a href="#27ca9fcac41f96a7d62adfef256419c2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info_lib_1_1_media_info.html#ed56dfc00d7a5b3684553a21ab147266">Output_Buffer_Get</a> (size_t Pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Output the written size when "File_Duplicate" option is used.  <a href="#ed56dfc00d7a5b3684553a21ab147266"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info_lib_1_1_media_info.html#909ccd23569fa9beb11194e6549c1618">Option</a> (const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;Option, const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;Value=_T(&quot;&quot;))</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info_lib_1_1_media_info.html#d30528e1d44cb6fc509fd4a9aac45996">State_Get</a> ()</td></tr>
@@ -101,16 +104,13 @@
 <tr><td colspan="2"><br><h2>Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info_lib_1_1_media_info.html#c3a0cf07c25da3bdb9a4ef841f742f68">Option_Static</a> (const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;Option, const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;Value=_T(&quot;&quot;))</td></tr>
 
-<tr><td colspan="2"><br><h2>Friends</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info_lib_1_1_media_info.html#b20af330a452a31eaff0b78682a72df2">File_Cdxa</a></td></tr>
-
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 <a class="el" href="class_media_info_lib_1_1_media_info.html" title="MediaInfo.">MediaInfo</a>. 
 <p>
 <dl class="version" compact><dt><b>Version:</b></dt><dd>0.7 </dd></dl>
 
-<p>Definition at line <a class="el" href="_media_info_8h-source.html#l00045">45</a> of file <a class="el" href="_media_info_8h-source.html">MediaInfo.h</a>.</p>
+<p>Definition at line <a class="el" href="_media_info_8h-source.html#l00046">46</a> of file <a class="el" href="_media_info_8h-source.html">MediaInfo.h</a>.</p>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="dbe90be4a8c61b430b5cb7eec0b675f6"></a><!-- doxytag: member="MediaInfoLib::MediaInfo::MediaInfo" ref="dbe90be4a8c61b430b5cb7eec0b675f6" args="()" -->
 <div class="memitem">
@@ -598,7 +598,8 @@ Get a piece of information about a file (parameter is a string) <dl compact><dt>
 <p>
 Set a piece of information about a file (parameter is an int). 
 <p>
-Set a piece of information about a file (parameter is an integer) <dl compact><dt><b>Parameters:</b></dt><dd>
+Set a piece of information about a file (parameter is an integer) <dl class="warning" compact><dt><b>Warning:</b></dt><dd>Not yet implemented, do not use it </dd></dl>
+<dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>ToSet</em>&nbsp;</td><td>Piece of information </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>StreamKind</em>&nbsp;</td><td>Kind of stream (general, video, audio...) </td></tr>
@@ -665,7 +666,8 @@ Set a piece of information about a file (parameter is an integer) <dl compact><d
 <p>
 Set information about a file (parameter is a string). 
 <p>
-Set a piece of information about a file (parameter is a string) <dl compact><dt><b>Parameters:</b></dt><dd>
+Set a piece of information about a file (parameter is a string) <dl class="warning" compact><dt><b>Warning:</b></dt><dd>Not yet implemented, do not use it </dd></dl>
+<dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>ToSet</em>&nbsp;</td><td>Piece of information </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>StreamKind</em>&nbsp;</td><td>Kind of stream (general, video, audio...) </td></tr>
@@ -686,7 +688,7 @@ Set a piece of information about a file (parameter is a string) <dl compact><dt>
 
 </div>
 </div><p>
-<a class="anchor" name="627aaa159ed5b74ff4311c8e69bc9368"></a><!-- doxytag: member="MediaInfoLib::MediaInfo::Output_Buffer_Get" ref="627aaa159ed5b74ff4311c8e69bc9368" args="(const String &amp;Value, unsigned char **Output_Buffer=NULL)" -->
+<a class="anchor" name="27ca9fcac41f96a7d62adfef256419c2"></a><!-- doxytag: member="MediaInfoLib::MediaInfo::Output_Buffer_Get" ref="27ca9fcac41f96a7d62adfef256419c2" args="(const String &amp;Value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -694,31 +696,48 @@ Set a piece of information about a file (parameter is a string) <dl compact><dt>
           <td class="memname">size_t MediaInfoLib::MediaInfo::Output_Buffer_Get           </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespace_media_info_lib.html#052dd30510a46a3c02f40aec260a39bf">String</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>Value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned char **&nbsp;</td>
-          <td class="paramname"> <em>Output_Buffer</em> = <code>NULL</code></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td width="100%"></td>
+          <td class="paramname"> <em>Value</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Output buffer pointer and size retrieving. 
+Output the written size when "File_Duplicate" option is used. 
 <p>
-Output buffer pointer and size retrieving, used for File_Duplicate option. <dl compact><dt><b>Parameters:</b></dt><dd>
+Output the written size when "File_Duplicate" option is used. <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>Value</em>&nbsp;</td><td>The name of the duplicated program </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>Output_Buffer</em>&nbsp;</td><td>A pointer on the output buffer, NULL if there is nothing in the buffer <br>
- Note: you must use all the size of the buffer before the next call to this procedure </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Value</em>&nbsp;</td><td>The unique name of the duplicated stream (begin with "memory://") </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>The size of the used buffer </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ed56dfc00d7a5b3684553a21ab147266"></a><!-- doxytag: member="MediaInfoLib::MediaInfo::Output_Buffer_Get" ref="ed56dfc00d7a5b3684553a21ab147266" args="(size_t Pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t MediaInfoLib::MediaInfo::Output_Buffer_Get           </td>
+          <td>(</td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>Pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Output the written size when "File_Duplicate" option is used. 
+<p>
+Output the written size when "File_Duplicate" option is used. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Value</em>&nbsp;</td><td>The order of calling </td></tr>
   </table>
 </dl>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>The size of the used buffer </dd></dl>
@@ -899,28 +918,10 @@ Count of streams of a stream kind (StreamNumber not filled), or count of piece o
 
 </div>
 </div><p>
-<hr><h2>Friends And Related Function Documentation</h2>
-<a class="anchor" name="b20af330a452a31eaff0b78682a72df2"></a><!-- doxytag: member="MediaInfoLib::MediaInfo::File_Cdxa" ref="b20af330a452a31eaff0b78682a72df2" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class File_Cdxa<code> [friend]</code>          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-
-<p>Definition at line <a class="el" href="_media_info_8h-source.html#l00216">216</a> of file <a class="el" href="_media_info_8h-source.html">MediaInfo.h</a>.</p>
-
-</div>
-</div><p>
 <hr>The documentation for this class was generated from the following file:<ul>
 <li>F:/Programmation/MediaInfoLib/Source/MediaInfo/<a class="el" href="_media_info_8h-source.html">MediaInfo.h</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Wed Mar 26 13:09:56 2008 for MediaInfoLib by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Sat Aug 30 12:38:07 2008 for MediaInfoLib by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
 </body>
