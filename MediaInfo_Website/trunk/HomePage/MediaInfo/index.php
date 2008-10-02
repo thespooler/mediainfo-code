@@ -1,12 +1,12 @@
 <?php
 //Variables
-if (isset($HTTP_COOKIE_VARS["LastVisited"]))
+if (isset($_COOKIE["LastVisited"]))
  $AlreadyVisited='Y';
 //AdditionnalPath
 //-Path
-if (!isset($_SERVER["PATH_TRANSLATED"]))
+if (!isset($_SERVER["SCRIPT_FILENAME"]))
   exit("error");
-$Path=$_SERVER["PATH_TRANSLATED"];
+$Path=$_SERVER["SCRIPT_FILENAME"];
 $Path=substr($Path, 0, strrpos($Path, "/"));
 //-Page = "/a/b/c"
 if (!isset($_SERVER["REQUEST_URI"]))
