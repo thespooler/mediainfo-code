@@ -51,5 +51,425 @@ Needed for Microsoft Windows95 to Microsoft WindowsMe users. Installs Unicode su
 
 Note: You can <a href="http://sourceforge.net/project/filemodule_monitor.php?filemodule_id=90341">monitor</a> or <a href="http://sourceforge.net/project/shownotes.php?group_id=86862&amp;release_id=337684">see release notes</a> on the <a href="http://sourceforge.net/projects/mediainfo">SourceForge project page</a>
 
+<br />
+<br />
+*****************  TEST ONLY *************<br />
+<br />
+Note: MacOS X and Linux GUI are not complete, work is under progress.<br />
+
+<table border=1>
+<tr bgcolor="#99CCFF">
+    <th>Operating system</th>
+    <th>Version</th>
+    <th>CPU</td>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+<tr>
+    <th rowspan=6>Windows</th>
+    <th rowspan=6>95, 98, Me,<br />2000, XP, 2003, Vista</th>
+    <th rowspan=3>32 bits</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/MediaInfo_0.7.7.8_GUI_Win32.exe">v0.7.7.8</a> (<a href="http://downloads.sourceforge.net/mediainfo/MediaInfo_0.7.7.8_GUI_Win32_WithoutInstaller.7z">without installer</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/MediaInfo_0.7.7.8_CLI_Win32.zip">v0.7.7.8</a></td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th><acronym title="Dynamicly Linked Library">DLL</acronym></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/MediaInfo_0.7.7.8_DLL_Win32.7z">v0.7.7.8</a> (<a href="http://downloads.sourceforge.net/mediainfo/MediaInfo_0.7.7.8_DLL_Win32.zip">zip</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=3>64 bits</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td>Not yet</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/MediaInfo_0.7.7.8_CLI_Windows_x64.zip">v0.7.7.8</a></td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th><acronym title="Dynamicly Linked Library">DLL</acronym></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/MediaInfo_0.7.7.8_DLL_Windows_x64.7z">v0.7.7.8</a> (<a href="http://downloads.sourceforge.net/mediainfo/MediaInfo_0.7.7.8_DLL_Windows_x64.zip">zip</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=6>MacOS X</th>
+    <th rowspan=6>10.4 (Tiger)<br />10.5 (Leopard)</th>
+    <th rowspan=3>PPC<br />i386</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/MediaInfo_0.7.7.8_GUI_Mac_Universal.dmg">v0.7.7.8</a></td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/MediaInfo_0.7.7.8_CLI_Mac_Universal.dmg">v0.7.7.8</a></td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th><acronym title="Dynamicly Linked Library">DLL</acronym></th>
+    <td>Unavailable</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=3>x86_64</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td>Unavailable</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td>Unavailable</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th><acronym title="Dynamicly Linked Library">DLL</acronym></th>
+    <td>Unavailable</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=8>RHEL<br />CentOS</th>
+    <th rowspan=8>5</th>
+    <th rowspan=4>i386</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui-0.7.7.8-1.i386.CentOS_5.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-0.7.7.8-1.i386.CentOS_5.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-0.7.7.8-1.i386.CentOS_5.rpm">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-devel-0.7.7.8-1.i386.CentOS_5.rpm">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-0.3.4.0-1.i386.CentOS_5.rpm">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-devel-0.3.4.0-1.i386.CentOS_5.rpm">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=4>x86_64</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui-0.7.7.8-1.x86_64.CentOS_5.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-0.7.7.8-1.x86_64.CentOS_5.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-0.7.7.8-1x86_64.CentOS_5.rpm">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-devel-0.7.7.8-1.x86_64.CentOS_5.rpm">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-0.3.4.0-1.x86_64.CentOS_5.rpm">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-devel-0.3.4.0-1.x86_64.CentOS_5.rpm">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=16>Fedora</th>
+    <th rowspan=8>9</th>
+    <th rowspan=4>i386</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui-0.7.7.8-1.i386.Fedora_9.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-0.7.7.8-1.i386.Fedora_9.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-0.7.7.8-1.i386.Fedora_9.rpm">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-devel-0.7.7.8-1.i386.Fedora_9.rpm">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-0.3.4.0-1.i386.Fedora_9.rpm">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-devel-0.3.4.0-1.i386.Fedora_9.rpm">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=4>x86_64</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui-0.7.7.8-1.x86_64.Fedora_9.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-0.7.7.8-1.x86_64.Fedora_9.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-0.7.7.8-1.x86_64.Fedora_9.rpm">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-devel-0.7.7.8-1.x86_64.Fedora_9.rpm">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-0.3.4.0-1.x86_64.Fedora_9.rpm">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-devel-0.3.4.0-1.x86_64.Fedora_9.rpm">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=8>8</th>
+    <th rowspan=4>i386</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui-0.7.7.8-1.i386.Fedora_8.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-0.7.7.8-1.i386.Fedora_8.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-0.7.7.8-1.i386.Fedora_8.rpm">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-devel-0.7.7.8-1.i386.Fedora_8.rpm">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-0.3.4.0-1.i386.Fedora_8.rpm">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-devel-0.3.4.0-1.i386.Fedora_8.rpm">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=4>x86_64</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui-0.7.7.8-1.x86_64.Fedora_8.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-0.7.7.8-1.x86_64.Fedora_8.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-0.7.7.8-1.x86_64.Fedora_8.rpm">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-devel-0.7.7.8-1.x86_64.Fedora_8.rpm">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-0.3.4.0-1.x86_64.Fedora_8.rpm">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-devel-0.3.4.0-1.x86_64.Fedora_8.rpm">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=8>Debian</th>
+    <th rowspan=8>Etch</th>
+    <th rowspan=4>i386</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui_0.7.7.8-1_i386.Debian_Etch.deb">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo_0.7.7.8-1_i386.Debian_Etch.deb">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0_0.7.7.8-1_i386.Debian_Etch.deb">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-dev_0.7.7.8-1_i386.Debian_Etch.deb">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0_0.3.4.0-1_i386.Debian_Etch.deb">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-dev_0.3.4.0-1_i386.Debian_Etch.deb">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=4>amd64</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui_0.7.7.8-1_amd64.Debian_Etch.deb">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo_0.7.7.8-1_amd64.Debian_Etch.deb">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0_0.7.7.8-1_amd64.Debian_Etch.deb">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-dev_0.7.7.8-1_amd64.Debian_Etch.deb">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0_0.3.4.0-1_amd64.Debian_Etch.deb">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-dev_0.3.4.0-1_amd64.Debian_Etch.deb">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=24>OpenSuSE</th>
+    <th rowspan=8>11.0</th>
+    <th rowspan=4>i586</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui-0.7.7.8-1.i586.openSUSE_11.0.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-0.7.7.8-1.i586.openSUSE_11.0.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-0.7.7.8-1.i586.openSUSE_11.0.rpm">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-devel-0.7.7.8-1.i586.openSUSE_11.0.rpm">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-0.3.4.0-1.i586.openSUSE_11.0.rpm">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-devel-0.3.4.0-1.i586.openSUSE_11.0.rpm">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=4>x86_64</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui-0.7.7.8-1.x86_64.openSUSE_11.0.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-0.7.7.8-1.x86_64.openSUSE_11.0.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-0.7.7.8-1.x86_64.openSUSE_11.0.rpm">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-devel-0.7.7.8-1.x86_64.openSUSE_11.0.rpm">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-0.3.4.0-1.x86_64.openSUSE_11.0.rpm">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-devel-0.3.4.0-1.x86_64.openSUSE_11.0.rpm">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=8>10.3</th>
+    <th rowspan=4>i586</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui-0.7.7.8-1.i586.openSUSE_10.3.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-0.7.7.8-1.i586.openSUSE_10.3.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-0.7.7.8-1.i586.openSUSE_10.3.rpm">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-devel-0.7.7.8-1.i586.openSUSE_10.3.rpm">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-0.3.4.0-1.i586.openSUSE_10.3.rpm">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-devel-0.3.4.0-1.i586.openSUSE_10.3.rpm">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=4>x86_64</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui-0.7.7.8-1.x86_64.openSUSE_10.3.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-0.7.7.8-1.x86_64.openSUSE_10.3.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-0.7.7.8-1.x86_64.openSUSE_10.3.rpm">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-devel-0.7.7.8-1.x86_64.openSUSE_10.3.rpm">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-0.3.4.0-1.x86_64.openSUSE_10.3.rpm">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-devel-0.3.4.0-1.x86_64.openSUSE_10.3.rpm">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=8>10.2</th>
+    <th rowspan=4>i586</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui-0.7.7.8-1.i586.openSUSE_10.2.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-0.7.7.8-1.i586.openSUSE_10.2.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-0.7.7.8-1.i586.openSUSE_10.2.rpm">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-devel-0.7.7.8-1.i586.openSUSE_10.2.rpm">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-0.3.4.0-1.i586.openSUSE_10.2.rpm">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-devel-0.3.4.0-1.i586.openSUSE_10.2.rpm">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=4>x86_64</td>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-gui-0.7.7.8-1.x86_64.openSUSE_10.2.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo-0.7.7.8-1.x86_64.openSUSE_10.2.rpm">v0.7.7.8</a></td>
+    <td>requires  libmediainfo0</td>
+</tr>
+<tr>
+    <th>libmediainfo0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-0.7.7.8-1.x86_64.openSUSE_10.2.rpm">v0.7.7.8</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo0-devel-0.7.7.8-1.x86_64.openSUSE_10.2.rpm">devel</a>)</td>
+    <td>requires  libzen0</td>
+</tr>
+<tr>
+    <th>libzen0</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-0.3.4.0-1.x86_64.openSUSE_10.2.rpm">v0.3.4.0</a> (<a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen0-devel-0.3.4.0-1.x86_64.openSUSE_10.2.rpm">devel</a>)</td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th rowspan=5>Sources</th>
+    <th rowspan=2 colspan=2>All in one package<br /> for an easy and quick compilation<br /> on Linux without install</th>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/MediaInfo_0.7.7.8_GUI_GNU_FromSource.tar.bz2">v0.7.7.8</a></td>
+    <td></td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://downloads.sourceforge.net/mediainfo/MediaInfo_0.7.7.8_CLI_GNU_FromSource.tar.bz2">v0.7.7.8</a></td>
+    <td></td>
+</tr>
+<tr>
+    <th rowspan=3 colspan=2>Splitted sources with .spec,<br>.desc and debian dir<br /> for package creation</th>
+    <th><acronym title="Graphical User Interface">GUI</acronym>/<acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/mediainfo_0.7.7.8.tar.bz2">v0.7.7.8</a></td>
+    <td>requires  libmediainfo</td>
+</tr>
+<tr>
+    <th>libmediainfo</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libmediainfo_0.7.7.8.tar.bz2">v0.7.7.8</a></td>
+    <td>requires  libzen</td>
+</tr>
+<tr>
+    <th>libzen</th>
+    <td><a href="http://download.mediaarea.net/mediainfo/0.7.7.8/libzen_0.3.4.0.tar.bz2">v0.7.7.8</a></td>
+    <td>&nbsp</td>
+</tr>
+</table>
+
+
+
 </body>
 </html>
