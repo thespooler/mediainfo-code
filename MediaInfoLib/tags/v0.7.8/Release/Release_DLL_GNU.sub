@@ -1,0 +1,62 @@
+#! /bin/sh
+
+#-----------------------------------------------------------------------
+# $1=OS, $2=Platform
+Release_DLL()
+{
+
+#-----------------------------------------------------------------------
+# Clean up
+test -e MediaInfo_DLL_$1_$2.tar     && rm    MediaInfo_DLL_$1_$2.tar
+test -e MediaInfo_DLL_$1_$2.tar.bz2 && rm    MediaInfo_DLL_$1_$2.tar.bz2
+test -d MediaInfo_DLL_$1_$2         && rm -r MediaInfo_DLL_$1_$2
+mkdir   MediaInfo_DLL_$1_$2
+
+#-----------------------------------------------------------------------
+# Copying : so
+cp -P ../Project/GNU/Library/.libs/libmediainfo.so MediaInfo_DLL_$1_$2/
+cp -P ../Project/GNU/Library/.libs/libmediainfo.so.0 MediaInfo_DLL_$1_$2/
+cp ../Project/GNU/Library/.libs/libmediainfo.so.0.0.0 MediaInfo_DLL_$1_$2/
+cd MediaInfo_DLL_$1_$2
+strip libmediainfo.so.0.0.0
+cd ..
+
+#-----------------------------------------------------------------------
+# Copying : Information file
+cp ../License.html MediaInfo_DLL_$1_$2/
+cp ../History_DLL.txt MediaInfo_DLL_$1_$2/History.txt
+cp ReadMe_DLL_$1.txt MediaInfo_DLL_$1_$2/ReadMe.txt
+
+#-----------------------------------------------------------------------
+# Copying : Developpers, Documentation
+cd ../Source/Doc
+doxygen
+cd ../../Release
+mkdir MediaInfo_DLL_$1_$2/Developpers
+cp ../Source/Doc/Documentation.html MediaInfo_DLL_$1_$2/Developpers/
+mv Doc MediaInfo_DLL_$1_$2/Developpers/
+
+#-----------------------------------------------------------------------
+# Copying : Developpers, Source
+mkdir MediaInfo_DLL_$1_$2/Developpers/Source
+mkdir MediaInfo_DLL_$1_$2/Developpers/Source/Example
+cp ../Source/Example/*.cpp MediaInfo_DLL_$1_$2/Developpers/Source/Example/
+mkdir MediaInfo_DLL_$1_$2/Developpers/Include
+mkdir MediaInfo_DLL_$1_$2/Developpers/Include/MediaInfo
+cp ../Source/MediaInfoDLL/MediaInfoDLL.h MediaInfo_DLL_$1_$2/Developpers/Include/MediaInfoDLL/
+cp ../Source/MediaInfoDLL/MediaInfoDLL_Static.h MediaInfo_DLL_$1_$2/Developpers/Include/MediaInfoDLL/
+cp ../Source/MediaInfoDLL/MediaInfoDLL.java MediaInfo_DLL_$1_$2/Developpers/Include/MediaInfoDLL/
+cp ../Source/MediaInfoDLL/MediaInfoDLL.py MediaInfo_DLL_$1_$2/Developpers/Include/MediaInfoDLL/
+
+
+#-----------------------------------------------------------------------
+# Compressing Archive
+mv MediaInfo_DLL_$1_$2 MediaInfoLib
+tar jcf MediaInfo_DLL_$1_$2.tar.bz2 MediaInfoLib
+mv MediaInfoLib MediaInfo_DLL_$1_$2
+
+#-----------------------------------------------------------------------
+# Clean up
+rm -r MediaInfo_DLL_$1_$2
+
+}
