@@ -66,6 +66,45 @@ Pas de nouvelle version disponible<br />
 <div id="ChangeLog"><pre>
 Changes:
 
+Version 0.7.10, 2009-01-30
+-------------
++ Spanish, Chinese (Traditional) translations updated
++ Mono (C#/Linux) binding
++ MPEG-4: Encoding library name
++ #2474280, OGG: Old version of Dirac identifier support
++ MPEG-TS: Encoded date for HDV
++ DVR-MS: Delay between two tracks
++ WAV: EBU Broadcast Wave format v1 support
++ CMP4: Basic support
+x #2529963: Infinite loop on one file
+x #2473140, DTS: error preventing 96/24 DTS detection
+x MPEG-4: Better support of Aspect ratio
+x Output was unstranslated and weird when $LANG is not set
+x C++ binding error in 0.7.9
+x Python binding improved and corrected (no more crash with Linux)
+
+Version 0.7.9, 2009-01-19
+-------------
++ New icon design, thanks to T.J. Lentz
++ Albanian language updated
++ OGG: Dirac support
++ OGG: Speex support
++ OGG: other formats (JNG, Kate, MIDI, PCM...) detection
++ SWF: detection of more audio streams
++ MPEG-PS: Handling of PlayStation2 audio
++ #2474119, Minimal MZ (PE) and ELF detection
++ SMV (WAV/ADPCM+JPG files) file format support
++ DPG (Nintendo DS) file format support
++ QuickTime: TimeCode track analysis
++ MPEG-4 subtitles: difference between 'text' and 'tx3g' codecIDs
+x Python binding update for more compatibilty
+x #2424809, Shell Extension problem with some specific OS configuration and non-latin based characters
+x #2474280, OGG: handling of files with Skeleton Metadata
+x #2445654, OGG: better false-positives detection
+x #2493685, AVI: Wrong video duration for some malformed 4GB+ AVI/DV files
+x #2516007, "Language" raw tag was sometimes 3 letter long instead of 2-letter long
+x Floating point overflow correction
+
 Version 0.7.8, 2008-12-09
 -------------
 + Changing version schema, only 3 numbers (next versions will 0.7.9, 0.7.10...)
