@@ -5,13 +5,6 @@
  <title></title>
 </head>
 <body>
-<?php
-if (stristr($_SERVER['HTTP_USER_AGENT'], "Macintosh")) {
-
-echo '<div class="Info" lang="en">Estimados usuarios de Mac,<br />El paquete completo de MediaInfo GUI (Graphic User Interface) para Mac aún no está listo.<br />Actualmente, hay dos aplicaciones para Mac que utilizan la librería MediaInfo:<ul><li><a href="http://massanti.com/mediainfo/">Diego Massati\'s MediaInfo Mac</a>.</li> <li><a href="http://laurent.ettouati.free.fr/VideoSpec/index_intl.html">Laurent Ettouati\'s VideoSpec</a>.</li></ul>Nota: ninguno de ellos cuentan con apoyo oficial, por favor informe al autor del problema en lugar de hacerlo aquí.<br /><br /></div>';
-
-}
-?>
 <h1 class="Invisible">MediaInfo, Media Info, MediaInfoDLL, MediaInfo.DLL, MediaInfo DLL, Media Info DLL</h1>
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
  <tbody>
@@ -24,8 +17,8 @@ echo '<div class="Info" lang="en">Estimados usuarios de Mac,<br />El paquete com
     <span style="font-weight: bold;">MediaInfo</span> provee información técnica y de la etiqueta sobre un archivo video o audio.<br />
     Éste es un software libre (gratuito y de libre acceso al código fuente: GPL o licencia LGPL)<br />
     <br />
-    <a style="font-weight: bold;" href="http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_0.7.11_Windows_i386.exe">Descargar</a><br />
-    (version 0.7.11, Interfaz gráfica, con instalador, para Microsoft Windows, 1.7 MB)<br />
+    <a style="font-weight: bold;" href="<?php echo $Link;?>">Descargar</a><br />
+    (version <?php echo $Version;?><?php if (isset($Installer)) echo ', Interfaz gráfica, con instalador';?><?php if(isset($OS)) echo ', para '.$OS;?><?php if(isset($Bits)) echo ' bits';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br />
     Nota 1: puede <a href="http://sourceforge.net/project/filemodule_monitor.php?filemodule_id=90341">supervisar</a> o <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">ver las notas de la versión</a> en la <a href="http://sourceforge.net/projects/mediainfo">página del proyecto en SourceForge</a><br />
     Nota 2: hay otras versiones (OS, interfaz...) <a href="Download">disponibles</a><br />
     <br />

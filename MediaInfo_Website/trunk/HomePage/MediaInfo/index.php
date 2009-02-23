@@ -66,7 +66,264 @@ if (!isset($Page_Exploded[1]))
  exit;
 }
 
-//Test if this is with language
+
+ //OS detection
+   if (stristr($_SERVER['HTTP_USER_AGENT'], "macintosh"))
+ {
+  $Version='0.7.11'; //Mac OS X
+  $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Mac_Universal.dmg';
+  $OS='Mac OS X, Universal';
+  $Installer=true;
+  $Size='3.6';
+ }
+ else if (stristr($_SERVER['HTTP_USER_AGENT'], "linux"))
+ {
+    if (stristr($_SERVER['HTTP_USER_AGENT'], "debian"))
+  {
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "etch"))       $OS='Debian_4';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "lenny"))      $OS='Debian_5';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "sid"))        $OS='Debian_5';
+
+
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "i386"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i486"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i586"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i686"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "x86_64"))     $CPU='amd64';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "amd64"))      $CPU='amd64';
+
+   if (isset($OS) and isset($CPU))
+   {
+    $Link=$Language.'/Download#'.$OS.'.'.$CPU;
+         if ($Link==$Language.'/Download#Debian_4.i386')                   $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Debian_4.amd64')                  $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Debian_5.i386')                   $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Debian_5.amd64')                  $Version='0.7.11';
+         if ($OS=='Ubuntu_7.10')                                $OS='Debian 4 (Etch)';
+    else if ($OS=='Ubuntu_8.04')                                $OS='Debian 5 (Lenny)';
+    $OS=$OS.', '.$CPU;
+   }
+   else
+   {
+    $Version='0.7.11'; //Debian
+    $Link=$Language.'/Download#Debian';
+    $OS='Debian';
+   }
+   $Size='2';
+  }
+  else if (stristr($_SERVER['HTTP_USER_AGENT'], "ubuntu"))
+  {
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "warty"))      $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "4.10"))       $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "hoary"))      $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "5.04"))       $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "breezy"))     $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "5.10"))       $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "dapper"))     $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "6.06"))       $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "dapper"))     $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "6.10"))       $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "edgy"))       $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "7.04"))       $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "gusty"))      $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "7.10"))       $OS='Ubuntu_7.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "hardy"))      $OS='Ubuntu_8.04';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "8.04"))       $OS='Ubuntu_8.04';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "intrepid"))   $OS='Ubuntu_8.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "8.10"))       $OS='Ubuntu_8.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "jaunty"))     $OS='Ubuntu_8.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "9.04"))       $OS='Ubuntu_8.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "karmik"))     $OS='Ubuntu_8.10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "9.10"))       $OS='Ubuntu_8.10';
+
+     if (stristr($_SERVER['HTTP_USER_AGENT'], "i386"))          $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i486"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i586"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i686"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "x86_64"))     $CPU='amd64';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "amd64"))      $CPU='amd64';
+
+   if (isset($OS) and isset($CPU))
+   {
+    $Link=$Language.'/Download#'.$OS.'.'.$CPU;
+         if ($Link==$Language.'/Download#Ubuntu_7.10.i386')                $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Ubuntu_7.10.amd64')               $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Ubuntu_8.04.i386')                $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Ubuntu_8.04.amd64')               $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Ubuntu_8.10.i386')                $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Ubuntu_8.10.amd64')               $Version='0.7.11';
+         if ($OS=='Ubuntu_7.10')                                $OS='Ubuntu 7.10 (Gusty)';
+    else if ($OS=='Ubuntu_8.04')                                $OS='Ubuntu 8.04 (Hardy)';
+    else if ($OS=='Ubuntu_8.10')                                $OS='Ubuntu 8.10 (Intrepid)';
+    $OS=$OS.', '.$CPU;
+   }
+   else
+   {
+    $Version='0.7.11'; //Ubuntu
+    $Link=$Language.'/Download#Ubuntu';
+    $OS='Ubuntu';
+   }
+   $Size='2';
+  }
+  else if (stristr($_SERVER['HTTP_USER_AGENT'], "centos") or stristr($_SERVER['HTTP_USER_AGENT'], "red hat"))
+  {
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "el4"))        $OS='CentOS_4';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "el5"))        $OS='CentOS_5';
+
+
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "i386"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i486"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i586"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i686"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "x86_64"))     $CPU='x86_64';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "amd64"))      $CPU='x86_64';
+
+   if (isset($OS) and isset($CPU))
+   {
+    $Link=$Language.'/Download#'.$OS.'.'.$CPU;
+         if ($Link==$Language.'/Download#CentOS_4.i386')                   $Version='0.7.11';
+    else if ($Link==$Language.'/Download#CentOS_4.x86_64')                 $Version='0.7.11';
+    else if ($Link==$Language.'/Download#CentOS_5.i386')                   $Version='0.7.11';
+    else if ($Link==$Language.'/Download#CentOS_5.x86_64')                 $Version='0.7.11';
+    $OS=$OS.', '.$CPU;
+   }
+   else
+   {
+    $Version='0.7.11'; //CentOS
+    $Link=$Language.'/Download#CentOS';
+    $OS='CentOS';
+   }
+   $Size='2';
+  }
+  else if (stristr($_SERVER['HTTP_USER_AGENT'], "fedora"))
+  {
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "fc1"))        $OS='Fedora_8';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc2"))        $OS='Fedora_8';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc3"))        $OS='Fedora_8';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc4"))        $OS='Fedora_8';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc5"))        $OS='Fedora_8';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc6"))        $OS='Fedora_8';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc7"))        $OS='Fedora_8';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc8"))        $OS='Fedora_8';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc9"))        $OS='Fedora_9';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc10"))       $OS='Fedora_10';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc11"))       $OS='Fedora_10';
+
+
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "i386"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i486"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i586"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i686"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "x86_64"))     $CPU='x86_64';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "amd64"))      $CPU='x86_64';
+
+   if (isset($OS) and isset($CPU))
+   {
+    $Link=$Language.'/Download#'.$OS.'.'.$CPU;
+         if ($Link==$Language.'/Download#Fedora_8.i386')                   $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Fedora_8.x86_64')                 $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Fedora_9.i386')                   $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Fedora_9.x86_64')                 $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Fedora_10.i386')                  $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Fedora_10.x86_64')                $Version='0.7.11';
+         if ($OS=='Fedora_8')                                   $OS='Fedora 8 (Wereworlf)';
+    else if ($OS=='Fedora_9')                                   $OS='Fedora 9 (Sulphur)';
+    else if ($OS=='Fedora_10')                                  $OS='Fedora 10 (Cambridge)';
+    $OS=$OS.', '.$CPU;
+   }
+   else
+   {
+    $Version='0.7.11'; //Fedora
+    $Link=$Language.'/Download#Fedora';
+    $OS='Fedora';
+   }
+   $Size='2';
+  }
+  else if (stristr($_SERVER['HTTP_USER_AGENT'], "suse"))
+  {
+                                                                $OS='OpenSuSE_11.1';
+
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "i386"))       $CPU='i586';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i486"))       $CPU='i586';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i586"))       $CPU='i586';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i686"))       $CPU='i586';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "x86_64"))     $CPU='x86_64';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "amd64"))      $CPU='x86_64';
+
+   if (isset($OS) and isset($CPU))
+   {
+    $Link=$Language.'/Download#'.$OS.'.'.$CPU;
+         if ($Link==$Language.'/Download#OpenSuSE_11.1.i586')              $Version='0.7.11';
+    else if ($Link==$Language.'/Download#OpenSuSE_11.1.x86_64')            $Version='0.7.11';
+         if ($OS=='OpenSuSE_11.1')                              $OS='OpenSuSE 11.1';
+    $OS=$OS.', '.$CPU;
+   }
+   else
+   {
+    $Version='0.7.11'; //OpenSuSE
+    $Link=$Language.'/Download#OpenSuSE';
+    $OS='OpenSuSE';
+   }
+   $Size='2';
+  }
+  else if (stristr($_SERVER['HTTP_USER_AGENT'], "mandriva"))
+  {
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "20060mdk"))   $OS='Mandriva_2008';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "2006.0"))     $OS='Mandriva_2008';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "mdv2007"))    $OS='Mandriva_2008';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "mdv2008"))    $OS='Mandriva_2008';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "mdv2009"))    $OS='Mandriva_2009';
+
+
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "i386"))       $CPU='i586';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i486"))       $CPU='i586';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i586"))       $CPU='i586';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i686"))       $CPU='i586';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "x86_64"))     $CPU='x86_64';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "amd64"))      $CPU='x86_64';
+
+   if (isset($OS) and isset($CPU))
+   {
+    $Link=$Language.'/Download#'.$OS.'.'.$CPU;
+         if ($Link==$Language.'/Download#Mandriva_2008.i586')              $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Mandriva_2008.x86_64')            $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Mandriva_2009.i586')              $Version='0.7.11';
+    else if ($Link==$Language.'/Download#Mandriva_2009.x86_64')            $Version='0.7.11';
+    $OS=$OS.', '.$CPU;
+   }
+   else
+   {
+    $Version='0.7.11'; //Mandriva
+    $Link=$Language.'/Download#Mandriva';
+    $OS='Mandriva';
+   }
+   $Size='2';
+  }
+  else
+  {
+   $Version='0.7.11'; //Linux
+   $Link=$Language.'/Download#Source.AllInOne';
+   $OS='Linux';
+   $Size='2';
+  }
+ }
+ else if (stristr($_SERVER['HTTP_USER_AGENT'], "bsd"))
+ {
+  $Version='0.7.11'; //Linux
+  $Link=$Language.'/Download#Source.AllInOne';
+  $OS='Linux';
+  $Size='2';
+ }
+   else
+ {
+  $Version='0.7.11'; //Windows.i386
+  $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Windows_i386.exe';
+  $OS='Windows, 32'; $Bits=true;
+  $Installer=true;
+  $Size='1.7';
+ }
+
+ //Test if this is with language
 if (strlen($Page_Exploded[1])!=2 && !(strlen($Page_Exploded[1])==5 && $Page_Exploded[1]{2}=="-")) 
 {
  if (!is_file($Path."/en".$Page))
