@@ -197,9 +197,9 @@ if (!isset($Page_Exploded[1]))
   }
   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fedora"))
   {
-        if (stristr($_SERVER['HTTP_USER_AGENT'], "fc1"))        $OS='Fedora_8';
-   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc2"))        $OS='Fedora_8';
-   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc3"))        $OS='Fedora_8';
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "fc1 "))       $OS='Fedora_8';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc2 "))       $OS='Fedora_8';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc 3"))       $OS='Fedora_8';
    else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc4"))        $OS='Fedora_8';
    else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc5"))        $OS='Fedora_8';
    else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc6"))        $OS='Fedora_8';
