@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <title></title>
+</head>
+<body>
+<?php
+if (stristr($_SERVER['HTTP_USER_AGENT'], "Macintosh")) {
+echo '<div class="Info" lang="it">Caro utente MAC,<br />Il pacchetto completo di MediaInfo GUI (Graphic User Interface) per Mac non è ancora pronto.<br />Attualmente esistono due programmi che sfruttano le librerie di MediaInfo:<ul><li><a href="http://massanti.com/mediainfo/">Diego Massati\'s MediaInfo Mac</a>.</li> <li><a href="http://laurent.ettouati.free.fr/VideoSpec/index_intl.html">Laurent Ettouati\'s VideoSpec</a>.</li></ul>Attenzione: questi due programmi non sono supportati, per qualsiasi problema rivolgersi ai rispettivi autori.<br /><br /></div>';
+
+}
+?>
+<h1 class="Invisible">MediaInfo, Media Info, MediaInfoDLL, MediaInfo.DLL, MediaInfo DLL, Media Info DLL</h1>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tbody>
+  <tr style="vertical-align: top;">
+   <td style="padding: 0px 15px 5px 5px;">
+    <a href="ScreenShots/GUI_Main"><img src="/_/Image/Default/ScreenShot/GUI_Easy_en_Extract.png" alt="" title="ScreenShot - The main interface" /></a>
+   </td>
+   <td>
+      <h2 class="First">Cos'&egrave; MediaInfo?</h2>
+      <span style="font-weight: bold;">MediaInfo</span> da informazioni tecniche 
+      su file video o audio.<br />
+      E' un programma gratuito (non necessita pagamento ed &egrave; possibile 
+      accedere al codice sorgente gratuitamente, licenza GPL o LGPL)<br />
+    <br />
+      <a style="font-weight: bold;" href="<?php echo $Link;?>">Scaricalo!</a><br />
+      (versione <?php echo $Version;?><?php if (isset($Installer)) echo ', Interfaccia grafica, con installazione';?><?php if(isset($OS)) echo ', per '.$OS;?><?php if(isset($Bits)) echo ' bits';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br />
+      Nota 1 : puoi <a href="http://sourceforge.net/project/filemodule_monitor.php?filemodule_id=90341">monitorare</a> 
+      o <a href="http://sourceforge.net/project/showfiles.php?group_id=86862"> 
+      vedere le note di rilascio</a> sulla <a href="http://sourceforge.net/projects/mediainfo">pagina 
+      del progetto su SourceForge</a><br />
+      Nota 2 : altre versioni (OS, interfacce...) sono disponibili <a href="Download">qui</a><br />
+    <br />
+      Puoi <a href="Help">donare</a> per supportare lo sviluppo di questo programma. 
+    </td>
+  </tr>
+ </tbody>
+</table>
+<h1 class="Invisible">ID3v1 tag, ID3v2 tag, APETag, Extended INFO tags, RIFF INFO, 16/9, 2.25</h1>
+<h2>Quali informazioni posso ottenere con MediaInfo?</h2>
+<ul>
+  <li>Generali : titolo, autore, regista, album, numero della traccia, data, durata...</li>
+  <li>Video : codec, aspect ratio, fps, bitrate...</li>
+  <li>Audio : codec, sample rate, canali, lingua, bitrate...</li>
+  <li>Sottotitoli : lingua del sottotitolo</li>
+  <li>Capitoli : numero dei capitoli, lista dei capitoli</li>
+</ul>
+<h1 class="Invisible"><a href="http://mediaarea.net/en/DX50">DivX</a>, <a href="http://mediaarea.net/en/XVID">XviD</a>, H263, H.263, H264, x264, ASP, AVC, iTunes, MPEG-1, MPEG1, MPEG-2, MPEG2, MPEG-4, MPEG4, MP4, M4A, M4V, QuickTime, RealVideo, RealAudio, RA, RM, MSMPEG4v1, MSMPEG4v2, MSMPEG4v3, VOB, DVD, WMA, VMW, ASF, 3GP, 3GPP, 3GP2</h1>
+<h2>Che tipo di formato (contenitore) &egrave; supportato da MediaInfo?</h2>
+<ul>
+ <li>Video : MKV, OGM, AVI, <a href="http://mediaarea.net/en/DIVX">DivX</a>, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Codec: <a href="http://mediaarea.net/en/DIVX">DivX</a>, <a href="http://mediaarea.net/en/XVID">XviD</a>, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Sottotitoli: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h1 class="Invisible">multiplexer, demuxer, mixer, muxer, video decoder, audio decoder, PAL, NTSC</h1>
+<h2>Cosa posso farci?</h2>
+<ul>
+  <li>Leggere pi&ugrave; <a href="Support/Formats"> formati video e audio</a></li>
+  <li>Diversi modi di visualizzazione (testo, sheet, albero, HTML...)</li>
+  <li>Puoi personalizzare la visualizzazione</li>
+  <li>Puoi esportare : testo, CSV, HTML...</li>
+  <li>Interfaccia Grafica, o Riga di Comando, o DLL</li>
+  <li>Integrazione con MS-Windows (drag'n' drop, e Men&ugrave; Contestuale)</li>
+  <li>Internazionale : funziona indipendentemente dalla lingua o dalla versione 
+    del vostro Sistema Operativo</li>
+  <li>Pu&ograve; essere tradotto in qualsiasi lingua (da parte di volontari)</li>
+</ul>
+</body>
+</html>

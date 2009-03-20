@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <title></title>
+</head>
+<body>
+<?php
+if (stristr($_SERVER['HTTP_USER_AGENT'], "Macintosh")) {
+
+echo '<div class="Info" lang="en">Dear Mac users,<br />The full package of MediaInfo GUI (Graphic User Interface) for Mac is not yet ready.<br />Currently, two applications for Mac use MediaInfo library:<ul><li><a href="http://massanti.com/mediainfo/">Diego Massati\'s MediaInfo Mac</a>.</li> <li><a href="http://laurent.ettouati.free.fr/VideoSpec/index_intl.html">Laurent Ettouati\'s VideoSpec</a>.</li></ul>Note: none of them are officialy supported, please report problem to author rather than here.<br /><br /></div>';
+
+}
+?>
+<h1 class="Invisible">MediaInfo, Media Info, MediaInfoDLL, MediaInfo.DLL, MediaInfo DLL, Media Info DLL</h1>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tbody>
+  <tr style="vertical-align: top;">
+
+   <td style="padding: 0px 15px 5px 5px;">
+    <a href="ScreenShots/GUI_Main"><img src="/_/Image/Default/ScreenShot/GUI_Easy_en_Extract.png" alt="" title="ScreenShot - The main interface" /></a>
+   </td>
+   <td>
+    <h2 class="First">O que é o MediaInfo?</h2>
+    <span style="font-weight: bold;">O MediaInfo</span> fornece informação técnica e de etiqueta sobre um arquivo de vídeo ou áudio.<br />
+    Este programa é gratuito (livre de custo e de acesso ao código fonte: licença GPL ou LGPL)<br />
+
+    <br />
+    <a style="font-weight: bold;" href="<?php echo $Link;?>">Baixa-lo!</a><br />
+    (versão <?php echo $Version;?><?php if (isset($Installer)) echo ', Interface Gráfica, com Instalador';?><?php if(isset($OS)) echo ', para '.$OS;?><?php if(isset($Bits)) echo ' bits';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br />
+    Nota 1: você pode <a href="http://sourceforge.net/project/filemodule_monitor.php?filemodule_id=90341">acompanhar</a> ou <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">ver notas de lançamento</a> na <a href="http://sourceforge.net/projects/mediainfo">página do projeto na SourceForge</a><br />
+
+    Nota 2: outras versões (OS, interface ...) estão <a href="Download">disponíveis</a><br />
+    <br />
+    Faça uma <a href="Help">doação</a> para apoiar o desenvolvimento contínuo.
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h1 class="Invisible">ID3v1 tag, ID3v2 tag, APETag, Extended INFO tags, RIFF INFO, 16/9, 2.25</h1>
+<h2>Que tipo de informação eu consigo com o MediaInfo?</h2>
+<ul>
+ <li>Geral: título, autor, diretor, álbum, número da faixa, data, duração...</li>
+ <li>Vídeo: codec, resolução, fps, taxa de bits...</li>
+ <li>Áudio: codec, taxa de amostragem, canais, idioma, taxa de bits...</li>
+ <li>Texto: idioma da legenda</li>
+
+ <li>Capítulos: número de capítulos, lista de capítulos</li>
+</ul>
+<h1 class="Invisible">DivX, XviD, H263, H.263, H264, x264, ASP, AVC, iTunes, MPEG-1, MPEG1, MPEG-2, MPEG2, MPEG-4, MPEG4, MP4, M4A, M4V, QuickTime, RealVideo, RealAudio, RA, RM, MSMPEG4v1, MSMPEG4v2, MSMPEG4v3, VOB, DVD, WMA, VMW, ASF, 3GP, 3GPP, 3GP2</h1>
+<h2>Quais formatos (container) o MediaInfo suporta?</h2>
+<ul>
+ <li>Vídeo: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Codecs: DivX, XviD, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Áudio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+
+ <li>Legendas: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h1 class="Invisible">multiplexer, demuxer, mixer, muxer, video decoder, audio decoder, PAL, NTSC</h1>
+<h2>O que posso fazer com ele?</h2>
+<ul>
+ <li>Ler muitos <a href="Support/Formats"> formatos de arquivo de vídeo e áudio</a></li>
+ <li>Exibir a informação de diferentes maneiras (texto, formulário, árvore, HTML ...)</li>
+
+ <li>Você pode personalizar a exibição</li>
+ <li>Exportar a informação como texto, CSV, HTML...</li>
+ <li>Interface Gráfica, Linha de Comando, ou DLL</li>
+ <li>Integração com o shell do MS-WINDOWS (arrastar e soltar, e menu de contexto)</li>
+ <li>Internacionalização: exibe qualquer idioma em qualquer versão do seu Sistema Operacional</li>
+ <li>Pode-se traduzir a interface para qualquer idioma (mas é necessário voluntários)</li>
+
+</ul>
+</body>
+</html>
