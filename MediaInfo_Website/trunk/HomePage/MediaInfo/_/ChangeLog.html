@@ -18,7 +18,7 @@ else
 if (!isset($AlreadyVisited))
 {
  //Temp for limiting display
- if (mt_rand(1, 6)>2)
+ if (mt_rand(1, 100)>37)
   $AlreadyVisited='Y';
 }
 ?> 
@@ -29,8 +29,21 @@ if (!isset($AlreadyVisited))
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
 if (!isset($AlreadyVisited))
- echo '<meta http-equiv="refresh" content="'.mt_rand(10, 20).'; URL=http://mediainfo.sourceforge.net/'.$Language.'" />
+{
+ if (mt_rand(1, 100)>10)
+  $URL='http://mediainfo.sourceforge.net/'.$Language;
+ else
+ {
+  if (mt_rand(1, 100)>33)
+   $URL='http://mediaarea.net/DX50';
+  else if (mt_rand(1, 100)>50)
+   $URL='http://mediaarea.net/DIVX';
+  else
+   $URL='http://mediaarea.net/XVID';
+ }
+ echo '<meta http-equiv="refresh" content="'.mt_rand(10, 20).'; URL='.$URL.'" />
 ';
+}
 ?>
  <meta name="identifier-url" content="http://mediainfo.sourceforge.net" />
  <meta name="revisit-after" content="7 days" />

@@ -15,8 +15,12 @@ td:target                       {background-color: #77FF77;}
 .Path a                         {text-decoration:none; color:white}
 .Path a:hover                   {text-decoration:underline; color:white}
 
-.Banner_Top_Background          {text-align:center; background-image:url(/_/Image/Default/Top/Background.jpg); background-repeat:repeat-x}
-.Banner_Top_Gradient            {height:31px; background-image:url(/_/Image/Default/Top/Gradient.gif); background-repeat:repeat-x}
+.Banner_Top_Background          {text-align:center;}
+.Banner_Top_Gradient            {}
+
+.FlagsAround                   {font-size:20px; background-color:#F0F0F0; text-align:center}
+.FlagsAround a:hover           {color:black; background-color:#D0D0D0}
+.FlagsAround img               {padding:0px 5px 0px 5px}
 
 .Banner_Bottom                  {background-image:url(/_/Image/Default/Bottom/Gradient.jpg); background-repeat:repeat-y}
 .Note                           {color:black; background:#AAAAAA}
