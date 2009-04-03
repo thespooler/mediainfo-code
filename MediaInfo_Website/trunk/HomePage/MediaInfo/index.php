@@ -72,7 +72,7 @@ if (!isset($Page_Exploded[1]))
  {
   $Version='0.7.11'; //Mac OS X
   $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Mac_Universal.dmg';
-  $OS='Mac OS X, Universal';
+  $OS='Mac OS X 10.5 (Leopard), Universal';
   $Installer=true;
   $Size='3.6';
  }
