@@ -1,0 +1,37 @@
+#! /bin/sh
+
+#-----------------------------------------------------------------------
+# $1=OS, $2=Platform
+Release_CLI()
+{
+#-----------------------------------------------------------------------
+# Clean up
+test -e MediaArea_DV_Analyzer_CLI_$1_$2.tar     && rm    MediaArea_DV_Analyzer_CLI_$1_$2.tar
+test -e MediaArea_DV_Analyzer_CLI_$1_$2.tar.bz2 && rm    MediaArea_DV_Analyzer_CLI_$1_$2.tar.bz2
+test -d MediaArea_DV_Analyzer_CLI_$1_$2         && rm -r MediaArea_DV_Analyzer_CLI_$1_$2
+mkdir   MediaArea_DV_Analyzer_CLI_$1_$2
+
+#-----------------------------------------------------------------------
+# Copying : Exe
+cp ../Project/GNU/CLI/dvanalyzer MediaArea_DV_Analyzer_CLI_$1_$2/dvanalyzer
+cd MediaArea_DV_Analyzer_CLI_$1_$2
+strip dvanalyzer
+cd ..
+
+#-----------------------------------------------------------------------
+# Copying : Information file
+cp ../License.html MediaArea_DV_Analyzer_CLI_$1_$2/
+cp ../History_CLI.txt MediaArea_DV_Analyzer_CLI_$1_$2/History.txt
+cp ReadMe_CLI_$1.txt MediaArea_DV_Analyzer_CLI_$1_$2/ReadMe.txt
+
+#-----------------------------------------------------------------------
+# Compressing Archive
+tar jchf MediaArea_DV_Analyzer_CLI_$1_$2.tar.bz2 MediaArea_DV_Analyzer_CLI_$1_$2
+
+#-----------------------------------------------------------------------
+# Clean up
+#if "%1"=="SkipCleanUp" goto SkipCleanUp
+#rm -r MediaArea_DV_Analyzer_CLI_$1_$2
+#:SkipCleanUp
+}
+
