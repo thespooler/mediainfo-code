@@ -1,0 +1,49 @@
+Notes:
+------
++ Added
+- Deleted
+x Correction
+
+Version 1.2.1, 2009-05-15
+--------------
+x "Date covered" was wrong if RecDate/RecTime were complex to decode
+x somme audio errors were wrongly reported
+
+Version 1.2.0, 2009-05-06
+--------------
++ Frame number
++ Verbosity (see --Help-Verbosity for more info)
++ Footer: count of frames with incoherancies
++ Footer: timecode covered
++ Warning if there is some frame count incoherancy
+x timecode incoherancy was skipped in some cases
+x somme audio errors were wrongly reported
+
+Version 1.1.0, 2009-05-04
+--------------
++ New error presentation
++ NULL block detection
++ invalid audio detection
+
+Version 1.0.1, not released
+--------------
+x Frame count was offset by 1
+x Some timestamps were wrongly reported (25 fps instead of 29.97 fps) (again!)
+
+Version 1.0.0, 2009-04-30
+--------------
++ 4 GB+ .mov support
++ Better support of NULL padded DIFs
++ With an official build of libmediainfo (0.7.15)
+x Some timestamps were wrongly reported (25 fps instead of 29.97 fps)
+x DropFrame was not well handled
+
+Version 0.9.0, 2009-04-27
+--------------
++ First official version, based on MediaInfo 0.7.15 BETA
++ STA errors detection
++ Timestamp, timecode, recdate, rectime
++ Detection of timecode gaps
++ Detection of rectime gap
++ detection of Start/End flags
++ Header/Footer (summary)
