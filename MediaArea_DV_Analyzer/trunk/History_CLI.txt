@@ -17,9 +17,9 @@ Version 1.2.0, 2009-05-06
 --------------
 + Frame number
 + Verbosity (see --Help-Verbosity for more info)
-+ Footer: count of frames with incoherancies
++ Footer: count of frames with incoherencies
 + Footer: timecode covered
-+ Warning if there is some frame count incoherancy
++ Warning if there is some frame count incoherency
 x timecode incoherancy was skipped in some cases
 x somme audio errors were wrongly reported
 
