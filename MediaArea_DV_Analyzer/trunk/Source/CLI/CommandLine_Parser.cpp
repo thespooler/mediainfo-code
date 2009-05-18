@@ -135,7 +135,7 @@ CL_OPTION(Version)
 {
     MI.Menu_Help_Version();
 
-    TEXTOUT("MediaArea DV Analyzer Command line, Version 1.2.1");
+    TEXTOUT("MediaArea DV Analyzer Command line, Version 1.2.2");
     STRINGOUT(MI.Text_Get());
 
     return -1;
