@@ -63,6 +63,7 @@ public:
     //Datas
     MediaInfoNameSpace::String &Inform_Get();
     MediaInfoNameSpace::String &Errors_Stats_Get();
+    MediaInfoNameSpace::String &Summary();
     bool Errors_Stats_WithHeader;
     bool Errors_Stats_WithFooter;
 

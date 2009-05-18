@@ -4,10 +4,14 @@ Notes:
 - Deleted
 x Correction
 
-Version 1.2.1, 2009-05-15
+Version 1.2.2, 2009-05-18
 --------------
 x "Date covered" was wrong if RecDate/RecTime were complex to decode
-x somme audio errors were wrongly reported
+x "xxx covered" had "start frame at" shifted by 1
+
+Version 1.2.1, 2009-05-15
+--------------
+x (based on v1.1.0, to be trashed)
 
 Version 1.2.0, 2009-05-06
 --------------

@@ -166,3 +166,37 @@ String& Core::Errors_Stats_Get ()
         Text=Text_Temp;
     return Text;
 }
+
+//---------------------------------------------------------------------------
+String& Core::Summary ()
+{
+    if (Text_Temp.empty())
+    {
+        Text.clear();
+        
+        size_t Count=MI->Count_Get();
+        for (size_t Pos=0; Pos<Count; Pos++)
+        {
+            Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_End"))+_T('\n');
+
+            if (!MI->Get(Pos, Stream_Video, 0, _T("FrameCount")).empty() && MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))!=MI->Get(Pos, Stream_Video, 0, _T("FrameCount_Speed")))
+            {
+                Text+=_T('\n');
+                Text+=_T("Warning, frame count is maybe incoherant (reported by MediaInfo: ")+MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))+_T(")\n");
+            }
+
+            if (Pos+1<Count)
+            {
+                Text+=_T('\n');
+                Text+=_T("***************************************************************************\n");
+                Text+=_T('\n');
+            }
+        }
+        for (size_t Pos=0; Pos<Text.size(); Pos++)
+            if (Text[Pos]==_T('&'))
+                Text[Pos]=_T('\n');
+    }
+    else
+        Text=Text_Temp;
+    return Text;
+}

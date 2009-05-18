@@ -18,6 +18,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MediaInfoLib", "..\..\..\Me
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", "{70DAF034-E8BA-4636-A42C-CC581B3ECC94}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MediaArea_DV_Analyzer_GUI", "GUI\MediaArea_DV_Analyzer_GUI.vcproj", "{EEFA8691-4EFB-42FB-BAA5-ED251CDEA019}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0DA1DA7D-F393-4E7C-A7CE-CB5C6A67BC94} = {0DA1DA7D-F393-4E7C-A7CE-CB5C6A67BC94}
+		{20E0F8D6-213C-460B-B361-9C725CB375C7} = {20E0F8D6-213C-460B-B361-9C725CB375C7}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -58,6 +64,12 @@ Global
 		{20E0F8D6-213C-460B-B361-9C725CB375C7}.Release|Win32.Build.0 = Release|Win32
 		{20E0F8D6-213C-460B-B361-9C725CB375C7}.Release|x64.ActiveCfg = Release|x64
 		{20E0F8D6-213C-460B-B361-9C725CB375C7}.Release|x64.Build.0 = Release|x64
+		{EEFA8691-4EFB-42FB-BAA5-ED251CDEA019}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EEFA8691-4EFB-42FB-BAA5-ED251CDEA019}.Debug|Win32.Build.0 = Debug|Win32
+		{EEFA8691-4EFB-42FB-BAA5-ED251CDEA019}.Debug|x64.ActiveCfg = Debug|Win32
+		{EEFA8691-4EFB-42FB-BAA5-ED251CDEA019}.Release|Win32.ActiveCfg = Release|Win32
+		{EEFA8691-4EFB-42FB-BAA5-ED251CDEA019}.Release|Win32.Build.0 = Release|Win32
+		{EEFA8691-4EFB-42FB-BAA5-ED251CDEA019}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
