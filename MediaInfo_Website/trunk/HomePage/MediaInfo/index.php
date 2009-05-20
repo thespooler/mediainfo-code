@@ -304,7 +304,7 @@ if (!isset($Page_Exploded[1]))
   }
   else
   {
-   $Version='0.7.15'; //Linux
+   $Version='0.7.16'; //Linux
    $Link=$Language.'/Download#Source.AllInOne';
    $OS='Linux';
    $Size='2';
@@ -312,14 +312,14 @@ if (!isset($Page_Exploded[1]))
  }
  else if (stristr($_SERVER['HTTP_USER_AGENT'], "bsd"))
  {
-  $Version='0.7.15'; //Linux
+  $Version='0.7.16'; //Linux
   $Link=$Language.'/Download#Source.AllInOne';
   $OS='Linux';
   $Size='2';
  }
    else
  {
-  $Version='0.7.15'; //Windows.i386
+  $Version='0.7.16'; //Windows.i386
   $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Windows_i386.exe';
   $OS='Windows, 32'; $Bits=true;
   $Installer=true;
