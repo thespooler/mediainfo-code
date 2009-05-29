@@ -26,7 +26,7 @@ td:target                       {background-color: #77FF77;}
 .Note                           {color:black; background:#AAAAAA}
 .Info                           {color:black; background:#AAAAFF}
 .Invisible                      {display:none}
-.Warning                        {color:black; background-color:#FF5555}
+.Warning                        {color:black; background-color:#FF8888}
 
 #Menu                           {width:250px}
 #Menu .Flags                    {color:black; background-color:#B8B8B8}
