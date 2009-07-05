@@ -2,6 +2,8 @@
 //Variables
 if (isset($_COOKIE["LastVisited"]))
  $AlreadyVisited='Y';
+if (isset($_COOKIE["Donated"]))
+ $Donated='Y';
 //AdditionnalPath
 //-Path
 if (!isset($_SERVER["SCRIPT_FILENAME"]))
@@ -12,7 +14,6 @@ $Path=substr($Path, 0, strrpos($Path, "/"));
 if (!isset($_SERVER["REQUEST_URI"]))
   exit("error");
 $Page=strtok($_SERVER["REQUEST_URI"], "?");
-//-Argument
 parse_str(strtok("?"), $Argument);
 //-Language
 if (isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]))
@@ -26,6 +27,23 @@ if (isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]))
 }
 else
  $Language="en";
+//-Argument
+if (isset($Argument["Donated"]))
+{
+ setcookie("Donated", "true", time()+60*60*24*365*5);
+ echo '
+<html>
+<head>
+<meta name=”robots” content="noindex, nofollow, noarchive">
+<meta http-equiv="refresh" content="0;url=http://'.$_SERVER['HTTP_HOST'].'/'.$Language.'/Donate">
+</head>
+<body>
+You will be redirected shortly, if not click <a href="http://'.$_SERVER['HTTP_HOST'].'/'.$Language.'/Donate">here</a>.
+</body>
+</html>
+ ';
+ exit; 
+}
 //-Special case : new.html
 if ($Page=="" || $Page=="/")
 {
@@ -351,7 +369,10 @@ if (!isset($Page_Exploded[1]))
    else
  {
   $Version='0.7.18'; //Windows.i386
-  $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Windows_i386.exe';
+  if (isset($Donate))
+   $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Windows_i386.exe';
+  else
+   $Link='http://download.mediaarea.net/MediaInfo/MediaInfo_GUI_'.$Version.'_Windows_i386.exe';
   $OS='Windows, 32'; $Bits=true;
   $Installer=true;
   $Size='1.7';
@@ -370,6 +391,12 @@ if (strlen($Page_Exploded[1])!=2 && !(strlen($Page_Exploded[1])==5 && $Page_Expl
  exit;
 }
 $Language=$Page_Exploded[1];
+//-Special case : old pages
+if (isset($Page_Exploded[2]) && $Page_Exploded[2]=="Help.html")
+{
+ header("Location: http://".$_SERVER['HTTP_HOST']."/".$Language."/Donate", true, 301);
+ exit; 
+}
 
 //-PageFinal - With a page in the good language or english
 $PageFinal=$Page;
