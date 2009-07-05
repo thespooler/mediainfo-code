@@ -5,6 +5,21 @@
  <title>Feu una donació</title>
 </head>
 <body>
+<?php
+if (isset($Donated))
+{
+ echo '
+<div class="Info">
+<br />
+Dear donator, thank you for your support.
+<br />
+<br />
+</div>
+<br />
+ ';
+}
+?>
+
 <h1>Donacions</h1>
 <h2>Per què fer una donació?</h2>
 MediaInfo és una aplicació lliure.<br />
@@ -22,8 +37,8 @@ Llavors, per què fer una donació? Doncs per que sigui una manera de donar les 
 
 <input type="hidden" name="no_shipping" value="1">
 <input type="hidden" name="rm" value="1">
-<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/Paid">
-<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/fr/Donate">
+<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
+<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
 <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
 <br />
 <input type="image" src="https://www.paypal.com/es_ES/ES/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal. La forma rápida y segura de pagar en Internet.">

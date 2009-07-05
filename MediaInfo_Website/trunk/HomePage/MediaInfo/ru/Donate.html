@@ -5,6 +5,21 @@
  <title>Помочь MediaInfo</title>
 </head>
 <body>
+<?php
+if (isset($Donated))
+{
+ echo '
+<div class="Info">
+<br />
+Dear donator, thank you for your support.
+<br />
+<br />
+</div>
+<br />
+ ';
+}
+?>
+
 <h1>Пожертвования</h1>
 <h2>Зачем жертвовать?</h2>
 MediaInfo - свободное программное обеспечение.<br />
@@ -21,8 +36,8 @@ $ <select name="amount"><option value="2.00">2</option><option value="5.00">5</o
 
 <input type="hidden" name="no_shipping" value="1">
 <input type="hidden" name="rm" value="1">
-<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/Paid">
-<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/en/Donate">
+<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
+<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
 <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
 <br />
 <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">

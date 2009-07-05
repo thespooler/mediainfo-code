@@ -5,6 +5,21 @@
  <title>Help MediaInfo</title>
 </head>
 <body>
+<?php
+if (isset($Donated))
+{
+ echo '
+<div class="Info">
+<br />
+Dear donator, thank you for your support.
+<br />
+<br />
+</div>
+<br />
+ ';
+}
+?>
+
 <h1>Datek</h1>
 <h2>Dlaczego wspierać?</h2>
 MediaInfo jest darmowym programem.<br>
@@ -22,8 +37,8 @@ Po co więc płacić? Z wdzięczności. Żeby zmotywowac do dalszej pracy. Żeby
 
 <input type="hidden" name="no_shipping" value="1">
 <input type="hidden" name="rm" value="1">
-<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/Paid">
-<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/fr/Donate">
+<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
+<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
 <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
 <br />
 <input type="image" src="https://www.paypal.com/pl_PL/PL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal — Plac wygodnie i bezpiecznie">
