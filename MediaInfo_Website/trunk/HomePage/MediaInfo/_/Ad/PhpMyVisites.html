@@ -5,5 +5,8 @@ if (isset($Official))
  include $Path."/_/Ad/PhpMyVisites_Official.html";
 else
  echo '(PhpMyVisites)';
+
+if (isset($Page_Exploded[2]) && $Page_Exploded[2]=="Donate.html")
+ include $Path."/_/Ad/PhpMyVisites_Donate.html";
 }
 ?>
