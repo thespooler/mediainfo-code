@@ -28,7 +28,8 @@ if (isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]))
 else
  $Language="en";
 //-Argument
-if (isset($Argument["Donated"]))
+if (isset($Argument["Donated"])
+ || isset($Argument["merchant_return_link"]))
 {
  setcookie("Donated", "true", time()+60*60*24*365*5);
  echo '
