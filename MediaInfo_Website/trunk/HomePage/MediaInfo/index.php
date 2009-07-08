@@ -371,9 +371,9 @@ if (!isset($Page_Exploded[1]))
  {
   $Version='0.7.18'; //Windows.i386
   if (isset($Donate))
-   $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Windows_i386.exe';
-  else
    $Link='http://download.mediaarea.net/MediaInfo/MediaInfo_GUI_'.$Version.'_Windows_i386.exe';
+  else
+   $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Windows_i386.exe';
   $OS='Windows, 32'; $Bits=true;
   $Installer=true;
   $Size='1.7';
