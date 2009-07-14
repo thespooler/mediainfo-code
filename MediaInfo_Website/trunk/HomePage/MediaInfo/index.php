@@ -53,6 +53,7 @@ if ($Page=="" || $Page=="/")
 }
 if ($Page=="/Log")
 {
+ setcookie("NewVersionRequested", "true", time()+60*60*24*365*5);
  include $Path."/_/ChangeLog.html";
  exit; 
 }
