@@ -90,9 +90,9 @@ if (!isset($Page_Exploded[1]))
  //OS detection
    if (stristr($_SERVER['HTTP_USER_AGENT'], "macintosh"))
  {
-  $Version='0.7.17'; //Mac OS X
-  $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Mac_10.5_Universal.dmg';
-  $OS='Mac OS X 10.5 (Leopard), Universal';
+  $Version='0.7.18'; //Mac OS X
+  $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Mac_Universal.dmg';
+  $OS='Mac OS X, Universal';
   $Installer=true;
   $Size='3.6';
  }
