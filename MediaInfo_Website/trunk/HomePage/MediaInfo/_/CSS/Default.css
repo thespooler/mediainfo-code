@@ -5,7 +5,7 @@ cite                            {font-style:normal}
 pre                             {font-size: small; background-color:#FFFFC0; border-width:thin; border-style:inset; padding:0px; margin:0px; padding-right:5%; margin-right:5%}
 ul                              {margin-top:0px; margin-bottom:0px}
 h1                              {font-size: medium}
-h2                              {font-size: small}
+h2                              {font-size: small; background-color:#F0F0F0}
 h3                              {font-size: small}
 h4                              {font-size: small}
 td:target                       {background-color: #77FF77;}
