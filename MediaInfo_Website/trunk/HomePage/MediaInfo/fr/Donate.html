@@ -1,3 +1,11 @@
+<?php
+
+//Paypal functions
+include $Path.'/_/Ad/Paypal/Display.html';
+header("Cache-Control: no-cache, must-revalidate, max-age=0");
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 <head>
@@ -11,14 +19,15 @@ if (isset($Donated))
  echo '
 <div class="Info">
 <br />
-Dear donator, thank you for your support.
-<br />
+Dear donator, thank you for your support.<br />
+If you want to remove the "Donate" button from the Windows GUI, you can download an launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.<br />
 <br />
 </div>
 <br />
  ';
 }
 ?>
+
 <h1>Soutenir MediaInfo</h1>
 <h2>MediaInfo est un logiciel libre et gratuit, alors pourquoi faire un don ?</h2>
 MediaInfo demande beaucoup de temps de développement. Faire un don est le meilleur moyen de rendre possible la poursuite du développement de MediaInfo.
@@ -28,128 +37,23 @@ Vous pouvez choisir entre un don en une fois ou un abonnement  mensuel :
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
  <tr>
   <td id="Adress" style="text-align:center">
-France<br />
-(en <b>Euros</b>)<br />
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_donations">
-<input type="hidden" name="business" value="zen@mediaarea.net">
-<input type="hidden" name="lc" value="FR">
-<input type="hidden" name="item_name" value="Don pour MediaInfo">
-<select name="amount"><option value="1.00">1</option><option value="2.00">2</option><option selected value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> Euros
-<input type="hidden" name="currency_code" value="EUR">
-
-<input type="hidden" name="no_shipping" value="1">
-<input type="hidden" name="rm" value="1">
-<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
-<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
-<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
-<br />
-<input type="image" src="https://www.paypal.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
-<img alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-</form>
-<br />
-<br />
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_xclick-subscriptions">
-<input type="hidden" name="business" value="zen@mediaarea.net">
-<input type="hidden" name="lc" value="FR">
-<input type="hidden" name="item_name" value="Don pour MediaInfo">
-<input type="hidden" name="no_note" value="1">
-ou <select name="a3"><option selected value="1.00">1</option><option value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> Euros/mois
-<input type="hidden" name="currency_code" value="EUR">
-<input type="hidden" name="src" value="1">
-<input type="hidden" name="p3" value="1">
-<input type="hidden" name="t3" value="M">
-<input type="hidden" name="sra" value="1">
-<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
-<br />
-<input type="image" src="https://www.paypal.com/fr_FR/FR/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
-<img alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-</form>
+   France<br />
+   (en <b>Euros</b>)<br />
+   <?php Paypal_Donate_Display(isset($Official), "FR", "fr_FR/FR", "EUR", "", "Euros", 1, 5, 1, "Don pour MediaInfo", "mois", "ou", "PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !"); ?>
   </td>
   <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </td>
   <td id="Adress" style="text-align:center">
-Québec<br />
-(en <b>Dollars canadiens</b>)<br />
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_donations">
-<input type="hidden" name="business" value="zen@mediaarea.net">
-<input type="hidden" name="lc" value="CA">
-<input type="hidden" name="item_name" value="Don pour MediaInfo">
-$ <select name="amount"><option value="2.00">2</option><option value="5.00">5</option><option selected value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> CAD
-<input type="hidden" name="currency_code" value="CAD">
-
-<input type="hidden" name="no_shipping" value="1">
-<input type="hidden" name="rm" value="1">
-<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
-<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
-<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
-<br />
-<input type="image" src="https://www.paypal.com/fr_XC/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
-<img alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-</form>
-<br />
-<br />
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_xclick-subscriptions">
-<input type="hidden" name="business" value="zen@mediaarea.net">
-<input type="hidden" name="lc" value="CA">
-<input type="hidden" name="item_name" value="Don pour MediaInfo">
-<input type="hidden" name="no_note" value="1">
-ou $ <select name="a3"><option selected value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> CAD/mois
-<input type="hidden" name="currency_code" value="CAD">
-<input type="hidden" name="src" value="1">
-<input type="hidden" name="p3" value="1">
-<input type="hidden" name="t3" value="M">
-<input type="hidden" name="sra" value="1">
-<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
-<br />
-<input type="image" src="https://www.paypal.com/fr_XC/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
-<img alt="" border="0" src="https://www.paypal.com/fr_XC/i/scr/pixel.gif" width="1" height="1">
-</form>
+   Québec<br />
+   (en <b>Dollars canadiens</b>)<br />
+   <?php Paypal_Donate_Display(isset($Official), "CA", "fr_XC", "CAD", "CA$", "", 1, 10, 2, "Don pour MediaInfo", "mois", "ou", "PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !"); ?>
   </td>
   <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </td>
   <td id="Adress" style="text-align:center">
-Autre<br />
-(en <b>Dollars des Etats-Unis</b>)<br />
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_donations">
-<input type="hidden" name="business" value="zen@mediaarea.net">
-<input type="hidden" name="lc" value="US">
-<input type="hidden" name="item_name" value="Don pour MediaInfo">
-$ <select name="amount"><option value="2.00">2</option><option value="5.00">5</option><option selected value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> USD
-<input type="hidden" name="currency_code" value="USD">
-
-<input type="hidden" name="no_shipping" value="1">
-<input type="hidden" name="rm" value="1">
-<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
-<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
-<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
-<br />
-<input type="image" src="https://www.paypal.com/fr_XC/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
-<img alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-</form>
-<br />
-<br />
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_xclick-subscriptions">
-<input type="hidden" name="business" value="zen@mediaarea.net">
-<input type="hidden" name="lc" value="US">
-<input type="hidden" name="item_name" value="Don pour MediaInfo">
-<input type="hidden" name="no_note" value="1">
-ou $ <select name="a3"><option value="2.00">2</option><option selected value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> USD/mois
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="src" value="1">
-<input type="hidden" name="p3" value="1">
-<input type="hidden" name="t3" value="M">
-<input type="hidden" name="sra" value="1">
-<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
-<br />
-<input type="image" src="https://www.paypal.com/fr_XC/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
-<img alt="" border="0" src="https://www.paypal.com/fr_XC/i/scr/pixel.gif" width="1" height="1">
-</form>
+   Autre<br />
+   (en <b>Dollars des Etats-Unis</b>)<br />
+   <?php Paypal_Donate_Display(isset($Official), "US", "fr_XC", "USD", "US$", "", 1, 10, 2, "Don pour MediaInfo", "mois", "ou", "PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !"); ?>
   </td>
  </tr>
 </table>
