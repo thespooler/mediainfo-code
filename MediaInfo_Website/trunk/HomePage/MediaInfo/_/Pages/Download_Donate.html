@@ -42,6 +42,11 @@ else if (isset($_POST) && isset($_POST["amount"]) && ((int)($_POST["amount"]))!=
    $Currency_Before="";
    $Currency_After=" £";
   }
+  if ($Currency_Code=="EUR")
+  {
+   $Currency_Before="";
+   $Currency_After=" €";
+  }
  }
  $Page_Status="Paypal";
 }
