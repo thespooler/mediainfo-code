@@ -42,7 +42,7 @@ Paypal_Display_Direct(isset($Official), "US", "en_US", $Currency_Code, $Amount, 
 echo '
 <br />
 <br />
-If you don\'t wish to use PayPal as a donation processor, you will need to go back to <a href="/Download_Donate">previous page</a> and choose to pay nothing. We will hopefully be able to provide alternate donation services in the future.
+If you don\'t wish to use PayPal as a donation processor, go directly to <a href="'.$Link.'">download page</a>. We will hopefully be able to provide alternate donation services in the future.
 ';
 }
 
@@ -54,7 +54,7 @@ echo '
 In order for MediaInfo to be in a full-time development state, your support and help is greatly appreciated. Since MediaInfo is a free software, your donation is the best way to encourage the author and make it possible to continue moving forward on the project. <br />
 <br />
 <form action="Download_Donate" method="POST">
-<b>I choose to donate <select name="currency_code"><option selected value="USD">US$</option><option value="CAD">CA$</option><option value="AUD">AU$</option><option value="GBP">£</option><option value="EUR">€</option></select> <select name="amount"><option value="0.00">0</option><option value="1.00">1</option><option value="2.00">2</option><option value="5.00">5</option><option selected value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select></b><br />
+<b>I choose to donate <select name="currency_code"><option selected value="USD">US$</option><option value="CAD">CA$</option><option value="AUD">AU$</option><option value="GBP">£</option><option value="EUR">€</option></select> <select name="amount"><option selected value="0.00">0</option><option value="1.00">1</option><option value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select></b><br />
 <input type="submit" value="Continue"> </form>
 ';
 }
