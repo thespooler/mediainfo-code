@@ -7,6 +7,7 @@ x Correction
 Version 1.3.0, 2009-
 --------------
 + Adapted source code in order to be used by both CLI and GUI
++ This is the first GUI version
 
 Version 1.2.2, 2009-05-18
 --------------
@@ -52,6 +53,3 @@ Version 0.9.0, 2009-04-27
 + STA errors detection
 + Timestamp, timecode, recdate, rectime
 + Detection of timecode gaps
-+ Detection of rectime gap
-+ detection of Start/End flags
-+ Header/Footer (summary)

@@ -181,23 +181,15 @@
 			Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
-			<File
-				RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text_ByFrame.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text_MediaInfo.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text_Summary.cpp"
-				>
-			</File>
 			<Filter
 				Name="Common"
 				>
 				<File
 					RelativePath="..\..\..\Source\Common\Core.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\Source\Common\Help.cpp"
 					>
 				</File>
 			</Filter>
@@ -209,6 +201,18 @@
 					>
 					<File
 						RelativePath="..\..\..\Source\GUI\WxWidgets\App.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_About.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Help_ByFrame.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Help_Summary.cpp"
 						>
 					</File>
 					<File
@@ -227,6 +231,18 @@
 						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text.cpp"
 						>
 					</File>
+					<File
+						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text_ByFrame.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text_MediaInfo.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text_Summary.cpp"
+						>
+					</File>
 				</Filter>
 				<Filter
 					Name="Common"
@@ -237,36 +253,12 @@
 					</File>
 				</Filter>
 			</Filter>
-			<Filter
-				Name="CLI"
-				>
-				<File
-					RelativePath="..\..\..\Source\CLI\CommandLine_Parser.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\..\..\Source\CLI\Help.cpp"
-					>
-				</File>
-			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
-			<File
-				RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text_ByFrame.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text_MediaInfo.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text_Summary.h"
-				>
-			</File>
 			<Filter
 				Name="GUI"
 				>
@@ -275,6 +267,18 @@
 					>
 					<File
 						RelativePath="..\..\..\Source\GUI\WxWidgets\App.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_About.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Help_ByFrame.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Help_Summary.h"
 						>
 					</File>
 					<File
@@ -287,6 +291,18 @@
 					</File>
 					<File
 						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text_ByFrame.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text_MediaInfo.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main_Text_Summary.h"
 						>
 					</File>
 				</Filter>
@@ -306,16 +322,8 @@
 					RelativePath="..\..\..\Source\Common\Core.h"
 					>
 				</File>
-			</Filter>
-			<Filter
-				Name="CLI"
-				>
 				<File
-					RelativePath="..\..\..\Source\CLI\CommandLine_Parser.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\..\Source\CLI\Help.h"
+					RelativePath="..\..\..\Source\Common\Help.h"
 					>
 				</File>
 			</Filter>
@@ -326,13 +334,21 @@
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
 			<File
-				RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main.rc"
-				>
-			</File>
-			<File
 				RelativePath=".\MediaArea_DV_Analyzer_GUI.rc"
 				>
 			</File>
+			<Filter
+				Name="GUI"
+				>
+				<Filter
+					Name="WxWidgets"
+					>
+					<File
+						RelativePath="..\..\..\Source\GUI\WxWidgets\GUI_Main.rc"
+						>
+					</File>
+				</Filter>
+			</Filter>
 		</Filter>
 	</Files>
 	<Globals>

@@ -18,44 +18,25 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#ifndef CommandLine_ParserH
-#define CommandLine_ParserH
+#ifndef HelpH
+#define HelpH
 //---------------------------------------------------------------------------
 
-//---------------------------------------------------------------------------
-#include "Common/Core.h"
-#include "ZenLib/Ztring.h"
-//---------------------------------------------------------------------------
+#include <string>
 
 //***************************************************************************
 //
 //***************************************************************************
 
-int Parse(Core &C, MediaInfoNameSpace::String &Argument);
-
-
 //---------------------------------------------------------------------------
-#define CL_METHOD(_NAME) \
-    int CL_##_NAME(Core &C, const MediaInfoNameSpace::String &Argument)
-
-#define CL_OPTION(_NAME) \
-    int CL_##_NAME(Core &C, const MediaInfoNameSpace::String &Argument)
-
-CL_OPTION(Help);
-CL_OPTION(Help_xxx);
-CL_OPTION(Help_Format);
-CL_OPTION(Help_Verbosity);
-CL_OPTION(Header);
-CL_OPTION(Footer);
-CL_OPTION(Verbosity);
-CL_OPTION(LogFile);
-CL_OPTION(Version);
-CL_OPTION(Default);
+std::string Help();
+std::string Help_Nothing();
+std::string Help_Verbosity();
+std::string Help_Summary_Format();
+std::string Help_ByFrame_Format();
 
 //***************************************************************************
-// Options which need actions
+//
 //***************************************************************************
-
-void LogFile_Action(ZenLib::Ztring Inform);
 
 #endif

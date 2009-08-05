@@ -1,5 +1,5 @@
-// MediaArea_DV_Analyzer_CLI - A Command Line Interface for DV analyzing
-// Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
+// GUI_Main_FileDrop - FileDrop function
+// Copyright (C) 2002-2009 Jerome Martinez, Zen@MediaArea.net
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -18,44 +18,37 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#ifndef CommandLine_ParserH
-#define CommandLine_ParserH
-//---------------------------------------------------------------------------
-
-//---------------------------------------------------------------------------
-#include "Common/Core.h"
-#include "ZenLib/Ztring.h"
-//---------------------------------------------------------------------------
-
-//***************************************************************************
-//
-//***************************************************************************
-
-int Parse(Core &C, MediaInfoNameSpace::String &Argument);
-
-
-//---------------------------------------------------------------------------
-#define CL_METHOD(_NAME) \
-    int CL_##_NAME(Core &C, const MediaInfoNameSpace::String &Argument)
-
-#define CL_OPTION(_NAME) \
-    int CL_##_NAME(Core &C, const MediaInfoNameSpace::String &Argument)
-
-CL_OPTION(Help);
-CL_OPTION(Help_xxx);
-CL_OPTION(Help_Format);
-CL_OPTION(Help_Verbosity);
-CL_OPTION(Header);
-CL_OPTION(Footer);
-CL_OPTION(Verbosity);
-CL_OPTION(LogFile);
-CL_OPTION(Version);
-CL_OPTION(Default);
-
-//***************************************************************************
-// Options which need actions
-//***************************************************************************
-
-void LogFile_Action(ZenLib::Ztring Inform);
-
+#include "wx/wxprec.h"
+#ifndef WX_PRECOMP
+    #include "wx/wx.h"
 #endif
+#ifdef __BORLANDC__
+    #pragma hdrstop
+#endif
+#include "GUI/WxWidgets/GUI_Main_FileDrop.h"
+#include "GUI/WxWidgets/GUI_Main.h"
+#include "Common/Core.h"
+#include "wx/datetime.h"
+//---------------------------------------------------------------------------
+
+//***************************************************************************
+// Functions
+//***************************************************************************
+
+//---------------------------------------------------------------------------
+#if wxUSE_DRAG_AND_DROP
+bool FileDrop::OnDropFiles(wxCoord, wxCoord, const wxArrayString& FileNames)
+{
+    C->Menu_File_Open_Files_Begin();
+
+    wxDateTime Begin=wxDateTime::UNow();
+    for (size_t Pos=0; Pos<FileNames.size(); Pos++)
+        C->Menu_File_Open_Files_Continue(FileNames[Pos].c_str());
+    wxTimeSpan Span=wxDateTime::UNow()-Begin;
+    GUI->View_Refresh();
+    if (GUI->GetStatusBar()==NULL)
+        GUI->CreateStatusBar();
+    GUI->GetStatusBar()->SetLabel(Span.Format(_T("%Ss %lms")));
+    return true;
+}
+#endif //wxUSE_DRAG_AND_DROP

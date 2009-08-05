@@ -29,22 +29,13 @@
 
 //---------------------------------------------------------------------------
 #include "CommandLine_Parser.h"
-#include "Help.h"
+#include "Common/Help.h"
+#include "CLI/IO.h"
 //---------------------------------------------------------------------------
 
 //Parse Command Line
-#define LAUNCH(_METHOD) \
-    { \
-        int Return=_METHOD(MI, Argument); \
-        if (Return<0) \
-            return Return; \
-    } \
-
 #define OPTION(_TEXT, _TOLAUNCH) \
-    else if (Argument.find(_T(_TEXT))==0)        LAUNCH(_TOLAUNCH) \
-
-#define OPTION2(_TEXT, _TOLAUNCH) \
-    else if (Argument.find(_T(_TEXT))==0)        _TOLAUNCH(); \
+    else if (Argument.find(_T(_TEXT))==0)        return CL_##_TOLAUNCH(C, Argument); \
 
 
 //***************************************************************************
@@ -57,7 +48,7 @@ ZenLib::Ztring LogFile_FileName;
 // Main
 //***************************************************************************
 
-int Parse(Core &MI, MediaInfoNameSpace::String &Argument)
+int Parse(Core &C, MediaInfoNameSpace::String &Argument)
 {
     if (0);
     OPTION("--help-",                                       Help_xxx)
@@ -70,45 +61,61 @@ int Parse(Core &MI, MediaInfoNameSpace::String &Argument)
     OPTION("--version",                                     Version)
     //Default
     OPTION("--",                                            Default)
-    else
-        return 1;
 
-    return 0;
+    return -1; //This is a file
 }
 
 //---------------------------------------------------------------------------
 CL_OPTION(Help)
 {
-    Version(MI, Argument);
-    return Help();
+    CL_Version(C, Argument);
+    std::cout<<Help();
+
+    return 0;
 }
 
 //---------------------------------------------------------------------------
 CL_OPTION(Help_xxx)
 {
     if (0);
-    OPTION2("--help-format",                                Help_Format)
-    OPTION2("--help-verbosity",                             Help_Verbosity)
-    else
-        TEXTOUT("No help available yet");
+    OPTION("--help-format",                                 Help_Format)
+    OPTION("--help-verbosity",                              Help_Verbosity)
 
-    return -1;
+    std::cout<<"No help available yet";
+ 
+    return 1;
+}
+
+//---------------------------------------------------------------------------
+CL_OPTION(Help_Format)
+{
+    std::cout<<Help_ByFrame_Format();
+ 
+    return 1;
+}
+
+//---------------------------------------------------------------------------
+CL_OPTION(Help_Verbosity)
+{
+    std::cout<<Help_Verbosity();
+ 
+    return 1;
 }
 
 //---------------------------------------------------------------------------
 CL_OPTION(Header)
 {
-    MI.Errors_Stats_WithHeader=true;
+    C.Errors_Stats_WithHeader=true;
 
-    return 0;
+    return -2; //Continue
 }
 
 //---------------------------------------------------------------------------
 CL_OPTION(Footer)
 {
-    MI.Errors_Stats_WithFooter=true;
+    C.Errors_Stats_WithFooter=true;
 
-    return 0;
+    return -2; //Continue
 }
 
 //---------------------------------------------------------------------------
@@ -125,20 +132,18 @@ CL_OPTION(Verbosity)
     else
         Value=_T('1');
 
-    MI.Menu_Option_Preferences_Option(_T("Verbosity"), Value);
+    C.Menu_Option_Preferences_Option(_T("Verbosity"), Value);
 
-    return 0;
+    return -2; //Continue
 }
 
 //---------------------------------------------------------------------------
 CL_OPTION(Version)
 {
-    MI.Menu_Help_Version();
+    C.Menu_Help_Version();
+    STRINGOUT(C.Text_Get());
 
-    TEXTOUT("MediaArea DV Analyzer Command line, Version 1.2.2");
-    STRINGOUT(MI.Text_Get());
-
-    return -1;
+    return 0;
 }
 
 //---------------------------------------------------------------------------
@@ -147,7 +152,7 @@ CL_OPTION(LogFile)
     //Form : --LogFile=Text
     LogFile_FileName.assign(Argument, 10, std::string::npos);
 
-    return 0;
+    return -2; //Continue
 }
 
 //---------------------------------------------------------------------------
@@ -164,9 +169,9 @@ CL_OPTION(Default)
     else
         Value=_T('1');
 
-    MI.Menu_Option_Preferences_Option(Option, Value);
+    C.Menu_Option_Preferences_Option(Option, Value);
 
-    return 0;
+    return -2; //Continue
 }
 
 void LogFile_Action(ZenLib::Ztring Inform)

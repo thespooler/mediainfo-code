@@ -48,11 +48,6 @@
 
 //---------------------------------------------------------------------------
 //Write to terminal
-inline void TEXTOUT(char* Text)
-{
-    std::cout<<Text<<std::endl;
-}
-
 inline void STRINGOUT(ZenLib::Ztring Text)
 {
     #ifdef __WINDOWS__

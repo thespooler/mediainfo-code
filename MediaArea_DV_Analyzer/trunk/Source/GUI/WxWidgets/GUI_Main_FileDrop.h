@@ -1,5 +1,5 @@
-// MediaArea_DV_Analyzer_CLI - A Command Line Interface for DV analyzing
-// Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
+// GUI_Main_FileDrop - FileDrop function
+// Copyright (C) 2002-2009 Jerome Martinez, Zen@MediaArea.net
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -16,46 +16,47 @@
 //
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-//---------------------------------------------------------------------------
-#ifndef CommandLine_ParserH
-#define CommandLine_ParserH
-//---------------------------------------------------------------------------
-
-//---------------------------------------------------------------------------
-#include "Common/Core.h"
-#include "ZenLib/Ztring.h"
-//---------------------------------------------------------------------------
-
-//***************************************************************************
 //
-//***************************************************************************
-
-int Parse(Core &C, MediaInfoNameSpace::String &Argument);
-
+// FileDrop function
+//
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#define CL_METHOD(_NAME) \
-    int CL_##_NAME(Core &C, const MediaInfoNameSpace::String &Argument)
+#ifndef FileDropH
+#define FileDropH
+//---------------------------------------------------------------------------
 
-#define CL_OPTION(_NAME) \
-    int CL_##_NAME(Core &C, const MediaInfoNameSpace::String &Argument)
+//---------------------------------------------------------------------------
+#include <wx/dnd.h>
+//----------------------------------------------------------------------------
 
-CL_OPTION(Help);
-CL_OPTION(Help_xxx);
-CL_OPTION(Help_Format);
-CL_OPTION(Help_Verbosity);
-CL_OPTION(Header);
-CL_OPTION(Footer);
-CL_OPTION(Verbosity);
-CL_OPTION(LogFile);
-CL_OPTION(Version);
-CL_OPTION(Default);
+//---------------------------------------------------------------------------
+class Core;
+class GUI_Main;
+//---------------------------------------------------------------------------
 
 //***************************************************************************
-// Options which need actions
+// FileDrop
 //***************************************************************************
 
-void LogFile_Action(ZenLib::Ztring Inform);
+#if wxUSE_DRAG_AND_DROP
+class FileDrop : public wxFileDropTarget
+{
+public:
+    FileDrop(Core* C_, GUI_Main* GUI_) {C=C_; GUI=GUI_;};
+    bool OnDropFiles(wxCoord x, wxCoord y, const wxArrayString& filenames);
+
+private:
+    Core* C;
+    GUI_Main* GUI;
+};
+#else //wxUSE_DRAG_AND_DROP
+class FileDrop
+{
+public:
+    FileDrop(Core* C_, GUI_Main* GUI_) {};
+    bool OnDropFiles(wxCoord, wxCoord, const wxArrayString&) {return false;};
+};
+#endif //wxUSE_DRAG_AND_DROP
 
 #endif

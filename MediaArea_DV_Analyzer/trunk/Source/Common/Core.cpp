@@ -31,7 +31,10 @@
 //---------------------------------------------------------------------------
 
 //---------------------------------------------------------------------------
-ZenLib::Ztring Text_Temp;
+#define NameVersion _T("MediaArea DV Analyzer 1.3.0")
+//---------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------
 using namespace ZenLib;
 //---------------------------------------------------------------------------
 
@@ -90,21 +93,17 @@ void Core::Menu_File_Open_Directory (const String &DirectoryName)
 }
 
 //---------------------------------------------------------------------------
-void Core::Menu_Option_Preferences_Inform (const String& Inform)
-{
-    MI->Option(_T("Inform"), Inform);
-}
-
-//---------------------------------------------------------------------------
 void Core::Menu_Option_Preferences_Option (const String& Param, const String& Value)
 {
     MI->Option(Param, Value);
 }
 
 //---------------------------------------------------------------------------
-void Core::Menu_Help_Version ()
+String& Core::Menu_Help_Version ()
 {
-    Text=MI->Option(_T("Info_Version"));
+    Text=NameVersion;
+
+    return Text;
 }
 
 //***************************************************************************
@@ -112,91 +111,88 @@ void Core::Menu_Help_Version ()
 //***************************************************************************
 
 //---------------------------------------------------------------------------
-String& Core::Inform_Get ()
-{
-    if (Text_Temp.empty())
-        Text=MI->Inform();
-    else
-        Text=Text_Temp;
-    return Text;
-}
-
-//---------------------------------------------------------------------------
-String& Core::Errors_Stats_Get ()
-{
-    if (Text_Temp.empty())
-    {
-        Text.clear();
-        
-        size_t Count=MI->Count_Get();
-        for (size_t Pos=0; Pos<Count; Pos++)
-        {
-            if (Errors_Stats_WithHeader)
-            {
-                Text+=MI->Get(Pos, Stream_General, 0, _T("CompleteName"))+_T('\n');
-                Text+=_T('\n');
-                Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_Begin"))+_T('\n');
-            }
-            
-            Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats"));
-            
-            if (Errors_Stats_WithFooter)
-            {
-                Text+=_T('\n');
-                Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_End"))+_T('\n');
-            }
-
-            if (!MI->Get(Pos, Stream_Video, 0, _T("FrameCount")).empty() && MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))!=MI->Get(Pos, Stream_Video, 0, _T("FrameCount_Speed")))
-            {
-                Text+=_T('\n');
-                Text+=_T("Warning, frame count is maybe incoherant (reported by MediaInfo: ")+MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))+_T(")\n");
-            }
-            if (Pos+1<Count)
-            {
-                Text+=_T('\n');
-                Text+=_T("***************************************************************************\n");
-                Text+=_T('\n');
-            }
-        }
-        for (size_t Pos=0; Pos<Text.size(); Pos++)
-            if (Text[Pos]==_T('&'))
-                Text[Pos]=_T('\n');
-    }
-    else
-        Text=Text_Temp;
-    return Text;
-}
-
-//---------------------------------------------------------------------------
 String& Core::Summary ()
 {
-    if (Text_Temp.empty())
+    Text.clear();
+    
+    size_t Count=MI->Count_Get();
+    for (size_t Pos=0; Pos<Count; Pos++)
     {
-        Text.clear();
-        
-        size_t Count=MI->Count_Get();
-        for (size_t Pos=0; Pos<Count; Pos++)
-        {
-            Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_End"))+_T('\n');
+        Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_End"))+_T('\n');
 
-            if (!MI->Get(Pos, Stream_Video, 0, _T("FrameCount")).empty() && MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))!=MI->Get(Pos, Stream_Video, 0, _T("FrameCount_Speed")))
-            {
-                Text+=_T('\n');
-                Text+=_T("Warning, frame count is maybe incoherant (reported by MediaInfo: ")+MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))+_T(")\n");
-            }
-
-            if (Pos+1<Count)
-            {
-                Text+=_T('\n');
-                Text+=_T("***************************************************************************\n");
-                Text+=_T('\n');
-            }
-        }
-        for (size_t Pos=0; Pos<Text.size(); Pos++)
-            if (Text[Pos]==_T('&'))
-                Text[Pos]=_T('\n');
+        Common_Footer(Pos, Count);
     }
-    else
-        Text=Text_Temp;
+
+    Common();
+
     return Text;
+}
+
+//---------------------------------------------------------------------------
+String& Core::ByFrame ()
+{
+    Text.clear();
+    
+    size_t Count=MI->Count_Get();
+    for (size_t Pos=0; Pos<Count; Pos++)
+    {
+        if (Errors_Stats_WithHeader)
+        {
+            Text+=MI->Get(Pos, Stream_General, 0, _T("CompleteName"))+_T('\n');
+            Text+=_T('\n');
+            Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_Begin"))+_T('\n');
+        }
+        
+        Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats"));
+        
+        if (Errors_Stats_WithFooter)
+        {
+            Text+=_T('\n');
+            Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_End"))+_T('\n');
+        }
+
+        Common_Footer(Pos, Count);
+    }
+
+    Common();
+    
+    return Text;
+}
+
+//---------------------------------------------------------------------------
+String& Core::MediaInfo ()
+{
+    Text=MI->Inform();
+
+    //Adapting
+    size_t Begin=Text.find(_T("Errors_Stats_Begin"));
+    size_t End=Text.find(_T("\r\n\r\n"), Begin);
+    if (Begin!=std::string::npos && End!=std::string::npos)
+            Text.erase(Begin, End-Begin);
+
+    return Text;
+}
+
+//---------------------------------------------------------------------------
+void Core::Common_Footer (size_t Pos, size_t Count)
+{
+    if (!MI->Get(Pos, Stream_Video, 0, _T("FrameCount")).empty() && MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))!=MI->Get(Pos, Stream_Video, 0, _T("FrameCount_Speed")))
+    {
+        Text+=_T('\n');
+        Text+=_T("Warning, frame count is maybe incoherant (reported by MediaInfo: ")+MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))+_T(")\n");
+    }
+    if (Pos+1<Count)
+    {
+        Text+=_T('\n');
+        Text+=_T("***************************************************************************\n");
+        Text+=_T('\n');
+    }
+}
+
+//---------------------------------------------------------------------------
+void Core::Common ()
+{
+    for (size_t Pos=0; Pos<Text.size(); Pos++)
+        if (Text[Pos]==_T('&'))
+            Text[Pos]=_T('\n');
 }

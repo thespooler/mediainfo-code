@@ -1,5 +1,5 @@
-// MediaArea_DV_Analyzer_CLI - A Command Line Interface for DV analyzing
-// Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
+// GUI_Main_Text - WxWidgets GUI for MediaInfo
+// Copyright (C) 2007-2009 Jerome Martinez, Zen@MediaArea.net
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -18,44 +18,43 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#ifndef CommandLine_ParserH
-#define CommandLine_ParserH
-//---------------------------------------------------------------------------
-
-//---------------------------------------------------------------------------
-#include "Common/Core.h"
-#include "ZenLib/Ztring.h"
-//---------------------------------------------------------------------------
-
-//***************************************************************************
-//
-//***************************************************************************
-
-int Parse(Core &C, MediaInfoNameSpace::String &Argument);
-
-
-//---------------------------------------------------------------------------
-#define CL_METHOD(_NAME) \
-    int CL_##_NAME(Core &C, const MediaInfoNameSpace::String &Argument)
-
-#define CL_OPTION(_NAME) \
-    int CL_##_NAME(Core &C, const MediaInfoNameSpace::String &Argument)
-
-CL_OPTION(Help);
-CL_OPTION(Help_xxx);
-CL_OPTION(Help_Format);
-CL_OPTION(Help_Verbosity);
-CL_OPTION(Header);
-CL_OPTION(Footer);
-CL_OPTION(Verbosity);
-CL_OPTION(LogFile);
-CL_OPTION(Version);
-CL_OPTION(Default);
-
-//***************************************************************************
-// Options which need actions
-//***************************************************************************
-
-void LogFile_Action(ZenLib::Ztring Inform);
-
+#include "wx/wxprec.h"
+#ifndef WX_PRECOMP
+    #include "wx/wx.h"
 #endif
+#ifdef __BORLANDC__
+    #pragma hdrstop
+#endif
+#include "GUI/WxWidgets/GUI_Main_Text.h"
+#include "Common/Core.h"
+//---------------------------------------------------------------------------
+
+//***************************************************************************
+// Constructor/Destructor
+//***************************************************************************
+
+//---------------------------------------------------------------------------
+GUI_Main_Text::GUI_Main_Text(Core* _C, wxWindow* parent)
+    : wxTextCtrl(parent, -1, _T(""), wxPoint(0, 0), wxSize(parent->GetClientSize().GetWidth()-0, parent->GetClientSize().GetHeight()-0), wxTE_READONLY|wxTE_MULTILINE|wxTE_RICH|wxTE_RICH2|wxTE_DONTWRAP),
+    GUI_Main_Common_Core(_C)
+{
+    wxFont Font;
+    Font.SetFamily(wxFONTFAMILY_MODERN);
+    wxTextAttr Attr;
+    Attr.SetFont(Font);
+    SetDefaultStyle(Attr);
+}
+
+//---------------------------------------------------------------------------
+GUI_Main_Text::~GUI_Main_Text()
+{
+}
+
+//***************************************************************************
+// Actions
+//***************************************************************************
+
+void GUI_Main_Text::GUI_Resize()
+{
+    SetSize(0, 0, GetParent()->GetClientSize().GetWidth()-0, GetParent()->GetClientSize().GetHeight()-0);
+}

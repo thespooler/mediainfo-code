@@ -52,17 +52,16 @@ public:
     ~Core();
 
     //Menu
-    size_t  Menu_File_Open_File             (const MediaInfoNameSpace::String &FileName);
-    void    Menu_File_Open_Files_Begin      ();
-    size_t  Menu_File_Open_Files_Continue   (const MediaInfoNameSpace::String &FileName);
-    void    Menu_File_Open_Directory        (const MediaInfoNameSpace::String &DirectoryName);
-    void    Menu_Option_Preferences_Inform  (const MediaInfoNameSpace::String &Inform);
-    void    Menu_Option_Preferences_Option  (const MediaInfoNameSpace::String &Param, const MediaInfoNameSpace::String &Value);
-    void    Menu_Help_Version               ();
+    size_t                      Menu_File_Open_File             (const MediaInfoNameSpace::String &FileName);
+    void                        Menu_File_Open_Files_Begin      ();
+    size_t                      Menu_File_Open_Files_Continue   (const MediaInfoNameSpace::String &FileName);
+    void                        Menu_File_Open_Directory        (const MediaInfoNameSpace::String &DirectoryName);
+    void                        Menu_Option_Preferences_Option  (const MediaInfoNameSpace::String &Param, const MediaInfoNameSpace::String &Value);
+    MediaInfoNameSpace::String &Menu_Help_Version               ();
 
     //Datas
-    MediaInfoNameSpace::String &Inform_Get();
-    MediaInfoNameSpace::String &Errors_Stats_Get();
+    MediaInfoNameSpace::String &MediaInfo();
+    MediaInfoNameSpace::String &ByFrame();
     MediaInfoNameSpace::String &Summary();
     bool Errors_Stats_WithHeader;
     bool Errors_Stats_WithFooter;
@@ -74,6 +73,10 @@ public:
 protected:
     MediaInfoNameSpace::MediaInfoList* MI;
     MediaInfoNameSpace::String  Text;
+
+    //Internal
+    void Common_Footer(size_t Pos, size_t Count);
+    void Common();
 };
 
 #endif

@@ -1,4 +1,4 @@
-// MediaArea_DV_Analyzer_CLI - A Command Line Interface for DV analyzing
+// GUI_Main_Text_MediaInfo - 
 // Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
 //
 // This program is free software: you can redistribute it and/or modify
@@ -18,44 +18,38 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#ifndef CommandLine_ParserH
-#define CommandLine_ParserH
-//---------------------------------------------------------------------------
-
-//---------------------------------------------------------------------------
+#include "wx/wxprec.h"
+#ifndef WX_PRECOMP
+    #include "wx/wx.h"
+#endif
+#ifdef __BORLANDC__
+    #pragma hdrstop
+#endif
+#include "GUI/WxWidgets/GUI_Main_Text_MediaInfo.h"
 #include "Common/Core.h"
 #include "ZenLib/Ztring.h"
 //---------------------------------------------------------------------------
 
 //***************************************************************************
-//
+// Constructor/Destructor
 //***************************************************************************
-
-int Parse(Core &C, MediaInfoNameSpace::String &Argument);
-
 
 //---------------------------------------------------------------------------
-#define CL_METHOD(_NAME) \
-    int CL_##_NAME(Core &C, const MediaInfoNameSpace::String &Argument)
-
-#define CL_OPTION(_NAME) \
-    int CL_##_NAME(Core &C, const MediaInfoNameSpace::String &Argument)
-
-CL_OPTION(Help);
-CL_OPTION(Help_xxx);
-CL_OPTION(Help_Format);
-CL_OPTION(Help_Verbosity);
-CL_OPTION(Header);
-CL_OPTION(Footer);
-CL_OPTION(Verbosity);
-CL_OPTION(LogFile);
-CL_OPTION(Version);
-CL_OPTION(Default);
+GUI_Main_Text_MediaInfo::GUI_Main_Text_MediaInfo(Core* _C, wxWindow* parent)
+: GUI_Main_Text(_C, parent)
+{
+    //Update
+    GUI_Refresh();
+}
 
 //***************************************************************************
-// Options which need actions
+// Actions
 //***************************************************************************
 
-void LogFile_Action(ZenLib::Ztring Inform);
-
-#endif
+//---------------------------------------------------------------------------
+void GUI_Main_Text_MediaInfo::GUI_Refresh()
+{
+    //Showing
+    Clear();
+    WriteText(C->MediaInfo().c_str());
+}

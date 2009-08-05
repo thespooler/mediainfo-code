@@ -29,7 +29,8 @@
 //---------------------------------------------------------------------------
 #include "Common/Core.h"
 #include "CommandLine_Parser.h"
-#include "Help.h"
+#include "Common/Help.h"
+#include "CLI/IO.h"
 using namespace std;
 using namespace MediaInfoNameSpace;
 //---------------------------------------------------------------------------
@@ -44,7 +45,7 @@ int main(int argc, char* argv_ansi[])
     setlocale(LC_ALL, """""");
 
     //Configure MediaInfo core
-    Core MI;
+    Core C;
 
     //Retrieve command line (mainly for Unicode) and parse it
     GETCOMMANDLINE();
@@ -57,29 +58,34 @@ int main(int argc, char* argv_ansi[])
         if (Egal_Pos==string::npos)
             Egal_Pos=Argument.size();
         transform(Argument.begin(), Argument.begin()+Egal_Pos, Argument.begin(), (int(*)(int))tolower); //(int(*)(int)) is a patch for unix
-        int Return=Parse (MI, Argument);
-        if (Return<0)
+        int Return=Parse (C, Argument);
+        if (Return>=0)
             return Return; //no more tasks to do
-        if (Return>0)
+        if (Return==-1)
             List.push_back(argv[Pos]); //Append the filename to the list of filenames to parse
     }
 
     //If no filenames (and no options)
     if (List.empty())
-        return Help_Nothing();
+    {
+        std::cout<<Help_Nothing();
+        return 0;
+    }
 
     //Parse files
-    MI.Menu_File_Open_Files_Begin();
+    C.Menu_File_Open_Files_Begin();
     size_t Files_Count=0;
     for (size_t Pos=0; Pos<List.size(); Pos++)
-        Files_Count+=MI.Menu_File_Open_Files_Continue(List[Pos]);
+        Files_Count+=C.Menu_File_Open_Files_Continue(List[Pos]);
 
     //Output
-    STRINGOUT(MI.Errors_Stats_Get());
+    STRINGOUT(C.ByFrame());
 
     //Output, in a file if needed
-    LogFile_Action(MI.Errors_Stats_Get());
+    LogFile_Action(C.ByFrame());
     
+    std::string A;
+    std::cin>>A;
     return Files_Count?0:1;
 }
 //---------------------------------------------------------------------------

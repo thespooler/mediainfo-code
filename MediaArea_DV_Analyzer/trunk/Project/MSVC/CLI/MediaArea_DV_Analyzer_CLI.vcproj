@@ -339,16 +339,16 @@
 					RelativePath="..\..\..\Source\CLI\CommandLine_Parser.cpp"
 					>
 				</File>
-				<File
-					RelativePath="..\..\..\Source\CLI\Help.cpp"
-					>
-				</File>
 			</Filter>
 			<Filter
 				Name="Common"
 				>
 				<File
 					RelativePath="..\..\..\Source\Common\Core.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\Source\Common\Help.cpp"
 					>
 				</File>
 			</Filter>
@@ -358,10 +358,6 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
-			<File
-				RelativePath=".\resource.h"
-				>
-			</File>
 			<Filter
 				Name="CLI"
 				>
@@ -374,11 +370,7 @@
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\Source\CLI\Config.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\..\Source\CLI\Help.h"
+					RelativePath="..\..\..\Source\CLI\IO.h"
 					>
 				</File>
 			</Filter>
@@ -390,11 +382,7 @@
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\Source\Common\Preferences.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\..\Source\Common\Utils.h"
+					RelativePath="..\..\..\Source\Common\Help.h"
 					>
 				</File>
 			</Filter>
@@ -405,7 +393,7 @@
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
 			<File
-				RelativePath=".\MediaInfo_CLI.rc"
+				RelativePath=".\MediaArea_DV_Analyzer_CLI.rc"
 				>
 			</File>
 		</Filter>

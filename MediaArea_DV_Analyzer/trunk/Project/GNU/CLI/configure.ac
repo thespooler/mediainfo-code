@@ -15,7 +15,7 @@ AC_CANONICAL_BUILD
 dnl -------------------------------------------------------------------------
 dnl Name and version
 dnl
-AM_INIT_AUTOMAKE(MediaInfo,0)
+AM_INIT_AUTOMAKE(dvanalyzer,0)
 
 dnl -------------------------------------------------------------------------
 dnl Autotools init

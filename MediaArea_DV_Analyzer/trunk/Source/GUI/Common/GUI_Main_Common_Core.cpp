@@ -1,5 +1,5 @@
-// MediaArea_DV_Analyzer_CLI - A Command Line Interface for DV analyzing
-// Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
+// GUI_Main_Common_Core - Core GUI for MediaInfo
+// Copyright (C) 2007-2009 Jerome Martinez, Zen@MediaArea.net
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -18,44 +18,17 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#ifndef CommandLine_ParserH
-#define CommandLine_ParserH
-//---------------------------------------------------------------------------
-
-//---------------------------------------------------------------------------
+#include "GUI/Common/GUI_Main_Common_Core.h"
 #include "Common/Core.h"
-#include "ZenLib/Ztring.h"
 //---------------------------------------------------------------------------
 
 //***************************************************************************
-//
+// Constructor/Destructor
 //***************************************************************************
-
-int Parse(Core &C, MediaInfoNameSpace::String &Argument);
-
 
 //---------------------------------------------------------------------------
-#define CL_METHOD(_NAME) \
-    int CL_##_NAME(Core &C, const MediaInfoNameSpace::String &Argument)
-
-#define CL_OPTION(_NAME) \
-    int CL_##_NAME(Core &C, const MediaInfoNameSpace::String &Argument)
-
-CL_OPTION(Help);
-CL_OPTION(Help_xxx);
-CL_OPTION(Help_Format);
-CL_OPTION(Help_Verbosity);
-CL_OPTION(Header);
-CL_OPTION(Footer);
-CL_OPTION(Verbosity);
-CL_OPTION(LogFile);
-CL_OPTION(Version);
-CL_OPTION(Default);
-
-//***************************************************************************
-// Options which need actions
-//***************************************************************************
-
-void LogFile_Action(ZenLib::Ztring Inform);
-
-#endif
+GUI_Main_Common_Core::GUI_Main_Common_Core(Core* _C)
+{
+    //Internal
+    C=_C;
+}
