@@ -11,7 +11,7 @@ else
 if (!isset($AlreadyVisited))
 {
  //Temp for limiting display
- if (mt_rand(1, 100)>46)
+ if (mt_rand(1, 100)>48)
   $AlreadyVisited='Y';
 }
 ?> 
@@ -81,6 +81,31 @@ else
 </div>
 <div id="ChangeLog"><pre>
 Changes:
+
+Version 0.7.20, 2009-07-31
+--------------
++ TAK format support, thanks to Lionel Duchateau
++ #2822681, Quicktime: Rotation display (from iPhone...)
++ ASP.net web application example
++ Java/JNA, Linux: dynamic load of libzen if not in LD_PATH
+x #2823702, No files processed in subdirs
+x MPEG-PS: Some durations were a bit too long
+x MPEG-PS: Better handling of PTS/DTS for private and extension streams
+x ADTS: Handling of SBR and/or PS streams
+
+Version 0.7.19, 2009-07-17
+--------------
+Important note for Win9X users: the GUI is no more compatible with this version and later
++ ALS raw files support, thanks to Lionel Duchateau
++ LA (Lossless Audio, old) support, thanks to Lionel Duchateau
++ SLS detection, thanks to Lionel Duchateau
++ AAC: forcing SBR/PS when it is implicit (if <=24KHz, if 1 channel)
++ AVC: Closed captions detection
++ #2813919, APE: CompressionLevel
++ XML output: track names are changed, for a better usability by XML parsers
+x MKV: Original display aspect ratio was not displayed
+x #2817479, Blu-ray/M2Ts: crash with some specific file names
+x MXF: the whole file was parsed, parsing now only the useful part
 
 Version 0.7.18, 2009-07-03
 --------------
