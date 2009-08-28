@@ -370,12 +370,12 @@ MediaInfoNameSpace::String &Core::XML()
         }
         if (!List.empty())
         {
-            Text+=_T("\t\t</frames>");
+            Text+=_T("\t\t</frames>\n");
 
             //FrameCount
             if (!MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount_Speed")).empty())
             {
-                Text+=_T("\t\t<frame_count>")+MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount_Speed"))+_T("</frame_count>\n");
+                Text+=_T("\t\t<frames_count>")+MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount_Speed"))+_T("</frames_count>\n");
                 if (MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount_Speed"))!=MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount")))
                 {
                     Text+=_T("\t\t<warnings>\n");
@@ -393,29 +393,29 @@ MediaInfoNameSpace::String &Core::XML()
             List.Write(MI->Get(File_Pos, Stream_Video, 0, _T("Errors_Stats_End_03")));
 
         //Summary - For each line
-        bool error_summary_open=false;
+        bool events_summary_open=false;
         for (size_t Pos=0; Pos<List.size(); Pos++)
         {
             if (List(Pos, 0).empty())
             {
-                if (error_summary_open)
+                if (events_summary_open)
                 {
-                    Text+=_T("\t\t</errors_summary>\n");
-                    error_summary_open=false;
+                    Text+=_T("\t\t</events_summary>\n");
+                    events_summary_open=false;
                 }
             }
             
             //error_1
             if (List(Pos, 0).find(_T("Frame Count with video STA errors: "))==0)
             {
-                if (!error_summary_open)
+                if (!events_summary_open)
                 {
-                    Text+=_T("\t\t<errors_summary>\n");
-                    error_summary_open=true;
+                    Text+=_T("\t\t<events_summary>\n");
+                    events_summary_open=true;
                 }
-                Text+=_T("\t\t\t<event event_id=\"1\" event_type=\"video error concealment\">\n");
+                Text+=_T("\t\t\t<event type=\"error\" event_id=\"1\" event_type=\"video error concealment\">\n");
+                Text+=_T("\t\t\t\t<count>")+List(Pos+1, 0).SubString(_T(": "), _T(" video")).TrimLeft()+_T("</count>\n");
                 Text+=_T("\t\t\t\t<frames_count>")+List(Pos, 0).SubString(_T(": "), _T(""))+_T("</frames_count>\n");
-                Text+=_T("\t\t\t\t<errors_count>")+List(Pos+1, 0).SubString(_T(": "), _T(" video")).TrimLeft()+_T("</errors_count>\n");
                 Pos++;
                 Text+=_T("\t\t\t</event>\n");
             }
@@ -423,27 +423,29 @@ MediaInfoNameSpace::String &Core::XML()
             //error_2
             if (List(Pos, 0).find(_T("Frame Count with CH1 audio errors: "))==0)
             {
-                if (!error_summary_open)
+                if (!events_summary_open)
                 {
-                    Text+=_T("\t\t<errors_summary>\n");
-                    error_summary_open=true;
+                    Text+=_T("\t\t<events_summary>\n");
+                    events_summary_open=true;
                 }
-                Text+=_T("\t\t\t<event event_id=\"2\" event_type=\"audio error code\" ch=\"1\" >\n");
+                Text+=_T("\t\t\t<event type=\"error\" event_id=\"2\" event_type=\"audio error code\" ch=\"1\" >\n");
+                Text+=_T("\t\t\t\t<count>")+List(Pos+1, 0).SubString(_T(": "), _T(" audio")).TrimLeft()+_T("</count>\n");
                 Text+=_T("\t\t\t\t<frames_count>")+List(Pos, 0).SubString(_T(": "), _T(""))+_T("</frames_count>\n");
-                Text+=_T("\t\t\t\t<errors_count>")+List(Pos+1, 0).SubString(_T(": "), _T(" audio")).TrimLeft()+_T("</errors_count>\n");
+                Text+=_T("\t\t\t\t<summary>")+List(Pos+1, 0).SubString(_T("("), _T(")"))+_T("</summary>\n");
                 Pos++;
                 Text+=_T("\t\t\t</event>\n");
             }
             if (List(Pos, 0).find(_T("Frame Count with CH2 audio errors: "))==0)
             {
-                if (!error_summary_open)
+                if (!events_summary_open)
                 {
-                    Text+=_T("\t\t<errors_summary>\n");
-                    error_summary_open=true;
+                    Text+=_T("\t\t<events_summary>\n");
+                    events_summary_open=true;
                 }
-                Text+=_T("\t\t\t<event event_id=\"2\" event_type=\"audio error code\" ch=\"2\" >\n");
+                Text+=_T("\t\t\t<event type=\"error\" event_id=\"2\" event_type=\"audio error code\" ch=\"2\" >\n");
+                Text+=_T("\t\t\t\t<count>")+List(Pos+1, 0).SubString(_T(": "), _T(" audio")).TrimLeft()+_T("</count>\n");
                 Text+=_T("\t\t\t\t<frames_count>")+List(Pos, 0).SubString(_T(": "), _T(""))+_T("</frames_count>\n");
-                Text+=_T("\t\t\t\t<errors_count>")+List(Pos+1, 0).SubString(_T(": "), _T(" audio")).TrimLeft()+_T("</errors_count>\n");
+                Text+=_T("\t\t\t\t<summary>")+List(Pos+1, 0).SubString(_T("("), _T(")"))+_T("</summary>\n");
                 Pos++;
                 Text+=_T("\t\t\t</event>\n");
             }
@@ -451,14 +453,14 @@ MediaInfoNameSpace::String &Core::XML()
             //error_3
             if (List(Pos, 0).find(_T("Frame Count with Timecode incoherency errors: "))==0)
             {
-                if (!error_summary_open)
+                if (!events_summary_open)
                 {
-                    Text+=_T("\t\t<errors_summary>\n");
-                    error_summary_open=true;
+                    Text+=_T("\t\t<events_summary>\n");
+                    events_summary_open=true;
                 }
-                Text+=_T("\t\t\t<event event_id=\"3\" event_type=\"timecode incoherency\">\n");
+                Text+=_T("\t\t\t<event type=\"error\" event_id=\"3\" event_type=\"timecode incoherency\">\n");
+                Text+=_T("\t\t\t\t<count>")+List(Pos+1, 0).SubString(_T(": "), _T(" video")).TrimLeft()+_T("</count>\n");
                 Text+=_T("\t\t\t\t<frames_count>")+List(Pos, 0).SubString(_T(": "), _T(""))+_T("</frames_count>\n");
-                Text+=_T("\t\t\t\t<errors_count>")+List(Pos+1, 0).SubString(_T(": "), _T(" video")).TrimLeft()+_T("</errors_count>\n");
                 Pos++;
                 Text+=_T("\t\t\t</event>\n");
             }
@@ -466,14 +468,14 @@ MediaInfoNameSpace::String &Core::XML()
             //error_4
             if (List(Pos, 0).find(_T("Frame Count with NULL DIF errors: "))==0)
             {
-                if (!error_summary_open)
+                if (!events_summary_open)
                 {
-                    Text+=_T("\t\t<errors_summary>\n");
-                    error_summary_open=true;
+                    Text+=_T("\t\t<events_summary>\n");
+                    events_summary_open=true;
                 }
-                Text+=_T("\t\t\t<event event_id=\"4\" event_type=\"arbitrary bit conflict\">\n");
+                Text+=_T("\t\t\t<event type=\"error\" event_id=\"4\" event_type=\"arbitrary bit conflict\">\n");
+                Text+=_T("\t\t\t\t<count>")+List(Pos+1, 0).SubString(_T(": "), _T(" video")).TrimLeft()+_T("</count>\n");
                 Text+=_T("\t\t\t\t<frames_count>")+List(Pos, 0).SubString(_T(": "), _T(""))+_T("</frames_count>\n");
-                Text+=_T("\t\t\t\t<errors_count>")+List(Pos+1, 0).SubString(_T(": "), _T(" video")).TrimLeft()+_T("</errors_count>\n");
                 Pos++;
                 Text+=_T("\t\t\t</event>\n");
             }
