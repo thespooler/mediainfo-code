@@ -87,8 +87,8 @@ dnl -------------------------------------------------------------------------
 dnl Use Qt
 dnl
 dnl if test "$with_qt" != "no"; then
- CFLAGS="$CFLAGS -I../../../../qt/include -I../../../Source/GUI/qt/_Automated"
- CXXFLAGS="$CXXFLAGS -I../../../../qt/include -I../../../Source/GUI/qt/_Automated"
+ CFLAGS="$CFLAGS -I../../../../qt/include"
+ CXXFLAGS="$CXXFLAGS -I../../../../qt/include"
  LIBS="$LIBS -L../../../../qt/lib -lQtCore -lQtGui -framework Carbon -framework AppKit -framework ApplicationServices"
 dnl fi
 
