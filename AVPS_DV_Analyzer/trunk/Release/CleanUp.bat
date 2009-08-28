@@ -25,12 +25,9 @@ cd ..\Source
 rmdir CLI\__history /Q /S
 rmdir Common\__history /Q /S
 rmdir GUI\__history /Q /S
-rmdir GUI\VCL\__history /Q /S
-rmdir GUI\WxWidgets\__history /Q /S
+rmdir GUI\Qt\__history /Q /S
+rmdir GUI\Qt\_Automated\__history /Q /S
 rmdir Install\__history /Q /S
-rmdir PreRelease\__history /Q /S
-rmdir PreRelease\VCL\__history /Q /S
-rmdir PreRelease\WxWidgets\__history /Q /S
 cd ..\Release
 cd ..\Project
 rmdir BCB\__history /Q /S
@@ -45,8 +42,8 @@ rmdir BCB\PreRelease\Debug_Build /Q /S
 rmdir BCB\PreRelease\Release_Build /Q /S
 rmdir MSVC\CLI\Win32 /Q /S
 rmdir MSVC\CLI\x64 /Q /S
-rmdir MSVC\ShellExtension\Win32 /Q /S
-rmdir MSVC\ShellExtension\x64 /Q /S
+rmdir MSVC\GUI\Win32 /Q /S
+rmdir MSVC\GUI\x64 /Q /S
 cd ..\Release
 
 @rem Code::Blocks specific ---

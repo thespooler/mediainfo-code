@@ -24,7 +24,8 @@ xcopy ..\Source\*.ico AVPS_DV_Analyzer_Source\Source\ /S
 xcopy ..\Source\Install\AVPS_DV_Analyzer.nsi AVPS_DV_Analyzer_Source\Source\Install\
 xcopy ..\Source\*.sh  AVPS_DV_Analyzer_Source\Source\ /S
 xcopy ..\Source\*.png AVPS_DV_Analyzer_Source\Source\ /S
-xcopy ..\Source\*.xpm AVPS_DV_Analyzer_Source\Source\ /S
+xcopy ..\Source\*.qrc AVPS_DV_Analyzer_Source\Source\ /S
+xcopy ..\Source\*.bat AVPS_DV_Analyzer_Source\Source\ /S
 
 @rem --- Copying : Projects ---
 xcopy ..\Project\*.bpg AVPS_DV_Analyzer_Source\Project\ /S

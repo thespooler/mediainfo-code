@@ -11,10 +11,9 @@ xcopy ..\Source\Common\*.cpp AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\Common\ /S
 xcopy ..\Source\Common\*.h AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\Common\ /S
 xcopy ..\Source\GUI\Common\*.cpp AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\GUI\Common\ /S
 xcopy ..\Source\GUI\Common\*.h AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\GUI\Common\ /S
-xcopy ..\Source\GUI\WxWidgets\*.cpp AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\GUI\WxWidgets\ /S
-xcopy ..\Source\GUI\WxWidgets\*.h AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\GUI\WxWidgets\ /S
+xcopy ..\Source\GUI\Qt\*.cpp AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\GUI\Qt\ /S
+xcopy ..\Source\GUI\Qt\*.h AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\GUI\Qt\ /S
 xcopy ..\Source\*.png AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\ /S
-xcopy ..\Source\*.xpm AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\ /S
 
 rem --- Copying : Projects ---
 xcopy ..\Project\GNU\GUI\autogen AVPS_DV_Analyzer_GUI_GNU_Prepare\Project\GNU\GUI\ /S
@@ -57,7 +56,6 @@ rem --- Shared ---
 mkdir AVPS_DV_Analyzer_GUI_GNU_Prepare\Shared
 xcopy ..\..\Shared\Project\_Common\* AVPS_DV_Analyzer_GUI_GNU_Prepare\Shared\Project\_Common\ /S
 xcopy ..\..\Shared\Project\ZLib\*.sh AVPS_DV_Analyzer_GUI_GNU_Prepare\Shared\Project\ZLib\ /S
-xcopy ..\..\Shared\Project\WxWidgets\*.sh AVPS_DV_Analyzer_GUI_GNU_Prepare\Shared\Project\WxWidgets\ /S
 
 
 rem --- Compressing Archive ---

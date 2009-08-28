@@ -31,7 +31,6 @@ cp ../Project/GNU/GUI/ltmain.sh AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/
 cp ../Project/GNU/GUI/Makefile.am AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
 cp ../Project/GNU/GUI/Makefile.in AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
 cp ../Project/GNU/GUI/missing AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
-cp ../Project/GNU/GUI/wxwin.m4 AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
 cp ../Project/GNU/GUI/dvanalyzer-gui.spec  AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
 cp ../Project/GNU/GUI/dvanalyzer-gui.desktop AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
 cp ../Project/GNU/GUI/dvanalyzer-gui.kde3.desktop AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
@@ -48,13 +47,18 @@ cp -r ../Source/CLI/*.cpp AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/CLI/
 mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Common
 cp -r ../Source/GUI/Common/*.h AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Common/
 cp -r ../Source/GUI/Common/*.cpp AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Common/
-mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/WxWidgets
-cp -r ../Source/GUI/WxWidgets/*.h AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/WxWidgets/
-cp -r ../Source/GUI/WxWidgets/*.cpp AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/WxWidgets/
+mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt
+cp -r ../Source/GUI/Qt/*.h AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt/
+cp -r ../Source/GUI/Qt/*.cpp AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt/
+mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt/_Automated/
+cp -r ../Source/GUI/Qt/_Automated/*.h AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt/_Automated/
+cp -r ../Source/GUI/Qt/_Automated/*.cpp AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt/_Automated/
 mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/Menu
-cp -r ../Source/Ressource/Image/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/
-cp -r ../Source/Ressource/Image/*.xpm AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/
-cp -r ../Source/Ressource/Image/Menu/*.xpm AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/Menu/
+cp -r ../Source/Ressource/Image/Menu/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/Menu/
+cp -r ../Source/Ressource/Image/Menu/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/Menu/
+mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/AVPS
+cp -r ../Source/Ressource/Image/AVPS/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/AVPS/
+cp -r ../Source/Ressource/Image/AVPS/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/AVPS/
 
 #-----------------------------------------------------------------------
 # Copying : Release
@@ -102,8 +106,6 @@ mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Shared/Project/_Common
 cp -r ../../Shared/Project/_Common/*.sh AVPS_DV_Analyzer_GUI_GNU_FromSource/Shared/Project/_Common
 mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Shared/Project/ZLib
 cp -r ../../Shared/Project/ZLib/*.sh AVPS_DV_Analyzer_GUI_GNU_FromSource/Shared/Project/ZLib
-mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Shared/Project/WxWidgets
-cp -r ../../Shared/Project/WxWidgets/*.sh AVPS_DV_Analyzer_GUI_GNU_FromSource/Shared/Project/WxWidgets
 
 #-----------------------------------------------------------------------
 # Preparing Archive : Automation

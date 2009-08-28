@@ -89,8 +89,6 @@ mkdir -p AVPS_DV_Analyzer_CLI_GNU_FromSource/Shared/Project/ZLib
 cp -r ../../Shared/Project/ZLib/*.sh AVPS_DV_Analyzer_CLI_GNU_FromSource/Shared/Project/ZLib
 mkdir -p AVPS_DV_Analyzer_CLI_GNU_FromSource/Shared/Project/ZLib/Template/projects/GNU
 cp -r ../../Shared/Project/ZLib/Template/projects/GNU/* AVPS_DV_Analyzer_CLI_GNU_FromSource/Shared/Project/ZLib/Template/projects/GNU
-mkdir -p AVPS_DV_Analyzer_CLI_GNU_FromSource/Shared/Project/WxWidgets
-cp -r ../../Shared/Project/WxWidgets/*.sh AVPS_DV_Analyzer_CLI_GNU_FromSource/Shared/Project/WxWidgets
 
 #-----------------------------------------------------------------------
 # Preparing Archive : Automation

@@ -16,7 +16,6 @@ rem --- Copying : Projects ---
 xcopy ..\Project\GNU\CLI\autogen AVPS_DV_Analyzer_CLI_GNU_Prepare\Project\GNU\CLI\ /S
 xcopy ..\Project\GNU\CLI\configure.ac AVPS_DV_Analyzer_CLI_GNU_Prepare\Project\GNU\CLI\ /S
 xcopy ..\Project\GNU\CLI\Makefile.am AVPS_DV_Analyzer_CLI_GNU_Prepare\Project\GNU\CLI\ /S
-xcopy ..\Project\GNU\CLI\wxwin.m4 AVPS_DV_Analyzer_CLI_GNU_Prepare\Project\GNU\CLI\ /S
 xcopy ..\Project\GNU\CLI\AddThisToRoot_CLI_compile.sh AVPS_DV_Analyzer_CLI_GNU_Prepare\Project\GNU\CLI\ /S
 xcopy ..\Project\GNU\CLI\dvanalyzer-cli.spec AVPS_DV_Analyzer_CLI_GNU_Prepare\Project\GNU\CLI\ /S
 
@@ -53,7 +52,6 @@ mkdir AVPS_DV_Analyzer_CLI_GNU_Prepare\Shared
 xcopy ..\..\Shared\Project\_Common\* AVPS_DV_Analyzer_CLI_GNU_Prepare\Shared\Project\_Common\ /S
 xcopy ..\..\Shared\Project\ZLib\*.sh AVPS_DV_Analyzer_CLI_GNU_Prepare\Shared\Project\ZLib\ /S
 xcopy ..\..\Shared\Project\ZLib\Template\projects\GNU\* AVPS_DV_Analyzer_CLI_GNU_Prepare\Shared\Project\ZLib\Template\projects\GNU\ /S
-xcopy ..\..\Shared\Project\WxWidgets\*.sh AVPS_DV_Analyzer_CLI_GNU_Prepare\Shared\Project\WxWidgets\ /S
 
 
 rem --- Compressing Archive ---
