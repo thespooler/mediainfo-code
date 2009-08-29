@@ -89,7 +89,12 @@ dnl
 dnl if test "$with_qt" != "no"; then
  CFLAGS="$CFLAGS -I../../../../qt/include"
  CXXFLAGS="$CXXFLAGS -I../../../../qt/include"
- LIBS="$LIBS -L../../../../qt/lib -lQtCore -lQtGui -framework Carbon -framework AppKit -framework ApplicationServices"
+ LIBS="$LIBS -L../../../../qt/lib -lQtCore -lQtGui"
+ case "${host}" in
+  *-*-darwin* )
+   dnl Darwin based distributions (including Mac OS X)
+   LIBS="$LIBS -framework Carbon -framework AppKit -framework ApplicationServices"
+ esac
 dnl fi
 
 dnl #########################################################################
