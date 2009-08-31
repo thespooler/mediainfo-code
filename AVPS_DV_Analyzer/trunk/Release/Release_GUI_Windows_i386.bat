@@ -8,12 +8,10 @@ mkdir AVPS_DV_Analyzer_GUI_Windows_i386
 
 
 @rem --- Preparing ---
-copy BCB\GUI\AVPS_DV_Analyzer_GUI.exe BCB\GUI\MediaInfo.exe
+copy BCB\GUI\AVPS_DV_Analyzer_GUI.exe BCB\GUI\DV_Analyzer.exe
 
 @rem --- Copying : Exe ---
-copy  ..\Project\BCB\GUI\Release_Build\AVPS_DV_Analyzer_GUI.exe AVPS_DV_Analyzer_GUI_Windows_i386\MediaInfo.exe
-xcopy ..\..\MediaInfoLib\Project\MSVC2005\DLL\Win32\Release\MediaInfo.dll AVPS_DV_Analyzer_GUI_Windows_i386\ /S
-xcopy ..\..\MediaInfoLib\Project\MSVC\ShellExtension\Win32\Release\MediaInfo_InfoTip.dll AVPS_DV_Analyzer_GUI_Windows_i386\ /S
+copy  ..\Project\MSVC\GUI\Win32\Release\AVPS_DV_Analyzer_GUI.exe AVPS_DV_Analyzer_GUI_Windows_i386\DV_Analyzer.exe
 
 @rem --- Copying : Plugins ---
 xcopy ..\Source\Ressource\Plugin\* AVPS_DV_Analyzer_GUI_Windows_i386\Plugin\ /S
@@ -30,7 +28,7 @@ cd AVPS_DV_Analyzer_GUI_Windows_i386\
 cd ..
 
 rem --- Installer ---
-copy ..\Project\BCB\GUI\Release_Build\AVPS_DV_Analyzer_GUI.exe BCB\GUI\MediaInfo.exe
+copy ..\Project\MSVC\GUI\Win32\Release\AVPS_DV_Analyzer_GUI.exe MSVC\GUI\Release\DV_Analyzer.exe
 ..\..\Shared\Binary\Windows_i386\NSIS\makensis ..\Source\Install\AVPS_DV_Analyzer_GUI_Windows_i386.nsi
 
 rem --- Clean up ---

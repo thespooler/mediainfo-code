@@ -221,39 +221,39 @@
 					Name="Automated"
 					>
 					<File
-						RelativePath="..\..\..\Source\GUI\Qt\_Automated\moc_GUI_About.cpp"
+						RelativePath=".\_Automated\moc_GUI_About.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\Source\GUI\Qt\_Automated\moc_GUI_Help_ByFrame.cpp"
+						RelativePath=".\_Automated\moc_GUI_Help_ByFrame.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\Source\GUI\Qt\_Automated\moc_GUI_Help_Summary.cpp"
+						RelativePath=".\_Automated\moc_GUI_Help_Summary.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\Source\GUI\Qt\_Automated\moc_GUI_Main.cpp"
+						RelativePath=".\_Automated\moc_GUI_Main.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\Source\GUI\Qt\_Automated\moc_GUI_Main_ByFrame.cpp"
+						RelativePath=".\_Automated\moc_GUI_Main_ByFrame.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\Source\GUI\Qt\_Automated\moc_GUI_Main_MediaInfo.cpp"
+						RelativePath=".\_Automated\moc_GUI_Main_MediaInfo.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\Source\GUI\Qt\_Automated\moc_GUI_Main_Summary.cpp"
+						RelativePath=".\_Automated\moc_GUI_Main_Summary.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\Source\GUI\Qt\_Automated\moc_GUI_Main_XML.cpp"
+						RelativePath=".\_Automated\moc_GUI_Main_XML.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\Source\GUI\Qt\_Automated\qrc_GUI_Main.cpp"
+						RelativePath=".\_Automated\qrc_GUI_Main.cpp"
 						>
 					</File>
 				</Filter>
@@ -346,6 +346,14 @@
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
+			<File
+				RelativePath=".\AVPS_DV_Analyzer_GUI.rc"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\Source\GUI\Qt\GUI_Main.rc"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

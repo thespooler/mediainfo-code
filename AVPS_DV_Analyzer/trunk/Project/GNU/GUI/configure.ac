@@ -42,7 +42,7 @@ dnl Arguments - Enable
 dnl
 AC_ARG_ENABLE(debug,            AC_HELP_STRING([--enable-debug],            [Enable full debug]),                         , enable_debug=no)
 AC_ARG_ENABLE(gprof,            AC_HELP_STRING([--enable-gprof],            [Enable gprof log]),                          , enable_gprof=no)
-AC_ARG_ENABLE(universal_binary, AC_HELP_STRING([--enable-universal_binary], [Create Mac PPC/i386 Universal binary]),      , enable_universal_binary)
+AC_ARG_ENABLE(universal_binary, AC_HELP_STRING([--enable-universal_binary], [Create Mac PPC/i386 Universal binary]),      , enable_universal_binary=no)
 AC_ARG_ENABLE(arch-ppc,         AC_HELP_STRING([--with-arch-ppc],           [Create Mac PPC Universal binary]),           , enable_arch_ppc=no)
 AC_ARG_ENABLE(arch-i386,        AC_HELP_STRING([--with-arch-i386],          [Create Mac i386 Universal binary]),          , enable_arch_i386=no)
 AC_ARG_ENABLE(staticlibs,       AC_HELP_STRING([--enable-staticlibs],       [Use static libmediainfo and libzen]),        , enable_staticlibs=no)
@@ -80,21 +80,69 @@ dnl Qt (v1)
 dnl
 
 dnl #########################################################################
-dnl ### MediaInfo specific flags
+dnl ### DvAnalyzer specific flags
 dnl #########################################################################
 
 dnl -------------------------------------------------------------------------
 dnl Use Qt
 dnl
 dnl if test "$with_qt" != "no"; then
- CFLAGS="$CFLAGS -I../../../../qt/include"
- CXXFLAGS="$CXXFLAGS -I../../../../qt/include"
- LIBS="$LIBS -L../../../../qt/lib -lQtCore -lQtGui"
- case "${host}" in
-  *-*-darwin* )
-   dnl Darwin based distributions (including Mac OS X)
-   LIBS="$LIBS -framework Carbon -framework AppKit -framework ApplicationServices"
- esac
+	if test -d ../../../../qt/include; then
+		CFLAGS="$CFLAGS -I../../../../qt/include"
+		CXXFLAGS="$CXXFLAGS -I../../../../qt/include"
+		LIBS="$LIBS -L../../../../qt/lib $LIBS -lQtCore -lQtGui"
+		if test -x ../../../../qt/bin/moc; then
+			MOC="../../../../qt/bin/moc"
+		else
+			AC_MSG_ERROR([
+			Qt MOC is not found on your qt directory
+			Have you compiled Qt?
+			])
+		fi
+		if test -x ../../../../qt/bin/rcc; then
+			RCC="../../../../qt/bin/rcc"
+		else
+			AC_MSG_ERROR([
+			Qt RCC is not found on your qt directory
+			Have you compiled Qt?
+			])
+		fi
+		with_qt="builtin"
+	else
+		CFLAGS="$CFLAGS $(pkg-config QtGui --cflags)"
+		CXXFLAGS="$CXXFLAGS $(pkg-config QtGui --cflags)"
+		LIBS="$LIBS $(pkg-config QtGui --libs)"
+		if test -x $(pkg-config QtGui --variable=prefix)/bin/moc; then
+		 MOC="$(pkg-config QtGui --variable=prefix)/bin/moc"
+		else
+			AC_MSG_ERROR([
+			Qt MOC is not found on your system
+			Please report the location of moc to the developper
+			])
+		fi
+		if test -x $(pkg-config QtGui --variable=prefix)/bin/rcc; then
+		 RCC="$(pkg-config QtGui --variable=prefix)/bin/rcc"
+		else
+			AC_MSG_ERROR([
+			Qt RCC is not found on your system
+			Please report the location of rcc to the developper
+			])
+		fi
+		with_qt="system"
+	fi
+
+	test -e _Automated || mkdir _Automated
+
+	$MOC ../../../Source/GUI/Qt/GUI_About.h -o_Automated/moc_GUI_About.cpp
+	$MOC ../../../Source/GUI/Qt/GUI_Main.h -o_Automated/moc_GUI_Main.cpp
+	$MOC ../../../Source/GUI/Qt/GUI_Main_ByFrame.h -o_Automated/moc_GUI_Main_ByFrame.cpp
+	$MOC ../../../Source/GUI/Qt/GUI_Main_MediaInfo.h -o_Automated/moc_GUI_Main_MediaInfo.cpp
+	$MOC ../../../Source/GUI/Qt/GUI_Main_Summary.h -o_Automated/moc_GUI_Main_Summary.cpp
+	$MOC ../../../Source/GUI/Qt/GUI_Main_XML.h -o_Automated/moc_GUI_Main_XML.cpp
+	$MOC ../../../Source/GUI/Qt/GUI_Help_ByFrame.h -o_Automated/moc_GUI_Help_ByFrame.cpp
+	$MOC ../../../Source/GUI/Qt/GUI_Help_Summary.h -o_Automated/moc_GUI_Help_Summary.cpp
+
+	$RCC ../../../Source/Ressource/GUI_Main.qrc -o _Automated/qrc_GUI_Main.cpp
 dnl fi
 
 dnl #########################################################################
@@ -106,11 +154,6 @@ dnl Unicode
 dnl
 if test "$enable_unicode" = "yes"; then
  AC_DEFINE(UNICODE)
- MediaInfo_CFLAGS="$MediaInfo_CXXFLAGS -DUNICODE"
- MediaInfo_CXXFLAGS="$MediaInfo_CXXFLAGS -DUNICODE"
- MediaInfo_Unicode="yes"
-else
- MediaInfo_Unicode="no"
 fi
 
 dnl -------------------------------------------------------------------------
@@ -181,7 +224,6 @@ dnl ZenLib
 dnl
 if test -e ../../../../ZenLib/Project/GNU/Library/libzen.la; then
 	CXXFLAGS="$CXXFLAGS $(../../../../ZenLib/Project/GNU/Library/libzen-config CXXFLAGS)"
-	MediaInfoLib_CXXFLAGS="$MediaInfoLib_CXXFLAGS $(../../../../ZenLib/Project/GNU/Library/libzen-config CXXFLAGS)"
 	if test "$enable_staticlibs" = "yes"; then
 		with_zenlib="builtin (static)"
 		LIBS="$LIBS $(../../../../ZenLib/Project/GNU/Library/libzen-config LIBS_Static)"
@@ -266,7 +308,7 @@ dnl ### Report how we have been configured
 dnl #########################################################################
 
 echo ""
-echo "Configured MediaInfo for '$host'"
+echo "Configured AVPS DV Analyzer for '$host'"
 echo ""
 echo "  Unicode?                                                $enable_unicode"
 echo "  Using libzen?                                           $with_zenlib"

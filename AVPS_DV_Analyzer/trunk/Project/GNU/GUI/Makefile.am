@@ -15,15 +15,15 @@ dvanalyzer_gui_SOURCES = \
     ../../../Source/GUI/Qt/GUI_Main_Menu.cpp \
     ../../../Source/GUI/Qt/GUI_Main_Summary.cpp \
     ../../../Source/GUI/Qt/GUI_Main_XML.cpp \
-    ../../../Source/GUI/Qt/_Automated/moc_GUI_About.cpp \
-    ../../../Source/GUI/Qt/_Automated/moc_GUI_Main.cpp \
-    ../../../Source/GUI/Qt/_Automated/moc_GUI_Help_ByFrame.cpp \
-    ../../../Source/GUI/Qt/_Automated/moc_GUI_Help_Summary.cpp \
-    ../../../Source/GUI/Qt/_Automated/moc_GUI_Main_ByFrame.cpp \
-    ../../../Source/GUI/Qt/_Automated/moc_GUI_Main_MediaInfo.cpp \
-    ../../../Source/GUI/Qt/_Automated/moc_GUI_Main_Summary.cpp \
-    ../../../Source/GUI/Qt/_Automated/moc_GUI_Main_XML.cpp \
-    ../../../Source/GUI/Qt/_Automated/qrc_GUI_Main.cpp
+    _Automated/moc_GUI_About.cpp \
+    _Automated/moc_GUI_Main.cpp \
+    _Automated/moc_GUI_Help_ByFrame.cpp \
+    _Automated/moc_GUI_Help_Summary.cpp \
+    _Automated/moc_GUI_Main_ByFrame.cpp \
+    _Automated/moc_GUI_Main_MediaInfo.cpp \
+    _Automated/moc_GUI_Main_Summary.cpp \
+    _Automated/moc_GUI_Main_XML.cpp \
+    _Automated/qrc_GUI_Main.cpp
 
 #dvanalyzer-gui_LDFLAGS     = -no-undefined -version-info 0:0:0
 
