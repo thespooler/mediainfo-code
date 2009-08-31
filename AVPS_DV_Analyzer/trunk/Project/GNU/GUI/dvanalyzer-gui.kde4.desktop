@@ -10,4 +10,4 @@ X-KDE-Priority=TopLevel
 Name=DV Analyzer
 GenericName=Media Analyzer
 Exec=dvanalyzer-gui %u
-Icon=mediainfo
+Icon=dvanalyzer

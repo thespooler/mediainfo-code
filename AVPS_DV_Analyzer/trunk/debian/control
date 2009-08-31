@@ -10,44 +10,46 @@ Package: dvanalyzer
 Section: utils
 Architecture: any
 Depends: libmediainfo0 (>= 0.7.20), libzen0 (>= 0.4.3), zlib1g
-Description: MediaInfo supplies information about a video or audio file
- MediaInfo supplies technical and tag information about a video or audio file
+Description: DV Analyzer provides two primary services simultaneously:
  .
- What information can I get from MediaInfo?
- General: title, author, director, album, track number, date, duration...
- Video: codec, aspect, fps, bitrate...
- Audio: codec, sample rate, channels, language, bitrate...
- Text: language of subtitle
- Chapters: number of chapters, list of chapters
+ Error Detection and Quality Control
+ The reformatting of DV tapes (such as miniDV, DVCam, and DVCPro) to
+ DV file-based formats is a point when the introduction of permanent errors
+ is of particularly high risk. Most capture tools for DV only report errors
+ if they are significant, such as a lost frame, whereas other documented
+ errors are not reviewed. DVanalyzer provides a way to analyze and report
+ audio, video, subcode, and structural errors within a DV file. This enables
+ automated quality control and the ability to verify the accuracy and
+ integrity of the reformatting process on a frame-by-frame basis.
  .
- What format (container) does MediaInfo support?
- Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2,
-        MPEG-4, DVD (VOB)...
- (Codecs: DivX, XviD, MSMPEG4, ASP, H.264, AVC...)
- Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...
- Subtitles: SRT, SSA, ASS, SAMI...
- .
- This package includes the command line interface
+ Temporal Metadata Reporting
+ The DV format is rich with temporal metadata. Every frame may contain
+ time code, recording date and time information, recording markers, and more.
+ DVanalyzer reports this information which can be used in a variety of
+ meaningful ways when working with and preserving DV content. This is
+ particularly useful in documenting source material of edited DV content.
 
 Package: dvanalyzer-gui
 Section: utils
 Architecture: any
-Depends: libmediainfo0 (>= 0.7.20), libzen0 (>= 0.4.3), libqt4, zlib1g
-Description: MediaInfo supplies information about a video or audio file
- MediaInfo supplies technical and tag information about a video or audio file
+Depends: libmediainfo0 (>= 0.7.20), libzen0 (>= 0.4.3), libqt4-gui, zlib1g
+Description: DV Analyzer provides two primary services simultaneously:
  .
- What information can I get from MediaInfo?
- General: title, author, director, album, track number, date, duration...
- Video: codec, aspect, fps, bitrate...
- Audio: codec, sample rate, channels, language, bitrate...
- Text: language of subtitle
- Chapters: number of chapters, list of chapters
+ Error Detection and Quality Control
+ The reformatting of DV tapes (such as miniDV, DVCam, and DVCPro) to
+ DV file-based formats is a point when the introduction of permanent errors
+ is of particularly high risk. Most capture tools for DV only report errors
+ if they are significant, such as a lost frame, whereas other documented
+ errors are not reviewed. DVanalyzer provides a way to analyze and report
+ audio, video, subcode, and structural errors within a DV file. This enables
+ automated quality control and the ability to verify the accuracy and
+ integrity of the reformatting process on a frame-by-frame basis.
  .
- What format (container) does MediaInfo support?
- Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2,
-        MPEG-4, DVD (VOB)...
- (Codecs: DivX, XviD, MSMPEG4, ASP, H.264, AVC...)
- Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...
- Subtitles: SRT, SSA, ASS, SAMI...
+ Temporal Metadata Reporting
+ The DV format is rich with temporal metadata. Every frame may contain
+ time code, recording date and time information, recording markers, and more.
+ DVanalyzer reports this information which can be used in a variety of
+ meaningful ways when working with and preserving DV content. This is
+ particularly useful in documenting source material of edited DV content.
  .
- This package includes the graphical user interface
+ This package contains the graphical user interface

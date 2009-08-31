@@ -109,26 +109,30 @@ dnl if test "$with_qt" != "no"; then
 		fi
 		with_qt="builtin"
 	else
-		CFLAGS="$CFLAGS $(pkg-config QtGui --cflags)"
-		CXXFLAGS="$CXXFLAGS $(pkg-config QtGui --cflags)"
-		LIBS="$LIBS $(pkg-config QtGui --libs)"
-		if test -x $(pkg-config QtGui --variable=prefix)/bin/moc; then
-		 MOC="$(pkg-config QtGui --variable=prefix)/bin/moc"
+		if pkg-config --exists libzen; then
+			CFLAGS="$CFLAGS $(pkg-config QtGui --cflags)"
+			CXXFLAGS="$CXXFLAGS $(pkg-config QtGui --cflags)"
+			LIBS="$LIBS $(pkg-config QtGui --libs)"
+			if test -x $(pkg-config QtGui --variable=prefix)/bin/moc; then
+			 MOC="$(pkg-config QtGui --variable=prefix)/bin/moc"
+			else
+				AC_MSG_ERROR([
+				Qt MOC is not found on your system
+				Please report the location of moc to the developper
+				])
+			fi
+			if test -x $(pkg-config QtGui --variable=prefix)/bin/rcc; then
+			 RCC="$(pkg-config QtGui --variable=prefix)/bin/rcc"
+			else
+				AC_MSG_ERROR([
+				Qt RCC is not found on your system
+				Please report the location of rcc to the developper
+				])
+			fi
+			with_qt="system"
 		else
-			AC_MSG_ERROR([
-			Qt MOC is not found on your system
-			Please report the location of moc to the developper
-			])
+			AC_MSG_ERROR([Qt4 configuration is not found])
 		fi
-		if test -x $(pkg-config QtGui --variable=prefix)/bin/rcc; then
-		 RCC="$(pkg-config QtGui --variable=prefix)/bin/rcc"
-		else
-			AC_MSG_ERROR([
-			Qt RCC is not found on your system
-			Please report the location of rcc to the developper
-			])
-		fi
-		with_qt="system"
 	fi
 
 	test -e _Automated || mkdir _Automated

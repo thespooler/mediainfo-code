@@ -142,6 +142,6 @@ void GUI_About::showEvent(QShowEvent* event)
 
 void GUI_About::resizeEvent(QResizeEvent* event)
 {
-    NameVersion->setMaximumHeight((int)NameVersion->document()->documentLayout()->documentSize().height()+4);
-    Websites->setMaximumHeight((int)Websites->document()->documentLayout()->documentSize().height()+4);
+    NameVersion->setMaximumHeight((int)NameVersion->document()->documentLayout()->documentSize().height()+6);
+    Websites->setMaximumHeight((int)Websites->document()->documentLayout()->documentSize().height()+6);
 }

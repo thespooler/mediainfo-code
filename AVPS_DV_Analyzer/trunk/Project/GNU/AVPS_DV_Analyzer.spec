@@ -14,7 +14,7 @@ Release:		1
 Summary:		Supplies technical and tag information about a video or audio file
 Group:			Productivity/Multimedia/Other
 License:		GPL
-URL:			http://dvanalyzer.sourceforge.net/
+URL:			http://mediainfo.sourceforge.net/
 Source0:		dvanalyzer_%{version}-1.tar.gz
 BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:	dos2unix
@@ -31,58 +31,56 @@ Requires:	libzen0 >= %{libzen_version}
 Requires:	libmediainfo0 >= %{libmediainfo_version}
 
 %description
-MediaInfo supplies technical and tag information about a video or
-audio file.
+DV Analyzer provides two primary services simultaneously:
 
-What information can I get from MediaInfo?
-* General: title, author, director, album, track number, date, duration...
-* Video: codec, aspect, fps, bitrate...
-* Audio: codec, sample rate, channels, language, bitrate...
-* Text: language of subtitle
-* Chapters: number of chapters, list of chapters
+Error Detection and Quality Control
+The reformatting of DV tapes (such as miniDV, DVCam, and DVCPro) to
+DV file-based formats is a point when the introduction of permanent errors
+is of particularly high risk. Most capture tools for DV only report errors
+if they are significant, such as a lost frame, whereas other documented
+errors are not reviewed. DVanalyzer provides a way to analyze and report
+audio, video, subcode, and structural errors within a DV file. This enables
+automated quality control and the ability to verify the accuracy and
+integrity of the reformatting process on a frame-by-frame basis.
 
-DivX, XviD, H263, H.263, H264, x264, ASP, AVC, iTunes, MPEG-1,
-MPEG1, MPEG-2, MPEG2, MPEG-4, MPEG4, MP4, M4A, M4V, QuickTime,
-RealVideo, RealAudio, RA, RM, MSMPEG4v1, MSMPEG4v2, MSMPEG4v3,
-VOB, DVD, WMA, VMW, ASF, 3GP, 3GPP, 3GP2
-
-What format (container) does MediaInfo support?
-* Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1,
-  MPEG-2, MPEG-4, DVD (VOB) (Codecs: DivX, XviD, MSMPEG4, ASP,
-  H.264, AVC...)
-* Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF
-* Subtitles: SRT, SSA, ASS, SAMI
+Temporal Metadata Reporting
+The DV format is rich with temporal metadata. Every frame may contain
+time code, recording date and time information, recording markers, and more.
+DVanalyzer reports this information which can be used in a variety of
+meaningful ways when working with and preserving DV content. This is
+particularly useful in documenting source material of edited DV content.
 
 %package gui
 Summary:	GUI for dvanalyzer
 Group:		Productivity/Multimedia/Other
 Requires:	libzen0 >= %{libzen_version}
 Requires:	libmediainfo0 >= %{libmediainfo_version}
+Requires:	libqt4 >= 4.0.0
+%if 0%{?opensuse_version}
+Requires:	libqt4-x11
+%endif
 
 %description gui
-This package contains a Frontend for dvanalyzer.
+DV Analyzer provides two primary services simultaneously:
 
-MediaInfo supplies technical and tag information about a video or
-audio file.
+Error Detection and Quality Control
+The reformatting of DV tapes (such as miniDV, DVCam, and DVCPro) to
+DV file-based formats is a point when the introduction of permanent errors
+is of particularly high risk. Most capture tools for DV only report errors
+if they are significant, such as a lost frame, whereas other documented
+errors are not reviewed. DVanalyzer provides a way to analyze and report
+audio, video, subcode, and structural errors within a DV file. This enables
+automated quality control and the ability to verify the accuracy and
+integrity of the reformatting process on a frame-by-frame basis.
 
-What information can I get from MediaInfo?
-* General: title, author, director, album, track number, date, duration...
-* Video: codec, aspect, fps, bitrate...
-* Audio: codec, sample rate, channels, language, bitrate...
-* Text: language of subtitle
-* Chapters: number of chapters, list of chapters
+Temporal Metadata Reporting
+The DV format is rich with temporal metadata. Every frame may contain
+time code, recording date and time information, recording markers, and more.
+DVanalyzer reports this information which can be used in a variety of
+meaningful ways when working with and preserving DV content. This is
+particularly useful in documenting source material of edited DV content.
 
-DivX, XviD, H263, H.263, H264, x264, ASP, AVC, iTunes, MPEG-1,
-MPEG1, MPEG-2, MPEG2, MPEG-4, MPEG4, MP4, M4A, M4V, QuickTime,
-RealVideo, RealAudio, RA, RM, MSMPEG4v1, MSMPEG4v2, MSMPEG4v3,
-VOB, DVD, WMA, VMW, ASF, 3GP, 3GPP, 3GP2
-
-What format (container) does MediaInfo support?
-* Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1,
-  MPEG-2, MPEG-4, DVD (VOB) (Codecs: DivX, XviD, MSMPEG4, ASP,
-  H.264, AVC...)
-* Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF
-* Subtitles: SRT, SSA, ASS, SAMI
+This package contains the graphical user interface
 
 %prep
 %setup -q -n AVPS_DV_Analyzer
