@@ -336,7 +336,7 @@ void GUI_Main::OnMenu_Help_About()
 void GUI_Main::OnMenu_Help_AVPS_Website()
 {
     //Showing
-    QDesktopServices::openUrl(QUrl("http://avpreserve.com/dvanalyzer", QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl("http://avpreserve.com/blog/dvanalyzer", QUrl::TolerantMode));
 }
 
 //***************************************************************************

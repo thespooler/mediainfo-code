@@ -55,8 +55,17 @@ Summary:	GUI for dvanalyzer
 Group:		Productivity/Multimedia/Other
 Requires:	libzen0 >= %{libzen_version}
 Requires:	libmediainfo0 >= %{libmediainfo_version}
+# %if 0%{?fedora_version}
+# Requires:	qt >= 4.0.0
+# %endif
+%if 0%{?centos_version} ||  0%{?rhel_version} || 0%{?fedora_version}
+Requires:	qt4 >= 4.0.0
+%endif
+%if 0%{?mandriva}
+Requires:	libqtgui4 >= 4.0.0
+%endif
+%if 0%{?suse_version} ||  0%{?opensuse_version}
 Requires:	libqt4 >= 4.0.0
-%if 0%{?opensuse_version}
 Requires:	libqt4-x11
 %endif
 
