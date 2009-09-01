@@ -47,41 +47,41 @@ BEGIN_EVENT_TABLE(GUI_About, wxDialog)
 END_EVENT_TABLE()
 
 const char* Description_Text=
-"DESCRIPTION\r\n"
-"\r\n"
-"DV Analyzer provide two primary services simultaneously:\r\n"
-"\r\n"
-"Error Detection and Quality Control\r\n"
-"\r\n"
-"The digitization of DV tapes (such as miniDV, DVCam, and DVCPro) to file-based DV content for preservation is a fixed point in the content's lifespan when the introduction of errors is particularly high. Most digitization tools for DV content only report on errors if they are significant, such as a lost frame, whereas other documented errors are not reviewed. This tool, dvanalyzer, is meant to provide a way to analyze the resulting files from digitization in order to evaluate the accuracy of the transfer and verify the work.\r\n"
-"\r\n"
-"Temporal Metadata Reporting\r\n"
-"\r\n"
-"The DV format is rich is temporal metadata, every frame contains a timecode, recording date and time information, recording markers, etc. dvanalyzer reports on these values file so that recording info and timecode can be summarized throughout the file. This is particularly useful in documenting source material of edited DV content.\r\n"
+"DESCRIPTION\n"
+"\n"
+"DV Analyzer provide two primary services simultaneously:\n"
+"\n"
+"Error Detection and Quality Control\n"
+"\n"
+"The digitization of DV tapes (such as miniDV, DVCam, and DVCPro) to file-based DV content for preservation is a fixed point in the content's lifespan when the introduction of errors is particularly high. Most digitization tools for DV content only report on errors if they are significant, such as a lost frame, whereas other documented errors are not reviewed. This tool, dvanalyzer, is meant to provide a way to analyze the resulting files from digitization in order to evaluate the accuracy of the transfer and verify the work.\n"
+"\n"
+"Temporal Metadata Reporting\n"
+"\n"
+"The DV format is rich is temporal metadata, every frame contains a timecode, recording date and time information, recording markers, etc. dvanalyzer reports on these values file so that recording info and timecode can be summarized throughout the file. This is particularly useful in documenting source material of edited DV content.\n"
 ;
 const char* TechnicalSynopsis_Text=
-"TECHNICAL SYNOPSIS\r\n"
-"\r\n"
-"DV Analyzer is a technical quality control tool that examines dv streams in order to detect errors in the tape-to-file transfer process, such as video error concealment, invalid audio samples, timecode inconsistancy, inconsistant use of arbitrary bits in video DIF blocks, and DIF structural problems.\r\n"
-"\r\n"
-"DV Analyzer also reports on patterns within dv streams such as changes in dv timecode, changes in recording date and time markers, first and last frame markers within individual recordings, and\r\n"
+"TECHNICAL SYNOPSIS\n"
+"\n"
+"DV Analyzer is a technical quality control tool that examines dv streams in order to detect errors in the tape-to-file transfer process, such as video error concealment, invalid audio samples, timecode inconsistancy, inconsistant use of arbitrary bits in video DIF blocks, and DIF structural problems.\n"
+"\n"
+"DV Analyzer also reports on patterns within dv streams such as changes in dv timecode, changes in recording date and time markers, first and last frame markers within individual recordings, and\n"
 ;
 const char* AuthorLicense_Text=
-"AUTHOR and LICENSE\r\n"
-"\r\n"
-"DV Analyzer was developed for AudioVisual Preservation Solutions (AVPS).\r\n"
-"Copyright (C) 2009 AudioVisual Preservation Solutions. All rights reserved.\r\n"
-"\r\n"
-"Please report bugs and suggestions to <info@avpreserve.com>\r\n"
-"\r\n"
-"This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\r\n"
-"\r\n"
-"This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n"
-"\r\n"
-"You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.\r\n"
+"AUTHOR and LICENSE\n"
+"\n"
+"DV Analyzer was developed for AudioVisual Preservation Solutions (AVPS).\n"
+"Copyright (C) 2009 AudioVisual Preservation Solutions. All rights reserved.\n"
+"\n"
+"Please report bugs and suggestions to <info@avpreserve.com>\n"
+"\n"
+"This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.\n"
 ;
 const char* Websites_Text=
-"Developed for AVPS http://www.avpreserve.com\r\n"
+"Developed for AVPS http://www.avpreserve.com\n"
 "by MediaArea.net http://mediainfo.sourceforge.net"
 ;
 
@@ -112,9 +112,9 @@ GUI_About::GUI_About(wxWindow* parent, const wxString& NameVersion_)
     Button_TechnicalSynopsis=new wxButton (this, 28003, wxString::FromAscii("Technical Synopsis"));
     Button_AuthorLicense=new wxButton (this, 28004, wxString::FromAscii("Author and License"));
     Button_Close=new wxButton (this, 28005, wxString::FromAscii("Close"));
-    Button_Description->SetSize      ( 10,  10, 100, 30);
-    Button_TechnicalSynopsis->SetSize( 10,  50, 100, 30);
-    Button_AuthorLicense->SetSize    ( 10,  90, 100, 30);
+    Button_Description->SetSize      (  5,  10, 110, 30);
+    Button_TechnicalSynopsis->SetSize(  5,  50, 110, 30);
+    Button_AuthorLicense->SetSize    (  5,  90, 110, 30);
     Button_Close->SetSize    (GetClientSize().GetWidth()-110, GetClientSize().GetHeight()-40, 100, 30);
 
     //Text
@@ -128,6 +128,19 @@ GUI_About::GUI_About(wxWindow* parent, const wxString& NameVersion_)
 
     //Initial config
     Button_Description->Disable();
+
+    //Font
+    #ifdef __WXMAC__
+        wxFont Font;
+        Font.SetFamily(wxFONTFAMILY_MODERN);
+        Button_Description->SetFont(Font);
+        Button_TechnicalSynopsis->SetFont(Font);
+        Button_AuthorLicense->SetFont(Font);
+        Button_Close->SetFont(Font);
+        NameVersion->SetFont(Font);
+        Text->SetFont(Font);
+        Websites->SetFont(Font);
+    #endif //__WXMAC__
 }
 
 //---------------------------------------------------------------------------
@@ -143,8 +156,6 @@ GUI_About::~GUI_About()
 //---------------------------------------------------------------------------
 void GUI_About::OnSize(wxSizeEvent& WXUNUSED(event))
 {
-    Text->SetSize (120, 0, GetClientSize().GetWidth()-120, GetClientSize().GetHeight()-50);
-    Button_Close->SetSize(GetClientSize().GetWidth()-110, GetClientSize().GetHeight()-40, 100, 30);
 }
 
 //---------------------------------------------------------------------------

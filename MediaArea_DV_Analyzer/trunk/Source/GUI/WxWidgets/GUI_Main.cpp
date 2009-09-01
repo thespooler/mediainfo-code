@@ -60,6 +60,7 @@ GUI_Main::GUI_Main(Core* _C, const wxPoint& pos, const wxSize& size, long style)
 
     //Internal
     C=_C;
+    C->GUI_Main_Handler=this;
 
     //Configure
     View_Current=View_Summary;
@@ -78,7 +79,7 @@ GUI_Main::GUI_Main(Core* _C, const wxPoint& pos, const wxSize& size, long style)
 
     //Drag n drop
     #if wxUSE_DRAG_AND_DROP
-        FD=new FileDrop(C, this);
+        FD=new FileDrop(C);
         SetDropTarget(FD);
     #endif //wxUSE_DRAG_AND_DROP
 

@@ -69,6 +69,7 @@ public:
     //Temp
     void    Data_Prepare();
     MediaInfoNameSpace::String &Text_Get() {return Text;};
+    void* GUI_Main_Handler;
 
 protected:
     MediaInfoNameSpace::MediaInfoList* MI;

@@ -140,7 +140,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="MediaInfo.lib ZenLib.lib zlib.lib wxbase28ud.lib wxmsw28ud_core.lib wxmsw28ud_html.lib kernel32.lib user32.lib gdi32.lib comdlg32.lib comctl32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib rpcrt4.lib"
+				AdditionalDependencies="MediaInfo.lib ZenLib.lib zlib.lib wxbase28u.lib wxmsw28u_core.lib wxmsw28u_html.lib kernel32.lib user32.lib gdi32.lib comdlg32.lib comctl32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib rpcrt4.lib"
 				OutputFile="$(OutDir)\dvanalyzer_GUI.exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="&quot;..\..\..\..\MediaInfoLib\Project\MSVC\Library\$(PlatformName)\$(ConfigurationName)&quot;;&quot;..\..\..\..\ZenLib\Project\MSVC\Library\$(PlatformName)\$(ConfigurationName)&quot;;&quot;..\..\..\..\wxMSW\lib\vc_lib\$(PlatformName)&quot;;&quot;..\..\..\..\zlib\projects\MSVC\$(PlatformName)\$(ConfigurationName)&quot;"

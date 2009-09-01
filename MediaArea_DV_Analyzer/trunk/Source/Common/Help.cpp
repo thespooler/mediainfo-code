@@ -109,7 +109,7 @@ std::string Help_ByFrame_Format()
     std::ostringstream ToDisplay;
 
     ToDisplay<<"Frame              : Frame number from the start of the file"<<std::endl;
-    ToDisplay<<"Time               : Time from the first detected timecode"<<std::endl;
+    ToDisplay<<"Time               : Timecode relative to the timeline of the file"<<std::endl;
     ToDisplay<<"TimeCode           : timecode values"<<std::endl;
     ToDisplay<<"N                  : N if non-consecutive timecodes"<<std::endl;
     ToDisplay<<"Recorded date/time : recdate/rectime values"<<std::endl;

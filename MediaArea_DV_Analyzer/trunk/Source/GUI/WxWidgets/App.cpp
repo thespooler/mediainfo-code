@@ -12,6 +12,10 @@
 #include <vector>
 using namespace std;
 
+#ifdef __WXMAC__
+    #include <ApplicationServices/ApplicationServices.h>
+#endif //__WXMAC__
+
 // --------------------------------------------------------------------------
 IMPLEMENT_APP(App)
 // --------------------------------------------------------------------------
@@ -44,6 +48,14 @@ App::~App()
 //---------------------------------------------------------------------------
 bool App::OnInit()
 {
+    #ifdef __WXMAC__
+        ProcessSerialNumber PSN;
+        GetCurrentProcess(&PSN);
+        TransformProcessType(&PSN, kProcessTransformToForegroundApplication);
+    #endif //__WXMAC__
+
+    setlocale(LC_ALL, "");
+
     //Command line
     vector<String> List;
     for (int Pos=1; Pos<argc; Pos++)

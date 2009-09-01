@@ -4,7 +4,7 @@
 # Configure
 Home=`pwd`
 MediaInfoLib_Options="--enable-minimize-size --disable-all --enable-riff --enable-mpeg4 --enable-dvdif --enable-dvdif-analyze"
-ZenLib_Options="--disable-unicode"
+ZenLib_Options=""
 
 #############################################################################
 # Setup for parallel builds
