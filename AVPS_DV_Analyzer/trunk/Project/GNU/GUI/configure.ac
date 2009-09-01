@@ -107,6 +107,13 @@ dnl if test "$with_qt" != "no"; then
 			Have you compiled Qt?
 			])
 		fi
+
+		case "${host}" in
+		   *-*-darwin* )
+			LIBS="$LIBS -framework Carbon -framework AppKit -framework ApplicationServices"
+		  ;;
+		esac
+
 		with_qt="builtin"
 	else
 		if pkg-config --exists libzen; then

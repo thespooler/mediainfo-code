@@ -14,15 +14,14 @@ xcopy ..\Source\GUI\Common\*.h AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\GUI\Commo
 xcopy ..\Source\GUI\Qt\*.cpp AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\GUI\Qt\ /S
 xcopy ..\Source\GUI\Qt\*.h AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\GUI\Qt\ /S
 xcopy ..\Source\*.png AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\ /S
+xcopy ..\Source\*.qrc AVPS_DV_Analyzer_GUI_GNU_Prepare\Source\ /S
 
 rem --- Copying : Projects ---
 xcopy ..\Project\GNU\GUI\autogen AVPS_DV_Analyzer_GUI_GNU_Prepare\Project\GNU\GUI\ /S
 xcopy ..\Project\GNU\GUI\configure.ac AVPS_DV_Analyzer_GUI_GNU_Prepare\Project\GNU\GUI\ /S
 xcopy ..\Project\GNU\GUI\Makefile.am AVPS_DV_Analyzer_GUI_GNU_Prepare\Project\GNU\GUI\ /S
-xcopy ..\Project\GNU\GUI\wxwin.m4 AVPS_DV_Analyzer_GUI_GNU_Prepare\Project\GNU\GUI\ /S
 xcopy ..\Project\GNU\GUI\AddThisToRoot_GUI_compile.sh AVPS_DV_Analyzer_GUI_GNU_Prepare\Project\GNU\GUI\ /S
 xcopy ..\Project\GNU\GUI\dvanalyzer-gui.* AVPS_DV_Analyzer_GUI_GNU_Prepare\Project\GNU\GUI\ /S
-copy ..\Source\Ressource\Image\MediaInfo.png AVPS_DV_Analyzer_GUI_GNU_Prepare\Project\GNU\GUI\mediainfo.png
 
 rem --- Copying : Release ---
 xcopy Release_GUI_GNU.sub AVPS_DV_Analyzer_GUI_GNU_Prepare\Release\

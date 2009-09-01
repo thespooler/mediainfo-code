@@ -4,9 +4,14 @@ Notes:
 - Deleted
 x Correction
 
-Version 1.3.0, 2009-
+Version 1.3.0, 2009-09-01
 --------------
 + Adapted source code in order to be used by both CLI and GUI
++ Arbitrary bit is reported (and incoherency error detection)
++ New arangement of summary
++ Summary for all errors
++ Stts (.mov, .mp4 time) fluctuation
++ XML output 
 
 Version 1.2.2, 2009-05-18
 --------------

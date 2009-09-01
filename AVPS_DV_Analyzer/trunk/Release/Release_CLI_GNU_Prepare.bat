@@ -17,7 +17,6 @@ xcopy ..\Project\GNU\CLI\autogen AVPS_DV_Analyzer_CLI_GNU_Prepare\Project\GNU\CL
 xcopy ..\Project\GNU\CLI\configure.ac AVPS_DV_Analyzer_CLI_GNU_Prepare\Project\GNU\CLI\ /S
 xcopy ..\Project\GNU\CLI\Makefile.am AVPS_DV_Analyzer_CLI_GNU_Prepare\Project\GNU\CLI\ /S
 xcopy ..\Project\GNU\CLI\AddThisToRoot_CLI_compile.sh AVPS_DV_Analyzer_CLI_GNU_Prepare\Project\GNU\CLI\ /S
-xcopy ..\Project\GNU\CLI\dvanalyzer-cli.spec AVPS_DV_Analyzer_CLI_GNU_Prepare\Project\GNU\CLI\ /S
 
 rem --- Copying : Release ---
 xcopy Release_CLI_GNU.sub AVPS_DV_Analyzer_CLI_GNU_Prepare\Release\

@@ -31,7 +31,6 @@ cp ../Project/GNU/GUI/ltmain.sh AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/
 cp ../Project/GNU/GUI/Makefile.am AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
 cp ../Project/GNU/GUI/Makefile.in AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
 cp ../Project/GNU/GUI/missing AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
-cp ../Project/GNU/GUI/dvanalyzer-gui.spec  AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
 cp ../Project/GNU/GUI/dvanalyzer-gui.desktop AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
 cp ../Project/GNU/GUI/dvanalyzer-gui.kde3.desktop AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
 cp ../Project/GNU/GUI/dvanalyzer-gui.kde4.desktop AVPS_DV_Analyzer_GUI_GNU_FromSource/Project/GNU/GUI/
@@ -41,21 +40,14 @@ cp ../Project/GNU/GUI/dvanalyzer-gui.kde4.desktop AVPS_DV_Analyzer_GUI_GNU_FromS
 mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Common
 cp -r ../Source/Common/*.h AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Common/
 cp -r ../Source/Common/*.cpp AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Common/
-mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/CLI
-cp -r ../Source/CLI/*.h AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/CLI/
-cp -r ../Source/CLI/*.cpp AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/CLI/
-mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Common
-cp -r ../Source/GUI/Common/*.h AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Common/
-cp -r ../Source/GUI/Common/*.cpp AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Common/
 mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt
 cp -r ../Source/GUI/Qt/*.h AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt/
 cp -r ../Source/GUI/Qt/*.cpp AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt/
-mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt/_Automated/
-cp -r ../Source/GUI/Qt/_Automated/*.h AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt/_Automated/
-cp -r ../Source/GUI/Qt/_Automated/*.cpp AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt/_Automated/
 mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/Menu
 cp -r ../Source/Ressource/Image/Menu/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/Menu/
 cp -r ../Source/Ressource/Image/Menu/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/Menu/
+mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource
+cp -r ../Source/Ressource/*.qrc AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/
 mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/AVPS
 cp -r ../Source/Ressource/Image/AVPS/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/AVPS/
 cp -r ../Source/Ressource/Image/AVPS/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/AVPS/

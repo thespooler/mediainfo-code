@@ -501,6 +501,31 @@ MediaInfoNameSpace::String &Core::XML()
                 Text+=_T("\t\t\t\t<frames_count>")+List(Pos, 0).SubString(_T(": "), _T(" frames"))+_T("</frames_count>\n");
                 Text+=_T("\t\t\t</event>\n");
             }
+
+            //Date
+            if (List(Pos, 0).find(_T("Abs. Time"))==0)
+            {
+                Text+=_T("\t\t<reverse_edl>\n");
+                
+                size_t PosLine=1;
+                while (Pos+PosLine<List.size() && !List(Pos+PosLine, 0).empty())
+                {
+                    Text+=_T("\t\t\t<edit>\n");
+                    Text+=_T("\t\t\t\t<frame_start>")+List(Pos+PosLine, 3).SubString(_T(""), _T(" -")).TrimLeft()+_T("</frame_start>\n");
+                    Text+=_T("\t\t\t\t<frame_end>")+List(Pos+PosLine, 3).SubString(_T("- "), _T("")).TrimLeft()+_T("</frame_end>\n");
+                    Text+=_T("\t\t\t\t<abstime_start>")+List(Pos+PosLine, 0)+_T("</abstime_start>\n");
+                    //Text+=_T("\t\t\t\t<abstime_end>")+List(Pos+PosLine, 0)+_T("</abstime_end>\n");
+                    Text+=_T("\t\t\t\t<timecode_start>")+List(Pos+PosLine, 1).SubString(_T(""), _T(" -"))+_T("</timecode_start>\n");
+                    Text+=_T("\t\t\t\t<timecode_end>")+List(Pos+PosLine, 1).SubString(_T("- "), _T(""))+_T("</timecode_end>\n");
+                    Text+=_T("\t\t\t\t<recdatetime_start>")+List(Pos+PosLine, 2).SubString(_T(""), _T(" -")).TrimRight()+_T("</recdatetime_start>\n");
+                    Text+=_T("\t\t\t\t<recdatetime_end>")+List(Pos+PosLine, 2).SubString(_T("- "), _T("")).TrimRight()+_T("</recdatetime_end>\n");
+                    Text+=_T("\t\t\t</edit>\n");
+
+                    PosLine++;
+                }
+
+                Text+=_T("\t\t</reverse_edl>\n");
+            }
         }
 
         //XML Footer
