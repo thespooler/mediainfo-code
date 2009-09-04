@@ -45,6 +45,7 @@ Core::Core()
 {
     MI=new MediaInfoNameSpace::MediaInfoList;
     MI->Option(_T("ParseSpeed"), _T("1.000"));
+    MI->Option(_T("File_DvDif_Analysis"), _T("1"));
     Errors_Stats_WithHeader=false;
     Errors_Stats_WithFooter=false;
     Errors_Stats_XML=false;
