@@ -42,7 +42,7 @@ std::string Help()
     ToDisplay<<""<<std::endl;
     ToDisplay<<"Options:"<<std::endl;
     ToDisplay<<"--Help, -h         Display this help and exit"<<std::endl;
-    ToDisplay<<"--Version          Display MediaArea DV Analyzer version and exit"<<std::endl;
+    ToDisplay<<"--Version          Display AVPS DV Analyzer version and exit"<<std::endl;
     ToDisplay<<""<<std::endl;
     ToDisplay<<"--Header           With a header (file name, column names...)"<<std::endl;
     ToDisplay<<"--Footer           With a footer (global stats)"<<std::endl;
