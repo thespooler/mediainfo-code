@@ -225,6 +225,7 @@ MediaInfoNameSpace::String &Core::XML()
         timecode_non_consecutive,
         recdate_rectime,
         recdate_rectime_non_consecutive,
+        arb,
         flag_start,
         flag_end,
         error_1,
@@ -247,7 +248,6 @@ MediaInfoNameSpace::String &Core::XML()
         error_8_more,
         error_9_more,
         error_0_more,
-        //arb,
     };
 
     size_t Count=MI->Count_Get();
@@ -361,8 +361,10 @@ MediaInfoNameSpace::String &Core::XML()
                     Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_3-error_1+1)+_T("\" event_type=\"timecode incoherency\">")+List(Pos, error_3_more)+_T("</event>\n");
                 if (List(Pos, error_4)!=_T(" "))
                     Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_4-error_1+1)+_T("\" event_type=\"DIF incoherency\">")+List(Pos, error_4_more)+_T("</event>\n");
-                //if (List(Pos, error_5)!=_T(" "))
-                //    Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_5-error_1+1)+_T("\" event_type=\"\">")+List(Pos, error_5_more)+_T("</event>\n");
+                if (List(Pos, error_5)!=_T(" "))
+                    Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_5-error_1+1)+_T("\" event_type=\"Arbitrary bit incoherency\">")+List(Pos, error_5_more)+_T("</event>\n");
+                if (List(Pos, error_6)!=_T(" "))
+                    Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_6-error_1+1)+_T("\" event_type=\"Stts fluctuation\">")+List(Pos, error_6_more)+_T("</event>\n");
                 
                 Text+=_T("\t\t\t\t</events>\n");
             }
@@ -485,7 +487,7 @@ MediaInfoNameSpace::String &Core::XML()
                     Text+=_T("\t\t<events_summary>\n");
                     events_summary_open=true;
                 }
-                Text+=_T("\t\t\t<event type=\"error\" event_id=\"4\" event_type=\"arbitrary bit incoherency\">\n");
+                Text+=_T("\t\t\t<event type=\"error\" event_id=\"5\" event_type=\"arbitrary bit incoherency\">\n");
                 Text+=_T("\t\t\t\t<frames_count>")+List(Pos, 0).SubString(_T(": "), _T(" frames"))+_T("</frames_count>\n");
                 Text+=_T("\t\t\t</event>\n");
             }
