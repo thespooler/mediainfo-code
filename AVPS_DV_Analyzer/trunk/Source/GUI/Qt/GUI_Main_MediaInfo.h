@@ -1,4 +1,4 @@
-// GUI_Main_Text_MediaInfo - 
+// GUI_Main_MediaInfo - 
 // Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
 //
 // This library is free software; you can redistribute it and/or
@@ -34,16 +34,16 @@ class QEvent;
 //---------------------------------------------------------------------------
 
 //***************************************************************************
-// GUI_Main_Text_MediaInfo
+// GUI_Main_MediaInfo
 //***************************************************************************
 
-class GUI_Main_Text_MediaInfo : public QTextEdit
+class GUI_Main_MediaInfo : public QTextEdit
 {
     Q_OBJECT
 
 public:
     //Constructor/Destructor
-    GUI_Main_Text_MediaInfo(Core* C, QWidget* parent);
+    GUI_Main_MediaInfo(Core* C, QWidget* parent);
 
     //Events
     bool event (QEvent *Event); 

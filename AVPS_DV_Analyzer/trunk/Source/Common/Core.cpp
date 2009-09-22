@@ -132,6 +132,22 @@ void Core::Menu_Option_Preferences_Option (const String& Param, const String& Va
 //***************************************************************************
 
 //---------------------------------------------------------------------------
+String& Core::FileNames ()
+{
+    Text.clear();
+
+    size_t Count=MI->Count_Get();
+    for (size_t Pos=0; Pos<Count; Pos++)
+    {
+        Text+=MI->Get(Pos, Stream_General, 0, _T("CompleteName"));
+        
+        Text+=_T('\n');
+    }
+
+    return Text;
+};
+
+//---------------------------------------------------------------------------
 String& Core::Summary ()
 {
     Text.clear();
@@ -199,6 +215,26 @@ String& Core::ByFrame ()
     }
 
     Common();
+    
+    return Text;
+}
+
+//---------------------------------------------------------------------------
+String Core::ByFrame (size_t Pos)
+{
+    Ztring Text; //Text.clear();
+    
+    Text=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_Begin"))+_T('\n');
+    if (Verbosity>=1.0)
+        Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_10"));
+    else if (Verbosity>=0.5)
+        Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_05"));
+    else if (Verbosity>=0.3)
+        Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_03"));
+
+    for (size_t Pos=0; Pos<Text.size(); Pos++)
+        if (Text[Pos]==_T('&'))
+            Text[Pos]=_T('\n');
     
     return Text;
 }
@@ -345,9 +381,10 @@ MediaInfoNameSpace::String &Core::XML()
                 Text+=_T("\t\t\t\t<events>\n");
                 
                 //Info
-                if (List(Pos, timecode_non_consecutive)!=_T(" "))
+                Ztring A=List(Pos, timecode_non_consecutive);
+                if (List(Pos, timecode_non_consecutive)==_T("N"))
                     Text+=_T("\t\t\t\t\t<event type=\"info\" event_id=\"NTC\">non-consecutive timecode</event>\n");
-                if (List(Pos, recdate_rectime_non_consecutive)!=_T(" "))
+                if (List(Pos, recdate_rectime_non_consecutive)==_T("N"))
                     Text+=_T("\t\t\t\t\t<event type=\"info\" event_id=\"NRT\">non-consecutive recdate/rectime</event>\n");
                 //if (List(Pos, arb_non_consecutive)!=_T(" "))
                 //    Text+=_T("\t\t\t\t\t<event type)="info\" event_id=\"NAB\">non-consecutive arbitrary bit</event>\n");
@@ -569,6 +606,26 @@ void Core::Common_Footer (size_t Pos, size_t Count)
     {
         Text+=_T('\n');
         Text+=_T("Warning, frame count is maybe incoherant (reported by MediaInfo: ")+MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))+_T(")\n");
+    }
+    if (MI->Get(Pos, Stream_General, 0, _T("Fromat"))!=_T("Digital Video"))
+    {
+        //Searching the count of DV audio and of container
+        size_t Count=MI->Count_Get(Pos, Stream_Audio);
+        size_t DV_Count=0;
+        size_t Container_Count=0;
+        for (size_t Audio_Pos=0; Audio_Pos<Count; Audio_Pos++)
+        {
+            if (MI->Get(Pos, Stream_Audio, Audio_Pos, _T("MuxingMode"))==_T("DV"))
+                DV_Count++;
+            else
+                Container_Count++;
+        }
+        
+        if (Container_Count!=DV_Count)
+        {
+            Text+=_T('\n');
+            Text+=_T("Warning, DV has a track config that doesn't match the container (")+Ztring::ToZtring(DV_Count)+_T(" DV audio tracks, ")+Ztring::ToZtring(Container_Count)+_T(" container audio tracks)\n");
+        }
     }
     if (Pos+1<Count)
     {

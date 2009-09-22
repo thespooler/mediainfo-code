@@ -1,4 +1,4 @@
-// GUI_Main_XML - 
+// GUI_Main_ByFrame_Text - 
 // Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
 //
 // This library is free software; you can redistribute it and/or
@@ -23,8 +23,8 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#ifndef GUI_Main_XMLH
-#define GUI_Main_XMLH
+#ifndef GUI_Main_ByFrame_TextH
+#define GUI_Main_ByFrame_TextH
 //---------------------------------------------------------------------------
 
 //---------------------------------------------------------------------------
@@ -34,19 +34,19 @@ class QEvent;
 //---------------------------------------------------------------------------
 
 //***************************************************************************
-// GUI_Main_XML
+// GUI_Main_ByFrame_Text
 //***************************************************************************
 
-class GUI_Main_XML : public QTextEdit
+class GUI_Main_ByFrame_Text : public QTextEdit
 {
     Q_OBJECT
 
 public:
     //Constructor/Destructor
-    GUI_Main_XML(Core* C, QWidget* parent);
+    GUI_Main_ByFrame_Text(Core* C, QWidget* parent);
 
     //Events
-    bool event (QEvent *Event); 
+    bool event (QEvent *Event);
 
 private:
     //Internal

@@ -24,7 +24,8 @@
 #include <algorithm>
 #include <QtGui/QStatusBar>
 #include <QtGui/QTextEdit>
-#include "GUI/Qt/GUI_Main_ByFrame.h"
+#include "GUI/Qt/GUI_Main_ByFrame_Table.h"
+#include "GUI/Qt/GUI_Main_ByFrame_Text.h"
 #include "GUI/Qt/GUI_Main_MediaInfo.h"
 #include "GUI/Qt/GUI_Main_Summary.h"
 #include "GUI/Qt/GUI_Main_XML.h"
@@ -34,6 +35,7 @@
 #include <QtGui/QApplication>
 #include <QtGui/QDropEvent>
 #include <QtGui/QDragEnterEvent>
+#include <QtGui/QDesktopWidget>
 #include "ZenLib/Ztring.h"
 using namespace std;
 //---------------------------------------------------------------------------
@@ -61,7 +63,8 @@ GUI_Main::GUI_Main(Core* _C)
     View=NULL;
     //CenterOnScreen();
     setStatusBar(new QStatusBar());
-    resize(620, 440);
+    move(40, y());
+    resize(QApplication::desktop()->screenGeometry().width()-80, 440);
 
     //Drag n drop
     setAcceptDrops(true);
@@ -101,9 +104,10 @@ void GUI_Main::View_Refresh(view View_New)
         switch (View_Current)
         {
             case View_Summary       : View=new GUI_Main_Text_Summary    (C, this); MustCreate=false; break;
-            case View_ByFrame       : View=new GUI_Main_Text_ByFrame    (C, this); MustCreate=false; break;
-            case View_XML           : View=new GUI_Main_Text_XML        (C, this); MustCreate=false; break;
-            case View_MediaInfo     : View=new GUI_Main_Text_MediaInfo  (C, this); MustCreate=false; break;
+            case View_ByFrame_Table : View=new GUI_Main_ByFrame_Table   (C, this); MustCreate=false; break;
+            case View_ByFrame_Text  : View=new GUI_Main_ByFrame_Text    (C, this); MustCreate=false; break;
+            case View_XML           : View=new GUI_Main_XML             (C, this); MustCreate=false; break;
+            case View_MediaInfo     : View=new GUI_Main_MediaInfo       (C, this); MustCreate=false; break;
             default                 : View=NULL;
         }
 

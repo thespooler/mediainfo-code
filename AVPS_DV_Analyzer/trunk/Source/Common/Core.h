@@ -63,8 +63,10 @@ public:
     void                        Menu_Option_Preferences_Option  (const MediaInfoNameSpace::String &Param, const MediaInfoNameSpace::String &Value);
 
     //Datas
+    MediaInfoNameSpace::String &FileNames();
     MediaInfoNameSpace::String &Summary();
     MediaInfoNameSpace::String &ByFrame();
+    MediaInfoNameSpace::String  ByFrame(size_t Pos);
     MediaInfoNameSpace::String &XML();
     MediaInfoNameSpace::String &MediaInfo();
     bool Errors_Stats_WithHeader;

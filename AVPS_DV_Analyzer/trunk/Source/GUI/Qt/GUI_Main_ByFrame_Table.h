@@ -1,4 +1,4 @@
-// GUI_Main_Text_ByFrame - 
+// GUI_Main_ByFrame_Table - 
 // Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
 //
 // This library is free software; you can redistribute it and/or
@@ -23,32 +23,41 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#ifndef GUI_Main_Text_ByFrameH
-#define GUI_Main_Text_ByFrameH
+#ifndef GUI_Main_ByFrame_TableH
+#define GUI_Main_ByFrame_TableH
 //---------------------------------------------------------------------------
 
 //---------------------------------------------------------------------------
 class Core;
-#include <QtGui/QTextEdit>
+#include <QtGui/QWidget>
 class QEvent;
+class QTableWidget;
+class QComboBox;
 //---------------------------------------------------------------------------
 
 //***************************************************************************
-// GUI_Main_Text_ByFrame
+// GUI_Main_ByFrame_Table
 //***************************************************************************
 
-class GUI_Main_Text_ByFrame : public QTextEdit
+class GUI_Main_ByFrame_Table : public QWidget 
 {
     Q_OBJECT
 
 public:
     //Constructor/Destructor
-    GUI_Main_Text_ByFrame(Core* C, QWidget* parent);
+    GUI_Main_ByFrame_Table(Core* C, QWidget* parent);
 
     //Events
     bool event (QEvent *Event);
 
+private slots:
+    void Files_Changed                  (int Pos); 
+
 private:
+    //GUI
+    QTableWidget   *Table;
+    QComboBox      *Files;
+    
     //Internal
     Core* C;
 };

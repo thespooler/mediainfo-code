@@ -77,7 +77,8 @@ public:
     QAction*        Menu_File_Quit;
     QMenu*          Menu_View;
     QAction*        Menu_View_Summary;
-    QAction*        Menu_View_ByFrame;
+    QAction*        Menu_View_ByFrame_Table;
+    QAction*        Menu_View_ByFrame_Text;
     QAction*        Menu_View_XML;
     QAction*        Menu_View_MediaInfo;
     QActionGroup*   Menu_View_Group;
@@ -101,7 +102,8 @@ public:
     void OnMenu_File_Open_Files                 ();
     void OnMenu_File_Open_Directory             ();
     void OnMenu_View_Summary                    ();
-    void OnMenu_View_ByFrame                    ();
+    void OnMenu_View_ByFrame_Table              ();
+    void OnMenu_View_ByFrame_Text               ();
     void OnMenu_View_XML                        ();
     void OnMenu_View_MediaInfo                  ();
     void OnMenu_Verbosity_03                    ();
@@ -131,7 +133,8 @@ private:
     {
         View_None,
         View_Summary,
-        View_ByFrame,
+        View_ByFrame_Table,
+        View_ByFrame_Text,
         View_XML,
         View_MediaInfo,
     };

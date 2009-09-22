@@ -1,4 +1,4 @@
-// GUI_Main_Text_MediaInfo - 
+// GUI_Main_MediaInfo - 
 // Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
 //
 // This program is free software: you can redistribute it and/or modify
@@ -31,7 +31,7 @@
 //***************************************************************************
 
 //---------------------------------------------------------------------------
-GUI_Main_Text_MediaInfo::GUI_Main_Text_MediaInfo(Core* _C, QWidget* parent)
+GUI_Main_MediaInfo::GUI_Main_MediaInfo(Core* _C, QWidget* parent)
 : QTextEdit(parent)
 {
     //Internal
@@ -47,7 +47,7 @@ GUI_Main_Text_MediaInfo::GUI_Main_Text_MediaInfo(Core* _C, QWidget* parent)
 //***************************************************************************
 
 //---------------------------------------------------------------------------
-bool GUI_Main_Text_MediaInfo::event (QEvent *Event) 
+bool GUI_Main_MediaInfo::event (QEvent *Event) 
 {
     if (Event->type()==QEvent::User)
     {

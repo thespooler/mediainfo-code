@@ -1,4 +1,4 @@
-// GUI_Main_Text_ByFrame - 
+// GUI_Main_ByFrame_Text - 
 // Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
 //
 // This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#include "GUI/Qt/GUI_Main_ByFrame.h"
+#include "GUI/Qt/GUI_Main_ByFrame_Text.h"
 #include "Common/Core.h"
 #include "ZenLib/Ztring.h"
 #include <QtCore/QEvent>
@@ -29,7 +29,7 @@
 //***************************************************************************
 
 //---------------------------------------------------------------------------
-GUI_Main_Text_ByFrame::GUI_Main_Text_ByFrame(Core* _C, QWidget* parent)
+GUI_Main_ByFrame_Text::GUI_Main_ByFrame_Text(Core* _C, QWidget* parent)
 : QTextEdit(parent)
 {
     //Internal
@@ -45,15 +45,13 @@ GUI_Main_Text_ByFrame::GUI_Main_Text_ByFrame(Core* _C, QWidget* parent)
 //***************************************************************************
 
 //---------------------------------------------------------------------------
-bool GUI_Main_Text_ByFrame::event (QEvent *Event) 
+bool GUI_Main_ByFrame_Text::event (QEvent *Event) 
 {
     if (Event->type()==QEvent::User)
     {
         //Showing
         clear();
-        C->Menu_Option_Preferences_Option (_T("Inform"), _T("HTML"));
         setPlainText(QString().fromUtf8(ZenLib::Ztring(C->ByFrame()).To_UTF8().c_str()));
-        C->Menu_Option_Preferences_Option (_T("Inform"), _T(""));
         Event->accept();
         return true;
     }

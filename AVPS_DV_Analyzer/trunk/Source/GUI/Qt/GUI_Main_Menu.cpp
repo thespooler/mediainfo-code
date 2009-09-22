@@ -70,11 +70,17 @@ void GUI_Main::Menu_Create()
     Menu_View_Summary->setStatusTip(tr(""));
     connect(Menu_View_Summary, SIGNAL(triggered()), this, SLOT(OnMenu_View_Summary()));
 
-    Menu_View_ByFrame = new QAction(tr("DV analysis by frame"), this);
-    Menu_View_ByFrame->setShortcut(tr(""));
-    Menu_View_ByFrame->setCheckable(true);
-    Menu_View_ByFrame->setStatusTip(tr(""));
-    connect(Menu_View_ByFrame, SIGNAL(triggered()), this, SLOT(OnMenu_View_ByFrame()));
+    Menu_View_ByFrame_Table = new QAction(tr("DV analysis by frame (Table)"), this);
+    Menu_View_ByFrame_Table->setShortcut(tr(""));
+    Menu_View_ByFrame_Table->setCheckable(true);
+    Menu_View_ByFrame_Table->setStatusTip(tr(""));
+    connect(Menu_View_ByFrame_Table, SIGNAL(triggered()), this, SLOT(OnMenu_View_ByFrame_Table()));
+
+    Menu_View_ByFrame_Text = new QAction(tr("DV analysis by frame (Text)"), this);
+    Menu_View_ByFrame_Text->setShortcut(tr(""));
+    Menu_View_ByFrame_Text->setCheckable(true);
+    Menu_View_ByFrame_Text->setStatusTip(tr(""));
+    connect(Menu_View_ByFrame_Text, SIGNAL(triggered()), this, SLOT(OnMenu_View_ByFrame_Text()));
 
     Menu_View_XML = new QAction(tr("XML output"), this);
     Menu_View_XML->setShortcut(tr(""));
@@ -90,12 +96,14 @@ void GUI_Main::Menu_Create()
 
     Menu_View_Group = new QActionGroup(this);
     Menu_View_Group->addAction(Menu_View_Summary);
-    Menu_View_Group->addAction(Menu_View_ByFrame);
+    Menu_View_Group->addAction(Menu_View_ByFrame_Table);
+    Menu_View_Group->addAction(Menu_View_ByFrame_Text);
     Menu_View_Group->addAction(Menu_View_XML);
     Menu_View_Group->addAction(Menu_View_MediaInfo);
     Menu_View = menuBar()->addMenu(tr("&View"));
     Menu_View->addAction(Menu_View_Summary);
-    Menu_View->addAction(Menu_View_ByFrame);
+    Menu_View->addAction(Menu_View_ByFrame_Table);
+    Menu_View->addAction(Menu_View_ByFrame_Text);
     Menu_View->addAction(Menu_View_XML);
     Menu_View->addAction(Menu_View_MediaInfo);
     Menu_View_Group = new QActionGroup(this);
@@ -228,14 +236,25 @@ void GUI_Main::OnMenu_View_Summary()
 }
 
 //---------------------------------------------------------------------------
-void GUI_Main::OnMenu_View_ByFrame()
+void GUI_Main::OnMenu_View_ByFrame_Table()
+{
+    //Configuring
+    C->Errors_Stats_WithHeader=false;
+    C->Errors_Stats_WithFooter=false;
+
+    //Showing
+    View_Refresh(View_ByFrame_Table);
+}
+
+//---------------------------------------------------------------------------
+void GUI_Main::OnMenu_View_ByFrame_Text()
 {
     //Configuring
     C->Errors_Stats_WithHeader=true;
     C->Errors_Stats_WithFooter=false;
 
     //Showing
-    View_Refresh(View_ByFrame);
+    View_Refresh(View_ByFrame_Text);
 }
 
 //---------------------------------------------------------------------------
@@ -259,7 +278,7 @@ void GUI_Main::OnMenu_Verbosity_03()
     C->Menu_Verbosity_03();
 
     //Showing
-    if (View_Current==View_Summary || View_Current==View_ByFrame || View_Current==View_XML)
+    if (View_Current==View_Summary || View_Current==View_ByFrame_Table || View_Current==View_ByFrame_Text || View_Current==View_XML)
         View_Refresh();
 }
 
@@ -270,7 +289,7 @@ void GUI_Main::OnMenu_Verbosity_05()
     C->Menu_Verbosity_05();
 
     //Showing
-    if (View_Current==View_Summary || View_Current==View_ByFrame || View_Current==View_XML)
+    if (View_Current==View_Summary || View_Current==View_ByFrame_Table || View_Current==View_ByFrame_Text || View_Current==View_XML)
         View_Refresh();
 }
 
@@ -281,7 +300,7 @@ void GUI_Main::OnMenu_Verbosity_10()
     C->Menu_Verbosity_10();
 
     //Showing
-    if (View_Current==View_Summary || View_Current==View_ByFrame || View_Current==View_XML)
+    if (View_Current==View_Summary || View_Current==View_ByFrame_Table || View_Current==View_ByFrame_Text || View_Current==View_XML)
         View_Refresh();
 }
 

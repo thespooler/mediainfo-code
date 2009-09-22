@@ -27,12 +27,12 @@
 
 //---------------------------------------------------------------------------
 const char* NameVersion_HTML() {return
-"<a href=\"http://avpreserve.com/blog/dvanalyzer\">AudioVisual Preservation Solutions, Inc.</a> DV Analyzer 1.3.0"
+"<a href=\"http://avpreserve.com/blog/dvanalyzer\">AudioVisual Preservation Solutions, Inc.</a> DV Analyzer 1.3.1"
 ;}
 
 //---------------------------------------------------------------------------
 const char* NameVersion_Text() {return
-"AudioVisual Preservation Solutions, Inc. DV Analyzer 1.3.0"
+"AudioVisual Preservation Solutions, Inc. DV Analyzer 1.3.1"
 ;}
 
 //***************************************************************************
