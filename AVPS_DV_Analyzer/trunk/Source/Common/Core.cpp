@@ -648,10 +648,10 @@ void Core::Common_Footer (size_t Pos, size_t Count)
                 Container_Count++;
         }
         
-        if (Container_Count!=DV_Count)
+        if (Container_Count<DV_Count)
         {
-            Text+=_T('\n');
-            Text+=_T("Warning, the DV track audio configuration doesn't match the container (")+Ztring::ToZtring(DV_Count)+_T(" DV audio tracks, ")+Ztring::ToZtring(Container_Count)+_T(" container audio tracks)\n");
+            //Text+=_T('\n');
+            //Text+=_T("Warning, the DV track audio configuration doesn't match the container (")+Ztring::ToZtring(DV_Count)+_T(" DV audio tracks, ")+Ztring::ToZtring(Container_Count)+_T(" container audio tracks)\n");
         }
     }
     if (Pos+1<Count)

@@ -54,6 +54,7 @@ class FileDrop;
 class QWidget;
 class QDropEvent;
 class QDragEnterEvent;
+class QTabWidget;
 //---------------------------------------------------------------------------
 
 //***************************************************************************
@@ -71,6 +72,7 @@ public:
  private:
     //Menu - List
     void Menu_Create();
+    QTabWidget*     Central;
     QMenu*          Menu_File;
     QAction*        Menu_File_Open_Files;
     QAction*        Menu_File_Open_Directory;
@@ -124,6 +126,7 @@ public:
     void OnMenu_Help_ByFrame                    ();
     void OnMenu_Help_About                      ();
     void OnMenu_Help_AVPS_Website               ();
+    void OnCurrentChanged                       (int Index);
 
 private:
     //ToolBar - List
@@ -140,12 +143,12 @@ private:
     QWidget* View;
     enum view
     {
-        View_None,
         View_Summary,
         View_ByFrame_Table,
         View_ByFrame_Text,
         View_XML,
         View_MediaInfo,
+        View_None,
     };
     view View_Current;
     bool MustCreate;

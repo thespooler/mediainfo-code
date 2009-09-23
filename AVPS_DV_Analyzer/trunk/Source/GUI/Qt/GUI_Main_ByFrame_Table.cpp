@@ -193,6 +193,8 @@ void GUI_Main_ByFrame_Table::Files_Changed (int Pos)
         Table->setItem(0, 0, new QTableWidgetItem(QString("This file does not appear to include a DV track.")));
     }
 
+    Table->resizeColumnsToContents ();
     Table->resizeRowsToContents();
     Table->resizeColumnsToContents ();
+    Table->resizeRowsToContents();
 }

@@ -27,7 +27,7 @@
 
 //---------------------------------------------------------------------------
 const char* NameVersion_HTML() {return
-"<a href=\"http://avpreserve.com/blog/dvanalyzer\">AudioVisual Preservation Solutions, Inc.</a> DV Analyzer 1.3.1"
+"<a href=\"http://avpreserve.com/dvanalyzer\">AudioVisual Preservation Solutions, Inc.</a> DV Analyzer 1.3.1"
 ;}
 
 //---------------------------------------------------------------------------
@@ -145,12 +145,12 @@ const char* AuthorLicense_Text() {return
 
 //---------------------------------------------------------------------------
 const char* Websites_HTML() {return
-"Developed by <a href=\"http://avpreserve.com/blog/dvanalyzer\">AVPS</a> with support from <a href=\"http://mediainfo.sourceforge.net\">MediaArea.net</a>"
+"Developed by <a href=\"http://avpreserve.com/dvanalyzer\">AVPS</a> with support from <a href=\"http://mediainfo.sourceforge.net\">MediaArea.net</a>"
 ;}
 
 //---------------------------------------------------------------------------
 const char* Websites_Text() {return
-"Developed by AVPS http://avpreserve.com/blog/dvanalyzer\n"
+"Developed by AVPS http://avpreserve.com/dvanalyzer\n"
 "with support from MediaArea.net http://mediainfo.sourceforge.net"
 "\n"
 ;}

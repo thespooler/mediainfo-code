@@ -36,6 +36,7 @@
 #include <QtGui/QDropEvent>
 #include <QtGui/QDragEnterEvent>
 #include <QtGui/QDesktopWidget>
+#include <QtGui/QTabWidget>
 #include "ZenLib/Ztring.h"
 using namespace std;
 //---------------------------------------------------------------------------
@@ -66,6 +67,16 @@ GUI_Main::GUI_Main(Core* _C)
     move(40, y());
     resize(QApplication::desktop()->screenGeometry().width()-80, 440);
 
+    //Central
+    Central=new QTabWidget(this);
+    Central->addTab(new GUI_Main_Text_Summary      (C, this), tr("DV analysis summary"));
+    Central->addTab(new GUI_Main_ByFrame_Table     (C, this), tr("DV analysis by frame (Table)"));
+    Central->addTab(new GUI_Main_ByFrame_Text      (C, this), tr("DV analysis by frame (Text)"));
+    Central->addTab(new GUI_Main_XML               (C, this), tr("XML output"));
+    Central->addTab(new GUI_Main_MediaInfo         (C, this), tr("Technical metadata"));
+    setCentralWidget(Central);
+    connect(Central, SIGNAL(currentChanged (int)), this, SLOT(OnCurrentChanged(int)));
+
     //Drag n drop
     setAcceptDrops(true);
 
@@ -94,6 +105,13 @@ void GUI_Main::View_Refresh(view View_New)
 {
     if (View_New!=View_None)
     {
+        Central->setCurrentIndex(View_New);
+        View=Central->currentWidget();
+    }
+
+    /*
+    if (View_New!=View_None)
+    {
         View_Current=View_New;
         MustCreate=true;
     }
@@ -112,7 +130,7 @@ void GUI_Main::View_Refresh(view View_New)
         }
 
         setCentralWidget(View);
-    }
+    }*/
 
     QEvent event(QEvent::User);
     QApplication::sendEvent(View, &event);
@@ -136,4 +154,18 @@ void GUI_Main::dropEvent(QDropEvent *event)
 
     //Showing
     View_Refresh();
+}
+
+void GUI_Main::OnCurrentChanged (int Index)
+{
+    //Showing
+    switch (Index)
+    {
+        case 0  : OnMenu_View_Summary(); break;
+        case 1  : Menu_View_ByFrame_Table->setChecked(true); OnMenu_View_ByFrame_Table(); break;
+        case 2  : OnMenu_View_ByFrame_Text(); break;
+        case 3  : OnMenu_View_XML(); break;
+        case 4  : OnMenu_View_MediaInfo(); break;
+        default : ;
+    }
 }
