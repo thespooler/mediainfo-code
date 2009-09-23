@@ -161,7 +161,15 @@ String& Core::Summary ()
             Common_Header(Pos, Count);
         }
 
-        if (Verbosity>=0.5)
+        if (MI->Get(Pos, Stream_General, 0, _T("Format"))!=_T("Digital Video")
+         && MI->Get(Pos, Stream_Video, 0, _T("Format"))!=_T("Digital Video")
+         && MI->Get(Pos, Stream_Audio, 0, _T("MuxingMode"))!=_T("DV")
+         && MI->Get(Pos, Stream_Audio, 1, _T("MuxingMode"))!=_T("DV")
+         && MI->Get(Pos, Stream_Audio, 2, _T("MuxingMode"))!=_T("DV")
+         && MI->Get(Pos, Stream_Audio, 3, _T("MuxingMode"))!=_T("DV")
+         && MI->Get(Pos, Stream_Audio, 4, _T("MuxingMode"))!=_T("DV"))
+            Text+=_T("This file does not appear to include a DV track.");
+        else if (Verbosity>=0.5)
             Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_End_05"));
         else if (Verbosity>=0.3)
             Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_End_03"));
@@ -262,6 +270,7 @@ MediaInfoNameSpace::String &Core::XML()
         recdate_rectime,
         recdate_rectime_non_consecutive,
         arb,
+        arb_non_consecutive,
         flag_start,
         flag_end,
         error_1,
@@ -324,6 +333,7 @@ MediaInfoNameSpace::String &Core::XML()
             else
             if (List(Pos, timecode_non_consecutive         )!=_T(" ")
              || List(Pos, recdate_rectime_non_consecutive  )!=_T(" ")
+             || List(Pos, arb_non_consecutive              )!=_T(" ")
              || List(Pos, error_1                          )!=_T(" ")
              || List(Pos, error_2                          )!=_T(" ")
              || List(Pos, error_3                          )!=_T(" ")
@@ -367,6 +377,7 @@ MediaInfoNameSpace::String &Core::XML()
             //Events
             if (List(Pos, timecode_non_consecutive         )!=_T(" ")
              || List(Pos, recdate_rectime_non_consecutive  )!=_T(" ")
+             || List(Pos, arb_non_consecutive              )!=_T(" ")
              || List(Pos, error_1                          )!=_T(" ")
              || List(Pos, error_2                          )!=_T(" ")
              || List(Pos, error_3                          )!=_T(" ")
@@ -381,25 +392,40 @@ MediaInfoNameSpace::String &Core::XML()
                 Text+=_T("\t\t\t\t<events>\n");
                 
                 //Info
-                Ztring A=List(Pos, timecode_non_consecutive);
                 if (List(Pos, timecode_non_consecutive)==_T("N"))
                     Text+=_T("\t\t\t\t\t<event type=\"info\" event_id=\"NTC\">non-consecutive timecode</event>\n");
+                if (List(Pos, timecode_non_consecutive)==_T("R"))
+                    Text+=_T("\t\t\t\t\t<event type=\"info\" event_id=\"RTC\">repeating timecode</event>\n");
                 if (List(Pos, recdate_rectime_non_consecutive)==_T("N"))
                     Text+=_T("\t\t\t\t\t<event type=\"info\" event_id=\"NRT\">non-consecutive recdate/rectime</event>\n");
-                //if (List(Pos, arb_non_consecutive)!=_T(" "))
-                //    Text+=_T("\t\t\t\t\t<event type)="info\" event_id=\"NAB\">non-consecutive arbitrary bit</event>\n");
+                if (List(Pos, recdate_rectime_non_consecutive)==_T("R"))
+                    Text+=_T("\t\t\t\t\t<event type=\"info\" event_id=\"RRT\">repeating recdate/rectime</event>\n");
+                if (List(Pos, arb_non_consecutive)!=_T("N"))
+                    Text+=_T("\t\t\t\t\t<event type=\"info\" event_id=\"NAB\">non-consecutive arbitrary bit</event>\n");
+                if (List(Pos, arb_non_consecutive)!=_T("R"))
+                    Text+=_T("\t\t\t\t\t<event type=\"info\" event_id=\"RAB\">repeating arbitrary bit</event>\n");
                 
                 //Errors
                 if (List(Pos, error_1)!=_T(" "))
+                {
+                    List(Pos, error_1_more).Trim();
+                    List(Pos, error_1_more).FindAndReplace(_T("  "), _T(" "), 0, Ztring_Recursive);
+                    List(Pos, error_1_more).FindAndReplace(_T("( "), _T("("), 0, Ztring_Recursive);
                     Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_1-error_1+1)+_T("\" event_type=\"video error concealment\">")+List(Pos, error_1_more)+_T("</event>\n");
+                }
                 if (List(Pos, error_2)!=_T(" "))
+                {
+                    List(Pos, error_2_more).Trim();
+                    List(Pos, error_2_more).FindAndReplace(_T("  "), _T(" "), 0, Ztring_Recursive);
+                    List(Pos, error_2_more).FindAndReplace(_T("( "), _T("("), 0, Ztring_Recursive);
                     Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_2-error_1+1)+_T("\" event_type=\"audio error code\">")+List(Pos, error_2_more)+_T("</event>\n");
+                }
                 if (List(Pos, error_3)!=_T(" "))
                     Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_3-error_1+1)+_T("\" event_type=\"timecode incoherency\">")+List(Pos, error_3_more)+_T("</event>\n");
                 if (List(Pos, error_4)!=_T(" "))
                     Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_4-error_1+1)+_T("\" event_type=\"DIF incoherency\">")+List(Pos, error_4_more)+_T("</event>\n");
                 if (List(Pos, error_5)!=_T(" "))
-                    Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_5-error_1+1)+_T("\" event_type=\"Arbitrary bit incoherency\">")+List(Pos, error_5_more)+_T("</event>\n");
+                    Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_5-error_1+1)+_T("\" event_type=\"Arbitrary bit inconsistency\">")+List(Pos, error_5_more)+_T("</event>\n");
                 if (List(Pos, error_6)!=_T(" "))
                     Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_6-error_1+1)+_T("\" event_type=\"Stts fluctuation\">")+List(Pos, error_6_more)+_T("</event>\n");
                 
@@ -416,7 +442,7 @@ MediaInfoNameSpace::String &Core::XML()
             if (!MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount_Speed")).empty())
             {
                 Text+=_T("\t\t<frames_count>")+MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount_Speed"))+_T("</frames_count>\n");
-                if (MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount_Speed"))!=MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount")))
+                if (MI->Get(File_Pos, Stream_Video, 0, _T("Format"))==_T("Digital Video") && MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount_Speed"))!=MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount")))
                 {
                     Text+=_T("\t\t<warnings>\n");
                     Text+=_T("\t\t\t<warning code=\"1\">Warning, frame count is maybe incoherant (reported by MediaInfo: ")+MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount"))+_T(")</warning>\n");
@@ -517,14 +543,14 @@ MediaInfoNameSpace::String &Core::XML()
             }
 
             //error_5
-            if (List(Pos, 0).find(_T("Frame count with arbitrary bit incoherency: "))==0)
+            if (List(Pos, 0).find(_T("Frame count with Arbitrary bit inconsistency: "))==0)
             {
                 if (!events_summary_open)
                 {
                     Text+=_T("\t\t<events_summary>\n");
                     events_summary_open=true;
                 }
-                Text+=_T("\t\t\t<event type=\"error\" event_id=\"5\" event_type=\"arbitrary bit incoherency\">\n");
+                Text+=_T("\t\t\t<event type=\"error\" event_id=\"5\" event_type=\"Arbitrary bit inconsistency\">\n");
                 Text+=_T("\t\t\t\t<frames_count>")+List(Pos, 0).SubString(_T(": "), _T(" frames"))+_T("</frames_count>\n");
                 Text+=_T("\t\t\t</event>\n");
             }
@@ -602,13 +628,14 @@ void Core::Common_Header (size_t Pos, size_t)
 //---------------------------------------------------------------------------
 void Core::Common_Footer (size_t Pos, size_t Count)
 {
-    if (!MI->Get(Pos, Stream_Video, 0, _T("FrameCount")).empty() && MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))!=MI->Get(Pos, Stream_Video, 0, _T("FrameCount_Speed")))
+    if (MI->Get(Pos, Stream_Video, 0, _T("Format"))==_T("Digital Video") && !MI->Get(Pos, Stream_Video, 0, _T("FrameCount")).empty() && MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))!=MI->Get(Pos, Stream_Video, 0, _T("FrameCount_Speed")))
     {
         Text+=_T('\n');
         Text+=_T("Warning, frame count is maybe incoherant (reported by MediaInfo: ")+MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))+_T(")\n");
     }
-    if (MI->Get(Pos, Stream_General, 0, _T("Fromat"))!=_T("Digital Video"))
+    if (MI->Get(Pos, Stream_General, 0, _T("Format"))!=_T("Digital Video"))
     {
+        Ztring A=MI->Get(Pos, Stream_General, 0, _T("Format"));
         //Searching the count of DV audio and of container
         size_t Count=MI->Count_Get(Pos, Stream_Audio);
         size_t DV_Count=0;
@@ -624,7 +651,7 @@ void Core::Common_Footer (size_t Pos, size_t Count)
         if (Container_Count!=DV_Count)
         {
             Text+=_T('\n');
-            Text+=_T("Warning, DV has a track config that doesn't match the container (")+Ztring::ToZtring(DV_Count)+_T(" DV audio tracks, ")+Ztring::ToZtring(Container_Count)+_T(" container audio tracks)\n");
+            Text+=_T("Warning, the DV track audio configuration doesn't match the container (")+Ztring::ToZtring(DV_Count)+_T(" DV audio tracks, ")+Ztring::ToZtring(Container_Count)+_T(" container audio tracks)\n");
         }
     }
     if (Pos+1<Count)

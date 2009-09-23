@@ -28,8 +28,10 @@
 #include <QtCore/QUrl>
 #include "GUI/Qt/GUI_About.h"
 #include "ZenLib/ZtringList.h"
+#include "ZenLib/File.h"
 #include "GUI/Qt/GUI_Help_ByFrame.h"
 #include "GUI/Qt/GUI_Help_Summary.h"
+using namespace ZenLib;
 //---------------------------------------------------------------------------
 
 //***************************************************************************
@@ -135,6 +137,30 @@ void GUI_Main::Menu_Create()
     Menu_Verbosity->addAction(Menu_Verbosity_05);
     Menu_Verbosity->addAction(Menu_Verbosity_10);
 
+    //Menu Export
+    Menu_Export_Summary = new QAction(tr("DV analysis summary..."), this);
+    Menu_Export_Summary->setStatusTip(tr(""));
+    connect(Menu_Export_Summary, SIGNAL(triggered()), this, SLOT(OnMenu_Export_Summary()));
+
+    Menu_Export_ByFrame = new QAction(tr("DV analysis by frame..."), this);
+    Menu_Export_ByFrame->setStatusTip(tr(""));
+    connect(Menu_Export_ByFrame, SIGNAL(triggered()), this, SLOT(OnMenu_Export_ByFrame()));
+
+    Menu_Export_XML = new QAction(tr("XML output..."), this);
+    Menu_Export_XML->setStatusTip(tr(""));
+    connect(Menu_Export_XML, SIGNAL(triggered()), this, SLOT(OnMenu_Export_XML()));
+
+    Menu_Export_MediaInfo = new QAction(tr("Technical metadata..."), this);
+    Menu_Export_MediaInfo->setStatusTip(tr(""));
+    connect(Menu_Export_MediaInfo, SIGNAL(triggered()), this, SLOT(OnMenu_Export_MediaInfo()));
+
+    Menu_Export = menuBar()->addMenu(tr("&Export"));
+    Menu_Export->addAction(Menu_Export_Summary);
+    Menu_Export->addAction(Menu_Export_ByFrame);
+    Menu_Export->addAction(Menu_Export_XML);
+    Menu_Export->addAction(Menu_Export_MediaInfo);
+
+    //Menu Debug
     Menu_Debug_MediaInfo_InternalFields = new QAction(tr("Internal fields"), this);
     Menu_Debug_MediaInfo_InternalFields->setShortcut(tr(""));
     Menu_Debug_MediaInfo_InternalFields->setCheckable(true);
@@ -302,6 +328,86 @@ void GUI_Main::OnMenu_Verbosity_10()
     //Showing
     if (View_Current==View_Summary || View_Current==View_ByFrame_Table || View_Current==View_ByFrame_Text || View_Current==View_XML)
         View_Refresh();
+}
+
+//---------------------------------------------------------------------------
+void GUI_Main::OnMenu_Export_Summary()
+{
+    //User interaction
+    QString FileNamesQ = QFileDialog::getSaveFileName(  this,
+                                                        tr("Save Summary..."),
+                                                        tr(""),
+                                                        tr("Text file (*.txt)"));
+    if (FileNamesQ.isEmpty())
+        return;
+
+    //Configuring
+    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    
+    //Running
+    Ztring ToWrite=C->Summary();
+    ToWrite.FindAndReplace(_T("\n"), EOL, 0, Ztring_Recursive);
+    F.Write(ToWrite);
+}
+
+//---------------------------------------------------------------------------
+void GUI_Main::OnMenu_Export_ByFrame()
+{
+    //User interaction
+    QString FileNamesQ = QFileDialog::getSaveFileName(  this,
+                                                        tr("Save By Frame..."),
+                                                        tr(""),
+                                                        tr("Text file (*.txt)"));
+    if (FileNamesQ.isEmpty())
+        return;
+
+    //Configuring
+    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    
+    //Running
+    Ztring ToWrite=C->ByFrame();
+    ToWrite.FindAndReplace(_T("\n"), EOL, 0, Ztring_Recursive);
+    F.Write(ToWrite);
+}
+
+//---------------------------------------------------------------------------
+void GUI_Main::OnMenu_Export_XML()
+{
+    //User interaction
+    QString FileNamesQ = QFileDialog::getSaveFileName(  this,
+                                                        tr("Save XML..."),
+                                                        tr(""),
+                                                        tr("XML file (*.xml)"));
+    if (FileNamesQ.isEmpty())
+        return;
+
+    //Configuring
+    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    
+    //Running
+    Ztring ToWrite=C->XML();
+    ToWrite.FindAndReplace(_T("\n"), EOL, 0, Ztring_Recursive);
+    F.Write(ToWrite);
+}
+
+//---------------------------------------------------------------------------
+void GUI_Main::OnMenu_Export_MediaInfo()
+{
+    //User interaction
+    QString FileNamesQ = QFileDialog::getSaveFileName(  this,
+                                                        tr("Save Technical metadata..."),
+                                                        tr(""),
+                                                        tr("Text file (*.txt)"));
+    if (FileNamesQ.isEmpty())
+        return;
+
+    //Configuring
+    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    
+    //Running
+    Ztring ToWrite=C->MediaInfo();
+    ToWrite.FindAndReplace(_T("\n"), EOL, 0, Ztring_Recursive);
+    F.Write(ToWrite);
 }
 
 //---------------------------------------------------------------------------

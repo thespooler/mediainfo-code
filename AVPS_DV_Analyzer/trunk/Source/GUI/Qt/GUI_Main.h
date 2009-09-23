@@ -87,6 +87,11 @@ public:
     QAction*        Menu_Verbosity_05;
     QAction*        Menu_Verbosity_10;
     QActionGroup*   Menu_Verbosity_Group;
+    QMenu*          Menu_Export;
+    QAction*        Menu_Export_Summary;
+    QAction*        Menu_Export_ByFrame;
+    QAction*        Menu_Export_XML;
+    QAction*        Menu_Export_MediaInfo;
     QMenu*          Menu_Debug;
     QMenu*          Menu_Debug_MediaInfo;
     QAction*        Menu_Debug_MediaInfo_InternalFields;
@@ -109,6 +114,10 @@ public:
     void OnMenu_Verbosity_03                    ();
     void OnMenu_Verbosity_05                    ();
     void OnMenu_Verbosity_10                    ();
+    void OnMenu_Export_Summary                  ();
+    void OnMenu_Export_ByFrame                  ();
+    void OnMenu_Export_XML                      ();
+    void OnMenu_Export_MediaInfo                ();
     void OnMenu_Debug_MediaInfo_InternalFields  ();
     void OnMenu_Debug_MediaInfo_RawFieldsNames  ();
     void OnMenu_Help_Summary                    ();

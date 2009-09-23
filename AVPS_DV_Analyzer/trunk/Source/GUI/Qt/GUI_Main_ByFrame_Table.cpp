@@ -125,25 +125,26 @@ void GUI_Main_ByFrame_Table::Files_Changed (int Pos)
                 case  4 : Value=_T("Rec. Date / Time"); break;
                 case  5 : Value=_T("Rec. Date / Time Info"); break;
                 case  6 : Value=_T("Arb bits"); break;
-                case  7 : Value=_T("Start"); break;
-                case  8 : Value=_T("End"); break;
-                case 19 : Value=_T("Video Error Concealment"); break;
-                case 20 : Value=_T("Audio Errors"); break;
-                case 21 : Value=_T("Timecode Incoherency"); break;
-                case 22 : Value=_T("DIF Incoherency"); break;
-                case 23 : Value=_T("Arbitrary bit Incoherency"); break;
-                case 24 : Value=_T("Stts Fluctuation "); break;
-                case 25 : Value.clear(); break;
+                case  7 : Value=_T("Arb bits Info"); break;
+                case  8 : Value=_T("Start"); break;
+                case  9 : Value=_T("End"); break;
+                case 20 : Value=_T("Video Error Concealment"); break;
+                case 21 : Value=_T("Audio Errors"); break;
+                case 22 : Value=_T("Timecode Incoherency"); break;
+                case 23 : Value=_T("DIF Incoherency"); break;
+                case 24 : Value=_T("Arbitrary bit inconsistency"); break;
+                case 25 : Value=_T("Stts Fluctuation "); break;
                 case 26 : Value.clear(); break;
                 case 27 : Value.clear(); break;
                 case 28 : Value.clear(); break;
+                case 29 : Value.clear(); break;
                 default : ;
             }
             
-            Table->setHorizontalHeaderItem(Data_Pos>8?(Data_Pos-1-10):(Data_Pos-1), new QTableWidgetItem(QString().fromUtf8(Value.To_Local().c_str())));
+            Table->setHorizontalHeaderItem(Data_Pos>9?(Data_Pos-1-10):(Data_Pos-1), new QTableWidgetItem(QString().fromUtf8(Value.To_Local().c_str())));
             
-            if (Data_Pos==8)
-                Data_Pos=18;
+            if (Data_Pos==9)
+                Data_Pos=19;
         }
         for (size_t File_Pos=1; File_Pos<List.size(); File_Pos++)
         {
@@ -154,11 +155,15 @@ void GUI_Main_ByFrame_Table::Files_Changed (int Pos)
                 if (Data_Pos<List[File_Pos].size())
                 {
                     Ztring Value=List[File_Pos][Data_Pos];
+                    Value.Trim();
+                    Value.FindAndReplace(_T("  "), _T(" "), 0, Ztring_Recursive);
+                    Value.FindAndReplace(_T("( "), _T("("), 0, Ztring_Recursive);
 
                     switch (Data_Pos)
                     {
                         case  3 :   //Timecode Info
                         case  5 :   //Rec. Date / Time Info"
+                        case  7 :   //Arb bits Info"
                                     if (Value==_T("R"))
                                         Value=_T("Repeated");
                                     if (Value==_T("N"))
@@ -172,18 +177,22 @@ void GUI_Main_ByFrame_Table::Files_Changed (int Pos)
                 else
                     Item=new QTableWidgetItem(QString());
                 Item->setFlags(Item->flags()&((Qt::ItemFlags)-1-Qt::ItemIsEnabled));
-                Table->setItem(File_Pos-1, Data_Pos>8?(Data_Pos-1-10):(Data_Pos-1), Item);
+                Table->setItem(File_Pos-1, Data_Pos>9?(Data_Pos-1-10):(Data_Pos-1), Item);
 
-                if (Data_Pos==8)
-                    Data_Pos=18;
+                if (Data_Pos==9)
+                    Data_Pos=19;
             }
         }
-        Table->resizeRowsToContents();
-        Table->resizeColumnsToContents ();
     }
     else
     {
-        Table->setRowCount(0);
-        Table->setColumnCount(0);
+        Table->setRowCount(1);
+        Table->setColumnCount(1);
+        Table->setHorizontalHeaderItem(0, new QTableWidgetItem(QString()));
+        Table->setVerticalHeaderItem(0, new QTableWidgetItem(QString()));
+        Table->setItem(0, 0, new QTableWidgetItem(QString("This file does not appear to include a DV track.")));
     }
+
+    Table->resizeRowsToContents();
+    Table->resizeColumnsToContents ();
 }
