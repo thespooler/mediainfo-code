@@ -7,13 +7,7 @@ parse_str(strtok("?"), $Argument);
 if (isset($_COOKIE["LastVisited"]))
  $AlreadyVisited='Y';
 else
- setcookie("LastVisited", time(), time()+2*24*60*60);
-if (!isset($AlreadyVisited))
-{
- //Temp for limiting display
- if (mt_rand(1, 100)>48)
-  $AlreadyVisited='Y';
-}
+ setcookie("LastVisited", time(), time()+60*60);
 ?> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
@@ -40,7 +34,7 @@ if (!isset($AlreadyVisited))
   else
    $URL='http://mediaarea.net/XVIDsf.php';
  }
- echo '<meta http-equiv="refresh" content="'.mt_rand(10, 20).'; URL='.$URL.'" />
+ echo ' <meta http-equiv="refresh" content="3; URL='.$URL.'" />
 ';
 }
 ?>
@@ -51,18 +45,10 @@ if (!isset($AlreadyVisited))
  <link rel="icon" type="image/png" href="/_/Image/Icon.png" />
  <link rel="shortcut icon" type="image/x-icon" href="/_/Image/Icon.ico" />
 </head>
-<?php
-//ChangeLog
-$Title="MediaInfo - ChangeLog";
-if (!isset($AlreadyVisited))
- include $Path."/_/Ad/728_90_Google.html";
-?>
 <br />
 <table border="0" cellpadding="0" cellspacing="0">
  <tbody>
   <tr>
-   <td><?php if (!isset($AlreadyVisited))
-              include $Path."/_/Ad/250_250_Google.html";?></td>
    <td>
 <div id="ShouldShow" class="Invisible">Yes</div>
 <div id="NewVersion">
@@ -79,8 +65,25 @@ else
 ';
 ?>
 </div>
+<div>
+More about 4CC: <a href="http://mediaarea.net/DX50sf.php">DX50</a> <a href="http://mediaarea.net/DIVXsf.php">DIVX</a> <a href="http://mediaarea.net/XVIDsf.php">XVID</a><br />
+</div>
 <div id="ChangeLog"><pre>
 Changes:
+
+Version 0.7.21, 2009-09-04
+--------------
++ More permissive license for redistribution only
+  Redistribution license is intended for companies
+  with legal issues (if they can not deal with GPL)
++ AVC: Support of frame doubling/tripling
++ AVC: Colour description
++ QuickTime: support of external files parsing
+x #2828430, Quicktime: 180 degrees rotation display was not displayed
+x MPEG-TS: whole file was parsed (long)
+x MPEG Video / MPEG-4 Visual: new algorithm for library name detection
+x #2844911, AAC in 3GP: false detection of SBR and PS
+x MKV: some chapters had timecode issues
 
 Version 0.7.20, 2009-07-31
 --------------
@@ -184,10 +187,6 @@ x AVC: freeze with some malformed encoder settings
   </tr>
  </tbody>
 </table>
-<?php
-if (!isset($AlreadyVisited))
- include $Path."/_/Ad/728_90_Google.html";
-?>
 <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
  <tbody>
   <tr>
