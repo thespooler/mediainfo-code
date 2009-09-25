@@ -1,7 +1,7 @@
 <?php
 
 //HTTP
-//header("Cache-Control: no-cache, must-revalidate, max-age=0");
+header("Cache-Control: no-cache, must-revalidate, max-age=0");
 
 //User config
 if (isset($_COOKIE["Language"]))
