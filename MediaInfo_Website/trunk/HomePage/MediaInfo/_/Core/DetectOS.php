@@ -2,7 +2,7 @@
  //OS detection
    if (stristr($_SERVER['HTTP_USER_AGENT'], "macintosh"))
  {
-  $Version='0.7.21'; //Mac OS X
+  $Version='0.7.22'; //Mac OS X
   $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Mac_Universal.dmg';
   $OS='Mac OS X, Universal';
   $Installer=true;
@@ -275,16 +275,16 @@
  }
  else if (stristr($_SERVER['HTTP_USER_AGENT'], "bsd"))
  {
-  $Version='0.7.21'; //Linux
+  $Version='0.7.22'; //Linux
   $Link=$Language.'/Download/Source#AllInOne';
   $OS='Linux';
   $Size='2';
  }
    else
  {
-  $Version='0.7.21'; //Windows.i386
+  $Version='0.7.22'; //Windows.i386
   if (isset($Donated))
-   $Link='http://download.mediaarea.net/MediaInfo/MediaInfo_GUI_'.$Version.'_Windows_i386.exe';
+   $Link='http://download.mediaarea.net/MediaInfo/'.$Version.'/MediaInfo_GUI_'.$Version.'_Windows_i386.exe';
   else if (isset($NewVersionRequested) && $Language=="en" )
   {
    $Link='/Download_Donate';
