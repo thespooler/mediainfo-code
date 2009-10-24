@@ -1,4 +1,4 @@
-// GUI_Main_ByFrame_Table - 
+// GUI_Main_FCPv4 - 
 // // Copyright (C) 2009-2009 AudioVisual Preservation Solutions, info@avpreserve.com
 //
 // This library is free software; you can redistribute it and/or
@@ -23,41 +23,32 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#ifndef GUI_Main_ByFrame_TableH
-#define GUI_Main_ByFrame_TableH
+#ifndef GUI_Main_FCPv4H
+#define GUI_Main_FCPv4H
 //---------------------------------------------------------------------------
 
 //---------------------------------------------------------------------------
 class Core;
-#include <QtGui/QWidget>
+#include <QtGui/QTextEdit>
 class QEvent;
-class QTableWidget;
-class QComboBox;
 //---------------------------------------------------------------------------
 
 //***************************************************************************
-// GUI_Main_ByFrame_Table
+// GUI_Main_FCPv4
 //***************************************************************************
 
-class GUI_Main_ByFrame_Table : public QWidget 
+class GUI_Main_FCPv4 : public QTextEdit
 {
     Q_OBJECT
 
 public:
     //Constructor/Destructor
-    GUI_Main_ByFrame_Table(Core* C, QWidget* parent);
+    GUI_Main_FCPv4(Core* C, QWidget* parent);
 
     //Events
-    bool event (QEvent *Event);
-
-private slots:
-    void Files_Changed                  (int Pos); 
+    bool event (QEvent *Event); 
 
 private:
-    //GUI
-    QTableWidget   *Table;
-    QComboBox      *Files;
-    
     //Internal
     Core* C;
 };

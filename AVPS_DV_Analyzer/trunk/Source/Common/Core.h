@@ -1,5 +1,5 @@
 // Core - Main functions
-// Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
+// // Copyright (C) 2009-2009 AudioVisual Preservation Solutions, info@avpreserve.com
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -68,6 +68,7 @@ public:
     MediaInfoNameSpace::String &ByFrame();
     MediaInfoNameSpace::String  ByFrame(size_t Pos);
     MediaInfoNameSpace::String &XML();
+    MediaInfoNameSpace::String &FCP(size_t Version=4);
     MediaInfoNameSpace::String &MediaInfo();
     bool Errors_Stats_WithHeader;
     bool Errors_Stats_WithFooter;

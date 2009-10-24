@@ -206,6 +206,14 @@
 					>
 				</File>
 				<File
+					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_FCPv4.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_FCPv5.cpp"
+					>
+				</File>
+				<File
 					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_MediaInfo.cpp"
 					>
 				</File>
@@ -246,6 +254,14 @@
 					</File>
 					<File
 						RelativePath=".\_Automated\moc_GUI_Main_ByFrame_Text.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\_Automated\moc_GUI_Main_FCPv4.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\_Automated\moc_GUI_Main_FCPv5.cpp"
 						>
 					</File>
 					<File
@@ -317,6 +333,14 @@
 				</File>
 				<File
 					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_ByFrame_Text.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_FCPv4.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_FCPv5.h"
 					>
 				</File>
 				<File

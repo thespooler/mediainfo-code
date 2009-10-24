@@ -1,4 +1,4 @@
-// GUI_Main_MediaInfo - 
+// GUI_Main_FCPv5 - 
 // // Copyright (C) 2009-2009 AudioVisual Preservation Solutions, info@avpreserve.com
 //
 // This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#include "GUI/Qt/GUI_Main_MediaInfo.h"
+#include "GUI/Qt/GUI_Main_FCPv5.h"
 #include "Common/Core.h"
 #include "ZenLib/Ztring.h"
 #include <QtGui/QLabel>
@@ -31,7 +31,7 @@
 //***************************************************************************
 
 //---------------------------------------------------------------------------
-GUI_Main_MediaInfo::GUI_Main_MediaInfo(Core* _C, QWidget* parent)
+GUI_Main_FCPv5::GUI_Main_FCPv5(Core* _C, QWidget* parent)
 : QTextEdit(parent)
 {
     //Internal
@@ -47,15 +47,13 @@ GUI_Main_MediaInfo::GUI_Main_MediaInfo(Core* _C, QWidget* parent)
 //***************************************************************************
 
 //---------------------------------------------------------------------------
-bool GUI_Main_MediaInfo::event (QEvent *Event) 
+bool GUI_Main_FCPv5::event (QEvent *Event) 
 {
     if (Event->type()==QEvent::User)
     {
         //Showing
         clear();
-        C->Menu_Option_Preferences_Option (_T("Inform"), _T("HTML"));
-        setHtml (QString().fromUtf8(ZenLib::Ztring(C->MediaInfo()).To_UTF8().c_str()));
-        C->Menu_Option_Preferences_Option (_T("Inform"), _T(""));
+        setPlainText(QString().fromUtf8(ZenLib::Ztring(C->FCP(5)).To_UTF8().c_str()));
 
         Event->accept();
         return true;

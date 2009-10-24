@@ -1,5 +1,5 @@
 // Common_About - About strings
-// Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
+// // Copyright (C) 2009-2009 AudioVisual Preservation Solutions, info@avpreserve.com
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by

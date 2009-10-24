@@ -82,22 +82,27 @@ public:
     QAction*        Menu_View_ByFrame_Table;
     QAction*        Menu_View_ByFrame_Text;
     QAction*        Menu_View_XML;
+    QAction*        Menu_View_FCPv4;
+    QAction*        Menu_View_FCPv5;
     QAction*        Menu_View_MediaInfo;
     QActionGroup*   Menu_View_Group;
-    QMenu*          Menu_Verbosity;
-    QAction*        Menu_Verbosity_03;
-    QAction*        Menu_Verbosity_05;
-    QAction*        Menu_Verbosity_10;
-    QActionGroup*   Menu_Verbosity_Group;
+    QActionGroup*   Menu_Options_Verbosity_Group;
     QMenu*          Menu_Export;
     QAction*        Menu_Export_Summary;
     QAction*        Menu_Export_ByFrame;
     QAction*        Menu_Export_XML;
+    QAction*        Menu_Export_FCPv4;
+    QAction*        Menu_Export_FCPv5;
     QAction*        Menu_Export_MediaInfo;
-    QMenu*          Menu_Debug;
-    QMenu*          Menu_Debug_MediaInfo;
-    QAction*        Menu_Debug_MediaInfo_InternalFields;
-    QAction*        Menu_Debug_MediaInfo_RawFieldsNames;
+    QMenu*          Menu_Options;
+    QMenu*          Menu_Options_Verbosity;
+    QAction*        Menu_Options_Verbosity_03;
+    QAction*        Menu_Options_Verbosity_05;
+    QAction*        Menu_Options_Verbosity_10;
+    QMenu*          Menu_Options_MediaInfo;
+    QAction*        Menu_Options_MediaInfo_InternalFields;
+    QAction*        Menu_Options_MediaInfo_RawFieldsNames;
+    QAction*        Menu_Options_ResetFieldSizes;
     QMenu*          Menu_Help;
     QAction*        Menu_Help_Summary;
     QAction*        Menu_Help_ByFrame;
@@ -112,16 +117,21 @@ public:
     void OnMenu_View_ByFrame_Table              ();
     void OnMenu_View_ByFrame_Text               ();
     void OnMenu_View_XML                        ();
+    void OnMenu_View_FCPv4                      ();
+    void OnMenu_View_FCPv5                      ();
     void OnMenu_View_MediaInfo                  ();
-    void OnMenu_Verbosity_03                    ();
-    void OnMenu_Verbosity_05                    ();
-    void OnMenu_Verbosity_10                    ();
+    void OnMenu_Options_Verbosity_03            ();
+    void OnMenu_Options_Verbosity_05            ();
+    void OnMenu_Options_Verbosity_10            ();
     void OnMenu_Export_Summary                  ();
     void OnMenu_Export_ByFrame                  ();
     void OnMenu_Export_XML                      ();
+    void OnMenu_Export_FCPv4                    ();
+    void OnMenu_Export_FCPv5                    ();
     void OnMenu_Export_MediaInfo                ();
-    void OnMenu_Debug_MediaInfo_InternalFields  ();
-    void OnMenu_Debug_MediaInfo_RawFieldsNames  ();
+    void OnMenu_Options_ResetFieldSizes         ();
+    void OnMenu_Options_MediaInfo_InternalFields();
+    void OnMenu_Options_MediaInfo_RawFieldsNames();
     void OnMenu_Help_Summary                    ();
     void OnMenu_Help_ByFrame                    ();
     void OnMenu_Help_About                      ();
@@ -147,6 +157,8 @@ private:
         View_ByFrame_Table,
         View_ByFrame_Text,
         View_XML,
+        View_FCPv4,
+        View_FCPv5,
         View_MediaInfo,
         View_None,
     };

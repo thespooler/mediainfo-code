@@ -1,5 +1,5 @@
 // Common_About - About strings
-// Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
+// Copyright (C) 2009-2009 AudioVisual Preservation Solutions, info@avpreserve.com
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -27,12 +27,12 @@
 
 //---------------------------------------------------------------------------
 const char* NameVersion_HTML() {return
-"<a href=\"http://avpreserve.com/dvanalyzer\">AudioVisual Preservation Solutions, Inc.</a> DV Analyzer 1.3.1"
+"DV Analyzer v.1.3.2 by <a href=\"http://avpreserve.com/dvanalyzer\">AudioVisual Preservation Solutions, Inc.</a>"
 ;}
 
 //---------------------------------------------------------------------------
 const char* NameVersion_Text() {return
-"AudioVisual Preservation Solutions, Inc. DV Analyzer 1.3.1"
+"DV Analyzer v.1.3.2 by AudioVisual Preservation Solutions, Inc. www.avpreserve.com"
 ;}
 
 //***************************************************************************

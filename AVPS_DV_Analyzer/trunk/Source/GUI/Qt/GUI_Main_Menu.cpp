@@ -25,7 +25,9 @@
 #include <QtGui/QToolBar>
 #include <QtGui/QFileDialog>
 #include <QtGui/QDesktopServices>
+#include <QtGui/QApplication>
 #include <QtCore/QUrl>
+#include <QtCore/QEvent>
 #include "GUI/Qt/GUI_About.h"
 #include "ZenLib/ZtringList.h"
 #include "ZenLib/File.h"
@@ -45,6 +47,7 @@ using namespace ZenLib;
 //---------------------------------------------------------------------------
 void GUI_Main::Menu_Create()
 {
+    //File
     Menu_File_Open_Files = new QAction(QIcon(":/Image/Menu/File_Open_File.png"), tr("Open file(s)..."), this);
     Menu_File_Open_Files->setShortcut(tr("Ctrl+F"));
     Menu_File_Open_Files->setStatusTip(tr("Open file(s)"));
@@ -66,6 +69,7 @@ void GUI_Main::Menu_Create()
     Menu_File->addSeparator();
     Menu_File->addAction(Menu_File_Quit);
 
+    //View
     Menu_View_Summary = new QAction(tr("DV analysis summary"), this);
     Menu_View_Summary->setShortcut(tr(""));
     Menu_View_Summary->setCheckable(true);
@@ -90,6 +94,18 @@ void GUI_Main::Menu_Create()
     Menu_View_XML->setStatusTip(tr(""));
     connect(Menu_View_XML, SIGNAL(triggered()), this, SLOT(OnMenu_View_XML()));
 
+    Menu_View_FCPv4 = new QAction(tr("FCPv4 output"), this);
+    Menu_View_FCPv4->setShortcut(tr(""));
+    Menu_View_FCPv4->setCheckable(true);
+    Menu_View_FCPv4->setStatusTip(tr(""));
+    connect(Menu_View_FCPv4, SIGNAL(triggered()), this, SLOT(OnMenu_View_FCPv4()));
+
+    Menu_View_FCPv5 = new QAction(tr("FCPv5 output"), this);
+    Menu_View_FCPv5->setShortcut(tr(""));
+    Menu_View_FCPv5->setCheckable(true);
+    Menu_View_FCPv5->setStatusTip(tr(""));
+    connect(Menu_View_FCPv5, SIGNAL(triggered()), this, SLOT(OnMenu_View_FCPv5()));
+
     Menu_View_MediaInfo = new QAction(tr("Technical metadata"), this);
     Menu_View_MediaInfo->setShortcut(tr(""));
     Menu_View_MediaInfo->setCheckable(true);
@@ -101,41 +117,18 @@ void GUI_Main::Menu_Create()
     Menu_View_Group->addAction(Menu_View_ByFrame_Table);
     Menu_View_Group->addAction(Menu_View_ByFrame_Text);
     Menu_View_Group->addAction(Menu_View_XML);
+    Menu_View_Group->addAction(Menu_View_FCPv4);
+    Menu_View_Group->addAction(Menu_View_FCPv5);
     Menu_View_Group->addAction(Menu_View_MediaInfo);
     Menu_View = menuBar()->addMenu(tr("&View"));
     Menu_View->addAction(Menu_View_Summary);
     Menu_View->addAction(Menu_View_ByFrame_Table);
     Menu_View->addAction(Menu_View_ByFrame_Text);
     Menu_View->addAction(Menu_View_XML);
+    Menu_View->addAction(Menu_View_FCPv4);
+    Menu_View->addAction(Menu_View_FCPv5);
     Menu_View->addAction(Menu_View_MediaInfo);
     Menu_View_Group = new QActionGroup(this);
-
-    Menu_Verbosity_03 = new QAction(tr("Errors only"), this);
-    Menu_Verbosity_03->setShortcut(tr(""));
-    Menu_Verbosity_03->setCheckable(true);
-    Menu_Verbosity_03->setStatusTip(tr("DV analysis by frame, Errors only"));
-    connect(Menu_Verbosity_03, SIGNAL(triggered()), this, SLOT(OnMenu_Verbosity_03()));
-
-    Menu_Verbosity_05 = new QAction(tr("Errors and information"), this);
-    Menu_Verbosity_05->setShortcut(tr(""));
-    Menu_Verbosity_05->setCheckable(true);
-    Menu_Verbosity_05->setStatusTip(tr("DV analysis by frame, Errors and information"));
-    connect(Menu_Verbosity_05, SIGNAL(triggered()), this, SLOT(OnMenu_Verbosity_05()));
-
-    Menu_Verbosity_10 = new QAction(tr("All"), this);
-    Menu_Verbosity_10->setShortcut(tr(""));
-    Menu_Verbosity_10->setCheckable(true);
-    Menu_Verbosity_10->setStatusTip(tr("DV analysis by frame, All"));
-    connect(Menu_Verbosity_10, SIGNAL(triggered()), this, SLOT(OnMenu_Verbosity_10()));
-
-    Menu_Verbosity_Group = new QActionGroup(this);
-    Menu_Verbosity_Group->addAction(Menu_Verbosity_03);
-    Menu_Verbosity_Group->addAction(Menu_Verbosity_05);
-    Menu_Verbosity_Group->addAction(Menu_Verbosity_10);
-    Menu_Verbosity = menuBar()->addMenu(tr("V&erbosity"));
-    Menu_Verbosity->addAction(Menu_Verbosity_03);
-    Menu_Verbosity->addAction(Menu_Verbosity_05);
-    Menu_Verbosity->addAction(Menu_Verbosity_10);
 
     //Menu Export
     Menu_Export_Summary = new QAction(tr("DV analysis summary..."), this);
@@ -150,6 +143,14 @@ void GUI_Main::Menu_Create()
     Menu_Export_XML->setStatusTip(tr(""));
     connect(Menu_Export_XML, SIGNAL(triggered()), this, SLOT(OnMenu_Export_XML()));
 
+    Menu_Export_FCPv4 = new QAction(tr("Final Cut Pro XML v4 output..."), this);
+    Menu_Export_FCPv4->setStatusTip(tr(""));
+    connect(Menu_Export_FCPv4, SIGNAL(triggered()), this, SLOT(OnMenu_Export_FCPv4()));
+
+    Menu_Export_FCPv5 = new QAction(tr("Final Cut Pro XML v5 output..."), this);
+    Menu_Export_FCPv5->setStatusTip(tr(""));
+    connect(Menu_Export_FCPv5, SIGNAL(triggered()), this, SLOT(OnMenu_Export_FCPv5()));
+
     Menu_Export_MediaInfo = new QAction(tr("Technical metadata..."), this);
     Menu_Export_MediaInfo->setStatusTip(tr(""));
     connect(Menu_Export_MediaInfo, SIGNAL(triggered()), this, SLOT(OnMenu_Export_MediaInfo()));
@@ -158,26 +159,62 @@ void GUI_Main::Menu_Create()
     Menu_Export->addAction(Menu_Export_Summary);
     Menu_Export->addAction(Menu_Export_ByFrame);
     Menu_Export->addAction(Menu_Export_XML);
+    Menu_Export->addAction(Menu_Export_FCPv4);
+    Menu_Export->addAction(Menu_Export_FCPv5);
     Menu_Export->addAction(Menu_Export_MediaInfo);
 
-    //Menu Debug
-    Menu_Debug_MediaInfo_InternalFields = new QAction(tr("Internal fields"), this);
-    Menu_Debug_MediaInfo_InternalFields->setShortcut(tr(""));
-    Menu_Debug_MediaInfo_InternalFields->setCheckable(true);
-    Menu_Debug_MediaInfo_InternalFields->setStatusTip(tr(""));
-    connect(Menu_Debug_MediaInfo_InternalFields, SIGNAL(triggered()), this, SLOT(OnMenu_Debug_MediaInfo_InternalFields()));
+    //Options
+    Menu_Options_Verbosity_03 = new QAction(tr("Errors only"), this);
+    Menu_Options_Verbosity_03->setShortcut(tr(""));
+    Menu_Options_Verbosity_03->setCheckable(true);
+    Menu_Options_Verbosity_03->setStatusTip(tr("DV analysis by frame, Errors only"));
+    connect(Menu_Options_Verbosity_03, SIGNAL(triggered()), this, SLOT(OnMenu_Options_Verbosity_03()));
 
-    Menu_Debug_MediaInfo_RawFieldsNames = new QAction(tr("Raw field names"), this);
-    Menu_Debug_MediaInfo_RawFieldsNames->setShortcut(tr(""));
-    Menu_Debug_MediaInfo_RawFieldsNames->setCheckable(true);
-    Menu_Debug_MediaInfo_RawFieldsNames->setStatusTip(tr(""));
-    connect(Menu_Debug_MediaInfo_RawFieldsNames, SIGNAL(triggered()), this, SLOT(OnMenu_Debug_MediaInfo_RawFieldsNames()));
+    Menu_Options_Verbosity_05 = new QAction(tr("Errors and information"), this);
+    Menu_Options_Verbosity_05->setShortcut(tr(""));
+    Menu_Options_Verbosity_05->setCheckable(true);
+    Menu_Options_Verbosity_05->setStatusTip(tr("DV analysis by frame, Errors and information"));
+    connect(Menu_Options_Verbosity_05, SIGNAL(triggered()), this, SLOT(OnMenu_Options_Verbosity_05()));
 
-    Menu_Debug=menuBar()->addMenu(tr("&Debug"));
-    Menu_Debug_MediaInfo = Menu_Debug->addMenu(tr("&Technical Metadata"));
-    Menu_Debug_MediaInfo->addAction(Menu_Debug_MediaInfo_InternalFields);
-    Menu_Debug_MediaInfo->addAction(Menu_Debug_MediaInfo_RawFieldsNames);
+    Menu_Options_Verbosity_10 = new QAction(tr("All"), this);
+    Menu_Options_Verbosity_10->setShortcut(tr(""));
+    Menu_Options_Verbosity_10->setCheckable(true);
+    Menu_Options_Verbosity_10->setStatusTip(tr("DV analysis by frame, All"));
+    connect(Menu_Options_Verbosity_10, SIGNAL(triggered()), this, SLOT(OnMenu_Options_Verbosity_10()));
 
+    Menu_Options_Verbosity_Group = new QActionGroup(this);
+    Menu_Options_Verbosity_Group->addAction(Menu_Options_Verbosity_03);
+    Menu_Options_Verbosity_Group->addAction(Menu_Options_Verbosity_05);
+    Menu_Options_Verbosity_Group->addAction(Menu_Options_Verbosity_10);
+
+    Menu_Options_MediaInfo_InternalFields = new QAction(tr("Internal fields"), this);
+    Menu_Options_MediaInfo_InternalFields->setShortcut(tr(""));
+    Menu_Options_MediaInfo_InternalFields->setCheckable(true);
+    Menu_Options_MediaInfo_InternalFields->setStatusTip(tr(""));
+    connect(Menu_Options_MediaInfo_InternalFields, SIGNAL(triggered()), this, SLOT(OnMenu_Options_MediaInfo_InternalFields()));
+
+    Menu_Options_MediaInfo_RawFieldsNames = new QAction(tr("Raw field names"), this);
+    Menu_Options_MediaInfo_RawFieldsNames->setShortcut(tr(""));
+    Menu_Options_MediaInfo_RawFieldsNames->setCheckable(true);
+    Menu_Options_MediaInfo_RawFieldsNames->setStatusTip(tr(""));
+    connect(Menu_Options_MediaInfo_RawFieldsNames, SIGNAL(triggered()), this, SLOT(OnMenu_Options_MediaInfo_RawFieldsNames()));
+
+    Menu_Options_ResetFieldSizes = new QAction(tr("Reset field sizes"), this);
+    Menu_Options_ResetFieldSizes->setStatusTip(tr(""));
+    connect(Menu_Options_ResetFieldSizes, SIGNAL(triggered()), this, SLOT(OnMenu_Options_ResetFieldSizes()));
+    Menu_Options_ResetFieldSizes->setVisible(false);
+
+    Menu_Options=menuBar()->addMenu(tr("&Options"));
+    Menu_Options_Verbosity=Menu_Options->addMenu(tr("&Verbosity (frame reporting)"));
+    Menu_Options_Verbosity->addAction(Menu_Options_Verbosity_03);
+    Menu_Options_Verbosity->addAction(Menu_Options_Verbosity_05);
+    Menu_Options_Verbosity->addAction(Menu_Options_Verbosity_10);
+    Menu_Options_MediaInfo=Menu_Options->addMenu(tr("&Technical Metadata"));
+    Menu_Options_MediaInfo->addAction(Menu_Options_MediaInfo_InternalFields);
+    Menu_Options_MediaInfo->addAction(Menu_Options_MediaInfo_RawFieldsNames);
+    Menu_Options->addAction(Menu_Options_ResetFieldSizes);
+
+    //Menu Help
     Menu_Help_Summary = new QAction(tr("\"Summary\" format"), this);
     Menu_Help_Summary->setShortcut(tr(""));
     Menu_Help_Summary->setStatusTip(tr(""));
@@ -225,7 +262,12 @@ void GUI_Main::OnMenu_File_Open_Files()
     //Configuring
     C->Menu_File_Open_Files_Begin();
     for (size_t Pos=0; Pos<FileNames.size(); Pos++)
+    {
+        #ifdef __WINDOWS__
+            FileNames[Pos].FindAndReplace(Ztring("/"), Ztring("\\"), 0, Ztring_Recursive);
+        #endif //__WINDOWS__
         C->Menu_File_Open_Files_Continue(FileNames[Pos]);
+    }
 
     //Showing
     View_Refresh();
@@ -244,7 +286,11 @@ void GUI_Main::OnMenu_File_Open_Directory()
 
     //Configuring
     C->Menu_File_Open_Files_Begin();
-    C->Menu_File_Open_Files_Continue(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    Ztring FileName; FileName.From_UTF8(FileNamesQ.toUtf8().data());
+    #ifdef __WINDOWS__
+        FileName.FindAndReplace(Ztring("/"), Ztring("\\"), 0, Ztring_Recursive);
+    #endif //__WINDOWS__
+    C->Menu_File_Open_Files_Continue(FileName);
 
     //Showing
     View_Refresh();
@@ -298,7 +344,21 @@ void GUI_Main::OnMenu_View_XML()
 }
 
 //---------------------------------------------------------------------------
-void GUI_Main::OnMenu_Verbosity_03()
+void GUI_Main::OnMenu_View_FCPv4()
+{
+    //Showing
+    View_Refresh(View_FCPv4);
+}
+
+//---------------------------------------------------------------------------
+void GUI_Main::OnMenu_View_FCPv5()
+{
+    //Showing
+    View_Refresh(View_FCPv5);
+}
+
+//---------------------------------------------------------------------------
+void GUI_Main::OnMenu_Options_Verbosity_03()
 {
     //Configuring
     C->Menu_Verbosity_03();
@@ -309,7 +369,7 @@ void GUI_Main::OnMenu_Verbosity_03()
 }
 
 //---------------------------------------------------------------------------
-void GUI_Main::OnMenu_Verbosity_05()
+void GUI_Main::OnMenu_Options_Verbosity_05()
 {
     //Configuring
     C->Menu_Verbosity_05();
@@ -320,7 +380,7 @@ void GUI_Main::OnMenu_Verbosity_05()
 }
 
 //---------------------------------------------------------------------------
-void GUI_Main::OnMenu_Verbosity_10()
+void GUI_Main::OnMenu_Options_Verbosity_10()
 {
     //Configuring
     C->Menu_Verbosity_10();
@@ -391,6 +451,46 @@ void GUI_Main::OnMenu_Export_XML()
 }
 
 //---------------------------------------------------------------------------
+void GUI_Main::OnMenu_Export_FCPv4()
+{
+    //User interaction
+    QString FileNamesQ = QFileDialog::getSaveFileName(  this,
+                                                        tr("Save Final Cut Pro XML v4..."),
+                                                        tr(""),
+                                                        tr("XML file (*.xml)"));
+    if (FileNamesQ.isEmpty())
+        return;
+
+    //Configuring
+    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    
+    //Running
+    Ztring ToWrite=C->FCP(4);
+    ToWrite.FindAndReplace(_T("\n"), EOL, 0, Ztring_Recursive);
+    F.Write(ToWrite);
+}
+
+//---------------------------------------------------------------------------
+void GUI_Main::OnMenu_Export_FCPv5()
+{
+    //User interaction
+    QString FileNamesQ = QFileDialog::getSaveFileName(  this,
+                                                        tr("Save Final Cut Pro XML v5..."),
+                                                        tr(""),
+                                                        tr("XML file (*.xml)"));
+    if (FileNamesQ.isEmpty())
+        return;
+
+    //Configuring
+    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    
+    //Running
+    Ztring ToWrite=C->FCP(5);
+    ToWrite.FindAndReplace(_T("\n"), EOL, 0, Ztring_Recursive);
+    F.Write(ToWrite);
+}
+
+//---------------------------------------------------------------------------
 void GUI_Main::OnMenu_Export_MediaInfo()
 {
     //User interaction
@@ -411,10 +511,17 @@ void GUI_Main::OnMenu_Export_MediaInfo()
 }
 
 //---------------------------------------------------------------------------
-void GUI_Main::OnMenu_Debug_MediaInfo_InternalFields()
+void GUI_Main::OnMenu_Options_ResetFieldSizes()
+{
+    QEvent event((QEvent::Type)(QEvent::User+1));
+    QApplication::sendEvent(View, &event);
+}
+
+//---------------------------------------------------------------------------
+void GUI_Main::OnMenu_Options_MediaInfo_InternalFields()
 {
     //Configuring
-    C->Menu_Option_Preferences_Option(_T("Complete"), Menu_Debug_MediaInfo_InternalFields->isChecked()?_T("1"):_T("0"));
+    C->Menu_Option_Preferences_Option(_T("Complete"), Menu_Options_MediaInfo_InternalFields->isChecked()?_T("1"):_T("0"));
 
     //Showing
     if (View_Current==View_MediaInfo)
@@ -422,10 +529,10 @@ void GUI_Main::OnMenu_Debug_MediaInfo_InternalFields()
 }
 
 //---------------------------------------------------------------------------
-void GUI_Main::OnMenu_Debug_MediaInfo_RawFieldsNames()
+void GUI_Main::OnMenu_Options_MediaInfo_RawFieldsNames()
 {
     //Configuring
-    C->Menu_Option_Preferences_Option(_T("Language"), Menu_Debug_MediaInfo_RawFieldsNames->isChecked()?_T("raw"):_T(""));
+    C->Menu_Option_Preferences_Option(_T("Language"), Menu_Options_MediaInfo_RawFieldsNames->isChecked()?_T("raw"):_T(""));
 
     //Showing
     if (View_Current==View_MediaInfo)

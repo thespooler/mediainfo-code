@@ -29,6 +29,8 @@
 #include "GUI/Qt/GUI_Main_MediaInfo.h"
 #include "GUI/Qt/GUI_Main_Summary.h"
 #include "GUI/Qt/GUI_Main_XML.h"
+#include "GUI/Qt/GUI_Main_FCPv4.h"
+#include "GUI/Qt/GUI_Main_FCPv5.h"
 #include <QtCore/QEvent>
 #include <QtCore/QMimeData>
 #include <QtCore/QUrl>
@@ -39,6 +41,7 @@
 #include <QtGui/QTabWidget>
 #include "ZenLib/Ztring.h"
 using namespace std;
+using namespace ZenLib;
 //---------------------------------------------------------------------------
 
 //***************************************************************************
@@ -72,7 +75,9 @@ GUI_Main::GUI_Main(Core* _C)
     Central->addTab(new GUI_Main_Text_Summary      (C, this), tr("DV analysis summary"));
     Central->addTab(new GUI_Main_ByFrame_Table     (C, this), tr("DV analysis by frame (Table)"));
     Central->addTab(new GUI_Main_ByFrame_Text      (C, this), tr("DV analysis by frame (Text)"));
-    Central->addTab(new GUI_Main_XML               (C, this), tr("XML output"));
+    Central->addTab(new GUI_Main_XML               (C, this), tr("XML"));
+    Central->addTab(new GUI_Main_FCPv4             (C, this), tr("Final Cut Pro XML v4"));
+    Central->addTab(new GUI_Main_FCPv5             (C, this), tr("Final Cut Pro XML v5"));
     Central->addTab(new GUI_Main_MediaInfo         (C, this), tr("Technical metadata"));
     setCentralWidget(Central);
     connect(Central, SIGNAL(currentChanged (int)), this, SLOT(OnCurrentChanged(int)));
@@ -83,8 +88,8 @@ GUI_Main::GUI_Main(Core* _C)
     //Defaults
     Menu_View_Summary->setChecked(true);
     emit OnMenu_View_Summary();
-    Menu_Verbosity_05->setChecked(true);
-    emit OnMenu_Verbosity_05();
+    Menu_Options_Verbosity_05->setChecked(true);
+    emit OnMenu_Options_Verbosity_05();
 
     //GUI
     setWindowTitle("DV Analyzer - AudioVisual Preservation Solutions, Inc.");
@@ -148,8 +153,14 @@ void GUI_Main::dropEvent(QDropEvent *event)
     const QMimeData* Data=event->mimeData ();
     if (event->mimeData()->hasUrls())
     {
-         foreach (QUrl url, event->mimeData()->urls())
-            C->Menu_File_Open_Files_Continue(ZenLib::Ztring().From_UTF8(url.toLocalFile().toUtf8().data()));
+        foreach (QUrl url, event->mimeData()->urls())
+        {
+            Ztring FileName; FileName.From_UTF8(url.toLocalFile().toUtf8().data());
+            #ifdef __WINDOWS__
+                FileName.FindAndReplace(Ztring("/"), Ztring("\\"), 0, Ztring_Recursive);
+            #endif //__WINDOWS__
+            C->Menu_File_Open_Files_Continue(FileName);
+        }
     }
 
     //Showing
@@ -161,11 +172,21 @@ void GUI_Main::OnCurrentChanged (int Index)
     //Showing
     switch (Index)
     {
-        case 0  : OnMenu_View_Summary(); break;
+        case 0  : Menu_View_Summary->setChecked(true); OnMenu_View_Summary(); break;
         case 1  : Menu_View_ByFrame_Table->setChecked(true); OnMenu_View_ByFrame_Table(); break;
-        case 2  : OnMenu_View_ByFrame_Text(); break;
-        case 3  : OnMenu_View_XML(); break;
-        case 4  : OnMenu_View_MediaInfo(); break;
+        case 2  : Menu_View_ByFrame_Text->setChecked(true); OnMenu_View_ByFrame_Text(); break;
+        case 3  : Menu_View_XML->setChecked(true); OnMenu_View_XML(); break;
+        case 4  : Menu_View_FCPv4->setChecked(true); OnMenu_View_FCPv4(); break;
+        case 5  : Menu_View_FCPv5->setChecked(true); OnMenu_View_FCPv5(); break;
+        case 6  : Menu_View_MediaInfo->setChecked(true); OnMenu_View_MediaInfo(); break;
         default : ;
     }
+
+    //Options
+    switch (Index)
+    {
+        case 1                              : Menu_Options_ResetFieldSizes->setVisible(true); break;
+        default                             : Menu_Options_ResetFieldSizes->setVisible(false);
+    }
+
 }

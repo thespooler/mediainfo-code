@@ -148,6 +148,8 @@ dnl if test "$with_qt" != "no"; then
 	$MOC ../../../Source/GUI/Qt/GUI_Main.h -o_Automated/moc_GUI_Main.cpp
 	$MOC ../../../Source/GUI/Qt/GUI_Main_ByFrame_Table.h -o_Automated/moc_GUI_Main_ByFrame_Table.cpp
 	$MOC ../../../Source/GUI/Qt/GUI_Main_ByFrame_Text.h -o_Automated/moc_GUI_Main_ByFrame_Text.cpp
+	$MOC ../../../Source/GUI/Qt/GUI_Main_FCPv4.h -o_Automated/moc_GUI_Main_FCPv4.cpp
+	$MOC ../../../Source/GUI/Qt/GUI_Main_FCPv5.h -o_Automated/moc_GUI_Main_FCPv5.cpp
 	$MOC ../../../Source/GUI/Qt/GUI_Main_MediaInfo.h -o_Automated/moc_GUI_Main_MediaInfo.cpp
 	$MOC ../../../Source/GUI/Qt/GUI_Main_Summary.h -o_Automated/moc_GUI_Main_Summary.cpp
 	$MOC ../../../Source/GUI/Qt/GUI_Main_XML.h -o_Automated/moc_GUI_Main_XML.cpp

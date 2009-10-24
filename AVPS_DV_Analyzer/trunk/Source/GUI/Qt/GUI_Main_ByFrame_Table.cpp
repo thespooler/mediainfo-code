@@ -1,5 +1,5 @@
 // GUI_Main_ByFrame_Table - 
-// Copyright (C) 2009-2009 Jerome Martinez, Zen@MediaArea.net
+// // Copyright (C) 2009-2009 AudioVisual Preservation Solutions, info@avpreserve.com
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -85,6 +85,15 @@ bool GUI_Main_ByFrame_Table::event (QEvent *Event)
         return true;
 
         Files_Changed(0);
+    }
+
+    if (Event->type()==(QEvent::Type)(QEvent::User+1))
+    {
+        Table->resizeColumnsToContents();
+        Table->resizeRowsToContents();
+
+        Event->accept();
+        return true;
     }
 
     return QWidget::event(Event);
