@@ -4,6 +4,12 @@ Notes:
 - Deleted
 x Correction
 
+Version 1.3.3, 2009-
+--------------
++ Final Cut Pro XML (v4 and v5) output
++ Menu bar reorganization
+x NAB/RAB wrongly reported
+
 Version 1.3.2, 2009-09-23
 --------------
 + Arb bits: more details
