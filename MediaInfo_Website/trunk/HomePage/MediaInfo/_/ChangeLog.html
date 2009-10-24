@@ -4,7 +4,7 @@
 strtok($_SERVER["REQUEST_URI"], "?");
 parse_str(strtok("?"), $Argument);
 //LastVisited
-if (isset($_COOKIE["LastVisited"]))
+if (isset($_COOKIE["LastVisited"]) || strpos($_SERVER["REQUEST_URI"], "?")===FALSE)
  $AlreadyVisited='Y';
 else
  setcookie("LastVisited", time(), time()+60*60);
@@ -70,6 +70,30 @@ More about 4CC: <a href="http://mediaarea.net/DX50sf.php">DX50</a> <a href="http
 </div>
 <div id="ChangeLog"><pre>
 Changes:
+
+Version 0.7.23, 2009-10-16
+--------------
++ OGG: more details for MPEG-4 Visual, MPEG Audio and AC-3
++ MPEG-4: more information for MPEG Audio streams
++ MPEG-4: more information for ADTS streams
++ MPEG-TS: more information for ADTS streams
++ QCP (RFC 3625) format support
++ Refactoring of parsers, for more speed and less false-positives
++ WAV: INFO chunk parsing
+x Blu-ray directory analyzing was broken
+x VC-1: some streams were not detected
+x AMR in MP4: Resolution set to 13 or 14 bits instead of default 16 bits
+x Help, Known parameters was hanging up
+x AVC: frame rate was wrong for progressive streams with frame doubling
+x MPEG-TS: crash while parsing some streams with specific ATSC event_id
+
+Version 0.7.22, 2009-09-25
+--------------
++ MPEG-TS: KLV data detection
+x #2859504, 3GPP: some files were not detected
+x Some corrections about AVI Display Aspect Ratio
+x QuickTime: external files were completely parsed, too long
+x DV: Support of 4 mono channel configuration
 
 Version 0.7.21, 2009-09-04
 --------------
