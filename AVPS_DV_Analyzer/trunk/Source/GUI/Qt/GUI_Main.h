@@ -110,7 +110,7 @@ public:
     QAction*        Menu_Help_Help;
     QAction*        Menu_Help_About;
     QAction*        Menu_Help_AVPS_Website;
-    QAction*        Menu_Help_AVPS_DvAnalyzer_Website;
+    QAction*        Menu_Help_DvAnalyzer_Website;
 
  private slots:
     //Menu - Actions
@@ -139,7 +139,7 @@ public:
     void OnMenu_Help_Help                       ();
     void OnMenu_Help_About                      ();
     void OnMenu_Help_AVPS_Website               ();
-    void OnMenu_Help_AVPS_DvAnalyzer_Website    ();
+    void OnMenu_Help_DvAnalyzer_Website         ();
     void OnCurrentChanged                       (int Index);
     void OnOpen_Timer                           ();
 

@@ -235,17 +235,17 @@ void GUI_Main::Menu_Create()
     Menu_Help_AVPS_Website->setStatusTip(tr(""));
     connect(Menu_Help_AVPS_Website, SIGNAL(triggered()), this, SLOT(OnMenu_Help_AVPS_Website()));
 
-    Menu_Help_AVPS_DvAnalyzer_Website = new QAction(QIcon(":/Image/AVPS/logo_sign_alpha.png"), tr("AVPS DV Analyzer website"), this);
-    Menu_Help_AVPS_DvAnalyzer_Website->setShortcut(tr(""));
-    Menu_Help_AVPS_DvAnalyzer_Website->setStatusTip(tr(""));
-    connect(Menu_Help_AVPS_DvAnalyzer_Website, SIGNAL(triggered()), this, SLOT(OnMenu_Help_AVPS_DvAnalyzer_Website()));
+    Menu_Help_DvAnalyzer_Website = new QAction(QIcon(":/Image/AVPS/logo_sign_alpha.png"), tr("AVPS DV Analyzer website"), this);
+    Menu_Help_DvAnalyzer_Website->setShortcut(tr(""));
+    Menu_Help_DvAnalyzer_Website->setStatusTip(tr(""));
+    connect(Menu_Help_DvAnalyzer_Website, SIGNAL(triggered()), this, SLOT(OnMenu_Help_DvAnalyzer_Website()));
 
     Menu_Help = menuBar()->addMenu(tr("&Help"));
     Menu_Help->addAction(Menu_Help_Help);
     Menu_Help->addSeparator();
     Menu_Help->addAction(Menu_Help_About);
     Menu_Help->addAction(Menu_Help_AVPS_Website);
-    Menu_Help->addAction(Menu_Help_AVPS_DvAnalyzer_Website);
+    Menu_Help->addAction(Menu_Help_DvAnalyzer_Website);
 }
 
 //***************************************************************************
@@ -591,7 +591,7 @@ void GUI_Main::OnMenu_Help_AVPS_Website()
 }
 
 //---------------------------------------------------------------------------
-void GUI_Main::OnMenu_Help_AVPS_DvAnalyzer_Website()
+void GUI_Main::OnMenu_Help_DvAnalyzer_Website()
 {
     //Showing
     QDesktopServices::openUrl(QUrl("http://www.avpreserve.com/dvanalyzer/", QUrl::TolerantMode));
@@ -611,7 +611,7 @@ void GUI_Main::ToolBar_Create()
     ToolBar->addAction(Menu_File_Open_Directory);
     ToolBar->addSeparator();
     ToolBar->addAction(Menu_Help_About);
-    ToolBar->addAction(Menu_Help_AVPS_Website);
+    ToolBar->addAction(Menu_Help_DvAnalyzer_Website);
 
     #ifndef __APPLE__
         addToolBar(Qt::LeftToolBarArea, ToolBar);
