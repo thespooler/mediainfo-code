@@ -52,7 +52,8 @@ std::string Help()
     ToDisplay<<""<<std::endl;
     ToDisplay<<"--Verbosity=x      Set the verbosity of the output"<<std::endl;
     ToDisplay<<""<<std::endl;
-    ToDisplay<<"--Help-Fields      Display more info about the output format"<<std::endl;
+    ToDisplay<<"--Help-Summary     Display more info about the output format (short)"<<std::endl;
+    ToDisplay<<"--Help-Detail      Display more info about the output format (long)"<<std::endl;
     ToDisplay<<"--Help-Verbosity   Display more info about the verbosity option"<<std::endl;
     ToDisplay<<"--LogFile=...      Save the output in the specified file"<<std::endl;
 
@@ -71,9 +72,15 @@ std::string Help_Nothing()
 }
 
 //---------------------------------------------------------------------------
-std::string Help_Fields()
+std::string Help_Summary()
 {
-    return Help_Fields_Text();
+    return Help_Summary_Text();
+}
+
+//---------------------------------------------------------------------------
+std::string Help_Details()
+{
+    return Help_Details_Text();
 }
 
 //---------------------------------------------------------------------------

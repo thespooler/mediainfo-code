@@ -1,8 +1,8 @@
 #include <winresrc.h>
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,3,0,0
- PRODUCTVERSION 1,3,0,0
+ FILEVERSION 1,3,4,0
+ PRODUCTVERSION 1,3,4,0
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -19,12 +19,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "http://mediainfo.sourceforge.net"
             VALUE "FileDescription", "AVPS DV Analyzer CLI"
-            VALUE "FileVersion", "1,3,0,0"
+            VALUE "FileVersion", "1,3,4,0"
             VALUE "InternalName", "AVPS_DV_Analyzer - CLI - MSVC 2008"
             VALUE "LegalCopyright", "GPL"
             VALUE "OriginalFilename", "dvanalyzer.exe"
             VALUE "ProductName", "AVPS_DV_Analyzer_CLI"
-            VALUE "ProductVersion", "1,3,0,0"
+            VALUE "ProductVersion", "1,3,4,0"
         END
     END
     BLOCK "VarFileInfo"

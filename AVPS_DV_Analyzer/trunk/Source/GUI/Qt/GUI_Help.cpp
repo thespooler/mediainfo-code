@@ -27,6 +27,7 @@
 #include <QtGui/QDialogButtonBox>
 #include <QtGui/QApplication>
 #include <QtGui/QDesktopWidget>
+#include <QtGui/QTabWidget>
 //---------------------------------------------------------------------------
 
 //***************************************************************************
@@ -42,7 +43,7 @@ GUI_Help::GUI_Help(QWidget * parent)
     resize(QApplication::desktop()->screenGeometry().width()-QApplication::desktop()->screenGeometry().width()/5*2, QApplication::desktop()->screenGeometry().height()/2);
 
     setWindowFlags(windowFlags()&(0xFFFFFFFF-Qt::WindowContextHelpButtonHint));
-    setWindowTitle("\"ByFrame\" help");
+    setWindowTitle("DV Analyzer help");
 
     Close=new QPushButton("&Close");
     Close->setDefault(true);
@@ -51,11 +52,18 @@ GUI_Help::GUI_Help(QWidget * parent)
     connect(Dialog, SIGNAL(accepted()), this, SLOT(close()));
 
     QVBoxLayout* L=new QVBoxLayout();
-    Text=new QTextBrowser();
-    Text->setReadOnly(true);
-    Text->setOpenExternalLinks(true);
-    Text->setHtml(Help_Fields_HTML());
-    L->addWidget(Text);
+    Central=new QTabWidget(this);
+    QTextBrowser* Text1=new QTextBrowser(this);
+    Text1->setReadOnly(true);
+    Text1->setOpenExternalLinks(true);
+    Text1->setHtml(Help_Summary_HTML());
+    Central->addTab(Text1, tr("Summary"));
+    QTextBrowser* Text2=new QTextBrowser(this);
+    Text2->setReadOnly(true);
+    Text2->setOpenExternalLinks(true);
+    Text2->setHtml(Help_Details_HTML());
+    Central->addTab(Text2, tr("Details"));
+    L->addWidget(Central);
     L->addWidget(Close);
 
     setLayout(L);

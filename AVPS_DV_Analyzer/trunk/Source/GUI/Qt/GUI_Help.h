@@ -28,7 +28,7 @@
 
 //---------------------------------------------------------------------------
 #include <QtGui/QDialog>
-class QTextBrowser;
+class QTabWidget;
 class QPushButton;
 //---------------------------------------------------------------------------
 
@@ -45,8 +45,8 @@ public:
 
 private:
     //GUI
-    QTextBrowser* Text;
-    QPushButton*  Close;
+    QTabWidget*     Central;
+    QPushButton*    Close;
 };
 
 #endif

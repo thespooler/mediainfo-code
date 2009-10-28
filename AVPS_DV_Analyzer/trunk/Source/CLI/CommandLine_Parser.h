@@ -43,7 +43,8 @@ int Parse(Core &C, MediaInfoNameSpace::String &Argument);
 
 CL_OPTION(Help);
 CL_OPTION(Help_xxx);
-CL_OPTION(Help_Fields);
+CL_OPTION(Help_Summary);
+CL_OPTION(Help_Details);
 CL_OPTION(Help_Verbosity);
 CL_OPTION(Header);
 CL_OPTION(Footer);

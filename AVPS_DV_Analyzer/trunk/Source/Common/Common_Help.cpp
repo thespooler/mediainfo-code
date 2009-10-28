@@ -21,7 +21,7 @@
 #include "Common/Common_Help.h"
 //---------------------------------------------------------------------------
 
-const char* Help_Fields_HTML() {return
+const char* Help_Summary_HTML() {return
 "<h2>Information Summary</h2>"
 "<h3>Frame Information</h3>"
 "<ul>"
@@ -45,8 +45,34 @@ const char* Help_Fields_HTML() {return
 "<li>Arbitrary bit inconsistency: Notes when the Arbitrary bits within a frame are not consistent.</li>"
 "<li>Stts fluctuation: Notes frames that are assigned a presentation time that is longer or shorter than the other frames (normally all DV frames are presented for same amount of time). Occasionally this is indicative of audio/video sync issues and may present a stutter during playback.</li>"
 "</ul>"
-""
-""
+;}
+
+const char* Help_Summary_Text() {return
+"Information Summary\n"
+"Frame Information\n"
+"\n"
+"Frame: The number of the frame within the video. The first frame is zero.\n"
+"Absolute time: Begins with 00:00:00.000. Represents the time elapsed from the start of the video\n"
+"DV timecode: This is the timecode as documented within the referenced frame. This information is typically written by the camera.\n"
+"Timecode info: This field contains 'Repeating' if the DV Timecode is the same as the previous frame or 'Non-sequential' if it doesn't follow the previous frame. The field is disabled when the timecode equals '00:00:00;00'.\n"
+"Rec. date/time: This is the date and time as set on the original recording device. A DV camera will normally document this information in every DV frame written to tape.\n"
+"Rec. date/time Info: Similar to 'Timecode info', this field states if the 'Rec. date/time' is 'Repeating' or 'Non-sequential' as related to the 'Rec. date/time' value of the previous frame.\n"
+"Arb bits: Every block of video data contains an 'Arbitrary bit', a unit of data with a 4 bit value. The exact meaning of the Arbitrary bit is obscure, but if there is inconsistency in the pattern of the bits there may likely be an error or inconsistency in the image.\n"
+"Arb bits info: Similar to 'Timecode info' this value shows when the 'Arbitrary bit' is 'Repeating' or 'Non-sequential' as related to the 'Arbitrary bit' of the previous frame.\n"
+"Start: Contains an 'S' if the camera has noted that this frame is the first frame of a recording.\n"
+"End: Contains an 'E' if the camera has noted that this frame is the last frame of a recording.\n"
+"\n"
+"Error Detection\n"
+"\n"
+"Video error concealment: This is glitchiness, blockiness, or pixelization within a frame caused by the deck covering video data that was not properly read from the tape.\n"
+"Audio errors: If the DV deck fails to read audio data, it may export error codes that can be detected. They are played as dropouts.\n"
+"Timecode inconsistency: DV contains many timecode values per frame (this helps enable the timecode to be viewable while the tape is shuttled). This field notes when the timecodes within a frame are inconsistent.\n"
+"DIF incoherency: Notes structural problems with the frame such as unexpected, irregular information.\n"
+"Arbitrary bit inconsistency: Notes when the Arbitrary bits within a frame are not consistent.\n"
+"Stts fluctuation: Notes frames that are assigned a presentation time that is longer or shorter than the other frames (normally all DV frames are presented for same amount of time). Occasionally this is indicative of audio/video sync issues and may present a stutter during playback.\n"
+;}
+
+const char* Help_Details_HTML() {return
 "<h2>Information Detail</h2>"
 "<h3>Frame Information</h3>"
 "<h4>Frame</h4>"
@@ -92,33 +118,8 @@ const char* Help_Fields_HTML() {return
 "Notes frames that are assigned a presentation time that is longer or shorter than the other frames (normally all DV frames are presented for same amount of time). Occasionally this is indicative of audio/video sync issues and may present a stutter during playback."
 ;}
 
-const char* Help_Fields_Text() {return
-"Information Summary\n"
-"Frame Information\n"
-"\n"
-"Frame: The number of the frame within the video. The first frame is zero.\n"
-"Absolute time: Begins with 00:00:00.000. Represents the time elapsed from the start of the video\n"
-"DV timecode: This is the timecode as documented within the referenced frame. This information is typically written by the camera.\n"
-"Timecode info: This field contains 'Repeating' if the DV Timecode is the same as the previous frame or 'Non-sequential' if it doesn't follow the previous frame. The field is disabled when the timecode equals '00:00:00;00'.\n"
-"Rec. date/time: This is the date and time as set on the original recording device. A DV camera will normally document this information in every DV frame written to tape.\n"
-"Rec. date/time Info: Similar to 'Timecode info', this field states if the 'Rec. date/time' is 'Repeating' or 'Non-sequential' as related to the 'Rec. date/time' value of the previous frame.\n"
-"Arb bits: Every block of video data contains an 'Arbitrary bit', a unit of data with a 4 bit value. The exact meaning of the Arbitrary bit is obscure, but if there is inconsistency in the pattern of the bits there may likely be an error or inconsistency in the image.\n"
-"Arb bits info: Similar to 'Timecode info' this value shows when the 'Arbitrary bit' is 'Repeating' or 'Non-sequential' as related to the 'Arbitrary bit' of the previous frame.\n"
-"Start: Contains an 'S' if the camera has noted that this frame is the first frame of a recording.\n"
-"End: Contains an 'E' if the camera has noted that this frame is the last frame of a recording.\n"
-"\n"
-"Error Detection\n"
-"\n"
-"Video error concealment: This is glitchiness, blockiness, or pixelization within a frame caused by the deck covering video data that was not properly read from the tape.\n"
-"Audio errors: If the DV deck fails to read audio data, it may export error codes that can be detected. They are played as dropouts.\n"
-"Timecode inconsistency: DV contains many timecode values per frame (this helps enable the timecode to be viewable while the tape is shuttled). This field notes when the timecodes within a frame are inconsistent.\n"
-"DIF incoherency: Notes structural problems with the frame such as unexpected, irregular information.\n"
-"Arbitrary bit inconsistency: Notes when the Arbitrary bits within a frame are not consistent.\n"
-"Stts fluctuation: Notes frames that are assigned a presentation time that is longer or shorter than the other frames (normally all DV frames are presented for same amount of time). Occasionally this is indicative of audio/video sync issues and may present a stutter during playback.\n"
-"\n"
-"\n"
-"\n"
-"Information Detail\n"
+const char* Help_Details_Text() {return
+"Information Details\n"
 "Frame Information\n"
 "Frame\n"
 "The number of the frame within the video. The first frame is zero.\n"

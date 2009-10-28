@@ -82,7 +82,8 @@ CL_OPTION(Help)
 CL_OPTION(Help_xxx)
 {
     if (0);
-    OPTION("--help-fields",                                 Help_Fields)
+    OPTION("--help-summary",                                Help_Summary)
+    OPTION("--help-details",                                Help_Details)
     OPTION("--help-verbosity",                              Help_Verbosity)
 
     std::cout<<"No help available yet";
@@ -91,10 +92,19 @@ CL_OPTION(Help_xxx)
 }
 
 //---------------------------------------------------------------------------
-CL_OPTION(Help_Fields)
+CL_OPTION(Help_Summary)
 {
     CL_Version(C, Argument);
-    std::cout<<Help_Fields();
+    std::cout<<Help_Summary();
+
+    return 0;
+}
+
+//---------------------------------------------------------------------------
+CL_OPTION(Help_Details)
+{
+    CL_Version(C, Argument);
+    std::cout<<Help_Details();
 
     return 0;
 }

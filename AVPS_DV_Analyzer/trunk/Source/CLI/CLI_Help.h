@@ -31,7 +31,8 @@
 //---------------------------------------------------------------------------
 std::string Help();
 std::string Help_Nothing();
-std::string Help_Fields();
+std::string Help_Summary();
+std::string Help_Details();
 std::string Help_Verbosity();
 
 //***************************************************************************
