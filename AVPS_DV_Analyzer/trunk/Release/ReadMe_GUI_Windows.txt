@@ -1,5 +1,5 @@
 MediaArea DV Analyzer
-Copyright (c) 2009-2009, Jerome Martinez, zen@mediaarea.net
+Copyright (C) 2009-2009 AudioVisual Preservation Solutions, info@avpreserve.com
 
 License
 -------
