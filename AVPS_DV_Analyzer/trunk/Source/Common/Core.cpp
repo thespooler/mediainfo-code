@@ -50,7 +50,10 @@ Core::Core()
     Errors_Stats_WithHeader=false;
     Errors_Stats_WithFooter=false;
     Errors_Stats_XML=false;
+    Errors_Stats_FCPv4=false;
+    Errors_Stats_FCPv5=false;
     Verbosity=0.5;
+    WithThreads=false;
 }
 
 Core::~Core()
@@ -80,18 +83,29 @@ size_t Core::Menu_File_Open_File (const String& FileName)
 void Core::Menu_File_Open_Files_Begin ()
 {
     MI->Close();
+    if (WithThreads)
+        MI->Option(_T("Thread"), _T("1"));
 }
 
 //---------------------------------------------------------------------------
 size_t Core::Menu_File_Open_Files_Continue (const String &FileName)
 {
-    return MI->Open(FileName);
+    size_t ToReturn=MI->Open(FileName);
+    if (WithThreads)
+        return 0;
+    return ToReturn;
 }
 
 //---------------------------------------------------------------------------
 void Core::Menu_File_Open_Directory (const String &DirectoryName)
 {
     MI->Open(DirectoryName);
+}
+
+//---------------------------------------------------------------------------
+float Core::Menu_File_Open_State ()
+{
+    return (((float)MI->State_Get())/10000);
 }
 
 //---------------------------------------------------------------------------
@@ -191,6 +205,10 @@ String& Core::ByFrame ()
     //From CLI
     if (Errors_Stats_XML)
         return XML();
+    if (Errors_Stats_FCPv4)
+        return FCP(4);
+    if (Errors_Stats_FCPv5)
+        return FCP(5);
     
     Text.clear();
     
@@ -265,8 +283,8 @@ MediaInfoNameSpace::String &Core::XML()
     enum fields
     {
         frame,
-        time,
-        timecode,
+        abs_time,
+        dv_timecode,
         timecode_non_consecutive,
         recdate_rectime,
         recdate_rectime_non_consecutive,
@@ -357,8 +375,8 @@ MediaInfoNameSpace::String &Core::XML()
 
             //General
             Text+=_T("\t\t\t\t<frame>")+List(Pos, frame).TrimLeft()+_T("</frame>\n");
-            Text+=_T("\t\t\t\t<time>")+List(Pos, time)+_T("</time>\n");
-            Text+=_T("\t\t\t\t<timecode>")+List(Pos, timecode)+_T("</timecode>\n");
+            Text+=_T("\t\t\t\t<abs_time>")+List(Pos, abs_time)+_T("</abs_time>\n");
+            Text+=_T("\t\t\t\t<dv_timecode>")+List(Pos, dv_timecode)+_T("</dv_timecode>\n");
             Text+=_T("\t\t\t\t<recdate_rectime>")+List(Pos, recdate_rectime).TrimRight()+_T("</recdate_rectime>\n");
             Text+=_T("\t\t\t\t<arbitrary_bit>")+List(Pos, arb).TrimRight()+_T("</arbitrary_bit>\n");
             
@@ -395,9 +413,9 @@ MediaInfoNameSpace::String &Core::XML()
                 
                 //Info
                 if (List(Pos, timecode_non_consecutive)==_T("N"))
-                    Text+=_T("\t\t\t\t\t<event type=\"info\" event_id=\"NTC\">non-consecutive timecode</event>\n");
+                    Text+=_T("\t\t\t\t\t<event type=\"info\" event_id=\"NTC\">non-consecutive DV timecode</event>\n");
                 if (List(Pos, timecode_non_consecutive)==_T("R"))
-                    Text+=_T("\t\t\t\t\t<event type=\"info\" event_id=\"RTC\">repeating timecode</event>\n");
+                    Text+=_T("\t\t\t\t\t<event type=\"info\" event_id=\"RTC\">repeating DV timecode</event>\n");
                 if (List(Pos, recdate_rectime_non_consecutive)==_T("N"))
                     Text+=_T("\t\t\t\t\t<event type=\"info\" event_id=\"NRT\">non-consecutive recdate/rectime</event>\n");
                 if (List(Pos, recdate_rectime_non_consecutive)==_T("R"))
@@ -411,19 +429,19 @@ MediaInfoNameSpace::String &Core::XML()
                 if (List(Pos, error_1)!=_T(" "))
                 {
                     List(Pos, error_1_more).Trim();
-                    List(Pos, error_1_more).FindAndReplace(_T("  "), _T(" "), 0, Ztring_Recursive);
-                    List(Pos, error_1_more).FindAndReplace(_T("( "), _T("("), 0, Ztring_Recursive);
+                    while (List(Pos, error_1_more).FindAndReplace(_T("  "), _T(" "), 0, Ztring_Recursive));
+                    while (List(Pos, error_1_more).FindAndReplace(_T("( "), _T("("), 0, Ztring_Recursive));
                     Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_1-error_1+1)+_T("\" event_type=\"video error concealment\">")+List(Pos, error_1_more)+_T("</event>\n");
                 }
                 if (List(Pos, error_2)!=_T(" "))
                 {
                     List(Pos, error_2_more).Trim();
-                    List(Pos, error_2_more).FindAndReplace(_T("  "), _T(" "), 0, Ztring_Recursive);
-                    List(Pos, error_2_more).FindAndReplace(_T("( "), _T("("), 0, Ztring_Recursive);
+                    while (List(Pos, error_2_more).FindAndReplace(_T("  "), _T(" "), 0, Ztring_Recursive));
+                    while (List(Pos, error_2_more).FindAndReplace(_T("( "), _T("("), 0, Ztring_Recursive));
                     Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_2-error_1+1)+_T("\" event_type=\"audio error code\">")+List(Pos, error_2_more)+_T("</event>\n");
                 }
                 if (List(Pos, error_3)!=_T(" "))
-                    Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_3-error_1+1)+_T("\" event_type=\"timecode incoherency\">")+List(Pos, error_3_more)+_T("</event>\n");
+                    Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_3-error_1+1)+_T("\" event_type=\"DV timecode incoherency\">")+List(Pos, error_3_more)+_T("</event>\n");
                 if (List(Pos, error_4)!=_T(" "))
                     Text+=_T("\t\t\t\t\t<event type=\"error\" event_id=\"")+Ztring::ToZtring(error_4-error_1+1)+_T("\" event_type=\"DIF incoherency\">")+List(Pos, error_4_more)+_T("</event>\n");
                 if (List(Pos, error_5)!=_T(" "))
@@ -519,14 +537,14 @@ MediaInfoNameSpace::String &Core::XML()
             }
 
             //error_3
-            if (List(Pos, 0).find(_T("Frame count with timecode incoherency: "))==0)
+            if (List(Pos, 0).find(_T("Frame count with DV timecode incoherency: "))==0)
             {
                 if (!events_summary_open)
                 {
                     Text+=_T("\t\t<events_summary>\n");
                     events_summary_open=true;
                 }
-                Text+=_T("\t\t\t<event type=\"error\" event_id=\"3\" event_type=\"timecode incoherency\">\n");
+                Text+=_T("\t\t\t<event type=\"error\" event_id=\"3\" event_type=\"DV timecode incoherency\">\n");
                 Text+=_T("\t\t\t\t<frames_count>")+List(Pos, 0).SubString(_T(": "), _T(" frames"))+_T("</frames_count>\n");
                 Text+=_T("\t\t\t</event>\n");
             }
@@ -618,12 +636,17 @@ MediaInfoNameSpace::String &Core::FCP(size_t Version)
     Text+=Ztring().From_UTF8(NameVersion_Text())+_T(", verbosity is ")+Ztring::ToZtring(Verbosity*10, 0);
     Text+=_T(" -->\n");
     Text+=_T("<xmeml version=\""); Text+=Version==5?_T('5'):_T('4'); Text+=_T("\">\n");
+	Text+=_T("<importoptions>\n");
+	Text+=_T("	<createnewproject>TRUE</createnewproject>\n");
+	Text+=_T("	<defsequencepresetname>useFirstClipSettings</defsequencepresetname>\n");
+	Text+=_T("	<createfcpprojectatxmlfilepath>TRUE</createfcpprojectatxmlfilepath>\n");
+	Text+=_T("</importoptions>\n");
     
     enum fields
     {
         frame,
-        time,
-        timecode,
+        abs_time,
+        dv_timecode,
         timecode_non_consecutive,
         recdate_rectime,
         recdate_rectime_non_consecutive,
@@ -711,11 +734,11 @@ MediaInfoNameSpace::String &Core::FCP(size_t Version)
             if (List(Pos, timecode_non_consecutive)==_T("N")
              || List(Pos, timecode_non_consecutive)==_T("R"))
             {
-                Name+=List(Pos, timecode)+_T(" - ");
+                Name+=List(Pos, dv_timecode)+_T(" - ");
                 if (List(Pos, timecode_non_consecutive)==_T("N"))
-                    Comment+=_T("non-consecutive timecode - ");
+                    Comment+=_T("non-consecutive DV timecode - ");
                 if (List(Pos, timecode_non_consecutive)==_T("R"))
-                    Comment+=_T("repeating timecode - ");
+                    Comment+=_T("repeating DV timecode - ");
                 Info=true;
             }
             if (List(Pos, recdate_rectime_non_consecutive)==_T("N")
@@ -743,8 +766,8 @@ MediaInfoNameSpace::String &Core::FCP(size_t Version)
             if (List(Pos, error_1)!=_T(" "))
             {
                 List(Pos, error_1_more).Trim();
-                List(Pos, error_1_more).FindAndReplace(_T("  "), _T(" "), 0, Ztring_Recursive);
-                List(Pos, error_1_more).FindAndReplace(_T("( "), _T("("), 0, Ztring_Recursive);
+                while (List(Pos, error_1_more).FindAndReplace(_T("  "), _T(" "), 0, Ztring_Recursive));
+                while (List(Pos, error_1_more).FindAndReplace(_T("( "), _T("("), 0, Ztring_Recursive));
                 Name+=_T("video error concealment - ");
                 Comment+=List(Pos, error_1_more)+_T(" - ");
                 Error=true;
@@ -752,15 +775,15 @@ MediaInfoNameSpace::String &Core::FCP(size_t Version)
             if (List(Pos, error_2)!=_T(" "))
             {
                 List(Pos, error_2_more).Trim();
-                List(Pos, error_2_more).FindAndReplace(_T("  "), _T(" "), 0, Ztring_Recursive);
-                List(Pos, error_2_more).FindAndReplace(_T("( "), _T("("), 0, Ztring_Recursive);
+                while (List(Pos, error_2_more).FindAndReplace(_T("  "), _T(" "), 0, Ztring_Recursive));
+                while (List(Pos, error_2_more).FindAndReplace(_T("( "), _T("("), 0, Ztring_Recursive));
                 Name+=_T("audio error code - ");
                 Comment+=List(Pos, error_2_more)+_T(" - ");
                 Error=true;
             }
             if (List(Pos, error_3)!=_T(" "))
             {
-                Name+=_T("timecode incoherency - ");
+                Name+=_T("DV timecode incoherency - ");
                 Comment+=List(Pos, error_3_more)+_T(" - ");
                 Error=true;
             }
@@ -815,13 +838,45 @@ MediaInfoNameSpace::String &Core::FCP(size_t Version)
 }
 
 //---------------------------------------------------------------------------
-String& Core::MediaInfo ()
+String& Core::MediaInfo_Text ()
 {
     Text=MI->Inform();
 
     //Adapting
     size_t Begin=Text.find(_T("Errors_Stats_Begin"));
     size_t End=Text.find(_T("\r\n\r\n"), Begin);
+    if (Begin!=std::string::npos && End!=std::string::npos)
+            Text.erase(Begin, End-Begin);
+
+    return Text;
+}
+
+//---------------------------------------------------------------------------
+String& Core::MediaInfo_HTML ()
+{
+    MI->Option(_T("Inform"), _T("HTML"));
+    Text=MI->Inform();
+    MI->Option(_T("Inform"), _T(""));
+
+    //Adapting
+    size_t Begin=Text.find(_T("  <tr>")+Ztring(EOL)+_T("    <td><i>Errors_Stats_Begin :</i></td>"));
+    size_t End=Text.find(_T("</table>"), Begin);
+    if (Begin!=std::string::npos && End!=std::string::npos)
+            Text.erase(Begin, End-Begin);
+
+    return Text;
+}
+
+//---------------------------------------------------------------------------
+String& Core::MediaInfo_XML ()
+{
+    MI->Option(_T("Inform"), _T("XML"));
+    Text=MI->Inform();
+    MI->Option(_T("Inform"), _T(""));
+
+    //Adapting
+    size_t Begin=Text.find(_T("<Errors_Stats_Begin>"));
+    size_t End=Text.find(_T("</track>"), Begin);
     if (Begin!=std::string::npos && End!=std::string::npos)
             Text.erase(Begin, End-Begin);
 

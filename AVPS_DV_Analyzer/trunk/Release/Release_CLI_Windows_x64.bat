@@ -6,8 +6,7 @@ rmdir AVPS_DV_Analyzer_CLI_Windows_x64 /S /Q
 mkdir AVPS_DV_Analyzer_CLI_Windows_x64
 
 rem --- Copying : Exe ---
-xcopy MSVCx64\CLI\MediaInfo.exe AVPS_DV_Analyzer_CLI_Windows_x64\ /S
-xcopy ..\..\MediaInfoLib\Release\MSVCx64\Dll\MediaInfo.dll AVPS_DV_Analyzer_CLI_Windows_x64\ /S
+xcopy ..\Project\MSVC\CLI\x64\Release\dvanalyzer.exe AVPS_DV_Analyzer_CLI_Windows_x64\ /S
 
 rem --- Copying : Plugins ---
 xcopy ..\Source\Ressource\Plugin\Custom\* AVPS_DV_Analyzer_CLI_Windows_x64\Plugin\Custom\ /S

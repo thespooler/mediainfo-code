@@ -31,8 +31,7 @@
 #include "GUI/Qt/GUI_About.h"
 #include "ZenLib/ZtringList.h"
 #include "ZenLib/File.h"
-#include "GUI/Qt/GUI_Help_ByFrame.h"
-#include "GUI/Qt/GUI_Help_Summary.h"
+#include "GUI/Qt/GUI_Help.h"
 using namespace ZenLib;
 //---------------------------------------------------------------------------
 
@@ -106,7 +105,7 @@ void GUI_Main::Menu_Create()
     Menu_View_FCPv5->setStatusTip(tr(""));
     connect(Menu_View_FCPv5, SIGNAL(triggered()), this, SLOT(OnMenu_View_FCPv5()));
 
-    Menu_View_MediaInfo = new QAction(tr("Technical metadata"), this);
+    Menu_View_MediaInfo = new QAction(tr("Technical metadata (MediaInfo)"), this);
     Menu_View_MediaInfo->setShortcut(tr(""));
     Menu_View_MediaInfo->setCheckable(true);
     Menu_View_MediaInfo->setStatusTip(tr(""));
@@ -151,9 +150,13 @@ void GUI_Main::Menu_Create()
     Menu_Export_FCPv5->setStatusTip(tr(""));
     connect(Menu_Export_FCPv5, SIGNAL(triggered()), this, SLOT(OnMenu_Export_FCPv5()));
 
-    Menu_Export_MediaInfo = new QAction(tr("Technical metadata..."), this);
-    Menu_Export_MediaInfo->setStatusTip(tr(""));
-    connect(Menu_Export_MediaInfo, SIGNAL(triggered()), this, SLOT(OnMenu_Export_MediaInfo()));
+    Menu_Export_MediaInfo_Text = new QAction(tr("Technical metadata (MediaInfo) (Text)..."), this);
+    Menu_Export_MediaInfo_Text->setStatusTip(tr(""));
+    connect(Menu_Export_MediaInfo_Text, SIGNAL(triggered()), this, SLOT(OnMenu_Export_MediaInfo_Text()));
+
+    Menu_Export_MediaInfo_XML = new QAction(tr("Technical metadata (MediaInfo) (XML)..."), this);
+    Menu_Export_MediaInfo_XML->setStatusTip(tr(""));
+    connect(Menu_Export_MediaInfo_XML, SIGNAL(triggered()), this, SLOT(OnMenu_Export_MediaInfo_XML()));
 
     Menu_Export = menuBar()->addMenu(tr("&Export"));
     Menu_Export->addAction(Menu_Export_Summary);
@@ -161,7 +164,8 @@ void GUI_Main::Menu_Create()
     Menu_Export->addAction(Menu_Export_XML);
     Menu_Export->addAction(Menu_Export_FCPv4);
     Menu_Export->addAction(Menu_Export_FCPv5);
-    Menu_Export->addAction(Menu_Export_MediaInfo);
+    Menu_Export->addAction(Menu_Export_MediaInfo_Text);
+    Menu_Export->addAction(Menu_Export_MediaInfo_XML);
 
     //Options
     Menu_Options_Verbosity_03 = new QAction(tr("Errors only"), this);
@@ -176,7 +180,7 @@ void GUI_Main::Menu_Create()
     Menu_Options_Verbosity_05->setStatusTip(tr("DV analysis by frame, Errors and information"));
     connect(Menu_Options_Verbosity_05, SIGNAL(triggered()), this, SLOT(OnMenu_Options_Verbosity_05()));
 
-    Menu_Options_Verbosity_10 = new QAction(tr("All"), this);
+    Menu_Options_Verbosity_10 = new QAction(tr("All frames"), this);
     Menu_Options_Verbosity_10->setShortcut(tr(""));
     Menu_Options_Verbosity_10->setCheckable(true);
     Menu_Options_Verbosity_10->setStatusTip(tr("DV analysis by frame, All"));
@@ -198,6 +202,7 @@ void GUI_Main::Menu_Create()
     Menu_Options_MediaInfo_RawFieldsNames->setCheckable(true);
     Menu_Options_MediaInfo_RawFieldsNames->setStatusTip(tr(""));
     connect(Menu_Options_MediaInfo_RawFieldsNames, SIGNAL(triggered()), this, SLOT(OnMenu_Options_MediaInfo_RawFieldsNames()));
+    //Menu_Options_MediaInfo_RawFieldsNames->setChecked(true); OnMenu_Options_MediaInfo_RawFieldsNames();
 
     Menu_Options_ResetFieldSizes = new QAction(tr("Reset field sizes"), this);
     Menu_Options_ResetFieldSizes->setStatusTip(tr(""));
@@ -209,21 +214,16 @@ void GUI_Main::Menu_Create()
     Menu_Options_Verbosity->addAction(Menu_Options_Verbosity_03);
     Menu_Options_Verbosity->addAction(Menu_Options_Verbosity_05);
     Menu_Options_Verbosity->addAction(Menu_Options_Verbosity_10);
-    Menu_Options_MediaInfo=Menu_Options->addMenu(tr("&Technical Metadata"));
+    Menu_Options_MediaInfo=Menu_Options->addMenu(tr("&Technical Metadata (MediaInfo)"));
     Menu_Options_MediaInfo->addAction(Menu_Options_MediaInfo_InternalFields);
     Menu_Options_MediaInfo->addAction(Menu_Options_MediaInfo_RawFieldsNames);
     Menu_Options->addAction(Menu_Options_ResetFieldSizes);
 
     //Menu Help
-    Menu_Help_Summary = new QAction(tr("\"Summary\" format"), this);
-    Menu_Help_Summary->setShortcut(tr(""));
-    Menu_Help_Summary->setStatusTip(tr(""));
-    connect(Menu_Help_Summary, SIGNAL(triggered()), this, SLOT(OnMenu_Help_Summary()));
-
-    Menu_Help_ByFrame = new QAction(tr("\"By frame\" format"), this);
-    Menu_Help_ByFrame->setShortcut(tr(""));
-    Menu_Help_ByFrame->setStatusTip(tr(""));
-    connect(Menu_Help_ByFrame, SIGNAL(triggered()), this, SLOT(OnMenu_Help_ByFrame()));
+    Menu_Help_Help = new QAction(tr("Help"), this);
+    Menu_Help_Help->setShortcut(tr(""));
+    Menu_Help_Help->setStatusTip(tr(""));
+    connect(Menu_Help_Help, SIGNAL(triggered()), this, SLOT(OnMenu_Help_Help()));
 
     Menu_Help_About = new QAction(QIcon(":/Image/Menu/Help_About.png"), tr("About..."), this);
     Menu_Help_About->setShortcut(tr(""));
@@ -236,8 +236,7 @@ void GUI_Main::Menu_Create()
     connect(Menu_Help_AVPS_Website, SIGNAL(triggered()), this, SLOT(OnMenu_Help_AVPS_Website()));
 
     Menu_Help = menuBar()->addMenu(tr("&Help"));
-    Menu_Help->addAction(Menu_Help_Summary);
-    Menu_Help->addAction(Menu_Help_ByFrame);
+    Menu_Help->addAction(Menu_Help_Help);
     Menu_Help->addSeparator();
     Menu_Help->addAction(Menu_Help_About);
     Menu_Help->addAction(Menu_Help_AVPS_Website);
@@ -270,7 +269,7 @@ void GUI_Main::OnMenu_File_Open_Files()
     }
 
     //Showing
-    View_Refresh();
+    Open_Timer_Init();
 }
 
 //---------------------------------------------------------------------------
@@ -293,7 +292,7 @@ void GUI_Main::OnMenu_File_Open_Directory()
     C->Menu_File_Open_Files_Continue(FileName);
 
     //Showing
-    View_Refresh();
+    Open_Timer_Init();
 }
 
 //---------------------------------------------------------------------------
@@ -491,7 +490,7 @@ void GUI_Main::OnMenu_Export_FCPv5()
 }
 
 //---------------------------------------------------------------------------
-void GUI_Main::OnMenu_Export_MediaInfo()
+void GUI_Main::OnMenu_Export_MediaInfo_Text()
 {
     //User interaction
     QString FileNamesQ = QFileDialog::getSaveFileName(  this,
@@ -505,8 +504,30 @@ void GUI_Main::OnMenu_Export_MediaInfo()
     File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
     
     //Running
-    Ztring ToWrite=C->MediaInfo();
-    ToWrite.FindAndReplace(_T("\n"), EOL, 0, Ztring_Recursive);
+    C->Menu_Option_Preferences_Option(_T("Language"), _T("raw"));
+    Ztring ToWrite=C->MediaInfo_Text();
+    C->Menu_Option_Preferences_Option(_T("Language"), Menu_Options_MediaInfo_RawFieldsNames->isChecked()?_T("raw"):_T(""));
+    F.Write(ToWrite);
+}
+
+//---------------------------------------------------------------------------
+void GUI_Main::OnMenu_Export_MediaInfo_XML()
+{
+    //User interaction
+    QString FileNamesQ = QFileDialog::getSaveFileName(  this,
+                                                        tr("Save Technical metadata..."),
+                                                        tr(""),
+                                                        tr("XML file (*.xml)"));
+    if (FileNamesQ.isEmpty())
+        return;
+
+    //Configuring
+    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    
+    //Running
+    C->Menu_Option_Preferences_Option(_T("Language"), _T("raw"));
+    Ztring ToWrite=C->MediaInfo_XML();
+    C->Menu_Option_Preferences_Option(_T("Language"), Menu_Options_MediaInfo_RawFieldsNames->isChecked()?_T("raw"):_T(""));
     F.Write(ToWrite);
 }
 
@@ -540,18 +561,10 @@ void GUI_Main::OnMenu_Options_MediaInfo_RawFieldsNames()
 }
 
 //---------------------------------------------------------------------------
-void GUI_Main::OnMenu_Help_Summary()
+void GUI_Main::OnMenu_Help_Help()
 {
     //Showing
-    GUI_Help_Summary* Frame=new GUI_Help_Summary(this);
-    Frame->show();
-}
-
-//---------------------------------------------------------------------------
-void GUI_Main::OnMenu_Help_ByFrame()
-{
-    //Showing
-    GUI_Help_ByFrame* Frame=new GUI_Help_ByFrame(this);
+    GUI_Help* Frame=new GUI_Help(this);
     Frame->show();
 }
 

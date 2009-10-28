@@ -4,13 +4,18 @@ Notes:
 - Deleted
 x Correction
 
-Version 1.3.3, 2009-
+Version 1.3.3, 2009-10-27
 --------------
++ Progress bar
 + Final Cut Pro XML (v4 and v5) output
 + Menu bar reorganization
++ Option in menu bar re-organized
++ XML export
++ Errors: percentage instead of numbers
++ Reset row height button
 x NAB/RAB wrongly reported
 
-Version 1.3.2, 2009-09-23
+Version 1.3.2, 2009-10-23
 --------------
 + Arb bits: more details
 + Arb bits: Non-Sequetial / Repeating info

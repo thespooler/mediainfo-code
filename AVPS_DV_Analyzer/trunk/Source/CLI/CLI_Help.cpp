@@ -47,10 +47,12 @@ std::string Help()
     ToDisplay<<"--Header           With a header (file name, column names...)"<<std::endl;
     ToDisplay<<"--Footer           With a footer (global stats)"<<std::endl;
     ToDisplay<<"--XML              XML form"<<std::endl;
+    ToDisplay<<"--FCP4             FCP v4 form"<<std::endl;
+    ToDisplay<<"--FCP5             FCP v5 form"<<std::endl;
     ToDisplay<<""<<std::endl;
     ToDisplay<<"--Verbosity=x      Set the verbosity of the output"<<std::endl;
     ToDisplay<<""<<std::endl;
-    ToDisplay<<"--Help-Format      Display more info about the output format"<<std::endl;
+    ToDisplay<<"--Help-Fields      Display more info about the output format"<<std::endl;
     ToDisplay<<"--Help-Verbosity   Display more info about the verbosity option"<<std::endl;
     ToDisplay<<"--LogFile=...      Save the output in the specified file"<<std::endl;
 
@@ -69,6 +71,12 @@ std::string Help_Nothing()
 }
 
 //---------------------------------------------------------------------------
+std::string Help_Fields()
+{
+    return Help_Fields_Text();
+}
+
+//---------------------------------------------------------------------------
 std::string Help_Verbosity()
 {
     std::ostringstream ToDisplay;
@@ -79,17 +87,5 @@ std::string Help_Verbosity()
     ToDisplay<<"10                 : All"<<std::endl;
 
     return ToDisplay.str();
-}
-
-//---------------------------------------------------------------------------
-std::string Help_Summary_Format()
-{
-    return Help_Summary_Text();
-}
-
-//---------------------------------------------------------------------------
-std::string Help_ByFrame_Format()
-{
-    return Help_ByFrame_Text();
 }
 

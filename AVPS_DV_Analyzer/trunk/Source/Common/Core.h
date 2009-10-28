@@ -56,6 +56,7 @@ public:
     void                        Menu_File_Open_Files_Begin      ();
     size_t                      Menu_File_Open_Files_Continue   (const MediaInfoNameSpace::String &FileName);
     void                        Menu_File_Open_Directory        (const MediaInfoNameSpace::String &DirectoryName);
+    float                       Menu_File_Open_State            ();
     void                        Menu_Verbosity_XX               (const MediaInfoNameSpace::String &Value);
     void                        Menu_Verbosity_03               ();
     void                        Menu_Verbosity_05               ();
@@ -69,10 +70,15 @@ public:
     MediaInfoNameSpace::String  ByFrame(size_t Pos);
     MediaInfoNameSpace::String &XML();
     MediaInfoNameSpace::String &FCP(size_t Version=4);
-    MediaInfoNameSpace::String &MediaInfo();
+    MediaInfoNameSpace::String &MediaInfo_Text();
+    MediaInfoNameSpace::String &MediaInfo_HTML();
+    MediaInfoNameSpace::String &MediaInfo_XML();
     bool Errors_Stats_WithHeader;
     bool Errors_Stats_WithFooter;
     bool Errors_Stats_XML;
+    bool Errors_Stats_FCPv4;
+    bool Errors_Stats_FCPv5;
+    bool WithThreads;
 
     //Temp
     void    Data_Prepare();

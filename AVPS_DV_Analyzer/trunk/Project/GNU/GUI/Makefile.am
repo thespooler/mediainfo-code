@@ -7,8 +7,7 @@ dvanalyzer_gui_SOURCES = \
     ../../../Source/Common/Core.cpp \
     ../../../Source/GUI/Qt/App.cpp \
     ../../../Source/GUI/Qt/GUI_About.cpp \
-    ../../../Source/GUI/Qt/GUI_Help_ByFrame.cpp \
-    ../../../Source/GUI/Qt/GUI_Help_Summary.cpp \
+    ../../../Source/GUI/Qt/GUI_Help.cpp \
     ../../../Source/GUI/Qt/GUI_Main.cpp \
     ../../../Source/GUI/Qt/GUI_Main_ByFrame_Table.cpp \
     ../../../Source/GUI/Qt/GUI_Main_ByFrame_Text.cpp \
@@ -20,8 +19,7 @@ dvanalyzer_gui_SOURCES = \
     ../../../Source/GUI/Qt/GUI_Main_XML.cpp \
     _Automated/moc_GUI_About.cpp \
     _Automated/moc_GUI_Main.cpp \
-    _Automated/moc_GUI_Help_ByFrame.cpp \
-    _Automated/moc_GUI_Help_Summary.cpp \
+    _Automated/moc_GUI_Help.cpp \
     _Automated/moc_GUI_Main_ByFrame_Table.cpp \
     _Automated/moc_GUI_Main_ByFrame_Text.cpp \
     _Automated/moc_GUI_Main_FCPv4.cpp \

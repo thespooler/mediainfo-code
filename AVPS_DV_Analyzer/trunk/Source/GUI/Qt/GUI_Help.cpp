@@ -1,4 +1,4 @@
-// GUI_Help_ByFrame - Qt GUI for DV Analyzer
+// GUI_Help - Qt GUI for DV Analyzer
 // // Copyright (C) 2009-2009 AudioVisual Preservation Solutions, info@avpreserve.com
 //
 // This program is free software: you can redistribute it and/or modify
@@ -18,13 +18,15 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#include "GUI/Qt/GUI_Help_ByFrame.h"
+#include "GUI/Qt/GUI_Help.h"
 #include "Common/Core.h"
 #include "Common/Common_Help.h"
 #include <QtGui/QTextBrowser>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QPushButton>
 #include <QtGui/QDialogButtonBox>
+#include <QtGui/QApplication>
+#include <QtGui/QDesktopWidget>
 //---------------------------------------------------------------------------
 
 //***************************************************************************
@@ -33,14 +35,12 @@
 
 //---------------------------------------------------------------------------
 // Constructor
-GUI_Help_ByFrame::GUI_Help_ByFrame(QWidget * parent)
+GUI_Help::GUI_Help(QWidget * parent)
 : QDialog(parent)
 {
-    #ifdef __WINDOWS__
-        resize(400, 500);
-    #else
-        resize(500, 700);
-    #endif
+    move(QApplication::desktop()->screenGeometry().width()/5, y());
+    resize(QApplication::desktop()->screenGeometry().width()-QApplication::desktop()->screenGeometry().width()/5*2, QApplication::desktop()->screenGeometry().height()/2);
+
     setWindowFlags(windowFlags()&(0xFFFFFFFF-Qt::WindowContextHelpButtonHint));
     setWindowTitle("\"ByFrame\" help");
 
@@ -54,7 +54,7 @@ GUI_Help_ByFrame::GUI_Help_ByFrame(QWidget * parent)
     Text=new QTextBrowser();
     Text->setReadOnly(true);
     Text->setOpenExternalLinks(true);
-    Text->setHtml(Help_ByFrame_HTML());
+    Text->setHtml(Help_Fields_HTML());
     L->addWidget(Text);
     L->addWidget(Close);
 

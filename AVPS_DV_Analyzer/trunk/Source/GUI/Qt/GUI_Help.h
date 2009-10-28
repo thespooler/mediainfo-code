@@ -1,4 +1,4 @@
-// GUI_Help_ByFrame - WxWidgets GUI for MediaInfo
+// GUI_Help - WxWidgets GUI for MediaInfo
 // Copyright (C) 2002-2009 Jerome Martinez, Zen@MediaArea.net
 //
 // This program is free software: you can redistribute it and/or modify
@@ -22,8 +22,8 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#ifndef GUI_Help_ByFrameH
-#define GUI_Help_ByFrameH
+#ifndef GUI_HelpH
+#define GUI_HelpH
 //---------------------------------------------------------------------------
 
 //---------------------------------------------------------------------------
@@ -36,12 +36,12 @@ class QPushButton;
 // GUI_Main
 //***************************************************************************
 
-class GUI_Help_ByFrame : public QDialog
+class GUI_Help : public QDialog
 {
     Q_OBJECT
 
 public:
-    GUI_Help_ByFrame (QWidget * parent);
+    GUI_Help (QWidget * parent);
 
 private:
     //GUI

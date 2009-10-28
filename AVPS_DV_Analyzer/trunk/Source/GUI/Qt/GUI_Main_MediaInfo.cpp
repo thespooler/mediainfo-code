@@ -53,9 +53,7 @@ bool GUI_Main_MediaInfo::event (QEvent *Event)
     {
         //Showing
         clear();
-        C->Menu_Option_Preferences_Option (_T("Inform"), _T("HTML"));
-        setHtml (QString().fromUtf8(ZenLib::Ztring(C->MediaInfo()).To_UTF8().c_str()));
-        C->Menu_Option_Preferences_Option (_T("Inform"), _T(""));
+        setHtml (QString().fromUtf8(ZenLib::Ztring(C->MediaInfo_HTML()).To_UTF8().c_str()));
 
         Event->accept();
         return true;

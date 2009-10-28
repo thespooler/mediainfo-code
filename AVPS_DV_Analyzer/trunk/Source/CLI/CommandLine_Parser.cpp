@@ -58,6 +58,8 @@ int Parse(Core &C, MediaInfoNameSpace::String &Argument)
     OPTION("--header",                                      Header)
     OPTION("--footer",                                      Footer)
     OPTION("--xml",                                         Xml)
+    OPTION("--fcp4",                                        Fcpv4)
+    OPTION("--fcp5",                                        Fcpv5)
     OPTION("--verbosity",                                   Verbosity)
     OPTION("--logfile",                                     LogFile)
     OPTION("--version",                                     Version)
@@ -80,7 +82,7 @@ CL_OPTION(Help)
 CL_OPTION(Help_xxx)
 {
     if (0);
-    OPTION("--help-format",                                 Help_Format)
+    OPTION("--help-fields",                                 Help_Fields)
     OPTION("--help-verbosity",                              Help_Verbosity)
 
     std::cout<<"No help available yet";
@@ -89,11 +91,12 @@ CL_OPTION(Help_xxx)
 }
 
 //---------------------------------------------------------------------------
-CL_OPTION(Help_Format)
+CL_OPTION(Help_Fields)
 {
-    std::cout<<Help_ByFrame_Format();
- 
-    return 1;
+    CL_Version(C, Argument);
+    std::cout<<Help_Fields();
+
+    return 0;
 }
 
 //---------------------------------------------------------------------------
@@ -124,6 +127,22 @@ CL_OPTION(Footer)
 CL_OPTION(Xml)
 {
     C.Errors_Stats_XML=true;
+
+    return -2; //Continue
+}
+
+//---------------------------------------------------------------------------
+CL_OPTION(Fcpv4)
+{
+    C.Errors_Stats_FCPv4=true;
+
+    return -2; //Continue
+}
+
+//---------------------------------------------------------------------------
+CL_OPTION(Fcpv5)
+{
+    C.Errors_Stats_FCPv5=true;
 
     return -2; //Continue
 }

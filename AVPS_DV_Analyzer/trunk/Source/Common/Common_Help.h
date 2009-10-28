@@ -30,10 +30,7 @@
 //
 //***************************************************************************
 
-const char* Help_ByFrame_HTML();
-const char* Help_ByFrame_Text();
-
-const char* Help_Summary_HTML();
-const char* Help_Summary_Text();
+const char* Help_Fields_HTML();
+const char* Help_Fields_Text();
 
 #endif

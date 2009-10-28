@@ -271,7 +271,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalIncludeDirectories="../../../Source;../../../../MediaInfoLib/Source;../../../../ZenLib/Source"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;MEDIAINFO_DLL"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
 				RuntimeLibrary="0"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"

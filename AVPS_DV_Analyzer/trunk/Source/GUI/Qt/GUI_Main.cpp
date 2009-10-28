@@ -39,10 +39,26 @@
 #include <QtGui/QDragEnterEvent>
 #include <QtGui/QDesktopWidget>
 #include <QtGui/QTabWidget>
+#include <QtGui/QProgressDialog>
+#include <QtCore/QThread>
+#include <QtCore/QTimer>
 #include "ZenLib/Ztring.h"
 using namespace std;
 using namespace ZenLib;
 //---------------------------------------------------------------------------
+
+//***************************************************************************
+// Menu actions
+//***************************************************************************
+
+class SleeperThread : public QThread
+{
+    public:
+    static void msleep(unsigned long msecs)
+    {
+        QThread::msleep(msecs);
+    }
+};
 
 //***************************************************************************
 // Constructor/Destructor
@@ -54,6 +70,7 @@ GUI_Main::GUI_Main(Core* _C)
 {
     //Internal
     C=_C;
+    C->WithThreads=true;
 
     //Configure
     View_Current=View_Summary;
@@ -67,8 +84,8 @@ GUI_Main::GUI_Main(Core* _C)
     View=NULL;
     //CenterOnScreen();
     setStatusBar(new QStatusBar());
-    move(40, y());
-    resize(QApplication::desktop()->screenGeometry().width()-80, 440);
+    move(QApplication::desktop()->screenGeometry().width()/40, y());
+    resize(QApplication::desktop()->screenGeometry().width()-QApplication::desktop()->screenGeometry().width()/40*2, QApplication::desktop()->screenGeometry().height()/2);
 
     //Central
     Central=new QTabWidget(this);
@@ -78,7 +95,7 @@ GUI_Main::GUI_Main(Core* _C)
     Central->addTab(new GUI_Main_XML               (C, this), tr("XML"));
     Central->addTab(new GUI_Main_FCPv4             (C, this), tr("Final Cut Pro XML v4"));
     Central->addTab(new GUI_Main_FCPv5             (C, this), tr("Final Cut Pro XML v5"));
-    Central->addTab(new GUI_Main_MediaInfo         (C, this), tr("Technical metadata"));
+    Central->addTab(new GUI_Main_MediaInfo         (C, this), tr("Technical metadata (MediaInfo)"));
     setCentralWidget(Central);
     connect(Central, SIGNAL(currentChanged (int)), this, SLOT(OnCurrentChanged(int)));
 
@@ -94,6 +111,10 @@ GUI_Main::GUI_Main(Core* _C)
     //GUI
     setWindowTitle("DV Analyzer - AudioVisual Preservation Solutions, Inc.");
     setWindowIcon (QIcon(":/Image/AVPS/logo_sign_alpha_square.png"));
+
+    //Timer
+    ProgressDialog=NULL;
+    Timer=NULL;
 }
 
 //---------------------------------------------------------------------------
@@ -160,13 +181,34 @@ void GUI_Main::dropEvent(QDropEvent *event)
                 FileName.FindAndReplace(Ztring("/"), Ztring("\\"), 0, Ztring_Recursive);
             #endif //__WINDOWS__
             C->Menu_File_Open_Files_Continue(FileName);
-        }
-    }
 
-    //Showing
-    View_Refresh();
+        }
+
+        Open_Timer_Init();
+    }
 }
 
+void GUI_Main::OnOpen_Timer ()
+{
+    if (ProgressDialog==NULL)
+        return;    
+        
+    float Result=C->Menu_File_Open_State();
+    ProgressDialog->setValue((int)(Result*100));
+
+    if (Result==1.0 || ProgressDialog->wasCanceled())
+    {
+        ProgressDialog->hide();
+        Timer->stop();
+
+        delete ProgressDialog; ProgressDialog=NULL;
+        delete Timer; Timer=NULL;
+
+        //Showing
+        View_Refresh();
+    }
+}     
+     
 void GUI_Main::OnCurrentChanged (int Index)
 {
     //Showing
@@ -190,3 +232,27 @@ void GUI_Main::OnCurrentChanged (int Index)
     }
 
 }
+
+void GUI_Main::Open_Timer_Init ()
+{
+    if (!C->WithThreads)
+    {
+        //Showing
+        View_Refresh();
+
+        return;
+    }
+        
+    ProgressDialog=new QProgressDialog("Opening files...", "Abort Opening", 0, 100, this);
+    ProgressDialog->setWindowModality(Qt::WindowModal);
+    ProgressDialog->setMinimumDuration(0);
+    ProgressDialog->setWindowTitle("DV Analyzer");
+
+    if (Timer==NULL)
+    {
+        Timer=new QTimer(this);
+        connect(Timer, SIGNAL(timeout()), this, SLOT(OnOpen_Timer()));
+        Timer->start(100);
+    }
+}     
+     

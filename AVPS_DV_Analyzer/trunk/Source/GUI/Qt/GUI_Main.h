@@ -55,6 +55,8 @@ class QWidget;
 class QDropEvent;
 class QDragEnterEvent;
 class QTabWidget;
+class QProgressDialog;
+class QTimer;
 //---------------------------------------------------------------------------
 
 //***************************************************************************
@@ -93,7 +95,8 @@ public:
     QAction*        Menu_Export_XML;
     QAction*        Menu_Export_FCPv4;
     QAction*        Menu_Export_FCPv5;
-    QAction*        Menu_Export_MediaInfo;
+    QAction*        Menu_Export_MediaInfo_Text;
+    QAction*        Menu_Export_MediaInfo_XML;
     QMenu*          Menu_Options;
     QMenu*          Menu_Options_Verbosity;
     QAction*        Menu_Options_Verbosity_03;
@@ -104,8 +107,7 @@ public:
     QAction*        Menu_Options_MediaInfo_RawFieldsNames;
     QAction*        Menu_Options_ResetFieldSizes;
     QMenu*          Menu_Help;
-    QAction*        Menu_Help_Summary;
-    QAction*        Menu_Help_ByFrame;
+    QAction*        Menu_Help_Help;
     QAction*        Menu_Help_About;
     QAction*        Menu_Help_AVPS_Website;
 
@@ -128,15 +130,16 @@ public:
     void OnMenu_Export_XML                      ();
     void OnMenu_Export_FCPv4                    ();
     void OnMenu_Export_FCPv5                    ();
-    void OnMenu_Export_MediaInfo                ();
+    void OnMenu_Export_MediaInfo_Text           ();
+    void OnMenu_Export_MediaInfo_XML            ();
     void OnMenu_Options_ResetFieldSizes         ();
     void OnMenu_Options_MediaInfo_InternalFields();
     void OnMenu_Options_MediaInfo_RawFieldsNames();
-    void OnMenu_Help_Summary                    ();
-    void OnMenu_Help_ByFrame                    ();
+    void OnMenu_Help_Help                       ();
     void OnMenu_Help_About                      ();
     void OnMenu_Help_AVPS_Website               ();
     void OnCurrentChanged                       (int Index);
+    void OnOpen_Timer                             ();
 
 private:
     //ToolBar - List
@@ -167,9 +170,13 @@ private:
 
     void dragEnterEvent(QDragEnterEvent *event);
     void dropEvent(QDropEvent *event);
+    QProgressDialog* ProgressDialog;
+    QTimer* Timer;
 
     //Helpers
     void View_Refresh(view View_New=View_None);
+    void Open_Timer_Init ();
+
 };
 
 #endif
