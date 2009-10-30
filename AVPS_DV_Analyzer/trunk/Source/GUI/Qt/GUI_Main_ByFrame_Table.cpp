@@ -47,8 +47,10 @@ GUI_Main_ByFrame_Table::GUI_Main_ByFrame_Table(Core* _C, QWidget* parent)
     L->addWidget(Files);
     L->addWidget(Table);
 
-    L->setContentsMargins(0, 0, 0, 0);
-    
+    #if (QT_VERSION >= 0x040300)
+        L->setContentsMargins(0, 0, 0, 0);
+    #endif
+
     setLayout(L);
     setGeometry (0, 0, frameGeometry().width(), frameGeometry().height());
 

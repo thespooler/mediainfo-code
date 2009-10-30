@@ -5,11 +5,11 @@
 # norootforbuild
 
 %define _prefix	/usr
-%define libzen_version	0.4.3
-%define libmediainfo_version	0.7.20
+%define libzen_version	0.4.8
+%define libmediainfo_version	0.7.24
 
 Name:			dvanalyzer
-Version:		1.3.0
+Version:		1.3.4
 Release:		1
 Summary:		Supplies technical and tag information about a video or audio file
 Group:			Productivity/Multimedia/Other
@@ -66,7 +66,6 @@ Requires:	libqtgui4 >= 4.0.0
 %endif
 %if 0%{?suse_version} ||  0%{?opensuse_version}
 Requires:	libqt4 >= 4.0.0
-Requires:	libqt4-x11
 %endif
 
 %description gui
@@ -176,6 +175,6 @@ popd
 %{_datadir}/kde4/services/ServiceMenus/*.desktop
 
 %changelog
-* Tue Jan 01 2009 Jerome Martinez <zen@mediaarea.net> - 1.3.0-0
+* Tue Jan 01 2009 Jerome Martinez <zen@mediaarea.net> - 1.3.4-0
 - See History.txt for more info and real dates
 

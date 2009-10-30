@@ -1,7 +1,7 @@
 Source: dvanalyzer
 Priority: optional
 Maintainer: Jerome Martinez <zen@mediaarea.net>
-Build-Depends: debhelper (>= 5), tofrodos, libmediainfo0-dev (>= 0.7.20), libzen0-dev (>= 0.4.3), libqt4-dev, zlib1g-dev, pkg-config, automake, autoconf, libtool
+Build-Depends: debhelper (>= 5), tofrodos, libmediainfo0-dev (>= 0.7.24), libzen0-dev (>= 0.4.8), libqt4-dev, zlib1g-dev, pkg-config, automake, autoconf, libtool
 Standards-Version: 3.7.3
 Section: libs
 Homepage: http://mediainfo.sourceforge.net
@@ -9,7 +9,7 @@ Homepage: http://mediainfo.sourceforge.net
 Package: dvanalyzer
 Section: utils
 Architecture: any
-Depends: libmediainfo0 (>= 0.7.20), libzen0 (>= 0.4.3), zlib1g
+Depends: libmediainfo0 (>= 0.7.24), libzen0 (>= 0.4.8), zlib1g
 Description: DV Analyzer provides two primary services simultaneously:
  .
  Error Detection and Quality Control
@@ -32,7 +32,7 @@ Description: DV Analyzer provides two primary services simultaneously:
 Package: dvanalyzer-gui
 Section: utils
 Architecture: any
-Depends: libmediainfo0 (>= 0.7.20), libzen0 (>= 0.4.3), libqt4-gui, zlib1g
+Depends: libmediainfo0 (>= 0.7.24), libzen0 (>= 0.4.8), libqt4-gui, zlib1g
 Description: DV Analyzer provides two primary services simultaneously:
  .
  Error Detection and Quality Control
