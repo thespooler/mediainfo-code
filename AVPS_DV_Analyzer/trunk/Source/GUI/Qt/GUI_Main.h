@@ -101,6 +101,7 @@ public:
     QMenu*          Menu_Options_Verbosity;
     QAction*        Menu_Options_Verbosity_03;
     QAction*        Menu_Options_Verbosity_05;
+    QAction*        Menu_Options_Verbosity_09;
     QAction*        Menu_Options_Verbosity_10;
     QMenu*          Menu_Options_MediaInfo;
     QAction*        Menu_Options_MediaInfo_InternalFields;
@@ -125,6 +126,7 @@ public:
     void OnMenu_View_MediaInfo                  ();
     void OnMenu_Options_Verbosity_03            ();
     void OnMenu_Options_Verbosity_05            ();
+    void OnMenu_Options_Verbosity_09            ();
     void OnMenu_Options_Verbosity_10            ();
     void OnMenu_Export_Summary                  ();
     void OnMenu_Export_ByFrame                  ();

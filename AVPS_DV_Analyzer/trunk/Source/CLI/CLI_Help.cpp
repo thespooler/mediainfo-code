@@ -90,7 +90,8 @@ std::string Help_Verbosity()
 
     ToDisplay<<"0-2                : No info"<<std::endl;
     ToDisplay<<"3-4                : Errors only"<<std::endl;
-    ToDisplay<<"5-9                : Errors and info"<<std::endl;
+    ToDisplay<<"5-8                : Errors and info"<<std::endl;
+    ToDisplay<<"9                  : Errors and info (including arbitrary bit)"<<std::endl;
     ToDisplay<<"10                 : All"<<std::endl;
 
     return ToDisplay.str();

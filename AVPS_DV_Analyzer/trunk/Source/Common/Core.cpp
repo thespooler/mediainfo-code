@@ -130,6 +130,13 @@ void Core::Menu_Verbosity_05 ()
 }
 
 //---------------------------------------------------------------------------
+void Core::Menu_Verbosity_09 ()
+{
+    Verbosity=(float)0.9;
+    MI->Option(_T("Verbosity"), _T("0.9"));
+}
+
+//---------------------------------------------------------------------------
 void Core::Menu_Verbosity_10 ()
 {
     Verbosity=(float)1.0;
@@ -184,9 +191,9 @@ String& Core::Summary ()
          && MI->Get(Pos, Stream_Audio, 3, _T("MuxingMode"))!=_T("DV")
          && MI->Get(Pos, Stream_Audio, 4, _T("MuxingMode"))!=_T("DV"))
             Text+=_T("This file does not appear to include a DV track.");
-        else if (Verbosity>=0.5)
+        else if (Verbosity>=(float)0.5)
             Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_End_05"));
-        else if (Verbosity>=0.3)
+        else if (Verbosity>=(float)0.3)
             Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_End_03"));
         
         Text+=_T('\n');
@@ -224,17 +231,19 @@ String& Core::ByFrame ()
         
         if (Verbosity>=1.0)
             Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_10"));
-        else if (Verbosity>=0.5)
+        else if (Verbosity>=(float)0.9)
+            Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_09"));
+        else if (Verbosity>=(float)0.5)
             Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_05"));
-        else if (Verbosity>=0.3)
+        else if (Verbosity>=(float)0.3)
             Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_03"));
         
         if (Errors_Stats_WithFooter)
         {
             Text+=_T('\n');
-            if (Verbosity>=0.5)
+            if (Verbosity>=(float)0.5)
                 Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_End_05"));
-            else if (Verbosity>=0.3)
+            else if (Verbosity>=(float)0.3)
                 Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_End_03"));
         }
 
@@ -254,9 +263,11 @@ String Core::ByFrame (size_t Pos)
     Text=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_Begin"))+_T('\n');
     if (Verbosity>=1.0)
         Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_10"));
-    else if (Verbosity>=0.5)
+    else if (Verbosity>=(float)0.9)
+        Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_09"));
+    else if (Verbosity>=(float)0.5)
         Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_05"));
-    else if (Verbosity>=0.3)
+    else if (Verbosity>=(float)0.3)
         Text+=MI->Get(Pos, Stream_Video, 0, _T("Errors_Stats_03"));
 
     for (size_t Pos=0; Pos<Text.size(); Pos++)
@@ -327,9 +338,11 @@ MediaInfoNameSpace::String &Core::XML()
         List.Separator_Set(1, _T("\t"));
         if (Verbosity>=1.0)
             List.Write(MI->Get(File_Pos, Stream_Video, 0, _T("Errors_Stats_10")));
-        else if (Verbosity>=0.5)
+        else if (Verbosity>=(float)0.9)
+            List.Write(MI->Get(File_Pos, Stream_Video, 0, _T("Errors_Stats_09")));
+        else if (Verbosity>=(float)0.5)
             List.Write(MI->Get(File_Pos, Stream_Video, 0, _T("Errors_Stats_05")));
-        else if (Verbosity>=0.3)
+        else if (Verbosity>=(float)0.3)
             List.Write(MI->Get(File_Pos, Stream_Video, 0, _T("Errors_Stats_03")));
 
         //By Frame - For each line
@@ -473,9 +486,9 @@ MediaInfoNameSpace::String &Core::XML()
 
         //Summary - Retrieving
         List.clear();
-        if (Verbosity>=0.5)
+        if (Verbosity>=(float)0.5)
             List.Write(MI->Get(File_Pos, Stream_Video, 0, _T("Errors_Stats_End_05")));
-        else if (Verbosity>=0.3)
+        else if (Verbosity>=(float)0.3)
             List.Write(MI->Get(File_Pos, Stream_Video, 0, _T("Errors_Stats_End_03")));
 
         //Summary - For each line
@@ -679,6 +692,9 @@ MediaInfoNameSpace::String &Core::FCP(size_t Version)
     size_t Count=MI->Count_Get();
     for (size_t File_Pos=0; File_Pos<Count; File_Pos++)
     {
+        if (MI->Get(File_Pos, Stream_Video, 0, _T("Format"))==_T("Digital Video"))
+        {
+
         //XML Header
         Text+=_T("\t<clip id=\"")+MI->Get(File_Pos, Stream_General, 0, _T("CompleteName"))+_T("\">\n");
         Text+=_T("\t\t<name>")+MI->Get(File_Pos, Stream_General, 0, _T("FileName"))+_T("</name>\n");
@@ -702,9 +718,11 @@ MediaInfoNameSpace::String &Core::FCP(size_t Version)
         List.Separator_Set(1, _T("\t"));
         if (Verbosity>=1.0)
             List.Write(MI->Get(File_Pos, Stream_Video, 0, _T("Errors_Stats_10")));
-        else if (Verbosity>=0.5)
+        else if (Verbosity>=(float)0.9)
+            List.Write(MI->Get(File_Pos, Stream_Video, 0, _T("Errors_Stats_09")));
+        else if (Verbosity>=(float)0.5)
             List.Write(MI->Get(File_Pos, Stream_Video, 0, _T("Errors_Stats_05")));
-        else if (Verbosity>=0.3)
+        else if (Verbosity>=(float)0.3)
             List.Write(MI->Get(File_Pos, Stream_Video, 0, _T("Errors_Stats_03")));
 
         //By Frame - For each line
@@ -829,6 +847,8 @@ MediaInfoNameSpace::String &Core::FCP(size_t Version)
 
         //XML Footer
         Text+=_T("\t</clip>\n");
+
+        }
     }
          
     //Footer

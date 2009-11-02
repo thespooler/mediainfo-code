@@ -4,8 +4,8 @@ RequestExecutionLevel admin
 ; Some defines
 !define PRODUCT_NAME "AVPS DV Analyzer"
 !define PRODUCT_PUBLISHER "AVPS"
-!define PRODUCT_VERSION "1.3.3"
-!define PRODUCT_VERSION4 "1.3.3.0"
+!define PRODUCT_VERSION "1.3.4.2"
+!define PRODUCT_VERSION4 "1.3.4.2"
 !define PRODUCT_WEB_SITE "http://www.avpreserve.com/blog/dvanalyzer/"
 !define COMPANY_REGISTRY "Software\AVPS"
 !define PRODUCT_REGISTRY "Software\AVPS\DV Analyzer"

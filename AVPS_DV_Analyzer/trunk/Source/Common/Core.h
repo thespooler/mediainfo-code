@@ -60,6 +60,7 @@ public:
     void                        Menu_Verbosity_XX               (const MediaInfoNameSpace::String &Value);
     void                        Menu_Verbosity_03               ();
     void                        Menu_Verbosity_05               ();
+    void                        Menu_Verbosity_09               ();
     void                        Menu_Verbosity_10               ();
     void                        Menu_Option_Preferences_Option  (const MediaInfoNameSpace::String &Param, const MediaInfoNameSpace::String &Value);
 

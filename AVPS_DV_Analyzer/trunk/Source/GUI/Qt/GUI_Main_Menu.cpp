@@ -180,6 +180,12 @@ void GUI_Main::Menu_Create()
     Menu_Options_Verbosity_05->setStatusTip(tr("DV analysis by frame, Errors and information"));
     connect(Menu_Options_Verbosity_05, SIGNAL(triggered()), this, SLOT(OnMenu_Options_Verbosity_05()));
 
+    Menu_Options_Verbosity_09 = new QAction(tr("Errors and information (including arbitrary bit)"), this);
+    Menu_Options_Verbosity_09->setShortcut(tr(""));
+    Menu_Options_Verbosity_09->setCheckable(true);
+    Menu_Options_Verbosity_09->setStatusTip(tr("DV analysis by frame, Errors and information (including arbitrary bit)"));
+    connect(Menu_Options_Verbosity_09, SIGNAL(triggered()), this, SLOT(OnMenu_Options_Verbosity_09()));
+
     Menu_Options_Verbosity_10 = new QAction(tr("All frames"), this);
     Menu_Options_Verbosity_10->setShortcut(tr(""));
     Menu_Options_Verbosity_10->setCheckable(true);
@@ -189,6 +195,7 @@ void GUI_Main::Menu_Create()
     Menu_Options_Verbosity_Group = new QActionGroup(this);
     Menu_Options_Verbosity_Group->addAction(Menu_Options_Verbosity_03);
     Menu_Options_Verbosity_Group->addAction(Menu_Options_Verbosity_05);
+    Menu_Options_Verbosity_Group->addAction(Menu_Options_Verbosity_09);
     Menu_Options_Verbosity_Group->addAction(Menu_Options_Verbosity_10);
 
     Menu_Options_MediaInfo_InternalFields = new QAction(tr("Internal fields"), this);
@@ -213,6 +220,7 @@ void GUI_Main::Menu_Create()
     Menu_Options_Verbosity=Menu_Options->addMenu(tr("&Verbosity (frame reporting)"));
     Menu_Options_Verbosity->addAction(Menu_Options_Verbosity_03);
     Menu_Options_Verbosity->addAction(Menu_Options_Verbosity_05);
+    Menu_Options_Verbosity->addAction(Menu_Options_Verbosity_09);
     Menu_Options_Verbosity->addAction(Menu_Options_Verbosity_10);
     Menu_Options_MediaInfo=Menu_Options->addMenu(tr("&Technical Metadata (MediaInfo)"));
     Menu_Options_MediaInfo->addAction(Menu_Options_MediaInfo_InternalFields);
@@ -378,6 +386,17 @@ void GUI_Main::OnMenu_Options_Verbosity_05()
 {
     //Configuring
     C->Menu_Verbosity_05();
+
+    //Showing
+    if (View_Current==View_Summary || View_Current==View_ByFrame_Table || View_Current==View_ByFrame_Text || View_Current==View_XML)
+        View_Refresh();
+}
+
+//---------------------------------------------------------------------------
+void GUI_Main::OnMenu_Options_Verbosity_09()
+{
+    //Configuring
+    C->Menu_Verbosity_09();
 
     //Showing
     if (View_Current==View_Summary || View_Current==View_ByFrame_Table || View_Current==View_ByFrame_Text || View_Current==View_XML)
