@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Type=Application
 Version=1.0
-Name=DV Analyzer
+Name=AVPS DV Analyzer
 GenericName=Media Analyzer
 Comment=Supplies technical and tag information about a DV file
 Icon=dvanalyzer
