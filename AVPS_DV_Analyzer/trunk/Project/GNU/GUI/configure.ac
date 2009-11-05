@@ -84,7 +84,7 @@ dnl ### DvAnalyzer specific flags
 dnl #########################################################################
 
 dnl -------------------------------------------------------------------------
-dnl Use Qt
+dnl Use Qt (v1)
 dnl
 dnl if test "$with_qt" != "no"; then
 	if test -d ../../../../qt/include; then
