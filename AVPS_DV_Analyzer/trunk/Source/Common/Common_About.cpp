@@ -1,5 +1,5 @@
 // Common_About - About strings
-// Copyright (C) 2009-2009 AudioVisual Preservation Solutions, info@avpreserve.com
+// Copyright (C) 2009-2009 AudioVisual Preservation Solutions, dv@avpreserve.com
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -27,7 +27,7 @@
 
 //---------------------------------------------------------------------------
 const char* NameVersion_HTML() {return
-"DV Analyzer v.1.3.4.2 by <a href=\"http://avpreserve.com/dvanalyzer\">AudioVisual Preservation Solutions, Inc.</a>"
+"DV Analyzer v.1.3.4.2 by <a href=\"http://avpreserve.com/dvanalyzer/\">AudioVisual Preservation Solutions, Inc.</a>"
 ;}
 
 //---------------------------------------------------------------------------
@@ -105,7 +105,7 @@ const char* AuthorLicense_HTML() {return
 "DV Analyzer was developed by AudioVisual Preservation Solutions, Inc. (AVPS).<br />"
 "Copyright (C) 2009 AudioVisual Preservation Solutions, Inc. All rights reserved.<br />"
 "<br />"
-"Please report bugs and suggestions to <a href=\"mailto:info@avpreserve.com\">info@avpreserve.com</a><br />"
+"Please report bugs and suggestions to <a href=\"mailto:dv@avpreserve.com\">dv@avpreserve.com</a><br />"
 "<br />"
 "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.<br />"
 "<br />"
@@ -125,7 +125,7 @@ const char* AuthorLicense_Text() {return
 "DV Analyzer was developed by AudioVisual Preservation Solutions, Inc. (AVPS).\n"
 "Copyright (C) 2009 AudioVisual Preservation Solutions, Inc. All rights reserved.\n"
 "\n"
-"Please report bugs and suggestions to <info@avpreserve.com>\n"
+"Please report bugs and suggestions to <dv@avpreserve.com>\n"
 "\n"
 "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n"
 "\n"

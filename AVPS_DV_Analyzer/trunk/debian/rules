@@ -63,9 +63,9 @@ install: build
 	install -m 644 License.html $(CURDIR)/debian/tmp/usr/share/doc/dvanalyzer-gui
 
 	install -dm 755 $(CURDIR)/debian/tmp/usr/share/pixmaps
-	install -m 644 Source/Ressource/Image/AVPS/logo_sign_alpha_square.png $(CURDIR)/debian/tmp/usr/share/pixmaps/dvanalyzer.png
+	install -m 644 Source/Resource/Image/AVPS/logo_sign_alpha_square.png $(CURDIR)/debian/tmp/usr/share/pixmaps/dvanalyzer.png
 	install -dm 755 $(CURDIR)/debian/tmp/usr/share/icons/hicolor/128x128/apps
-	install -m 644 Source/Ressource/Image/AVPS/logo_sign_alpha_square.png $(CURDIR)/debian/tmp/usr/share/icons/hicolor/128x128/apps/dvanalyzer.png
+	install -m 644 Source/Resource/Image/AVPS/logo_sign_alpha_square.png $(CURDIR)/debian/tmp/usr/share/icons/hicolor/128x128/apps/dvanalyzer.png
 
 	install -dm 755 $(CURDIR)/debian/tmp/usr/share/applications
 	install -m 644 Project/GNU/GUI/dvanalyzer-gui.desktop $(CURDIR)/debian/tmp/usr/share/applications

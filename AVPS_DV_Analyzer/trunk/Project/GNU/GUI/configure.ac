@@ -84,7 +84,7 @@ dnl ### DvAnalyzer specific flags
 dnl #########################################################################
 
 dnl -------------------------------------------------------------------------
-dnl Use Qt (v1)
+dnl Use Qt (v2)
 dnl
 dnl if test "$with_qt" != "no"; then
 	if test -d ../../../../qt/include; then
@@ -116,7 +116,7 @@ dnl if test "$with_qt" != "no"; then
 
 		with_qt="builtin"
 	else
-		if pkg-config --exists libzen; then
+		if pkg-config --exists QtGui; then
 			CFLAGS="$CFLAGS $(pkg-config QtGui --cflags)"
 			CXXFLAGS="$CXXFLAGS $(pkg-config QtGui --cflags)"
 			LIBS="$LIBS $(pkg-config QtGui --libs)"
@@ -155,7 +155,7 @@ dnl if test "$with_qt" != "no"; then
 	$MOC ../../../Source/GUI/Qt/GUI_Main_XML.h -o_Automated/moc_GUI_Main_XML.cpp
 	$MOC ../../../Source/GUI/Qt/GUI_Help.h -o_Automated/moc_GUI_Help.cpp
 
-	$RCC ../../../Source/Ressource/GUI_Main.qrc -o _Automated/qrc_GUI_Main.cpp
+	$RCC ../../../Source/Resource/GUI_Main.qrc -o _Automated/qrc_GUI_Main.cpp
 dnl fi
 
 dnl #########################################################################

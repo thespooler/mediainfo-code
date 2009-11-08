@@ -95,10 +95,10 @@ xcopy ..\..\Shared\Project\zlib\Template .\zlib\ /S
 rem --- Compressing Archive ---
 if "%2"=="SkipCompression" goto SkipCompression
 move AVPS_DV_Analyzer_Source AVPS_DV_Analyzer
-..\..\Shared\Binary\Windows_i386\7-zip\7z a -r -ttar -mx9 AVPS_DV_Analyzer_Source.tar AVPS_DV_Analyzer\*
-..\..\Shared\Binary\Windows_i386\7-zip\7z a -r -tbzip2 -mx9 AVPS_DV_Analyzer_.tar.bz2 AVPS_DV_Analyzer_Source.tar
-..\..\Shared\Binary\Windows_i386\7-zip\7z a -r -tgzip -mx9 AVPS_DV_Analyzer_-1.tar.gz AVPS_DV_Analyzer_Source.tar
-del AVPS_DV_Analyzer_Source.tar
+..\..\Shared\Binary\Windows_i386\7-zip\7z a -r -ttar -mx9 dvanalyzer.tar AVPS_DV_Analyzer\*
+..\..\Shared\Binary\Windows_i386\7-zip\7z a -r -tbzip2 -mx9 dvanalyzer_.tar.bz2 dvanalyzer.tar
+..\..\Shared\Binary\Windows_i386\7-zip\7z a -r -tgzip -mx9 dvanalyzer_-1.tar.gz dvanalyzer.tar
+del dvanalyzer.tar
 ..\..\Shared\Binary\Windows_i386\7-zip\7z a -r -t7z -mx9 AVPS_DV_Analyzer__AllInclusive.7z AVPS_DV_Analyzer\* MediaInfoLib\* ZenLib\* zlib\*
 move AVPS_DV_Analyzer AVPS_DV_Analyzer_Source
 :SkipCompression

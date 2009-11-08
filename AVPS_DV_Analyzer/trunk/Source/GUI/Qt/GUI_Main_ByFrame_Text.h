@@ -1,5 +1,5 @@
 // GUI_Main_ByFrame_Text - 
-// // Copyright (C) 2009-2009 AudioVisual Preservation Solutions, info@avpreserve.com
+// Copyright (C) 2009-2009 AudioVisual Preservation Solutions, dv@avpreserve.com
 //
 // This library is free software; you can redistribute it and/or
 // modify it under the terms of the GNU Lesser General Public
