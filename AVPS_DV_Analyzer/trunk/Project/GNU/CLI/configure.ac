@@ -191,7 +191,7 @@ dnl ### Report how we have been configured
 dnl #########################################################################
 
 echo ""
-echo "Configured MediaInfo for '$host'"
+echo "Configured MediaInfo for '$build'"
 echo ""
 echo "  Unicode?                                                $enable_unicode"
 echo "  Using libzen?                                           $with_zenlib"

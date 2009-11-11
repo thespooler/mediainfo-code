@@ -90,7 +90,7 @@ dnl if test "$with_qt" != "no"; then
 	if test -d ../../../../qt/include; then
 		CFLAGS="$CFLAGS -I../../../../qt/include"
 		CXXFLAGS="$CXXFLAGS -I../../../../qt/include"
-		LIBS="$LIBS -L../../../../qt/lib $LIBS -lQtCore -lQtGui"
+		LIBS="$LIBS -L../../../../qt/lib $LIBS -lQtCore -lQtGui -lz"
 		if test -x ../../../../qt/bin/moc; then
 			MOC="../../../../qt/bin/moc"
 		else
@@ -108,7 +108,7 @@ dnl if test "$with_qt" != "no"; then
 			])
 		fi
 
-		case "${host}" in
+		case "${build}" in
 		   *-*-darwin* )
 			LIBS="$LIBS -framework Carbon -framework AppKit -framework ApplicationServices"
 		  ;;
@@ -265,7 +265,7 @@ dnl ### Compiler specific
 dnl #########################################################################
 
 dnl -------------------------------------------------------------------------
-case "${host}" in
+case "${build}" in
   powerpc-montavista* )
     CFLAGS="$CFLAGS -D__MONTAVISTA__"
     CXXFLAGS="$CXXFLAGS -D__MONTAVISTA__"
@@ -321,7 +321,7 @@ dnl ### Report how we have been configured
 dnl #########################################################################
 
 echo ""
-echo "Configured AVPS DV Analyzer for '$host'"
+echo "Configured AVPS DV Analyzer for '$build'"
 echo ""
 echo "  Unicode?                                                $enable_unicode"
 echo "  Using libzen?                                           $with_zenlib"
