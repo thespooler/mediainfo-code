@@ -162,8 +162,7 @@
   }
   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fedora"))
   {
-        if (stristr($_SERVER['HTTP_USER_AGENT'], "fc1"))        $OS_Version='8';
-   else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc2"))        $OS_Version='8';
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "fc2"))        $OS_Version='8';
    else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc3"))        $OS_Version='8';
    else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc4"))        $OS_Version='8';
    else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc5"))        $OS_Version='8';
@@ -200,7 +199,7 @@
     else if ($OS_Version=='9')                                  $OS='9 (Sulphur)';
     else if ($OS_Version=='10')                                 $OS='10 (Cambridge)';
     else if ($OS_Version=='11')                                 $OS='11 (Leonidas)';
-    else if ($OS_Version=='11')                                 $OS='11 (Constantine)';
+    else if ($OS_Version=='12')                                 $OS='12 (Constantine)';
     $OS='Fedora '.$OS_Version.', '.$CPU;
    }
    else
