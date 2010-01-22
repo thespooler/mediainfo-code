@@ -10,6 +10,7 @@ include $Path.'/_/Core/SpecialPages/Log.php';
 include $Path.'/_/Core/SpecialPages/Donated.php';
 include $Path.'/_/Core/SpecialPages/NewVersionRequested.php';
 include $Path.'/_/Core/SpecialPages/NewUser.php';
+include $Path.'/_/Core/SpecialPages/Testimonials.php';
 
 //Config (specific)
 include $Path.'/_/Core/DetectOS.php';
