@@ -289,7 +289,7 @@
  }
    else
  {
-  $Version='0.7.28'; //Windows.i386
+  $Version='0.7.29'; //Windows.i386
   if (isset($Donated))
    $Link='http://download.mediaarea.net/binary/mediainfo-gui/'.$Version.'/MediaInfo_GUI_'.$Version.'_Windows_i386.exe';
   else if (isset($NewVersionRequested) && $Language=="en" )
