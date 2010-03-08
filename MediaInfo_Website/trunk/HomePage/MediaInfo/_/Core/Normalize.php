@@ -34,6 +34,11 @@ if (isset($Page_Exploded[2]) && $Page_Exploded[2]=="Help.html")
  header("Location: http://".$_SERVER['HTTP_HOST']."/".$Language."/Donate", true, 301);
  exit; 
 }
+if (isset($Page_Exploded[2]) && $Page_Exploded[2]=="Price.html")
+{
+ header("Location: http://".$_SERVER['HTTP_HOST']."/".$Language."/Prices", true, 301);
+ exit; 
+}
 
 //-PageFinal - With a page in the good language or english
 $PageFinal=$Page;
