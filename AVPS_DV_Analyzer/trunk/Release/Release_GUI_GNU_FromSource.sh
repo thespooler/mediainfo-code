@@ -43,14 +43,14 @@ cp -r ../Source/Common/*.cpp AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Common/
 mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt
 cp -r ../Source/GUI/Qt/*.h AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt/
 cp -r ../Source/GUI/Qt/*.cpp AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/GUI/Qt/
-mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/Menu
-cp -r ../Source/Ressource/Image/Menu/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/Menu/
-cp -r ../Source/Ressource/Image/Menu/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/Menu/
-mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource
-cp -r ../Source/Ressource/*.qrc AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/
-mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/AVPS
-cp -r ../Source/Ressource/Image/AVPS/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/AVPS/
-cp -r ../Source/Ressource/Image/AVPS/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Ressource/Image/AVPS/
+mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Resource/Image/Menu
+cp -r ../Source/Resource/Image/Menu/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Resource/Image/Menu/
+cp -r ../Source/Resource/Image/Menu/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Resource/Image/Menu/
+mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Resource
+cp -r ../Source/Resource/*.qrc AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Resource/
+mkdir -p AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Resource/Image/AVPS
+cp -r ../Source/Resource/Image/AVPS/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Resource/Image/AVPS/
+cp -r ../Source/Resource/Image/AVPS/*.png AVPS_DV_Analyzer_GUI_GNU_FromSource/Source/Resource/Image/AVPS/
 
 #-----------------------------------------------------------------------
 # Copying : Release

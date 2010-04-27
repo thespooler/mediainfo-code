@@ -14,7 +14,7 @@ copy BCB\GUI\AVPS_DV_Analyzer_GUI.exe BCB\GUI\DV_Analyzer.exe
 copy  ..\Project\MSVC\GUI\x64\Release\AVPS_DV_Analyzer_GUI.exe AVPS_DV_Analyzer_GUI_Windows_x64\DV_Analyzer.exe
 
 @rem --- Copying : Plugins ---
-xcopy ..\Source\Ressource\Plugin\* AVPS_DV_Analyzer_GUI_Windows_x64\Plugin\ /S
+xcopy ..\Source\Resource\Plugin\* AVPS_DV_Analyzer_GUI_Windows_x64\Plugin\ /S
 
 @rem --- Copying : Information files ---
 copy ..\License.html AVPS_DV_Analyzer_GUI_Windows_x64\
