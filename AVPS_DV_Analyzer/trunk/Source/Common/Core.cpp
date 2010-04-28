@@ -183,8 +183,8 @@ String& Core::Summary ()
             Common_Header(Pos, Count);
         }
 
-        if (MI->Get(Pos, Stream_General, 0, _T("Format"))!=_T("Digital Video")
-         && MI->Get(Pos, Stream_Video, 0, _T("Format"))!=_T("Digital Video")
+        if (MI->Get(Pos, Stream_General, 0, _T("Format"))!=_T("DV")
+         && MI->Get(Pos, Stream_Video, 0, _T("Format"))!=_T("DV")
          && MI->Get(Pos, Stream_Audio, 0, _T("MuxingMode"))!=_T("DV")
          && MI->Get(Pos, Stream_Audio, 1, _T("MuxingMode"))!=_T("DV")
          && MI->Get(Pos, Stream_Audio, 2, _T("MuxingMode"))!=_T("DV")
@@ -475,7 +475,7 @@ MediaInfoNameSpace::String &Core::XML()
             if (!MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount_Speed")).empty())
             {
                 Text+=_T("\t\t<frames_count>")+MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount_Speed"))+_T("</frames_count>\n");
-                if (MI->Get(File_Pos, Stream_Video, 0, _T("Format"))==_T("Digital Video") && MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount_Speed"))!=MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount")))
+                if (MI->Get(File_Pos, Stream_Video, 0, _T("Format"))==_T("DV") && MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount_Speed"))!=MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount")))
                 {
                     Text+=_T("\t\t<warnings>\n");
                     Text+=_T("\t\t\t<warning code=\"1\">Warning, frame count is maybe incoherant (reported by MediaInfo: ")+MI->Get(File_Pos, Stream_Video, 0, _T("FrameCount"))+_T(")</warning>\n");
@@ -692,7 +692,7 @@ MediaInfoNameSpace::String &Core::FCP(size_t Version)
     size_t Count=MI->Count_Get();
     for (size_t File_Pos=0; File_Pos<Count; File_Pos++)
     {
-        if (MI->Get(File_Pos, Stream_Video, 0, _T("Format"))==_T("Digital Video"))
+        if (MI->Get(File_Pos, Stream_Video, 0, _T("Format"))==_T("DV"))
         {
 
         //XML Header
@@ -913,12 +913,12 @@ void Core::Common_Header (size_t Pos, size_t)
 //---------------------------------------------------------------------------
 void Core::Common_Footer (size_t Pos, size_t Count)
 {
-    if (MI->Get(Pos, Stream_Video, 0, _T("Format"))==_T("Digital Video") && !MI->Get(Pos, Stream_Video, 0, _T("FrameCount")).empty() && MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))!=MI->Get(Pos, Stream_Video, 0, _T("FrameCount_Speed")))
+    if (MI->Get(Pos, Stream_Video, 0, _T("Format"))==_T("DV") && !MI->Get(Pos, Stream_Video, 0, _T("FrameCount")).empty() && MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))!=MI->Get(Pos, Stream_Video, 0, _T("FrameCount_Speed")))
     {
         Text+=_T('\n');
         Text+=_T("Warning, frame count is maybe incoherant (reported by MediaInfo: ")+MI->Get(Pos, Stream_Video, 0, _T("FrameCount"))+_T(")\n");
     }
-    if (MI->Get(Pos, Stream_General, 0, _T("Format"))!=_T("Digital Video"))
+    if (MI->Get(Pos, Stream_General, 0, _T("Format"))!=_T("DV"))
     {
         Ztring A=MI->Get(Pos, Stream_General, 0, _T("Format"));
         //Searching the count of DV audio and of container

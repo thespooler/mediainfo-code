@@ -120,6 +120,7 @@ GUI_Main::GUI_Main(Core* _C)
 //---------------------------------------------------------------------------
 GUI_Main::~GUI_Main()
 {
+    delete Timer; //Timer=NULL;
 }
 
 //***************************************************************************
@@ -250,7 +251,7 @@ void GUI_Main::Open_Timer_Init ()
 
     if (Timer==NULL)
     {
-        Timer=new QTimer(this);
+        Timer=new QTimer();
         connect(Timer, SIGNAL(timeout()), this, SLOT(OnOpen_Timer()));
         Timer->start(100);
     }
