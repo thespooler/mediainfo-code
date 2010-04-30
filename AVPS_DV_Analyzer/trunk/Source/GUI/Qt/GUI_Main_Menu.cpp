@@ -93,17 +93,23 @@ void GUI_Main::Menu_Create()
     Menu_View_XML->setStatusTip(tr(""));
     connect(Menu_View_XML, SIGNAL(triggered()), this, SLOT(OnMenu_View_XML()));
 
-    Menu_View_FCPv4 = new QAction(tr("FCPv4 output"), this);
-    Menu_View_FCPv4->setShortcut(tr(""));
-    Menu_View_FCPv4->setCheckable(true);
-    Menu_View_FCPv4->setStatusTip(tr(""));
-    connect(Menu_View_FCPv4, SIGNAL(triggered()), this, SLOT(OnMenu_View_FCPv4()));
+    Menu_View_AppleXMLIFv3 = new QAction(tr("Apple XML Interchange Format, version 3 (for Final Cut 5 or higher) output"), this);
+    Menu_View_AppleXMLIFv3->setShortcut(tr(""));
+    Menu_View_AppleXMLIFv3->setCheckable(true);
+    Menu_View_AppleXMLIFv3->setStatusTip(tr(""));
+    connect(Menu_View_AppleXMLIFv3, SIGNAL(triggered()), this, SLOT(OnMenu_View_AppleXMLIFv3()));
 
-    Menu_View_FCPv5 = new QAction(tr("FCPv5 output"), this);
-    Menu_View_FCPv5->setShortcut(tr(""));
-    Menu_View_FCPv5->setCheckable(true);
-    Menu_View_FCPv5->setStatusTip(tr(""));
-    connect(Menu_View_FCPv5, SIGNAL(triggered()), this, SLOT(OnMenu_View_FCPv5()));
+    Menu_View_AppleXMLIFv4 = new QAction(tr("Apple XML Interchange Format, version 4 (for Final Cut 6 or higher) output"), this);
+    Menu_View_AppleXMLIFv4->setShortcut(tr(""));
+    Menu_View_AppleXMLIFv4->setCheckable(true);
+    Menu_View_AppleXMLIFv4->setStatusTip(tr(""));
+    connect(Menu_View_AppleXMLIFv4, SIGNAL(triggered()), this, SLOT(OnMenu_View_AppleXMLIFv4()));
+
+    Menu_View_AppleXMLIFv5 = new QAction(tr("Apple XML Interchange Format, version 5 (for Final Cut 7 or higher) output"), this);
+    Menu_View_AppleXMLIFv5->setShortcut(tr(""));
+    Menu_View_AppleXMLIFv5->setCheckable(true);
+    Menu_View_AppleXMLIFv5->setStatusTip(tr(""));
+    connect(Menu_View_AppleXMLIFv5, SIGNAL(triggered()), this, SLOT(OnMenu_View_AppleXMLIFv5()));
 
     Menu_View_MediaInfo = new QAction(tr("Technical metadata (MediaInfo)"), this);
     Menu_View_MediaInfo->setShortcut(tr(""));
@@ -116,16 +122,18 @@ void GUI_Main::Menu_Create()
     Menu_View_Group->addAction(Menu_View_ByFrame_Table);
     Menu_View_Group->addAction(Menu_View_ByFrame_Text);
     Menu_View_Group->addAction(Menu_View_XML);
-    Menu_View_Group->addAction(Menu_View_FCPv4);
-    Menu_View_Group->addAction(Menu_View_FCPv5);
+    Menu_View_Group->addAction(Menu_View_AppleXMLIFv3);
+    Menu_View_Group->addAction(Menu_View_AppleXMLIFv4);
+    Menu_View_Group->addAction(Menu_View_AppleXMLIFv5);
     Menu_View_Group->addAction(Menu_View_MediaInfo);
     Menu_View = menuBar()->addMenu(tr("&View"));
     Menu_View->addAction(Menu_View_Summary);
     Menu_View->addAction(Menu_View_ByFrame_Table);
     Menu_View->addAction(Menu_View_ByFrame_Text);
     Menu_View->addAction(Menu_View_XML);
-    Menu_View->addAction(Menu_View_FCPv4);
-    Menu_View->addAction(Menu_View_FCPv5);
+    Menu_View->addAction(Menu_View_AppleXMLIFv3);
+    Menu_View->addAction(Menu_View_AppleXMLIFv4);
+    Menu_View->addAction(Menu_View_AppleXMLIFv5);
     Menu_View->addAction(Menu_View_MediaInfo);
     Menu_View_Group = new QActionGroup(this);
 
@@ -142,13 +150,17 @@ void GUI_Main::Menu_Create()
     Menu_Export_XML->setStatusTip(tr(""));
     connect(Menu_Export_XML, SIGNAL(triggered()), this, SLOT(OnMenu_Export_XML()));
 
-    Menu_Export_FCPv4 = new QAction(tr("Final Cut Pro XML v4 output..."), this);
-    Menu_Export_FCPv4->setStatusTip(tr(""));
-    connect(Menu_Export_FCPv4, SIGNAL(triggered()), this, SLOT(OnMenu_Export_FCPv4()));
+    Menu_Export_AppleXMLIFv3 = new QAction(tr("Apple XML Interchange Format, version 3 (for Final Cut 5 or higher)..."), this);
+    Menu_Export_AppleXMLIFv3->setStatusTip(tr(""));
+    connect(Menu_Export_AppleXMLIFv3, SIGNAL(triggered()), this, SLOT(OnMenu_Export_AppleXMLIFv3()));
 
-    Menu_Export_FCPv5 = new QAction(tr("Final Cut Pro XML v5 output..."), this);
-    Menu_Export_FCPv5->setStatusTip(tr(""));
-    connect(Menu_Export_FCPv5, SIGNAL(triggered()), this, SLOT(OnMenu_Export_FCPv5()));
+    Menu_Export_AppleXMLIFv4 = new QAction(tr("Apple XML Interchange Format, version 4 (for Final Cut 6 or higher)..."), this);
+    Menu_Export_AppleXMLIFv4->setStatusTip(tr(""));
+    connect(Menu_Export_AppleXMLIFv4, SIGNAL(triggered()), this, SLOT(OnMenu_Export_AppleXMLIFv4()));
+
+    Menu_Export_AppleXMLIFv5 = new QAction(tr("Apple XML Interchange Format, version 5 (for Final Cut 7 or higher)..."), this);
+    Menu_Export_AppleXMLIFv5->setStatusTip(tr(""));
+    connect(Menu_Export_AppleXMLIFv5, SIGNAL(triggered()), this, SLOT(OnMenu_Export_AppleXMLIFv5()));
 
     Menu_Export_MediaInfo_Text = new QAction(tr("Technical metadata (MediaInfo) (Text)..."), this);
     Menu_Export_MediaInfo_Text->setStatusTip(tr(""));
@@ -162,8 +174,9 @@ void GUI_Main::Menu_Create()
     Menu_Export->addAction(Menu_Export_Summary);
     Menu_Export->addAction(Menu_Export_ByFrame);
     Menu_Export->addAction(Menu_Export_XML);
-    Menu_Export->addAction(Menu_Export_FCPv4);
-    Menu_Export->addAction(Menu_Export_FCPv5);
+    Menu_Export->addAction(Menu_Export_AppleXMLIFv3);
+    Menu_Export->addAction(Menu_Export_AppleXMLIFv4);
+    Menu_Export->addAction(Menu_Export_AppleXMLIFv5);
     Menu_Export->addAction(Menu_Export_MediaInfo_Text);
     Menu_Export->addAction(Menu_Export_MediaInfo_XML);
 
@@ -357,17 +370,24 @@ void GUI_Main::OnMenu_View_XML()
 }
 
 //---------------------------------------------------------------------------
-void GUI_Main::OnMenu_View_FCPv4()
+void GUI_Main::OnMenu_View_AppleXMLIFv3()
 {
     //Showing
-    View_Refresh(View_FCPv4);
+    View_Refresh(View_AppleXMLIFv3);
 }
 
 //---------------------------------------------------------------------------
-void GUI_Main::OnMenu_View_FCPv5()
+void GUI_Main::OnMenu_View_AppleXMLIFv4()
 {
     //Showing
-    View_Refresh(View_FCPv5);
+    View_Refresh(View_AppleXMLIFv4);
+}
+
+//---------------------------------------------------------------------------
+void GUI_Main::OnMenu_View_AppleXMLIFv5()
+{
+    //Showing
+    View_Refresh(View_AppleXMLIFv5);
 }
 
 //---------------------------------------------------------------------------
@@ -426,10 +446,14 @@ void GUI_Main::OnMenu_Export_Summary()
         return;
 
     //Configuring
-    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    ZenLib::Ztring FileName; FileName.From_UTF8(FileNamesQ.toUtf8().data());
+    #if defined(_MACOSX)
+        FileName+=_T(".txt");
+    #endif
+    File F; F.Create(FileName);
     
     //Running
-    Ztring ToWrite=C->Summary();
+    Ztring ToWrite; ToWrite.From_UTF8(C->Summary());
     ToWrite.FindAndReplace(_T("\n"), EOL, 0, Ztring_Recursive);
     F.Write(ToWrite);
 }
@@ -446,10 +470,14 @@ void GUI_Main::OnMenu_Export_ByFrame()
         return;
 
     //Configuring
-    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    ZenLib::Ztring FileName; FileName.From_UTF8(FileNamesQ.toUtf8().data());
+    #if defined(_MACOSX)
+        FileName+=_T(".txt");
+    #endif
+    File F; F.Create(FileName);
     
     //Running
-    Ztring ToWrite=C->ByFrame();
+    Ztring ToWrite; ToWrite.From_UTF8(C->ByFrame());
     ToWrite.FindAndReplace(_T("\n"), EOL, 0, Ztring_Recursive);
     F.Write(ToWrite);
 }
@@ -466,50 +494,86 @@ void GUI_Main::OnMenu_Export_XML()
         return;
 
     //Configuring
-    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    ZenLib::Ztring FileName; FileName.From_UTF8(FileNamesQ.toUtf8().data());
+    #if defined(_MACOSX)
+        FileName+=_T(".xml");
+    #endif
+    File F; F.Create(FileName);
     
     //Running
-    Ztring ToWrite=C->XML();
+    Ztring ToWrite; ToWrite.From_UTF8(C->XML());
     ToWrite.FindAndReplace(_T("\n"), EOL, 0, Ztring_Recursive);
     F.Write(ToWrite);
 }
 
 //---------------------------------------------------------------------------
-void GUI_Main::OnMenu_Export_FCPv4()
+void GUI_Main::OnMenu_Export_AppleXMLIFv3()
 {
     //User interaction
     QString FileNamesQ = QFileDialog::getSaveFileName(  this,
-                                                        tr("Save Final Cut Pro XML v4..."),
+                                                        tr("Save Apple XML Interchange Format, version 3 (for Final Cut 5 or higher)..."),
                                                         tr(""),
                                                         tr("XML file (*.xml)"));
     if (FileNamesQ.isEmpty())
         return;
 
     //Configuring
-    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    ZenLib::Ztring FileName; FileName.From_UTF8(FileNamesQ.toUtf8().data());
+    #if defined(_MACOSX)
+        FileName+=_T(".xml");
+    #endif
+    File F; F.Create(FileName);
     
     //Running
-    Ztring ToWrite=C->FCP(4);
+    Ztring ToWrite; ToWrite.From_UTF8(C->AppleXMLIF(3));
     ToWrite.FindAndReplace(_T("\n"), EOL, 0, Ztring_Recursive);
     F.Write(ToWrite);
 }
 
 //---------------------------------------------------------------------------
-void GUI_Main::OnMenu_Export_FCPv5()
+void GUI_Main::OnMenu_Export_AppleXMLIFv4()
 {
     //User interaction
     QString FileNamesQ = QFileDialog::getSaveFileName(  this,
-                                                        tr("Save Final Cut Pro XML v5..."),
+                                                        tr("Save Apple XML Interchange Format, version 4 (for Final Cut 6 or higher)..."),
                                                         tr(""),
                                                         tr("XML file (*.xml)"));
     if (FileNamesQ.isEmpty())
         return;
 
     //Configuring
-    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    ZenLib::Ztring FileName; FileName.From_UTF8(FileNamesQ.toUtf8().data());
+    #if defined(_MACOSX)
+        FileName+=_T(".xml");
+    #endif
+    File F; F.Create(FileName);
     
     //Running
-    Ztring ToWrite=C->FCP(5);
+    Ztring ToWrite; ToWrite.From_UTF8(C->AppleXMLIF(4));
+    ToWrite.FindAndReplace(_T("\n"), EOL, 0, Ztring_Recursive);
+    F.Write(ToWrite);
+}
+
+//---------------------------------------------------------------------------
+void GUI_Main::OnMenu_Export_AppleXMLIFv5()
+{
+    //User interaction
+    QString FileNamesQ = QFileDialog::getSaveFileName(  this,
+                                                        tr("Save Apple XML Interchange Format, version 5 (for Final Cut 7 or higher)..."),
+                                                        tr(""),
+                                                        tr("XML file (*.xml)"));
+    if (FileNamesQ.isEmpty())
+        return;
+
+    //Configuring
+    ZenLib::Ztring FileName; FileName.From_UTF8(FileNamesQ.toUtf8().data());
+    #if defined(_MACOSX)
+        FileName+=_T(".xml");
+    #endif
+    File F; F.Create(FileName);
+    
+    //Running
+    Ztring ToWrite; ToWrite.From_UTF8(C->AppleXMLIF(5));
     ToWrite.FindAndReplace(_T("\n"), EOL, 0, Ztring_Recursive);
     F.Write(ToWrite);
 }
@@ -526,11 +590,15 @@ void GUI_Main::OnMenu_Export_MediaInfo_Text()
         return;
 
     //Configuring
-    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    ZenLib::Ztring FileName; FileName.From_UTF8(FileNamesQ.toUtf8().data());
+    #if defined(_MACOSX)
+        FileName+=_T(".txt");
+    #endif
+    File F; F.Create(FileName);
     
     //Running
     C->Menu_Option_Preferences_Option(_T("Language"), _T("raw"));
-    Ztring ToWrite=C->MediaInfo_Text();
+    Ztring ToWrite; ToWrite.From_UTF8(C->MediaInfo_Text());
     C->Menu_Option_Preferences_Option(_T("Language"), Menu_Options_MediaInfo_RawFieldsNames->isChecked()?_T("raw"):_T(""));
     F.Write(ToWrite);
 }
@@ -547,11 +615,15 @@ void GUI_Main::OnMenu_Export_MediaInfo_XML()
         return;
 
     //Configuring
-    File F; F.Create(ZenLib::Ztring().From_UTF8(FileNamesQ.toUtf8().data()));
+    ZenLib::Ztring FileName; FileName.From_UTF8(FileNamesQ.toUtf8().data());
+    #if defined(_MACOSX)
+        FileName+=_T(".xml");
+    #endif
+    File F; F.Create(FileName);
     
     //Running
     C->Menu_Option_Preferences_Option(_T("Language"), _T("raw"));
-    Ztring ToWrite=C->MediaInfo_XML();
+    Ztring ToWrite; ToWrite.From_UTF8(C->MediaInfo_XML());
     C->Menu_Option_Preferences_Option(_T("Language"), Menu_Options_MediaInfo_RawFieldsNames->isChecked()?_T("raw"):_T(""));
     F.Write(ToWrite);
 }

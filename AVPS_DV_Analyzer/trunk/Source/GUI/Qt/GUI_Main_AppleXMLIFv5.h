@@ -1,4 +1,4 @@
-// GUI_Main_FCPv5 - 
+// GUI_Main_AppleXMLIFv5 - 
 // Copyright (C) 2009-2009 AudioVisual Preservation Solutions, dv@avpreserve.com
 //
 // This library is free software; you can redistribute it and/or
@@ -23,8 +23,8 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#ifndef GUI_Main_FCPv5H
-#define GUI_Main_FCPv5H
+#ifndef GUI_Main_AppleXMLIFv5H
+#define GUI_Main_AppleXMLIFv5H
 //---------------------------------------------------------------------------
 
 //---------------------------------------------------------------------------
@@ -34,16 +34,16 @@ class QEvent;
 //---------------------------------------------------------------------------
 
 //***************************************************************************
-// GUI_Main_FCPv5
+// GUI_Main_AppleXMLIFv5
 //***************************************************************************
 
-class GUI_Main_FCPv5 : public QTextEdit
+class GUI_Main_AppleXMLIFv5 : public QTextEdit
 {
     Q_OBJECT
 
 public:
     //Constructor/Destructor
-    GUI_Main_FCPv5(Core* C, QWidget* parent);
+    GUI_Main_AppleXMLIFv5(Core* C, QWidget* parent);
 
     //Events
     bool event (QEvent *Event); 

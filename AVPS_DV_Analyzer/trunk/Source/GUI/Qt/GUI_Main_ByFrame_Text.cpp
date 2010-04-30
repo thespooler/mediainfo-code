@@ -51,7 +51,7 @@ bool GUI_Main_ByFrame_Text::event (QEvent *Event)
     {
         //Showing
         clear();
-        setPlainText(QString().fromUtf8(ZenLib::Ztring(C->ByFrame()).To_UTF8().c_str()));
+        setPlainText(QString().fromUtf8(C->ByFrame().c_str()));
         Event->accept();
         return true;
     }

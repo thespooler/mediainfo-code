@@ -53,7 +53,7 @@ bool GUI_Main_MediaInfo::event (QEvent *Event)
     {
         //Showing
         clear();
-        setHtml (QString().fromUtf8(ZenLib::Ztring(C->MediaInfo_HTML()).To_UTF8().c_str()));
+        setHtml (QString().fromUtf8(C->MediaInfo_HTML().c_str()));
 
         Event->accept();
         return true;

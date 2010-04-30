@@ -49,8 +49,9 @@ CL_OPTION(Help_Verbosity);
 CL_OPTION(Header);
 CL_OPTION(Footer);
 CL_OPTION(Xml);
-CL_OPTION(Fcpv4);
-CL_OPTION(Fcpv5);
+CL_OPTION(AppleXMLIFv3);
+CL_OPTION(AppleXMLIFv4);
+CL_OPTION(AppleXMLIFv5);
 CL_OPTION(Verbosity);
 CL_OPTION(LogFile);
 CL_OPTION(Version);
@@ -60,6 +61,6 @@ CL_OPTION(Default);
 // Options which need actions
 //***************************************************************************
 
-void LogFile_Action(ZenLib::Ztring Inform);
+void LogFile_Action(const string &Inform);
 
 #endif

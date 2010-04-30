@@ -3,7 +3,7 @@
 #############################################################################
 # Configure
 Home=`pwd`
-MediaInfoLib_Options="--enable-minimize-size --disable-all --enable-riff --enable-mpeg4 --enable-dvdif --enable-dvdif-analyze"
+MediaInfoLib_Options="--disable-all --enable-dvdif --enable-riff --enable-mpeg4 --enable-minimum --enable-events --enable-dvdif-analyze"
 ZenLib_Options=""
 
 #############################################################################

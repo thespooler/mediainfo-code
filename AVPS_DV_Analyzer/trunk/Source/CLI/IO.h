@@ -48,12 +48,13 @@
 
 //---------------------------------------------------------------------------
 //Write to terminal
-inline void STRINGOUT(ZenLib::Ztring Text)
+inline void STRINGOUT(const string &Text)
 {
+    ZenLib::Ztring ToOutput; ToOutput.reserve(Text.size()+1000); ToOutput.From_UTF8(Text);
     #ifdef __WINDOWS__
-        Text.FindAndReplace(_T("\r\n"), _T("\n"), 0, ZenLib::Ztring_Recursive); //MediaInfoLib handle differences between platforms, but cout too!
+        ToOutput.FindAndReplace(_T("\r\n"), _T("\n"), 0, ZenLib::Ztring_Recursive); //MediaInfoLib handle differences between platforms, but cout too!
     #endif //__WINDOWS__
-    std::cout<<Text.To_Local().c_str()<<std::endl;
+    std::cout<<ToOutput.To_Local().c_str()<<std::endl;
 }
 
 

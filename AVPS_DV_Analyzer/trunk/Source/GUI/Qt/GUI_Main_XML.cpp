@@ -53,7 +53,7 @@ bool GUI_Main_XML::event (QEvent *Event)
     {
         //Showing
         clear();
-        setPlainText(QString().fromUtf8(ZenLib::Ztring(C->XML()).To_UTF8().c_str()));
+        setPlainText(QString().fromUtf8(C->XML().c_str()));
 
         Event->accept();
         return true;

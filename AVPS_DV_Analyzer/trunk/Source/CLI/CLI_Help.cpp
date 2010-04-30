@@ -47,8 +47,9 @@ std::string Help()
     ToDisplay<<"--Header           With a header (file name, column names...)"<<std::endl;
     ToDisplay<<"--Footer           With a footer (global stats)"<<std::endl;
     ToDisplay<<"--XML              XML form"<<std::endl;
-    ToDisplay<<"--FCP4             FCP v4 form"<<std::endl;
-    ToDisplay<<"--FCP5             FCP v5 form"<<std::endl;
+    ToDisplay<<"--AppleXMLIFv3     Apple XML Interchange Format, version 3 (for Final Cut 5 or higher)"<<std::endl;
+    ToDisplay<<"--AppleXMLIFv4     Apple XML Interchange Format, version 4 (for Final Cut 6 or higher)"<<std::endl;
+    ToDisplay<<"--AppleXMLIFv5     Apple XML Interchange Format, version 5 (for Final Cut 7 or higher)"<<std::endl;
     ToDisplay<<""<<std::endl;
     ToDisplay<<"--Verbosity=x      Set the verbosity of the output"<<std::endl;
     ToDisplay<<""<<std::endl;

@@ -69,15 +69,15 @@ bool GUI_Main_ByFrame_Table::event (QEvent *Event)
     {
         //Showing
         Files->clear();
-        MediaInfoNameSpace::String &FileNames=C->FileNames();
+        string &FileNames=C->FileNames();
         size_t Begin=0;
         size_t End=FileNames.find('\n', 0);
         do
         {
             if (End!=string::npos)
-                Files->addItem(QString().fromUtf8(ZenLib::Ztring(FileNames.substr(Begin, End-Begin)).To_UTF8().c_str()));
+                Files->addItem(QString().fromUtf8(FileNames.substr(Begin, End-Begin).c_str()));
             else if (!FileNames.empty())
-                Files->addItem(QString().fromUtf8(ZenLib::Ztring(FileNames.substr(Begin, string::npos)).To_UTF8().c_str()));
+                Files->addItem(QString().fromUtf8(FileNames.substr(Begin, string::npos).c_str()));
             Begin=End+1;
             End=FileNames.find('\n', Begin);
         }
@@ -116,7 +116,7 @@ void GUI_Main_ByFrame_Table::Files_Changed (int Pos)
     ZtringListList List;
     List.Separator_Set(0, "\n");
     List.Separator_Set(1, "\t");
-    List.Write(C->ByFrame((size_t)Pos));
+    List.Write(Ztring().From_Local(C->ByFrame((size_t)Pos)));
     if (!List.empty() && !List[0].empty())
     {
         Table->setRowCount(List.size()-1);

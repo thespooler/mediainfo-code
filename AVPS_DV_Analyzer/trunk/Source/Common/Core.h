@@ -37,7 +37,10 @@
     #include "MediaInfo/MediaInfoList.h"
     #define MediaInfoNameSpace MediaInfoLib
 #endif
+#include <vector>
+#include "MediaInfo/MediaInfo_Events.h"
 using namespace MediaInfoNameSpace;
+using namespace std;
 //---------------------------------------------------------------------------
 
 //***************************************************************************
@@ -65,36 +68,42 @@ public:
     void                        Menu_Option_Preferences_Option  (const MediaInfoNameSpace::String &Param, const MediaInfoNameSpace::String &Value);
 
     //Datas
-    MediaInfoNameSpace::String &FileNames();
-    MediaInfoNameSpace::String &Summary();
-    MediaInfoNameSpace::String &ByFrame();
-    MediaInfoNameSpace::String  ByFrame(size_t Pos);
-    MediaInfoNameSpace::String &XML();
-    MediaInfoNameSpace::String &FCP(size_t Version=4);
-    MediaInfoNameSpace::String &MediaInfo_Text();
-    MediaInfoNameSpace::String &MediaInfo_HTML();
-    MediaInfoNameSpace::String &MediaInfo_XML();
+    string &FileNames();
+    string &Summary();
+    string &ByFrame();
+    string  ByFrame(size_t Pos);
+    string &XML();
+    string &AppleXMLIF(size_t Version=5);
+    string &MediaInfo_Text();
+    string &MediaInfo_HTML();
+    string &MediaInfo_XML();
     bool Errors_Stats_WithHeader;
     bool Errors_Stats_WithFooter;
     bool Errors_Stats_XML;
-    bool Errors_Stats_FCPv4;
-    bool Errors_Stats_FCPv5;
+    bool Errors_Stats_AppleXMLIFv3;
+    bool Errors_Stats_AppleXMLIFv4;
+    bool Errors_Stats_AppleXMLIFv5;
     bool WithThreads;
 
     //Temp
     void    Data_Prepare();
-    MediaInfoNameSpace::String &Text_Get() {return Text;};
+    string &Text_Get() {return Text;};
     void* GUI_Main_Handler;
+    void Analysis_NewFile();
+    void Analysis_Clear();
+    void Analysis_Frame_Add(const MediaInfo_Event_DvDif_Analysis_Frame_0* FrameData);
 
 protected:
     MediaInfoNameSpace::MediaInfoList* MI;
-    MediaInfoNameSpace::String  Text;
+    string  Text;
     float Verbosity;
 
     //Internal
     void Common_Header(size_t Pos, size_t Count);
     void Common_Footer(size_t Pos, size_t Count);
     void Common();
+    std::vector<std::vector<MediaInfo_Event_DvDif_Analysis_Frame_0>*> Analysis;
+    void Analysis_CreateText(string &Text, size_t File_Pos);
 };
 
 #endif

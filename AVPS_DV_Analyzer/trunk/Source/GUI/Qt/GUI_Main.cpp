@@ -29,8 +29,9 @@
 #include "GUI/Qt/GUI_Main_MediaInfo.h"
 #include "GUI/Qt/GUI_Main_Summary.h"
 #include "GUI/Qt/GUI_Main_XML.h"
-#include "GUI/Qt/GUI_Main_FCPv4.h"
-#include "GUI/Qt/GUI_Main_FCPv5.h"
+#include "GUI/Qt/GUI_Main_AppleXMLIFv3.h"
+#include "GUI/Qt/GUI_Main_AppleXMLIFv4.h"
+#include "GUI/Qt/GUI_Main_AppleXMLIFv5.h"
 #include <QtCore/QEvent>
 #include <QtCore/QMimeData>
 #include <QtCore/QUrl>
@@ -84,18 +85,19 @@ GUI_Main::GUI_Main(Core* _C)
     View=NULL;
     //CenterOnScreen();
     setStatusBar(new QStatusBar());
-    move(QApplication::desktop()->screenGeometry().width()/40, y());
+    move(QApplication::desktop()->screenGeometry().width()/40, 40);
     resize(QApplication::desktop()->screenGeometry().width()-QApplication::desktop()->screenGeometry().width()/40*2, QApplication::desktop()->screenGeometry().height()/2);
 
     //Central
     Central=new QTabWidget(this);
-    Central->addTab(new GUI_Main_Text_Summary      (C, this), tr("DV analysis summary"));
-    Central->addTab(new GUI_Main_ByFrame_Table     (C, this), tr("DV analysis by frame (Table)"));
-    Central->addTab(new GUI_Main_ByFrame_Text      (C, this), tr("DV analysis by frame (Text)"));
+    Central->addTab(new GUI_Main_Text_Summary      (C, this), tr("File Summary"));
+    Central->addTab(new GUI_Main_ByFrame_Table     (C, this), tr("Frame Table"));
+    Central->addTab(new GUI_Main_ByFrame_Text      (C, this), tr("Frame Text"));
     Central->addTab(new GUI_Main_XML               (C, this), tr("XML"));
-    Central->addTab(new GUI_Main_FCPv4             (C, this), tr("Final Cut Pro XML v4"));
-    Central->addTab(new GUI_Main_FCPv5             (C, this), tr("Final Cut Pro XML v5"));
-    Central->addTab(new GUI_Main_MediaInfo         (C, this), tr("Technical metadata (MediaInfo)"));
+    Central->addTab(new GUI_Main_AppleXMLIFv3      (C, this), tr("FCP v5"));
+    Central->addTab(new GUI_Main_AppleXMLIFv4      (C, this), tr("FCP v6"));
+    Central->addTab(new GUI_Main_AppleXMLIFv5      (C, this), tr("FCP v7"));
+    Central->addTab(new GUI_Main_MediaInfo         (C, this), tr("MediaInfo"));
     setCentralWidget(Central);
     connect(Central, SIGNAL(currentChanged (int)), this, SLOT(OnCurrentChanged(int)));
 
@@ -134,6 +136,7 @@ void GUI_Main::View_Refresh(view View_New)
     {
         Central->setCurrentIndex(View_New);
         View=Central->currentWidget();
+        View_Current=View_New;
     }
 
     /*
@@ -219,9 +222,10 @@ void GUI_Main::OnCurrentChanged (int Index)
         case 1  : Menu_View_ByFrame_Table->setChecked(true); OnMenu_View_ByFrame_Table(); break;
         case 2  : Menu_View_ByFrame_Text->setChecked(true); OnMenu_View_ByFrame_Text(); break;
         case 3  : Menu_View_XML->setChecked(true); OnMenu_View_XML(); break;
-        case 4  : Menu_View_FCPv4->setChecked(true); OnMenu_View_FCPv4(); break;
-        case 5  : Menu_View_FCPv5->setChecked(true); OnMenu_View_FCPv5(); break;
-        case 6  : Menu_View_MediaInfo->setChecked(true); OnMenu_View_MediaInfo(); break;
+        case 4  : Menu_View_AppleXMLIFv3->setChecked(true); OnMenu_View_AppleXMLIFv3(); break;
+        case 5  : Menu_View_AppleXMLIFv4->setChecked(true); OnMenu_View_AppleXMLIFv4(); break;
+        case 6  : Menu_View_AppleXMLIFv5->setChecked(true); OnMenu_View_AppleXMLIFv5(); break;
+        case 7  : Menu_View_MediaInfo->setChecked(true); OnMenu_View_MediaInfo(); break;
         default : ;
     }
 

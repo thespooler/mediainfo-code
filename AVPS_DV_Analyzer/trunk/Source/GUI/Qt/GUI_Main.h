@@ -84,8 +84,9 @@ public:
     QAction*        Menu_View_ByFrame_Table;
     QAction*        Menu_View_ByFrame_Text;
     QAction*        Menu_View_XML;
-    QAction*        Menu_View_FCPv4;
-    QAction*        Menu_View_FCPv5;
+    QAction*        Menu_View_AppleXMLIFv3;
+    QAction*        Menu_View_AppleXMLIFv4;
+    QAction*        Menu_View_AppleXMLIFv5;
     QAction*        Menu_View_MediaInfo;
     QActionGroup*   Menu_View_Group;
     QActionGroup*   Menu_Options_Verbosity_Group;
@@ -93,8 +94,9 @@ public:
     QAction*        Menu_Export_Summary;
     QAction*        Menu_Export_ByFrame;
     QAction*        Menu_Export_XML;
-    QAction*        Menu_Export_FCPv4;
-    QAction*        Menu_Export_FCPv5;
+    QAction*        Menu_Export_AppleXMLIFv3;
+    QAction*        Menu_Export_AppleXMLIFv4;
+    QAction*        Menu_Export_AppleXMLIFv5;
     QAction*        Menu_Export_MediaInfo_Text;
     QAction*        Menu_Export_MediaInfo_XML;
     QMenu*          Menu_Options;
@@ -121,8 +123,9 @@ public:
     void OnMenu_View_ByFrame_Table              ();
     void OnMenu_View_ByFrame_Text               ();
     void OnMenu_View_XML                        ();
-    void OnMenu_View_FCPv4                      ();
-    void OnMenu_View_FCPv5                      ();
+    void OnMenu_View_AppleXMLIFv3               ();
+    void OnMenu_View_AppleXMLIFv4               ();
+    void OnMenu_View_AppleXMLIFv5               ();
     void OnMenu_View_MediaInfo                  ();
     void OnMenu_Options_Verbosity_03            ();
     void OnMenu_Options_Verbosity_05            ();
@@ -131,8 +134,9 @@ public:
     void OnMenu_Export_Summary                  ();
     void OnMenu_Export_ByFrame                  ();
     void OnMenu_Export_XML                      ();
-    void OnMenu_Export_FCPv4                    ();
-    void OnMenu_Export_FCPv5                    ();
+    void OnMenu_Export_AppleXMLIFv3             ();
+    void OnMenu_Export_AppleXMLIFv4             ();
+    void OnMenu_Export_AppleXMLIFv5             ();
     void OnMenu_Export_MediaInfo_Text           ();
     void OnMenu_Export_MediaInfo_XML            ();
     void OnMenu_Options_ResetFieldSizes         ();
@@ -164,8 +168,9 @@ private:
         View_ByFrame_Table,
         View_ByFrame_Text,
         View_XML,
-        View_FCPv4,
-        View_FCPv5,
+        View_AppleXMLIFv3,
+        View_AppleXMLIFv4,
+        View_AppleXMLIFv5,
         View_MediaInfo,
         View_None,
     };

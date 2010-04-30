@@ -1,4 +1,4 @@
-// GUI_Main_FCPv4 - 
+// GUI_Main_AppleXMLIFv3 - 
 // Copyright (C) 2009-2009 AudioVisual Preservation Solutions, dv@avpreserve.com
 //
 // This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //---------------------------------------------------------------------------
-#include "GUI/Qt/GUI_Main_FCPv4.h"
+#include "GUI/Qt/GUI_Main_AppleXMLIFv3.h"
 #include "Common/Core.h"
 #include "ZenLib/Ztring.h"
 #include <QtGui/QLabel>
@@ -31,7 +31,7 @@
 //***************************************************************************
 
 //---------------------------------------------------------------------------
-GUI_Main_FCPv4::GUI_Main_FCPv4(Core* _C, QWidget* parent)
+GUI_Main_AppleXMLIFv3::GUI_Main_AppleXMLIFv3(Core* _C, QWidget* parent)
 : QTextEdit(parent)
 {
     //Internal
@@ -47,13 +47,13 @@ GUI_Main_FCPv4::GUI_Main_FCPv4(Core* _C, QWidget* parent)
 //***************************************************************************
 
 //---------------------------------------------------------------------------
-bool GUI_Main_FCPv4::event (QEvent *Event) 
+bool GUI_Main_AppleXMLIFv3::event (QEvent *Event) 
 {
     if (Event->type()==QEvent::User)
     {
         //Showing
         clear();
-        setPlainText(QString().fromUtf8(ZenLib::Ztring(C->FCP(4)).To_UTF8().c_str()));
+        setPlainText(QString().fromUtf8(C->AppleXMLIF(3).c_str()));
 
         Event->accept();
         return true;

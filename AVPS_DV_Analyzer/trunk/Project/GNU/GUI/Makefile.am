@@ -11,8 +11,9 @@ dvanalyzer_gui_SOURCES = \
     ../../../Source/GUI/Qt/GUI_Main.cpp \
     ../../../Source/GUI/Qt/GUI_Main_ByFrame_Table.cpp \
     ../../../Source/GUI/Qt/GUI_Main_ByFrame_Text.cpp \
-    ../../../Source/GUI/Qt/GUI_Main_FCPv4.cpp \
-    ../../../Source/GUI/Qt/GUI_Main_FCPv5.cpp \
+    ../../../Source/GUI/Qt/GUI_Main_AppleXMLIFv3.cpp \
+    ../../../Source/GUI/Qt/GUI_Main_AppleXMLIFv4.cpp \
+    ../../../Source/GUI/Qt/GUI_Main_AppleXMLIFv5.cpp \
     ../../../Source/GUI/Qt/GUI_Main_MediaInfo.cpp \
     ../../../Source/GUI/Qt/GUI_Main_Menu.cpp \
     ../../../Source/GUI/Qt/GUI_Main_Summary.cpp \
@@ -22,8 +23,9 @@ dvanalyzer_gui_SOURCES = \
     _Automated/moc_GUI_Help.cpp \
     _Automated/moc_GUI_Main_ByFrame_Table.cpp \
     _Automated/moc_GUI_Main_ByFrame_Text.cpp \
-    _Automated/moc_GUI_Main_FCPv4.cpp \
-    _Automated/moc_GUI_Main_FCPv5.cpp \
+    _Automated/moc_GUI_Main_AppleXMLIFv3.cpp \
+    _Automated/moc_GUI_Main_AppleXMLIFv4.cpp \
+    _Automated/moc_GUI_Main_AppleXMLIFv5.cpp \
     _Automated/moc_GUI_Main_MediaInfo.cpp \
     _Automated/moc_GUI_Main_Summary.cpp \
     _Automated/moc_GUI_Main_XML.cpp \

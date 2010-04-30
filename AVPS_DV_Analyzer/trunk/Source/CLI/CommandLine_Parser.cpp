@@ -58,8 +58,9 @@ int Parse(Core &C, MediaInfoNameSpace::String &Argument)
     OPTION("--header",                                      Header)
     OPTION("--footer",                                      Footer)
     OPTION("--xml",                                         Xml)
-    OPTION("--fcp4",                                        Fcpv4)
-    OPTION("--fcp5",                                        Fcpv5)
+    OPTION("--applexmlifv3",                                AppleXMLIFv3)
+    OPTION("--applexmlifv4",                                AppleXMLIFv4)
+    OPTION("--applexmlifv5",                                AppleXMLIFv5)
     OPTION("--verbosity",                                   Verbosity)
     OPTION("--logfile",                                     LogFile)
     OPTION("--version",                                     Version)
@@ -142,17 +143,25 @@ CL_OPTION(Xml)
 }
 
 //---------------------------------------------------------------------------
-CL_OPTION(Fcpv4)
+CL_OPTION(AppleXMLIFv3)
 {
-    C.Errors_Stats_FCPv4=true;
+    C.Errors_Stats_AppleXMLIFv3=true;
 
     return -2; //Continue
 }
 
 //---------------------------------------------------------------------------
-CL_OPTION(Fcpv5)
+CL_OPTION(AppleXMLIFv4)
 {
-    C.Errors_Stats_FCPv5=true;
+    C.Errors_Stats_AppleXMLIFv4=true;
+
+    return -2; //Continue
+}
+
+//---------------------------------------------------------------------------
+CL_OPTION(AppleXMLIFv5)
+{
+    C.Errors_Stats_AppleXMLIFv5=true;
 
     return -2; //Continue
 }
@@ -212,12 +221,11 @@ CL_OPTION(Default)
     return -2; //Continue
 }
 
-void LogFile_Action(ZenLib::Ztring Inform)
+void LogFile_Action(const string &Inform)
 {
     if (LogFile_FileName.empty())
         return;
 
-    std::string Inform_Ansi=Inform.To_UTF8();
     std::fstream File(LogFile_FileName.To_Local().c_str(), std::ios_base::out|std::ios_base::binary|std::ios_base::trunc);
-    File.write(Inform_Ansi.c_str(), Inform_Ansi.size());
+    File.write(Inform.c_str(), Inform.size());
 }

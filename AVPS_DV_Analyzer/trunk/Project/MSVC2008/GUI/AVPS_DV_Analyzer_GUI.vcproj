@@ -356,11 +356,15 @@
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_FCPv4.cpp"
+					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_AppleXMLIFv3.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_FCPv5.cpp"
+					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_AppleXMLIFv4.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_AppleXMLIFv5.cpp"
 					>
 				</File>
 				<File
@@ -403,11 +407,15 @@
 						>
 					</File>
 					<File
-						RelativePath=".\_Automated\moc_GUI_Main_FCPv4.cpp"
+						RelativePath=".\_Automated\moc_GUI_Main_AppleXMLIFv3.cpp"
 						>
 					</File>
 					<File
-						RelativePath=".\_Automated\moc_GUI_Main_FCPv5.cpp"
+						RelativePath=".\_Automated\moc_GUI_Main_AppleXMLIFv4.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\_Automated\moc_GUI_Main_AppleXMLIFv5.cpp"
 						>
 					</File>
 					<File
@@ -482,11 +490,15 @@
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_FCPv4.h"
+					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_AppleXMLIFv3.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_FCPv5.h"
+					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_AppleXMLIFv4.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\Source\GUI\Qt\GUI_Main_AppleXMLIFv5.h"
 					>
 				</File>
 				<File
