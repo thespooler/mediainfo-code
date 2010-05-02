@@ -4,9 +4,13 @@ Notes:
 - Deleted
 x Correction
 
-Version 1.4.0, 2010-
+Version 1.4.0, 2010-05-02
 --------------
-+ A lot less memory usage (no more crash for big files because of memory allocation failure)
++ #81, A lot less memory usage (no more crash for big files because of memory allocation failure)
++ #110, continuous timecode math error on PAL files
++ #80, Support Apple Interchange Format version 3 (for FCP v5)
++ Some wording is more explicit
+x #78, Apple Interchange Format version 5: color attribute was wrongly implemented
 
 Version 1.3.4.2, 2009-11-01
 --------------

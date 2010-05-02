@@ -6,7 +6,7 @@ rmdir AVPS_DV_Analyzer_CLI_Windows_i386 /S /Q
 mkdir AVPS_DV_Analyzer_CLI_Windows_i386
 
 rem --- Copying : Exe ---
-xcopy ..\Project\MSVC\CLI\Win32\Release\dvanalyzer.exe AVPS_DV_Analyzer_CLI_Windows_i386\ /S
+xcopy ..\Project\MSVC2008\CLI\Win32\Release\dvanalyzer.exe AVPS_DV_Analyzer_CLI_Windows_i386\ /S
 
 rem --- Copying : Plugins ---
 xcopy ..\Source\Resource\Plugin\Custom\* AVPS_DV_Analyzer_CLI_Windows_i386\Plugin\Custom\ /S

@@ -4,9 +4,9 @@
 
 # norootforbuild
 
-%define dvanalyzer_version		1.3.4
-%define libmediainfo_version	0.7.24
-%define libzen_version			0.4.8
+%define dvanalyzer_version		1.4.0
+%define libmediainfo_version	0.7.32
+%define libzen_version			0.4.14
 
 Name:			dvanalyzer
 Version:		%dvanalyzer_version
@@ -190,6 +190,6 @@ popd
 %{_datadir}/kde4/services/ServiceMenus/*.desktop
 
 %changelog
-* Tue Jan 01 2009 Jerome Martinez <zen@mediaarea.net> - 1.3.4-0
+* Tue Jan 01 2009 Jerome Martinez <zen@mediaarea.net> - 1.4.0-0
 - See History.txt for more info and real dates
 
