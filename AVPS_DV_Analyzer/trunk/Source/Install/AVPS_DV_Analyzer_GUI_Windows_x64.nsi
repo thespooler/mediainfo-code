@@ -4,8 +4,8 @@ RequestExecutionLevel admin
 ; Some defines
 !define PRODUCT_NAME "AVPS DV Analyzer"
 !define PRODUCT_PUBLISHER "AVPS"
-!define PRODUCT_VERSION "1.3.4.2"
-!define PRODUCT_VERSION4 "1.3.4.2"
+!define PRODUCT_VERSION "1.4.0"
+!define PRODUCT_VERSION4 "1.4.0.0"
 !define PRODUCT_WEB_SITE "http://www.avpreserve.com/blog/dvanalyzer/"
 !define COMPANY_REGISTRY "Software\AVPS"
 !define PRODUCT_REGISTRY "Software\AVPS\DV Analyzer"
@@ -22,7 +22,7 @@ SetCompressor /FINAL /SOLID lzma
 ; Modern UI
 !include "MUI2.nsh"
 !define MUI_ABORTWARNING
-!define MUI_ICON "..\..\Source\Ressource\Image\AVPS\logo_sign_alpha_square.ico"
+!define MUI_ICON "..\..\Source\Resource\Image\AVPS\logo_sign_alpha_square.ico"
 
 ; Language Selection Dialog Settings
 !define MUI_LANGDLL_REGISTRY_ROOT "${PRODUCT_UNINST_ROOT_KEY}"
@@ -79,7 +79,7 @@ Section "SectionPrincipale" SEC01
   SetOutPath "$INSTDIR"
   CreateDirectory "$SMPROGRAMS\AVPS DV Analyzer"
   CreateShortCut "$SMPROGRAMS\AVPS DV Analyzer\AVPS DV Analyzer.lnk" "$INSTDIR\DV_Analyzer.exe" "" "" "" "" "" "AVPS DV Analyzer ${PRODUCT_VERSION}"
-  File "/oname=DV_Analyzer.exe" "..\..\Project\MSVC\GUI\x64\Release\AVPS_DV_Analyzer_GUI.exe"
+  File "/oname=DV_Analyzer.exe" "..\..\Project\MSVC2008\GUI\x64\Release\AVPS_DV_Analyzer_GUI.exe"
   File "/oname=History.txt" "..\..\History_GUI.txt"
   File "..\..\License.html"
   File  "/oname=ReadMe.txt""..\..\Release\ReadMe_GUI_Windows.txt"
