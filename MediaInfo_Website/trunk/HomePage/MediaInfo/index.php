@@ -83,6 +83,13 @@ if (!isset($Edit))
   $Link=substr($Contents, $Link_Start+12, $Link_End-$Link_Start-12);
   $Head_ToAdd.=' <link href="/_/CSS/External/'.$Link.'.css" rel="stylesheet" type="text/css" />
 ';
+  //$Link_Start=strpos($Contents, "<link href=", $Link_Start+1);
+ }
+ $Link_Start=strpos($Contents, '<link href="doxygen.css"');
+ if ($Link_Start!==false) //Ugly, quick hack for Doxygen
+ {
+  $Head_ToAdd.=' <link href="/_/CSS/External/doxygen.css" rel="stylesheet" type="text/css"/> 
+';
  }
 
  //<script> with JavaSript
