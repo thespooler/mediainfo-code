@@ -1,0 +1,97 @@
+﻿<?php
+
+//Paypal functions
+include $Path.'/_/Ad/Paypal/Display.html';
+header("Cache-Control: no-cache, must-revalidate, max-age=0");
+
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <title>Donate to MediaInfo</title>
+</head>
+<body>
+<?php
+if (isset($Donated))
+{
+ echo '
+<div class="Info">
+<br />
+Dear donator, thank you for your support.<br />
+If you want to remove the "Donate" button from the Windows GUI, you can download an launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.<br />
+<br />
+</div>
+<br />
+ ';
+}
+?>
+
+<h1>Donate to MediaInfo</h1>
+<h2>MediaInfo is a free software, so why donate?</h2>
+In order for MediaInfo to be in a full-time development state, your support and help is greatly appreciated. Since MediaInfo is a free software, your donation is the best way to encourage the author and make it possible to continue moving forward on the project.
+
+<h2>Via Credit Cards or Paypal</h2>
+Donations can be made via Credit Cards or Paypal and can be made as an one time donation or as a monthly subscription. Please choose your preferred method below.<br />
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+  <td id="Adress" style="text-align:center">
+   U.S.A. / Others<br />
+   (in <b>U.S. Dollars</b>)<br />
+   <?php Paypal_Donate_Display(isset($Official), "US", "en_US", "USD", "US$", "", 1, 10, 2, "Donation for MediaInfo", "month", "or", "PayPal - The safer, easier way to pay online!"); ?>
+  </td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </td>
+  <td id="Adress" style="text-align:center">
+   Great Britain<br />
+   (in <b>Pounds</b>)<br />
+   <?php Paypal_Donate_Display(isset($Official), "GB", "en_GB", "GBP", "", "£", 1, 5, 1, "Donation for MediaInfo", "month", "or", "PayPal - The safer, easier way to pay online!"); ?>
+  </td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </td>
+  <td id="Adress" style="text-align:center">
+   Australia<br />
+   (in <b>Australian Dollars</b>)<br />
+   <?php Paypal_Donate_Display(isset($Official), "AU", "en_AU", "AUD", "", "£", 1, 10, 2, "Donation for MediaInfo", "month", "or", "PayPal - The safer, easier way to pay online!"); ?>
+  </td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </td>
+  <td id="Adress" style="text-align:center">
+   Canada<br />
+   (in <b>Canadian Dollars</b>)<br />
+   <?php Paypal_Donate_Display(isset($Official), "CA", "en_US", "CAD", "", "CA$", 1, 10, 2, "Donation for MediaInfo", "month", "or", "PayPal - The safer, easier way to pay online!"); ?>
+  </td>
+ </tr>
+</table>
+
+<h2>Via Flattr</h2>
+<script type="text/javascript">
+	var flattr_url = 'http://mediainfo.sourceforge.net';
+</script>
+<script src="http://api.flattr.com/button/load.js" type="text/javascript"></script>
+
+<h2>Via wire transfert (<a href="http://en.wikipedia.org/wiki/Eurozone">Eurozone</a> only)</h2>
+Donations can be made via wire transfert. Bank information is below.
+<div id="Adress">
+IBAN : FR76 3000 3013 3800 0506 3325 656<br />
+BIC-ADRESSE SWIFT : SOGEFRPP<br />
+</div>
+Don't forget to put your e-mail address in the wire transfert description!
+
+<h2>No money to donate? Don't leave! ;-)</h2>
+You can still contribute to the MediaInfo project in many other ways such as:
+<ul>
+ <li>Translate MediaInfo into your native language or make improvements to the existing translations,</li>
+ <li>Translate this website into your native language or make improvements to the existing translations,</li>
+ <li>Create beautiful HTML templates for MediaInfo's output,</li>
+ <li>Create beautiful icons for MediaInfo,</li>
+ <li>Send me multimedia files which are not well handled by MediaInfo,</li>
+ <li>Send me formats of multimedia containers, and I might be able to implement them better,</li>
+ <li>Program some useful functions (use the latest version of SVN please). MediaInfo is written in C++,</li>
+ <li>Help support currently non-supported platforms (Linux, Win64...),</li>
+ <li>...</li>
+</ul>
+Don't hesitate to <a href="mailto:zenitram@users.sourceforge.net">contact me</a> if you're interested in contributing in any way!
+</body>
+</html>
