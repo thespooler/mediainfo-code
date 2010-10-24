@@ -95,13 +95,61 @@
     else if ($OS_Version=='8.10')                               $OS_Version='8.10 (Intrepid)';
     else if ($OS_Version=='9.04')                               $OS_Version='9.04 (Jaunty)';
     else if ($OS_Version=='9.10')                               $OS_Version='9.10 (Karmic)';
-    else if ($OS_Version=='9.04')                               $OS_Version='10.04 (Lucid)';
+    else if ($OS_Version=='10.04')                              $OS_Version='10.04 (Lucid)';
     $OS='Ubuntu '.$OS_Version.', '.$CPU;
    }
    else
    {
-    $Version='0.7.34'; //Ubuntu
-    $Link=$Language.'/Download#Ubuntu';
+    $Version='0.7.35'; //Ubuntu
+    $Link=$Language.'/Download/Ubuntu';
+    $OS='Ubuntu';
+   }
+   $Size='2';
+  }
+  else if (stristr($_SERVER['HTTP_USER_AGENT'], "Linux Mint"))
+  {
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "Elyssa"))     $OS_Version='8.04'; //5
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "Mint/5"))     $OS_Version='8.04'; //5
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "Felicia"))    $OS_Version='8.10'; //6
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "Mint/6"))     $OS_Version='8.10'; //6
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "Gloria"))     $OS_Version='9.04'; //7
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "Mint/7"))     $OS_Version='9.04'; //7
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "Helena"))     $OS_Version='9.10'; //8
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "Mint/8"))     $OS_Version='9.10'; //8
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "Isadora"))    $OS_Version='10.04'; //9
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "Mint/9"))     $OS_Version='10.04'; //9
+
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "i386"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i486"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i586"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i686"))       $CPU='i386';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "x86_64"))     $CPU='amd64';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "amd64"))      $CPU='amd64';
+
+   if (isset($OS_Version) and isset($CPU))
+   {
+    $Link=$Language.'/Download/Ubuntu#'.$OS_Version.'.'.$CPU;
+         if ($Link==$Language.'/Download/Ubuntu#8.04.i386')     $Version='0.7.28';
+    else if ($Link==$Language.'/Download/Ubuntu#8.04.amd64')    $Version='0.7.28';
+    else if ($Link==$Language.'/Download/Ubuntu#8.10.i386')     $Version='0.7.35';
+    else if ($Link==$Language.'/Download/Ubuntu#8.10.amd64')    $Version='0.7.35';
+    else if ($Link==$Language.'/Download/Ubuntu#9.04.i386')     $Version='0.7.35';
+    else if ($Link==$Language.'/Download/Ubuntu#9.04.amd64')    $Version='0.7.35';
+    else if ($Link==$Language.'/Download/Ubuntu#9.10.i386')     $Version='0.7.35';
+    else if ($Link==$Language.'/Download/Ubuntu#9.10.amd64')    $Version='0.7.35';
+    else if ($Link==$Language.'/Download/Ubuntu#10.04.i386')    $Version='0.7.35';
+    else if ($Link==$Language.'/Download/Ubuntu#10.04.amd64')   $Version='0.7.35';
+         if ($OS_Version=='8.04')                               $OS_Version='5 (Elyssa)';
+    else if ($OS_Version=='8.10')                               $OS_Version='6 (Felicia)';
+    else if ($OS_Version=='9.04')                               $OS_Version='7 (Gloria)';
+    else if ($OS_Version=='9.10')                               $OS_Version='8 (Helena)';
+    else if ($OS_Version=='10.04')                              $OS_Version='9 (Isadora)';
+    $OS='Linux Mint '.$OS_Version.', '.$CPU;
+   }
+   else
+   {
+    $Version='0.7.35'; //Ubuntu
+    $Link=$Language.'/Download/Ubuntu';
     $OS='Ubuntu';
    }
    $Size='2';
@@ -286,7 +334,7 @@
   else
   {
    $Version='0.7.35'; //Linux
-   $Link=$Language.'/Download/Source#AllInOne';
+   $Link=$Language.'/Download';
    $OS='Linux';
    $Size='2';
   }
