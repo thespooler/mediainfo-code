@@ -2,7 +2,7 @@
  //OS detection
    if (stristr($_SERVER['HTTP_USER_AGENT'], "macintosh"))
  {
-  $Version='0.7.35'; //Mac OS X
+  $Version='0.7.36'; //Mac OS X
   $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Mac_Universal.dmg';
   $OS='Mac OS X, Universal';
   $Installer=true;
@@ -294,7 +294,7 @@
    }
    else
    {
-    $Version='0.7.35'; //openSUSE
+    $Version='0.7.36'; //openSUSE
     $Link=$Language.'/Download/openSUSE';
     $OS='openSUSE';
    }
@@ -336,6 +336,22 @@
     $Link=$Language.'/Download/Mandriva';
     $OS='Mandriva';
    }
+   $Size='2';
+  }
+  else if (stristr($_SERVER['HTTP_USER_AGENT'], "arch linux"))
+  {
+                                                                $OS_Version='';
+
+        if (stristr($_SERVER['HTTP_USER_AGENT'], "i386"))       $CPU='i586';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i486"))       $CPU='i586';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i586"))       $CPU='i586';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "i686"))       $CPU='i586';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "x86_64"))     $CPU='x86_64';
+   else if (stristr($_SERVER['HTTP_USER_AGENT'], "amd64"))      $CPU='x86_64';
+
+   $Version='0.7.36'; //Arch Linux
+   $Link=$Language.'/Download/Arch_Linux';
+   $OS='Arch Linux';
    $Size='2';
   }
   else
