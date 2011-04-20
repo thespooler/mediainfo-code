@@ -1,0 +1,27 @@
+#HTML is parsed by PHP
+AddType application/x-httpd-php .html
+
+#Common errors with URL sent by user
+#ErrorDocument 401 /
+#ErrorDocument 403 /
+#ErrorDocument 404 /
+#ErrorDocument 500 /
+
+#Rewrite Engine
+RewriteEngine on
+
+#Hostname
+#RewriteCond %{HTTP_HOST}   !^mediainfo.sourceforge.net [NC]
+#RewriteCond %{HTTP_HOST}   !^$
+#RewriteRule ^/(.*)         http://mediainfo.sourceforge.net/$1 [L,R]
+
+#translation /xxx -->php.php?page=xxx but without /_/xxxx
+RewriteRule ^_/(.*)$ /MediaInfo/_/$1 [L]
+RewriteRule /favicon.ico /_/Image/Icon.ico [L]
+RewriteCond %{REQUEST_URI} !^/_(.*)$
+RewriteCond %{REQUEST_URI} !^/MediaInfo/_/(.*)$
+RewriteCond %{REQUEST_URI} !^/PhpMyVisites(.*)$
+RewriteCond %{REQUEST_URI} !/robots.txt
+RewriteCond %{REQUEST_URI} !/sitemap.xml
+RewriteCond %{REQUEST_URI} !/MediaInfo/index.php
+RewriteRule ^(.*)$ /MediaInfo/index.php [L]
