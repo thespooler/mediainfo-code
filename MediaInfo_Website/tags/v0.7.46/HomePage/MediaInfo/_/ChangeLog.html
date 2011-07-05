@@ -1,0 +1,403 @@
+<?php
+//Arguments
+//Example : http://localhost/Log?Name=MediaInfoGUI&Version=0.7.1.0&Lib=0.7.1.0
+strtok($_SERVER["REQUEST_URI"], "?");
+parse_str(strtok("?"), $Argument);
+//LastVisited
+//if (isset($_COOKIE["LastVisited"]) || strpos($_SERVER["REQUEST_URI"], "?")===FALSE)
+ $AlreadyVisited='Y';
+//else
+// setcookie("LastVisited", time(), time()+60*60);
+?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head> 
+ <title>MediaInfo - ChangeLog</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php
+if (isset($Official))
+ $URL='http://mediainfo.sourceforge.net/'.$Language;
+else
+ $URL='http://localhost/'.$Language;
+if (!isset($AlreadyVisited))
+{
+ if (mt_rand(1, 100)>15)
+ {
+  //Sourceforge
+ }
+ else
+ {
+  if (mt_rand(1, 100)>33)
+   $URL='http://mediaarea.net/DX50sf.php';
+  else if (mt_rand(1, 100)>50)
+   $URL='http://mediaarea.net/DIVXsf.php';
+  else
+   $URL='http://mediaarea.net/XVIDsf.php';
+ }
+ echo ' <meta http-equiv="refresh" content="3; URL='.$URL.'" />
+';
+}
+?>
+ <meta name="identifier-url" content="http://mediainfo.sourceforge.net" />
+ <meta name="revisit-after" content="7 days" />
+ <meta name="robots" content="index,follow" />
+ <link rel="stylesheet" type="text/css" href="/_/CSS/Default.css" title="Default" />
+ <link rel="icon" type="image/png" href="/_/Image/Icon.png" />
+ <link rel="shortcut icon" type="image/x-icon" href="/_/Image/Icon.ico" />
+</head>
+<br />
+<table border="0" cellpadding="0" cellspacing="0">
+ <tbody>
+  <tr>
+   <td>
+<div id="ShouldShow" class="Invisible">Yes</div>
+<div id="NewVersion">
+<?php 
+if ($Language=="fr")
+ echo '
+ Pas de nouvelle version disponible<br />
+ <a href="'.$URL.'">Visiter le site MediaInfo</a><br />
+';
+else
+ echo '
+ No new version available<br />
+ <a href="'.$URL.'">Visit MediaInfo website</a><br />
+';
+?>
+</div>
+<div>
+More about 4CC: <a href="http://mediaarea.net/DX50sf.php">DX50</a> <a href="http://mediaarea.net/DIVXsf.php">DIVX</a> <a href="http://mediaarea.net/XVIDsf.php">XVID</a><br />
+</div>
+<div id="ChangeLog"><pre>
+Changes:
+
+Version 0.7.46, 2011-07-04
+--------------
++ Ukrainian translation updated
++ MXF: TrackName
++ DCP: Basic support (video and audio streams), both Interop and SMPTE versions
++ P2 Clip: Supporting directories with wrong letter case
++ MXF: detection of AES3/Dolby E in mono PCM streams without compression scheme
++ MP4: first frame duration difference if first frame has not the same duration than all other frames
++ MP4: frame rate set as CFR if only the first frame has a different duration
++ MP4: Handling of track duration smaller than media duration (track duration and stream size have priority)
++ #3348936, MXF: OP-Atom profile
++ Matroska, Stereo Layout support, thanks to Lionel Duchateau
+x libcurl (FTP/HTTP): seek request was buggy, invalid data was read
+x MPEG Video in MPEG-TS or MP4: streams were wrongly detected as VBR or CBR, any bit rate mode is removed until a working solution is found
+x AES (S302M): was no more detected if the packet was split in several PES
+x #3325235, Vorbis: streams were wrongly reported as CBR
+x EXR: Width/Height were 1 less than real value
+x #3344635, MP4/MOV: Delay missing if timecode track found before audio/video, thanks to Peter Chapman
+
+Version 0.7.45, 2011-06-15
+--------------
++ Belarusian translation updated
++ QuickTime: Support of EIA-608 streams created by Final Cut
++ Matroska: Support of Matroska tags
++ Matroska: parsing of tags at the end of the file (previously: only tags at the beginning)
++ MP4/MOV with uncompressed streams: scan type (interlaced/progressive)
++ YUV4MPEG2 (Y4M) support
++ GXF: more information about AES3 audio streams
++ EXR: Basic support
++ E-AC-3: dialnorm/dynrng (first frame / first block) information
++ LXF: support of DV PAL
++ DPX: Support of Cineon old format
++ DPX: Support of file with Little Endian configuration
++ MPEG-4: better support of file with more than one mdat or moov atom
++ WAV: more details from bext chunk
++ MXF: AFD (in both descriptor or ANC) support
++ MXF: Support of AES3 / Dolby E in 2 mono channels
++ MPEG-4: support of some malformed (without mdat atom) files
++ MXF: Better detection of streams without Essence Compression descriptor
+x MPEG Video: Custom matrix detection was broken
+x DPX: Industry specific header was not well decoded
+x JPEG-2000: Chroma subsampling 4:2:0 was recognized as 4:4:4.
+x Matroska: Handling default values for TrackVideoDisplayWidth and TrackVideoDisplayHeight
+x MPEG-TS: private audio streams with 0xCO stream_id were not correctly detected
+x FLV and RIFF: Changing Sorenson H.263 to Sorenson Spark because this stream format is too much incompatible with H.263
+x MXF: Some specific files (including AFD in descriptor) were not well parsed
+
+Version 0.7.44, 2011-04-19
+--------------
++ AVI: support of some corrupted files (RIFF size set to 0)
++ AC-3: support of streams with 16-byte time stamp between frames
++ MPEG-TS: creation of index files, seek feature
++ GXF: seek feature
++ MXF: seek feature
++ MPEG-TS: detecting wrong stream registration information and skipping it
++ NTSC: accepting 483-line streams as NTSC
++ MXF: Parsing speed improvement, especially for high bitrate (>300 Mbps) streams
++ TGA file basic support
++ libmms: MMSH support (Linux/Mac only), thanks to RGB Networks
++ libcurl: HTTP header option and Time to live, thanks to RGB Networks
++ Id3v2 and MPEG-4: possibility to customize tag mapping
++ TIFF: more details
+x MXF: some specific files were not analyzed, fix sponsored by http://maxnine.com
+x LXF: random crashes
+
+Version 0.7.43, 2011-03-19
+--------------
++ MPEG-TS: detection and display of real time PAT/PMT change improved
+x EIA-708: crash with some specific files
+x MP4: crash with wiles including mix of PCM and other audio formats
+x AAC: crash with some malformed streams
+x FLV: crash with some specific files (longer audio than video at the end of the file)
+x MP4: wrong framerate information with some specific files (track header after media information)
+
+Version 0.7.42, 2011-03-03
+--------------
++ Armenian translation added
++ Belarusian, Ukrainian translations updated
++ AES3: bit depth of AES3, bit depth of compressed audio stream, endianess
++ Id3v2 and MP4 tags: better mapping with iTunes fields
++ Tags: removal of technical only fields
++ MPEG Video: intra_dc_precision information (in advanced mode)
++ MXF: detection of raw pictures
++ MXF: support of URL encoded locators
++ MXF: color subsampling
++ DXW format support
+x #3171468, ADIF: crash in some cases
+x #3169916, IFO: crash in some cases
+x #3173391, Id3v2: was using local encoding instead of ISO-8859-1 
+x MPEG Video, discarding bad (always 0) group_start
+x AVC: crash with file having big log2_max_pic_order_cnt_lsb_minus4 value 
+x AVC: wrong GOP information in some cases
+x Ut Video: Color space information was wrong
+x MPEG-4 Visual: Advanced Simple@L0 was detected as Advanced Simple@L1
+x AVI: Crash with some AVC streams (not sized blocks)
+x MPEG Audio: crash with some files
+x AAC: crash, infinite loop or wrong result with some files
+x Trying to quicker reject a junk file
+x AVI: OpenDML indexes were no more parsed
+x Windows installer: OpenCandy library is updated and Microsoft agrees it is not dangerous for user privacy, it does not alert anymore. We do not transmit or collect personally identifiable information.
+
+Version 0.7.41, 2011-01-24
+--------------
++ MPEG-TS: random cases with full parsing of the file
+
+Version 0.7.40, 2011-11-24
+--------------
++ QuickTime: detection of AES3 and Dolby E
++ QuickTime: Apple CEA-608 and CEA-708 (in CDP) support
++ JPEG 2000: Chroma subsampling
++ JPEG 2000 in MXF: Color space
++ JPEG 2000 in MPEG-4 and MJ2: Color space
++ MPEG-4: mx5p CodecID support
++ ISO 9660 (CD/DVD/Blu-ray dump) detection
+x MPEG-TS: wrong detection (as encrypted) of some streams with a lot of transmission errors
+x MPEG-TS: wrong management of some PAT/PMT updates (real time parsing)
+x MPEG Video: wrong duration with some raw streams
+x FLV: wrong duration with some files
+x libcurl: crash if requesting a libcurl URL but libcurl library not present
+x MPEG Audio: crash with some malformed files
+x MPEG-4: error between recorded date and encoded date
+
+Version 0.7.39, 2011-01-03
+--------------
++ Turkish, Russian translations updated
++ OGG: more CELT attributes, thanks to Lionel Duchateau
++ DV: better detection of display aspect ratio for specific (non standard?) streams
++ MPEG-7: support of ISO-IEC 13818-2 / H.262 (MPEG Video) version 2000 (multi-view / 4:2:2)
++ MXF: Clean aperture size support
++ D-10 (AES3) in MXF: real channel count
++ MPEG-TS: detection and analysis of ADTS in stream_id_extension
++ #2943900, MPEG-4 Visual: count of maximum consecutive B-frames
++ MP4: Handling of Nero library information atom
++ Id3: TAG+ support
+x #3140453, MKV with AAC: support of HE-AAC v1/v2 detection even if AudioSpecificConfig is missing
+x #3138883, ID3v2: crash in some cases if Data length indicator is used
+x #3139417, MPEG-PS: duration for caption detection was shorter than expected
+x #3139276, H.263: more precision about the different flavors of H.263
+x AVI and MPEG-2 Audio Layer 3: error if audio stream duration estimation
+x FLV: better handling of weird bitrate metadata
+x D-10 (AES3) in MXF: Bit rate was wrong
+x AC-3: crash if false-positive detection of AC-3 and CRC is valid and bsid is wrongly set
+x #3141059, FLV: trying to detect partial files (so metadata are wrong) and using timestamps instead
+x #3141052, AVI: wrong duration, no detection of rec chunks, with some files
+x #3145968, RealMedia: not integer frame rate handling + HE-AAC filling 
+x Id3v2: bad handling of some tags
+x MPEG-TS/PS: Frame count / duration accuracy of some very specific files
+x MPEG-TS/PS: Not counting non-decodable frames (without the corresponding I-Frame)
+
+Version 0.7.38, 2010-12-16
+--------------
++ Danish, Ukrainian, French, English, Russian translations updated
++ uClibc compatibility, thanks to Metin KAYA <metin@EnderUNIX.org>
++ MPEG-TS: ID in all streams if a TS streams contains several substreams
++ JPEG in MOV: Scan type
++ AAC: implicit SBR and implicit PS detection (complete HE-AAC and HE-AACv2 detection)
++ AAC/LATM: more details (channels, profile...)
++ AAC/SL: more details (channels, profile...)
++ MPEG-TS and MPEG-PS with trace feature activated (Linux/Mac by default): speed improvement
++ DTS: indication of HD and Core configurations if there is an HD part
++ #3118446, MXF: VC-3 (DNxHD) detection
++ VC-3 (DNxHD) raw stream support
++ VC-3 (DNxHD): Bit depth
++ MPEG-TS: option for ignoring ATSC transport_stream_id indication
+x MPEG-TS: some teletext and DVB subtitles were not detected
+x #3111584, MXF: phantom track with weird result if an unknown track is found
+x #3116952, DTS and AC-3: was set as lossy in all cases (DTS Master Audio and AC-3 TrueHD are lossless)
+x #3137160, ADTS: some files with wrong extension were not correctly detected
+
+Version 0.7.37, 2010-11-22
+--------------
++ DPX format support
++ Compression mode (Lossy / Lossless) information (note: JPEG 2000 "profile" is moved to this new field)
++ #3095129, AVI: MLC Lossless codec support
++ #3095136, AVI: AMV Video Codec support
++ IFO: chapter information (thanks to Bastian Wegener)
++ MPEG-4: header size / data size / footer size information (in advanced mode)
++ MPEG-4: AVmp CodecID (.mov referencing .mxf) support
+x MXF: avoiding infinite loop due to circular reference
+
+Version 0.7.36, 2010-10-24
+--------------
++ Binaries (libraries, programs and installers) are digitally signed
++ HDV 720p/1080i/1080p commercial names support, sponsored by http://www.chyro.fr/
++ Raw TrueHD support
++ MP4: "lpcm" (PCM from DVD) Support (with channel positions)
++ MKV: compression mode (zlib...) display
++ WAV: support of AAC (ADTS) with CodecID 0x8180
++ WMV: Handling of weird Aspect Ratio information in Extended Content Description
++ #3082158, .m4b file extension support
++ #3087674, Ut Video Lossless support
++ #3087677, WebP: basic support (detection only)
++ #3072929, MP4: DTS Express support
++ MPEG-4: Handling of external files referenced by "code" atom
++ M-JPEG and M-JPEG 2000 are renamed JPEG and JPEG 2000
++ MP4 and HDV 1080i: detecting containers lying about width (saying 1920 but it is 1440)
++ DTVCC Transport and SCTE20: Option for displaying empty streams
++ DPX format detection
+x Windows x64 explorer tooltip is back!
+x #3034092, MPEG-TS: hang up if program is modified (zapping) in the file
+x AAC: removal of empirical detection of SBR and PS (too many problems)
+x AVI: trusting in priority frame count from index of indexes with broken files
+x MKV: AVC "unknown profile" removal
+x AVC: some frame rates were reported as twice the real frame rate
+x #3029308, Id3v2: support of frames with Unsynchronisation bit set
+x #3065114, MPEG-Video: duration calculation issues with raw streams and open GOPs
+x AFD: crash with malformed streams
+x MPEG-7 output: missing references for MPEG-4 Visual and RF64
+x #3086701, ID3: freeze/crash with ID3 tag at the end of the the file
+x LXF: some files were not completely analyzed (missing video)
+x JPEG: Chroma subsampling value was always set to 4:2:0, wrong
+x MP4 with MPEG Video: do not trust anymore raw stream timecode
+
+Version 0.7.35, 2010-09-05
+--------------
++ Arabic language added
++ Teletext subtitle support
++ DVB subtitle support
++ CEA-608/708: language
++ Library: "Per frame" interface, like ffmpeg
++ AFD: AFD (Active Format Description) value and detail
++ MPEG-TS: SCTE35 detection and parsing
++ MXF: Ancillary data (S436M) support
++ MPEG-TS: Codec ID (stream_type)
++ MXF parser improvements
+x #3036119, MKV: default language value is eng
+x DV: weird display with some DV with synch problems.
+x AVC: wrong detection of bitrate mode for AVC in MP4
+x MPEG-TS: crash and wrong detection of some non MPEG-TS files
+
+Version 0.7.34, 2010-07-09
+--------------
++ New icons set, thanks to Kevin Redon, based on Gnome themes: Neu, Experience, Gnome 2.18
++ WebM support, sponsored by http://digi-metrics.com/
++ LXF (Harris/Leitch) support
++ #3008704, IVF (Indeo Video Format) support
++ #3002376, Blu-ray: Source (.m2ts) for the .mpls parser
++ DV: handling of unsynched streams
++ Basic view, Bit Depth is added to the audio part
++ FLV: Framerate info for some not yet supported weird files
++ Demux (library only): demuxed packets can be forced to contain 1 complete frame
++ XML output: MediaInfo version
++ Parsing speed (Library only): option for a quicker analyzing, but with some missing features
++ AVI and Huffman (HFYU): Colorspace
++ AVI and Fraps: Colorspace
++ AVI and Lagarith: Colorspace
++ MPEG-4: Channel map basic support
+x CEA-708: Skipping some malformed streams
+x JPEG/M-JPEG: Resolution was in some random other field
+x #3001707, AAC in MP4: mono aac file detected as stereo
+x AVI: crash with some malformed files
+x AVI: Stream identifier was not filled in some cases
+x MPEG-PS: some files were not well detected
+x WAV: Bit Depth is back
+x WAV/PCM: Byte sign was wrong if Bit depth >8
+x Decimal point issues with some specific compilers/OS
+x MPEG-4: removing support of btrt atom for average bitrate, too many wrong values
+x AVI: crash with some specific files (avc1 CodecID)
+x MPEG-4+AAC: Trying to better detect the (non)presence of PS if there is no PS header
+x MPEG-TS/PS: more precision on duration
+
+Version 0.7.33, 2010-05-14
+--------------
++ Slovak language added
++ Colorimetry field is replaced by Color space and Chroma subsampling
+x Some word were not translatable
+x Solaris port was broken
+
+Version 0.7.32, 2010-05-02
+--------------
++ Danish, French translations updated
++ MPEG-7 output improvements
++ DV: Better detection of DVCPRO 50 and 100 (again), especially in MXF
++ P2: support of P2 XML files and P2 directory structure
++ XDCAM: support of XDCAM XML files and XDCAM directory structure
++ N19: More attributes
++ ISO-639-2 3-letter standard for language field (for third-party software)
++ Additional commercial name of a stream or container (XDCAM IMX, DVCPRO, AVC-Intra 50...)
++ MXF: support of detection of files without Track number in the headers
++ MXF: Operational Pattern
++ MPEG-4: Aperture size support
+x AVC: some files were wrongly analyzed (frame rate...)
+x AVI: better support of files with only one big data chunk (professional cameras)
+x MPEG-4: Huge memory usage with some files (files with DV and PCM)
+x DVR-MS: width/height was wrong in previous version
+
+Version 0.7.31, 2010-04-16
+--------------
++ SCTE 20 closed caption support
++ Difference between width/height in the container and in the raw stream
++ AVC: GOP structure
++ MXF: more raw stream formats are detected (MPEG-4 Visual, A-law...)
++ DV: Better detection of DVCPRO 50 and 100
+x DV: less files without the right extension wrongly detected as DV
+
+Version 0.7.30, 2010-03-26
+--------------
++ Russian language updated
++ Image extensions are handled by the context menu
++ AVC: Multiview Video Coding (MVC) basic support
++ AVI: better handling of some RGB or RLE codecIDs
++ Solaris package creation files update (with relocation)
++ MSVB: better handling of C pointers
++ WAV: Skipping wrong sample count values
++ GXF: Caption in ancillary data detection
+x #2970227, WAV: a file was wrongly detected as DTS
+x CEA-608: some captions were wrongly detected as active
+x MPEG-7: some corrections in order to be valid
+x FLV: Duration for video not starting at Time 0
+x WMV and MPEG-TS/PS: some crashes are fixed
+x MSVC2010 and MSVC2008 project files were missing some files
+</pre>
+</div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+ <tbody>
+  <tr>
+   <td align="center">
+    <a href="http://sourceforge.net" rel="nofollow"><img src="http://sourceforge.net/sflogo.php?group_id=86862;type=1" alt="SourceForge" /></a>
+    <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" /></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" /></a>
+    <?php include $Path."/_/Ad/GoogleAnalytics_Users.html"; ?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</html>

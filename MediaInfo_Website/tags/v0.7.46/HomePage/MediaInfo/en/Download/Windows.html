@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <title>Download</title>
+<style type="text/css">
+td:target {background-color: #77FF77;}
+</style>
+</head>
+<body>
+
+<?php if (isset($Donated))
+{
+ $DownloadSite="http://download.mediaarea.net";
+ $DownloadSiteAfter="";
+}
+else
+{
+ $DownloadSite="http://sourceforge.net/projects/mediainfo/files";
+ $DownloadSiteAfter="/download";
+}
+?>
+
+<h1>Download - Microsoft Windows</h1>
+<img src="../../_/Image/OS/Logo/Windows.png" /><br />
+
+<table border=1 width="100%">
+<tr bgcolor="#99CCFF">
+    <th>Version</th>
+    <th>CPU</td>
+    <th>Interface</th>
+    <td>Version</td>
+    <td>Comment</td>
+</tr>
+<tr>
+    <th rowspan=8>Version 4 (95, 98, Me),<br />Version 5 (2000, XP, 2003),<br />Version 6 (Vista, Seven)</th>
+    <th rowspan=4>32 bit</td>
+    <td colspan=3 bgcolor="#FFCC99" id="i386">Windows 95/98/Me/2000/XP/2003/Vista/Seven, 32 bit</td>
+</tr>
+<tr>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="<?php echo $DownloadSite; ?>/binary/mediainfo-gui/0.7.46/MediaInfo_GUI_0.7.46_Windows_i386.exe<?php echo $DownloadSiteAfter; ?>">v0.7.46</a><span style="font-size: x-small;"> (<a href="<?php echo $DownloadSite; ?>/binary/mediainfo-gui/0.7.46/MediaInfo_GUI_0.7.46_Windows_i386_WithoutInstaller.7z<?php echo $DownloadSiteAfter; ?>">without installer</a>)</span></td>
+    <td><a href="/powered_by_opencandy"><img  src="/_/Image/Ad/OC_WebBadge-180x19.png" alt="We use OpenCandy" style="vertical-align:middle" /></a></td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="<?php echo $DownloadSite; ?>/binary/mediainfo/0.7.46/MediaInfo_CLI_0.7.46_Windows_i386.zip<?php echo $DownloadSiteAfter; ?>">v0.7.46</a></td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th><acronym title="Dynamicly Linked Library">DLL</acronym></th>
+    <td><a href="<?php echo $DownloadSite; ?>/binary/libmediainfo0/0.7.46/MediaInfo_DLL_0.7.46_Windows_i386.exe<?php echo $DownloadSiteAfter; ?>">v0.7.46</a><span style="font-size: x-small;"> (<a href="<?php echo $DownloadSite; ?>/binary/libmediainfo0/0.7.46/MediaInfo_DLL_0.7.46_Windows_i386_WithoutInstaller.7z<?php echo $DownloadSiteAfter; ?>">without installer</a>)</span></td>
+    <td>Use this one for <a href="http://www.emule-project.net">eMule</a> integration</td>
+</tr>
+<tr>
+    <th rowspan=4>64 bit</td>
+    <td colspan=3 bgcolor="#FFCC99" id="x64">Windows XP/2003/Vista/Seven, 64 bit</td>
+</tr>
+<tr>
+    <th><acronym title="Graphical User Interface">GUI</acronym></th>
+    <td><a href="<?php echo $DownloadSite; ?>/binary/mediainfo-gui/0.7.46/MediaInfo_GUI_0.7.46_Windows_x64.exe<?php echo $DownloadSiteAfter; ?>">v0.7.46</a><span style="font-size: x-small;"> (<a href="<?php echo $DownloadSite; ?>/binary/mediainfo-gui/0.7.46/MediaInfo_GUI_0.7.46_Windows_x64_WithoutInstaller.7z<?php echo $DownloadSiteAfter; ?>">without installer</a>)</span></td>
+    <td><a href="/powered_by_opencandy"><img  src="/_/Image/Ad/OC_WebBadge-180x19.png" alt="We use OpenCandy" style="vertical-align:middle" /></a></td>
+</tr>
+<tr>
+    <th><acronym title="Command Line Interface">CLI</acronym></th>
+    <td><a href="<?php echo $DownloadSite; ?>/binary/mediainfo/0.7.46/MediaInfo_CLI_0.7.46_Windows_x64.zip<?php echo $DownloadSiteAfter; ?>">v0.7.46</a></td>
+    <td>&nbsp</td>
+</tr>
+<tr>
+    <th><acronym title="Dynamicly Linked Library">DLL</acronym></th>
+    <td><a href="<?php echo $DownloadSite; ?>/binary/libmediainfo0/0.7.46/MediaInfo_DLL_0.7.46_Windows_x64.exe<?php echo $DownloadSiteAfter; ?>">v0.7.46</a><span style="font-size: x-small;"> (<a href="<?php echo $DownloadSite; ?>/binary/libmediainfo0/0.7.46/MediaInfo_DLL_0.7.46_Windows_x64_WithoutInstaller.7z<?php echo $DownloadSiteAfter; ?>">without installer</a>)</span></td>
+    <td>&nbsp</td>
+</tr>
+</table>
+
+</body>
+</html>
