@@ -71,6 +71,37 @@ More about 4CC: <a href="http://mediaarea.net/DX50sf.php">DX50</a> <a href="http
 <div id="ChangeLog"><pre>
 Changes:
 
+Version 0.7.49, 2011-09-09
+--------------
++ AES3: analyzing AAC, AC-3, MPEG Audio embedded in AES3 stream
++ GXF: detection of DolbyE in AES3 in GXF
++ WAV: detecting AES3 non-PCM audio inside WAV
++ MPEG Video: more precise duration for 29.97 fps material having time code without drop frame flag set
++ MPEG-4/MOV: delay from time code track conforming to Final cut (using integral frame rate value if frame drop flag is not set)
++ Overall bit rate mode (CBR or VBR)
++ DVB Subtitle: region_horizontal_address / region_vertical_address (hidden by default)
++ MPEG-TS: option (--ParseSpeed=0.8) for testing the stream until all advertised streams are detected
+x MXF: some files with SDTI were not well demuxed (frame number) or were crashing
+x Some files where wrongly detected as MPEG-PS without streams
+x AC-3: non-48 KHz streams were not analyzed
+x 3164893, JPEG: issue with some JPEG files with no/incorrect extention
+x 3403338, crash with four character filenames
+
+Version 0.7.48, 2011-08-16
+--------------
++ Russian translation updated
++ ISM (ISM/ISMV/ISMA/PIFF...): more attributes (frame rate, frame count, duration)
++ MP3: support of VBRI header in a corrupted frame
++ Active Format Description: muxing mode (A/35 or SMPTE ST 2016-3)
++ MP4/MOV: Displaying info about first description atom of a track (instead of all of them)
+x MP4/MOV: scan order (Top/Bottom) from container, thanks to Peter Chapman
+x MP4: Channel layout was not filled in some cases
+x libmms: default behavior is using official libmms API only
+x Vorbis comment: album performer data was in performer field
+x Captions in AVC: some captions were not detected and decoded
+x AVC: GOP structure info was often wrong
+x MXF: IndexTable search was buggy (parsing the whole file) for some rare files (index present twice)
+
 Version 0.7.47, 2011-07-14
 --------------
 + ISM (ISM/ISMV/ISMA/PIFF...) support
