@@ -199,6 +199,8 @@
     else if ($Link==$Language.'/Download/CentOS#4.x86_64')      $Version='0.7.26';
     else if ($Link==$Language.'/Download/CentOS#5.i386')        $Version='0.7.50';
     else if ($Link==$Language.'/Download/CentOS#5.x86_64')      $Version='0.7.50';
+    else if ($Link==$Language.'/Download/CentOS#6.i386')        $Version='0.7.50';
+    else if ($Link==$Language.'/Download/CentOS#6.x86_64')      $Version='0.7.50';
     $OS='CentOS '.$OS_Version.', '.$CPU;
    }
    else
@@ -306,7 +308,7 @@
   }
   else if (stristr($_SERVER['HTTP_USER_AGENT'], "suse"))
   {
-                                                                $OS_Version='11.3';
+                                                                $OS_Version='11.4';
 
         if (stristr($_SERVER['HTTP_USER_AGENT'], "i386"))       $CPU='i586';
    else if (stristr($_SERVER['HTTP_USER_AGENT'], "i486"))       $CPU='i586';
@@ -320,6 +322,8 @@
     $Link=$Language.'/Download/openSUSE#'.$OS_Version.'.'.$CPU;
          if ($Link==$Language.'/Download/openSUSE#11.3.i586')   $Version='0.7.50';
     else if ($Link==$Language.'/Download/openSUSE#11.3.x86_64') $Version='0.7.50';
+    else if ($Link==$Language.'/Download/openSUSE#11.4.i586')   $Version='0.7.50';
+    else if ($Link==$Language.'/Download/openSUSE#11.4.x86_64') $Version='0.7.50';
     $OS='openSUSE '.$OS_Version.', '.$CPU;
    }
    else
