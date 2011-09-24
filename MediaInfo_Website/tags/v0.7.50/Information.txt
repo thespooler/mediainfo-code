@@ -1,0 +1,2 @@
+HomePage : http://mediainfo.sourceforge.net/
+Check : http://mediaarea.net/mediainfo_check/
