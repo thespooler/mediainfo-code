@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <title></title>
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tbody>
+  <tr style="vertical-align: top;">
+   <td style="padding: 0px 15px 5px 5px;">
+    <a href="ScreenShots/GUI_Main"><img src="/_/Image/Default/ScreenShot/GUI_Easy_en_Extract.png" alt="" title="Screenshot - The main interface" /></a>
+   </td>
+   <td>
+    <h2 class="First">What is MediaInfo?</h2>
+    <span style="font-weight: bold;">MediaInfo</span> supplies technical and tag information about a video or audio file.<br />
+    It is free software (free of charge and free access to source code: GPL or LGPL licence)<br />
+    <br />
+    <a style="font-weight: bold;font-size: xx-large;" href="<?php echo $Link;?>">Download MediaInfo!</a><br />
+    (version <?php echo $Version;?><?php if (isset($Installer)) echo ', Graphical User Interface with installer';?><?php if(isset($OS)) echo ', for '.$OS;?><?php if(isset($Bits)) echo ' bits';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br />
+    (<a href="/powered_by_opencandy"><img  src="/_/Image/Ad/OC_WebBadge-180x19.png" alt="We use OpenCandy" style="vertical-align:middle" /></a>)<br />
+    <br />
+    Other versions (packaging, OS, interface...) are also <a href="Download">available</a> (<a href="Download/Windows"><img src="../_/Image/OS/Logo/Windows_Small.png" alt="Microsoft Windows" /></a> <a href="Download/Mac_OS"><img src="../_/Image/OS/Logo/Mac_OS_Small.png" alt="Mac OS" /></a> <a href="Download/Debian"><img src="../_/Image/OS/Logo/Debian_Small.png" alt="Debian" /></a> <a href="Download/Ubuntu"><img src="../_/Image/OS/Logo/Ubuntu_Small.png" alt="Ubuntu" /></a> <a href="Download/Ubuntu"><img src="../_/Image/OS/Logo/Linux_Mint_Small.png" alt="Linux Mint" /></a> <a href="Download/ReHat"><img src="../_/Image/OS/Logo/RedHat_Small.png" alt="RedHat Entreprise Linux" /></a> <a href="Download/CentOS"><img src="../_/Image/OS/Logo/CentOS_Small.png" alt="CentOS" /></a> <a href="Download/Fedora"><img src="../_/Image/OS/Logo/Fedora_Small.png" alt="Fedora" /></a> <a href="http://packman.links2linux.org/package/mediainfo"><img src="../_/Image/OS/Logo/openSUSE_Small.png" alt="openSUSE" /></a> <a href="Download/Mandriva"><img src="../_/Image/OS/Logo/Mandriva_Small.png" alt="Mandriva" /></a> <a href="http://aur.archlinux.org/packages.php?K=mediainfo"><img src="../_/Image/OS/Logo/ArchLinux_Small.png" alt="ArchLinux" /></a>)<br />
+    You can <a href="/Log">see change log</a><br />
+    You can <a href="Help">donate</a> to support further development.<br />
+	<br />
+	<br />
+	Sponsored by: <a href="http://www.digi-metrics.com"><img src="/_/Image/Company/Digimetrics.png" width="256" height="68" /></a>
+	<br />
+	<br />
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tbody>
+  <tr style="vertical-align: top;">
+   <td style="padding: 0px 15px 5px 5px;">
+<h2>What information can I get from MediaInfo?</h2>
+<ul>
+ <li>General: title, author, director, album, track number, date, duration...</li>
+ <li>Video: codec, aspect, fps, bitrate...</li>
+ <li>Audio: codec, sample rate, channels, language, bitrate...</li>
+ <li>Text: language of subtitle</li>
+ <li>Chapters: number of chapters, list of chapters</li>
+</ul>
+<h2>What format (container) does MediaInfo support?</h2>
+<ul>
+ <li>Video: MKV, OGM, AVI, <a href="http://mediaarea.net/en/DIVX">DivX</a>, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Codecs: <a href="http://mediaarea.net/en/DIVX">DivX</a>, <a href="http://mediaarea.net/en/XVID">XviD</a>, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Subtitles: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>What can I do with it?</h2>
+<ul>
+ <li>Read many <a href="Support/Formats"> video and audio file formats</a></li>
+ <li>View information in different formats (text, sheet, tree, HTML...)</li>
+ <li>Customise these viewing formats</li>
+ <li>Export information as text, CSV, HTML...</li>
+ <li>Graphical Interface, Command Line, or DLL versions available</li>
+ <li>Integrate with MS-Windows shell (drag 'n' drop, and Context menu)</li>
+ <li>Internationalisation: display any language on any operating system</li>
+ <li>Localisation capability (but volunteers needed)</li>
+</ul>
+<h2>Third-party tools</h2>
+  <a href="http://www.mediatab.co.cc">MediaTab</a> integrates MediaInfo in Windows explorer property tab<br />
+  <a href="http://mediainspector.massanti.com/">Media Inspector</a> has a native and better designed GUI for Mac users<br />
+   </td>
+   <td>
+<?php
+if (!isset($Donated)) include $Path."/_/Ad/InContent_336_280_Google.html";
+?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>
