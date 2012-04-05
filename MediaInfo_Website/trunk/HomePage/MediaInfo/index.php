@@ -54,6 +54,7 @@ $Page_Exploded[1]="";
 $Top=implode("/", $Page_Exploded);;
 $Top=str_replace("//", "/", $Top);
 $Top=str_replace("/About.html", "/", $Top);
+$Top=str_replace("/About_MacAppStore.html", "/", $Top);
 $Top=str_replace(".html", "", $Top);
 
 //Contents of the page in a variable
