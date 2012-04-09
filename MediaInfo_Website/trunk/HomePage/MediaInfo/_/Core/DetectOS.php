@@ -413,7 +413,7 @@
  }
    else
  {
-  $Version='0.7.54'; //Windows
+  $Version='0.7.55'; //Windows
   $CPU='i386'; //default
        if (stristr($_SERVER['HTTP_USER_AGENT'], "WOW64"))      $CPU='x64';
   else if (stristr($_SERVER['HTTP_USER_AGENT'], "Win64"))      $CPU='x64';
