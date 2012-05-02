@@ -2,7 +2,7 @@
  //OS detection
    if (stristr($_SERVER['HTTP_USER_AGENT'], "macintosh"))
  {
-  $Version='0.7.54'; //Mac OS X
+  $Version='0.7.55'; //Mac OS X
   $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Mac_Universal.dmg';
   $OS='Mac OS X, Universal';
   $Installer=true;
@@ -30,15 +30,15 @@
     $Link=$Language.'/Download/Debian#'.$OS_Version.'.'.$CPU;
          if ($Link==$Language.'/Download/Debian#4.i386')        $Version='0.7.28';
     else if ($Link==$Language.'/Download/Debian#4.amd64')       $Version='0.7.28';
-    else if ($Link==$Language.'/Download/Debian#5.i386')        $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Debian#5.amd64')       $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Debian#6.0.i386')      $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Debian#6.0.amd64')     $Version='0.7.54';
+    else if ($Link==$Language.'/Download/Debian#5.i386')        $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Debian#5.amd64')       $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Debian#6.0.i386')      $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Debian#6.0.amd64')     $Version='0.7.56';
     $OS='Debian '.$OS_Version.', '.$CPU;
    }
    else
    {
-    $Version='0.7.54'; //Debian
+    $Version='0.7.56'; //Debian
     $Link=$Language.'/Download/Debian';
     $OS='Debian';
    }
@@ -89,20 +89,20 @@
     $Link=$Language.'/Download/Ubuntu#'.$OS_Version.'.'.$CPU;
          if ($Link==$Language.'/Download/Ubuntu#7.10.i386')     $Version='0.7.28';
     else if ($Link==$Language.'/Download/Ubuntu#7.10.amd64')    $Version='0.7.28';
-    else if ($Link==$Language.'/Download/Ubuntu#8.04.i386')     $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#8.04.amd64')    $Version='0.7.54';
+    else if ($Link==$Language.'/Download/Ubuntu#8.04.i386')     $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#8.04.amd64')    $Version='0.7.56';
     else if ($Link==$Language.'/Download/Ubuntu#8.10.i386')     $Version='0.7.28';
     else if ($Link==$Language.'/Download/Ubuntu#8.10.amd64')    $Version='0.7.28';
-    else if ($Link==$Language.'/Download/Ubuntu#9.04.i386')     $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#9.04.amd64')    $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#9.10.i386')     $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#9.10.amd64')    $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#10.04.i386')    $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#10.04.amd64')   $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#10.10.i386')    $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#10.10.amd64')   $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#11.04.i386')    $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#11.04.amd64')   $Version='0.7.54';
+    else if ($Link==$Language.'/Download/Ubuntu#9.04.i386')     $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#9.04.amd64')    $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#9.10.i386')     $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#9.10.amd64')    $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#10.04.i386')    $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#10.04.amd64')   $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#10.10.i386')    $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#10.10.amd64')   $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#11.04.i386')    $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#11.04.amd64')   $Version='0.7.56';
          if ($OS_Version=='7.10')                               $OS_Version='7.10 (Gusty)';
     else if ($OS_Version=='8.04')                               $OS_Version='8.04 (Hardy)';
     else if ($OS_Version=='8.10')                               $OS_Version='8.10 (Intrepid)';
@@ -115,7 +115,7 @@
    }
    else
    {
-    $Version='0.7.54'; //Ubuntu
+    $Version='0.7.56'; //Ubuntu
     $Link=$Language.'/Download/Ubuntu';
     $OS='Ubuntu';
    }
@@ -150,18 +150,18 @@
     $Link=$Language.'/Download/Ubuntu#'.$OS_Version.'.'.$CPU;
          if ($Link==$Language.'/Download/Ubuntu#8.04.i386')     $Version='0.7.28';
     else if ($Link==$Language.'/Download/Ubuntu#8.04.amd64')    $Version='0.7.28';
-    else if ($Link==$Language.'/Download/Ubuntu#8.10.i386')     $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#8.10.amd64')    $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#9.04.i386')     $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#9.04.amd64')    $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#9.10.i386')     $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#9.10.amd64')    $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#10.04.i386')    $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#10.04.amd64')   $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#10.10.i386')    $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#10.10.amd64')   $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#11.04.i386')    $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Ubuntu#11.04.amd64')   $Version='0.7.54';
+    else if ($Link==$Language.'/Download/Ubuntu#8.10.i386')     $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#8.10.amd64')    $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#9.04.i386')     $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#9.04.amd64')    $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#9.10.i386')     $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#9.10.amd64')    $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#10.04.i386')    $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#10.04.amd64')   $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#10.10.i386')    $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#10.10.amd64')   $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#11.04.i386')    $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Ubuntu#11.04.amd64')   $Version='0.7.56';
          if ($OS_Version=='8.04')                               $OS_Version='5 (Elyssa)';
     else if ($OS_Version=='8.10')                               $OS_Version='6 (Felicia)';
     else if ($OS_Version=='9.04')                               $OS_Version='7 (Gloria)';
@@ -173,7 +173,7 @@
    }
    else
    {
-    $Version='0.7.54'; //Ubuntu
+    $Version='0.7.56'; //Ubuntu
     $Link=$Language.'/Download/Ubuntu';
     $OS='Ubuntu';
    }
@@ -197,15 +197,15 @@
     $Link=$Language.'/Download/CentOS#'.$OS_Version.'.'.$CPU;
          if ($Link==$Language.'/Download/CentOS#4.i386')        $Version='0.7.26';
     else if ($Link==$Language.'/Download/CentOS#4.x86_64')      $Version='0.7.26';
-    else if ($Link==$Language.'/Download/CentOS#5.i386')        $Version='0.7.54';
-    else if ($Link==$Language.'/Download/CentOS#5.x86_64')      $Version='0.7.54';
-    else if ($Link==$Language.'/Download/CentOS#6.i386')        $Version='0.7.54';
-    else if ($Link==$Language.'/Download/CentOS#6.x86_64')      $Version='0.7.54';
+    else if ($Link==$Language.'/Download/CentOS#5.i386')        $Version='0.7.56';
+    else if ($Link==$Language.'/Download/CentOS#5.x86_64')      $Version='0.7.56';
+    else if ($Link==$Language.'/Download/CentOS#6.i386')        $Version='0.7.56';
+    else if ($Link==$Language.'/Download/CentOS#6.x86_64')      $Version='0.7.56';
     $OS='CentOS '.$OS_Version.', '.$CPU;
    }
    else
    {
-    $Version='0.7.54'; //CentOS
+    $Version='0.7.56'; //CentOS
     $Link=$Language.'/Download/CentOS';
     $OS='CentOS';
    }
@@ -229,15 +229,15 @@
     $Link=$Language.'/Download/RHEL#'.$OS_Version.'.'.$CPU;
          if ($Link==$Language.'/Download/RHEL#4.i386')        $Version='0.7.26';
     else if ($Link==$Language.'/Download/RHEL#4.x86_64')      $Version='0.7.26';
-    else if ($Link==$Language.'/Download/RHEL#5.i386')        $Version='0.7.54';
-    else if ($Link==$Language.'/Download/RHEL#5.x86_64')      $Version='0.7.54';
-    else if ($Link==$Language.'/Download/RHEL#6.i386')        $Version='0.7.54';
-    else if ($Link==$Language.'/Download/RHEL#6.x86_64')      $Version='0.7.54';
+    else if ($Link==$Language.'/Download/RHEL#5.i386')        $Version='0.7.56';
+    else if ($Link==$Language.'/Download/RHEL#5.x86_64')      $Version='0.7.56';
+    else if ($Link==$Language.'/Download/RHEL#6.i386')        $Version='0.7.56';
+    else if ($Link==$Language.'/Download/RHEL#6.x86_64')      $Version='0.7.56';
     $OS='RHEL '.$OS_Version.', '.$CPU;
    }
    else
    {
-    $Version='0.7.54'; //RHEL
+    $Version='0.7.56'; //RHEL
     $Link=$Language.'/Download/RHEL';
     $OS='RHEL';
    }
@@ -286,10 +286,10 @@
     else if ($Link==$Language.'/Download/Fedora#13.x86_64')     $Version='0.7.45';
     else if ($Link==$Language.'/Download/Fedora#14.i386')       $Version='0.7.53';
     else if ($Link==$Language.'/Download/Fedora#14.x86_64')     $Version='0.7.53';
-    else if ($Link==$Language.'/Download/Fedora#15.i386')       $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Fedora#15.x86_64')     $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Fedora#16.i386')       $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Fedora#16.x86_64')     $Version='0.7.54';
+    else if ($Link==$Language.'/Download/Fedora#15.i386')       $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Fedora#15.x86_64')     $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Fedora#16.i386')       $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Fedora#16.x86_64')     $Version='0.7.56';
          if ($OS_Version=='8')                                  $OS='8 (Wereworlf)';
     else if ($OS_Version=='9')                                  $OS='9 (Sulphur)';
     else if ($OS_Version=='10')                                 $OS='10 (Cambridge)';
@@ -303,7 +303,7 @@
    }
    else
    {
-    $Version='0.7.54'; //Fedora
+    $Version='0.7.56'; //Fedora
     $Link=$Language.'/Download/Fedora';
     $OS='Fedora';
    }
@@ -325,15 +325,15 @@
     $Link=$Language.'/Download/openSUSE#'.$OS_Version.'.'.$CPU;
          if ($Link==$Language.'/Download/openSUSE#11.3.i586')   $Version='0.7.53';
     else if ($Link==$Language.'/Download/openSUSE#11.3.x86_64') $Version='0.7.53';
-    else if ($Link==$Language.'/Download/openSUSE#11.4.i586')   $Version='0.7.54';
-    else if ($Link==$Language.'/Download/openSUSE#11.4.x86_64') $Version='0.7.54';
-    else if ($Link==$Language.'/Download/openSUSE#12.1.i586')   $Version='0.7.54';
-    else if ($Link==$Language.'/Download/openSUSE#12.1.x86_64') $Version='0.7.54';
+    else if ($Link==$Language.'/Download/openSUSE#11.4.i586')   $Version='0.7.56';
+    else if ($Link==$Language.'/Download/openSUSE#11.4.x86_64') $Version='0.7.56';
+    else if ($Link==$Language.'/Download/openSUSE#12.1.i586')   $Version='0.7.56';
+    else if ($Link==$Language.'/Download/openSUSE#12.1.x86_64') $Version='0.7.56';
     $OS='openSUSE '.$OS_Version.', '.$CPU;
    }
    else
    {
-    $Version='0.7.54'; //openSUSE
+    $Version='0.7.56'; //openSUSE
     $Link=$Language.'/Download/openSUSE';
     $OS='openSUSE';
    }
@@ -362,19 +362,19 @@
     $Link=$Language.'/Download/Mandriva#'.$OS_Version.'.'.$CPU;
          if ($Link==$Language.'/Download/Mandriva#2008.i586')     $Version='0.7.31';
     else if ($Link==$Language.'/Download/Mandriva#2008.x86_64')   $Version='0.7.31';
-    else if ($Link==$Language.'/Download/Mandriva#2009.1.i586')   $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Mandriva#2009.1.x86_64') $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Mandriva#2010.i586')     $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Mandriva#2010.x86_64')   $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Mandriva#2010.1.i586')   $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Mandriva#2010.1.x86_64') $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Mandriva#2011.i586')     $Version='0.7.54';
-    else if ($Link==$Language.'/Download/Mandriva#2011.x86_64')   $Version='0.7.54';
+    else if ($Link==$Language.'/Download/Mandriva#2009.1.i586')   $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Mandriva#2009.1.x86_64') $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Mandriva#2010.i586')     $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Mandriva#2010.x86_64')   $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Mandriva#2010.1.i586')   $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Mandriva#2010.1.x86_64') $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Mandriva#2011.i586')     $Version='0.7.56';
+    else if ($Link==$Language.'/Download/Mandriva#2011.x86_64')   $Version='0.7.56';
     $OS='Mandriva '.$OS_Version.', '.$CPU;
    }
    else
    {
-    $Version='0.7.54'; //Mandriva
+    $Version='0.7.56'; //Mandriva
     $Link=$Language.'/Download/Mandriva';
     $OS='Mandriva';
    }
@@ -398,7 +398,7 @@
   }
   else
   {
-   $Version='0.7.54'; //Linux
+   $Version='0.7.56'; //Linux
    $Link=$Language.'/Download';
    $OS='Linux';
    $Size='2';
@@ -406,14 +406,14 @@
  }
  else if (stristr($_SERVER['HTTP_USER_AGENT'], "bsd"))
  {
-  $Version='0.7.54'; //Linux
+  $Version='0.7.56'; //Linux
   $Link=$Language.'/Download/Source#AllInOne';
   $OS='Linux';
   $Size='2';
  }
    else
  {
-  $Version='0.7.55'; //Windows
+  $Version='0.7.56'; //Windows
   $CPU='i386'; //default
        if (stristr($_SERVER['HTTP_USER_AGENT'], "WOW64"))      $CPU='x64';
   else if (stristr($_SERVER['HTTP_USER_AGENT'], "Win64"))      $CPU='x64';
