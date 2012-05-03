@@ -1,0 +1,147 @@
+<?php
+//Arguments
+//Example : http://localhost/Log?Name=MediaInfoGUI&Version=0.7.1.0&Lib=0.7.1.0
+strtok($_SERVER["REQUEST_URI"], "?");
+parse_str(strtok("?"), $Argument);
+//LastVisited
+//if (isset($_COOKIE["LastVisited"]) || strpos($_SERVER["REQUEST_URI"], "?")===FALSE)
+ $AlreadyVisited='Y';
+//else
+// setcookie("LastVisited", time(), time()+60*60);
+?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head> 
+ <title>MediaInfo - ChangeLog</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php
+if (isset($Official))
+ $URL='http://mediainfo.sourceforge.net/'.$Language;
+else
+ $URL='http://localhost/'.$Language;
+if (!isset($AlreadyVisited))
+{
+ if (mt_rand(1, 100)>15)
+ {
+  //Sourceforge
+ }
+ else
+ {
+  if (mt_rand(1, 100)>33)
+   $URL='http://mediaarea.net/DX50sf.php';
+  else if (mt_rand(1, 100)>50)
+   $URL='http://mediaarea.net/DIVXsf.php';
+  else
+   $URL='http://mediaarea.net/XVIDsf.php';
+ }
+ echo ' <meta http-equiv="refresh" content="3; URL='.$URL.'" />
+';
+}
+?>
+ <meta name="identifier-url" content="http://mediainfo.sourceforge.net" />
+ <meta name="revisit-after" content="7 days" />
+ <meta name="robots" content="index,follow" />
+ <link rel="stylesheet" type="text/css" href="/_/CSS/Default.css" title="Default" />
+ <link rel="icon" type="image/png" href="/_/Image/Icon.png" />
+ <link rel="shortcut icon" type="image/x-icon" href="/_/Image/Icon.ico" />
+</head>
+<br />
+<table border="0" cellpadding="0" cellspacing="0">
+ <tbody>
+  <tr>
+   <td>
+<div id="ShouldShow" class="Invisible">Yes</div>
+<div id="NewVersion">
+<?php 
+if ($Language=="fr")
+ echo '
+ <a href="'.$URL.'">Visiter le site MediaInfo</a><br />
+';
+else
+ echo '
+ <a href="'.$URL.'">Visit MediaInfo website</a><br />
+';
+?>
+</div>
+<div class="Invisible">
+More about 4CC: <a href="http://mediaarea.net/DX50sf.php">DX50</a> <a href="http://mediaarea.net/DIVXsf.php">DIVX</a> <a href="http://mediaarea.net/XVIDsf.php">XVID</a><br />
+</div>
+<div id="ChangeLog"><pre>
+Changes:
+
+Version 0.7.56, 2012-04-08
+--------------
++ Better support of machines lacking of std::stringstream
++ Better support of machines requesting explicit stdc++ library link option (e.g. some ARM embedded devices)
+x #3515515, MPEG-4: crash with MPEG-4 container + H264/AVC video stream
+x #3515393, MPEG Audio: infinite loop (freeze) with some files
+x #3514677, Video: Well known 1.85:1 display aspect ratio was incorrectly displayed as 16:9
+x #3513908, File interface: No output if filename contain a colon
+x #3515893, MPEG-4: some specific files were not detected
+x AVI: infinite loop (freeze) with some files (having index containing 0-sized chunk)
+x AVC: memory leaks
+x libcurl support: libcurl config from MediaInfo is compatible with libcurl+gnutls
+x #3515857, CLI only: --LogFile carriage return format was not the one of the OS
+
+Version 0.7.55, 2012-04-05
+--------------
++ Italian translation updated
++ AC-3: support of little endian streams
++ LXF: support of format version 0
++ HLS: support of .m3u8 index and sequence referencing a bunch of MPEG-TS files
++ MPEG-4: Added support of glbl atom and corresponding 4CC (ai12, ai15, ai1q, ai5q)
++ MPEG-4: Added detection of files with mx5p files wrongly filled with raw MPEG Video instead of MXF
++ MPEG-TS: Detection of 20-bit Dolby E even if the SMPTE 302 M header is set to 24-bit
+x #3513490, Id3v2: mapping of "Encoded by" and "Encoding library" is conform to the specs now
+x MXF: hang up with some clip-wrapped files
+x MPEG-4: AVC-100 bit rate was not coherent depending of the container (MPEG-4 or MXF)
+x reVTMD output is disabled due to its non-free (point of view of FSF and DFSG) licensing.
+
+Version 0.7.54, 2012-03-13
+--------------
++ Russian translation updated
++ #3480111, Matroska: parsing of WebM-style frame rate info
++ #3499859, ALAC: parsing of the alac atom, for real bit depth / sample rate
++ #3487601, DV: fields order (TFF/BFF)
++ MPEG-4: more video 4CCs binded to MPEG Video
++ H.263: raw stream parsing (width, height, aspect ratio), comparison with container data
++ Speed improvements
++ MPEG-PS: supporting parsing of some non-conform files
++ Full support of CEA-608 (separation of CC1-CC4, T1-T4)
++ #3494722, MPEG-4: trying to detect wrong duration in track header
++ MPEG-4 with embedded MXF track (XDCAM...): separation of video bitrate and padding bitrate
++ Compound streams (e.g. DV): separation of video bitrate and audio bitrate
++ Blu-ray: LPCM mono real bit rate is separated from the encoded (stereo) bit rate
++ Support of https, sftp scp protocols (custom builds only)
++ AVI: vprp (OpenDML) display aspect ratio support
+x File names with non-US characters were sometimes not open
+x #3480111, Matroska: some frame rates are incorrect in the file, trying to detect this kind of malformed file
+x #3479494, AVC: segmentation fault
+x #3440638, AAC: wrong detection for some malformed AAC streams
+x #3440638, MPEG-4: wrong analysis of some files having track header after media information
+x #3480111, MXF: Height was wrong for MXF with FrameLayout = Mixed fields
+x #3468235, Blu-ray: displaying PGS in all cases (even if PES is not detected, they are too much rare)
+x #3498846, MPEG-4: delay between audio and video was no more detected
+x #3495573, MPEG-4: crash with some files having fragments
+x MPEG-4: channel position in case of channel atom is configured with ChannelBitmap
+x MPEG-TS: crash with some buggy files (a PID indicated as PSI and PES at the same time)
+x AES3: not detecting Dolby E stream if there is guard band before the Dolby E frame, in MPEG-TS
+x DPX: some files with some invalid fields were not detected
+x DTVCC Captions: crash with some buggy streams
+
+</pre>
+</div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+ <tbody>
+  <tr>
+   <td align="center">
+    <?php include $Path."/_/Ad/GoogleAnalytics_Users.html"; ?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</html>
