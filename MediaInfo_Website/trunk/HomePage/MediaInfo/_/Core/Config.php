@@ -1,12 +1,5 @@
 <?php
 
-//HTTP/HTTPS
-if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'
- || $_SERVER['SERVER_PORT'] == 443)
- $secure_connexion = true;
-else
- $secure_connexion = false;
-
 //HTTP
 header("Cache-Control: no-cache, must-revalidate, max-age=0");
 
