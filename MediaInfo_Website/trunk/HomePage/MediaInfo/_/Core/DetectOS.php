@@ -2,7 +2,7 @@
  //OS detection
    if (stristr($_SERVER['HTTP_USER_AGENT'], "macintosh"))
  {
-  $Version='0.7.55'; //Mac OS X
+  $Version='0.7.54'; //Mac OS X
   $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Mac_Universal.dmg';
   $OS='Mac OS X, Universal';
   $Installer=true;
