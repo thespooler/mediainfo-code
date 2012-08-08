@@ -1,0 +1,61 @@
+# MediaInfo
+# Copyright (C) 2002-2012 MediaArea.net SARL, Info@MediaArea.net
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with this program. If not, see <http:#www.gnu.org/licenses/>.
+#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#! /bin/sh
+
+#-----------------------------------------------------------------------
+# $1=OS, $2=Platform
+Release_CLI()
+{
+#-----------------------------------------------------------------------
+# Clean up
+test -e MediaInfo_CLI_$1_$2.tar     && rm    MediaInfo_CLI_$1_$2.tar
+test -e MediaInfo_CLI_$1_$2.tar.bz2 && rm    MediaInfo_CLI_$1_$2.tar.bz2
+test -d MediaInfo_CLI_$1_$2         && rm -r MediaInfo_CLI_$1_$2
+mkdir   MediaInfo_CLI_$1_$2
+
+#-----------------------------------------------------------------------
+# Copying : Exe
+cp ../Project/GNU/CLI/mediainfo MediaInfo_CLI_$1_$2/mediainfo
+cd MediaInfo_CLI_$1_$2
+strip mediainfo
+cd ..
+
+#-----------------------------------------------------------------------
+# Copying : Information file
+cp ../License.html MediaInfo_CLI_$1_$2/
+cp ../History_CLI.txt MediaInfo_CLI_$1_$2/History.txt
+cp ReadMe_CLI_$1.txt MediaInfo_CLI_$1_$2/ReadMe.txt
+
+#-----------------------------------------------------------------------
+# Copying : Information file
+mkdir -p MediaInfo_CLI_$1_$2/Contrib
+cp ../Contrib/CLI_Help.doc MediaInfo_CLI_$1_$2/Contrib/
+
+#-----------------------------------------------------------------------
+# Compressing Archive
+tar jchf MediaInfo_CLI_$1_$2.tar.bz2 MediaInfo_CLI_$1_$2
+
+#-----------------------------------------------------------------------
+# Clean up
+#if "%1"=="SkipCleanUp" goto SkipCleanUp
+#rm -r MediaInfo_CLI_$1_$2
+#:SkipCleanUp
+}
+
