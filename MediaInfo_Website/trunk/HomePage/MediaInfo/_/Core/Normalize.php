@@ -11,7 +11,7 @@ if (strlen($Page)<=6 || $Page{strlen($Page)-5}!=".")
  $Page.=".html";
 $Page_Exploded=explode("/", $Page); //first item is always empty
 
-if (!isset($Page_Exploded[1])) 
+if (!isset($Page_Exploded[1]))
 {
  //Bad URL, need at least one item
  header ("HTTP/1.1 301 Moved Permanently");
@@ -21,7 +21,7 @@ if (!isset($Page_Exploded[1]))
 
 
  //Test if this is with language
-if (strlen($Page_Exploded[1])!=2 && !(strlen($Page_Exploded[1])==5 && $Page_Exploded[1]{2}=="-")) 
+if (strlen($Page_Exploded[1])!=2 && !(strlen($Page_Exploded[1])==5 && $Page_Exploded[1]{2}=="-"))
 {
  if (!is_file($Path."/en".$Page))
  {
@@ -37,12 +37,12 @@ $Language=$Page_Exploded[1];
 if (isset($Page_Exploded[2]) && $Page_Exploded[2]=="Help.html")
 {
  header("Location: http://".$_SERVER['HTTP_HOST']."/".$Language."/Donate", true, 301);
- exit; 
+ exit;
 }
 if (isset($Page_Exploded[2]) && $Page_Exploded[2]=="Price.html")
 {
  header("Location: http://".$_SERVER['HTTP_HOST']."/".$Language."/Prices", true, 301);
- exit; 
+ exit;
 }
 
 //-PageFinal - With a page in the good language or english

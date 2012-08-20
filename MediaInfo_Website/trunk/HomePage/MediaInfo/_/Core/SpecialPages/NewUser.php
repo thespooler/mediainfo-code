@@ -3,7 +3,7 @@
 if ($Page=="" || $Page=="/")
 {
  header("Location: http://".$_SERVER['HTTP_HOST']."/".$Language);
- exit; 
+ exit;
 }
 
 //-Special case : is a directory

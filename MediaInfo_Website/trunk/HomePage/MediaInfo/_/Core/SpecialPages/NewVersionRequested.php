@@ -15,6 +15,6 @@ You will be redirected shortly, if not click <a href="http://'.$_SERVER['HTTP_HO
 </body>
 </html>
  ';
- exit; 
+ exit;
 }
 ?>

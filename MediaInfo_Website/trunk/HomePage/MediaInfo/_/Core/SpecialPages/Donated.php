@@ -15,19 +15,19 @@ You will be redirected shortly, if not click <a href="http://'.$_SERVER['HTTP_HO
 </body>
 </html>
  ';
- exit; 
+ exit;
 }
 
 //Has just donated (paypal)
 if (isset($Argument["tx"]))
 {
  //Paypal return: tx (Transaction number)
- //         st (Completed)
- //         amt (Amount)
- //         cc (Currency)
- //         cm (Empty)
- //         item_number
- //         sig (Signature)
+ //		 st (Completed)
+ //		 amt (Amount)
+ //		 cc (Currency)
+ //		 cm (Empty)
+ //		 item_number
+ //		 sig (Signature)
  setcookie("Donated", "true", time()+60*60*24*365*5, "/");
  if (isset($_COOKIE["WantedDownload"]))
   $Link='/Download_Donate';
@@ -44,7 +44,7 @@ You will be redirected shortly, if not click <a href="http://'.$_SERVER['HTTP_HO
 </body>
 </html>
  ';
- exit; 
+ exit;
 }
 
 ?>
