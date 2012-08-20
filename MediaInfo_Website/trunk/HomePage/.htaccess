@@ -13,7 +13,7 @@ RewriteEngine on
 #Hostname
 #RewriteCond %{HTTP_HOST}   !^mediainfo.sourceforge.net [NC]
 #RewriteCond %{HTTP_HOST}   !^$
-#RewriteRule ^/(.*)		 http://mediainfo.sourceforge.net/$1 [L,R]
+#RewriteRule ^/(.*)         http://mediainfo.sourceforge.net/$1 [L,R]
 
 #translation /xxx -->php.php?page=xxx but without /_/xxxx
 RewriteRule ^_/(.*)$ /MediaInfo/_/$1 [L]
