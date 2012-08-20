@@ -23,7 +23,7 @@ Dear donator, thank you for your support.
 function visitorCountry(){
 	$ip = getenv('REMOTE_ADDR');
 	$d = file_get_contents("http://www.ipinfodb.com/ip_query_country.php?ip=$ip&output=xml");
- 
+
 	//Use backup server if cannot make a connection
 	if (!$d){
 		$backup = file_get_contents("http://backup.ipinfodb.com/ip_query.php?ip=$ip&output=xml");
@@ -32,10 +32,10 @@ function visitorCountry(){
 	}else{
 		$answer = new SimpleXMLElement($d);
 	}
- 
+
 	return $answer->CountryCode;
 }
- 
+
 $Country_Detected=false;
 $Country = visitorCountry();
 echo $Country;

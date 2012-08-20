@@ -6,12 +6,12 @@ if ($Level>1)
  {
   if ($Menu[$i]!="")
   {
-    if ($i!=1)
-      echo " > ";
-    $Link="";
-    for ($j=1; $j<=$i; $j++)
-      $Link.="/".$Menu_Link[$j];
-    echo '<a href="'.'/'.$Language.$Link.'">'.$Menu[$i].'</a>';
+	if ($i!=1)
+	  echo " > ";
+	$Link="";
+	for ($j=1; $j<=$i; $j++)
+	  $Link.="/".$Menu_Link[$j];
+	echo '<a href="'.'/'.$Language.$Link.'">'.$Menu[$i].'</a>';
   }
  }
  echo " > ".$PageName;

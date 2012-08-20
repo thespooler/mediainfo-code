@@ -50,8 +50,8 @@ caption {
 }
 
 span.legend {
-        font-size: 70%;
-        text-align: center;
+		font-size: 70%;
+		text-align: center;
 }
 
 div.qindex, div.navtab{
@@ -99,7 +99,7 @@ a.qindexHL {
 }
 
 .contents a.qindexHL:visited {
-        color: #ffffff;
+		color: #ffffff;
 }
 
 a.el {
@@ -184,7 +184,7 @@ p.formulaDsp {
 }
 
 img.formulaDsp {
-	
+
 }
 
 img.formulaInl {
@@ -193,9 +193,9 @@ img.formulaInl {
 
 div.center {
 	text-align: center;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding: 0px;
 }
 
 div.center img {
@@ -237,20 +237,20 @@ span.charliteral {
 	color: #008080
 }
 
-span.vhdldigit { 
-	color: #ff00ff 
+span.vhdldigit {
+	color: #ff00ff
 }
 
-span.vhdlchar { 
-	color: #000000 
+span.vhdlchar {
+	color: #000000
 }
 
-span.vhdlkeyword { 
-	color: #700070 
+span.vhdlkeyword {
+	color: #700070
 }
 
-span.vhdllogic { 
-	color: #ff0000 
+span.vhdllogic {
+	color: #ff0000
 }
 
 /* @end */
@@ -314,12 +314,12 @@ hr {
 }
 
 .memItemLeft, .memTemplItemLeft {
-        white-space: nowrap;
+		white-space: nowrap;
 }
 
 .memTemplParams {
 	color: #606060;
-        white-space: nowrap;
+		white-space: nowrap;
 }
 
 /* @end */
@@ -355,7 +355,7 @@ hr {
 }
 
 .memproto, .memdoc {
-	border: 1px solid #84b0c7;	
+	border: 1px solid #84b0c7;
 }
 
 .memproto {
@@ -364,10 +364,10 @@ hr {
 	font-weight: bold;
 	-webkit-border-top-left-radius: 8px;
 	-webkit-border-top-right-radius: 8px;
-        -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+		-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
 	-moz-border-radius-topleft: 8px;
 	-moz-border-radius-topright: 8px;
-        -moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+		-moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
 
 }
 
@@ -377,10 +377,10 @@ hr {
 	border-top-width: 0;
 	-webkit-border-bottom-left-radius: 8px;
 	-webkit-border-bottom-right-radius: 8px;
-        -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+		-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
 	-moz-border-radius-bottomleft: 8px;
 	-moz-border-radius-bottomright: 8px;
-        -moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+		-moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
 }
 
 .paramkey {

@@ -2,38 +2,38 @@
 
 DIV.tabs
 {
-   float            : left;
-   width            : 100%;
-   background       : url("tab_b.gif") repeat-x bottom;
-   margin-bottom    : 4px;
+   float			: left;
+   width			: 100%;
+   background	   : url("tab_b.gif") repeat-x bottom;
+   margin-bottom	: 4px;
 }
 
 DIV.tabs UL
 {
-   margin           : 0px;
-   padding-left     : 10px;
-   list-style       : none;
+   margin		   : 0px;
+   padding-left	 : 10px;
+   list-style	   : none;
 }
 
 DIV.tabs LI, DIV.tabs FORM
 {
-   display          : inline;
-   margin           : 0px;
-   padding          : 0px;
+   display		  : inline;
+   margin		   : 0px;
+   padding		  : 0px;
 }
 
 DIV.tabs FORM
 {
-   float            : right;
+   float			: right;
 }
 
 DIV.tabs A
 {
-   float            : left;
-   background       : url("tab_r.gif") no-repeat right top;
-   border-bottom    : 1px solid #84B0C7;
-   font-size        : x-small;
-   font-weight      : bold;
+   float			: left;
+   background	   : url("tab_r.gif") no-repeat right top;
+   border-bottom	: 1px solid #84B0C7;
+   font-size		: x-small;
+   font-weight	  : bold;
    text-decoration  : none;
 }
 
@@ -45,29 +45,29 @@ DIV.tabs A:hover
 DIV.tabs A:link, DIV.tabs A:visited,
 DIV.tabs A:active, DIV.tabs A:hover
 {
-       color: #1A419D;
+	   color: #1A419D;
 }
 
 DIV.tabs SPAN
 {
-   float            : left;
-   display          : block;
-   background       : url("tab_l.gif") no-repeat left top;
-   padding          : 5px 9px;
-   white-space      : nowrap;
+   float			: left;
+   display		  : block;
+   background	   : url("tab_l.gif") no-repeat left top;
+   padding		  : 5px 9px;
+   white-space	  : nowrap;
 }
 
 DIV.tabs INPUT
 {
-   float            : right;
-   display          : inline;
-   font-size        : 1em;
+   float			: right;
+   display		  : inline;
+   font-size		: 1em;
 }
 
 DIV.tabs TD
 {
-   font-size        : x-small;
-   font-weight      : bold;
+   font-size		: x-small;
+   font-weight	  : bold;
    text-decoration  : none;
 }
 
@@ -85,7 +85,7 @@ DIV.tabs A:hover SPAN
 DIV.tabs LI.current A
 {
    background-position: 100% -150px;
-   border-width     : 0px;
+   border-width	 : 0px;
 }
 
 DIV.tabs LI.current SPAN
@@ -96,7 +96,7 @@ DIV.tabs LI.current SPAN
 
 DIV.navpath
 {
-   background       : none;
-   border           : none;
-   border-bottom    : 1px solid #84B0C7;
+   background	   : none;
+   border		   : none;
+   border-bottom	: 1px solid #84B0C7;
 }

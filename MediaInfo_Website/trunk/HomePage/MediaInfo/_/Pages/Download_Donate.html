@@ -14,7 +14,7 @@ if (isset($Donated))
  }
  else
   $Link="http://mediainfo.sourceforge.net/Download";
- 
+
  //Saving info
  $Html_Head_Meta_HttpEquiv_Refresh='<meta http-equiv="refresh" content="0;url='.$Link.'" />';
 
@@ -54,7 +54,7 @@ else if (isset($_POST) && isset($_POST["amount"]) && ((int)($_POST["amount"]))!=
   $Link=$_COOKIE["WantedDownload"];
  else
   $Link="http://mediainfo.sourceforge.net/Download";
- 
+
  $Page_Status="Paypal";
 }
 
@@ -66,7 +66,7 @@ else if (isset($_POST) && isset($_POST["amount"])) //Free
   $Link=$_COOKIE["WantedDownload"];
  else
   $Link="http://mediainfo.sourceforge.net/Download";
- 
+
  //Saving info
  $Html_Head_Meta_HttpEquiv_Refresh='<meta http-equiv="refresh" content="2;url='.$Link.'" />';
 

@@ -54,8 +54,8 @@ function Line_Show_All()
  Line_Show('Commercial');
  Line_Show('Other');
  Line_Show('Nested');
-} 
- 
+}
+
 function Line_Hide_All()
 {
  Line_Hide('Title');
@@ -70,8 +70,8 @@ function Line_Hide_All()
  Line_Hide('Commercial');
  Line_Hide('Other');
  Line_Hide('Nested');
-} 
- 
+}
+
 function Col_Show_All()
 {
  Col_Show('mi');
