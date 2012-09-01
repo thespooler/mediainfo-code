@@ -18,9 +18,6 @@ include $Path.'/_/Core/DetectOS.php';
 include $Path.'/_/Core/Normalize.php';
 
 
-
-
-
 //test subfolder per subfolder : /a/_.html, /a/b/_.html...
 include $Path."/_/index.0.html";
 $Level=0;
@@ -65,7 +62,7 @@ ob_end_clean();
 
 if (!isset($Edit))
 {
- //Substring between <title> and </title>
+ //Substring between	<title> and </title>
  $Title_Start=strpos($Contents, "<title>");
  if ($Title_Start!==false)
  {
