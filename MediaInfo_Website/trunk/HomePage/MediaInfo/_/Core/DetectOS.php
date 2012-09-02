@@ -2,7 +2,7 @@
  //OS detection
    if (stristr($_SERVER['HTTP_USER_AGENT'], "macintosh"))
  {
-  $Version='0.7.58'; //Mac OS X
+  $Version='0.7.60'; //Mac OS X
   $Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Mac_Universal.dmg';
   $OS='Mac OS X, Universal';
   $Installer=true;
@@ -442,7 +442,8 @@
   else if (isset($NewVersionRequested) && $Language=="en" )
   {
    $Link='/Download_Donate';
-   setcookie("WantedDownload", 'http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Windows_'.$CPU.'.exe', time()+60*60*1, "/");
+   //setcookie("WantedDownload", 'http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Windows_'.$CPU.'.exe', time()+60*60*1, "/");
+   setcookie("WantedDownload", 'http://mediaarea.net/download/binary/mediainfo-gui/'.$Version.'/MediaInfo_GUI_'.$Version.'_Windows_'.$CPU.'.exe', time()+60*60*1, "/");
   }
   else
   {
