@@ -11,13 +11,15 @@ td:target {background-color: #77FF77;}
 
 <?php if (isset($Donated))
 {
- $DownloadSite="http://download.mediaarea.net";
- $DownloadSiteAfter="";
+ $Downloadi386='http://mediaarea.net/download/donors/0.7.60/MediaInfo_GUI_0.7.60_Windows_i386.exe';
+ $Downloadx64 ='http://mediaarea.net/download/donors/0.7.60/MediaInfo_GUI_0.7.60_Windows_x64.exe';
+ $AdSupported ='&nbsp;';
 }
 else
 {
- $DownloadSite="http://sourceforge.net/projects/mediainfo/files";
- $DownloadSiteAfter="/download";
+ $Downloadi386='http://mediaarea.net/download/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_i386.exe';
+ $Downloadx64 ='http://mediaarea.net/download/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_x64.exe';
+ $AdSupported ='(<a href="/Bundled">Ad supported</a>)';
 }
 ?>
 
@@ -39,17 +41,17 @@ else
 </tr>
 <tr>
 	<th><acronym title="Graphical User Interface">GUI</acronym></th>
-	<td><a href="<?php echo $DownloadSite; ?>/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_i386.exe<?php echo $DownloadSiteAfter; ?>">v0.7.60</a><span style="font-size: x-small;"> (<a href="<?php echo $DownloadSite; ?>/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_i386_WithoutInstaller.7z<?php echo $DownloadSiteAfter; ?>">without installer</a>)</span></td>
-	<td>(<a href="/Bundled">Ad supported</a>)</td>
+	<td><a href="<?php echo $Downloadi386; ?>">v0.7.60</a><span style="font-size: x-small;"> (<a href="http://mediaarea.net/download/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_i386_WithoutInstaller.7z">without installer</a>)</span></td>
+	<td><?php echo $AdSupported; ?></td>
 </tr>
 <tr>
 	<th><acronym title="Command Line Interface">CLI</acronym></th>
-	<td><a href="<?php echo $DownloadSite; ?>/binary/mediainfo/0.7.60/MediaInfo_CLI_0.7.60_Windows_i386.zip<?php echo $DownloadSiteAfter; ?>">v0.7.60</a></td>
+	<td><a href="http://mediaarea.net/download/binary/mediainfo/0.7.60/MediaInfo_CLI_0.7.60_Windows_i386.zip">v0.7.60</a></td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
 	<th><acronym title="Dynamicly Linked Library">DLL</acronym></th>
-	<td><a href="<?php echo $DownloadSite; ?>/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_i386.exe<?php echo $DownloadSiteAfter; ?>">v0.7.60</a><span style="font-size: x-small;"> (<a href="<?php echo $DownloadSite; ?>/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_i386_WithoutInstaller.7z<?php echo $DownloadSiteAfter; ?>">without installer</a>)</span></td>
+	<td><a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_i386.exe">v0.7.60</a><span style="font-size: x-small;"> (<a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_i386_WithoutInstaller.7z">without installer</a>)</span></td>
 	<td>Use this one for <a href="http://www.emule-project.net">eMule</a> integration</td>
 </tr>
 <tr>
@@ -58,17 +60,17 @@ else
 </tr>
 <tr>
 	<th><acronym title="Graphical User Interface">GUI</acronym></th>
-	<td><a href="<?php echo $DownloadSite; ?>/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_x64.exe<?php echo $DownloadSiteAfter; ?>">v0.7.60</a><span style="font-size: x-small;"> (<a href="<?php echo $DownloadSite; ?>/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_x64_WithoutInstaller.7z<?php echo $DownloadSiteAfter; ?>">without installer</a>)</span></td>
-	<td>(<a href="/Bundled">Ad supported</a>)</td>
+	<td><a href="<?php echo $Downloadx64; ?>">v0.7.60</a><span style="font-size: x-small;"> (<a href="http://mediaarea.net/download/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_x64_WithoutInstaller.7z">without installer</a>)</span></td>
+	<td><?php echo $AdSupported; ?></td>
 </tr>
 <tr>
 	<th><acronym title="Command Line Interface">CLI</acronym></th>
-	<td><a href="<?php echo $DownloadSite; ?>/binary/mediainfo/0.7.60/MediaInfo_CLI_0.7.60_Windows_x64.zip<?php echo $DownloadSiteAfter; ?>">v0.7.60</a></td>
+	<td><a href="http://mediaarea.net/download/binary/mediainfo/0.7.60/MediaInfo_CLI_0.7.60_Windows_x64.zip">v0.7.60</a></td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
 	<th><acronym title="Dynamicly Linked Library">DLL</acronym></th>
-	<td><a href="<?php echo $DownloadSite; ?>/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_x64.exe<?php echo $DownloadSiteAfter; ?>">v0.7.60</a><span style="font-size: x-small;"> (<a href="<?php echo $DownloadSite; ?>/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_x64_WithoutInstaller.7z<?php echo $DownloadSiteAfter; ?>">without installer</a>)</span></td>
+	<td><a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_x64.exe">v0.7.60</a><span style="font-size: x-small;"> (<a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_x64_WithoutInstaller.7z">without installer</a>)</span></td>
 	<td>&nbsp;</td>
 </tr>
 </table>
