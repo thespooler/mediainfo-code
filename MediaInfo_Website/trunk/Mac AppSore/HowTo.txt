@@ -1,0 +1,42 @@
+Changes to do per new version
+
+install_name_tool -id @executable_path/../Resources/libmediainfo.dylib libmediainfo.dylib 
+
+Product --> Build for Archiving
+Product --> Archive
+
+***
+
+Signatures:
+
+
+if [ "$CODE_SIGNING_ALLOWED" = "YES" -a "$CODE_SIGN_IDENTITY" != "Don't Code Sign" ]; then
+    cd "$CODESIGNING_FOLDER_PATH"
+    #ls -la
+    /usr/bin/codesign -f -s "3rd Party Mac Developer Application: **NAME**" --verbose Contents/Resources/libmediainfo.dylib
+fi 
+
+***
+
+Locales
+
+Update:
+- update_xibs.sh all.
+
+Locale issues:
+- Greek language locale on mac is called 'el'
+- Chinese are zh-Hans and zh-Hant
+- mac has pt and pt-PT locales by default
+
+***
+
+SandBoxing
+- Target, MediaInfo, Summary, Entitlements, Enable Entitlements, Enable App Sandboxing
+
+***
+
+To upload the app to store:
+- clean project via product menu
+- click Archive in Product menu - Organizer will be opened.
+- then click Validate
+- after validation click Submit.
