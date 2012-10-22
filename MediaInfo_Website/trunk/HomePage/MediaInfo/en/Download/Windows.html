@@ -11,14 +11,14 @@ td:target {background-color: #77FF77;}
 
 <?php if (isset($Donated))
 {
- $Downloadi386='http://mediaarea.net/download/donors/0.7.60/MediaInfo_GUI_0.7.60_Windows_i386.exe';
- $Downloadx64 ='http://mediaarea.net/download/donors/0.7.60/MediaInfo_GUI_0.7.60_Windows_x64.exe';
+ $Downloadi386='http://mediaarea.net/download/donors/0.7.61/MediaInfo_GUI_0.7.61_Windows.exe';
+ $Downloadx64 ='http://mediaarea.net/download/donors/0.7.61/MediaInfo_GUI_0.7.61_Windows.exe';
  $AdSupported ='&nbsp;';
 }
 else
 {
- $Downloadi386='http://mediaarea.net/download/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_i386.exe';
- $Downloadx64 ='http://mediaarea.net/download/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_x64.exe';
+ $Downloadi386='http://mediaarea.net/download/binary/mediainfo-gui/0.7.61/MediaInfo_GUI_0.7.61_Windows.exe';
+ $Downloadx64 ='http://mediaarea.net/download/binary/mediainfo-gui/0.7.61/MediaInfo_GUI_0.7.61_Windows.exe';
  $AdSupported ='(<a href="/Bundled">Ad supported</a>)';
 }
 ?>
@@ -35,42 +35,51 @@ else
 	<td>Comment</td>
 </tr>
 <tr>
-	<th rowspan=8>Version 4 (95, 98, Me),<br />Version 5 (2000, XP, 2003),<br />Version 6 (Vista, Seven)</th>
-	<th rowspan=4>32 bit</td>
-	<td colspan=3 bgcolor="#FFCC99" id="i386">Windows 95/98/Me/2000/XP/2003/Vista/Seven, 32 bit</td>
+	<th rowspan=10>Serie 4 (95, 98, Me),<br />Serie 5 (2000, XP, 2003),<br />Serie 6 (Vista, Seven, 8)</th>
+	<th rowspan=2>Universal installer (32/64 bits)</td>
+	<td colspan=3 bgcolor="#FFCC99" id="i386">Windows 95/98/Me/2000/XP/2003/Vista/Seven/8, 32/64 bit</td>
 </tr>
 <tr>
 	<th><acronym title="Graphical User Interface">GUI</acronym></th>
-	<td><a href="<?php echo $Downloadi386; ?>">v0.7.60</a><span style="font-size: x-small;"> (<a href="http://mediaarea.net/download/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_i386_WithoutInstaller.7z">without installer</a>)</span></td>
-	<td><?php echo $AdSupported; ?></td>
+	<td><a href="<?php echo $Downloadi386; ?>">v0.7.61</a></td>
+	<td>If you don't know which one to download, download this one<?php echo $AdSupported; ?></td>
+</tr>
+<tr>
+	<th rowspan=4>32 bit</td>
+	<td colspan=3 bgcolor="#FFCC99" id="i386">Windows 95/98/Me/2000/XP/2003/Vista/Seven/8, 32 bit</td>
+</tr>
+<tr>
+	<th><acronym title="Graphical User Interface">GUI</acronym></th>
+	<td><a href="<?php echo $Downloadi386; ?>">v0.7.61 Universal (32/64 bits)</a> <span style="font-size: x-small;"> (<a href="http://mediaarea.net/download/binary/mediainfo-gui/0.7.61/MediaInfo_GUI_0.7.61_Windows_i386_WithoutInstaller.7z">32 bit only without installer</a>)</span></td>
+	<td></td>
 </tr>
 <tr>
 	<th><acronym title="Command Line Interface">CLI</acronym></th>
-	<td><a href="http://mediaarea.net/download/binary/mediainfo/0.7.60/MediaInfo_CLI_0.7.60_Windows_i386.zip">v0.7.60</a></td>
+	<td><a href="http://mediaarea.net/download/binary/mediainfo/0.7.61/MediaInfo_CLI_0.7.61_Windows_i386.zip">v0.7.61</a></td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
 	<th><acronym title="Dynamicly Linked Library">DLL</acronym></th>
-	<td><a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_i386.exe">v0.7.60</a><span style="font-size: x-small;"> (<a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_i386_WithoutInstaller.7z">without installer</a>)</span></td>
+	<td><a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.61/MediaInfo_DLL_0.7.61_Windows_i386.exe">v0.7.61</a><span style="font-size: x-small;"> (<a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.61/MediaInfo_DLL_0.7.61_Windows_i386_WithoutInstaller.7z">without installer</a>)</span></td>
 	<td>Use this one for <a href="http://www.emule-project.net">eMule</a> integration</td>
 </tr>
 <tr>
 	<th rowspan=4>64 bit</td>
-	<td colspan=3 bgcolor="#FFCC99" id="x64">Windows XP/2003/Vista/Seven, 64 bit</td>
+	<td colspan=3 bgcolor="#FFCC99" id="x64">Windows XP/2003/Vista/Seven/8, 64 bit</td>
 </tr>
 <tr>
 	<th><acronym title="Graphical User Interface">GUI</acronym></th>
-	<td><a href="<?php echo $Downloadx64; ?>">v0.7.60</a><span style="font-size: x-small;"> (<a href="http://mediaarea.net/download/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_x64_WithoutInstaller.7z">without installer</a>)</span></td>
-	<td><?php echo $AdSupported; ?></td>
+	<td><a href="<?php echo $Downloadx64; ?>">v0.7.61 Universal (32/64 bits)</a> <span style="font-size: x-small;">(<a href="http://mediaarea.net/download/binary/mediainfo-gui/0.7.61/MediaInfo_GUI_0.7.61_Windows_x64_WithoutInstaller.7z">64 bit only without installer</a>)</span></td>
+	<td></td>
 </tr>
 <tr>
 	<th><acronym title="Command Line Interface">CLI</acronym></th>
-	<td><a href="http://mediaarea.net/download/binary/mediainfo/0.7.60/MediaInfo_CLI_0.7.60_Windows_x64.zip">v0.7.60</a></td>
+	<td><a href="http://mediaarea.net/download/binary/mediainfo/0.7.61/MediaInfo_CLI_0.7.61_Windows_x64.zip">v0.7.61</a></td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
 	<th><acronym title="Dynamicly Linked Library">DLL</acronym></th>
-	<td><a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_x64.exe">v0.7.60</a><span style="font-size: x-small;"> (<a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_x64_WithoutInstaller.7z">without installer</a>)</span></td>
+	<td><a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.61/MediaInfo_DLL_0.7.61_Windows_x64.exe">v0.7.61</a><span style="font-size: x-small;"> (<a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.61/MediaInfo_DLL_0.7.61_Windows_x64_WithoutInstaller.7z">without installer</a>)</span></td>
 	<td>&nbsp;</td>
 </tr>
 </table>
