@@ -126,7 +126,7 @@ FileETag None
 # Additionally, consider that outdated proxies may miscache
 #   www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
 
-# If you don't use filenames to version, lower the CSS  and JS to something like
+# If you don't use filenames to version, lower the CSS and JS to something like
 #   "access plus 1 week" or so.
 
 <IfModule mod_expires.c>
@@ -174,8 +174,8 @@ FileETag None
   ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
 
   # CSS and JavaScript
-  ExpiresByType text/css                  "access plus 1 year"
-  ExpiresByType application/javascript    "access plus 1 year"
-  ExpiresByType application/x-javascript  "access plus 1 year"
+  ExpiresByType text/css                  "access plus 1 week"
+  ExpiresByType application/javascript    "access plus 1 week"
+  ExpiresByType application/x-javascript  "access plus 1 week"
 
 </IfModule>

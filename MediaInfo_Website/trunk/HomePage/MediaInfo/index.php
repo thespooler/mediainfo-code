@@ -62,7 +62,7 @@ ob_end_clean();
 
 if (!isset($Edit))
 {
- //Substring between	<title> and </title>
+ //Substring between <title> and </title>
  $Title_Start=strpos($Contents, "<title>");
  if ($Title_Start!==false)
  {
