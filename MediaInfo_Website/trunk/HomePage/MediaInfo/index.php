@@ -79,14 +79,14 @@ if (!isset($Edit))
  {
   $Link_End=strpos($Contents, ".css");
   $Link=substr($Contents, $Link_Start+12, $Link_End-$Link_Start-12);
-  $Head_ToAdd.=' <link href="/_/CSS/External/'.$Link.'.css" rel="stylesheet" type="text/css" />
+  $Head_ToAdd.=' <link href="/_/CSS/'.$Link.'.css" rel="stylesheet" type="text/css" />
 ';
   //$Link_Start=strpos($Contents, "<link href=", $Link_Start+1);
  }
  $Link_Start=strpos($Contents, '<link href="doxygen.css"');
  if ($Link_Start!==false) //Ugly, quick hack for Doxygen
  {
-  $Head_ToAdd.=' <link href="/_/CSS/External/doxygen.css" rel="stylesheet" type="text/css"/>
+  $Head_ToAdd.=' <link href="/_/CSS/doxygen.css" rel="stylesheet" type="text/css"/>
 ';
  }
 
@@ -96,7 +96,7 @@ if (!isset($Edit))
  {
   $Script_End=strpos($Contents, ".js");
   $Script=substr($Contents, $Script_Start+13, $Script_End-$Script_Start-13);
-  $Head_ToAdd.=' <script src="/_/JavaScript/External/'.$Link.'.js" type="text/javascript"></script>
+  $Head_ToAdd.=' <script src="/_/JavaScript/'.$Link.'.js" type="text/javascript"></script>
 ';
  }
 

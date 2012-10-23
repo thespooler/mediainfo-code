@@ -67,7 +67,7 @@ td: target
     color: #FFF;
 }
 
-.Path a: hover
+.Path a:hover
 {
     text-decoration: underline;
     color: #FFF;
@@ -80,7 +80,7 @@ td: target
 
 .Banner_Bottom
 {
-    background-image: url(/_/Image/Default/Bottom/Gradient.png);
+    background-image: url("/_/Image/Default/Bottom/Gradient.png");
     background-repeat: repeat-y;
 }
 
@@ -122,7 +122,7 @@ td: target
 {
     height: 19px;
     width: 241px;
-    background-image: url(/_/Image/Default/Menu/Top_Middle.png);
+    background-image: url("/_/Image/Default/Menu/Top_Middle.png");
     background-repeat: repeat-x;
 }
 
@@ -130,7 +130,7 @@ td: target
 {
     height: 19px;
     width: 9px;
-    background-image: url(/_/Image/Default/Menu/Top_Right.png);
+    background-image: url("/_/Image/Default/Menu/Top_Right.png");
 }
 
 #Menu .Middle
@@ -155,7 +155,7 @@ td: target
     color: #FFF;
 }
 
-#Menu .Text a: hover
+#Menu .Text a:hover
 {
     text-decoration: underline;
     color: #000;
@@ -203,53 +203,53 @@ td: target
     background-color: #AAA;
 }
 
-#Menu .L2,#Menu .R2
+#Menu .L2, #Menu .R2
 {
     width: 6px;
 }
 
-#Menu .L1,#Menu .R1
+#Menu .L1, #Menu .R1
 {
     width: 1px;
 }
 
-#Menu #Menu0: hover,#Menu #Menu0r2
+#Menu #Menu0:hover, #Menu #Menu0r2
 {
     color: #000;
     background-color: #CFC873;
 }
 
-#Menu #Menu1: hover,#Menu #Menu1r2
+#Menu #Menu1:hover, #Menu #Menu1r2
 {
     color: #000;
     background-color: #C973CF;
 }
 
-#Menu #Menu2: hover,#Menu #Menu2r2
+#Menu #Menu2:hover, #Menu #Menu2r2
 {
     color: #000;
     background-color: #CF9473;
 }
 
-#Menu #Menu3: hover,#Menu #Menu3r2
+#Menu #Menu3:hover, #Menu #Menu3r2
 {
     color: #000;
     background-color: #73C5CF;
 }
 
-#Menu #Menu4: hover,#Menu #Menu4r2
+#Menu #Menu4:hover, #Menu #Menu4r2
 {
     color: #000;
     background-color: #A3CF73;
 }
 
-#Menu #Menu5: hover,#Menu #Menu5r2
+#Menu #Menu5:hover, #Menu #Menu5r2
 {
     color: #000;
     background-color: #C2AFBD;
 }
 
-#Menu #Menu9: hover,#Menu #Menu9r2
+#Menu #Menu9:hover, #Menu #Menu9r2
 {
     color: #000;
     background-color: #999;
@@ -300,7 +300,7 @@ td: target
     padding: 1px 0 .5em .5em;
 }
 
-#Contents #Adress
+#Contents #Address
 {
     color: #02021E;
     margin-left: 10%;
@@ -343,25 +343,25 @@ td: target
     color: red;
 }
 
-h3,h4
+h3, h4
 {
     font-size: small;
 }
 
-.FlagsAround,#Menu .FlagsAround
+.FlagsAround, #Menu .FlagsAround
 {
     font-size: 20px;
     background-color: #F0F0F0;
     text-align: center;
 }
 
-.FlagsAround a: hover,#Menu .FlagsAround a: hover
+.FlagsAround a:hover, #Menu .FlagsAround a:hover
 {
     color: #000;
     background-color: #D0D0D0;
 }
 
-/*.FlagsAround img,#Menu .FlagsAround img
+/*.FlagsAround img, #Menu .FlagsAround img
 {
     padding: 0 5px;
 }*/
@@ -370,54 +370,292 @@ h3,h4
 {
     width: 25px;
     height: 15px;
-    background: url(/_/Image/Default/Flag/flags.png) no-repeat;
+    background: url("/_/Image/Default/Flag/flags.png") no-repeat;
 }
 
-.sprite-Albania { background-position: 0 0; width: 25px; height: 15px; }
-.sprite-Belarus { background-position: -26px 0; width: 25px; height: 15px; }
-.sprite-Blank { background-position: -52px 0; width: 25px; height: 15px; }
-.sprite-Brazil { background-position: -78px 0; width: 25px; height: 15px; }
-.sprite-Bulgaria { background-position: -104px 0; width: 25px; height: 15px; }
-.sprite-Catalonia { background-position: -130px 0; width: 25px; height: 15px; }
-.sprite-China { background-position: -156px 0; width: 25px; height: 15px; }
-.sprite-Croatia { background-position: -182px 0; width: 25px; height: 15px; }
-.sprite-France { background-position: -208px 0; width: 25px; height: 15px; }
-.sprite-Georgia { background-position: -234px 0; width: 25px; height: 15px; }
-.sprite-Germany { background-position: -260px 0; width: 25px; height: 15px; }
-.sprite-Hungary { background-position: -286px 0; width: 25px; height: 15px; }
-.sprite-Indonesia { background-position: -312px 0; width: 25px; height: 15px; }
-.sprite-Iran { background-position: -338px 0; width: 25px; height: 15px; }
-.sprite-Italy { background-position: -364px 0; width: 25px; height: 15px; }
-.sprite-Japan { background-position: -390px 0; width: 25px; height: 15px; }
-.sprite-Korea { background-position: -416px 0; width: 25px; height: 15px; }
-.sprite-Lithuania { background-position: -442px 0; width: 25px; height: 15px; }
-.sprite-Neederlands { background-position: -468px 0; width: 25px; height: 15px; }
-.sprite-Poland { background-position: -494px 0; width: 25px; height: 15px; }
-.sprite-Portugal { background-position: -520px 0; width: 25px; height: 15px; }
-.sprite-Russia { background-position: -546px 0; width: 25px; height: 15px; }
-.sprite-Spain { background-position: -572px 0; width: 25px; height: 15px; }
-.sprite-Sweden { background-position: -598px 0; width: 25px; height: 15px; }
-.sprite-Taiwan { background-position: -624px 0; width: 25px; height: 15px; }
-.sprite-Thailand { background-position: -650px 0; width: 25px; height: 15px; }
-.sprite-UK { background-position: -676px 0; width: 25px; height: 15px; }
-.sprite-Ukraine { background-position: -702px 0; width: 25px; height: 15px; }
-.sprite-Unknown { background-position: -728px 0; width: 25px; height: 15px; }
+.sprite-Albania
+{
+    background-position: 0 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Belarus
+{
+    background-position: -26px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Blank
+{
+    background-position: -52px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Brazil
+{
+    background-position: -78px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Bulgaria
+{
+    background-position: -104px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Catalonia
+{
+    background-position: -130px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-China
+{
+    background-position: -156px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Croatia
+{
+    background-position: -182px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-France
+{
+    background-position: -208px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Georgia
+{
+    background-position: -234px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Germany
+{
+    background-position: -260px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Hungary
+{
+    background-position: -286px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Indonesia
+{
+    background-position: -312px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Iran
+{
+    background-position: -338px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Italy
+{
+    background-position: -364px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Japan
+{
+    background-position: -390px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Korea
+{
+    background-position: -416px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Lithuania
+{
+    background-position: -442px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Netherlands
+{
+    background-position: -468px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Poland
+{
+    background-position: -494px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Portugal
+{
+    background-position: -520px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Russia
+{
+    background-position: -546px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Spain
+{
+    background-position: -572px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Sweden
+{
+    background-position: -598px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Taiwan
+{
+    background-position: -624px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Thailand
+{
+    background-position: -650px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-UK
+{
+    background-position: -676px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Ukraine
+{
+    background-position: -702px 0;
+    width: 25px;
+    height: 15px;
+}
+
+.sprite-Unknown
+{
+    background-position: -728px 0;
+    width: 25px;
+    height: 15px;
+}
 
 .os
 {
     width: 16px;
     height: 16px;
-    background: url(/_/Image/OS/Logo/os.png) no-repeat;
+    background: url("/_/Image/OS/Logo/os.png") no-repeat;
 }
 
-.sprite-os-ArchLinux { background-position: 0 0; width: 16px; height: 16px; }
-.sprite-os-CentOS { background-position: -17px 0; width: 16px; height: 16px; }
-.sprite-os-Debian { background-position: -34px 0; width: 16px; height: 16px; }
-.sprite-os-Fedora { background-position: -51px 0; width: 16px; height: 16px; }
-.sprite-os-Linux_Mint { background-position: -68px 0; width: 18px; height: 16px; }
-.sprite-os-MacOS { background-position: -87px 0; width: 16px; height: 16px; }
-.sprite-os-Mandriva { background-position: -104px 0; width: 16px; height: 16px; }
-.sprite-os-RedHat { background-position: -121px 0; width: 16px; height: 16px; }
-.sprite-os-Ubuntu { background-position: -138px 0; width: 16px; height: 16px; }
-.sprite-os-Windows { background-position: -155px 0; width: 16px; height: 16px; }
-.sprite-os-openSUSE { background-position: -172px 0; width: 16px; height: 16px; }
+.sprite-os-ArchLinux
+{
+    background-position: 0 0;
+    width: 16px;
+    height: 16px;
+}
+
+.sprite-os-CentOS
+{
+    background-position: -17px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.sprite-os-Debian
+{
+    background-position: -34px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.sprite-os-Fedora
+{
+    background-position: -51px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.sprite-os-Linux_Mint
+{
+    background-position: -68px 0;
+    width: 18px;
+    height: 16px;
+}
+
+.sprite-os-MacOS
+{
+    background-position: -87px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.sprite-os-Mandriva
+{
+    background-position: -104px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.sprite-os-RedHat
+{
+    background-position: -121px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.sprite-os-Ubuntu
+{
+    background-position: -138px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.sprite-os-Windows
+{
+    background-position: -155px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.sprite-os-openSUSE
+{
+    background-position: -172px 0;
+    width: 16px;
+    height: 16px;
+}
