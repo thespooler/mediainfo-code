@@ -402,3 +402,22 @@ h3,h4
 .sprite-UK { background-position: -676px 0; width: 25px; height: 15px; }
 .sprite-Ukraine { background-position: -702px 0; width: 25px; height: 15px; }
 .sprite-Unknown { background-position: -728px 0; width: 25px; height: 15px; }
+
+.os
+{
+    width: 16px;
+    height: 16px;
+    background: url(/_/Image/OS/Logo/os.png) no-repeat;
+}
+
+.sprite-os-ArchLinux { background-position: 0 0; width: 16px; height: 16px; }
+.sprite-os-CentOS { background-position: -17px 0; width: 16px; height: 16px; }
+.sprite-os-Debian { background-position: -34px 0; width: 16px; height: 16px; }
+.sprite-os-Fedora { background-position: -51px 0; width: 16px; height: 16px; }
+.sprite-os-Linux_Mint { background-position: -68px 0; width: 18px; height: 16px; }
+.sprite-os-MacOS { background-position: -87px 0; width: 16px; height: 16px; }
+.sprite-os-Mandriva { background-position: -104px 0; width: 16px; height: 16px; }
+.sprite-os-RedHat { background-position: -121px 0; width: 16px; height: 16px; }
+.sprite-os-Ubuntu { background-position: -138px 0; width: 16px; height: 16px; }
+.sprite-os-Windows { background-position: -155px 0; width: 16px; height: 16px; }
+.sprite-os-openSUSE { background-position: -172px 0; width: 16px; height: 16px; }
