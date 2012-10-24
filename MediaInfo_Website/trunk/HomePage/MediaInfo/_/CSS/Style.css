@@ -78,12 +78,6 @@ td: target
     text-align: center;
 }
 
-/*.Banner_Bottom
-{
-    background-image: url("/_/Image/Default/Gradient.png");
-    background-repeat: repeat-y;
-}*/
-
 .Note
 {
     color: #000;
@@ -192,12 +186,6 @@ td: target
     background-color: #D1C3CD;
 }
 
-#Menu #Menu9
-{
-    color: #000;
-    background-color: #AAA;
-}
-
 #Menu #Menu0:hover
 {
     color: #000;
@@ -232,12 +220,6 @@ td: target
 {
     color: #000;
     background-color: #C2AFBD;
-}
-
-#Menu #Menu9:hover
-{
-    color: #000;
-    background-color: #999;
 }
 
 #Contents h1
