@@ -250,7 +250,7 @@
 			$Size='2';
 		}
 		else if (stristr($_SERVER['HTTP_USER_AGENT'], "fedora")) {
-				if (stristr($_SERVER['HTTP_USER_AGENT'], "fc2"))		$OS_Version='8';
+				 if (stristr($_SERVER['HTTP_USER_AGENT'], "fc2"))		$OS_Version='8';
 			else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc3"))		$OS_Version='8';
 			else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc4"))		$OS_Version='8';
 			else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc5"))		$OS_Version='8';
@@ -266,7 +266,7 @@
 			else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc15"))		$OS_Version='15';
 			else if (stristr($_SERVER['HTTP_USER_AGENT'], "fc16"))		$OS_Version='16';
 
-				if (stristr($_SERVER['HTTP_USER_AGENT'], "i386"))		$CPU='i386';
+				 if (stristr($_SERVER['HTTP_USER_AGENT'], "i386"))		$CPU='i386';
 			else if (stristr($_SERVER['HTTP_USER_AGENT'], "i486"))		$CPU='i386';
 			else if (stristr($_SERVER['HTTP_USER_AGENT'], "i586"))		$CPU='i386';
 			else if (stristr($_SERVER['HTTP_USER_AGENT'], "i686"))		$CPU='i386';
