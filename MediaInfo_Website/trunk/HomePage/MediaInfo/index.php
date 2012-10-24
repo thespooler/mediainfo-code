@@ -81,7 +81,7 @@ if (!isset($Edit)) {
 	}
 	$Link_Start=strpos($Contents, '<link href="doxygen.css"');
 	if ($Link_Start!==false) { //Ugly, quick hack for Doxygen
-		$Head_ToAdd.=' <link href="/_/CSS/doxygen.css" rel="stylesheet" type="text/css"/>
+		$Head_ToAdd.=' <link href="/_/CSS/doxygen.css" rel="stylesheet" type="text/css" />
 	';
 	}
 
