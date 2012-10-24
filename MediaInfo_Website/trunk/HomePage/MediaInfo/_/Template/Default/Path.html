@@ -1,20 +1,17 @@
 <div class="Path">
-<?php
-if ($Level>1)
-{
- for ($i=1; $i<9; $i++)
- {
-  if ($Menu[$i]!="")
-  {
-	if ($i!=1)
-	  echo " > ";
-	$Link="";
-	for ($j=1; $j<=$i; $j++)
-	  $Link.="/".$Menu_Link[$j];
-	echo '<a href="'.'/'.$Language.$Link.'">'.$Menu[$i].'</a>';
-  }
- }
- echo " > ".$PageName;
-}
-?>
+	<?php
+	if ($Level>1) {
+		for ($i=1; $i<9; $i++) {
+			if ($Menu[$i]!="") {
+				if ($i!=1)
+					echo " > ";
+				$Link="";
+				for ($j=1; $j<=$i; $j++)
+					$Link.="/".$Menu_Link[$j];
+				echo '<a href="'.'/'.$Language.$Link.'">'.$Menu[$i].'</a>';
+				}
+		}
+		echo " > ".$PageName;
+	}
+	?>
 </div>

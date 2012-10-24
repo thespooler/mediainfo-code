@@ -5,9 +5,9 @@ strtok($_SERVER["REQUEST_URI"], "?");
 parse_str(strtok("?"), $Argument);
 //LastVisited
 //if (isset($_COOKIE["LastVisited"]) || strpos($_SERVER["REQUEST_URI"], "?")===FALSE)
- $AlreadyVisited='Y';
+	$AlreadyVisited='Y';
 //else
-// setcookie("LastVisited", time(), time()+60*60);
+//	setcookie("LastVisited", time(), time()+60*60);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
@@ -16,27 +16,23 @@ parse_str(strtok("?"), $Argument);
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <?php
 if (isset($Official))
- $URL='http://mediainfo.sourceforge.net/'.$Language;
+	$URL='http://mediainfo.sourceforge.net/'.$Language;
 else
- $URL='http://localhost/'.$Language;
-if (!isset($AlreadyVisited))
-{
- if (mt_rand(1, 100)>15)
- {
-  //Sourceforge
- }
- else
- {
-  if (mt_rand(1, 100)>33)
-   $URL='http://mediaarea.net/DX50sf.php';
-  else if (mt_rand(1, 100)>50)
-   $URL='http://mediaarea.net/DIVXsf.php';
-  else
-   $URL='http://mediaarea.net/XVIDsf.php';
- }
- echo '	<meta http-equiv="refresh" content="3; URL='.$URL.'" />
-';
-}
+	$URL='http://localhost/'.$Language;
+	if (!isset($AlreadyVisited)) {
+		if (mt_rand(1, 100)>15) {
+			//Sourceforge
+		} else {
+			if (mt_rand(1, 100)>33)
+				$URL='http://mediaarea.net/DX50sf.php';
+			else if (mt_rand(1, 100)>50)
+				$URL='http://mediaarea.net/DIVXsf.php';
+			else
+				$URL='http://mediaarea.net/XVIDsf.php';
+		}
+		echo '	<meta http-equiv="refresh" content="3; URL='.$URL.'" />
+	';
+	}
 ?>
 	<meta name="identifier-url" content="http://mediainfo.sourceforge.net" />
 	<meta name="revisit-after" content="7 days" />
@@ -47,20 +43,20 @@ if (!isset($AlreadyVisited))
 </head>
 <br />
 <table border="0" cellpadding="0" cellspacing="0">
- <tbody>
-  <tr>
-   <td>
-<div id="ShouldShow" class="Invisible">Yes</div>
-<div id="NewVersion">
+	<tbody>
+		<tr>
+			<td>
+			<div id="ShouldShow" class="Invisible">Yes</div>
+			<div id="NewVersion">
 <?php
 if ($Language=="fr")
- echo '
- <a href="'.$URL.'">Visiter le site MediaInfo</a><br />
-';
+	echo '
+	<a href="'.$URL.'">Visiter le site MediaInfo</a><br /><br />
+	';
 else
- echo '
- <a href="'.$URL.'">Visit MediaInfo website</a><br />
-';
+	echo '
+	<a href="'.$URL.'">Visit MediaInfo website</a><br /><br />
+	';
 ?>
 </div>
 <div class="Invisible">
@@ -207,17 +203,17 @@ x libcurl support: libcurl config from MediaInfo is compatible with libcurl+gnut
 x #3515857, CLI only: --LogFile carriage return format was not the one of the OS
 </pre>
 </div>
-   </td>
-  </tr>
- </tbody>
+			</td>
+		</tr>
+	</tbody>
 </table>
-<table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
- <tbody>
-  <tr>
-   <td align="center">
-	<?php include $Path."/_/Ad/GoogleAnalytics_Users.html"; ?>
-   </td>
-  </tr>
- </tbody>
+<table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td align="center">
+			<?php include $Path."/_/Ad/GoogleAnalytics_Users.html"; ?>
+			</td>
+		</tr>
+	</tbody>
 </table>
 </html>

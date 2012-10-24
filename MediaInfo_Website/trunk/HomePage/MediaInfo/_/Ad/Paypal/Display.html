@@ -28,8 +28,7 @@ echo '<form action="'.$PaypalURL.'/cgi-bin/webscr" method="post">
 <input type="hidden" name="lc" value="'.$Country.'">
 <input type="hidden" name="item_name" value="'.$DonationForMediaInfo.'">
 '.$CurrencyBefore.' <select name="amount">';
-for ($i=1; $i<=100; $i=$i*10)
-{
+for ($i=1; $i<=100; $i=$i*10) {
 	$Value1=$CurrencyBase*$i*1;
 	$Value2=$CurrencyBase*$i*2;
 	$Value5=$CurrencyBase*$i*5;
@@ -55,8 +54,7 @@ echo '</select> '.$CurrencyAfter.'
 <input type="hidden" name="item_name" value="'.$DonationForMediaInfo.'">
 <input type="hidden" name="no_shipping" value="1">
 '.$Or.' '.$CurrencyBefore.' <select name="a3">';
-for ($i=1; $i<=100; $i=$i*10)
-{
+for ($i=1; $i<=100; $i=$i*10) {
 	$Value1=$CurrencyBase*$i*1;
 	$Value2=$CurrencyBase*$i*2;
 	$Value5=$CurrencyBase*$i*5;

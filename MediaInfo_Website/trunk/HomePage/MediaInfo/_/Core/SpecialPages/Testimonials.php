@@ -1,7 +1,6 @@
 <?php
-if (strpos($Page, "/Testimonials")!=FALSE)
-{
- //Page with no ads, always
-  $Donated='Y';
+if (strpos($Page, "/Testimonials")!=FALSE) {
+	//Page with no ads, always
+	$Donated='Y';
 }
 ?>
