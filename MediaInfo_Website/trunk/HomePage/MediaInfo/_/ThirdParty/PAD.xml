@@ -109,7 +109,7 @@ What can I do with it?
 		<Application_URLs>
 			<Application_Info_URL>http://mediainfo.sourceforge.net</Application_Info_URL>
 			<Application_Order_URL>http://mediainfo.sourceforge.net/Help</Application_Order_URL>
-			<Application_Screenshot_URL>http://mediainfo.sourceforge.net/_/Image/Default/ScreenShot/GUI_Easy_en_Extract.png</Application_Screenshot_URL>
+			<Application_Screenshot_URL>http://mediainfo.sourceforge.net/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png</Application_Screenshot_URL>
 			<Application_Icon_URL>http://mediainfo.sourceforge.net/_/Image/Icon.png</Application_Icon_URL>
 			<Application_XML_File_URL>http://mediainfo.sourceforge.net/_/ThirdParty/PAD.xml</Application_XML_File_URL>
 		</Application_URLs>
