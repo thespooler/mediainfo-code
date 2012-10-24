@@ -78,11 +78,11 @@ td: target
     text-align: center;
 }
 
-.Banner_Bottom
+/*.Banner_Bottom
 {
-    background-image: url("/_/Image/Default/Bottom/Gradient.png");
+    background-image: url("/_/Image/Default/Gradient.png");
     background-repeat: repeat-y;
-}
+}*/
 
 .Note
 {
@@ -121,8 +121,8 @@ td: target
 #Menu .Top_Middle
 {
     height: 19px;
-    width: 241px;
-    background-image: url("/_/Image/Default/Menu/Top_Middle.png");
+    width: 228px;
+    background-image: url("/_/Image/Default/Top_Middle.png");
     background-repeat: repeat-x;
 }
 
@@ -130,18 +130,13 @@ td: target
 {
     height: 19px;
     width: 9px;
-    background-image: url("/_/Image/Default/Menu/Top_Right.png");
-}
-
-#Menu .Middle
-{
-    height: 1px;
+    background-image: url("/_/Image/Default/Top_Right.png");
 }
 
 #Menu .Text
 {
     height: 30px;
-    width: 243px;
+    width: 237px;
     text-align: center;
     font-weight: 700;
     color: #000;
@@ -203,53 +198,43 @@ td: target
     background-color: #AAA;
 }
 
-#Menu .L2, #Menu .R2
-{
-    width: 6px;
-}
-
-#Menu .L1, #Menu .R1
-{
-    width: 1px;
-}
-
-#Menu #Menu0:hover, #Menu #Menu0r2
+#Menu #Menu0:hover
 {
     color: #000;
     background-color: #CFC873;
 }
 
-#Menu #Menu1:hover, #Menu #Menu1r2
+#Menu #Menu1:hover
 {
     color: #000;
     background-color: #C973CF;
 }
 
-#Menu #Menu2:hover, #Menu #Menu2r2
+#Menu #Menu2:hover
 {
     color: #000;
     background-color: #CF9473;
 }
 
-#Menu #Menu3:hover, #Menu #Menu3r2
+#Menu #Menu3:hover
 {
     color: #000;
     background-color: #73C5CF;
 }
 
-#Menu #Menu4:hover, #Menu #Menu4r2
+#Menu #Menu4:hover
 {
     color: #000;
     background-color: #A3CF73;
 }
 
-#Menu #Menu5:hover, #Menu #Menu5r2
+#Menu #Menu5:hover
 {
     color: #000;
     background-color: #C2AFBD;
 }
 
-#Menu #Menu9:hover, #Menu #Menu9r2
+#Menu #Menu9:hover
 {
     color: #000;
     background-color: #999;
@@ -361,16 +346,13 @@ h3, h4
     background-color: #D0D0D0;
 }
 
-/*.FlagsAround img, #Menu .FlagsAround img
-{
-    padding: 0 5px;
-}*/
+/* Flags images */
 
 .flag
 {
     width: 25px;
     height: 15px;
-    background: url("/_/Image/Default/Flag/flags.png") no-repeat;
+    background: url("/_/Image/Default/flags.png") no-repeat;
 }
 
 .sprite-Albania
@@ -576,11 +558,12 @@ h3, h4
     height: 15px;
 }
 
+/* Operating Systems images */
 .os
 {
     width: 16px;
     height: 16px;
-    background: url("/_/Image/OS/Logo/os.png") no-repeat;
+    background: url("/_/Image/OS/os.png") no-repeat;
 }
 
 .sprite-os-ArchLinux
