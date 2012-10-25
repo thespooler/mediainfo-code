@@ -56,6 +56,14 @@ td: target
     background-color: #7F7;
 }
 
+b, strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
 .Path
 {
     color: #FFF;
@@ -132,14 +140,14 @@ td: target
     height: 30px;
     width: 237px;
     text-align: center;
-    font-weight: 700;
+    font-weight: bold;
     color: #000;
     background-color: #FFF;
 }
 
 #Menu .Text a
 {
-    font-weight: 700;
+    font-weight: bold;
     text-decoration: none;
     color: #FFF;
 }
