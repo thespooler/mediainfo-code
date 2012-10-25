@@ -97,7 +97,7 @@ What format (container) does MediaInfo support?
 What can I do with it?
 	* Read many video and audio file formats
 	* Multiple means to view information (text, sheet, tree, HTML...)
-	* You can customize theses views
+	* You can customize these views
 	* Exporting possibilities: text, CSV, HTML...
 	* Graphical Interface, or Command Line, or DLL
 	* Integration with MS-Windows shell (drag'n' drop, and Context menu)
