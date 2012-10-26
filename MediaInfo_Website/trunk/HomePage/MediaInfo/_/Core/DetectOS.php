@@ -406,14 +406,19 @@
 		else if (stristr($_SERVER['HTTP_USER_AGENT'], "x64"))		$CPU='x64';
 
 		if (isset($Donated))
-			//$Link='http://mediaarea.net/download/donors/'.$Version.'/MediaInfo_GUI_'.$Version.'_Windows_'.$CPU.'.exe';
+		{
+            //$Link='http://mediaarea.net/download/donors/'.$Version.'/MediaInfo_GUI_'.$Version.'_Windows_'.$CPU.'.exe';
 			$Link='http://mediaarea.net/download/donors/'.$Version.'/MediaInfo_GUI_'.$Version.'_Windows.exe';
-		else if (isset($NewVersionRequested) && $Language=="en" ) {
-			$Link='/Download_Donate';
+        }
+		//else if (isset($NewVersionRequested) && $Language=="en" )
+        //{
+			//$Link='/Download_Donate';
 			//setcookie("WantedDownload", 'http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Windows_'.$CPU.'.exe', time()+60*60*1, "/");
 			//setcookie("WantedDownload", 'http://mediaarea.net/download/binary/mediainfo-gui/'.$Version.'/MediaInfo_GUI_'.$Version.'_Windows_'.$CPU.'.exe', time()+60*60*1, "/");
-			setcookie("WantedDownload", 'http://mediaarea.net/download/binary/mediainfo-gui/'.$Version.'/MediaInfo_GUI_'.$Version.'_Windows.exe', time()+60*60*1, "/");
-		} else {
+			//setcookie("WantedDownload", 'http://mediaarea.net/download/binary/mediainfo-gui/'.$Version.'/MediaInfo_GUI_'.$Version.'_Windows.exe', time()+60*60*1, "/");
+		//}
+        else
+        {
 			//$Link='http://downloads.sourceforge.net/mediainfo/MediaInfo_GUI_'.$Version.'_Windows_'.$CPU.'.exe';
 			//$Link='http://download.mediaarea.net/current/MediaInfo_GUI_'.$Version.'_Windows_'.$CPU.'.exe';
 			//$Link='http://mediaarea.net/download/binary/mediainfo-gui/'.$Version.'/MediaInfo_GUI_'.$Version.'_Windows_'.$CPU.'.exe';

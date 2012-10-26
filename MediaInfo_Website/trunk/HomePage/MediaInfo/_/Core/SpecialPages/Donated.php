@@ -7,10 +7,10 @@ if (isset($Argument["Donated"])
 		<html>
 			<head>
 				<meta name="robots" content="noindex, nofollow, noarchive">
-				<meta http-equiv="refresh" content="0;url=http://'.$_SERVER['HTTP_HOST'].'/'.$Language.'/Download_Donate">
+				<meta http-equiv="refresh" content="0;url=http://'.$_SERVER['HTTP_HOST'].'/'.$Language.'">
 			</head>
 			<body>
-				You will be redirected shortly, if not click <a href="http://'.$_SERVER['HTTP_HOST'].'/'.$Language.'/Download_Donate">here</a>.
+				You will be redirected shortly, if not click <a href="http://'.$_SERVER['HTTP_HOST'].'/'.$Language.'">here</a>.
 			</body>
 		</html>
 		';
