@@ -1,6 +1,6 @@
 <?php
 //Paypal functions
-include $Path.'/_/Ad/Paypal/Display.html';
+include $Path.'/_/Ad/Paypal_Display.html';
 
 //Donated
 if (isset($Donated)) {
@@ -8,8 +8,7 @@ if (isset($Donated)) {
 	if (isset($_COOKIE["WantedDownload"])) {
 		$Link=$_COOKIE["WantedDownload"];
 		$Link=str_replace("http://downloads.sourceforge.net/mediainfo/", "http://download.mediaarea.net/binary/mediainfo-gui/".$Version."/", $Link);
-	}
-	else
+	} else
 		$Link="http://mediainfo.sourceforge.net/Download";
 
 	//Saving info
@@ -18,7 +17,7 @@ if (isset($Donated)) {
 }
 
 	//Paypal
-	else if (isset($_POST) && isset($_POST["amount"]) && ((int)($_POST["amount"])) != 0) {
+	if (isset($_POST) && isset($_POST["amount"]) && ((int)($_POST["amount"])) != 0) {
 		$Amount=(int)($_POST["amount"]);
 		$Currency_Code="USD";
 		$Currency_Before="$";
@@ -51,7 +50,7 @@ if (isset($Donated)) {
 
 
 	//Free download
-	else if (isset($_POST) && isset($_POST["amount"])) { //Free
+	if (isset($_POST) && isset($_POST["amount"])) { //Free
 		//Replace the target of the download
 		if (isset($_COOKIE["WantedDownload"]))
 			$Link=$_COOKIE["WantedDownload"];
@@ -73,7 +72,7 @@ if (isset($Donated)) {
 	}
 
 	//Donation proposal
-	else {
+	else
 		$Page_Status="Proposal";
 	}
 ?>
