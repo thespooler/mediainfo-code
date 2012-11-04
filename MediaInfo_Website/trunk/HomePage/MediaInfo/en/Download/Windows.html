@@ -35,9 +35,9 @@ else
 	<td>Comment</td>
 </tr>
 <tr>
-	<th rowspan=10>Serie 4 (95, 98, Me),<br />Serie 5 (2000, XP, 2003),<br />Serie 6 (Vista, Seven, 8)</th>
+	<th rowspan=10>Windows XP, Vista, 7, 8</th>
 	<th rowspan=2>Universal installer (32/64 bit)</th>
-	<td colspan=3 bgcolor="#FFCC99" id="i386">Windows 95/98/Me/2000/XP/2003/Vista/Seven/8, 32/64 bit</td>
+	<td colspan=3 bgcolor="#FFCC99" id="i386">Windows XP to 8, 32/64 bit</td>
 </tr>
 <tr>
 	<th><acronym title="Graphical User Interface">GUI</acronym></th>
@@ -46,12 +46,12 @@ else
 </tr>
 <tr>
 	<th rowspan=4>32 bit</th>
-	<td colspan=3 bgcolor="#FFCC99" id="i386">Windows 95/98/Me/2000/XP/2003/Vista/Seven/8, 32 bit</td>
+	<td colspan=3 bgcolor="#FFCC99" id="i386">Windows XP to 8, 32 bit</td>
 </tr>
 <tr>
 	<th><acronym title="Graphical User Interface">GUI</acronym></th>
 	<td><a href="<?php echo $Downloadi386; ?>">v0.7.61 Universal (32/64 bit)</a> <span style="font-size: x-small"> (<a href="http://mediaarea.net/download/binary/mediainfo-gui/0.7.61/MediaInfo_GUI_0.7.61_Windows_i386_WithoutInstaller.7z">32 bit only without installer</a>)</span></td>
-	<td></td>
+	<td><?php echo $AdSupported; ?></td>
 </tr>
 <tr>
 	<th><acronym title="Command Line Interface">CLI</acronym></th>
@@ -65,12 +65,12 @@ else
 </tr>
 <tr>
 	<th rowspan=4>64 bit</th>
-	<td colspan=3 bgcolor="#FFCC99" id="x64">Windows XP/2003/Vista/Seven/8, 64 bit</td>
+	<td colspan=3 bgcolor="#FFCC99" id="x64">Windows XP to 8, 64 bit</td>
 </tr>
 <tr>
 	<th><acronym title="Graphical User Interface">GUI</acronym></th>
 	<td><a href="<?php echo $Downloadx64; ?>">v0.7.61 Universal (32/64 bit)</a> <span style="font-size: x-small">(<a href="http://mediaarea.net/download/binary/mediainfo-gui/0.7.61/MediaInfo_GUI_0.7.61_Windows_x64_WithoutInstaller.7z">64 bit only without installer</a>)</span></td>
-	<td></td>
+	<td><?php echo $AdSupported; ?></td>
 </tr>
 <tr>
 	<th><acronym title="Command Line Interface">CLI</acronym></th>
@@ -81,6 +81,26 @@ else
 	<th><acronym title="Dynamicly Linked Library">DLL</acronym></th>
 	<td><a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.61/MediaInfo_DLL_0.7.61_Windows_x64.exe">v0.7.61</a><span style="font-size: x-small"> (<a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.61/MediaInfo_DLL_0.7.61_Windows_x64_WithoutInstaller.7z">without installer</a>)</span></td>
 	<td>&nbsp;</td>
+</tr>
+<tr style="background-color: #b8b8b8">
+	<th rowspan=4>Windows 95 to 2000</th>
+	<th rowspan=4>&nbsp;</th>
+	<td colspan=3 bgcolor="#FFCC99" id="i386">Windows 95 to 2000, 32 bit</td>
+</tr>
+<tr style="background-color: #b8b8b8">
+	<th><acronym title="Graphical User Interface">GUI</acronym></th>
+	<td><a href="http://mediaarea.net/download/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_i386.exe">v0.7.60</a> <span style="font-size: x-small"> (<a href="http://mediaarea.net/download/binary/mediainfo-gui/0.7.60/MediaInfo_GUI_0.7.60_Windows_i386_WithoutInstaller.7z">without installer</a>)</span></td>
+	<td><?php echo $AdSupported; ?></td>
+</tr>
+<tr style="background-color: #b8b8b8">
+	<th><acronym title="Command Line Interface">CLI</acronym></th>
+	<td><a href="http://mediaarea.net/download/binary/mediainfo/0.7.60/MediaInfo_CLI_0.7.60_Windows_i386.zip">v0.7.60</a></td>
+	<td>&nbsp;</td>
+</tr>
+<tr style="background-color: #b8b8b8">
+	<th><acronym title="Dynamicly Linked Library">DLL</acronym></th>
+	<td><a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_i386.exe">v0.7.60</a><span style="font-size: x-small"> (<a href="http://mediaarea.net/download/binary/libmediainfo0/0.7.60/MediaInfo_DLL_0.7.60_Windows_i386_WithoutInstaller.7z">without installer</a>)</span></td>
+	<td>Use this one for <a href="http://www.emule-project.net">eMule</a> integration</td>
 </tr>
 </table>
 
