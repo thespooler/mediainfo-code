@@ -90,7 +90,9 @@ if (!isset($Edit)) {
 	if ($Script_Start!==false) {
 		$Script_End=strpos($Contents, ".js");
 		$Script=substr($Contents, $Script_Start+13, $Script_End-$Script_Start-13);
-		$Footer_ToAdd.=' <script src="/_/JavaScript/'.$Link.'.js" type="text/javascript"></script>
+		if (!isset($Footer_ToAdd))
+            $Footer_ToAdd='';
+        $Footer_ToAdd.=' <script src="/_/JavaScript/'.$Link.'.js" type="text/javascript"></script>
 	';
 	}
 
