@@ -1,5 +1,4 @@
-body
-{
+body {
     color: #000;
     background-color: #FFF;
     font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -8,19 +7,16 @@ body
     padding: 0;
 }
 
-img
-{
+img {
     border: 0;
 }
 
-code
-{
+code {
     font-size: small;
     background-color: #6F9;
 }
 
-pre
-{
+pre {
     font-size: small;
     background-color: #FFFFC0;
     border-style: inset;
@@ -29,25 +25,21 @@ pre
     padding: 0 5% 0 0;
 }
 
-ul
-{
+ul {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-h1
-{
+h1 {
     font-size: medium;
 }
 
-h2
-{
+h2 {
     font-size: small;
     background-color: #F0F0F0;
 }
 
-td:target
-{
+td:target {
     background-color: #7F7;
 }
 
@@ -59,79 +51,66 @@ em {
     font-style: italic;
 }
 
-.Path
-{
+.Path {
     color: #FFF;
 }
 
-.Path a
-{
+.Path a {
     text-decoration: none;
     color: #FFF;
 }
 
-.Path a:hover
-{
+.Path a:hover {
     text-decoration: underline;
     color: #FFF;
 }
 
-.Banner_Top_Background
-{
+.Banner_Top_Background {
     text-align: center;
 }
 
-.Note
-{
+.Note {
     color: #000;
     background: #AAA;
 }
 
-.Info
-{
+.Info {
     color: #000;
     background: #AAF;
 }
 
-.Invisible
-{
+.Invisible {
     display: none;
 }
 
-.Warning
-{
+.Warning {
     color: #000;
     background-color: #F88;
 }
 
-#Menu
-{
+#Menu {
     width: 250px;
 }
 
-#Menu .Flags
-{
+#Menu .Flags {
     color: #000;
     background-color: #B8B8B8;
 }
 
-#Menu .Top_Middle
-{
+#Menu .Top_Middle {
     height: 19px;
     width: 228px;
     background-image: url("/_/Image/Default/Top_Middle.png");
     background-repeat: repeat-x;
 }
 
-#Menu .Top_Right
-{
+#Menu .Top_Right {
     height: 19px;
     width: 9px;
     background-image: url("/_/Image/Default/Top_Right.png");
 }
 
-#Menu .Text
-{
+#Menu .Text {
     height: 30px;
     width: 237px;
     text-align: center;
@@ -140,138 +119,117 @@ em {
     background-color: #FFF;
 }
 
-.Text a
-{
+.Text a {
     font-weight: bold;
     text-decoration: none;
     color: #FFF;
 }
 
-.Text a:hover
-{
+.Text a:hover {
     text-decoration: underline;
     color: #000;
 }
 
-#Menu #Menu0
-{
+#Menu #Menu0 {
     color: #000;
     background-color: #DBD696;
 }
 
-#Menu #Menu1
-{
+#Menu #Menu1 {
     color: #000;
     background-color: #D696DB;
 }
 
-#Menu #Menu2
-{
+#Menu #Menu2 {
     color: #000;
     background-color: #DBAE96;
 }
 
-#Menu #Menu3
-{
+#Menu #Menu3 {
     color: #000;
     background-color: #96D3DB;
 }
 
-#Menu #Menu4
-{
+#Menu #Menu4 {
     color: #000;
     background-color: #BADB96;
 }
 
-#Menu #Menu5
-{
+#Menu #Menu5 {
     color: #000;
     background-color: #D1C3CD;
 }
 
-#Menu #Menu0:hover
-{
+#Menu #Menu0:hover {
     color: #000;
     background-color: #CFC873;
 }
 
-#Menu #Menu1:hover
-{
+#Menu #Menu1:hover {
     color: #000;
     background-color: #C973CF;
 }
 
-#Menu #Menu2:hover
-{
+#Menu #Menu2:hover {
     color: #000;
     background-color: #CF9473;
 }
 
-#Menu #Menu3:hover
-{
+#Menu #Menu3:hover {
     color: #000;
     background-color: #73C5CF;
 }
 
-#Menu #Menu4:hover
-{
+#Menu #Menu4:hover {
     color: #000;
     background-color: #A3CF73;
 }
 
-#Menu #Menu5:hover
-{
+#Menu #Menu5:hover {
     color: #000;
     background-color: #C2AFBD;
 }
 
-#Contents h1
-{
+#Contents h1 {
     margin: 0;
 }
 
-#Contents h2
-{
+#Contents h2 {
     border-color: #FC8;
     border-style: solid;
     border-width: 0 0 1px;
     margin: 1em 0 0;
 }
 
-#Contents h3
-{
+#Contents h3 {
     border-color: #FD9;
     border-style: dashed;
     border-width: 0 0 1px;
     margin: 1em 0 0;
 }
 
-#Contents h4
-{
+#Contents h4 {
     border-color: #FEA;
     border-style: dashed;
     border-width: 0 0 1px;
     margin: 1em 0 0 1em;
 }
 
-#Contents .First
-{
+#Contents .First {
     margin-top: 0;
 }
 
-#Contents .Paragraph_Block
-{
+#Contents .Paragraph_Block {
     display: block;
     color: #000020;
     background-color: #FFF;
-    border-color: #595d96;
+    border-color: #595D96;
     border-style: none none dotted dotted;
     border-width: 0 0 1px 1px;
     padding: 1px 0 .5em .5em;
 }
 
-#Contents #Address
-{
+#Contents #Address {
     color: #02021E;
     margin-left: 10%;
     margin-right: 50%;
@@ -282,51 +240,44 @@ em {
     padding: 4px 4px 4px 20px;
 }
 
-#Contents .cppcode
-{
+#Contents .cppcode {
     width: 99%;
     -moz-border-radius: 4px;
-    background-color: #d5e1e8;
+    background-color: #D5E1E8;
     border-color: #84b0c7;
     border-style: solid;
     border-width: 1px;
 }
 
-#Contents .cpplisting
-{
+#Contents .cpplisting {
     width: 99%;
     -moz-border-radius: 4px;
-    background-color: #d5e1e8;
+    background-color: #D5E1E8;
     white-space: pre;
-    border-color: #84b0c7;
+    border-color: #84B0C7;
     border-style: solid;
     border-width: 1px;
 }
 
-#Contents .cpplisting_comment
-{
+#Contents .cpplisting_comment {
     color: green;
 }
 
-#Contents .cpplisting_toprovide
-{
+#Contents .cpplisting_toprovide {
     color: red;
 }
 
-h3, h4
-{
+h3, h4 {
     font-size: small;
 }
 
-.FlagsAround, #Menu .FlagsAround
-{
+.FlagsAround, #Menu .FlagsAround {
     font-size: 20px;
     background-color: #F0F0F0;
     text-align: center;
 }
 
-.FlagsAround a:hover
-{
+.FlagsAround a:hover {
     color: #000;
     background-color: #D0D0D0;
 }
