@@ -1,6 +1,9 @@
 #!/bin/bash
-cleancss -o CSS/Style.min.css CSS/Style.css
-cleancss -o CSS/Tags.min.css CSS/Tags.css
+# install node.js and then run:
+# npm install -g clean-css
+# npm install -g uglify-js
+
+cat CSS/Style.css CSS/normalize.css CSS/Tags.css | cleancss --s0 -o css/pack.css
 
 uglifyjs -o JavaScript/Utils.min.js JavaScript/Utils.js
 uglifyjs -o JavaScript/Tags.min.js JavaScript/Tags.js

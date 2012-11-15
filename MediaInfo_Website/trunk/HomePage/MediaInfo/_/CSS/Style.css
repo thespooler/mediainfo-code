@@ -7,13 +7,29 @@ body {
     padding: 0;
 }
 
-img {
-    border: 0;
-}
-
 code {
     font-size: small;
     background-color: #6F9;
+}
+
+em {
+    font-style: italic;
+}
+
+h1 {
+    font-size: medium;
+}
+
+h2, h3, h4 {
+    font-size: small;
+}
+
+h2 {
+    background-color: #F0F0F0;
+}
+
+img {
+    border: 0;
 }
 
 pre {
@@ -30,25 +46,8 @@ ul {
     margin-bottom: 0;
 }
 
-h1 {
-    font-size: medium;
-}
-
-h2 {
-    font-size: small;
-    background-color: #F0F0F0;
-}
-
 td:target {
     background-color: #7F7;
-}
-
-b, strong {
-    font-weight: bold;
-}
-
-em {
-    font-style: italic;
 }
 
 .Path {
@@ -265,10 +264,6 @@ em {
 
 #Contents .cpplisting_toprovide {
     color: red;
-}
-
-h3, h4 {
-    font-size: small;
 }
 
 .FlagsAround, #Menu .FlagsAround {
