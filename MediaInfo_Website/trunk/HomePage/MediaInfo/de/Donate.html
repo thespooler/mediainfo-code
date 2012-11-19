@@ -4,10 +4,10 @@ include $Path.'/_/Ad/Paypal_Display.html';
 header("Cache-Control: no-cache, must-revalidate, max-age=0");
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<!DOCTYPE html>
+<html lang="de">
 <head>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta charset="utf-8">
 	<title>MediaInfo unterstützen</title>
 </head>
 <body>
@@ -15,19 +15,19 @@ header("Cache-Control: no-cache, must-revalidate, max-age=0");
 if (isset($Donated)) {
  echo '
 <div class="Info">
-<br />
-Dear donator, thank you for your support.<br />
-If you want to remove the "Donate" button from the Windows GUI, you can download an launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.<br />
-<br />
+<br/>
+Dear donator, thank you for your support.<br/>
+If you want to remove the "Donate" button from the Windows GUI, you can download an launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.<br/>
+<br/>
 </div>
-<br />
+<br/>
  ';
 }
 ?>
 
 <h1>Spenden</h1>
 <h2>Warum spenden?</h2>
-MediaInfo ist freie, kostenlose Software.<br />
+MediaInfo ist freie, kostenlose Software.<br/>
 Also warum dafür bezahlen? Als Dank, als Unterstützung oder um zu helfen. Das entscheiden Sie.
 
 <h2>Spenden via Kreditkarte oder Paypal (International)</h2>
@@ -45,12 +45,12 @@ Also warum dafür bezahlen? Als Dank, als Unterstützung oder um zu helfen. Das 
 <input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
 <input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
 <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
-<br />
-<input type="image" src="https://www.paypal.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+<br/>
+<input type="image" src="https://www.paypal.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" border="" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
 <img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
 </form>
-<br />
-<br />
+<br/>
+<br/>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_xclick-subscriptions">
 <input type="hidden" name="business" value="zen@mediaarea.net">
@@ -64,23 +64,23 @@ oder <select name="a3"><option selected value="1.00">1</option><option value="2.
 <input type="hidden" name="t3" value="M">
 <input type="hidden" name="sra" value="1">
 <input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
-<br />
-<input type="image" src="https://www.paypal.com/de_DE/DE/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+<br/>
+<input type="image" src="https://www.paypal.com/de_DE/DE/i/btn/btn_subscribeCC_LG.gif" border="" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
 <img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
 </form>
 </div>
 
 <h2>Spenden via Überweisung (<a href="http://de.wikipedia.org/wiki/Eurozone">Eurozone</a>)</h2>
 <div id="Address">
-Empfänger: Jérôme Martinez<br />
-Konto-Nr.: 1000356406<br />
-Bankleitzahl : 13050000<br />
-IBAN : DE97 1305 0000 1000 3564 06<br />
-BIC-/SWIFT-Code : NOLADE21ROS<br />
+Empfänger: Jérôme Martinez<br/>
+Konto-Nr.: 1000356406<br/>
+Bankleitzahl : 13050000<br/>
+IBAN : DE97 1305 0000 1000 3564 06<br/>
+BIC-/SWIFT-Code : NOLADE21ROS<br/>
 </div>
 
 <h2>Kein Geld? Na und? Gehen Sie nicht! ;-)</h2>
-Nichts, wofür man sich schämen müsste.<br />
+Nichts, wofür man sich schämen müsste.<br/>
 Sie können MediaInfo auch noch auf folgende Weise unterstützen:
 <ul>
  <li>Übersetzen Sie MediaInfo in Ihre Muttersprache, oder verbessern Sie die Übersetzung.</li>

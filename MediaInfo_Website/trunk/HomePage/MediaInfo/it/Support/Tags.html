@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta charset="utf-8">
 	<title>Tags</title>
-	<link href="pack.css" rel="stylesheet" type="text/css" />
-	<script src="pack.js" type="text/javascript" />
+	<link href="pack.css" rel="stylesheet"/>
+	<script src="pack.js"/>
 </head>
 <body onload="Line_Show_All();Col_Show_All()">
 <div class="Warning">
@@ -16,10 +16,10 @@ How this works:
 <ul>
  <li>Click on a column header ("MediaInfo"...) to hide it</li>
  <li>Click on a group header ("Titles"...) to hide it</li>
- <li><a onclick="Col_Show_All()">Expand all columns</li></a>
- <li><a onclick="Col_Hide_All()">Colapse all columns</li></a>
- <li><a onclick="Line_Show_All()">Expand all groups</li></a>
- <li><a onclick="Line_Hide_All()">Colapse all groups</li></a>
+ <li><a onclick="Col_Show_All()" style="cursor: pointer">Expand all columns</a></li>
+ <li><a onclick="Col_Hide_All()" style="cursor: pointer">Collapse all columns</a></li>
+ <li><a onclick="Line_Show_All()" style="cursor: pointer">Expand all groups</a></li>
+ <li><a onclick="Line_Hide_All()" style="cursor: pointer">Collapse all groups</a></li>
 </ul>
 Hidden columns:
 <a onclick="Col_Show('mi')" id="mi">MediaInfo,</a>
@@ -31,12 +31,12 @@ Hidden columns:
 <a onclick="Col_Show('ri')" id="ri">RIFF,</a>
 <a onclick="Col_Show('dc')" id="dc">Dublin,</a>
 <a onclick="Col_Show('de')" id="de">Description,</a>
-<br />
-<br />
+<br/>
+<br/>
 <table summary="Tags">
  <thead>
   <tr>
-   <th id="mi0" onclick="Col_Hide('mi')" class="aa">MediaInfo</th>
+   <th id="mi0" onclick="Col_Hide('mi')">MediaInfo</th>
    <th id="mk0" onclick="Col_Hide('mk')">Matroska</th>
    <th id="id0" onclick="Col_Hide('id')">ID3v2</th>
    <th id="vo0" onclick="Col_Hide('vo')">Vorbis</th>
@@ -302,7 +302,7 @@ Hidden columns:
    <td id="ap14">COMPOSER</td>
    <td id="wm14">&nbsp;</td>
    <td id="ri14">IMUS</td>
-   <td id="dc14""><a
+   <td id="dc14"><a
  href="http://dublincore.org/documents/dcmi-terms/#creator"
  title="External specification source">creator</a></td>
    <td id="de14">Name of the original composer.</td>
@@ -329,7 +329,7 @@ Hidden columns:
    <td id="ap15">&nbsp;</td>
    <td id="wm15">&nbsp;</td>
    <td id="ri15">&nbsp;</td>
-   <td id="dc15""><a
+   <td id="dc15"><a
  href="http://dublincore.org/documents/dcmi-terms/#creator"
  title="External specification source">creator</a></td>
    <td id="de15">The person who arranged the piece; e.g. "Ravel".</td>
@@ -343,7 +343,7 @@ Hidden columns:
    <td id="ap16">&nbsp;</td>
    <td id="wm16">&nbsp;</td>
    <td id="ri16">&nbsp;</td>
-   <td id="dc16""><a
+   <td id="dc16"><a
  href="http://dublincore.org/documents/dcmi-terms/#creator"
  title="External specification source">creator</a></td>
    <td id="de16">The person who wrote the lyrics for a musical item.</td>
@@ -403,7 +403,7 @@ Hidden columns:
    <td id="ap21">&nbsp;</td>
    <td id="wm21">&nbsp;</td>
    <td id="ri21">IWRI</td>
-   <td id="dc21""><a
+   <td id="dc21"><a
  href="http://dublincore.org/documents/dcmi-terms/#creator"
  title="External specification source">creator</a></td>
    <td id="de21">The author of the story or script.</td>
@@ -673,7 +673,7 @@ Hidden columns:
    <td id="ap44">&nbsp;</td>
    <td id="wm44">&nbsp;</td>
    <td id="ri44">ITCH</td>
-   <td id="dc44"">&nbsp;</td>
+   <td id="dc44">&nbsp;</td>
    <td id="de44">Technician. Identifies the technician who digitized the subject
 	file. For example, "Smith, John."</td>
   </tr>
@@ -1049,7 +1049,7 @@ Hidden columns:
   <tr>
    <td id="mi75">Original/Released_Date</td>
    <td id="mk75">ORIGINAL - DATE_RELEASED</td>
-   <td id="id75""><a
+   <td id="id75"><a
  href="http://www.id3.org/id3v2.3.0.html#TORY"
  title="External specification source">TORY</a></td>
    <td id="vo75">&nbsp;</td>
@@ -1196,7 +1196,7 @@ Hidden columns:
    <td id="dc73"><a
  href="http://dublincore.org/documents/dcmi-terms/#date"
  title="External specification source">date</a></td>
-   <td id="de73">Information on when the file was purchased.<br />
+   <td id="de73">Information on when the file was purchased.<br/>
 	This is the &quot;Date of purch&quot; item for ID3Tag OWNE </td>
   </tr>
   <tr>
@@ -1225,7 +1225,7 @@ Hidden columns:
  title="External specification source">rights</a></td>
    <td id="de130"><p>Might be used as a reminder of a made transaction or,
 	 if signed, as proof. Note that the "USER" and "TOWN" frames are good
-	 to use in conjunction with this one.<br />
+	 to use in conjunction with this one.<br/>
 	 This is the &quot;Seller&quot; item for ID3Tag OWNE</p></td>
   </tr>
   <tr>
@@ -1307,7 +1307,7 @@ Hidden columns:
 	"slide", "paper", etc.</td>
   </tr>
   <tr>
-   <td id="mi51">Encoded_Original/URL<br /> </td>
+   <td id="mi51">Encoded_Original/URL<br/> </td>
    <td id="mk51">ORIGINAL_MEDIA_TYPE - URL</td>
    <td id="id51"><a href="http://www.id3.org/id3v2.3.0.html#WOAS"
  title="External specification source">WOAS</a></td>
@@ -2165,8 +2165,8 @@ Hidden columns:
  </thead>
  <tbody id="Nested">
   <tr>
-   <td id="mi151"">XXX/URL</td>
-   <td id="mk151"">URL</td>
+   <td id="mi151">XXX/URL</td>
+   <td id="mk151">URL</td>
    <td id="id151">&nbsp;</td>
    <td id="vo151">CONTACT*</td>
    <td id="ap151">&nbsp;</td>
@@ -2176,8 +2176,8 @@ Hidden columns:
    <td id="de151">URL corresponding to the tag it's included in.</td>
   </tr>
   <tr>
-   <td id="mi152"">XXX/EMail</td>
-   <td id="mk152"">EMAIL</td>
+   <td id="mi152">XXX/EMail</td>
+   <td id="mk152">EMAIL</td>
    <td id="id152">&nbsp;</td>
    <td id="vo152">CONTACT*</td>
    <td id="ap152">&nbsp;</td>
@@ -2187,8 +2187,8 @@ Hidden columns:
    <td id="de152">Email corresponding to the tag it's included in.</td>
   </tr>
   <tr>
-   <td id="mi153"">XXX/Address</td>
-   <td id="mk153"">ADDRESS</td>
+   <td id="mi153">XXX/Address</td>
+   <td id="mk153">ADDRESS</td>
    <td id="id153">&nbsp;</td>
    <td id="vo153">CONTACT*</td>
    <td id="ap153">&nbsp;</td>
@@ -2199,8 +2199,8 @@ Hidden columns:
 	a country code. It can be useful for a recording label.</td>
   </tr>
   <tr>
-   <td id="mi154"">XXX/Phone</td>
-   <td id="mk154"">PHONE</td>
+   <td id="mi154">XXX/Phone</td>
+   <td id="mk154">PHONE</td>
    <td id="id154">&nbsp;</td>
    <td id="vo154">CONTACT*</td>
    <td id="ap154">&nbsp;</td>
@@ -2211,8 +2211,8 @@ Hidden columns:
 	It can be useful for a recording label.</td>
   </tr>
   <tr>
-   <td id="mi155"">XXX/Fax</td>
-   <td id="mk155"">FAX</td>
+   <td id="mi155">XXX/Fax</td>
+   <td id="mk155">FAX</td>
    <td id="id155">&nbsp;</td>
    <td id="vo155">CONTACT*</td>
    <td id="ap155">&nbsp;</td>
@@ -2223,8 +2223,8 @@ Hidden columns:
 	It can be useful for a recording label.</td>
   </tr>
   <tr>
-   <td id="mi156"">XXX/Sort</td>
-   <td id="mk156"">SORT_WITH</td>
+   <td id="mi156">XXX/Sort</td>
+   <td id="mk156">SORT_WITH</td>
    <td id="id156">&nbsp;</td>
    <td id="vo156">&nbsp;</td>
    <td id="ap156">&nbsp;</td>
@@ -2236,8 +2236,8 @@ Hidden columns:
 	=&gt; "Beatles, The", "Bob Marley" =&gt; "Marley, Bob"</td>
   </tr>
   <tr>
-   <td id="mi157"">XXX/Instruments</td>
-   <td id="mk157"">INSTRUMENTS</td>
+   <td id="mi157">XXX/Instruments</td>
+   <td id="mk157">INSTRUMENTS</td>
    <td id="id157">&nbsp;</td>
    <td id="vo157">&nbsp;</td>
    <td id="ap157">&nbsp;</td>

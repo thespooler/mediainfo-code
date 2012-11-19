@@ -4,10 +4,10 @@ include $Path.'/_/Ad/Paypal_Display.html';
 header("Cache-Control: no-cache, must-revalidate, max-age=0");
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta charset="utf-8">
 	<title>Помочь MediaInfo</title>
 </head>
 <body>
@@ -15,12 +15,12 @@ header("Cache-Control: no-cache, must-revalidate, max-age=0");
 if (isset($Donated)) {
  echo '
 <div class="Info">
-<br />
-Dear donator, thank you for your support.<br />
-If you want to remove the "Donate" button from the Windows GUI, you can download an launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.<br />
-<br />
+<br/>
+Dear donator, thank you for your support.<br/>
+If you want to remove the "Donate" button from the Windows GUI, you can download an launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.<br/>
+<br/>
 </div>
-<br />
+<br/>
  ';
 }
 ?>
@@ -44,12 +44,12 @@ $ <select name="amount"><option value="2.00">2</option><option value="5.00">5</o
 <input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
 <input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
 <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
-<br />
-<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<br/>
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
-<br />
-<br />
+<br/>
+<br/>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_xclick-subscriptions">
 <input type="hidden" name="business" value="zen@mediaarea.net">
@@ -63,8 +63,8 @@ or $ <select name="a3"><option selected value="2.00">2</option><option value="5.
 <input type="hidden" name="t3" value="M">
 <input type="hidden" name="sra" value="1">
 <input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
-<br />
-<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<br/>
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
 </form>
 </div>

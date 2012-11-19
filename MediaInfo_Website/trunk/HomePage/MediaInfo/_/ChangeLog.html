@@ -9,11 +9,17 @@ parse_str(strtok("?"), $Argument);
 //else
 //	setcookie("LastVisited", time(), time()+60*60);
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<!DOCTYPE html>
+<?php
+if ($Language=="fr")
+	echo '<html lang="fr">';
+else
+	echo '<html lang="en">
+';
+?>
 <head>
 	<title>MediaInfo - ChangeLog</title>
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta charset="utf-8">
 <?php
 if (isset($Official))
 	$URL='http://mediainfo.sourceforge.net/'.$Language;
@@ -30,19 +36,18 @@ else
 			else
 				$URL='http://mediaarea.net/XVIDsf.php';
 		}
-		echo '	<meta http-equiv="refresh" content="3; URL='.$URL.'" />
+		echo '	<meta http-equiv="refresh" content="3; URL='.$URL.'"/>
 	';
 	}
 ?>
-	<meta name="identifier-url" content="http://mediainfo.sourceforge.net" />
-	<meta name="revisit-after" content="7 days" />
-	<meta name="robots" content="index,follow" />
-	<link rel="stylesheet" type="text/css" href="/_/CSS/pack.css" title="Default" />
-	<link rel="icon" type="image/png" href="/_/Image/Icon.png" />
-	<link rel="shortcut icon" type="image/x-icon" href="/_/Image/Icon.ico" />
+	<meta name="revisit-after" content="7 days"/>
+	<meta name="robots" content="index,follow"/>
+	<link rel="icon" href="/_/Image/favicon.ico"/>
+	<link rel="icon" type="image/png" href="/_/Image/favicon.png"/>
+	<link rel="stylesheet" href="/_/CSS/pack.css"/>
 </head>
-<br />
-<table border="0" cellpadding="0" cellspacing="0">
+<br/>
+<table cellpadding="0" cellspacing="0">
 	<tbody>
 		<tr>
 			<td>
@@ -51,18 +56,20 @@ else
 <?php
 if ($Language=="fr")
 	echo '
-	<a href="'.$URL.'">Visiter le site MediaInfo</a><br /><br />
+	<a href="'.$URL.'">Visiter le site MediaInfo</a><br/><br/>
 	';
 else
 	echo '
-	<a href="'.$URL.'">Visit MediaInfo website</a><br /><br />
+	<a href="'.$URL.'">Visit MediaInfo website</a><br/><br/>
 	';
 ?>
 </div>
 <div class="Invisible">
-More about 4CC: <a href="http://mediaarea.net/DX50sf.php">DX50</a> <a href="http://mediaarea.net/DIVXsf.php">DIVX</a> <a href="http://mediaarea.net/XVIDsf.php">XVID</a><br />
+	More about 4CC: <a href="http://mediaarea.net/DX50sf.php">DX50</a> <a href="http://mediaarea.net/DIVXsf.php">DIVX</a> <a href="http://mediaarea.net/XVIDsf.php">XVID</a>
+	<br/>
 </div>
-<div id="ChangeLog"><pre>
+<div>
+<pre>
 Changes:
 
 Version 0.7.61, 2012-10-22
@@ -207,7 +214,7 @@ x #3515857, CLI only: --LogFile carriage return format was not the one of the OS
 		</tr>
 	</tbody>
 </table>
-<table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+<table style="width: 100%" border="" cellpadding="0" cellspacing="0">
 	<tbody>
 		<tr>
 			<td align="center">

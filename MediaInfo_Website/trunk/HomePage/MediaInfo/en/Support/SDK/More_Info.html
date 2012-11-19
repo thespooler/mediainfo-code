@@ -1,7 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta charset="utf-8">
 	<title>More information about the interface</title>
 </head>
 <body>
@@ -31,62 +31,62 @@
 There is an <a href="Doxygen/index.html">exhaustive list of MediaInfo interfaces</a>.
 
 <h2><a name="Capacities"></a>Capacities of the library</h2>
-<code>MediaInfo::Option("Info_Version")</code><br />
-<code>MediaInfo::Option("Info_Parameters")</code><br />
-<code>MediaInfo::Option("Info_Parameters_CSV")</code><br />
-<code>MediaInfo::Option("Info_Codecs")</code><br />
+<code>MediaInfo::Option("Info_Version")</code><br/>
+<code>MediaInfo::Option("Info_Parameters")</code><br/>
+<code>MediaInfo::Option("Info_Parameters_CSV")</code><br/>
+<code>MediaInfo::Option("Info_Codecs")</code><br/>
 
 <h2><a name="Open_Files"></a>Open files</h2>
-<code>MediaInfo::Open("**FILENAME**")</code><br />
-<code>MediaInfoList::Open("**FILENAMES**")</code><br />
+<code>MediaInfo::Open("**FILENAME**")</code><br/>
+<code>MediaInfoList::Open("**FILENAMES**")</code><br/>
 
 <h2><a name="Open_Buffers"></a>Open buffers</h2>
-<code>MediaInfo::Open("**Begin**", "**Begin_Size**", "**End**", "**End_Size**")</code><br />
-<code>MediaInfoList::Open("**Begin**", "**Begin_Size**", "**End**", "**End_Size**")</code><br />
+<code>MediaInfo::Open("**Begin**", "**Begin_Size**", "**End**", "**End_Size**")</code><br/>
+<code>MediaInfoList::Open("**Begin**", "**Begin_Size**", "**End**", "**End_Size**")</code><br/>
 
 <h2><a name="Format"></a>Formated text</h2>
 <h3>Get output</h3>
-<code>MediaInfo::Inform(Option)</code><br />
+<code>MediaInfo::Inform(Option)</code><br/>
 
 <h3>Customization</h3>
-<code>MediaInfo::Option("Inform", "**YOUR_TEXT**")</code><br />
-<code>MediaInfo::Option("Inform_Get")</code><br />
-<code>MediaInfo::Option("Complete")</code><br />
-<code>MediaInfo::Option("Complete_Get")</code><br />
+<code>MediaInfo::Option("Inform", "**YOUR_TEXT**")</code><br/>
+<code>MediaInfo::Option("Inform_Get")</code><br/>
+<code>MediaInfo::Option("Complete")</code><br/>
+<code>MediaInfo::Option("Complete_Get")</code><br/>
 
 <h2><a name="Get"></a>Get a specific item</h2>
-<code>MediaInfo::Get("**StreamKind**, **StreamNumber**, **Parameter**, **InfoKind**")</code><br />
-<code>MediaInfo::Count_Get("**StreamKind**, **StreamNumber**")</code><br />
-<br />
-Note : If **StreamNumber** is -1, return the count of stream of that kind (equivalent but quicker than <code>MediaInfo::Get("**StreamKind**, 0, "StreamCount", Info_Text)</code>)<br />
-<br />
-Note : Only for "C" (DLL) interface:<br />
-<code>MediaInfo_GetI</code> is a replacement for <code>MediaInfo_Get</code> for **Parameter** with Integer, because C doesn't support operator overloading<br />
+<code>MediaInfo::Get("**StreamKind**, **StreamNumber**, **Parameter**, **InfoKind**")</code><br/>
+<code>MediaInfo::Count_Get("**StreamKind**, **StreamNumber**")</code><br/>
+<br/>
+Note : If **StreamNumber** is -1, return the count of stream of that kind (equivalent but quicker than <code>MediaInfo::Get("**StreamKind**, 0, "StreamCount", Info_Text)</code>)<br/>
+<br/>
+Note : Only for "C" (DLL) interface:<br/>
+<code>MediaInfo_GetI</code> is a replacement for <code>MediaInfo_Get</code> for **Parameter** with Integer, because C doesn't support operator overloading<br/>
 
 <h2><a name="Set"></a>Set a specific item</h2>
-Note : not yet implement, do not use it!<br />
+Note : not yet implement, do not use it!<br/>
 
 <h2><a name="State"></a>State of the library</h2>
-Note : not yet implement, do not use it!<br />
+Note : not yet implement, do not use it!<br/>
 
 <h2><a name="Close"></a>Close files</h2>
-<code>MediaInfo::Close()</code><br />
+<code>MediaInfo::Close()</code><br/>
 
 <h2><a name="Save"></a>Save files</h2>
-Note : not yet implement, do not use it!<br />
+Note : not yet implement, do not use it!<br/>
 
 <h2><a name="Language"></a>Language</h2>
-<code>MediaInfo::Option("Language")</code><br />
-<code>MediaInfo::Option("Language_Get")</code><br />
-<code>MediaInfo::Option("Language_Update")</code><br />
+<code>MediaInfo::Option("Language")</code><br/>
+<code>MediaInfo::Option("Language_Get")</code><br/>
+<code>MediaInfo::Option("Language_Update")</code><br/>
 
 <h2><a name="Other"></a>Other</h2>
 <h3>C++ specific : static options</h3>
-Note for C++ developers : file independant options can be set without have created an object, with :<br />
-<code>MediaInfo::Option_Static(...)</code><br />
+Note for C++ developers : file independant options can be set without have created an object, with :<br/>
+<code>MediaInfo::Option_Static(...)</code><br/>
 
 <h3>Internet connection<code></code></h3>
-<code>MediaInfo::Option("Internet")</code><br />
+<code>MediaInfo::Option("Internet")</code><br/>
 
 <h3>Internet update</h3>
 Note : not yet implement, do not use it!

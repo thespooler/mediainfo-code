@@ -1,8 +1,8 @@
 ﻿<?php include $Path.'/_/Template/Default/Download_Donate.html'; ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta charset="utf-8">
 	<title>Download</title>
  <?php if (isset($Html_Head_Meta_HttpEquiv_Refresh)) echo $Html_Head_Meta_HttpEquiv_Refresh; ?>
 </head>
@@ -12,9 +12,9 @@
 //Donated
 if ($Page_Status=="Donated") {
 echo '
-Dear donator, thank you for your support.<br />
-<br />
-Your MediaInfo download will start shortly&#8230;<br />
+Dear donator, thank you for your support.<br/>
+<br/>
+Your MediaInfo download will start shortly&#8230;<br/>
 If not click <a href="'.$Link.'">here</a>
 ';
 }
@@ -22,8 +22,8 @@ If not click <a href="'.$Link.'">here</a>
 //Free
 if ($Page_Status=="Free") {
 echo '
-<br />
-Your MediaInfo download will start shortly&#8230;<br />
+<br/>
+Your MediaInfo download will start shortly&#8230;<br/>
 If not click <a href="'.$Link.'">here</a>
 ';
 }
@@ -32,13 +32,13 @@ If not click <a href="'.$Link.'">here</a>
 if ($Page_Status=="Paypal") {
 echo '
 <h2>Donation</h2>
-You will donate '.$Currency_Before.$Amount.$Currency_After.' for MediaInfo<br />
-<br />
+You will donate '.$Currency_Before.$Amount.$Currency_After.' for MediaInfo<br/>
+<br/>
 ';
 Paypal_Display_Direct(isset($Official), "US", "en_US", $Currency_Code, $Amount, "Donation to MediaInfo", "PayPal - The safer, easier way to pay online!");
 echo '
-<br />
-<br />
+<br/>
+<br/>
 If you don\'t wish to use PayPal as a donation processor, go directly to <a href="'.$Link.'">download page</a>. We will hopefully be able to provide alternate donation services in the future.
 ';
 }
@@ -47,36 +47,36 @@ If you don\'t wish to use PayPal as a donation processor, go directly to <a href
 if ($Page_Status=="Proposal") {
 echo '
 <h2>MediaInfo is free software, so why donate?</h2>
-In order for MediaInfo to be in a full-time development state, your support and help is greatly appreciated. Since MediaInfo is free software, your donation is the best way to encourage the author and make it possible to continue moving forward on the project. <br />
-<br />
+In order for MediaInfo to be in a full-time development state, your support and help is greatly appreciated. Since MediaInfo is free software, your donation is the best way to encourage the author and make it possible to continue moving forward on the project. <br/>
+<br/>
 <form action="Download_Donate" method="POST">
-<strong>I choose to donate <select name="currency_code"><option selected value="USD">US$</option><option value="CAD">CA$</option><option value="AUD">AU$</option><option value="GBP">£</option><option value="EUR">€</option></select> <select name="amount"><option selected value="0.00">0</option><option value="1.00">1</option><option value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select></strong><br />
+<strong>I choose to donate <select name="currency_code"><option selected value="USD">US$</option><option value="CAD">CA$</option><option value="AUD">AU$</option><option value="GBP">£</option><option value="EUR">€</option></select> <select name="amount"><option selected value="0.00">0</option><option value="1.00">1</option><option value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select></strong><br/>
 <input type="submit" value="Continue"> </form>
 ';
 }
 ?>
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-Don't hesitate to <a href="mailto:info@mediaarea.net">contact me</a> if you have any problems downloading MediaInfo or providing feedback.<br />
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Don't hesitate to <a href="mailto:info@mediaarea.net">contact me</a> if you have any problems downloading MediaInfo or providing feedback.<br/>
 </body>
 </html>

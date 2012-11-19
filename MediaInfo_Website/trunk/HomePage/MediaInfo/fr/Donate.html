@@ -4,10 +4,10 @@ include $Path.'/_/Ad/Paypal_Display.html';
 header("Cache-Control: no-cache, must-revalidate, max-age=0");
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta charset="utf-8">
 	<title>Aider MediaInfo</title>
 </head>
 <body>
@@ -15,12 +15,12 @@ header("Cache-Control: no-cache, must-revalidate, max-age=0");
 if (isset($Donated)) {
  echo '
 <div class="Info">
-<br />
-Dear donator, thank you for your support.<br />
-If you want to remove the "Donate" button from the Windows GUI, you can download an launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.<br />
-<br />
+<br/>
+Dear donator, thank you for your support.<br/>
+If you want to remove the "Donate" button from the Windows GUI, you can download an launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.<br/>
+<br/>
 </div>
-<br />
+<br/>
  ';
 }
 ?>
@@ -31,25 +31,25 @@ MediaInfo demande beaucoup de temps de développement. Faire un don est le meill
 
 <h2>Par carte bancaire ou avec PayPal (tous pays)</h2>
 Vous pouvez choisir entre un don en une fois ou un abonnement  mensuel :
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<table cellpadding="0" cellspacing="0">
  <tr>
   <td id="Address" style="text-align:center">
-   France<br />
-   (en <strong>Euros</strong>)<br />
+   France<br/>
+   (en <strong>Euros</strong>)<br/>
    <?php Paypal_Donate_Display(isset($Official), "FR", "fr_FR/FR", "EUR", "", "Euros", 1, 5, 1, "Don pour MediaInfo", "mois", "ou", "PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !"); ?>
   </td>
   <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </td>
   <td id="Address" style="text-align:center">
-   Québec<br />
-   (en <strong>Dollars canadiens</strong>)<br />
+   Québec<br/>
+   (en <strong>Dollars canadiens</strong>)<br/>
    <?php Paypal_Donate_Display(isset($Official), "CA", "fr_XC", "CAD", "CA$", "", 1, 10, 2, "Don pour MediaInfo", "mois", "ou", "PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !"); ?>
   </td>
   <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </td>
   <td id="Address" style="text-align:center">
-   Autre<br />
-   (en <strong>Dollars des Etats-Unis</strong>)<br />
+   Autre<br/>
+   (en <strong>Dollars des Etats-Unis</strong>)<br/>
    <?php Paypal_Donate_Display(isset($Official), "US", "fr_XC", "USD", "US$", "", 1, 10, 2, "Don pour MediaInfo", "mois", "ou", "PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !"); ?>
   </td>
  </tr>
@@ -57,23 +57,23 @@ Vous pouvez choisir entre un don en une fois ou un abonnement  mensuel :
 <h2>Par virement bancaire (<a href="http://fr.wikipedia.org/wiki/Zone_euro">zone Euro</a> uniquement)</h2>
 Il est possible de faire un virement bancaire en Euros, voici les coordonnées bancaires :
 <div id="Address">
-Titulaire du compte : Jérôme Martinez<br />
-Code banque : 30003<br />
-Code Agence : 01338<br />
-Numéro du compte : 00050633256<br />
-Clé : 56<br />
-IBAN : FR76 3000 3013 3800 0506 3325 656<br />
-BIC-ADRESSE SWIFT : SOGEFRPP<br />
+Titulaire du compte : Jérôme Martinez<br/>
+Code banque : 30003<br/>
+Code Agence : 01338<br/>
+Numéro du compte : 00050633256<br/>
+Clé : 56<br/>
+IBAN : FR76 3000 3013 3800 0506 3325 656<br/>
+BIC-ADRESSE SWIFT : SOGEFRPP<br/>
 </div>
 N'oubliez pas de mettre votre adresse e-mail dans la description du virement!
 
 <h2>Par chèque (France uniquement)</h2>
 Il est possible d'envoyer un chèque à l'ordre de Jérôme Martinez (créateur du projet), adressé à l'adresse suivante :
-<div id="Address">Jérôme Martinez<br />Chemin du Vernay<br />73190 Curienne<br />France</div>
+<div id="Address">Jérôme Martinez<br/>Chemin du Vernay<br/>73190 Curienne<br/>France</div>
 N'oubliez pas de mettre un petit mot avec votre adresse e-mail afin que je vous confirme la réception!
 
 <h2>Pas de sous. Et alors? Partez pas! ;-)</h2>
-Ce n'est pas grave :)<br />
+Ce n'est pas grave :)<br/>
 Vous pouvez toujours contribuer à MediaInfo en faisant autre chose :
 <ul>
   <li>Traduire (ou améliorer la traduction) MediaInfo dans une autre langue (pas le français, le developpeur est français ;-) )</li>

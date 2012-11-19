@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-	<meta content="text/html;charset=UTF-8" http-equiv="content-type" />
+	<meta content="text/html;charset=UTF-8" http-equiv="content-type"/>
 	<title>常见问题</title>
 </head>
 <body>
@@ -51,15 +51,15 @@
 <div class="Paragraph_Block">
 <h3><a name="URL"></a>网站的正式网址是什么?</h3>
 <div class="Paragraph_Block">
-<a href=http://mediainfo.sourceforge.net>http://mediainfo.sourceforge.net</a><br />
+<a href=http://mediainfo.sourceforge.net>http://mediainfo.sourceforge.net</a><br/>
 </div>
 
 <h3><a name="OpenCandy"></a>OpenCandy stuff is installed!</h3>
 <div class="Paragraph_Block">
-<a href="http://www.opencandy.com/what/">OpenCandy</a> is used by the Windows GUI installer for providing some Open Source and proprietary software advertisement.<br />
-You can look at the <a href="http://www.opencandy.com/privacy-policy/">OpenCandy provacy policy</a>.<br />
-If you don't have OpenCandy screen during the install, or if you don't click on "Yes, Install" (this is NOT the default action) in this screen, nothing is done.<br />
-Some files are put in the MediaInfo directory, and some registry keys are in the registry only for uninstallation.<br />
+<a href="http://www.opencandy.com/what/">OpenCandy</a> is used by the Windows GUI installer for providing some Open Source and proprietary software advertisement.<br/>
+You can look at the <a href="http://www.opencandy.com/privacy-policy/">OpenCandy provacy policy</a>.<br/>
+If you don't have OpenCandy screen during the install, or if you don't click on "Yes, Install" (this is NOT the default action) in this screen, nothing is done.<br/>
+Some files are put in the MediaInfo directory, and some registry keys are in the registry only for uninstallation.<br/>
 If even with these explanations you don't want OpenCandy stuff, you can:
 <ul>
  <li>Pay me every month for not having it (I spend a lot of time on MediaInfo, and I try to live from this work)</li>
@@ -70,8 +70,8 @@ Keep in mind that this is not an adware installed without your consent.</div>
 
 <h3><a name="Internet"></a>MediaInfo tries to connect to the Internet!</h3>
 <div class="Paragraph_Block">
-Yes, it tries (if "Check for newest version" is checked).<br />
-When this checkbox is check, MediaInfo connects to mediaarea.eu website too for <strong>anonymous</strong> statistics. (how often MediaInfo is used, which OS/Language/Country is the most used...)<br />
+Yes, it tries (if "Check for newest version" is checked).<br/>
+When this checkbox is check, MediaInfo connects to mediaarea.eu website too for <strong>anonymous</strong> statistics. (how often MediaInfo is used, which OS/Language/Country is the most used...)<br/>
 If you don't want to autorize anonymous statistics, uncheck the "Check for newest version" checkbox.
 </div>
 
@@ -83,13 +83,13 @@ If you don't want to autorize anonymous statistics, uncheck the "Check for newes
  <li>命令行界面：MediaInfo Cmd</li>
  <li>供其他软件使用的DLL：MediaInfo DLL</li>
 </ul>
-<br />
+<br/>
 然后选择你使用的操作系统：
 <ul>
  <li>Win : Windows 95 to Windows XP</li>
  <li>Lin : Linux</li>
 </ul>
-<br />
+<br/>
 以及你的硬件平台：
 <ul>
  <li>686： Intel Pentium(奔腾)， AMD Athlon(速龙)</li>
@@ -108,7 +108,7 @@ If you don't want to autorize anonymous statistics, uncheck the "Check for newes
 
 <h3><a name="NoSupport"></a>为什么有些多媒体格式MediaInfo不支持?</h3>
 <div class="Paragraph_Block">
-因为我没有关于这种文件格式的说明。<br />
+因为我没有关于这种文件格式的说明。<br/>
 如果你有这种格式的说明文档，请<a href="mailto:zenitram@users.sourceforge.net">和我联系</a>。
 </div>
 
@@ -119,7 +119,7 @@ If you don't want to autorize anonymous statistics, uncheck the "Check for newes
 
 <h3><a name="NoTranslation"></a>我想让MediaInfo显示我的语言，但语言列表中没有。</h3>
 <div class="Paragraph_Block" style="width: 1234; height: 66">
-因为我不懂你的语言！;-)<br />
+因为我不懂你的语言！;-)<br/>
 如果你可以挤出一个小时的时间，你就可以完整地翻译它(通过“参数设置”对话框进行或直接翻译 Plugin\Language 文件夹中的语言文件)，请将翻译好的语言文件发给我，让更多的人可以用上它。这并不困难，你只需要懂一些简单的英语。</div>
 
 <h3><a name="NoQuestion"></a>这里没有我想问的问题，我该怎么办？</h3>
@@ -135,14 +135,14 @@ GPL(General Public Licence，通用公共许可协议)</div>
 
 <h3><a name="BuildFromSources_GUI"></a>我想自己用源代码编译这个软件，该怎么做呢？</h3>
 <div class="Paragraph_Block">
-你可以在<a href="http://sourceforge.net/project/showfiles.php?group_id=86862&package_id=90613">这里</a>下载源代码。<br />
-你需要用Borland C++ 6来编译。<br />
+你可以在<a href="http://sourceforge.net/project/showfiles.php?group_id=86862&package_id=90613">这里</a>下载源代码。<br/>
+你需要用Borland C++ 6来编译。<br/>
 这里有一篇<a href="/Support/Build_From_Sources/ThirdParty">编译说明</a>供参考。</div>
 
 <h3><a name="GUI_Linux"></a>为什么没有运行在Linux上的图形界面的MediaInfo?</h3>
 <div class="Paragraph_Block">
-VCL (Borland图形库) 无法在Linux上使用(这是唯一的原因)。<br />
-如果你知道如何使用wxWidgets (一个标准图形库)，并且有兴趣用它来设计MediaInfo的图形界面，请<a href="mailto:zenitram@users.sourceforge.net">和我联系</a>。<br />
+VCL (Borland图形库) 无法在Linux上使用(这是唯一的原因)。<br/>
+如果你知道如何使用wxWidgets (一个标准图形库)，并且有兴趣用它来设计MediaInfo的图形界面，请<a href="mailto:zenitram@users.sourceforge.net">和我联系</a>。<br/>
 </div>
 </div>
 
@@ -154,11 +154,11 @@ GPL(General Public Licence，通用公共许可协议)。</div>
 
 <h3><a name="Cmd_Options"></a>命令行模式为什么没有更多的选项？</h3>
 <div class="Paragraph_Block">
-我没有足够的时间，并且用户们似乎并不需要这样的特性。<br />
+我没有足够的时间，并且用户们似乎并不需要这样的特性。<br/>
 你可以到<a href="http://sourceforge.net/tracker/?group_id=86862&amp;atid=581184">这里</a>建议增加一项新功能。.</div>
 
 <h3><a name="BuildFromSources_Cmd"></a>我想自己用源代码编译这个软件，该怎么做呢？</h3>
-<div class="Paragraph_Block">你可以在<a href="http://sourceforge.net/project/showfiles.php?group_id=86862&package_id=90613">这里</a>下载源代码。<br />
+<div class="Paragraph_Block">你可以在<a href="http://sourceforge.net/project/showfiles.php?group_id=86862&package_id=90613">这里</a>下载源代码。<br/>
 注意：这个源代码存在一些可移植性问题，你编译时可能会遇到一些困难。这里有一篇<a href="/Support/Build_From_Sources/ThirdParty">说明</a>供参考。</div>
 </div>
 
@@ -170,7 +170,7 @@ LGPL(Library/Lesser General Public Licence，库/宽通用公共许可证协议)
 
 <h3><a name="NoSoftware"></a>为什么这个DLL不能和另一个软件一起使用呢(软件作者说可以)？</h3>
 <div class="Paragraph_Block">
-也许是版本的问题，你可以：<br />
+也许是版本的问题，你可以：<br/>
 <ul>
  <li>请那个软件的作者更新他的软件以支持最新的MediaInfo DLL。</li>
  <li>尝试下载旧版本的MediaInfo DLL。</li>
@@ -179,12 +179,12 @@ LGPL(Library/Lesser General Public Licence，库/宽通用公共许可证协议)
 
 <h3><a name="SDK"></a>我想用MediaInfo的DLL编程，该怎么做呢？</h3>
 <div class="Paragraph_Block">
-下载DLL包，里面有针对多种编译器编写的例子。(标准C,标准C++,GCC,MinGW, Borland C++ Builder, Microsoft Visual C++, Microsoft Visual Basic, Microsoft C#, Microsoft J#)<br />
+下载DLL包，里面有针对多种编译器编写的例子。(标准C,标准C++,GCC,MinGW, Borland C++ Builder, Microsoft Visual C++, Microsoft Visual Basic, Microsoft C#, Microsoft J#)<br/>
 <a href="/Support/SDK">这里</a>有一个开发包（SDK）。</div>
 
 <h3><a name="StaticLib"></a>我不喜欢DLL，想用静态链接库，可以吗？</h3>
 <div class="Paragraph_Block">
-只能用C++。<br />
+只能用C++。<br/>
 你可以在下载页面上找到以下几个包：
 <ul>
  <li>用 Borland C++ builder 6 编译的函数库</li>
@@ -194,7 +194,7 @@ LGPL(Library/Lesser General Public Licence，库/宽通用公共许可证协议)
 
 <h3><a name="BuildFromSources_DLL"></a>我想用源代码编译，该怎么做呢？</h3>
 <div class="Paragraph_Block">
-从<a href="http://sourceforge.net/project/showfiles.php?group_id=86862&package_id=90613">这里</a>下载源代码。<br />
+从<a href="http://sourceforge.net/project/showfiles.php?group_id=86862&package_id=90613">这里</a>下载源代码。<br/>
 注意：源代码存在可移植性问题，你在编译时可能性会遇到一些困难。点<a href="/Support/Build_From_Sources/ThirdParty">这里</a>查看相关帮助。</div>
 </div>
 

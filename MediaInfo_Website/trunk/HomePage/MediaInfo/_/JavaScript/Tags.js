@@ -1,5 +1,5 @@
 function display(tableBody, tableHeader) {
-    if (document.getElementById(tableBody).className == "open") {
+    if (document.getElementById(tableBody).className === "open") {
         document.getElementById(tableHeader).className = "plus";
         document.getElementById(tableBody).className = "closed";
     } else {
@@ -22,14 +22,20 @@ function Line_Hide(tableBody) {
 
 function Col_Show(elm) {
     document.getElementById(elm).className = "hidden";
-    for (var i = 0; i <= 200; i++)
-    if (document.getElementById(elm + i)) document.getElementById(elm + i).className = elm;
+    for (var i = 0; i <= 200; i++) {
+        if (document.getElementById(elm + i)) {
+            document.getElementById(elm + i).className = elm;
+        }
+    }
 }
 
 function Col_Hide(elm) {
     document.getElementById(elm).className = "showed";
-    for (var i = 0; i <= 200; i++)
-    if (document.getElementById(elm + i)) document.getElementById(elm + i).className = "hidden";
+    for (var i = 0; i <= 200; i++) {
+        if (document.getElementById(elm + i)) {
+            document.getElementById(elm + i).className = "hidden";
+        }
+    }
 }
 
 function Line_Show_All() {

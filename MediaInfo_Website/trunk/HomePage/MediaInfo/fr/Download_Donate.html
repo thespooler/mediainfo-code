@@ -1,8 +1,8 @@
 ﻿<?php include $Path.'/_/Template/Default/Download_Donate.html'; ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta charset="utf-8">
 	<title>Télécharger</title>
  <?php if (isset($Html_Head_Meta_HttpEquiv_Refresh)) echo $Html_Head_Meta_HttpEquiv_Refresh; ?>
 </head>
@@ -12,9 +12,9 @@
 //Donated
 if ($Page_Status=="Donated") {
 echo '
-Cher donateur, merci pour votre soutien.<br />
-<br />
-Votre téléchargement va bientôt commencer&#8230;<br />
+Cher donateur, merci pour votre soutien.<br/>
+<br/>
+Votre téléchargement va bientôt commencer&#8230;<br/>
 Si ce n\'est pas le cas cliquez <a href="'.$Link.'">ici</a>
 ';
 }
@@ -22,8 +22,8 @@ Si ce n\'est pas le cas cliquez <a href="'.$Link.'">ici</a>
 //Free
 if ($Page_Status=="Free") {
 echo '
-<br />
-Votre téléchargement va bientôt commencer&#8230;<br />
+<br/>
+Votre téléchargement va bientôt commencer&#8230;<br/>
 Si ce n\'est pas le cas cliquez <a href="'.$Link.'">ici</a>
 ';
 }
@@ -32,14 +32,14 @@ Si ce n\'est pas le cas cliquez <a href="'.$Link.'">ici</a>
 if ($Page_Status=="Paypal") {
 echo '
 <h2>Donation</h2>
-Vous allez faire un don de '.$Currency_Before.$Amount.$Currency_After.' pour MediaInfo<br />
-<br />
+Vous allez faire un don de '.$Currency_Before.$Amount.$Currency_After.' pour MediaInfo<br/>
+<br/>
 ';
 Paypal_Display_Direct(isset($Official), "FR", "fr_FR", $Currency_Code, $Amount, "Don pour MediaInfo", "PayPal - The safer, easier way to pay online!");
 echo '
-<br />
-<br />
-Si vous ne souhaitez pas utiliser PayPal, vous pouvez aller directement à <a href="'.$Link.'">la page de téléchargement</a>. Nous espérons pouvoir vous fournir un autre moyen de paiement immédiat dans le futur.<br />
+<br/>
+<br/>
+Si vous ne souhaitez pas utiliser PayPal, vous pouvez aller directement à <a href="'.$Link.'">la page de téléchargement</a>. Nous espérons pouvoir vous fournir un autre moyen de paiement immédiat dans le futur.<br/>
 Vous pouvez aussi aller sur <a href="/fr/Donate">la page de don</a> qui contient des information sur d\'autres moyens de paiement.
 ';
 }
@@ -48,36 +48,36 @@ Vous pouvez aussi aller sur <a href="/fr/Donate">la page de don</a> qui contient
 if ($Page_Status=="Proposal") {
 echo '
 <h2>MediaInfo est un logiciel gratuit, alors pourquoi faire un don?</h2>
-Pour que MediaInfo puisse jouir d\'un développement plus rapide, votre soutien et votre aide sera grandement appréciée. Puisque MeidaInfo est un logiciel gratuit, votre don est le meilleur moyen d\'encourager l\'auteur et rendre possible la continuation du projet. <br />
-<br />
+Pour que MediaInfo puisse jouir d\'un développement plus rapide, votre soutien et votre aide sera grandement appréciée. Puisque MeidaInfo est un logiciel gratuit, votre don est le meilleur moyen d\'encourager l\'auteur et rendre possible la continuation du projet. <br/>
+<br/>
 <form action="Download_Donate" method="POST">
-<strong>Je choisis de faire un don de <select name="currency_code"><option value="USD">US$</option><option value="CAD">CA$</option><option value="AUD">AU$</option><option value="GBP">£</option><option selected value="EUR">€</option></select> <select name="amount"><option selected value="0.00">0</option><option value="1.00">1</option><option value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select></strong><br />
+<strong>Je choisis de faire un don de <select name="currency_code"><option value="USD">US$</option><option value="CAD">CA$</option><option value="AUD">AU$</option><option value="GBP">£</option><option selected value="EUR">€</option></select> <select name="amount"><option selected value="0.00">0</option><option value="1.00">1</option><option value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select></strong><br/>
 <input type="submit" value="Continuer"> </form>
 ';
 }
 ?>
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />Note: cet page de don est nouvelle, et peut avoir quelques problèmes.<br />
-N'hésitez pas à <a href="mailto:zenitram@users.sourceforge.net">me contacter</a> si vous avez des problèmes pour télécharger MediaInfo ou que vous souhaitez me donner votre opinion.<br />
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>Note: cet page de don est nouvelle, et peut avoir quelques problèmes.<br/>
+N'hésitez pas à <a href="mailto:zenitram@users.sourceforge.net">me contacter</a> si vous avez des problèmes pour télécharger MediaInfo ou que vous souhaitez me donner votre opinion.<br/>
 </body>
 </html>

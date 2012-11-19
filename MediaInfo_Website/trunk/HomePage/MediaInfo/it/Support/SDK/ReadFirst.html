@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta content="text/html;charset=UTF-8" http-equiv="content-type" />
+	<meta content="text/html;charset=UTF-8" http-equiv="content-type"/>
 	<title>SDK, Read this first</title>
 </head>
 <body>
 <h1>Kit per lo Sviluppo (SDK), Leggi prima di cominciare</h1>
 <h2>Lingue supportate</h2>
 <h3>Libreria statica (.lib)</h3>
-MediaInfo &egrave; scritto in C++ standard.<br />
+MediaInfo &egrave; scritto in C++ standard.<br/>
 Ne sono state rilasciati alcune versioni (controlla la pagina dei <a href="/Download">download</a>):
 <ul>
   <li>MSVC : Microsoft Visual C++ (static Multitreaded linked to C library)</li>
@@ -17,9 +17,9 @@ Ne sono state rilasciati alcune versioni (controlla la pagina dei <a href="/Down
 Per gli altri compilatori dovrete <a href="/Support/Build_From_Sources">compilare
 dal codice sorgente</a>.
 <h3>Libreria dinamica (.Dll)</h3>
-La versione DLL &egrave; disponibile per diversi linguaggi.<br />
+La versione DLL &egrave; disponibile per diversi linguaggi.<br/>
 Ogni linguaggio compatibile con DLL standard &egrave; compatibile con la versione
-DLL di MediaInfo.<br />
+DLL di MediaInfo.<br/>
 Alcuni esempi sono inclusi nella distribuzione DLL (controlla la pagina dei <a href="/Download">download</a>):
 <ul>
  <li>MSVC : Microsoft Visual C++ 9 (aka 2005)</li>
@@ -30,12 +30,12 @@ Alcuni esempi sono inclusi nella distribuzione DLL (controlla la pagina dei <a h
  <li>Delphi : Borland Delphi 7</li>
 </ul>
 Nota: per Visual Studio 7 (aka 2002) o 8 (aka 2003), dovete modificare .sln e
-.xxproj per ottenere la compatibilit&agrave;.<br />
-- .sln : da "...Format Version 9.00" a 7.00<br />
-- .xxproj : da "Version="8.00" o"Version="7.10" a 7.00<br />
+.xxproj per ottenere la compatibilit&agrave;.<br/>
+- .sln : da "...Format Version 9.00" a 7.00<br/>
+- .xxproj : da "Version="8.00" o"Version="7.10" a 7.00<br/>
 (Non &egrave; stato testato, ma non dovrebbe essere difficile adattarli al vostro
-compilatore)<br />
-<br />
+compilatore)<br/>
+<br/>
 Alcune versioni sono contributi esterni al progetto (nella cartella "Contrib"),
 e per questo non hanno supporto:
 <ul>
@@ -43,9 +43,9 @@ e per questo non hanno supporto:
   <li>ActiveX : l'adattatore ActiveX per MediaInfoDLL, con esempi per Internet
 	Explorer e VB Script, da Ingo Brueckl</li>
 </ul>
-<br />
+<br/>
 Non scordate di mettere i file MediaInfo.dll e Example.ogg nella cartella del
-vostro file eseguibile.<br />
+vostro file eseguibile.<br/>
 
 <h2>Come interpretare il numero della versione</h2>
 <ul>
@@ -53,27 +53,27 @@ vostro file eseguibile.<br />
 	con quella vecchia. Ne dovrete verificare la compatibilit&agrave; utilizzando
 	MediaInfo_Option("Version")</li>
   <li>se uno degli ultimo 2 numeri cambia, &egrave; assicurata la compatibilit&agrave;
-	con la DLL precedente.<br />
+	con la DLL precedente.<br/>
   </li>
 </ul>
 <h2>Convenzioni</h2>
-Il codice seguente &egrave; in formato C++:<br />
-<code>ClassName::MethodName (Variables)</code><br />
-<br />
+Il codice seguente &egrave; in formato C++:<br/>
+<code>ClassName::MethodName (Variables)</code><br/>
+<br/>
 Se utilizzate l'interfaccia &quot;C&quot; (ad esempio, se utilizzare la DLL),
-dovrete mappare:<br />
-<code>ClassName_MethodName (Handle, Variables)</code><br />
+dovrete mappare:<br/>
+<code>ClassName_MethodName (Handle, Variables)</code><br/>
 "Handle" &egrave; un identificatore unico dell'oggetto in uso (creato col comando
-<code>Handle=ClassName_New()</code>)<br />
-A causa di una mancanza di spazi nel linguaggio C, dovrete cambiare anche la costante:<br />
-<code>XXX --&gt; MediaInfo_XXX</code><br />
-<br />
+<code>Handle=ClassName_New()</code>)<br/>
+A causa di una mancanza di spazi nel linguaggio C, dovrete cambiare anche la costante:<br/>
+<code>XXX --&gt; MediaInfo_XXX</code><br/>
+<br/>
 Se utilizzate l'interfaccia "C++", non scordate tutte che le classes e i typedefs
-in MediaInfoLib sono definite come:<br />
-<code>use namespace MediaInfoLib;</code><br />
-<br />
+in MediaInfoLib sono definite come:<br/>
+<code>use namespace MediaInfoLib;</code><br/>
+<br/>
 Nota : la formattazione specifica del linguaggio (";" a fine riga, la "L" per
-stringhe Unicode...) non compaiono in questi esempi.<br />
+stringhe Unicode...) non compaiono in questi esempi.<br/>
 Nota : alcuni linguaggi permettono maggiori personalizzazioni delle costanti,
 date un'occhiata agli header dei file per ottenere i nomi corretti.
 </body>
