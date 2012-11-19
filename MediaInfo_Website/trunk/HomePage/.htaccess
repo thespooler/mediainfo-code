@@ -259,7 +259,13 @@ FileETag None
 
 #translation /xxx -->php.php?page=xxx but without /_/xxxx
 RewriteRule ^_/(.*)$ /MediaInfo/_/$1 [L]
-RewriteRule /favicon.ico /_/Image/Icon.ico [L]
+RewriteRule ^favicon.ico /_/Image/Icon.ico [L]
+RewriteRule ^apple-touch-icon.png /_/Image/apple-touch-icon.png [L]
+RewriteRule ^apple-touch-icon-57x57-precomposed.png /_/Image/apple-touch-icon-57x57-precomposed.png [L]
+RewriteRule ^apple-touch-icon-72x72-precomposed.png /_/Image/apple-touch-icon-72x72-precomposed.png [L]
+RewriteRule ^apple-touch-icon-114x114-precomposed.png /_/Image/apple-touch-icon-114x114-precomposed.png [L]
+RewriteRule ^apple-touch-icon-144x144-precomposed.png /_/Image/apple-touch-icon-144x144-precomposed.png [L]
+RewriteRule ^apple-touch-icon-precomposed.png /_/Image/apple-touch-icon-precomposed.png [L]
 RewriteCond %{REQUEST_URI} !^/_(.*)$
 RewriteCond %{REQUEST_URI} !^/MediaInfo/_/(.*)$
 RewriteCond %{REQUEST_URI} !^/PhpMyVisites(.*)$
