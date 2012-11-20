@@ -28,9 +28,8 @@
 #Tags .xheader {
     text-align: center;
     font-size: small;
-    font-weight: 700;
+    font-weight: bold;
     background-color: #CCC;
-    colspan: 9;
 }
 
 #Tags a:hover {
