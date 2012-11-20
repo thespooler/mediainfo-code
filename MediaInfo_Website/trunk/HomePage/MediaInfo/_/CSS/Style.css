@@ -1,6 +1,6 @@
 body {
-    color: #000;
     background-color: #FFF;
+    color: #000;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: small;
     margin: 0;
@@ -8,8 +8,8 @@ body {
 }
 
 code {
-    font-size: small;
     background-color: #6F9;
+    font-size: small;
 }
 
 em {
@@ -20,7 +20,9 @@ h1 {
     font-size: medium;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     font-size: small;
 }
 
@@ -33,17 +35,17 @@ img {
 }
 
 pre {
-    font-size: small;
     background-color: #FFFFC0;
     border-style: inset;
     border-width: thin;
+    font-size: small;
     margin: 0 5% 0 0;
     padding: 0 5% 0 0;
 }
 
 ul {
-    margin-top: 0;
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 td:target {
@@ -55,13 +57,13 @@ td:target {
 }
 
 .Path a {
-    text-decoration: none;
     color: #FFF;
+    text-decoration: none;
 }
 
 .Path a:hover {
-    text-decoration: underline;
     color: #FFF;
+    text-decoration: underline;
 }
 
 .Banner_Top_Background {
@@ -69,13 +71,13 @@ td:target {
 }
 
 .Note {
-    color: #000;
     background: #AAA;
+    color: #000;
 }
 
 .Info {
-    color: #000;
     background: #AAF;
+    color: #000;
 }
 
 .Invisible {
@@ -83,8 +85,8 @@ td:target {
 }
 
 .Warning {
-    color: #000;
     background-color: #F88;
+    color: #000;
 }
 
 #Menu {
@@ -92,36 +94,41 @@ td:target {
 }
 
 #Menu .Flags {
-    color: #000;
     background-color: #B8B8B8;
+    color: #000;
 }
 
 #Menu .Top_Middle {
-    height: 19px;
+    background: url("/_/Image/Default/Top_Middle.png") repeat-x;
     width: 228px;
-    background-image: url("/_/Image/Default/Top_Middle.png");
-    background-repeat: repeat-x;
+    height: 19px;
+}
+
+#Menu .Top_Left {
+    background-image: url("/_/Image/Default/Top_Left.png");
+    width: 9px;
+    height: 19px;
 }
 
 #Menu .Top_Right {
-    height: 19px;
-    width: 9px;
     background-image: url("/_/Image/Default/Top_Right.png");
+    width: 9px;
+    height: 19px;
 }
 
 #Menu .Text {
-    height: 30px;
-    width: 237px;
-    text-align: center;
-    font-weight: bold;
-    color: #000;
     background-color: #FFF;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    width: 237px;
+    height: 30px;
 }
 
 .Text a {
+    color: #FFF;
     font-weight: bold;
     text-decoration: none;
-    color: #FFF;
 }
 
 .Text a:hover {
@@ -129,65 +136,33 @@ td:target {
     color: #000;
 }
 
-#Menu #Menu0 {
-    color: #000;
-    background-color: #DBD696;
-}
-
-#Menu #Menu1 {
-    color: #000;
-    background-color: #D696DB;
-}
-
-#Menu #Menu2 {
-    color: #000;
-    background-color: #DBAE96;
-}
-
-#Menu #Menu3 {
-    color: #000;
-    background-color: #96D3DB;
-}
-
-#Menu #Menu4 {
-    color: #000;
-    background-color: #BADB96;
-}
-
-#Menu #Menu5 {
-    color: #000;
-    background-color: #D1C3CD;
-}
-
-#Menu #Menu0:hover {
-    color: #000;
-    background-color: #CFC873;
-}
-
-#Menu #Menu1:hover {
-    color: #000;
-    background-color: #C973CF;
-}
-
-#Menu #Menu2:hover {
-    color: #000;
-    background-color: #CF9473;
-}
-
-#Menu #Menu3:hover {
-    color: #000;
-    background-color: #73C5CF;
-}
-
-#Menu #Menu4:hover {
-    color: #000;
-    background-color: #A3CF73;
-}
-
+#Menu #Menu0,
+#Menu #Menu0:hover,
+#Menu #Menu1,
+#Menu #Menu1:hover,
+#Menu #Menu2,
+#Menu #Menu2:hover,
+#Menu #Menu3,
+#Menu #Menu3:hover,
+#Menu #Menu4,
+#Menu #Menu4:hover,
+#Menu #Menu5,
 #Menu #Menu5:hover {
     color: #000;
-    background-color: #C2AFBD;
 }
+
+#Menu #Menu0       { background-color: #DBD696; }
+#Menu #Menu1       { background-color: #D696DB; }
+#Menu #Menu2       { background-color: #DBAE96; }
+#Menu #Menu3       { background-color: #96D3DB; }
+#Menu #Menu4       { background-color: #BADB96; }
+#Menu #Menu5       { background-color: #D1C3CD; }
+#Menu #Menu0:hover { background-color: #CFC873; }
+#Menu #Menu1:hover { background-color: #C973CF; }
+#Menu #Menu2:hover { background-color: #CF9473; }
+#Menu #Menu3:hover { background-color: #73C5CF; }
+#Menu #Menu4:hover { background-color: #A3CF73; }
+#Menu #Menu5:hover { background-color: #C2AFBD; }
 
 #Contents table {
     width: 100%;
@@ -197,25 +172,26 @@ td:target {
     margin: 0;
 }
 
+#Contents h2,
+#Contents h3,
+#Contents h4 {
+    border-width: 0 0 1px;
+    margin: 1em 0 0;
+}
+
 #Contents h2 {
     border-color: #FC8;
     border-style: solid;
-    border-width: 0 0 1px;
-    margin: 1em 0 0;
 }
 
 #Contents h3 {
     border-color: #FD9;
     border-style: dashed;
-    border-width: 0 0 1px;
-    margin: 1em 0 0;
 }
 
 #Contents h4 {
     border-color: #FEA;
     border-style: dashed;
-    border-width: 0 0 1px;
-    margin: 1em 0 0 1em;
 }
 
 #Contents .First {
@@ -223,43 +199,37 @@ td:target {
 }
 
 #Contents .Paragraph_Block {
-    display: block;
-    color: #000020;
     background-color: #FFF;
     border-color: #595D96;
     border-style: none none dotted dotted;
     border-width: 0 0 1px 1px;
+    color: #000020;
+    display: block;
     padding: 1px 0 .5em .5em;
 }
 
 #Contents #Address {
-    color: #02021E;
-    margin-left: 10%;
-    margin-right: 50%;
     background-color: #F7F5EF;
     border-color: #FF9000;
     border-style: dashed dashed dashed solid;
     border-width: 1px 1px 1px 3px;
+    color: #02021E;
+    margin-left: 10%;
+    margin-right: 50%;
     padding: 4px 4px 4px 20px;
 }
 
-#Contents .cppcode {
-    width: 99%;
-    -moz-border-radius: 4px;
+#Contents .cppcode,
+#Contents .cpplisting {
     background-color: #D5E1E8;
-    border-color: #84b0c7;
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid #84b0c7;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+    width: 99%;
 }
 
 #Contents .cpplisting {
-    width: 99%;
-    -moz-border-radius: 4px;
-    background-color: #D5E1E8;
     white-space: pre;
-    border-color: #84B0C7;
-    border-style: solid;
-    border-width: 1px;
 }
 
 #Contents .cpplisting_comment {
@@ -271,13 +241,12 @@ td:target {
 }
 
 .FlagsAround, #Menu .FlagsAround {
-    font-size: 20px;
     background-color: #F0F0F0;
+    font-size: 20px;
     text-align: center;
 }
 
 .FlagsAround a:hover {
-    color: #000;
     background-color: #D0D0D0;
 }
 
@@ -296,7 +265,7 @@ td:target {
 .Georgia     { background-position: -208px 0; }
 .Germany     { background-position: -234px 0; }
 .Hungary     { background-position: -260px 0; }
-.Indonesia   { background-position: -286px 0; }
+/*.Indonesia   { background-position: -286px 0; }*/
 .Iran        { background-position: -312px 0; }
 .Italy       { background-position: -338px 0; }
 .Japan       { background-position: -364px 0; }
