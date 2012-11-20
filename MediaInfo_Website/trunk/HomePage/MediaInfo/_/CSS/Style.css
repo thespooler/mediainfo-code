@@ -132,8 +132,8 @@ td:target {
 }
 
 .Text a:hover {
-    text-decoration: underline;
     color: #000;
+    text-decoration: underline;
 }
 
 #Menu #Menu0,
@@ -149,6 +149,10 @@ td:target {
 #Menu #Menu5,
 #Menu #Menu5:hover {
     color: #000;
+    -webkit-transition: background-color 0.15s linear;
+       -moz-transition: background-color 0.15s linear;
+         -o-transition: background-color 0.15s linear;
+            transition: background-color 0.15s linear;
 }
 
 #Menu #Menu0       { background-color: #DBD696; }
@@ -240,10 +244,17 @@ td:target {
     color: red;
 }
 
-.FlagsAround, #Menu .FlagsAround {
+.FlagsAround {
     background-color: #F0F0F0;
     font-size: 20px;
     text-align: center;
+}
+
+.FlagsAround a {
+    -webkit-transition: background-color 0.15s linear;
+       -moz-transition: background-color 0.15s linear;
+         -o-transition: background-color 0.15s linear;
+            transition: background-color 0.15s linear;
 }
 
 .FlagsAround a:hover {
