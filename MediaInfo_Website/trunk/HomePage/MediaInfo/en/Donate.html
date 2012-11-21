@@ -15,9 +15,8 @@ header("Cache-Control: no-cache, must-revalidate, max-age=0");
 if (isset($Donated)) {
  echo '
 <div class="Info">
-<br/>
-Dear donor, thank you for your support.<br/>
-If you want to remove the "Donate" button from the Windows GUI, you can download and launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.<br/>
+Dear donor, thank you for your support.<br/><br/>
+If you want to remove the "Donate" button from the Windows GUI, you can download and launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.
 <br/>
 </div>
 <br/>
@@ -38,28 +37,28 @@ Donations can be made via Credit Cards or Paypal - once off or as a monthly subs
 Please choose your preferred method below.<br/>
 <table>
  <tr>
-  <td id="Address" style="text-align:center">
+  <td id="Address" class="centered">
    U.S.A. / Others<br/>
    (in <strong>U.S. Dollars</strong>)<br/>
    <?php Paypal_Donate_Display(isset($Official), "US", "en_US", "USD", "US$", "", 1, 10, 2, "Donation for MediaInfo", "month", "or", "PayPal - The safer, easier way to pay online!"); ?>
   </td>
   <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </td>
-  <td id="Address" style="text-align:center">
+  <td id="Address" class="centered">
    Great Britain<br/>
    (in <strong>Pounds</strong>)<br/>
    <?php Paypal_Donate_Display(isset($Official), "GB", "en_GB", "GBP", "", "£", 1, 5, 1, "Donation for MediaInfo", "month", "or", "PayPal - The safer, easier way to pay online!"); ?>
   </td>
   <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </td>
-  <td id="Address" style="text-align:center">
+  <td id="Address" class="centered">
    Australia<br/>
    (in <strong>Australian Dollars</strong>)<br/>
    <?php Paypal_Donate_Display(isset($Official), "AU", "en_AU", "AUD", "", "AU$", 1, 10, 2, "Donation for MediaInfo", "month", "or", "PayPal - The safer, easier way to pay online!"); ?>
   </td>
   <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </td>
-  <td id="Address" style="text-align:center">
+  <td id="Address" class="centered">
    Canada<br/>
    (in <strong>Canadian Dollars</strong>)<br/>
    <?php Paypal_Donate_Display(isset($Official), "CA", "en_US", "CAD", "", "CA$", 1, 10, 2, "Donation for MediaInfo", "month", "or", "PayPal - The safer, easier way to pay online!"); ?>

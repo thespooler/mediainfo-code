@@ -68,6 +68,7 @@ td:target {
 
 .Banner_Top_Background {
     text-align: center;
+    width: 100%;
 }
 
 .Note {
@@ -78,6 +79,7 @@ td:target {
 .Info {
     background: #AAF;
     color: #000;
+    padding: 10px;
 }
 
 .Invisible {
@@ -91,11 +93,6 @@ td:target {
 
 #Menu {
     width: 250px;
-}
-
-#Menu .Flags {
-    background-color: #B8B8B8;
-    color: #000;
 }
 
 #Menu .Top_Middle {
@@ -242,6 +239,11 @@ td:target {
 
 #Contents .cpplisting_toprovide {
     color: red;
+}
+
+.centered {
+    text-align: center;
+    vertical-align: middle;
 }
 
 .FlagsAround {

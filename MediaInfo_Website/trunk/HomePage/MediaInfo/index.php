@@ -86,7 +86,7 @@ if (!isset($Edit)) {
 	}
 
 	//<script> with JavaSript
-	$Script_Start=strpos($Contents, "<script src=");
+	/*$Script_Start=strpos($Contents, "<script src=");
 	if ($Script_Start!==false) {
 		$Script_End=strpos($Contents, ".js");
 		$Script=substr($Contents, $Script_Start+13, $Script_End-$Script_Start-13);
@@ -94,7 +94,7 @@ if (!isset($Edit)) {
 			$Footer_ToAdd='';
 		$Footer_ToAdd.=' <script src="/_/JavaScript/'.$Script.'.js"></script>
 	';
-	}
+	}*/
 
 	//<meta>
 	$Meta_Start=strpos($Contents, '<meta http-equiv="refresh"');
