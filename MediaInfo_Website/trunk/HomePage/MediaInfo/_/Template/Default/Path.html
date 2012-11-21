@@ -4,11 +4,11 @@
 		for ($i=1; $i<9; $i++) {
 			if ($Menu[$i]!="") {
 				if ($i!=1)
-					echo " > ";
+					echo " &gt; ";
 				$Link="";
 				for ($j=1; $j<=$i; $j++)
 					$Link.="/".$Menu_Link[$j];
-				echo '<a href="'.'/'.$Language.$Link.'">'.$Menu[$i].'</a>';
+				echo '<a href="'.'/'.$Language.$Link.'"&gt;'.$Menu[$i].'</a>';
 				}
 		}
 		echo " > ".$PageName;
