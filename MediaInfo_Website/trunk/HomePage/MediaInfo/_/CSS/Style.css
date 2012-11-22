@@ -48,25 +48,21 @@ ul {
     margin-top: 0;
 }
 
-td:target {
-    background-color: #7F7;
-}
-
-.Path {
+#Path {
     color: #FFF;
 }
 
-.Path a {
+#Path a {
     color: #FFF;
     text-decoration: none;
 }
 
-.Path a:hover {
+#Path a:hover {
     color: #FFF;
     text-decoration: underline;
 }
 
-.Banner_Top_Background {
+#Banner_Top_Background {
     text-align: center;
     width: 100%;
 }
@@ -92,7 +88,12 @@ td:target {
 }
 
 #Menu {
+    vertical-align: top;
     width: 250px;
+}
+
+table #Menu {
+    padding: 0;
 }
 
 #Menu .Top_Middle {
@@ -101,14 +102,14 @@ td:target {
     height: 19px;
 }
 
-#Menu .Top_Left {
-    background-image: url("/_/Image/Default/Top_Left.png");
+#Top_Left {
+    background: url("/_/Image/Default/Top_Left.png") no-repeat;
     width: 9px;
     height: 19px;
 }
 
-#Menu .Top_Right {
-    background-image: url("/_/Image/Default/Top_Right.png");
+#Top_Right {
+    background: url("/_/Image/Default/Top_Right.png") no-repeat;
     width: 9px;
     height: 19px;
 }
