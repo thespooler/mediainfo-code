@@ -4,5 +4,4 @@
 # npm install -g uglify-js
 
 cat CSS/Style.css CSS/normalize.css CSS/Tags.css | cleancss --s0 -o CSS/pack.css
-
-cat JavaScript/Utils.js JavaScript/Tags.js | uglifyjs -o JavaScript/pack.js
+uglifyjs JavaScript/Utils.js JavaScript/Tags.js --compress --mangle -o JavaScript/pack.js
