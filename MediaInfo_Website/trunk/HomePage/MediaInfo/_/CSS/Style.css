@@ -96,7 +96,7 @@ table #Menu {
     padding: 0;
 }
 
-#Menu .Top_Middle {
+#Menu #Top_Middle {
     background: url("/_/Image/Default/Top_Middle.png") repeat-x;
     width: 228px;
     height: 19px;
@@ -247,67 +247,64 @@ table #Menu {
     vertical-align: middle;
 }
 
-.FlagsAround {
+#FlagsAround {
     background-color: #F0F0F0;
     font-size: 20px;
     text-align: center;
 }
 
-.FlagsAround a {
+#FlagsAround a {
     -webkit-transition: background-color 0.15s linear;
        -moz-transition: background-color 0.15s linear;
          -o-transition: background-color 0.15s linear;
             transition: background-color 0.15s linear;
 }
 
-.FlagsAround a:hover {
+#FlagsAround a:hover {
     background-color: #D0D0D0;
 }
 
 
 /* Flags images */
-.flag { background: url("/_/Image/Default/flags.png") no-repeat 25px 15px; }
-
-.Albania     { background-position: 0 0; }
-.Belarus     { background-position: -26px 0; }
-.Brazil      { background-position: -52px 0; }
-.Bulgaria    { background-position: -78px 0; }
-.Catalonia   { background-position: -104px 0; }
-.China       { background-position: -130px 0; }
-.Croatia     { background-position: -156px 0; }
-.France      { background-position: -182px 0; }
-.Georgia     { background-position: -208px 0; }
-.Germany     { background-position: -234px 0; }
-.Hungary     { background-position: -260px 0; }
-/*.Indonesia   { background-position: -286px 0; }*/
-.Iran        { background-position: -312px 0; }
-.Italy       { background-position: -338px 0; }
-.Japan       { background-position: -364px 0; }
-.Korea       { background-position: -390px 0; }
-.Lithuania   { background-position: -416px 0; }
-.Netherlands { background-position: -442px 0; }
-.Poland      { background-position: -468px 0; }
-.Portugal    { background-position: -494px 0; }
-.Russia      { background-position: -520px 0; }
-.Spain       { background-position: -546px 0; }
-.Sweden      { background-position: -572px 0; }
-.Taiwan      { background-position: -598px 0; }
-.Thailand    { background-position: -624px 0; }
-.UK          { background-position: -650px 0; }
-.Ukraine     { background-position: -676px 0; }
-.Unknown     { background-position: -702px 0; }
+#Albania     { background: url("/_/Image/Default/flags.png") no-repeat 0 0; }
+#Belarus     { background: url("/_/Image/Default/flags.png") no-repeat -26px 0; }
+#Brazil      { background: url("/_/Image/Default/flags.png") no-repeat -52px 0; }
+#Bulgaria    { background: url("/_/Image/Default/flags.png") no-repeat -78px 0; }
+#Catalonia   { background: url("/_/Image/Default/flags.png") no-repeat -104px 0; }
+#China       { background: url("/_/Image/Default/flags.png") no-repeat -130px 0; }
+#Croatia     { background: url("/_/Image/Default/flags.png") no-repeat -156px 0; }
+#France      { background: url("/_/Image/Default/flags.png") no-repeat -182px 0; }
+#Georgia     { background: url("/_/Image/Default/flags.png") no-repeat -208px 0; }
+#Germany     { background: url("/_/Image/Default/flags.png") no-repeat -234px 0; }
+#Hungary     { background: url("/_/Image/Default/flags.png") no-repeat -260px 0; }
+/*#Indonesia   { background: url("/_/Image/Default/flags.png") no-repeat -286px 0; }*/
+#Iran        { background: url("/_/Image/Default/flags.png") no-repeat -312px 0; }
+#Italy       { background: url("/_/Image/Default/flags.png") no-repeat -338px 0; }
+#Japan       { background: url("/_/Image/Default/flags.png") no-repeat -364px 0; }
+#Korea       { background: url("/_/Image/Default/flags.png") no-repeat -390px 0; }
+#Lithuania   { background: url("/_/Image/Default/flags.png") no-repeat -416px 0; }
+#Netherlands { background: url("/_/Image/Default/flags.png") no-repeat -442px 0; }
+#Poland      { background: url("/_/Image/Default/flags.png") no-repeat -468px 0; }
+#Portugal    { background: url("/_/Image/Default/flags.png") no-repeat -494px 0; }
+#Russia      { background: url("/_/Image/Default/flags.png") no-repeat -520px 0; }
+#Spain       { background: url("/_/Image/Default/flags.png") no-repeat -546px 0; }
+#Sweden      { background: url("/_/Image/Default/flags.png") no-repeat -572px 0; }
+#Taiwan      { background: url("/_/Image/Default/flags.png") no-repeat -598px 0; }
+#Thailand    { background: url("/_/Image/Default/flags.png") no-repeat -624px 0; }
+#UK          { background: url("/_/Image/Default/flags.png") no-repeat -650px 0; }
+#Ukraine     { background: url("/_/Image/Default/flags.png") no-repeat -676px 0; }
+#Unknown     { background: url("/_/Image/Default/flags.png") no-repeat -702px 0; }
 
 
 /* Operating Systems images */
-.os         { background: url("/_/Image/OS/os.png") no-repeat 16px 16px; }
-.ArchLinux  { background-position: 0 0; }
-.CentOS     { background-position: -17px  0; }
-.Debian     { background-position: -34px  0; }
-.Fedora     { background-position: -51px  0; }
-.Linux_Mint { background-position: -68px  0; }
-.MacOS      { background-position: -87px  0; }
-.Mandriva   { background-position: -104px 0; }
-.RedHat     { background-position: -121px 0; }
-.Ubuntu     { background-position: -138px 0; }
-.Windows    { background-position: -155px 0; }
-.openSUSE   { background-position: -172px 0; }
+#ArchLinux  { background: url("/_/Image/OS/os.png") no-repeat 0 0; }
+#CentOS     { background: url("/_/Image/OS/os.png") no-repeat -17px  0; }
+#Debian     { background: url("/_/Image/OS/os.png") no-repeat -34px  0; }
+#Fedora     { background: url("/_/Image/OS/os.png") no-repeat -51px  0; }
+#Linux_Mint { background: url("/_/Image/OS/os.png") no-repeat -68px  0; }
+#MacOS      { background: url("/_/Image/OS/os.png") no-repeat -87px  0; }
+#Mandriva   { background: url("/_/Image/OS/os.png") no-repeat -104px 0; }
+#RedHat     { background: url("/_/Image/OS/os.png") no-repeat -121px 0; }
+#Ubuntu     { background: url("/_/Image/OS/os.png") no-repeat -138px 0; }
+#Windows    { background: url("/_/Image/OS/os.png") no-repeat -155px 0; }
+#openSUSE   { background: url("/_/Image/OS/os.png") no-repeat -172px 0; }
