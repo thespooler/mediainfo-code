@@ -1,6 +1,6 @@
 body {
-    background-color: #FFF;
-    color: #000;
+    background-color: white;
+    color: black;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: small;
     margin: 0;
@@ -49,16 +49,16 @@ ul {
 }
 
 #Path {
-    color: #FFF;
+    color: white;
 }
 
 #Path a {
-    color: #FFF;
+    color: white;
     text-decoration: none;
 }
 
 #Path a:hover {
-    color: #FFF;
+    color: white;
     text-decoration: underline;
 }
 
@@ -69,12 +69,12 @@ ul {
 
 .Note {
     background: #AAA;
-    color: #000;
+    color: black;
 }
 
 .Info {
     background: #AAF;
-    color: #000;
+    color: black;
     padding: 10px;
 }
 
@@ -84,19 +84,16 @@ ul {
 
 .Warning {
     background-color: #F88;
-    color: #000;
+    color: black;
 }
 
 #Menu {
+    padding: 0;
     vertical-align: top;
     width: 250px;
 }
 
-table #Menu {
-    padding: 0;
-}
-
-#Menu #Top_Middle {
+#Top_Middle {
     background: url("/_/Image/Default/Top_Middle.png") repeat-x;
     width: 228px;
     height: 19px;
@@ -115,8 +112,7 @@ table #Menu {
 }
 
 #Menu .Text {
-    background-color: #FFF;
-    color: #000;
+    color: black;
     font-weight: bold;
     text-align: center;
     width: 237px;
@@ -124,47 +120,47 @@ table #Menu {
 }
 
 .Text a {
-    color: #FFF;
+    color: white;
     font-weight: bold;
     text-decoration: none;
 }
 
 .Text a:hover {
-    color: #000;
+    color: black;
     text-decoration: underline;
 }
 
-#Menu #Menu0,
-#Menu #Menu0:hover,
-#Menu #Menu1,
-#Menu #Menu1:hover,
-#Menu #Menu2,
-#Menu #Menu2:hover,
-#Menu #Menu3,
-#Menu #Menu3:hover,
-#Menu #Menu4,
-#Menu #Menu4:hover,
-#Menu #Menu5,
-#Menu #Menu5:hover {
-    color: #000;
+#Menu0,
+#Menu0:hover,
+#Menu1,
+#Menu1:hover,
+#Menu2,
+#Menu2:hover,
+#Menu3,
+#Menu3:hover,
+#Menu4,
+#Menu4:hover,
+#Menu5,
+#Menu5:hover {
+    color: black;
     -webkit-transition: background-color 0.15s linear;
        -moz-transition: background-color 0.15s linear;
          -o-transition: background-color 0.15s linear;
             transition: background-color 0.15s linear;
 }
 
-#Menu #Menu0       { background-color: #DBD696; }
-#Menu #Menu1       { background-color: #D696DB; }
-#Menu #Menu2       { background-color: #DBAE96; }
-#Menu #Menu3       { background-color: #96D3DB; }
-#Menu #Menu4       { background-color: #BADB96; }
-#Menu #Menu5       { background-color: #D1C3CD; }
-#Menu #Menu0:hover { background-color: #CFC873; }
-#Menu #Menu1:hover { background-color: #C973CF; }
-#Menu #Menu2:hover { background-color: #CF9473; }
-#Menu #Menu3:hover { background-color: #73C5CF; }
-#Menu #Menu4:hover { background-color: #A3CF73; }
-#Menu #Menu5:hover { background-color: #C2AFBD; }
+#Menu0       { background-color: #DBD696; }
+#Menu1       { background-color: #D696DB; }
+#Menu2       { background-color: #DBAE96; }
+#Menu3       { background-color: #96D3DB; }
+#Menu4       { background-color: #BADB96; }
+#Menu5       { background-color: #D1C3CD; }
+#Menu0:hover { background-color: #CFC873; }
+#Menu1:hover { background-color: #C973CF; }
+#Menu2:hover { background-color: #CF9473; }
+#Menu3:hover { background-color: #73C5CF; }
+#Menu4:hover { background-color: #A3CF73; }
+#Menu5:hover { background-color: #C2AFBD; }
 
 #Contents table {
     width: 100%;
@@ -201,7 +197,7 @@ table #Menu {
 }
 
 #Contents .Paragraph_Block {
-    background-color: #FFF;
+    background-color: white;
     border-color: #595D96;
     border-style: none none dotted dotted;
     border-width: 0 0 1px 1px;
@@ -210,14 +206,13 @@ table #Menu {
     padding: 1px 0 .5em .5em;
 }
 
-#Contents #Address {
+#Address {
     background-color: #F7F5EF;
     border-color: #FF9000;
     border-style: dashed dashed dashed solid;
     border-width: 1px 1px 1px 3px;
     color: #02021E;
-    margin-left: 10%;
-    margin-right: 50%;
+    margin-right: 60%;
     padding: 4px 4px 4px 20px;
 }
 
