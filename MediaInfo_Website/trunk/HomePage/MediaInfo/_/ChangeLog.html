@@ -73,6 +73,36 @@ else
 <pre>
 Changes:
 
+Version 0.7.62, 2012-02-22
+--------------
++ ARIB STD B24/B37 caption detection (both Japanese and Brazilian versions)
++ LXF: support of AVC, VC-3, MPEG audio, AC-3, Dolby E, and AAC detection and analysis
++ AC-3: support of 22.05 kHz streams (out of specs but they exist)
++ MOV: AIC (Apple Intermediate Codec) scan type detection
++ MOV: support of AVID metadata (interlacement information)
++ Time code dedicated tracks (MOV, MXF, GXF)
++ Time code track (MPEG-4/MOV, GXF, MXF)
++ Time code in SDTI (MXF)
++ Time code in System scheme 1 (MXF)
++ Time code in SMPTE RP 188 (aka SMPTE ST 12-2 aka ATC aka VANC) (GXF, LXF, MXF)
++ Time code in SMPTE RP 196 (aka HANC)
++ MPEG Video Time code
++ MPEG-TS: format_identifier, pointer_field, section_length (hidden by default)
++ CEA-608/708: caption detection duration is increased to 15 seconds (or 64 MB) in order to miss less caption content
++ Image files as a video stream: file name of the last file
+x #727, MOV: crash with some malformed files (Time scale set to 0)
+x #728, AAC: crash with some malformed streams
+x #681, AVI: was not analyzing VBR streams without bit rate info in header
+x #736: Division by 0 with 0-byte files
+x Id3v2: crash with some malformed tags
+x Bit rate display was "0 bps" if the real bit rate is more than 4 Gbps
+x Division by 0 in case of 0 byte long file
+x MPEG-4: wrong muxing mode information in case of A/53 captions in MPEG Video in MOV
+x P2 Clip: wrong uppercase/lowercase in the file name of source files.
+x MOV: PCM endianness was sometimes wrong
+x MPEG-4: JPEG interlacement was sometimes wrong
+x MPEG Video: wrong DAR information in case of DAR change between begin and end of the file
+
 Version 0.7.61, 2012-10-22
 --------------
 + x64 and i386 Windows installers are merged, now only one installer
@@ -168,47 +198,6 @@ x 3553588, MPLS: incoherent behavior with MPLS having more than one PlayListItem
 x 3554154, MPEG-TS: crash with some corrupted streams
 x MOV: all EIA/CEA-608 captions were not well detected
 x Matroska: Trying to better detect VFR streams, frame rate was wrong in case of interlaced content
-
-Version 0.7.58, 2012-05-28
---------------
-+ Ukrainian translation updated
-+ AC-3: Little Endian streams support
-+ LXF: AVC streams support
-+ ISM: better support
-+ File referencing other files (HLS, ISM...): menu in case there is more than 1 stream per referenced file
-+ MPEG-TS: option for keeping streams detected at the beginning then disabled in a an update of the PMT (activated by default)
-+ MPEG-PS: program_map_section support for uncommon streams embedded in MPEG-PS
-x Referenced files (MXF, HLS, MOV, P2, XDCAM...): issues with source name, track order, files size
-x MPEG-TS/MPEG-PS: regression, some files with AC-3/DTS/DVD subtitles were not well analyzed anymore
-x MPEG-4 channel mapping: Lt and Rt (matrix-encoded) channel mapping were missing
-x GXF: handling of buggy files having non-PCM AES3 codec identifier but actually having PCM
-x MPEG-4: better support of MPEG-4 files having corrupted metadata atom
-x 3529510, EIA/CEA-708: was not detected if the stream was not present at the beginning, thanks to Pete Chapman
-
-Version 0.7.57, 2012-05-02
---------------
-+ Basque translation added, Russian translation updated
-+ #3513490, Vorbis comment (Flac, Ogg): more tags are supported
-+ XML-based formats (P2, XDCAM, DCP, ISM, HLS...): support of UTF-16 encoding
-+ MPEG-4: for buggy PCM, prioritizing the codec ID "in24" = 24-bit against the bit depth field
-x #3516900, Vorbis comment (Flac, Ogg): trying to do better mapping of PERFORMER and ARTIST tags
-x MXF: wrong video frame count in some cases
-x #3517374, GCC 4.7: compilation issues removal, thanks to SpepS
-x MPEG-PS: some files were not well demuxed so analysis was sometimes wrong (especially macroblock parsing)
-
-Version 0.7.56, 2012-04-08
---------------
-+ Better support of machines lacking of std::stringstream
-+ Better support of machines requesting explicit stdc++ library link option (e.g. some ARM embedded devices)
-x #3515515, MPEG-4: crash with MPEG-4 container + H264/AVC video stream
-x #3515393, MPEG Audio: infinite loop (freeze) with some files
-x #3514677, Video: Well known 1.85:1 display aspect ratio was incorrectly displayed as 16:9
-x #3513908, File interface: No output if filename contain a colon
-x #3515893, MPEG-4: some specific files were not detected
-x AVI: infinite loop (freeze) with some files (having index containing 0-sized chunk)
-x AVC: memory leaks
-x libcurl support: libcurl config from MediaInfo is compatible with libcurl+gnutls
-x #3515857, CLI only: --LogFile carriage return format was not the one of the OS
 </pre>
 </div>
 			</td>
