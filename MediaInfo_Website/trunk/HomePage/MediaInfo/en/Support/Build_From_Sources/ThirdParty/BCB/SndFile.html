@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>SndFile (BCB)</title>
+    <meta charset="utf-8">
+    <title>SndFile (BCB)</title>
 </head>
 <body>
 <h1>SndFile (BCB)</h1>
@@ -22,10 +22,10 @@
  </li>
  <li>In <code>float_cast.h</code>, line 193, modify:
   <pre> #warning "Don't have the functions lrint() and lrintf()."
-	#warning "Replacing these functions with a standard C cast."</pre>
+    #warning "Replacing these functions with a standard C cast."</pre>
    --&gt;
-   <pre>	#pragma warning "Don't have the functions lrint() and lrintf()."
-	#pragma warning "Replacing these functions with a standard C cast."</pre>
+   <pre>    #pragma warning "Don't have the functions lrint() and lrintf()."
+    #pragma warning "Replacing these functions with a standard C cast."</pre>
  </li>
 </ul>
 

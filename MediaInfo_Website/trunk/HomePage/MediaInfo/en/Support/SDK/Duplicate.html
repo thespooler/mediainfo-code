@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta content="text/html;charset=UTF-8" http-equiv="content-type"/>
-	<title>Duplication of streams</title>
+    <meta content="text/html;charset=UTF-8" http-equiv="content-type"/>
+    <title>Duplication of streams</title>
 </head>
 <body>
 
@@ -40,15 +40,15 @@ The 2nd string is a list of parameters, with the form: <code>Parameter1;Paramete
 List of available parameters:
 <ul>
  <li><code>file://***the file name for the destination***"</code>. Specify the file name for the duplicated stream.<br/>
-	 Note: There is nothing more to do: the file will be filled during the parsing</li>
+     Note: There is nothing more to do: the file will be filled during the parsing</li>
  <li><code>memory://***the memory pointer for the destination***"</code>. Specify the memory pointer for the duplicated stream (to a buffer).<br/>
-	 Note: The format of the memory pointer is <code>memory://pointer:size</code>, with pointer and size in Decimal format. "size" is the size of the allocated data pointed by the pointer.</li>
+     Note: The format of the memory pointer is <code>memory://pointer:size</code>, with pointer and size in Decimal format. "size" is the size of the allocated data pointed by the pointer.</li>
  <li><code>program_number=***the program number value***"</code>. Specify which program number should be duplicated (this value is in Decimal format).<br/>
-	 By default, all streams from this program number are duplicated</li>
+     By default, all streams from this program number are duplicated</li>
  <li><code>program_map_PID=***the program_map_PID value***"</code>. Specify which program_map_PID should be duplicated (this value is in Decimal format).<br/>
-	 By default, all streams from this program_map_PID are duplicated</li>
+     By default, all streams from this program_map_PID are duplicated</li>
  <li><code>elementary_PID=***the elementary_PID value***"</code>. Specify which elementary_PID should be duplicated (this value is in Decimal format).<br/>
-	 By default, all streams from a program_number or a program_map_PID are duplicated, specifying at least one elementary_PID will disable the other streams duplication</li>
+     By default, all streams from a program_number or a program_map_PID are duplicated, specifying at least one elementary_PID will disable the other streams duplication</li>
 </ul>
 
 <h3><a name="Buffers_Continue"></a>Parsing data</h3>
@@ -81,17 +81,17 @@ MI.Open_Buffer_Init();<br/>
 size_t From_Buffer_Size;<br/>
 do<br/>
 {<br/>
-	//Reading data somewhere, do what you want for this.<br/>
-	From_Buffer_Size=From.Read(From_Buffer, 1316); //From is a object able to read data (a file, a socket, what you want)<br/>
+    //Reading data somewhere, do what you want for this.<br/>
+    From_Buffer_Size=From.Read(From_Buffer, 1316); //From is a object able to read data (a file, a socket, what you want)<br/>
 <br/>
-	//Sending the buffer to MediaInfo<br/>
-	if ((MI.Open_Buffer_Continue(From_Buffer, From_Buffer_Size)&0x1)==0 && !CanWrite_OnlyIfParsingIsOk)<br/>
+    //Sending the buffer to MediaInfo<br/>
+    if ((MI.Open_Buffer_Continue(From_Buffer, From_Buffer_Size)&0x1)==0 && !CanWrite_OnlyIfParsingIsOk)<br/>
 <br/>
-	//Retrieving data written in memory<br/>
-	size_t To_Buffer_Size=MI.Output_Buffer_Get(_T("memory://1234567890:1316"));<br/>
+    //Retrieving data written in memory<br/>
+    size_t To_Buffer_Size=MI.Output_Buffer_Get(_T("memory://1234567890:1316"));<br/>
 <br/>
-	//Writing data to somewhere, do what you want for this.<br/>
-	To.Write(To_Buffer, To_Buffer_Size);<br/>
+    //Writing data to somewhere, do what you want for this.<br/>
+    To.Write(To_Buffer, To_Buffer_Size);<br/>
 }<br/>
 while (From_Buffer_Size>0);</code>
 <code>
@@ -135,23 +135,23 @@ bool CanWrite_OnlyIfParsingIsOk=false;<br/>
 size_t From_Buffer_Size;<br/>
 do<br/>
 {<br/>
-	//Reading data somewhere, do what you want for this.<br/>
-	From_Buffer_Size=From.Read(From_Buffer, 1316); //From is a object able to read data (a file, a socket, what you want)<br/>
+    //Reading data somewhere, do what you want for this.<br/>
+    From_Buffer_Size=From.Read(From_Buffer, 1316); //From is a object able to read data (a file, a socket, what you want)<br/>
 <br/>
-	//Sending the buffer to MediaInfo<br/>
-	if ((MI.Open_Buffer_Continue(From_Buffer, From_Buffer_Size)&0x1)==0 && !CanWrite_OnlyIfParsingIsOk)<br/>
-		CanWrite_OnlyIfParsingIsOk=true;<br/>
+    //Sending the buffer to MediaInfo<br/>
+    if ((MI.Open_Buffer_Continue(From_Buffer, From_Buffer_Size)&0x1)==0 && !CanWrite_OnlyIfParsingIsOk)<br/>
+        CanWrite_OnlyIfParsingIsOk=true;<br/>
 <br/>
-	if (CanWrite_OnlyIfParsingIsOk)<br/>
-	{<br/>
-		//Retrieving data written in memory<br/>
-		size_t To_Buffer_Size_1=MI.Output_Buffer_Get(_T("memory://1234567890:1316"));<br/>
-		size_t To_Buffer_Size_2=MI.Output_Buffer_Get(_T("memory://0987654321:1316"));<br/>
+    if (CanWrite_OnlyIfParsingIsOk)<br/>
+    {<br/>
+        //Retrieving data written in memory<br/>
+        size_t To_Buffer_Size_1=MI.Output_Buffer_Get(_T("memory://1234567890:1316"));<br/>
+        size_t To_Buffer_Size_2=MI.Output_Buffer_Get(_T("memory://0987654321:1316"));<br/>
 <br/>
-		//Writing data to somewhere, do what you want for this.<br/>
-		To_1.Write(To_Buffer_1, To_Buffer_Size_1);<br/>
-		To_2.Write(To_Buffer_2, To_Buffer_Size_2);<br/>
-	}<br/>
+        //Writing data to somewhere, do what you want for this.<br/>
+        To_1.Write(To_Buffer_1, To_Buffer_Size_1);<br/>
+        To_2.Write(To_Buffer_2, To_Buffer_Size_2);<br/>
+    }<br/>
 }<br/>
 while (From_Buffer_Size>0);</code>
 

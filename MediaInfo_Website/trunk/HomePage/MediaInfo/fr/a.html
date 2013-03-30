@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<meta charset="utf-8">
-	<title>Aider MediaInfo</title>
+    <meta charset="utf-8">
+    <title>Aider MediaInfo</title>
 </head>
 <body>
 <?php
@@ -20,19 +20,19 @@ If you want to remove the "Donate" button from the Windows GUI, you can download
 ?>
 <?php
 function visitorCountry(){
-	$ip = getenv('REMOTE_ADDR');
-	$d = file_get_contents("http://www.ipinfodb.com/ip_query_country.php?ip=$ip&output=xml");
+    $ip = getenv('REMOTE_ADDR');
+    $d = file_get_contents("http://www.ipinfodb.com/ip_query_country.php?ip=$ip&output=xml");
 
-	//Use backup server if cannot make a connection
-	if (!$d){
-		$backup = file_get_contents("http://backup.ipinfodb.com/ip_query.php?ip=$ip&output=xml");
-		$answer = new SimpleXMLElement($backup);
-		if (!$backup) return false; // Failed to open connection
-	}else{
-		$answer = new SimpleXMLElement($d);
-	}
+    //Use backup server if cannot make a connection
+    if (!$d){
+        $backup = file_get_contents("http://backup.ipinfodb.com/ip_query.php?ip=$ip&output=xml");
+        $answer = new SimpleXMLElement($backup);
+        if (!$backup) return false; // Failed to open connection
+    }else{
+        $answer = new SimpleXMLElement($d);
+    }
 
-	return $answer->CountryCode;
+    return $answer->CountryCode;
 }
 
 $Country_Detected=false;

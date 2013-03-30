@@ -5,69 +5,69 @@ strtok($_SERVER["REQUEST_URI"], "?");
 parse_str(strtok("?"), $Argument);
 //LastVisited
 //if (isset($_COOKIE["LastVisited"]) || strpos($_SERVER["REQUEST_URI"], "?")===FALSE)
-	$AlreadyVisited='Y';
+    $AlreadyVisited='Y';
 //else
 //  setcookie("LastVisited", time(), time()+60*60);
 ?>
 <!DOCTYPE html>
 <?php
 if ($Language=="fr")
-	echo '<html lang="fr">';
+    echo '<html lang="fr">';
 else
-	echo '<html lang="en">
+    echo '<html lang="en">
 ';
 ?>
 <head>
-	<title>MediaInfo - ChangeLog</title>
-	<meta charset="utf-8">
+    <title>MediaInfo - ChangeLog</title>
+    <meta charset="utf-8">
 <?php
 if (isset($Official))
-	$URL='http://mediainfo.sourceforge.net/'.$Language;
+    $URL='http://mediainfo.sourceforge.net/'.$Language;
 else
-	$URL='http://localhost/'.$Language;
-	if (!isset($AlreadyVisited)) {
-		if (mt_rand(1, 100)>15) {
-			//Sourceforge
-		} else {
-			if (mt_rand(1, 100)>33)
-				$URL='http://mediaarea.net/DX50sf.php';
-			else if (mt_rand(1, 100)>50)
-				$URL='http://mediaarea.net/DIVXsf.php';
-			else
-				$URL='http://mediaarea.net/XVIDsf.php';
-		}
-		echo '  <meta http-equiv="refresh" content="3; URL='.$URL.'"/>
-	';
-	}
+    $URL='http://localhost/'.$Language;
+    if (!isset($AlreadyVisited)) {
+        if (mt_rand(1, 100)>15) {
+            //Sourceforge
+        } else {
+            if (mt_rand(1, 100)>33)
+                $URL='http://mediaarea.net/DX50sf.php';
+            else if (mt_rand(1, 100)>50)
+                $URL='http://mediaarea.net/DIVXsf.php';
+            else
+                $URL='http://mediaarea.net/XVIDsf.php';
+        }
+        echo '  <meta http-equiv="refresh" content="3; URL='.$URL.'"/>
+    ';
+    }
 ?>
-	<!--[if IE]><link rel="shortcut icon" href="/_/Image/favicon.ico"><![endif]-->
-	<link rel="icon" type="image/png" href="/_/Image/favicon.png"/>
-	<link rel="stylesheet" href="/_/CSS/pack.css"/>
-	<!--[if lt IE 9]>
-	<script src="/_/JavaScript/html5shiv.js"></script>
-	<![endif]-->
+    <!--[if IE]><link rel="shortcut icon" href="/_/Image/favicon.ico"><![endif]-->
+    <link rel="icon" type="image/png" href="/_/Image/favicon.png"/>
+    <link rel="stylesheet" href="/_/CSS/pack.css"/>
+    <!--[if lt IE 9]>
+    <script src="/_/JavaScript/html5shiv.js"></script>
+    <![endif]-->
 </head>
 <br/>
 <table>
-	<tbody>
-		<tr>
-			<td>
-			<div id="ShouldShow" class="Invisible">Yes</div>
-			<div id="NewVersion">
+    <tbody>
+        <tr>
+            <td>
+            <div id="ShouldShow" class="Invisible">Yes</div>
+            <div id="NewVersion">
 <?php
 if ($Language=="fr")
-	echo '
-	<a href="'.$URL.'">Visiter le site MediaInfo</a><br/><br/>
-	';
+    echo '
+    <a href="'.$URL.'">Visiter le site MediaInfo</a><br/><br/>
+    ';
 else
-	echo '
-	<a href="'.$URL.'">Visit MediaInfo website</a><br/><br/>
-	';
+    echo '
+    <a href="'.$URL.'">Visit MediaInfo website</a><br/><br/>
+    ';
 ?>
 </div>
 <div class="Invisible">
-	More about 4CC: <a href="http://mediaarea.net/DX50sf.php">DX50</a> <a href="http://mediaarea.net/DIVXsf.php">DIVX</a> <a href="http://mediaarea.net/XVIDsf.php">XVID</a>
-	<br/>
+    More about 4CC: <a href="http://mediaarea.net/DX50sf.php">DX50</a> <a href="http://mediaarea.net/DIVXsf.php">DIVX</a> <a href="http://mediaarea.net/XVIDsf.php">XVID</a>
+    <br/>
 </div>
 <div>
 <pre>
@@ -200,9 +200,9 @@ x MOV: all EIA/CEA-608 captions were not well detected
 x Matroska: Trying to better detect VFR streams, frame rate was wrong in case of interlaced content
 </pre>
 </div>
-			</td>
-		</tr>
-	</tbody>
+            </td>
+        </tr>
+    </tbody>
 </table>
 <br/>
 <?php include $Path."/_/Ad/GoogleAnalytics_Users.html"; ?>

@@ -6,7 +6,7 @@ rem npm install -g uglify-js
 pushd %~dp0
 
 echo minifying and combining css and js files...
-type CSS\normalize.css CSS\Style.css CSS\Tags.css | cleancss --s0 -o CSS\pack.css
+type CSS\normalize.css CSS\Style.css CSS\Tags.css | cleancss --s0 -e -o CSS\pack.css
 cmd /c uglifyjs JavaScript\Tags.js --compress --mangle -o JavaScript\pack.js
 
 popd

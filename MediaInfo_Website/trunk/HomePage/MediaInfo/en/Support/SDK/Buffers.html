@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Using a buffer instead of a file name</title>
+    <meta charset="utf-8">
+    <title>Using a buffer instead of a file name</title>
 </head>
 <body>
 
@@ -73,15 +73,15 @@ MI.<a href="Doxygen/class_media_info_lib_1_1_media_info.html#f52ac48c91374312bc9
 <span class="cpplisting_toprovide">size_t From_Buffer_Size;</span>
 do
 {
-	<span class="cpplisting_comment">//Reading data somewhere, do what you want for this.</span>
-	<span class="cpplisting_toprovide">From_Buffer_Size=From.Read(From_Buffer, 1316);</span>
+    <span class="cpplisting_comment">//Reading data somewhere, do what you want for this.</span>
+    <span class="cpplisting_toprovide">From_Buffer_Size=From.Read(From_Buffer, 1316);</span>
 
-	<span class="cpplisting_comment">//Sending the buffer to MediaInfo</span>
-	if ((MI.<a href="Doxygen/class_media_info_lib_1_1_media_info.html#312880124b7584143b3855a6f6290a35">Open_Buffer_Continue</a>(<span class="cpplisting_toprovide">From_Buffer</span>, <span class="cpplisting_toprovide">From_Buffer_Size</span>)&0x02)==1) <span class="cpplisting_comment">//Test bit 1 from the result</span>
-	{
-		int64u File_GoTo=MI.<a href="Doxygen/class_media_info_lib_1_1_media_info.html#e29488dc3051c78b6e81615a8350733b"Open_Buffer_GoTo</a>(); <span class="cpplisting_comment">//Retrieving where MediaInfo want we go into the stream.</span>
-		 <span class="cpplisting_toprovide">...</span> <span class="cpplisting_comment">//The user must seek the stream.</span>
-	}
+    <span class="cpplisting_comment">//Sending the buffer to MediaInfo</span>
+    if ((MI.<a href="Doxygen/class_media_info_lib_1_1_media_info.html#312880124b7584143b3855a6f6290a35">Open_Buffer_Continue</a>(<span class="cpplisting_toprovide">From_Buffer</span>, <span class="cpplisting_toprovide">From_Buffer_Size</span>)&0x02)==1) <span class="cpplisting_comment">//Test bit 1 from the result</span>
+    {
+        int64u File_GoTo=MI.<a href="Doxygen/class_media_info_lib_1_1_media_info.html#e29488dc3051c78b6e81615a8350733b"Open_Buffer_GoTo</a>(); <span class="cpplisting_comment">//Retrieving where MediaInfo want we go into the stream.</span>
+         <span class="cpplisting_toprovide">...</span> <span class="cpplisting_comment">//The user must seek the stream.</span>
+    }
 }
 while (From_Buffer_Size>0);
 
@@ -102,12 +102,12 @@ MI.<a href="Doxygen/class_media_info_lib_1_1_media_info.html#f52ac48c91374312bc9
 <span class="cpplisting_toprovide">size_t From_Buffer_Size;</span>
 do
 {
-	<span class="cpplisting_comment">//Reading data somewhere, do what you want for this.</span>
-	<span class="cpplisting_toprovide">From_Buffer_Size=From.Read(From_Buffer, 1316);</span>
+    <span class="cpplisting_comment">//Reading data somewhere, do what you want for this.</span>
+    <span class="cpplisting_toprovide">From_Buffer_Size=From.Read(From_Buffer, 1316);</span>
 
-	<span class="cpplisting_comment">//Sending the buffer to MediaInfo</span>
-	if (MI.<a href="Doxygen/class_media_info_lib_1_1_media_info.html#312880124b7584143b3855a6f6290a35">Open_Buffer_Continue</a>(<span class="cpplisting_toprovide">From_Buffer</span>, <span class="cpplisting_toprovide">From_Buffer_Size</span>)==0)
-		From_Buffer_Size=0; <span class="cpplisting_comment">//Get out of the loop, no more data is needed by the parser</span>
+    <span class="cpplisting_comment">//Sending the buffer to MediaInfo</span>
+    if (MI.<a href="Doxygen/class_media_info_lib_1_1_media_info.html#312880124b7584143b3855a6f6290a35">Open_Buffer_Continue</a>(<span class="cpplisting_toprovide">From_Buffer</span>, <span class="cpplisting_toprovide">From_Buffer_Size</span>)==0)
+        From_Buffer_Size=0; <span class="cpplisting_comment">//Get out of the loop, no more data is needed by the parser</span>
 }
 while (From_Buffer_Size>0);
 

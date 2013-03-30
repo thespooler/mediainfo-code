@@ -1,34 +1,34 @@
 <?php include $Path."/_/Template/Default/Head.html";
 if (isset($Body_Tag))
-	echo "<body ".$Body_Tag.">";
+    echo "<body ".$Body_Tag.">";
 else
-	echo "<body>";
+    echo "<body>";
 ?>
-	<table>
-		<tbody>
-			<tr style="height: <?php if (!isset($Donated)) echo '90'; else echo '0'; ?>px">
-				<td>
-					<?php if (!isset($Donated)) echo '<a href="/"><img src="/_/Image/Default/Logo.png" alt="MediaInfo, multimedia data manager" height="90" width="250"/></a>'; ?>
-				</td>
-				<td id="Banner_Top_Background">
-					<?php if (!isset($Donated)) include $Path."/_/Ad/TopOfThePage_728_90.html"; ?>
-					<?php include $Path."/_/Template/Default/Path.html"; ?>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2"> <?php include $Path."/_/Template/Default/Languages.html"; ?></td>
-			</tr>
-			<tr><!--TODO: add padding and get rid of this empty data row-->
-				<td colspan="2">&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-	<table>
-		<tbody>
-			<tr>
-				<td rowspan="3" id="Menu">
-					<?php if (isset($Donated)) echo '<a href="/"><img src="/_/Image/Default/Logo.png" alt="MediaInfo, multimedia data manager" height="90" width="250"/></a>'; ?>
-					<?php include $Path."/_/Template/Default/Menu.html"; ?>
-				</td>
-				<td></td>
-				<td>
+    <table>
+        <tbody>
+            <tr style="height: <?php if (!isset($Donated)) echo '90'; else echo '0'; ?>px">
+                <td>
+                    <?php if (!isset($Donated)) echo '<a href="/"><img src="/_/Image/Default/Logo.png" alt="MediaInfo, multimedia data manager" height="90" width="250"/></a>'; ?>
+                </td>
+                <td id="Banner_Top_Background">
+                    <?php if (!isset($Donated)) include $Path."/_/Ad/TopOfThePage_728_90.html"; ?>
+                    <?php include $Path."/_/Template/Default/Path.html"; ?>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"> <?php include $Path."/_/Template/Default/Languages.html"; ?></td>
+            </tr>
+            <tr><!--TODO: add padding and get rid of this empty data row-->
+                <td colspan="2">&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <tbody>
+            <tr>
+                <td rowspan="3" id="Menu">
+                    <?php if (isset($Donated)) echo '<a href="/"><img src="/_/Image/Default/Logo.png" alt="MediaInfo, multimedia data manager" height="90" width="250"/></a>'; ?>
+                    <?php include $Path."/_/Template/Default/Menu.html"; ?>
+                </td>
+                <td></td>
+                <td>
