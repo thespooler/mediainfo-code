@@ -10,7 +10,7 @@ else
                 <td>
                     <?php if (!isset($Donated)) echo '<a href="/"><img src="/_/Image/Default/Logo.png" alt="MediaInfo, multimedia data manager" height="90" width="250"/></a>'; ?>
                 </td>
-                <td id="Banner_Top_Background">
+                <td class="Banner_Top_Background">
                     <?php if (!isset($Donated)) include $Path."/_/Ad/TopOfThePage_728_90.html"; ?>
                     <?php include $Path."/_/Template/Default/Path.html"; ?>
                 </td>
@@ -26,7 +26,7 @@ else
     <table>
         <tbody>
             <tr>
-                <td rowspan="3" id="Menu">
+                <td rowspan="3" class="Menu">
                     <?php if (isset($Donated)) echo '<a href="/"><img src="/_/Image/Default/Logo.png" alt="MediaInfo, multimedia data manager" height="90" width="250"/></a>'; ?>
                     <?php include $Path."/_/Template/Default/Menu.html"; ?>
                 </td>
