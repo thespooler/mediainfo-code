@@ -6,7 +6,7 @@ if (strlen($Page)==3 || (strlen($Page)==6 && $Page{3}=="-")) {
     else
         $Page.="/About.html";
 }
-if (strlen($Page)<=6 || $Page{strlen($Page)-5}!=".")
+if (strlen($Page)<=6 || ($Page{strlen($Page)-5}!="." && $Page{strlen($Page)-4}!="." && $Page{strlen($Page)-3}!="."))
     $Page.=".html";
 $Page_Exploded=explode("/", $Page); //first item is always empty
 

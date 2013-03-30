@@ -18,6 +18,22 @@ include $Path.'/_/Core/SpecialPages/Prices.php';
 include $Path.'/_/Core/DetectOS.php';
 include $Path.'/_/Core/Normalize.php';
 
+//Non-HTML files
+$FileName_Exploded=explode(".", $PageFinal_Exploded[sizeof($PageFinal_Exploded)-1]);
+$FileExtension=$FileName_Exploded[sizeof($FileName_Exploded)-1];
+if ($FileExtension!="html")
+{
+    if ($FileExtension=="png")
+        header('Content-type: image/png;');
+    else if ($FileExtension=="css")
+        header('Content-type: text/css;');
+    else if ($FileExtension=="js")
+        header('Content-type: application/javascript;');
+    else
+        header('Content-type:;');
+    include $Path.$PageFinal;
+    return;
+}
 
 //test subfolder per subfolder : /a/_.html, /a/b/_.html...
 include $Path."/_/index.0.html";
@@ -70,31 +86,30 @@ if (!isset($Edit)) {
         $Title="";
 
     $Head_ToAdd='';
-    //<link> with CSS
-    $Link_Start=strpos($Contents, "<link href=");
-    if ($Link_Start!==false) {
-        $Link_End=strpos($Contents, ".css");
-        $Link=substr($Contents, $Link_Start+12, $Link_End-$Link_Start-12);
-        $Head_ToAdd.=' <link href="/_/CSS/'.$Link.'.css" rel="stylesheet"/>
-    ';
-        //$Link_Start=strpos($Contents, "<link href=", $Link_Start+1);
-    }
-    $Link_Start=strpos($Contents, '<link href="doxygen.css"');
-    if ($Link_Start!==false) { //Ugly, quick hack for Doxygen
-        $Head_ToAdd.=' <link href="/_/CSS/doxygen.css" rel="stylesheet"/>
+    $Head_End=0;
+    //<link>
+    for (; ; )
+    {
+        $Head_Start=strpos($Contents, "<link ", $Head_End);
+        if ($Head_Start===false)
+            break;
+        $Head_End=strpos($Contents, ">", $Head_Start);
+        $Data=substr($Contents, $Head_Start, $Head_End-$Head_Start+1);
+        $Head_ToAdd.=$Data.'
     ';
     }
-
-    //<script> with JavaSript
-    /*$Script_Start=strpos($Contents, "<script src=");
-    if ($Script_Start!==false) {
-        $Script_End=strpos($Contents, ".js");
-        $Script=substr($Contents, $Script_Start+13, $Script_End-$Script_Start-13);
-        if (!isset($Footer_ToAdd))
-            $Footer_ToAdd='';
-        $Footer_ToAdd.=' <script src="/_/JavaScript/'.$Script.'.js"></script>
+    //<script>
+    $Head_End=0;
+    for (; ; )
+    {
+        $Head_Start=strpos($Contents, "<script ", $Head_End);
+        if ($Head_Start===false)
+            break;
+        $Head_End=strpos($Contents, "></script>", $Head_Start);
+        $Data=substr($Contents, $Head_Start, $Head_End-$Head_Start+10);
+        $Head_ToAdd.=$Data.'
     ';
-    }*/
+    }
 
     //<meta>
     $Meta_Start=strpos($Contents, '<meta http-equiv="refresh"');
