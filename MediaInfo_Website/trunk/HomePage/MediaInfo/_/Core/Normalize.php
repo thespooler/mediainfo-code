@@ -39,7 +39,7 @@ if (isset($Page_Exploded[2]) && $Page_Exploded[2]=="Price.html") {
     exit;
 }
 
-//-PageFinal - With a page in the good language or english
+//-PageFinal - With a page in the good language or English
 $PageFinal=$Page;
 $PageFinal_Exploded=$Page_Exploded;
 $NotUpdated="";

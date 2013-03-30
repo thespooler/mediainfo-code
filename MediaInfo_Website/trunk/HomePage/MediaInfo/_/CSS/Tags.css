@@ -1,8 +1,8 @@
 #Tags table {
-    font-size: x-small;
     background-color: #F7F7F7;
+    border: 1px solid black;
     border-collapse: collapse;
-    border: 1px solid #000;
+    font-size: x-small;
     width: 100%;
 }
 
@@ -15,21 +15,21 @@
 }
 
 #Tags th {
-    font-size: small;
-    border: 1px solid #000;
     background-color: #999;
+    border: 1px solid black;
+    font-size: small;
 }
 
 #Tags td {
-    border: 1px solid #000;
+    border: 1px solid black;
     text-align: left;
 }
 
 #Tags .xheader {
-    text-align: center;
+    background-color: #CCC;
     font-size: small;
     font-weight: bold;
-    background-color: #CCC;
+    text-align: center;
 }
 
 #Tags a:hover {

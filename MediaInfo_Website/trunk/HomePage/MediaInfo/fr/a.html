@@ -54,13 +54,13 @@ Vous pouvez choisir un montant à donner ou une souscription mensuelle:
 <?php
 if ($Country_Detected)
  echo '
- <div id="Address">
+ <div class="Address">
  ';
 if (!$Country_Detected)
  echo '
  <table>
  <tr>
-  <td id="Address" class="centered">
+  <td class="Address centered">
 France (en Euros)<br/>
  ';
 if (!$Country_Detected || $Country=='FR') echo '
@@ -108,7 +108,7 @@ if (!$Country_Detected) echo '
   ';
 if (!$Country_Detected)
  echo '
- <td id="Address" class="centered">
+ <td class="Address centered">
 Québec (en Dollars canadiens)<br/>
  ';
 if (!$Country_Detected || $Country=='CA') echo '
@@ -155,7 +155,7 @@ if (!$Country_Detected) echo '
   </td>';
 if (!$Country_Detected)
  echo '
-  <td id="Address" class="centered">
+  <td class="Address centered">
 Autre (en Dollars des Etats-Unis)<br/>
  ';
 if (!$Country_Detected) echo '
@@ -209,7 +209,7 @@ if (!$Country_Detected)
 ?>
 <h2>Don par virement bancaire (<a href="http://fr.wikipedia.org/wiki/Zone_euro">zone Euro</a> uniquement)</h2>
 Il est possible de faire un virement bancaire en Euros, voici les coordonnées bancaires :
-<div id="Address">
+<div class="Address">
 Titulaire du compte : Jérôme Martinez<br/>
 Code banque : 30003<br/>
 Code Agence : 01338<br/>
@@ -222,7 +222,7 @@ N'oubliez pas de mettre votre adresse e-mail dans la description du virement!
 
 <h2>Don par chèque (France uniquement)</h2>
 Il est possible d'envoyer un chèque à l'ordre de Jérôme Martinez (créateur du projet), adressé à l'adresse suivante :
-<div id="Address">Jérôme Martinez<br/>Chemin du Vernay<br/>73190 Curienne<br/>France</div>
+<div class="Address">Jérôme Martinez<br/>Chemin du Vernay<br/>73190 Curienne<br/>France</div>
 N'oubliez pas de mettre un petit mot avec votre adresse e-mail afin que je vous confirme la réception!
 
 <h2>Pas de sous. Et alors? Partez pas! ;-)</h2>

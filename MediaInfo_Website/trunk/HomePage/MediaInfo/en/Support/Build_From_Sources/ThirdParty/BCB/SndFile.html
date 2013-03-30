@@ -21,7 +21,7 @@
   <pre>#elif (defined (_MSC_VER))</pre>
  </li>
  <li>In <code>float_cast.h</code>, line 193, modify:
-  <pre>	#warning "Don't have the functions lrint() and lrintf()."
+  <pre> #warning "Don't have the functions lrint() and lrintf()."
 	#warning "Replacing these functions with a standard C cast."</pre>
    --&gt;
    <pre>	#pragma warning "Don't have the functions lrint() and lrintf()."
