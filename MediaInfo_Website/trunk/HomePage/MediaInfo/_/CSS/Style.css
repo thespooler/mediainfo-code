@@ -1,5 +1,4 @@
-/*csslint box-sizing: false, font-sizes: false, ids: false, important: false,
-  qualified-headings: false, unique-headings: false*/
+/*csslint box-sizing: false, qualified-headings: false, unique-headings: false*/
 
 body {
     background-color: white;
@@ -110,8 +109,7 @@ ul {
 
 .Menu .Text {
     color: black;
-    font-weight: bold;
-    font: bold small Verdana, Arial, Helvetica, sans-serif;
+    font: bold small Verdana, Arial, Helvetica, sans-serif; /* override font from doxygen.css */
     text-align: center;
     width: 237px;
     height: 30px;
@@ -190,11 +188,11 @@ ul {
     border-style: dashed;
 }
 
-.Contents .First {
+.First {
     margin-top: 0;
 }
 
-.Contents .Paragraph_Block {
+.Paragraph_Block {
     background-color: white;
     border-color: #595D96;
     border-style: none none dotted dotted;
@@ -214,9 +212,10 @@ ul {
     padding: 4px 4px 4px 20px;
 }
 
-.Contents .cppcode,
-.Contents .cpplisting {
+.cppcode,
+.cpplisting {
     background-color: #D5E1E8;
+    box-sizing: border-box;
     border: 1px solid #84b0c7;
     -webkit-border-radius: 4px;
        -moz-border-radius: 4px;
@@ -224,15 +223,15 @@ ul {
     width: 99%;
 }
 
-.Contents .cpplisting {
+.cpplisting {
     white-space: pre;
 }
 
-.Contents .cpplisting_comment {
+.cpplisting_comment {
     color: green;
 }
 
-.Contents .cpplisting_toprovide {
+.cpplisting_toprovide {
     color: red;
 }
 
@@ -243,7 +242,7 @@ ul {
 
 .FlagsAround {
     background-color: #F0F0F0;
-    font-size: 20px;
+    font: bold 20px Verdana, Arial, Helvetica, sans-serif; /* override font from doxygen.css */
     text-align: center;
 }
 
