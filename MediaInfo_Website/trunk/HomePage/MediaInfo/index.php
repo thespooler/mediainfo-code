@@ -87,16 +87,22 @@ if (!isset($Edit)) {
 
     $Head_ToAdd='';
     $Head_End=0;
+    $Head_Max=strpos($Contents, "</head>");
     //<link>
     for (; ; )
     {
         $Head_Start=strpos($Contents, "<link ", $Head_End);
         if ($Head_Start===false)
             break;
-        $Head_End=strpos($Contents, ">", $Head_Start);
-        $Data=substr($Contents, $Head_Start, $Head_End-$Head_Start+1);
-        $Head_ToAdd.=$Data.'
+        $Head_End1=strpos($Contents, ">", $Head_Start);
+        $Head_End2=strpos($Contents, "</link>", $Head_Start);
+        if ($Head_End1+1==$Head_End2) $Head_End=$Head_End2+7; else $Head_End=$Head_End1+1;
+        if ($Head_Start<$Head_Max && $Head_End<$Head_Max)
+        {
+            $Data=substr($Contents, $Head_Start, $Head_End-$Head_Start);
+            $Head_ToAdd.=$Data.'
     ';
+        }
     }
     //<script>
     $Head_End=0;
@@ -105,10 +111,15 @@ if (!isset($Edit)) {
         $Head_Start=strpos($Contents, "<script ", $Head_End);
         if ($Head_Start===false)
             break;
-        $Head_End=strpos($Contents, "></script>", $Head_Start);
-        $Data=substr($Contents, $Head_Start, $Head_End-$Head_Start+10);
-        $Head_ToAdd.=$Data.'
+        $Head_End1=strpos($Contents, ">", $Head_Start);
+        $Head_End2=strpos($Contents, "</script>", $Head_Start);
+        if ($Head_End1+1==$Head_End2) $Head_End=$Head_End2+9; else $Head_End=$Head_End1+1;
+        if ($Head_Start<$Head_Max && $Head_End<$Head_Max)
+        {
+            $Data=substr($Contents, $Head_Start, $Head_End-$Head_Start);
+            $Head_ToAdd.=$Data.'
     ';
+        }
     }
 
     //<meta>
