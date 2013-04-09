@@ -1,6 +1,15 @@
                 </td>
             </tr>
         <?php include $Path."/_/Template/Default/Help.html"; ?>
+ <?php if (!isset($Donated)) { echo '<tr>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td style="text-align:center;">'; include $Path."/_/Ad/BottomOfThePage_728_90_Google.html"; echo '
+    </td>
+</tr>
+'; }?>
         </tbody>
     </table>
     <script src="/_/JavaScript/pack.js"></script>
