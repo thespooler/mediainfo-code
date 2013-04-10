@@ -212,6 +212,10 @@ ul {
     padding: 4px 4px 4px 20px;
 }
 
+.Address.centered {
+    width: 25%;
+}
+
 .cppcode,
 .cpplisting {
     background-color: #D5E1E8;
