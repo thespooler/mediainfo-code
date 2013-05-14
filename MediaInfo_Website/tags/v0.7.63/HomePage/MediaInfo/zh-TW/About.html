@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr style="vertical-align: top">
+   <td style="padding: 0px 15px 5px 5px">
+    <a href="Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png" width="457" height="367" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="First">MediaInfo 是什麼?</h2>
+    <strong>MediaInfo</strong> 提供影音檔案有關技術上與標籤的資訊.<br/>
+    這是自由軟體 (無須花費, 且也可以自由存取原始碼, 為 GPL 或 LGPL 授權)<br/>
+    <br/>
+    <a style="font-weight: bold" href="<?php echo $Link;?>">立刻下載!</a><br/>
+    (版本 <?php echo $Version;?><?php if (isset($Installer)) echo ',  圖形介面安裝版';?><?php if(isset($OS)) echo ', 適用 '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    注意 1: 您可以到 <a href="http://sourceforge.net/projects/mediainfo">SourceForge 專案網頁</a>上<a href="http://sourceforge.net/project/filemodule_monitor.php?filemodule_id=90341">檢視</a>或<a href="http://sourceforge.net/project/showfiles.php?group_id=86862">查看釋出注意事項</a><br/>
+    注意 2: 其它版本 (如作業系統, 介面...) <a href="Download">在此</a><br/>
+    <br/>
+    您可以<a href="Donate">贊助</a>來支援往後的發展.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr style="vertical-align: top">
+   <td style="padding: 0px 15px 5px 5px">
+<h2>我能從 MediaInfo 獲得哪些資訊?</h2>
+<ul>
+ <li>一般: 標題, 作者, 導演, 專輯, 曲目, 日期, 播放長度...</li>
+ <li>視訊: 編解碼器 (CODECs), 畫面比例, 每秒影格數, 流量...</li>
+ <li>音訊: 編解碼器, 取樣率, 聲道數, 語言, 流量...</li>
+ <li>文字: 字幕語言</li>
+ <li>章節: 章節總數, 章節列表</li>
+</ul>
+<h2>MediaInfo 支援哪些 (容器) 格式?</h2>
+<ul>
+ <li>視訊: MKV, OGM, AVI, <a href="http://mediaarea.net/en/DIVX">DivX</a>, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (編碼內容: <a href="http://mediaarea.net/en/DIVX">DivX</a>, <a href="http://mediaarea.net/en/XVID">XviD</a>, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>音訊: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>字幕: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>我可以用它來做什麼?</h2>
+<ul>
+ <li>讀取許多<a href="Support/Formats">音視訊檔案格式</a></li>
+ <li>多重檢視資訊的方法 (純文字, 表格, 樹狀圖, 網頁...)</li>
+ <li>您可以自訂這些檢視方法</li>
+ <li>匯出資訊為純文字檔, CSV, 網頁...</li>
+ <li>圖形介面, 命令列, 或是 .DLL 檔案</li>
+ <li>與 MS-Windows 檔案總管整合 (拖曳功能, 快顯功能表)</li>
+ <li>國際化: 可在各種作業系統上顯示各種語言</li>
+ <li>相容本地翻譯 (但需要自願者)</li>
+</ul>
+   </td>
+   <td>
+<?php
+if (!isset($Donated)) include $Path."/_/Ad/InContent_336_280_Google.html";
+?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

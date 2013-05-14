@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <title>More information about the interface</title>
+</head>
+<body>
+<div>
+<ul>
+    <li><a href="#More_Info">Altre informazioni su come programmare l'interfaccia</a>
+      <ul>
+        <li><a href="#Complete_List">Lista completa delle interfacce</a></li>
+        <li><a href="#Capacities">Capacit&agrave; della libreria</a></li>
+        <li><a href="#Open_Files">Apertura files</a></li>
+        <li><a href="#Open_Buffers">Buffer di apertura</a></li>
+        <li><a href="#Format">Formato dei testi</a></li>
+        <li><a href="#Get">Ottenere un oggetto specifico</a></li>
+        <li><a href="#Set">Impostare un oggetto specifico</a></li>
+        <li><a href="#State">Stato della libreria</a></li>
+        <li><a href="#Close">Chiusura files</a></li>
+        <li><a href="#Save">Salvataggio files</a></li>
+        <li><a href="#Language">Lingua</a></li>
+        <li><a href="#Other">Altro</a></li>
+      </ul>
+ </li>
+</ul>
+</div>
+
+<h1><a name="More_Info"></a>Altre informazioni su come programmare l'interfaccia</h1>
+<h2><a name="Complete_List"></a>Lista completa delle interfacce</h2>
+<a href="Doxygen/index.html">Lista esaustive delle interfacce di MediaInfo</a>.
+<h2><a name="Capacities"></a>Capacit&agrave; della libreria</h2>
+<code>MediaInfo::Option("Info_Version")</code><br/>
+<code>MediaInfo::Option("Info_Parameters")</code><br/>
+<code>MediaInfo::Option("Info_Parameters_CSV")</code><br/>
+<code>MediaInfo::Option("Info_Capacities")</code><br/>
+<code>MediaInfo::Option("Info_Codecs")</code><br/>
+
+<h2><a name="Open_Files"></a>Apertura files</h2>
+<code>MediaInfo::Open("**FILENAME**")</code><br/>
+<code>MediaInfoList::Open("**FILENAMES**")</code><br/>
+
+<h2><a name="Open_Buffers"></a>Buffer di apertura</h2>
+<code>MediaInfo::Open("**Begin**", "**Begin_Size**", "**End**", "**End_Size**")</code><br/>
+<code>MediaInfoList::Open("**Begin**", "**Begin_Size**", "**End**", "**End_Size**")</code><br/>
+
+<h2><a name="Format"></a>Formato dei testi</h2>
+<h3>Come ottenere un output</h3>
+<code>MediaInfo::Inform(Option)</code><br/>
+
+<h3>Personalizzazione</h3>
+<code>MediaInfo::Option("Inform", "**YOUR_TEXT**")</code><br/>
+<code>MediaInfo::Option("Inform_Get")</code><br/>
+<code>MediaInfo::Option("Complete")</code><br/>
+<code>MediaInfo::Option("Complete_Get")</code><br/>
+
+<h2><a name="Get"></a>Ottenere un oggetto specifico</h2>
+<code>MediaInfo::Get("**StreamKind**, **StreamNumber**, **Parameter**, **InfoKind**")</code><br/>
+<code>MediaInfo::Count_Get("**StreamKind**, **StreamNumber**")</code><br/>
+<br/>
+Nota : Se **StreamNumber** &egrave; uguale a -1, si otterr&agrave; il numero di
+flussi di quel tipo (equivalente, ma pi&ugrave; veloce, a <code>MediaInfo::Get("**StreamKind**,
+0, "StreamCount", Info_Text)</code>)<br/>
+<br/>
+Nota : Solo per l'interfaccia "C" (DLL):<br/>
+<code>MediaInfo_GetI</code> pu&ograve; rimpiazzare <code>MediaInfo_Get</code>
+for **Parameter** con un Integer, perch&eacute; C non supporta l'operator overloading<br/>
+
+<h2><a name="Set"></a>Impostare un oggetto specifico</h2>
+Nota : non &egrave; stato ancora implementato, non utilizzatelo!<br/>
+
+<h2><a name="State"></a>Stato della libreria</h2>
+Nota : non &egrave; stato ancora implementato, non utilizzatelo!<br/>
+
+<h2><a name="Close"></a>Chiusura files</h2>
+<code>MediaInfo::Close()</code><br/>
+
+<h2><a name="Save"></a>Salvataggio files</h2>
+Nota : non &egrave; stato ancora implementato, non utilizzatelo!<br/>
+
+<h2><a name="Language"></a>Lingua</h2>
+<code>MediaInfo::Option("Language")</code><br/>
+<code>MediaInfo::Option("Language_Get")</code><br/>
+<code>MediaInfo::Option("Language_Update")</code><br/>
+
+<h2><a name="Other"></a>Altro</h2>
+<h3>Specifico a C++ : opzioni statiche</h3>
+Nota agli sviluppatori C++ : opzioni indipendenti da file possono essere impostatesenza
+creare un oggetto :<br/>
+<code>MediaInfo::Option_Static(...)</code><br/>
+
+<h3>Connessione internet</h3>
+<code>MediaInfo::Option("Internet")</code><br/>
+
+<h3>Aggiornamento via internet</h3>
+Nota : non &egrave; stato ancora implementato, non utilizzatelo!
+</body>
+</html>

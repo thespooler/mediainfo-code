@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ebml (MSVC)</title>
+</head>
+<body>
+<h1>Ebml (MSVC)</h1>
+<h2>Download</h2>
+<ul>
+ <li>Download <code><a href="http://dl.matroska.org/downloads/libebml/libebml-0.7.5.tar.bz2">http://dl.matroska.org/downloads/libebml/libebml-0.7.5.tar.bz2</a></code></li>
+</ul>
+
+<h2>Adaptation</h2>
+<ul>
+ <li>Add <code>%SOURCE_HOME%/src/platform/win32/*.h</code> in <code>%SOURCE_HOME%/ebml/</code></li>
+</ul>
+
+<h2>Project</h2>
+<ul>
+ <li>Open <code>%SOURCE_HOME%/make/vc7/lib/libebml.v71</code></li>
+ <li>Add (<code>%SOURCE_HOME%/src/platform/win32/</code>) : All .cpp files</li>
+</ul>
+
+<h2>Project Options</h2>
+<ul>
+ <li>C/C++, Language, wchar_t : <code>Yes</code></li>
+</ul>
+
+<h2>Compile</h2>
+<ul>
+ <li>Build <code>Release</code></li>
+</ul>
+
+<h2>Install</h2>
+<ul>
+ <li>Copy <code>%SOURCE_HOME%/Ebml</code> to <code>Shared/Include/Ebml</code></li>
+ <li>Copy <code>%SOURCE_HOME%/make/vc7/lib/libebml.lib</code> to <code>Shared/Library/MSVC/Ebml.lib</code><br/>
+ </li>
+</ul>
+</body>
+</html>

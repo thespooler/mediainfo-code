@@ -1,0 +1,319 @@
+Index: Source/MACLib/APECompressCreate.cpp
+===================================================================
+RCS file: C:/temp/MACLib/Source/MACLib/APECompressCreate.cpp,v
+retrieving revision 1.1
+diff -u -r1.1 APECompressCreate.cpp
+--- Source/MACLib/APECompressCreate.cpp	3 Sep 2004 20:19:38 -0000	1.1
++++ Source/MACLib/APECompressCreate.cpp	3 Sep 2004 20:27:22 -0000
+@@ -1,5 +1,5 @@
+ #include "All.h"
+-#include "IO.h"
++#include IO_HEADER_FILE
+ #include "APECompressCreate.h"
+ 
+ #include "APECompressCore.h"
+Index: Source/MACLib/APEHeader.cpp
+===================================================================
+RCS file: C:/temp/MACLib/Source/MACLib/APEHeader.cpp,v
+retrieving revision 1.1
+diff -u -r1.1 APEHeader.cpp
+--- Source/MACLib/APEHeader.cpp	3 Sep 2004 20:19:38 -0000	1.1
++++ Source/MACLib/APEHeader.cpp	3 Sep 2004 20:28:20 -0000
+@@ -2,6 +2,7 @@
+ #include "APEHeader.h"
+ #include "MACLib.h"
+ #include "APEInfo.h"
++#include IO_HEADER_FILE
+ 
+ // TODO: should push and pop the file position
+ 
+Index: Source/MACLib/APELink.cpp
+===================================================================
+RCS file: C:/temp/MACLib/Source/MACLib/APELink.cpp,v
+retrieving revision 1.1
+diff -u -r1.1 APELink.cpp
+--- Source/MACLib/APELink.cpp	3 Sep 2004 20:19:38 -0000	1.1
++++ Source/MACLib/APELink.cpp	3 Sep 2004 20:37:24 -0000
+@@ -53,10 +53,10 @@
+     if (pData != NULL)
+     {
+         // parse out the information
+-        char * pHeader = strstr(pData, APE_LINK_HEADER);
+-        char * pImageFile = strstr(pData, APE_LINK_IMAGE_FILE_TAG);
+-        char * pStartBlock = strstr(pData, APE_LINK_START_BLOCK_TAG);
+-        char * pFinishBlock = strstr(pData, APE_LINK_FINISH_BLOCK_TAG);
++        const char * pHeader = strstr(pData, APE_LINK_HEADER);
++        const char * pImageFile = strstr(pData, APE_LINK_IMAGE_FILE_TAG);
++        const char * pStartBlock = strstr(pData, APE_LINK_START_BLOCK_TAG);
++        const char * pFinishBlock = strstr(pData, APE_LINK_FINISH_BLOCK_TAG);
+ 
+         if (pHeader && pImageFile && pStartBlock && pFinishBlock)
+         {
+@@ -71,7 +71,7 @@
+                 
+                 // get the path
+                 char cImageFile[MAX_PATH + 1]; int nIndex = 0;
+-                char * pImageCharacter = &pImageFile[strlen(APE_LINK_IMAGE_FILE_TAG)];
++                const char * pImageCharacter = &pImageFile[strlen(APE_LINK_IMAGE_FILE_TAG)];
+                 while ((*pImageCharacter != 0) && (*pImageCharacter != '\r') && (*pImageCharacter != '\n'))
+                     cImageFile[nIndex++] = *pImageCharacter++;
+                 cImageFile[nIndex] = 0;
+Index: Source/MACLib/APESimple.cpp
+===================================================================
+RCS file: C:/temp/MACLib/Source/MACLib/APESimple.cpp,v
+retrieving revision 1.1
+diff -u -r1.1 APESimple.cpp
+--- Source/MACLib/APESimple.cpp	3 Sep 2004 20:19:38 -0000	1.1
++++ Source/MACLib/APESimple.cpp	3 Sep 2004 20:49:07 -0000
+@@ -31,7 +31,10 @@
+ {
+     CSmartPtr<str_utf16> spInputFile(GetUTF16FromANSI(pInputFilename), TRUE);
+     CSmartPtr<str_utf16> spOutputFile(GetUTF16FromANSI(pOutputFilename), TRUE);
+-    return DecompressFileW(spInputFile, pOutputFilename ? spOutputFile : NULL, pPercentageDone, ProgressCallback, pKillFlag);
++    if (pOutputFilename)
++        return DecompressFileW(spInputFile, spOutputFile, pPercentageDone, ProgressCallback, pKillFlag);
++    else
++        return DecompressFileW(spInputFile, NULL, pPercentageDone, ProgressCallback, pKillFlag);
+ }
+ 
+ int __stdcall ConvertFile(const str_ansi * pInputFilename, const str_ansi * pOutputFilename, int nCompressionLevel, int * pPercentageDone, APE_PROGRESS_CALLBACK ProgressCallback, int * pKillFlag)
+Index: Source/MACLib/BitArray.cpp
+===================================================================
+RCS file: C:/temp/MACLib/Source/MACLib/BitArray.cpp,v
+retrieving revision 1.1
+diff -u -r1.1 BitArray.cpp
+--- Source/MACLib/BitArray.cpp	3 Sep 2004 20:19:38 -0000	1.1
++++ Source/MACLib/BitArray.cpp	3 Sep 2004 20:50:23 -0000
+@@ -8,7 +8,7 @@
+ /************************************************************************************
+ Declares
+ ************************************************************************************/
+-#define BIT_ARRAY_ELEMENTS            (4096)                        // the number of elements in the bit array (4 MB)
++const unsigned int BIT_ARRAY_ELEMENTS= 4096;                      // the number of elements in the bit array (4 MB)
+ #define BIT_ARRAY_BYTES                (BIT_ARRAY_ELEMENTS * 4)    // the number of bytes in the bit array
+ #define BIT_ARRAY_BITS                (BIT_ARRAY_BYTES    * 8)    // the number of bits in the bit array
+ 
+Index: Source/MACLib/BitArray.h
+===================================================================
+RCS file: C:/temp/MACLib/Source/MACLib/BitArray.h,v
+retrieving revision 1.1
+diff -u -r1.1 BitArray.h
+--- Source/MACLib/BitArray.h	3 Sep 2004 20:19:38 -0000	1.1
++++ Source/MACLib/BitArray.h	3 Sep 2004 20:27:36 -0000
+@@ -1,7 +1,7 @@
+ #ifndef APE_BITARRAY_H
+ #define APE_BITARRAY_H
+ 
+-#include "IO.h"
++#include IO_HEADER_FILE
+ #include "MD5.h"
+ 
+ //#define BUILD_RANGE_TABLE
+Index: Source/MACLib/MD5.cpp
+===================================================================
+RCS file: C:/temp/MACLib/Source/MACLib/MD5.cpp,v
+retrieving revision 1.1
+diff -u -r1.1 MD5.cpp
+--- Source/MACLib/MD5.cpp	3 Sep 2004 20:19:38 -0000	1.1
++++ Source/MACLib/MD5.cpp	3 Sep 2004 21:19:58 -0000
+@@ -50,9 +50,10 @@
+    Assembler versions of __MD5Transform, MD5Init and MD5Update
+    currently exist for x86 and little-endian ARM.
+    For other targets, we need to use the C versions below.
++   (exception : for i386 and BORLAND compiler, we need to use C versions below too)
+ */
+ 
+-#if !(defined (__i386__) || ((defined (__arm__) && (__BYTE_ORDER == __LITTLE_ENDIAN))))
++#if !(defined (__i386__) || ((defined (__arm__) && (__BYTE_ORDER == __LITTLE_ENDIAN)))) || defined (__BORLANDC__)
+ 
+ /*
+    Initialise the MD5 context.
+Index: Source/MACLib/NNFilter.cpp
+===================================================================
+RCS file: C:/temp/MACLib/Source/MACLib/NNFilter.cpp,v
+retrieving revision 1.1
+diff -u -r1.1 NNFilter.cpp
+--- Source/MACLib/NNFilter.cpp	3 Sep 2004 20:19:38 -0000	1.1
++++ Source/MACLib/NNFilter.cpp	3 Sep 2004 21:28:34 -0000
+@@ -1,7 +1,9 @@
+ #include "All.h"
+ #include "GlobalFunctions.h"
+ #include "NNFilter.h"
+-#include "Assembly/Assembly.h"
++#ifdef ENABLE_ASSEMBLY
++    #include "Assembly/Assembly.h"
++#endif // ENABLE_ASSEMBLY
+ 
+ CNNFilter::CNNFilter(int nOrder, int nShift, int nVersion)
+ {
+@@ -10,8 +12,10 @@
+     m_nShift = nShift;
+     m_nVersion = nVersion;
+     
++#ifdef ENABLE_ASSEMBLY
+     m_bMMXAvailable = GetMMXAvailable();
+-    
++#endif
++
+     m_rbInput.Create(NN_WINDOW_ELEMENTS, m_nOrder);
+     m_rbDeltaM.Create(NN_WINDOW_ELEMENTS, m_nOrder);
+     m_paryM = new short [m_nOrder];
+@@ -41,18 +45,22 @@
+ 
+     // figure a dot product
+     int nDotProduct;
++#ifdef ENABLE_ASSEMBLY
+     if (m_bMMXAvailable)
+         nDotProduct = CalculateDotProduct(&m_rbInput[-m_nOrder], &m_paryM[0], m_nOrder);
+     else
++#endif
+         nDotProduct = CalculateDotProductNoMMX(&m_rbInput[-m_nOrder], &m_paryM[0], m_nOrder);
+ 
+     // calculate the output
+     int nOutput = nInput - ((nDotProduct + (1 << (m_nShift - 1))) >> m_nShift);
+ 
+     // adapt
++#ifdef ENABLE_ASSEMBLY
+     if (m_bMMXAvailable)
+         Adapt(&m_paryM[0], &m_rbDeltaM[-m_nOrder], -nOutput, m_nOrder);
+     else
++#endif
+         AdaptNoMMX(&m_paryM[0], &m_rbDeltaM[-m_nOrder], nOutput, m_nOrder);
+ 
+     int nTempABS = abs(nInput);
+@@ -84,15 +92,19 @@
+     // figure a dot product
+     int nDotProduct;
+ 
++#ifdef ENABLE_ASSEMBLY
+     if (m_bMMXAvailable)
+         nDotProduct = CalculateDotProduct(&m_rbInput[-m_nOrder], &m_paryM[0], m_nOrder);
+     else
++#endif
+         nDotProduct = CalculateDotProductNoMMX(&m_rbInput[-m_nOrder], &m_paryM[0], m_nOrder);
+     
+     // adapt
++#ifdef ENABLE_ASSEMBLY
+     if (m_bMMXAvailable)
+         Adapt(&m_paryM[0], &m_rbDeltaM[-m_nOrder], -nInput, m_nOrder);
+     else
++#endif
+         AdaptNoMMX(&m_paryM[0], &m_rbDeltaM[-m_nOrder], nInput, m_nOrder);
+ 
+     // store the output value
+Index: Source/MACLib/UnBitArray.cpp
+===================================================================
+RCS file: C:/temp/MACLib/Source/MACLib/UnBitArray.cpp,v
+retrieving revision 1.1
+diff -u -r1.1 UnBitArray.cpp
+--- Source/MACLib/UnBitArray.cpp	3 Sep 2004 20:19:39 -0000	1.1
++++ Source/MACLib/UnBitArray.cpp	3 Sep 2004 20:50:53 -0000
+@@ -108,7 +108,7 @@
+     if (m_nVersion >= 3990)
+     {
+         // figure the pivot value
+-        int nPivotValue = max(BitArrayState.nKSum / 32, 1);
++        int nPivotValue = max(BitArrayState.nKSum / 32, (unsigned int)1);
+         
+         // get the overflow
+         int nOverflow = 0;
+Index: Source/MACLib/WAVInputSource.h
+===================================================================
+RCS file: C:/temp/MACLib/Source/MACLib/WAVInputSource.h,v
+retrieving revision 1.1
+diff -u -r1.1 WAVInputSource.h
+--- Source/MACLib/WAVInputSource.h	3 Sep 2004 20:19:39 -0000	1.1
++++ Source/MACLib/WAVInputSource.h	3 Sep 2004 20:27:46 -0000
+@@ -1,7 +1,7 @@
+ #ifndef APE_WAVINPUTSOURCE_H
+ #define APE_WAVINPUTSOURCE_H
+ 
+-#include "IO.h"
++#include IO_HEADER_FILE
+ 
+ /*************************************************************************************
+ CInputSource - base input format class (allows multiple format support)
+Index: Source/Shared/All.h
+===================================================================
+RCS file: C:/temp/MACLib/Source/Shared/All.h,v
+retrieving revision 1.1
+diff -u -r1.1 All.h
+--- Source/Shared/All.h	3 Sep 2004 20:19:41 -0000	1.1
++++ Source/Shared/All.h	3 Sep 2004 21:12:44 -0000
+@@ -51,6 +51,11 @@
+ 
+ #define BACKWARDS_COMPATIBILITY
+ 
++#ifdef __BORLANDC__
++    #undef ENABLE_ASSEMBLY
++    #undef BACKWARDS_COMPATIBILITY
++#endif
++
+ #define ENABLE_COMPRESSION_MODE_FAST
+ #define ENABLE_COMPRESSION_MODE_NORMAL
+ #define ENABLE_COMPRESSION_MODE_HIGH
+@@ -156,9 +161,12 @@
+ #define UNROLL_15_TIMES(MACRO) MACRO(0) MACRO(1) MACRO(2) MACRO(3) MACRO(4) MACRO(5) MACRO(6) MACRO(7) MACRO(8) MACRO(9) MACRO(10) MACRO(11) MACRO(12) MACRO(13) MACRO(14)
+ #define UNROLL_16_TIMES(MACRO) MACRO(0) MACRO(1) MACRO(2) MACRO(3) MACRO(4) MACRO(5) MACRO(6) MACRO(7) MACRO(8) MACRO(9) MACRO(10) MACRO(11) MACRO(12) MACRO(13) MACRO(14) MACRO(15)
+ #define UNROLL_64_TIMES(MACRO) MACRO(0) MACRO(1) MACRO(2) MACRO(3) MACRO(4) MACRO(5) MACRO(6) MACRO(7) MACRO(8) MACRO(9) MACRO(10) MACRO(11) MACRO(12) MACRO(13) MACRO(14) MACRO(15) MACRO(16) MACRO(17) MACRO(18) MACRO(19) MACRO(20) MACRO(21) MACRO(22) MACRO(23) MACRO(24) MACRO(25) MACRO(26) MACRO(27) MACRO(28) MACRO(29) MACRO(30) MACRO(31) MACRO(32) MACRO(33) MACRO(34) MACRO(35) MACRO(36) MACRO(37) MACRO(38) MACRO(39) MACRO(40) MACRO(41) MACRO(42) MACRO(43) MACRO(44) MACRO(45) MACRO(46) MACRO(47) MACRO(48) MACRO(49) MACRO(50) MACRO(51) MACRO(52) MACRO(53) MACRO(54) MACRO(55) MACRO(56) MACRO(57) MACRO(58) MACRO(59) MACRO(60) MACRO(61) MACRO(62) MACRO(63)
+-#define UNROLL_128_TIMES(MACRO) MACRO(0) MACRO(1) MACRO(2) MACRO(3) MACRO(4) MACRO(5) MACRO(6) MACRO(7) MACRO(8) MACRO(9) MACRO(10) MACRO(11) MACRO(12) MACRO(13) MACRO(14) MACRO(15) MACRO(16) MACRO(17) MACRO(18) MACRO(19) MACRO(20) MACRO(21) MACRO(22) MACRO(23) MACRO(24) MACRO(25) MACRO(26) MACRO(27) MACRO(28) MACRO(29) MACRO(30) MACRO(31) MACRO(32) MACRO(33) MACRO(34) MACRO(35) MACRO(36) MACRO(37) MACRO(38) MACRO(39) MACRO(40) MACRO(41) MACRO(42) MACRO(43) MACRO(44) MACRO(45) MACRO(46) MACRO(47) MACRO(48) MACRO(49) MACRO(50) MACRO(51) MACRO(52) MACRO(53) MACRO(54) MACRO(55) MACRO(56) MACRO(57) MACRO(58) MACRO(59) MACRO(60) MACRO(61) MACRO(62) MACRO(63) MACRO(64) MACRO(65) MACRO(66) MACRO(67) MACRO(68) MACRO(69) MACRO(70) MACRO(71) MACRO(72) MACRO(73) MACRO(74) MACRO(75) MACRO(76) MACRO(77) MACRO(78) MACRO(79) MACRO(80) MACRO(81) MACRO(82) MACRO(83) MACRO(84) MACRO(85) MACRO(86) MACRO(87) MACRO(88) MACRO(89) MACRO(90) MACRO(91) MACRO(92) MACRO(93) MACRO(94) MACRO(95) MACRO(96) MACRO(97) MACRO(98) MACRO(99) MACRO(100) MACRO(101) MACRO(102) MACRO(103) MACRO(104) MACRO(105) MACRO(106) MACRO(107) MACRO(108) MACRO(109) MACRO(110) MACRO(111) MACRO(112) MACRO(113) MACRO(114) MACRO(115) MACRO(116) MACRO(117) MACRO(118) MACRO(119) MACRO(120) MACRO(121) MACRO(122) MACRO(123) MACRO(124) MACRO(125) MACRO(126) MACRO(127)
+-#define UNROLL_256_TIMES(MACRO) MACRO(0) MACRO(1) MACRO(2) MACRO(3) MACRO(4) MACRO(5) MACRO(6) MACRO(7) MACRO(8) MACRO(9) MACRO(10) MACRO(11) MACRO(12) MACRO(13) MACRO(14) MACRO(15) MACRO(16) MACRO(17) MACRO(18) MACRO(19) MACRO(20) MACRO(21) MACRO(22) MACRO(23) MACRO(24) MACRO(25) MACRO(26) MACRO(27) MACRO(28) MACRO(29) MACRO(30) MACRO(31) MACRO(32) MACRO(33) MACRO(34) MACRO(35) MACRO(36) MACRO(37) MACRO(38) MACRO(39) MACRO(40) MACRO(41) MACRO(42) MACRO(43) MACRO(44) MACRO(45) MACRO(46) MACRO(47) MACRO(48) MACRO(49) MACRO(50) MACRO(51) MACRO(52) MACRO(53) MACRO(54) MACRO(55) MACRO(56) MACRO(57) MACRO(58) MACRO(59) MACRO(60) MACRO(61) MACRO(62) MACRO(63) MACRO(64) MACRO(65) MACRO(66) MACRO(67) MACRO(68) MACRO(69) MACRO(70) MACRO(71) MACRO(72) MACRO(73) MACRO(74) MACRO(75) MACRO(76) MACRO(77) MACRO(78) MACRO(79) MACRO(80) MACRO(81) MACRO(82) MACRO(83) MACRO(84) MACRO(85) MACRO(86) MACRO(87) MACRO(88) MACRO(89) MACRO(90) MACRO(91) MACRO(92) MACRO(93) MACRO(94) MACRO(95) MACRO(96) MACRO(97) MACRO(98) MACRO(99) MACRO(100) MACRO(101) MACRO(102) MACRO(103) MACRO(104) MACRO(105) MACRO(106) MACRO(107) MACRO(108) MACRO(109) MACRO(110) MACRO(111) MACRO(112) MACRO(113) MACRO(114) MACRO(115) MACRO(116) MACRO(117) MACRO(118) MACRO(119) MACRO(120) MACRO(121) MACRO(122) MACRO(123) MACRO(124) MACRO(125) MACRO(126) MACRO(127)    \
+-    MACRO(128) MACRO(129) MACRO(130) MACRO(131) MACRO(132) MACRO(133) MACRO(134) MACRO(135) MACRO(136) MACRO(137) MACRO(138) MACRO(139) MACRO(140) MACRO(141) MACRO(142) MACRO(143) MACRO(144) MACRO(145) MACRO(146) MACRO(147) MACRO(148) MACRO(149) MACRO(150) MACRO(151) MACRO(152) MACRO(153) MACRO(154) MACRO(155) MACRO(156) MACRO(157) MACRO(158) MACRO(159) MACRO(160) MACRO(161) MACRO(162) MACRO(163) MACRO(164) MACRO(165) MACRO(166) MACRO(167) MACRO(168) MACRO(169) MACRO(170) MACRO(171) MACRO(172) MACRO(173) MACRO(174) MACRO(175) MACRO(176) MACRO(177) MACRO(178) MACRO(179) MACRO(180) MACRO(181) MACRO(182) MACRO(183) MACRO(184) MACRO(185) MACRO(186) MACRO(187) MACRO(188) MACRO(189) MACRO(190) MACRO(191) MACRO(192) MACRO(193) MACRO(194) MACRO(195) MACRO(196) MACRO(197) MACRO(198) MACRO(199) MACRO(200) MACRO(201) MACRO(202) MACRO(203) MACRO(204) MACRO(205) MACRO(206) MACRO(207) MACRO(208) MACRO(209) MACRO(210) MACRO(211) MACRO(212) MACRO(213) MACRO(214) MACRO(215) MACRO(216) MACRO(217) MACRO(218) MACRO(219) MACRO(220) MACRO(221) MACRO(222) MACRO(223) MACRO(224) MACRO(225) MACRO(226) MACRO(227) MACRO(228) MACRO(229) MACRO(230) MACRO(231) MACRO(232) MACRO(233) MACRO(234) MACRO(235) MACRO(236) MACRO(237) MACRO(238) MACRO(239) MACRO(240) MACRO(241) MACRO(242) MACRO(243) MACRO(244) MACRO(245) MACRO(246) MACRO(247) MACRO(248) MACRO(249) MACRO(250) MACRO(251) MACRO(252) MACRO(253) MACRO(254) MACRO(255)
++#define UNROLL_128_TIMES(MACRO) MACRO(0) MACRO(1) MACRO(2) MACRO(3) MACRO(4) MACRO(5) MACRO(6) MACRO(7) MACRO(8) MACRO(9) MACRO(10) MACRO(11) MACRO(12) MACRO(13) MACRO(14) MACRO(15) MACRO(16) MACRO(17) MACRO(18) MACRO(19) MACRO(20) MACRO(21) MACRO(22) MACRO(23) MACRO(24) MACRO(25) MACRO(26) MACRO(27) MACRO(28) MACRO(29) MACRO(30) MACRO(31) MACRO(32) MACRO(33) MACRO(34) MACRO(35) MACRO(36) MACRO(37) MACRO(38) MACRO(39) MACRO(40) MACRO(41) MACRO(42) MACRO(43) MACRO(44) MACRO(45) MACRO(46) MACRO(47) MACRO(48) MACRO(49) MACRO(50) MACRO(51) MACRO(52) MACRO(53) MACRO(54) MACRO(55) MACRO(56) MACRO(57) MACRO(58) MACRO(59) MACRO(60) MACRO(61) MACRO(62) MACRO(63)    \
++    MACRO(64) MACRO(65) MACRO(66) MACRO(67) MACRO(68) MACRO(69) MACRO(70) MACRO(71) MACRO(72) MACRO(73) MACRO(74) MACRO(75) MACRO(76) MACRO(77) MACRO(78) MACRO(79) MACRO(80) MACRO(81) MACRO(82) MACRO(83) MACRO(84) MACRO(85) MACRO(86) MACRO(87) MACRO(88) MACRO(89) MACRO(90) MACRO(91) MACRO(92) MACRO(93) MACRO(94) MACRO(95) MACRO(96) MACRO(97) MACRO(98) MACRO(99) MACRO(100) MACRO(101) MACRO(102) MACRO(103) MACRO(104) MACRO(105) MACRO(106) MACRO(107) MACRO(108) MACRO(109) MACRO(110) MACRO(111) MACRO(112) MACRO(113) MACRO(114) MACRO(115) MACRO(116) MACRO(117) MACRO(118) MACRO(119) MACRO(120) MACRO(121) MACRO(122) MACRO(123) MACRO(124) MACRO(125) MACRO(126) MACRO(127)
++#define UNROLL_256_TIMES(MACRO) MACRO(0) MACRO(1) MACRO(2) MACRO(3) MACRO(4) MACRO(5) MACRO(6) MACRO(7) MACRO(8) MACRO(9) MACRO(10) MACRO(11) MACRO(12) MACRO(13) MACRO(14) MACRO(15) MACRO(16) MACRO(17) MACRO(18) MACRO(19) MACRO(20) MACRO(21) MACRO(22) MACRO(23) MACRO(24) MACRO(25) MACRO(26) MACRO(27) MACRO(28) MACRO(29) MACRO(30) MACRO(31) MACRO(32) MACRO(33) MACRO(34) MACRO(35) MACRO(36) MACRO(37) MACRO(38) MACRO(39) MACRO(40) MACRO(41) MACRO(42) MACRO(43) MACRO(44) MACRO(45) MACRO(46) MACRO(47) MACRO(48) MACRO(49) MACRO(50) MACRO(51) MACRO(52) MACRO(53) MACRO(54) MACRO(55) MACRO(56) MACRO(57) MACRO(58) MACRO(59) MACRO(60) MACRO(61) MACRO(62) MACRO(63)    \
++    MACRO(64) MACRO(65) MACRO(66) MACRO(67) MACRO(68) MACRO(69) MACRO(70) MACRO(71) MACRO(72) MACRO(73) MACRO(74) MACRO(75) MACRO(76) MACRO(77) MACRO(78) MACRO(79) MACRO(80) MACRO(81) MACRO(82) MACRO(83) MACRO(84) MACRO(85) MACRO(86) MACRO(87) MACRO(88) MACRO(89) MACRO(90) MACRO(91) MACRO(92) MACRO(93) MACRO(94) MACRO(95) MACRO(96) MACRO(97) MACRO(98) MACRO(99) MACRO(100) MACRO(101) MACRO(102) MACRO(103) MACRO(104) MACRO(105) MACRO(106) MACRO(107) MACRO(108) MACRO(109) MACRO(110) MACRO(111) MACRO(112) MACRO(113) MACRO(114) MACRO(115) MACRO(116) MACRO(117) MACRO(118) MACRO(119) MACRO(120) MACRO(121) MACRO(122) MACRO(123) MACRO(124) MACRO(125) MACRO(126) MACRO(127)    \
++    MACRO(128) MACRO(129) MACRO(130) MACRO(131) MACRO(132) MACRO(133) MACRO(134) MACRO(135) MACRO(136) MACRO(137) MACRO(138) MACRO(139) MACRO(140) MACRO(141) MACRO(142) MACRO(143) MACRO(144) MACRO(145) MACRO(146) MACRO(147) MACRO(148) MACRO(149) MACRO(150) MACRO(151) MACRO(152) MACRO(153) MACRO(154) MACRO(155) MACRO(156) MACRO(157) MACRO(158) MACRO(159) MACRO(160) MACRO(161) MACRO(162) MACRO(163) MACRO(164) MACRO(165) MACRO(166) MACRO(167) MACRO(168) MACRO(169) MACRO(170) MACRO(171) MACRO(172) MACRO(173) MACRO(174) MACRO(175) MACRO(176) MACRO(177) MACRO(178) MACRO(179) MACRO(180) MACRO(181) MACRO(182) MACRO(183) MACRO(184) MACRO(185) MACRO(186) MACRO(187) MACRO(188) MACRO(189) MACRO(190) MACRO(191)    \
++    MACRO(192) MACRO(193) MACRO(194) MACRO(195) MACRO(196) MACRO(197) MACRO(198) MACRO(199) MACRO(200) MACRO(201) MACRO(202) MACRO(203) MACRO(204) MACRO(205) MACRO(206) MACRO(207) MACRO(208) MACRO(209) MACRO(210) MACRO(211) MACRO(212) MACRO(213) MACRO(214) MACRO(215) MACRO(216) MACRO(217) MACRO(218) MACRO(219) MACRO(220) MACRO(221) MACRO(222) MACRO(223) MACRO(224) MACRO(225) MACRO(226) MACRO(227) MACRO(228) MACRO(229) MACRO(230) MACRO(231) MACRO(232) MACRO(233) MACRO(234) MACRO(235) MACRO(236) MACRO(237) MACRO(238) MACRO(239) MACRO(240) MACRO(241) MACRO(242) MACRO(243) MACRO(244) MACRO(245) MACRO(246) MACRO(247) MACRO(248) MACRO(249) MACRO(250) MACRO(251) MACRO(252) MACRO(253) MACRO(254) MACRO(255)
+ 
+ /*****************************************************************************************
+ Error Codes
+@@ -231,5 +239,13 @@
+     { ERROR_BAD_PARAMETER                         , "bad parameter" },                          \
+     { ERROR_APE_COMPRESS_TOO_MUCH_DATA            , "APE compress too much data" },             \
+     { ERROR_UNDEFINED                             , "undefined" },                              \
++    
++#ifdef __BORLANDC__
++#define wcsnicmp wcsncmpi
++#define _strnicmp strnicmp
++#define wcsicmp _wcsicmp
++#define min(a, b)  (((a) < (b)) ? (a) : (b))
++#define max(a, b)  (((a) > (b)) ? (a) : (b))
++#endif // #ifdef __BORLANDC__
+ 
+ #endif // #ifndef APE_ALL_H
+Index: Source/Shared/CharacterHelper.cpp
+===================================================================
+RCS file: C:/temp/MACLib/Source/Shared/CharacterHelper.cpp,v
+retrieving revision 1.1
+diff -u -r1.1 CharacterHelper.cpp
+--- Source/Shared/CharacterHelper.cpp	3 Sep 2004 20:19:41 -0000	1.1
++++ Source/Shared/CharacterHelper.cpp	3 Sep 2004 20:51:15 -0000
+@@ -103,7 +103,8 @@
+     // get the size(s)
+     int nCharacters = wcslen(pUTF16);
+     int nUTF8Bytes = 0;
+-    for (int z = 0; z < nCharacters; z++)
++    int z;
++    for (z = 0; z < nCharacters; z++)
+     {
+         if (pUTF16[z] < 0x0080)
+             nUTF8Bytes += 1;
+Index: Source/Shared/GlobalFunctions.cpp
+===================================================================
+RCS file: C:/temp/MACLib/Source/Shared/GlobalFunctions.cpp,v
+retrieving revision 1.1
+diff -u -r1.1 GlobalFunctions.cpp
+--- Source/Shared/GlobalFunctions.cpp	3 Sep 2004 20:19:41 -0000	1.1
++++ Source/Shared/GlobalFunctions.cpp	3 Sep 2004 20:51:55 -0000
+@@ -72,8 +72,8 @@
+ 
+     BOOL bFound = FALSE;
+ 
+-    WIN32_FIND_DATA WFD;
+-    HANDLE hFind = FindFirstFile(pFilename, &WFD);
++    WIN32_FIND_DATAW WFD;
++    HANDLE hFind = FindFirstFileW(pFilename, &WFD);
+     if (hFind != INVALID_HANDLE_VALUE)
+     {
+         bFound = TRUE;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MediaInfo third party library installation / MACLib / BCB</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+<body>
+
+<h1>Download</h1>
+<ul>
+    <li>Download <code><a href="http://files.monkeysaudio.com/MAC_SDK_411.zip">http://files.monkeysaudio.com/MAC_SDK_411.zip</a></code></li>
+</ul>
+
+<h1>Bug correction</h1>
+<ul>
+    <li>Apply this <a href="MACLib_BCB.patch">patch</a></li>
+</ul>
+
+<h1>Project</h1>
+<ul>
+    <li>Create new project (Library)</li>
+    <li>Add (<code>%SOURCE_HOME%/Source/MACLib</code>) : All .cpp files</li>
+    <li>Add (<code>%SOURCE_HOME%/Source/Shared</code>) : All .cpp files except <code>APEInfoDialog.cpp</code> and <code>WAVInfoDialog.cpp</code></li>
+</ul>
+
+<h1>Project Options</h1>
+<ul>
+    <li>Compiler : <code>Release</code></li>
+    <li>TLib, Page Size : <code>0x0020</code></li>
+    <li>Directories, include : add <code>%SOURCE_HOME%/</code></li>
+    <li>Directories, Conditional : <code>WIN32;_WIN32</code></li>
+</ul>
+
+<h1>Compile</h1>
+<ul>
+    <li>Ctrl+F9</li>
+</ul>
+
+<h1>Install</h1>
+<ul>
+    <li>Copy <code>%SOURCE_HOME%/Shared</code> to <code>Shared/Include/MACLib</code></li>
+    <li>Copy <code>%Your_Project_Name%.lib</code> to <code>Shared/Library/BCB/MACLib.lib</code></li>
+</ul>
+
+</body>
+</html>

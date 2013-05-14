@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr style="vertical-align: top">
+   <td style="padding: 0px 15px 5px 5px">
+    <a href="Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png" width="457" height="367" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="First">Què és MediaInfo?</h2>
+    <strong>MediaInfo</strong> us proporciona informació tècnica quant als vostres arxius de vídeo i àudio.<br/>
+    És una aplicació de codi lliure (gratuïta i accessible al codi font).<br/>
+    <br/>
+    <a style="font-weight: bold" href="<?php echo $Link;?>">Descarregueu-la!</a><br/>
+    (versió <?php echo $Version;?><?php if (isset($Installer)) echo ', amb instal·lador i Interfície Gràfica';?><?php if(isset($OS)) echo ', per a '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    Nota 1: podeu <a href="http://sourceforge.net/project/filemodule_monitor.php?filemodule_id=90341">subscriure-us</a> o <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">veure les notes de la versió</a> a la <a href="http://sourceforge.net/projects/mediainfo">pàgina del projecte SourceForge</a><br/>
+    Nota 2: altres versions (S.O., interfície...) estan <a href="http://mediainfo.sourceforge.net/Download">disponibles</a><br/>
+    <br/>
+    podeu <a href="http://mediainfo.sourceforge.net/Help">fer una donació</a> per a donar suport en propers desenvolupaments.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>Quina informació es pot obtenir mitjançant MediaInfo?</h2>
+<ul>
+ <li>General: títol, autor, director, àlbum, nombre de pista, data, duració...</li>
+ <li>Vídeo: còdec, aspecte, imatges per segon, ràtio...</li>
+ <li>Àudio: còdec, freqüència de mostratge, canals, idioma, ràtio...</li>
+ <li>Informació estesa: idioma dels subtítols</li>
+ <li>Capítols: nombre i llistat de capítols</li>
+</ul>
+<h2>Quins formats (contenidor) suporta MediaInfo?</h2>
+<ul>
+ <li>Vídeo: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Codecs: DivX, XviD, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Àudio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Subtítols: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>Què em proporciona aquesta aplicació?</h2>
+<ul>
+ <li>Poder llegir diversos <a href="http://mediainfo.sourceforge.net/Support/Formats"> formats d'àudio i vídeo</a></li>
+ <li>Indexar la informació dels arxius en vistes diferents (text, etiquetes, arbre, HTML...)</li>
+ <li>Personalitzar aquestes vistes a voluntat</li>
+ <li>Exportar la informació com a text, CSV, HTML...</li>
+ <li>Suport des d'una Interfície gràfica, línia d'ordres, o implementació als vostres projectes mitjançant la llibreria DLL</li>
+ <li>Integració amb Windows (arrossegar i deixar anar, i menú contextual)</li>
+ <li>Internacionalització: disponible en diversos idiomes independentment del que teniu al vostre Sistema Operatiu</li>
+ <li>Ho podeu traduir a qualsevol idioma (us animeu a colaborar?)</li>
+</ul>
+   </td>
+   <td>
+<?php
+if (!isset($Donated)) include $Path."/_/Ad/InContent_336_280_Google.html";
+?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

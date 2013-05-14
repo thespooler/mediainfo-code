@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<XML_DIZ_INFO>
+	<MASTER_PAD_VERSION_INFO>
+		<MASTER_PAD_VERSION>2.01</MASTER_PAD_VERSION>
+		<MASTER_PAD_EDITOR>PADGen 2.0.1.22 http://www.padgen.org</MASTER_PAD_EDITOR>
+		<MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
+	</MASTER_PAD_VERSION_INFO>
+	<Company_Info>
+		<Company_Name>Martinez Jerome</Company_Name>
+		<Address_1>16 rue Auguste Blanqui</Address_1>
+		<Address_2 />
+		<City_Town>Gentilly</City_Town>
+		<State_Province />
+		<Zip_Postal_Code>94250</Zip_Postal_Code>
+		<Country>France</Country>
+		<Company_WebSite_URL>http://mediainfo.sourceforge.net</Company_WebSite_URL>
+		<Contact_Info>
+			<Author_First_Name>Jerome</Author_First_Name>
+			<Author_Last_Name>Martinez</Author_Last_Name>
+			<Author_Email>zenitram@users.sourceforge.net</Author_Email>
+			<Contact_First_Name>Jerome</Contact_First_Name>
+			<Contact_Last_Name>Martinez</Contact_Last_Name>
+			<Contact_Email>zenitram@users.sourceforge.net</Contact_Email>
+		</Contact_Info>
+		<Support_Info>
+			<Sales_Email>zenitram@users.sourceforge.net</Sales_Email>
+			<Support_Email>zenitram@users.sourceforge.net</Support_Email>
+			<General_Email>zenitram@users.sourceforge.net</General_Email>
+			<Sales_Phone />
+			<Support_Phone />
+			<General_Phone />
+			<Fax_Phone />
+		</Support_Info>
+	</Company_Info>
+	<Program_Info>
+		<Program_Name>MediaInfo</Program_Name>
+		<Program_Version>0.7.2.0</Program_Version>
+		<Program_Release_Month>04</Program_Release_Month>
+		<Program_Release_Day>30</Program_Release_Day>
+		<Program_Release_Year>2006</Program_Release_Year>
+		<Program_Cost_Dollars />
+		<Program_Cost_Other_Code />
+		<Program_Cost_Other />
+		<Program_Type>Freeware</Program_Type>
+		<Program_Release_Status>New Release</Program_Release_Status>
+		<Program_Install_Support>Install and Uninstall</Program_Install_Support>
+		<Program_OS_Support>Win95,Win98,WinME,WinNT 4.x,Windows2000,WinXP,Windows2003</Program_OS_Support>
+		<Program_Language>English,French,German,Hungarian,Italian,Polish</Program_Language>
+		<Program_Change_Info />
+		<Program_Specific_Category />
+		<Program_Category_Class>Audio &amp; Multimedia::Other</Program_Category_Class>
+		<Program_Categories />
+		<Program_System_Requirements />
+		<Includes_JAVA_VM>N</Includes_JAVA_VM>
+		<Includes_VB_Runtime>N</Includes_VB_Runtime>
+		<Includes_DirectX>N</Includes_DirectX>
+		<File_Info>
+			<Filename_Versioned />
+			<Filename_Previous />
+			<Filename_Generic />
+			<Filename_Long />
+			<File_Size_Bytes>2200899</File_Size_Bytes>
+			<File_Size_K>2149</File_Size_K>
+			<File_Size_MB>2.10</File_Size_MB>
+		</File_Info>
+		<Expire_Info>
+			<Has_Expire_Info>N</Has_Expire_Info>
+			<Expire_Count />
+			<Expire_Based_On>Days</Expire_Based_On>
+			<Expire_Other_Info />
+			<Expire_Month />
+			<Expire_Day />
+			<Expire_Year />
+		</Expire_Info>
+	</Program_Info>
+	<Program_Descriptions>
+		<English>
+			<Keywords>MediaInfo DLL information tag codec video audio subtitle chapters AVI MKV OGM GPL LGPL free</Keywords>
+			<Char_Desc_45>A lot of information about Media files</Char_Desc_45>
+			<Char_Desc_80>Supplies technical and tag information about your video or audio files</Char_Desc_80>
+			<Char_Desc_250>MediaInfo supplies technical and tag information about a video or audio file.
+There are a lot of known formats : AVI, MPEG-1, MPEG-2, MPEG-4, DivX, MKV, RealMedia, Quicktime...</Char_Desc_250>
+			<Char_Desc_450>MediaInfo supplies technical and tag information about a video or audio file.</Char_Desc_450>
+			<Char_Desc_2000>What information can I get from MediaInfo?
+	* General: title, author, director, album, track number, date, duration...
+	* Video: codec, aspect, fps, bitrate...
+	* Audio: codec, sample rate, channels, language, bitrate...
+	* Text: language of subtitle
+	* Chapters: count of chapters, list of chapters
+
+What format (container) does MediaInfo support?
+	* Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...
+	  (Codecs: DivX, XviD, MSMPEG4, ASP, H.264, AVC...)
+	* Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...
+	* Subtitles: SRT, SSA, ASS, SAMI...
+
+What can I do with it?
+	* Read many video and audio file formats
+	* Multiple means to view information (text, sheet, tree, HTML...)
+	* You can customize these views
+	* Exporting possibilities: text, CSV, HTML...
+	* Graphical Interface, or Command Line, or DLL
+	* Integration with MS-Windows shell (drag'n' drop, and Context menu)
+	* Internationnalisation: any language diplay on any version of your Operating System
+	* Localization capacities (but volonteers needed)</Char_Desc_2000>
+		</English>
+	</Program_Descriptions>
+	<Web_Info>
+		<Application_URLs>
+			<Application_Info_URL>http://mediainfo.sourceforge.net</Application_Info_URL>
+			<Application_Order_URL>http://mediainfo.sourceforge.net/Help</Application_Order_URL>
+			<Application_Screenshot_URL>http://mediainfo.sourceforge.net/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png</Application_Screenshot_URL>
+			<Application_Icon_URL>http://mediainfo.sourceforge.net/_/Image/favicon.png</Application_Icon_URL>
+			<Application_XML_File_URL>http://mediainfo.sourceforge.net/_/ThirdParty/PAD.xml</Application_XML_File_URL>
+		</Application_URLs>
+		<Download_URLs>
+			<Primary_Download_URL>http://prdownloads.sourceforge.net/mediainfo/MediaInfo_0.7.2.0_GUI_Win32.exe</Primary_Download_URL>
+			<Secondary_Download_URL />
+			<Additional_Download_URL_1 />
+			<Additional_Download_URL_2 />
+		</Download_URLs>
+	</Web_Info>
+	<Permissions>
+		<Distribution_Permissions>http://www.gnu.org/copyleft/gpl.html</Distribution_Permissions>
+		<EULA>http://www.gnu.org/copyleft/gpl.html</EULA>
+	</Permissions>
+	<ASP>
+		<ASP_FORM>Y</ASP_FORM>
+		<ASP_Member>N</ASP_Member>
+		<ASP_Member_Number />
+	</ASP>
+</XML_DIZ_INFO>

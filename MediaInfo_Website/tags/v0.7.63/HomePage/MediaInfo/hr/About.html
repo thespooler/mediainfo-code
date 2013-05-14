@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr style="vertical-align: top">
+   <td style="padding: 0px 15px 5px 5px">
+    <a href="Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png" width="457" height="367" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="First">Što je to MediaInfo?</h2>
+    <strong>MediaInfo</strong> je program koji korisnika opskrbljuje tehničkim i tagovnim informacijama o nekoj video- ili audio-datoteci.<br/>
+    Radi se o slobodnom softveru (slobodan plaćanja i slobodan u pristupu izvorskom kôdu sukladno GPL ili LGPL dopuštenjima)<br/>
+    <br/>
+    <a style="font-weight: bold" href="<?php echo $Link;?>">Preuzmite je!</a><br/>
+    (inačica <?php echo $Version;?><?php if (isset($Installer)) echo ', Graphical User Interface with installer';?><?php if(isset($OS)) echo ', for '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    Napomena 1: Možete i <a href="http://sourceforge.net/project/filemodule_monitor.php?filemodule_id=90341">pratiti</a> ili <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">pročitati izdavačke bilješke</a> na <a href="http://sourceforge.net/projects/mediainfo">projektnoj stranici SourceForge</a><br/>
+    Napomena 2: <a href="Download">Raspoložive</a> su i druge inačice (OS, sučelje...)<br/>
+    <br/>
+    Unaprijed zahvaljujemo ukoliko se odlučite <a href="Donate">donirati prilog</a> potpore daljnjem razvoju projekta.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr style="vertical-align: top">
+   <td style="padding: 0px 15px 5px 5px">
+<h2>Koje informacije mogu dobiti pomoću MediaInfo?</h2>
+<ul>
+ <li>Općenito: naslov, autor, redatelj, album, redni broj snimka, nadnevak, trajanje...</li>
+ <li>Video: kôdek, razmjere, fps, tempo protoka...</li>
+ <li>Audio: kôdek, učestalost uzorkovanja, kanali, jezik, tempo protoka...</li>
+ <li>Tekst: jezik prijevoda podnaslova</li>
+ <li>Poglavlja: broj poglavlja, spisak poglavlja</li>
+</ul>
+<h2>Koje oblike datoteka (spremnika) podržava MediaInfo?</h2>
+<ul>
+ <li>Video: MKV, OGM, AVI, <a href="http://mediaarea.net/en/DIVX">DivX</a>, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Kôdeki: <a href="http://mediaarea.net/en/DIVX">DivX</a>, <a href="http://mediaarea.net/en/XVID">XviD</a>, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Podnaslovi: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>Što sve mogu učiniti s tim?</h2>
+<ul>
+ <li>Očitavati <a href="Support/Formats">mnoge oblike video-i audio-datoteka</a></li>
+ <li>Koristiti različite metode prikazivanja informacija (tekst, tablica, stablo, HTML...)</li>
+ <li>Moguća je vlastita prilagodba prikaza istih</li>
+ <li>Izvoz informacije u obliku teksta, CSV, HTML...</li>
+ <li>Koristiti grafičko sučelje, zapovjedni redak ili  DLL</li>
+ <li>Integracija s ljuskom sustava MS-Windows (povući-i-ispustiti, kontekstualni izbornik)</li>
+ <li>Internacionalizacija: prikaz svakog jezičnog prijevoda na bilo kojoj inačici Vašeg operativnog sustava</li>
+ <li>Sudjelovanje u lokalizaciji (dakako temeljem volonterstva)</li>
+</ul>
+   </td>
+   <td>
+<?php
+if (!isset($Donated)) include $Path."/_/Ad/InContent_336_280_Google.html";
+?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

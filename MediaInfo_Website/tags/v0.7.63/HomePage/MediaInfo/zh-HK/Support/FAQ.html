@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta content="text/html;charset=UTF-8" http-equiv="content-type"/>
+    <title>常见问题</title>
+</head>
+<body>
+<div>
+<h1>常见问题 (FAQ)</h1>
+<ul>
+ <li><a href="#General">一般问题</a>
+  <ul>
+   <li><a href="#URL">网站的正式网址是什么?</a></li>
+   <li><a href="#OpenCandy">OpenCandy stuff is installed!</a></li>
+   <li><a href="#Internet">MediaInfo tries to connect to the Internet!</a></li>
+   <li><a href="#MultipleNames">网站的下载页面上列出了许多文件，我该下载哪个呢？</a></li>
+   <li><a href="#MultipleVersions">我该选择哪个版本的文件?</a></li>
+   <li><a href="#NoSupport">为什么有些多媒体格式MediaInfo不支持?</a></li>
+   <li><a href="#NoDetection">某个文件没有被很好地分析，我该怎么办?</a></li>
+   <li><a href="#NoTranslation">我想让MediaInfo显示我的语言，但语言列表中没有。</a></li>
+   <li><a href="#NoQuestion">这里没有我想问的问题，我该怎么办？</a></li>
+  </ul>
+ </li>
+ <li><a href="#GUI">MediaInfo 图形界面版本（GUI）</a>
+  <ul>
+   <li><a href="#Licence_GUI">这个版本的用户许可协议是什么？</a></li>
+   <li><a href="#BuildFromSources_GUI">我想自己用源代码编译这个软件，该怎么做呢？</a></li>
+   <li><a href="#GUI_Linux">为什么没有运行在Linux上的图形界面的MediaInfo?</a></li>
+  </ul>
+ </li>
+ <li><a href="#Cmd">MediaInfo 命令行版本（Cmd）</a>
+  <ul>
+   <li><a href="#Licence_Cmd">这个版本的用户许可协议是什么？</a></li>
+   <li><a href="#Cmd_Options">命令行模式为什么没有更多的选项？</a></li>
+   <li><a href="#BuildFromSources_Cmd">我想自己用源代码编译这个软件，该怎么做呢？</a></li>
+  </ul>
+ </li>
+ <li><a href="#Dll">MediaInfo 动态链接库（DLL）</a>
+  <ul>
+   <li><a href="#Licence_Dll">动态链接库的许可协议是什么？</a></li>
+   <li><a href="#NoSoftware">为什么这个DLL不能和另一个软件一起使用呢(软件作者说可以)？</a></li>
+   <li><a href="#SDK">我想用MediaInfo的DLL编程，该怎么做呢？</a></li>
+   <li><a href="#StaticLib">我不喜欢DLL，想用静态链接库，可以吗？</a></li>
+   <li><a href="#BuildFromSources_DLL">我想用源代码编译，该怎么做呢？</a></li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+<h2><a name="General"></a>一般问题</h2>
+<div class="Paragraph_Block">
+<h3><a name="URL"></a>网站的正式网址是什么?</h3>
+<div class="Paragraph_Block">
+<a href=http://mediainfo.sourceforge.net>http://mediainfo.sourceforge.net</a><br/>
+</div>
+
+<h3><a name="OpenCandy"></a>OpenCandy stuff is installed!</h3>
+<div class="Paragraph_Block">
+<a href="http://www.opencandy.com/what/">OpenCandy</a> is used by the Windows GUI installer for providing some Open Source and proprietary software advertisement.<br/>
+You can look at the <a href="http://www.opencandy.com/privacy-policy/">OpenCandy provacy policy</a>.<br/>
+If you don't have OpenCandy screen during the install, or if you don't click on "Yes, Install" (this is NOT the default action) in this screen, nothing is done.<br/>
+Some files are put in the MediaInfo directory, and some registry keys are in the registry only for uninstallation.<br/>
+If even with these explanations you don't want OpenCandy stuff, you can:
+<ul>
+ <li>Pay me every month for not having it (I spend a lot of time on MediaInfo, and I try to live from this work)</li>
+ <li>Use the <a href="/Download">package without installer</a></li>
+ <li>Use your own installer (this is open source, you can do it)</li>
+</ul>
+Keep in mind that this is not an adware installed without your consent.</div>
+
+<h3><a name="Internet"></a>MediaInfo tries to connect to the Internet!</h3>
+<div class="Paragraph_Block">
+Yes, it tries (if "Check for newest version" is checked).<br/>
+When this checkbox is check, MediaInfo connects to mediaarea.eu website too for <strong>anonymous</strong> statistics. (how often MediaInfo is used, which OS/Language/Country is the most used...)<br/>
+If you don't want to autorize anonymous statistics, uncheck the "Check for newest version" checkbox.
+</div>
+
+<h3><a name="MultipleNames"></a>网站的下载页面上列出了许多文件，我该下载哪个呢？</h3>
+<div class="Paragraph_Block">
+要看你需要什么：
+<ul>
+ <li>图形界面： MediaInfo GUI</li>
+ <li>命令行界面：MediaInfo Cmd</li>
+ <li>供其他软件使用的DLL：MediaInfo DLL</li>
+</ul>
+<br/>
+然后选择你使用的操作系统：
+<ul>
+ <li>Win : Windows 95 to Windows XP</li>
+ <li>Lin : Linux</li>
+</ul>
+<br/>
+以及你的硬件平台：
+<ul>
+ <li>686： Intel Pentium(奔腾)， AMD Athlon(速龙)</li>
+ <li>AMD64： Intel EMT64 enabled CPU， AMD Athlon64</li>
+</ul>
+</div>
+
+<h3><a name="MultipleVersions"></a>我该选择哪个版本的文件?</h3>
+<div class="Paragraph_Block">
+当然是最新的，以下情况例外：
+<ul>
+ <li>版本号中标有"beta"：这是测试版，你可以下载使用，但需要注意，它可能不稳定</li>
+ <li>告诉你下载这个软件的人指定了版本号，可能这个开发者不支持MediaInfo的新版本</li>
+</ul>
+</div>
+
+<h3><a name="NoSupport"></a>为什么有些多媒体格式MediaInfo不支持?</h3>
+<div class="Paragraph_Block">
+因为我没有关于这种文件格式的说明。<br/>
+如果你有这种格式的说明文档，请<a href="mailto:zenitram@users.sourceforge.net">和我联系</a>。
+</div>
+
+<h3><a name="NoDetection"></a>某个文件没有被很好地分析，我该怎么办?</h3>
+<div class="Paragraph_Block">
+我很想看看这个文件，请<a href="mailto:zenitram@users.sourceforge.net">和我联系</a>。
+</div>
+
+<h3><a name="NoTranslation"></a>我想让MediaInfo显示我的语言，但语言列表中没有。</h3>
+<div class="Paragraph_Block" style="width: 1234; height: 66">
+因为我不懂你的语言！;-)<br/>
+如果你可以挤出一个小时的时间，你就可以完整地翻译它(通过“参数设置”对话框进行或直接翻译 Plugin\Language 文件夹中的语言文件)，请将翻译好的语言文件发给我，让更多的人可以用上它。这并不困难，你只需要懂一些简单的英语。</div>
+
+<h3><a name="NoQuestion"></a>这里没有我想问的问题，我该怎么办？</h3>
+<div class="Paragraph_Block">
+你可以到<a href="http://sourceforge.net/forum/?group_id=86862">论坛</a>上看看。 </div>
+</div>
+
+<h2><a name="GUI"></a>MediaInfo 图形界面版本（GUI）</h2>
+<div class="Paragraph_Block">
+<h3><a name="Licence_GUI"></a>这个版本的用户许可协议是什么？</h3>
+<div class="Paragraph_Block">
+GPL(General Public Licence，通用公共许可协议)</div>
+
+<h3><a name="BuildFromSources_GUI"></a>我想自己用源代码编译这个软件，该怎么做呢？</h3>
+<div class="Paragraph_Block">
+你可以在<a href="http://sourceforge.net/project/showfiles.php?group_id=86862&package_id=90613">这里</a>下载源代码。<br/>
+你需要用Borland C++ 6来编译。<br/>
+这里有一篇<a href="/Support/Build_From_Sources/ThirdParty">编译说明</a>供参考。</div>
+
+<h3><a name="GUI_Linux"></a>为什么没有运行在Linux上的图形界面的MediaInfo?</h3>
+<div class="Paragraph_Block">
+VCL (Borland图形库) 无法在Linux上使用(这是唯一的原因)。<br/>
+如果你知道如何使用wxWidgets (一个标准图形库)，并且有兴趣用它来设计MediaInfo的图形界面，请<a href="mailto:zenitram@users.sourceforge.net">和我联系</a>。<br/>
+</div>
+</div>
+
+<h2><a name="Cmd"></a>MediaInfo 命令行版本（Cmd）</h2>
+<div class="Paragraph_Block">
+<h3><a name="Licence_Cmd"></a>这个版本的用户许可协议是什么？</h3>
+<div class="Paragraph_Block">
+GPL(General Public Licence，通用公共许可协议)。</div>
+
+<h3><a name="Cmd_Options"></a>命令行模式为什么没有更多的选项？</h3>
+<div class="Paragraph_Block">
+我没有足够的时间，并且用户们似乎并不需要这样的特性。<br/>
+你可以到<a href="http://sourceforge.net/tracker/?group_id=86862&amp;atid=581184">这里</a>建议增加一项新功能。.</div>
+
+<h3><a name="BuildFromSources_Cmd"></a>我想自己用源代码编译这个软件，该怎么做呢？</h3>
+<div class="Paragraph_Block">你可以在<a href="http://sourceforge.net/project/showfiles.php?group_id=86862&package_id=90613">这里</a>下载源代码。<br/>
+注意：这个源代码存在一些可移植性问题，你编译时可能会遇到一些困难。这里有一篇<a href="/Support/Build_From_Sources/ThirdParty">说明</a>供参考。</div>
+</div>
+
+<h2><a name="Dll"></a>MediaInfo 动态链接库（DLL）</h2>
+<div class="Paragraph_Block">
+<h3><a name="Licence_Dll"></a>动态链接库的许可协议是什么?</h3>
+<div class="Paragraph_Block">
+LGPL(Library/Lesser General Public Licence，库/宽通用公共许可证协议)</div>
+
+<h3><a name="NoSoftware"></a>为什么这个DLL不能和另一个软件一起使用呢(软件作者说可以)？</h3>
+<div class="Paragraph_Block">
+也许是版本的问题，你可以：<br/>
+<ul>
+ <li>请那个软件的作者更新他的软件以支持最新的MediaInfo DLL。</li>
+ <li>尝试下载旧版本的MediaInfo DLL。</li>
+</ul>
+</div>
+
+<h3><a name="SDK"></a>我想用MediaInfo的DLL编程，该怎么做呢？</h3>
+<div class="Paragraph_Block">
+下载DLL包，里面有针对多种编译器编写的例子。(标准C,标准C++,GCC,MinGW, Borland C++ Builder, Microsoft Visual C++, Microsoft Visual Basic, Microsoft C#, Microsoft J#)<br/>
+<a href="/Support/SDK">这里</a>有一个开发包（SDK）。</div>
+
+<h3><a name="StaticLib"></a>我不喜欢DLL，想用静态链接库，可以吗？</h3>
+<div class="Paragraph_Block">
+只能用C++。<br/>
+你可以在下载页面上找到以下几个包：
+<ul>
+ <li>用 Borland C++ builder 6 编译的函数库</li>
+ <li>用 Microsoft Visual C++ 9 (aka 2005)编译的函数库。注意：这个项目是静态地链接到多线程的C++库的，编译选项是针对C++设置的。需要特别注意的是，在标准C++中，wchar_t是一个预定义的类型，不是短整型。[英文原文]Warning : the project is staticly linked to the multithreaded C++ library, and options are C++ compliant (be carefull, in standart C++, wchar_t is a type, not a short int).</li>
+</ul>
+如果你想用其他的编译器或编译选项，你只能<a href="/Support/Build_From_Sources">用源代码编译</a>。</div>
+
+<h3><a name="BuildFromSources_DLL"></a>我想用源代码编译，该怎么做呢？</h3>
+<div class="Paragraph_Block">
+从<a href="http://sourceforge.net/project/showfiles.php?group_id=86862&package_id=90613">这里</a>下载源代码。<br/>
+注意：源代码存在可移植性问题，你在编译时可能性会遇到一些困难。点<a href="/Support/Build_From_Sources/ThirdParty">这里</a>查看相关帮助。</div>
+</div>
+
+</body>
+</html>

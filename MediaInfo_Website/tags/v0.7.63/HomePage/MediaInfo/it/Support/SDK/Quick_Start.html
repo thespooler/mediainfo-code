@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <title>Quick start</title>
+</head>
+<body>
+<div>
+<ul>
+    <li><a href="#Quick_Start">Approccio veloce all'uso di MediaInfo</a>
+      <ul>
+        <li><a href="#Example">Esempio</a>
+          <ul>
+            <li><a href="#Example_Normal">Cosa devi fare</a></li>
+            <li><a href="#Example_Short">Troppo complesso? Prova questo!</a></li>
+    </ul>
+   </li>
+   <li><a href="#Unicode">Unicode?</a></li>
+   <li><a href="#Init">Init the library</a>
+    <ul>
+            <li><a href="#Internet">Connessione Internet</a></li>
+            <li><a href="#Version">Versione della libreria</a></li>
+            <li><a href="#Language">Impostare la lingua della libreria</a></li>
+    </ul>
+   </li>
+        <li><a href="#NewHandle">Creare un nuovo Handle</a></li>
+        <li><a href="#Open">Aprire uno o pi&ugrave; files</a></li>
+        <li><a href="#Info">Ottenere le informazioni</a>
+          <ul>
+            <li><a href="#Output">Testo preformattato</a>
+<ul>
+                <li><a href="#Output_Normal">Output Standard</a></li>
+                <li><a href="#Output_Custom">Personalizzato</a></li>
+      </ul>
+     </li>
+            <li><a href="#Get">Ottenere una parte delle informazioni</a></li>
+    </ul>
+   </li>
+        <li><a href="#Release">Liberare la memoria</a></li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+<h1><a name="Quick_Start"></a>Approccio veloce all'uso di MediaInfo
+  <h2><a name="Example"></a>Esempio</h2>
+  <h3><a name="Example_Normal"></a>Cosa devi fare</h3>
+Un esempio veloce, linea per linea (nota : se usi la DLL devi adattare queste
+  linee al tuo linguaggio):<br/>
+<ul>
+ <li>
+  Init (only one time):<br/>
+  <code>MediaInfo::Options("Info_Version",&nbsp;"<abbr title="Version of MediaInfo you have tested. Example : &quot;0.7.0.0&quot;, &quot;0.7.0.1&quot;, &quot;0.8.0.0&quot;">**VERSION**</abbr>;<abbr title="Unique name of your application. Examples : &quot;MediaInfoGUI&quot;, &quot;MediaInfoCmd&quot;">**APP_NAME**</abbr>;<abbr title="Version of your application. Example : &quot;0.7.0.0&quot;, &quot;1.2&quot;, &quot;1.26beta1&quot;">**APP_VERSION**</abbr>")</code><br/>
+  <code>MediaInfo Handle</code> (for DLL : <code>void* Handle=MediaInfo::New()</code>)<br/>
+ </li>
+ <li>
+  For each file:<br/>
+  <code>MediaInfo::Open("**FILENAME**")</code><br/>
+  <code>MediaInfo::Inform()</code><br/>
+  <code>...</code><br/>
+  (for DLL only: <code>MediaInfo::Delete(Handle)</code>)<br/>
+ </li>
+</ul>
+
+  <h3><a name="Example_Short"></a>Troppo complicato? Prova questo!</h3>
+Puoi utilizzare questo se non ti interessano tutti i messaggi di errore (ne sar&agrave;
+  mostrato solo uno di tutti i possibili errori) e e hai intenzione di aprire
+  solo un file:<br/>
+<code>void* Hande=MediaInfo::OpenQuick("**FILENAME**", "<abbr title="Version of MediaInfo you have tested. Example : &quot;0.7.0.0&quot;, &quot;0.7.0.1&quot;, &quot;0.8.0.0&quot;">**VERSION**</abbr>;<abbr title="Unique name of your application. Examples : &quot;MediaInfoGUI&quot;, &quot;MediaInfoCmd&quot;">**APP_NAME**</abbr>;<abbr title="Version of your application. Example : &quot;0.7.0.0&quot;, &quot;1.2&quot;, &quot;1.26beta1&quot;">**APP_VERSION**</abbr>")</code><br/>
+<code>MediaInfo::Inform()</code><br/>
+<code>...</code><br/>
+  (per la versione DLL: <code>MediaInfo::Delete(Handle)</code>)<br/>
+
+<h2><a name="Unicode"></a>Unicode?</h2>
+Come ogni libreria moderna, , MediaInfo(Lib) supporta <a href="http://www.unicode.org/standard/WhatIsUnicode.html">l'Unicode</a>.
+  Non scordati di impostare dove vuoi che compaia il testo nel tuo programma.
+  Questo &egrave; in formato <a href="http://www.w3.org/International/">internationalization
+  (I18N)</a>, e pu&ograve; visualizzare diversi alfabeti (Greek, russian, french...)
+  senza problemi!<br/>
+  Ti consiglio di utilizzare la libreria Unicode e creare il tuo programma che
+  supporti l'Unicode se inizi un novo programa.<br/>
+  Eccezioni : se hai intenzione di utilizzare le righe di comando di Microsoft
+  Windows ti ricordo che questo non supporta l'Unicode, quindi se vuoi utilizzare
+  la riga di comando, utilizza MediaInfo senza supporto Unicode.<br/>
+<br/>
+  Per la DLL, visto che &egrave; stata rialsciata solo una versione, devi:
+  <ul>
+    <li>MediaInfo::XXX methods. Utilizzano il supporto Unicode (caratteri di 2
+      o 4 bytes).</li>
+    <li> MediaInfoA_XXX methods. Versione ANSI (1 carattere per byte) della versione
+      sovrastante. Sono utilizzati i caratteri di <a href="http://en.wikipedia.org/wiki/Codepage">sistema</a>.<br/>
+      Nota : solo per la DLL, puoi utilizzare i caratteri <a href="http://en.wikipedia.org/wiki/UTF-8">UTF-8</a>:
+      <code>MediaInfoA_Options("CodePage", "UTF-8")</code> </li>
+</ul>
+
+<h2><a name="Init"></a>Init the library</h2>
+  <h3><a name="Internet"></a>Connessione Internet</h3>
+MediaInfoLib prova a collegarsi a un server Internet per controllare la disponibilit&agrave;
+  di nuove versioni del software, in modo <span style="text-decoration: underline;">anonimo</span>
+  e ottiene le informazioni su un file (Non ancora implementato).<br/>
+  Se epr qualche ragione non vuoi questa funzione, disattivala.<br/>
+<code>MediaInfo::Options("Internet", "No")</code>
+
+  <h3><a name="Version"></a>Versione della libreria</h3>
+Prima di tutto devi conoscere la versione della libreria DLL.<br/>
+  Perch&eacute; con una nuova versione potrebbero insorgere crash o operazioni
+  non volute...<br/>
+<code>MediaInfo::Options("Info_Version", "<abbr title="Version of MediaInfo you have tested. Example : &quot;0.7.0.0&quot;, &quot;0.7.0.1&quot;, &quot;0.8.0.0&quot;">**VERSION**</abbr>;<abbr title="Unique name of your application. Examples : &quot;MediaInfoGUI&quot;, &quot;MediaInfoCmd&quot;">**APP_NAME**</abbr>;<abbr title="Version of your application. Example : &quot;0.7.0.0&quot;, &quot;1.2&quot;, &quot;1.26beta1&quot;">**APP_VERSION**</abbr>")</code><br/>
+  **VERSION** &egrave; la versione di MediaInfo che hai testato. Dovrebbe essere
+  simili a questo : "A.B.C.D" (esempio : "0.7.0.0")<br/>
+  **APP_NAME** &egrave; il nome del tuo programma. Esempi : "MediaInfoGUI", "MediaInfoCmd".<br/>
+  **APP_VERSION** versione del tuo programma. Esempio : "0.7.0.0", "1.2", "1.26beta1".<br/>
+  Nota : se durante i test di versioni beta noti delle incompatibilit&agrave;
+  tra la libreria e un vecchio programma, contatta lo sviluppatore di MediaInfo,
+  lui metter&agrave; la versione di quel programma nella lista nera.<br/>
+  La stringa si ottenuta:
+  <ul>
+    <li>"MediaInfoLib - vA.B.C.D xxx" se non ci sono incompatibilit&agrave; tra
+      la versione nel comando e la versione della libreria (xxx pu&ograve; essere
+      un sito internet, le informazioni su modifiche alla DLL...).</li>
+    <li>"" (stringa vuota) se ci sono incompatibilit&agrave; tra la versione del
+      comando e la versione nella libreria. In questo caso il programma uscir&agrave;
+      con un errore (un messaggio del tipo "MediaInfo.dll is not compatible with
+      this version, you must use MediaInfo.dll vX.X.X.X")</li>
+</ul>
+
+  <h3><a name="Language"></a>Imposta la lingua della libreria</h3>
+La lingua predefinita &egrave; l'Inglese.<br/>
+  Puoi cambiare la lingua col la stringa.<br/>
+<code>MediaInfo::Options("Language", "**LANGUAGE_STRING**")</code><br/>
+  **LANGUAGE_STRING** &egrave; una stringa compatibile CSV :<br/>
+<pre>
+Internal name1;translation1
+Internal name2;translation2
+</pre>
+  Nota : durante lo sviluppo, puoi utilizzare nomi di liste interne con :<br/>
+<code>MediaInfo::Options("Language_Get")</code><br/>
+
+  <h2><a name="NewHandle"></a>Creare un nuovo Handle</h2>
+Un Handle deve essere creato prima dell'utilizzo di MediaInfoLib :<br/>
+"C++" : <code>MediaInfo Handle;</code><br/>
+"C" (DLL...) : <code>void* Handle=MediaInfo::New();</code>
+
+  <h2><a name="Open"></a>Aprire uno o pi&ugrave; files</h2>
+Prima di ottenere informazioni su uno o pi&ugrave; files devi aprirli :<br/>
+<code>MediaInfo::Open("**FILENAME**")</code><br/>
+  o<br/>
+<code>MediaInfoList::Open("**FILENAMES**")</code><br/>
+
+  <h2><a name="Information"></a>Ottenere informazioni</h2>
+  <h3><a name="Output"></a>Testo preformattato</h3>
+  <h4><a name="Output_Normal"></a>Output Standard - Se hai bisogno di un output
+    testuale:<br/>
+<code>MediaInfo::Inform(InformOption_Nothing)</code><br/>
+<br/>
+    Se vuoi un output in formato HTML :<br/>
+<code>MediaInfo::Inform(InformOption_HTML)</code><br/>
+
+    <h4><a name="Output_Custom"></a>Personalizzato</h4>
+La lista standard utilizza molte informazioni. Ma tu puoi personalizzarla :<br/>
+<code>MediaInfo::Option("Inform", "**YOUR_TEXT**")</code><br/>
+<code>MediaInfo::Inform(InformOption_Custom)</code><br/>
+    **YOUR_TEXT** &egrave; una lista di oggetti. Per maggiori informazioni <a href="More_Info#Format">clicca
+    qui</a>
+    <h4><a name="Get"></a>Ottenere una parte delle informazioni</h4>
+Puoi accedere direttamente a una parte delle informazioni:<br/>
+<code>MediaInfo::Get ("**StreamKind**", "**StreamNumber**", "**Parameter**", "**InfoKind**")</code><br/>
+**StreamKind** can be : Stream_General, Stream_Video, Stream_Audio,&nbsp;Stream_Text, Stream_Chapters<br/>
+    **StreamNumber** &egrave; la posizione del flusso che ti interessa. Esempio
+    per l'Audio : 0 se vuoi il primo Audio, 1 se vuoi il secondo.<br/>
+    **Parameter** &egrave; il nome della parte di informazioni che ti interessano.
+    Esempio : "BitRate", "Width"...<br/>
+    **InfoKind** deve essere impostata come MediaInfo::Info_Text, eccezion fatta
+    se vuoi informazioni <a href="More_Info#Get">avanzate</a><br/>
+<br/>
+    Nota : nello sviluppo puoi avere la lista dei parametri utilizzando:<br/>
+<code>MediaInfo::Options("Info_Parameters")</code>
+
+    <h2><a name="Release"></a>Liberare la memoria</h2>
+Per liberare la memoria devi cancellare l'handle:<br/>
+    "C++" : non &egrave; necessario, sar&agrave; cancellato al termine del method<br/>
+"C" (DLL...) : <code>MediaInfo::Delete(Handle);</code><br/>
+<br/>
+    Nota : puoi riutilizzare l'Handle per un altro <code>MediaInfo::Open("**FILENAME**")</code>
+    utilizzato prima della cancellazione.<br/>
+
+</h4></h1></body>
+</html>

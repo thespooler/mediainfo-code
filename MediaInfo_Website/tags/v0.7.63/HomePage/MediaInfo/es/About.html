@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr style="vertical-align: top">
+   <td style="padding: 0px 15px 5px 5px">
+    <a href="Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png" width="457" height="367" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="First">¿Qué es MediaInfo?</h2>
+    <strong>MediaInfo</strong> provee información técnica y de la etiqueta sobre un archivo video o audio.<br/>
+    Éste es un software libre (gratuito y de libre acceso al código fuente: GPL o licencia LGPL)<br/>
+    <br/>
+    <a style="font-weight: bold" href="<?php echo $Link;?>">Descargar</a><br/>
+    (version <?php echo $Version;?><?php if (isset($Installer)) echo ', Interfaz gráfica, con instalador';?><?php if(isset($OS)) echo ', para '.$OS;?><?php if(isset($Bits)) echo ' bits';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    Nota 1: puede <a href="http://sourceforge.net/project/filemodule_monitor.php?filemodule_id=90341">supervisar</a> o <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">ver las notas de la versión</a> en la <a href="http://sourceforge.net/projects/mediainfo">página del proyecto en SourceForge</a><br/>
+    Nota 2: hay otras versiones (OS, interfaz...) <a href="Download">disponibles</a>
+    </br/>
+    (<a href="Download/Windows"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="os Windows"/></a>
+    <a href="Download/Mac_OS"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Mac OS" title="Mac OS" class="os MacOS"/></a>
+    <a href="Download/Debian"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Debian" title="Debian" class="os Debian"/></a>
+    <a href="Download/Ubuntu"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Ubuntu" title="Ubuntu" class="os Ubuntu"/></a>
+    <a href="Download/Ubuntu"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Linux Mint" title="Linux Mint" class="os Linux_Mint"/></a>
+    <a href="Download/RedHat"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux" class="os RedHat"/></a>
+    <a href="Download/CentOS"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="CentOS" title="CentOS" class="os CentOS"/></a>
+    <a href="Download/Fedora"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Fedora" title="Fedora" class="os Fedora"/></a>
+    <a href="http://packman.links2linux.org/package/mediainfo"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="openSUSE" title="openSUSE" class="os openSUSE"/></a>
+    <a href="Download/Mandriva"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Mandriva" title="Mandriva" class="os Mandriva"/></a>
+    <a href="http://aur.archlinux.org/packages.php?K=mediainfo"><img src="../_/Image/Default/Blank.gif" alt="ArchLinux" title="ArchLinux" class="os ArchLinux" width="16" height="16"/></a>)
+    <br/>
+    Puedes <a href="Donate">donar</a> para apoyar el desarrollo del proyecto.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr style="vertical-align: top">
+   <td style="padding: 0px 15px 5px 5px">
+<h2>¿Qué información puedo obtener con MediaInfo?</h2>
+<ul>
+ <li>General: título, autor, director, álbum, número de pista, fecha, duración...</li>
+ <li>Video: códec, aspecto, fps, bitrate...</li>
+ <li>Audio: códec, frecuencia de muestreo, canales, lenguaje, bitrate...</li>
+ <li>Texto: idioma de subtítulo</li>
+ <li>Capítulos: número de capítulos, lista de capítulos</li>
+</ul>
+<h2>¿Qué formatos soporta MediaInfo?</h2>
+<ul>
+ <li>Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Códecs: DivX, XviD, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Subtítulos: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>¿Qué puedo hacer con él?</h2>
+<ul>
+ <li>Leer muchos <a href="Support/Formats"> formatos de archivos de audio y video</a></li>
+ <li>Diferentes métodos de visualización de la información (texto, hoja de árbol, HTML ...)</li>
+ <li>Puedes personalizar éstas vistas</li>
+ <li>Exportar información como texto, CSV, HTML...</li>
+ <li>Interfaz gráfica, o de línea de comandos, o de DLL</li>
+ <li>Integración con MS-Windows shell (arrastrar y soltar; Menú contextual)</li>
+ <li>Internacionalización: cualquier idioma de visualización en cualquier versión de su sistema operativo</li>
+ <li>Localización de capacidad (pero necesita voluntarios)</li>
+</ul>
+   </td>
+   <td>
+<?php
+if (!isset($Donated)) include $Path."/_/Ad/InContent_336_280_Google.html";
+?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

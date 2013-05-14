@@ -1,0 +1,246 @@
+<?php
+//Arguments
+//Example : http://localhost/Log?Name=MediaInfoGUI&Version=0.7.1.0&Lib=0.7.1.0
+strtok($_SERVER["REQUEST_URI"], "?");
+parse_str(strtok("?"), $Argument);
+//LastVisited
+//if (isset($_COOKIE["LastVisited"]) || strpos($_SERVER["REQUEST_URI"], "?")===FALSE)
+    $AlreadyVisited='Y';
+//else
+//  setcookie("LastVisited", time(), time()+60*60);
+?>
+<!DOCTYPE html>
+<?php
+if ($Language=="fr")
+    echo '<html lang="fr">';
+else
+    echo '<html lang="en">
+';
+?>
+<head>
+    <title>MediaInfo - ChangeLog</title>
+    <meta charset="utf-8">
+<?php
+if (isset($Official))
+    $URL='http://mediainfo.sourceforge.net/'.$Language;
+else
+    $URL='http://localhost/'.$Language;
+    if (!isset($AlreadyVisited)) {
+        if (mt_rand(1, 100)>15) {
+            //Sourceforge
+        } else {
+            if (mt_rand(1, 100)>33)
+                $URL='http://mediaarea.net/DX50sf.php';
+            else if (mt_rand(1, 100)>50)
+                $URL='http://mediaarea.net/DIVXsf.php';
+            else
+                $URL='http://mediaarea.net/XVIDsf.php';
+        }
+        echo '  <meta http-equiv="refresh" content="3; URL='.$URL.'"/>
+    ';
+    }
+?>
+    <!--[if IE]><link rel="shortcut icon" href="/_/Image/favicon.ico"><![endif]-->
+    <link rel="icon" type="image/png" href="/_/Image/favicon.png"/>
+    <link rel="stylesheet" href="/_/CSS/pack.css"/>
+    <!--[if lt IE 9]>
+    <script src="/_/JavaScript/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<br/>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <div id="ShouldShow" class="Invisible">Yes</div>
+            <div id="NewVersion">
+<?php
+if ($Language=="fr")
+    echo '
+    <a href="'.$URL.'">Visiter le site MediaInfo</a><br/><br/>
+    ';
+else
+    echo '
+    <a href="'.$URL.'">Visit MediaInfo website</a><br/><br/>
+    ';
+?>
+</div>
+<div class="Invisible">
+    More about 4CC: <a href="http://mediaarea.net/DX50sf.php">DX50</a> <a href="http://mediaarea.net/DIVXsf.php">DIVX</a> <a href="http://mediaarea.net/XVIDsf.php">XVID</a>
+    <br/>
+</div>
+<div>
+<pre>
+Changes:
+
+Version 0.7.63, 2013-05-13
+--------------
++ Switched to a BSD-2-Clause license
++ LXF: AFD (from ancillary stream) support
++ Detection of some side car files and showing them as a single package (optional)
++ MOV: more channel positions information
++ TTML: detection
++ SAMI: detection
++ ID3: updated list of genres, thanks to Mats
++ .so: search a local copy of the library before trying default path
++ AVI: Support of Adobe PARf (Aspect Ratio) chunk
++ VC-3: Scan order
++ #P65, Flac/Ogg DISCTOTAL metadata support, thanks to Kurtnoise
++ #P67, MOV, add Hap Video to the database, thanks to Kurtnoise
++ #P67, Matroska, add VP9 to the database, thanks to Kurtnoise
++ #P68, FLV, add HEVC detection in the FLV parser
++ #P66, MOV, tref/chap handling, with chapters information, thanks to Kurtnoise
++ #P72, MOV, HEVC/H265 detection and basic support, thanks to Kurtnoise
++ #F382/P75, PMP format detection
++ MPEG-TS, HEVC/H265 support
++ 16:10 DAR known value
+x #B742, MPEG-4/MOV, crash with some truncated/invalid files
+x #B746, MPEG-4/MOV: crash with files having moof atom and no moov atom
+x #B747, Inconsistent hang with buffer API
+x #B757, MediaInfoDLL.py MediaInfoList was not working, thanks to Elbenfreund
+x #B740, XML: dt:dt is replaced by dt (for binary data)
+x MXF: Dolby E streams starting only at the second or third frame were not well detected
+x MPEG-4/MOV: reducing analysis time for I-frame only video streams
+x CEA-708: weird behavior phantom streams are displayed) in case of buggy CEA-708
+x AVI: crash with audio delay and AvgBytesPerSec of 0
+x Wrong demuxing of the caption stream in the case of AVC streams without frame_mbs_only_flag but having 2 fields in one slice.
+x DPX: parsing was very slow with a sequence of files.
+x MXF: Pre-charge duration was not read, time code of the first frame was wrong if "Origin" is not 0
+x FLV: file was sometimes (e.g. most of the file padded with zeroes) fully parsed
+x VC-3: Using values from specifications (based on compression ID) instead of SBD/SST/SPL/APLF from bitstream
+x #738, mediainfo-qt doesn't build
+
+Version 0.7.62, 2013-02-22
+--------------
++ ARIB STD B24/B37 caption detection (both Japanese and Brazilian versions)
++ LXF: support of AVC, VC-3, MPEG audio, AC-3, Dolby E, and AAC detection and analysis
++ AC-3: support of 22.05 kHz streams (out of specs but they exist)
++ MOV: AIC (Apple Intermediate Codec) scan type detection
++ MOV: support of AVID metadata (interlacement information)
++ Time code dedicated tracks (MOV, MXF, GXF)
++ Time code track (MPEG-4/MOV, GXF, MXF)
++ Time code in SDTI (MXF)
++ Time code in System scheme 1 (MXF)
++ Time code in SMPTE RP 188 (aka SMPTE ST 12-2 aka ATC aka VANC) (GXF, LXF, MXF)
++ Time code in SMPTE RP 196 (aka HANC)
++ MPEG Video Time code
++ MPEG-TS: format_identifier, pointer_field, section_length (hidden by default)
++ CEA-608/708: caption detection duration is increased to 15 seconds (or 64 MB) in order to miss less caption content
++ Image files as a video stream: file name of the last file
+x #727, MOV: crash with some malformed files (Time scale set to 0)
+x #728, AAC: crash with some malformed streams
+x #681, AVI: was not analyzing VBR streams without bit rate info in header
+x #736: Division by 0 with 0-byte files
+x Id3v2: crash with some malformed tags
+x Bit rate display was "0 bps" if the real bit rate is more than 4 Gbps
+x Division by 0 in case of 0 byte long file
+x MPEG-4: wrong muxing mode information in case of A/53 captions in MPEG Video in MOV
+x P2 Clip: wrong uppercase/lowercase in the file name of source files.
+x MOV: PCM endianness was sometimes wrong
+x MPEG-4: JPEG interlacement was sometimes wrong
+x MPEG Video: wrong DAR information in case of DAR change between begin and end of the file
+
+Version 0.7.61, 2012-10-22
+--------------
++ x64 and i386 Windows installers are merged, now only one installer
++ Italian translation updated
++ Bigger default window
++ MPEG-TS: SCTE 35 and KLV streams are better displayed (in Menu part)
++ MPEG-TS: Menu part contains the list of PID with unknown format
++ MPEG-TS: Menu part lists PID in the PMT order instead of increasing order
++ Display of both container and stream scan type and scan order
++ DV100: scan order
++ MXF: scan order
++ MPEG-TS: Maximum and minimum overal bit rate (only if parse speed is set to 1)
++ MPEG-TS, MPEG-S, MXF, AVI, WM: StreamOrder field added
++ MXF: better support of malformed VANC streams
++ MPEG Video: improved detection of the GOP (more frames are used), "Variable" value
++ MPEG-PS: FirstPacketOrder info added
++ SkipBinaryData option
+x #3564456, Matroska: some (other) streams were wrongly detected sa VFR
+x #3570092, Id3v2: support of old COM and ULT fields
+x CEA-708: crash with some malformed streams
+x MPEG-TS: crash when PCR is corrupted (same value at different offsets)
+x QuickTIme: wrong channel count report in case of buggy chan atom. Now the stream description has priority over chan atom
+x E-AC-3: duration was wrong in some cases
+x Matroska: random wrong analysis in case of SimpleBlock mode
+x #3574436, MOV: hang on files having buggy "alis" atom
+x MPEG-TS: bit rate mode detection was sometimes too much strict about CBR
+x DV: wrong detection in case of buggy audio header (if present and set to 0xFF)
+x MPEG-4: crash in case of buggy aperture size atom
+x MediaInfo_Const.h was missing in the DLL package for Mac
+x MPEG-PS: detection of phantom streams
+x WAV: detection of malformed >4GB WAV files was no more working
+x DTS: computing bit rate from frame size instead of targeted transmission rate
+x DTS: setting the bit rate to "unknown" for Master Audio instead of instantaneous bit rate
+x DTS: Display of endianess and word size was not coherent
+
+Version 0.7.60, 2012-09-02
+--------------
++ #3285550, GUI: added shell extension icon
++ MPEG-TS/PS: improved detection of buggy time stamps
++ DPX: color primaries and transfer characteristics
++ MPEG-TS: Added support of scrambled streams without transport_scrambling_control bit set (e.g. PlayReady)
++ MPEG-TS: Name of some scrambling algorithms
++ MPEG-TS: detection of CBR/VBR at container level
++ MPEG Video: better detection of variable GOP
+x Matroska: some streams were wrongly detected sa VFR
+x #3538378, XML output: invalid characters, now if there is an invalid character, data is transported in base64
+x LXF: wrong video bit rate with some files
+x AC-3/E-AC-3: hang up with some Little Endian streams
+x AAC: wrong min and max bit rate in case of partial (default) parsing, disabling it
+x AVC: crash or hang up with some malformed/scrambled streams
+x Opus: wrong duration in case of non-48kHz stream
+x MOV: 25 fps + drop frame time codes were not handled correctly
+
+Version 0.7.59, 2012-08-08
+--------------
++ License: Switched back to LGPLv2+Exceptions
++ #3555183, PCX support, thanks to Lionel Duchateau
++ #3555182, PSD support, thanks to Lionel Duchateau
++ #3555181, Matroska: ALAC detection, thanks to Lionel Duchateau
++ #3540425, OGG/MKV: Opus speech format support, thanks to Lionel Duchateau
++ #3531808, AVI: detecting more inconsistencies in stream durations
++ GXF: crash with Time code tracks without frame rate info
++ MPEG-4: stream order (hidden by default), in order to provide the same numbers as mkvtoolnix 5.2+ Track ID
++ QuickTime: default channel map is "L R" for stereo streams (as it seems to be in QuickTime player)
++ MPEG-4: support of WMA (version 1, version 2, Pro, Lossless) in MPEG-4
++ FLV: handling of metadata with an underscore before the real metadata name
++ MXF: support of files with header missing TrackNumber in the descriptor (if it is present only in footer)
++ MXF: Language from DMS-1
++ ProRes: analysis of the ProRes raw stream (including scan order for interlaced content)
++ colour_primaries, transfer_characteristics, matrix_coefficients: canonicalization of results
++ MPEG-4 Visual: colour_primaries, transfer_characteristics, matrix_coefficients
++ ProRes: colour_primaries, transfer_characteristics, matrix_coefficients
++ GIF: Display Aspect Ratio
+x #3533984, different behavior depending of compilation options (so Linux version was missing some info)
+x MPEG-4: audio/video delay was wrong in case of negative delay
+x CEA-608: Memory leaks removed
+x AVC: crash in case of analyzing some invalid SEI
+x MPEG Audio: crash with some files having Lyrics 2 tags
+x MPEG Audio: crash with some files having APE tags
+x AVI: secondary genre comes after primary genres in the "Genre" field
+x FLV: better handling of files containing more than 1 meta chunk
+x MPEG-TS/MPEG-PS: was aborting during full parsing in the case of very damaged streams
+x Vorbis: infinite loop if codebook_entries>=256
+x Id3v2: crash with some unsynchronized frames, especially with UTF-16 comments
+x Id3v2: Wrong mime type of covers
+x MPEG-PS: crash in case of language info in descriptors
+x Java binding: crash with MediaInfo::Inform() (Windows 32-bit only)
+x MPEG-TS: false-positive in case of some MPEG-4 files with wrong extension
+x FLV: crash in some specific cases (malformed files)
+x 3548314, MVC: Scan type was wrong with MVC-only (without the underlying AVC stream) stream
+x 3553588, MPLS: stream duration was wrong with standalone (without the referenced M2TS) files
+x 3553588, MPLS: incoherent behavior with MPLS having more than one PlayListItem
+x 3554154, MPEG-TS: crash with some corrupted streams
+x MOV: all EIA/CEA-608 captions were not well detected
+x Matroska: Trying to better detect VFR streams, frame rate was wrong in case of interlaced content
+</pre>
+</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br/>
+<?php include $Path."/_/Ad/GoogleAnalytics_Users.html"; ?>
+</html>

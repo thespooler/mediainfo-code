@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta content="text/html;charset=UTF-8" http-equiv="content-type"/>
+    <title>FAQ</title>
+</head>
+<body>
+<div>
+<h1>H&auml;ufig gestellte Fragen (FAQ)</h1>
+<ul>
+ <li><a href="#General">Allgemein</a>
+  <ul>
+   <li><a href="#URL">Wie lautet die kanonische Internetadresse der Webseite?</a></li>
+   <li><a href="#OpenCandy">OpenCandy stuff is installed!</a></li>
+   <li><a href="#Internet">MediaInfo tries to connect to the Internet!</a></li>
+   <li><a href="#MultipleNames">Im SourceForge-Repository gibt es Dateien mit unterschiedlichen Namen, welche soll ich herunterladen?</a></li>
+   <li><a href="#MultipleVersions">Im SourceForge-Repository gibt es unterschiedliche Versionen, welche soll ich herunterladen?</a></li>
+   <li><a href="#NoSupport">Warum ist (hier beliebiges Format einsetzen) nicht unterst&uuml;tzt?</a></li>
+   <li><a href="#NoDetection">Eine Datei wird nicht richtig erkannt, was soll ich machen?</a></li>
+   <li><a href="#NoTranslation">Ich m&ouml;chte dass MediaInfo in meine Sprache &uuml;bersetzt wird, warum wird es nicht &uuml;bersetzt?</a></li>
+   <li><a href="#NoQuestion">Meine Frage ist hier nicht aufgez&auml;hlt, was soll ich machen?</a></li>
+  </ul>
+ </li>
+ <li><a href="#GUI">Die grafische Benutzeroberfl&auml;che von MediaInfo (GUI)</a>
+  <ul>
+   <li><a href="#Licence_GUI">Unter welcher Lizenz steht sie zur Verf&uuml;gung?</a></li>
+   <li><a href="#BuildFromSources_GUI">Ich m&ouml;chte MediaInfo selbst kompilieren, wie geht das?</a></li>
+   <li><a href="#GUI_Linux">Warum gibt es keine grafische Benutzeroberfl&auml;che von MediaInfo unter Linux?</a></li>
+  </ul>
+ </li>
+ <li><a href="#Cmd">Kommandozeilenversion von MediaInfo (Cmd)</a>
+  <ul>
+   <li><a href="#Licence_Cmd">Unter welcher Lizenz steht sie zur Verf&uuml;gung?</a></li>
+   <li><a href="#Cmd_Options">Warum gibt es nicht mehr Optionen f&uuml;r die Kommandozeilenversion?</a></li>
+   <li><a href="#BuildFromSources_Cmd">Ich m&ouml;chte MediaInfo selbst kompilieren, wie geht das?</a></li>
+  </ul>
+ </li>
+ <li><a href="#Dll">Die Dynamic Link Library von MediaInfo (DLL)</a>
+  <ul>
+   <li><a href="#Licence_Dll">Unter welcher Lizenz steht sie zur Verf&uuml;gung?</a></li>
+   <li><a href="#NoSoftware">Warum funktioniert die DLL nicht mit (hier beliebiges Programm einsetzen)?</a></li>
+   <li><a href="#SDK">Ich m&ouml;chte die Resultate der DLL in meinem Programm abfragen, wie geht das?</a></li>
+   <li><a href="#StaticLib">Ich m&ouml;chte keine DLLs verwenden, ich bevorzuge statische Bibliotheken. Wie mache ich das?</a></li>
+   <li><a href="#BuildFromSources_DLL">Ich m&ouml;chte MediaInfo selbst kompilieren, wie geht das?</a></li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+<h2><a name="General"></a>Allgemein</h2>
+<div class="Paragraph_Block">
+<h3><a name="URL"></a>Wie lautet die kanonische Internetadresse der Webseite?</h3>
+<div class="Paragraph_Block">
+http://mediainfo.sourceforge.net<br/>
+</div>
+
+<h3><a name="OpenCandy"></a>OpenCandy stuff is installed!</h3>
+<div class="Paragraph_Block">
+<a href="http://www.opencandy.com/what/">OpenCandy</a> is used by the Windows GUI installer for providing some Open Source and proprietary software advertisement.<br/>
+You can look at the <a href="http://www.opencandy.com/privacy-policy/">OpenCandy provacy policy</a>.<br/>
+If you don't have OpenCandy screen during the install, or if you don't click on "Yes, Install" (this is NOT the default action) in this screen, nothing is done.<br/>
+Some files are put in the MediaInfo directory, and some registry keys are in the registry only for uninstallation.<br/>
+If even with these explanations you don't want OpenCandy stuff, you can:
+<ul>
+ <li>Pay me every month for not having it (I spend a lot of time on MediaInfo, and I try to live from this work)</li>
+ <li>Use the <a href="/Download">package without installer</a></li>
+ <li>Use your own installer (this is open source, you can do it)</li>
+</ul>
+Keep in mind that this is not an adware installed without your consent.</div>
+
+<h3><a name="Internet"></a>MediaInfo tries to connect to the Internet!</h3>
+<div class="Paragraph_Block">
+Yes, it tries (if "Check for newest version" is checked).<br/>
+When this checkbox is check, MediaInfo connects to mediaarea.eu website too for <strong>anonymous</strong> statistics. (how often MediaInfo is used, which OS/Language/Country is the most used...)<br/>
+If you don't want to autorize anonymous statistics, uncheck the "Check for newest version" checkbox.
+</div>
+
+<h3><a name="MultipleNames"></a>Im SourceForge-Repository gibt es Dateien mit unterschiedlichen Namen, welche soll ich herunterladen?</h3>
+<div class="Paragraph_Block">
+Das h&auml;ngt davon ab, was Sie brauchen:
+<ul>
+ <li>Eine grafische Benutzeroberfl&auml;che : MediaInfo GUI</li>
+ <li>Eine Kommandozeilenversion : MediaInfo Cmd</li>
+ <li>Eine DLL f&uuml;r ein anderes Programm : MediaInfo DLL</li>
+</ul>
+<br/>
+Danach w&auml;hlen Sie Ihr Betriebssystem:
+<ul>
+ <li>Win : Windows 95 bis Windows XP</li>
+ <li>Lin : Linux-Distributionen</li>
+</ul>
+<br/>
+Schlie&szlig;lich w&auml;hlen Sie Ihre Rechnerarchitektur:
+<ul>
+ <li>686 : Intel Pentium, AMD Athlon</li>
+ <li>AMD64 : Intel EMT64-f&auml;higer Prozessor, AMD Athlon64</li>
+</ul>
+</div>
+
+<h3><a name="MultipleVersions"></a>Im SourceForge-Repository gibt es unterschiedliche Versionen, welche soll ich herunterladen?</h3>
+<div class="Paragraph_Block">
+Immer die neueste Version, ausser:
+<ul>
+ <li>Die Version tr&auml;gt den Namen "beta" : Sie k&ouml;nnen die Betaversion herunterladen, aber bedenken Sie dass sie nicht unbedingt stabil ist.</li>
+ <li>Sie werden angewiesen eine spezielle Version herunterzuladen. Nehmen Sie diese Version, vielleicht hat der Entwickler die neue Version nicht validiert.</li>
+</ul>
+</div>
+
+<h3><a name="NoSupport"></a>Warum ist (hier beliebiges Format einsetzen) nicht unterst&uuml;tzt?</h3>
+<div class="Paragraph_Block">
+Weil mir die Spezifikationen daf&uuml;r fehlen!<br/>
+Wenn Sie eine Dokumentation zu diesem Format haben <a href="mailto:zenitram@users.sourceforge.net">kontaktieren Sie mich</a> bitte.
+</div>
+
+<h3><a name="NoDetection"></a>Eine Datei wird nicht richtig erkannt, was soll ich machen?</h3>
+<div class="Paragraph_Block">
+Ich habe Interesse an der Datei, bitte <a href="mailto:zenitram@users.sourceforge.net">kontaktieren Sie mich</a>.
+</div>
+
+<h3><a name="NoTranslation"></a>Ich m&ouml;chte dass MediaInfo in meine Sprache &uuml;bersetzt wird, warum wird es nicht &uuml;bersetzt?</h3>
+<div class="Paragraph_Block">
+Weil ich Ihre Sprache nicht spreche! ;-)<br/>
+Wenn Sie etwa eine Stunde Zeit er&uuml;brigen m&ouml;chten, k&ouml;nnen Sie MediaInfo &uuml;bersetzen (unter Optionen / Voreinstellungen) und mir die Datei (im ./plugins/ Verzeichnis) zusenden. Es ist nicht schwierig, Sie ben&ouml;tigen lediglich ein paar Englischkenntnisse.
+</div>
+
+<h3><a name="NoQuestion"></a>Meine Frage ist hier nicht aufgez&auml;hlt, was soll ich machen?</h3>
+<div class="Paragraph_Block">
+Sie erhalten im <a href="#">Forum</a> Hilfe.
+</div>
+</div>
+
+<h2><a name="GUI"></a>Die grafische Benutzeroberfl&auml;che von MediaInfo (GUI)</h2>
+<div class="Paragraph_Block">
+<h3><a name="Licence_GUI"></a>Unter welcher Lizenz steht sie zur Verf&uuml;gung?</h3>
+<div class="Paragraph_Block">
+MediaInfoGUI ist unter GPL ver&ouml;ffentlicht.
+</div>
+
+<h3><a name="BuildFromSources_GUI"></a>Ich m&ouml;chte MediaInfo selbst kompilieren, wie geht das?</h3>
+<div class="Paragraph_Block">
+Sie k&ouml;nnen den Quellcode auf dieser Seite herunterladen, Sie ben&ouml;tigen Borland C++ 6 um ihn zu kompilieren.<br/>
+Es gibt eine <a href="/Support/Build_From_Sources/ThirdParty">Hilfe um Abh&auml;ngigkeiten zu kompilieren</a>.
+</div>
+
+<h3><a name="GUI_Linux"></a>Warum gibt es keine grafische Benutzeroberfl&auml;che von MediaInfo unter Linux?</h3>
+<div class="Paragraph_Block">
+VCL (die Grafikbibliothek von Borland) ist nicht portabel (dies ist die Einzige), daher kann ich die GUI nicht nach Linux portieren.<br/>
+Wenn Sie sich in der Programmierung von wxWidgets (eine Standard-Grafikbibliothek) auskennen und interessiert sind MediaInfo an wxWidgets anzupassen <a href="mailto:zenitram@users.sourceforge.net">schreiben Sie mir</a> bitte!<br/>
+</div>
+</div>
+
+<h2><a name="Cmd"></a>Kommandozeilenversion von MediaInfo (Cmd)</h2>
+<div class="Paragraph_Block">
+<h3><a name="Licence_Cmd"></a>Unter welcher Lizenz steht sie zur Verf&uuml;gung?</h3>
+<div class="Paragraph_Block">
+MediaInfoCmd ist unter GPL ver&ouml;ffentlicht.
+</div>
+
+<h3><a name="Cmd_Options"></a>Warum gibt es nicht mehr Optionen f&uuml;r die Kommandozeilenversion?</h3>
+<div class="Paragraph_Block">
+Ich habe mir nicht die Zeit genommen sie zu programmieren, aus Mangel an Interesse von Benutzern.<br/>
+Sie k&ouml;nnen einen <a href="#">Vorschlag f&uuml;r neue Funktionen</a> hinzuf&uuml;gen.
+</div>
+
+<h3><a name="BuildFromSources_Cmd"></a>Ich m&ouml;chte MediaInfo selbst kompilieren, wie geht das?</h3>
+<div class="Paragraph_Block">
+<a href="#">Sie k&ouml;nnen den Quellcode herunterladen.</a><br/>
+Hinweis : Es gibt viele Abh&auml;ngigkeiten, unter Umst&auml;nden werden Sie Probleme beim Kompilieren haben. Es gibt eine <a href="/Support/Build_From_Sources/ThirdParty">Hilfe um Abh&auml;ngigkeiten zu kompilieren</a>.
+</div>
+</div>
+
+<h2><a name="Dll"></a>Die Dynamic Link Library von MediaInfo (DLL)</h2>
+<div class="Paragraph_Block">
+<h3><a name="Licence_Dll"></a>Unter welcher Lizenz steht sie zur Verf&uuml;gung?</h3>
+<div class="Paragraph_Block">
+MediaInfoDLL ist unter LGPL ver&ouml;ffentlicht.
+</div>
+
+<h3><a name="NoSoftware"></a>Warum funktioniert die DLL nicht mit (hier beliebiges Programm einsetzen)?</h3>
+<div class="Paragraph_Block">
+Wahrscheinlich unterst&uuml;tzt das Programm die neueste DLL-Version nicht.<br/>
+<ul>
+ <li>Fragen Sie den Entwickler ob er sein Programm anpassen kann</li>
+ <li>Versuchen Sie eine &auml;ltere Version der DLL herunterzuladen</li>
+</ul>
+</div>
+
+<h3><a name="SDK"></a>Ich m&ouml;chte die Resultate der DLL in meinem Programm abfragen, wie geht das?</h3>
+<div class="Paragraph_Block">
+Laden Sie das DLL-Paket herunter, enthalten sind einige Beispiele (C, C++, GCC, MinGW, Borland C++ Builder, Microsoft Visual C++, Microsoft Visual Basic, Microsoft C#, Microsoft J#)<br/>
+Es gibt auch ein <a href="/Support/SDK">SDK</a> zum herunterladen.
+</div>
+
+<h3><a name="StaticLib"></a>Ich m&ouml;chte keine DLLs verwenden, ich bevorzuge statische Bibliotheken. Wie mache ich das?</h3>
+<div class="Paragraph_Block">
+Das ist nur mit C++ m&ouml;glich.<br/>
+Auf der Downloadseite gibt es ein Paket mit:
+<ul>
+ <li>der Bibliothek kompiliert in Borland C++ builder 6</li>
+ <li>der Bibliothek kompiliert in Microsoft Visual C++ 9 (aka 2005). Achtung! Das Projekt ist statisch mit der Multithread C++ Bibliothek verlinkt, und die Optionen C++ konform (in Standard-C++ ist wchar_t ein type, keine Integer-Zahl).</li>
+</ul>
+Wenn Sie einen anderen Compiler oder andere Optionen verwenden m&ouml;chten, m&uuml;ssen Sie den <a href="/Support/Build_From_Sources">Quellcode kompilieren</a>.
+</div>
+
+<h3><a name="BuildFromSources_DLL"></a>Ich m&ouml;chte MediaInfo selbst kompilieren, wie geht das?</h3>
+<div class="Paragraph_Block">
+<a href="#">Sie k&ouml;nnen den Quellcode herunterladen.</a><br/>
+Hinweis : Es gibt viele Abh&auml;ngigkeiten, unter Umst&auml;nden werden Sie Probleme beim Kompilieren haben. Es gibt eine <a href="/Support/Build_From_Sources/ThirdParty">Hilfe um Abh&auml;ngigkeiten zu kompilieren</a>.
+</div>
+</div>
+
+</body>
+</html>

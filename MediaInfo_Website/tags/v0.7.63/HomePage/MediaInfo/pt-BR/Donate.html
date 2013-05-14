@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>Ajude o MediaInfo</title>
+</head>
+<body>
+<?php
+if (isset($Donated))
+{
+ echo '
+<div class="Info">
+Dear donor, thank you for your support.<br/><br/>
+If you want to remove the "Donate" button from the Windows GUI, you can download and launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.
+<br/>
+</div>
+<br/>
+ ';
+}
+?>
+
+<h1>Doação</h1>
+<h2>Porque doar?</h2>
+MediaInfo é uma programa grátis.<br/>
+Então, porque doar? Para agradecer, incentivar ou ajudar. Você escolhe.
+
+<h2>Doação com cartões de crédito pelo Paypal</h2>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="BR">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+$ <select name="amount"><option value="2.00">2</option><option value="5.00">5</option><option selected value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> US
+<input type="hidden" name="currency_code" value="USD">
+
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
+<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+<br/>
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+<br/>
+<br/>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick-subscriptions">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="BR">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+<input type="hidden" name="no_note" value="1">
+or $ <select name="a3"><option selected value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> US/month
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="src" value="1">
+<input type="hidden" name="p3" value="1">
+<input type="hidden" name="t3" value="M">
+<input type="hidden" name="sra" value="1">
+<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
+<br/>
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+
+<h2>Sem dinheiro? E daí? Não vá embora! ;-)</h2>
+Isso não é motivo de vergonha.<br/>
+Você ainda poder contribuir para o projeto MediaInfo das seguintes maneiras:
+<ul>
+ <li>Traduzir ou melhorar o MediaInfo em seu idioma nativo.</li>
+ <li>Criar modelos HTML bonitos para usar no MediaInfo.</li>
+ <li>Criar ícones bonitos para usar no MediaInfo.</li>
+ <li>Traduzir ou melhorar o site do MediaInfo em seu idioma nativo.</li>
+ <li>Me enviar arquivos multimídia que não são são bem manipulados pelo MediaInfo.</li>
+ <li>Me enviar formatos de containers de multimídia, então talvez eu possa implementá-los melhor.</li>
+ <li>Programe algumas funções úteis (más use a versão mais atual do CVS, por favor). O programa é feito em C++</li>
+ <li>Me ajude com versões ainda não suportadas (Linux, Windows 64-bit...)</li>
+ <li>...</li>
+</ul>
+Não deixe de me <a href="mailto:zenitram@users.sourceforge.net">contatar</a>!
+</body>
+</html>

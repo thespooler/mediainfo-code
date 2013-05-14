@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="utf-8">
+    <title>Feu una donació</title>
+</head>
+<body>
+<?php
+if (isset($Donated))
+{
+ echo '
+<div class="Info">
+Dear donor, thank you for your support.<br/><br/>
+If you want to remove the "Donate" button from the Windows GUI, you can download and launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.
+<br/>
+</div>
+<br/>
+ ';
+}
+?>
+
+<h1>Donacions</h1>
+<h2>Per què fer una donació?</h2>
+MediaInfo és una aplicació lliure.<br/>
+Llavors, per què fer una donació? Doncs per que sigui una manera de donar les gràcies, per a ajudar-nos, per a donar-nos suport... Vosaltres trieu!!!.
+
+<h2>Donació amb targeta mitjançant Paypal</h2>
+<div class="Address">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="ES">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+<select name="amount"><option value="1.00">1</option><option value="2.00">2</option><option selected value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> Euros
+<input type="hidden" name="currency_code" value="EUR">
+
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
+<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+<br/>
+<input type="image" src="https://www.paypal.com/es_ES/ES/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal. La forma rápida y segura de pagar en Internet.">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+<br/>
+<br/>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick-subscriptions">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="ES">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+<input type="hidden" name="no_note" value="1">
+or <select name="a3"><option selected value="1.00">1</option><option value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> Euros/month
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="src" value="1">
+<input type="hidden" name="p3" value="1">
+<input type="hidden" name="t3" value="M">
+<input type="hidden" name="sra" value="1">
+<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
+<br/>
+<input type="image" src="https://www.paypal.com/es_ES/ES/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal. La forma rápida y segura de pagar en Internet.">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+
+<h2>Sense calers? No t'amoïnis! ;-)</h2>
+No és res vergonyós.<br/>
+De fet podeu contribuir d'altres formes amb el projecte MediaInfo:
+<ul>
+ <li>Traduint MediaInfo al vostre idioma.</li>
+ <li>Creant vistoses plantilles HTML per a MediaInfo.</li>
+ <li>Creant icones originals per a l'aplicació MediaInfo.</li>
+ <li>Traduint el web de MediaInfo al vostre idioma.</li>
+ <li>Enviant-me arxius que MediaInfo no pugui manegar en condicions.</li>
+ <li>Enviant-me arxius contenidors de diversos formats, i probablement ho implementaré per tal que MediaInfo sigui una eina molt completa.</li>
+ <li>Programant funcions interessants (sempre que feu servir la darrera versió de l'arxiu CVS, si us plau). Es troba en C++</li>
+ <li>Donant suport a plataformes que encara no tenen aquesta opció (Linux, Win64...)</li>
+ <li>...</li>
+</ul>
+No dubteu en <a href="mailto:zenitram@users.sourceforge.net">contactar amb mi</a>!
+</body>
+</html>

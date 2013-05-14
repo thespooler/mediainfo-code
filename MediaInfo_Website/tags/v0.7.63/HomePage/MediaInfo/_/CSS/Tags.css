@@ -1,0 +1,74 @@
+#Tags table {
+    background-color: #F7F7F7;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: x-small;
+    width: 100%;
+}
+
+#Tags tr:hover {
+    background-color: #DDD;
+}
+
+#Tags caption {
+    font-size: medium;
+}
+
+#Tags th {
+    background-color: #999;
+    border: 1px solid black;
+    font-size: small;
+}
+
+#Tags td {
+    border: 1px solid black;
+    text-align: left;
+}
+
+#Tags .xheader {
+    background-color: #CCC;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+}
+
+#Tags a:hover {
+    text-decoration: underline;
+}
+
+#Tags .plus a {
+    display: inline;
+}
+
+#Tags .open {
+    display: block;
+}
+
+#Tags a:link,
+#Tags a:visited {
+    text-decoration: none;
+}
+
+#Tags .minus a,
+#Tags .closed,
+#Tags .hidden {
+    display: none;
+}
+
+#Tags .mi,
+#Tags .vo,
+#Tags .ap,
+#Tags .wm {
+    width: 10%;
+}
+
+#Tags .mk,
+#Tags .de {
+    width: 20%;
+}
+
+#Tags .id,
+#Tags .ri,
+#Tags .dc {
+    width: 5%;
+}

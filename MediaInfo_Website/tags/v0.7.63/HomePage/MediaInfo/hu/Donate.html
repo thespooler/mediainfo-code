@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <title>MediaInfo súgó</title>
+</head>
+<body>
+<?php
+if (isset($Donated))
+{
+ echo '
+<div class="Info">
+Dear donor, thank you for your support.<br/><br/>
+If you want to remove the "Donate" button from the Windows GUI, you can download and launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.
+<br/>
+</div>
+<br/>
+ ';
+}
+?>
+
+<h1>Adományok</h1>
+<h2>Miért adományozzak?</h2>
+A MediaInfo ingyen szoftver. Akkor minek adományozni? <br/>
+Köszönetképp, támogatás, segítség céljából, Ön dönt.
+
+<h2>Adományozás kártyával a Paypal-on keresztül</h2>
+<div class="Address">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="HU">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+<select name="amount"><option value="1.00">1</option><option value="2.00">2</option><option selected value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> Euros
+<input type="hidden" name="currency_code" value="EUR">
+
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
+<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+<br/>
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+<br/>
+<br/>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick-subscriptions">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="HU">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+<input type="hidden" name="no_note" value="1">
+or <select name="a3"><option selected value="1.00">1</option><option value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> Euros/month
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="src" value="1">
+<input type="hidden" name="p3" value="1">
+<input type="hidden" name="t3" value="M">
+<input type="hidden" name="sra" value="1">
+<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
+<br/>
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+
+<h2>Nincs pénzem. Akkor mi van? Kérem, maradjon! ;-)</h2>
+Ez nem szégyen.<br/>
+Az alábbi módokon is segítheti a MediaInfo projektet:
+<ul>
+ <li>Fordítsa le a MediaInfo programot saját nyelvére.</li>
+ <li>Készítsen szép HTML sablonokat a MediaInfo kimenetéhez.</li>
+ <li>Készítsen szép ikonokat a MediaInfo programhoz.</li>
+ <li>Fordítsa le ezt a honlapot saját nyelvére.</li>
+ <li>Küldjön nekem olyan médiafájlokat, amelyeket a MediaInfo nem ismer fel.</li>
+ <li>Küldjön nekem multimédia gyűjtőformátumokat, így jobb támogatást készíthetek számukra.</li>
+ <li>Programozzon érdekes funkciókat (de a legfrissebb CVS-t használja). Ez jelenleg a C++.</li>
+ <li>Támogassa a nem támogatott platformokat (Linux, Win64...)</li>
+ <li>...</li>
+</ul>
+Ne habozzon <a href="mailto:zenitram@users.sourceforge.net">kapcsolatba lépni</a> velem!
+</body>
+</html>

@@ -1,0 +1,22 @@
+<tr style="height: 20px">
+    <td>
+    </td>
+    <td>
+    </td>
+</tr>
+<tr>
+    <td>
+    </td>
+    <td class="Note">
+        <?php
+        if ($NotUpdated=="Not translated")
+            echo 'This page has not yet been translated, if you are interested to translate this page, please <a href="mailto:zenitram@users.sourceforge.net"> contact me</a>';
+        else if ($NotUpdated=="Bad translation")
+            echo 'This page was translated by a non-native language translator, if you are interested to translate this page well, please <a href="mailto:zenitram@users.sourceforge.net">contact me</a>';
+        else if ($NotUpdated=="English")
+            echo '<span class="centered">Translation / localisation editing by <a href="http://hibrasil.biz">Hibrasil</a></span>';
+        else if ($NotUpdated!="")
+            echo 'This page has not yet been updated from the actual english page, if you are interested to translate this page, please <a href="mailto:zenitram@users.sourceforge.net">contact me</a><br/>
+        Items not updated :'.$NotUpdated; ?>
+    </td>
+</tr>

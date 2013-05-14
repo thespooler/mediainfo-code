@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <title>Build from sources</title>
+</head>
+<body>
+<h1>Come compilare il codice sorgente</h1>
+<h2>Compilatori supportati</h2>
+<ul>
+  <li> MSVC : Microsoft Visual C++ 9 (aka 2005)<br/>
+    (per Visual Studio 7 (aka 2002) o 8 (aka 2003), potete editare i .sln e .xxproj
+    per renderlo compatibile.<br/>
+    - .sln : "...Format Version 9.00" modificare in 7.00<br/>
+    - .xxproj : "Version="8.00" o "Version="7.10" in 7.00<br/>
+    Non &egrave; stato testato, ma dovrebbe essere semplice adattarlo al tuo compilatore)
+  </li>
+  <li> BCB : Borland C++ Builder 6 </li>
+  <li> DevCpp : Dev-C++ (Dev-Cpp &egrave; un IDE per MinGW)<br/>
+    (Sto lavorando su questo tipo di sorgente, attualmente non &egrave; stabile)
+  </li>
+  <li> MinGW : MinGW su Windows<br/>
+    (Sto lavorando su questo tipo di sorgente, attualmente non &egrave; stabile)
+  </li>
+  <li> GCC : Linux GCC<br/>
+    (Sto lavorando su questo tipo di sorgente, attualmente non &egrave; stabile)
+  </li>
+</ul>
+
+<h2>Necessari</h2>
+<ul>
+  <li><a href="Build_From_Sources/ThirdParty">Librerie esterne a MediaInfo</a></li>
+  <li><a href="Build_From_Sources/MediaInfoLib">Librerie di MediaInfo</a></li>
+</ul>
+<h2>Opzionali</h2>
+<ul>
+  <li>MediaInfo DLL</li>
+  <li>MediaInfo Cmd</li>
+  <li>MediaInfo GUI</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MACLib (BCB)</title>
+</head>
+<body>
+<h1>MACLib (BCB)</h1>
+<h2>Download</h2>
+<ul>
+    <li>Download <code><a href="http://files.monkeysaudio.com/MAC_SDK_411.zip">http://files.monkeysaudio.com/MAC_SDK_411.zip</a></code></li>
+</ul>
+
+<h2>Bug correction</h2>
+<ul>
+    <li>Apply this <code><a href="/_/Binary/MACLib_BCB.patch">patch for MACLib (BCB)</a></code></li>
+</ul>
+
+<h2>Project</h2>
+<ul>
+    <li>Create new project (Library)</li>
+    <li>Add (<code>%SOURCE_HOME%/Source/MACLib</code>) : All .cpp files</li>
+    <li>Add (<code>%SOURCE_HOME%/Source/Shared</code>) : All .cpp files except <code>APEInfoDialog.cpp</code> and <code>WAVInfoDialog.cpp</code></li>
+</ul>
+
+<h2>Project Options</h2>
+<ul>
+    <li>Compiler : <code>Release</code></li>
+    <li>TLib, Page Size : <code>0x0020</code></li>
+    <li>Directories, include : add <code>%SOURCE_HOME%/Shared</code>, <code>%SOURCE_HOME%/Source/MACLib</code>,&nbsp;<code>%SOURCE_HOME%/Source/Shared</code></li>
+    <li>Directories, Conditional :&nbsp;<code>WIN32;_WIN32</code><code></code></li>
+</ul>
+
+<h2>Compile</h2>
+<ul>
+    <li>Ctrl+F9</li>
+</ul>
+
+<h2>Install</h2>
+<ul>
+    <li>Copy <code>%SOURCE_HOME%/Shared/*.h</code> to <code>Shared/Include/MACLib/</code></li>
+    <li>Copy <code>%Your_Project_Name%.lib</code> to <code>Shared/Library/BCB/MACLib.lib</code></li>
+</ul>
+
+</body>
+</html>

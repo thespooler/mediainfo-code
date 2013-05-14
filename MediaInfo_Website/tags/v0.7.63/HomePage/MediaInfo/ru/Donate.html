@@ -1,0 +1,87 @@
+<?php
+//Paypal functions
+include $Path.'/_/Ad/Paypal_Display.html';
+header("Cache-Control: no-cache, must-revalidate, max-age=0");
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Помочь MediaInfo</title>
+</head>
+<body>
+<?php
+if (isset($Donated)) {
+ echo '
+<div class="Info">
+Dear donor, thank you for your support.<br/><br/>
+If you want to remove the "Donate" button from the Windows GUI, you can download and launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.
+<br/>
+</div>
+<br/>
+ ';
+}
+?>
+
+<h1>Пожертвования</h1>
+<h2>MediaInfo - свободное программное обеспечение, зачем нужно помогать?</h2>
+Для постоянной доработки MediaInfo Ваша помощь была бы очень ценной. Поскольку MediaInfo является свободным программным обеспечением, Ваша поддержка является наилучшим способом поощрения автора и его мотивации продолжать продвижение проекта.
+
+<h2>Пожертвования с помощью кредитных карт или через Paypal</h2>
+<div class="Address">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="RU">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+$ <select name="amount"><option value="2.00">2</option><option value="5.00">5</option><option selected value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> US
+<input type="hidden" name="currency_code" value="USD">
+
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
+<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+<br/>
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+<br/>
+<br/>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick-subscriptions">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="RU">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+<input type="hidden" name="no_note" value="1">
+or $ <select name="a3"><option selected value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> US/month
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="src" value="1">
+<input type="hidden" name="p3" value="1">
+<input type="hidden" name="t3" value="M">
+<input type="hidden" name="sra" value="1">
+<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
+<br/>
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+
+<h2>Нет денег на пожертвование? Не спешите уходить! ;-)</h2>
+Есть другие способы внести свой вклад в развитие проекта MediaInfo:
+<ul>
+ <li>Перевести MediaInfo на Ваш родной язык или усовершенствовать существующий перевод,
+ <li>Перевести этот вебсайт на Ваш родной язык или усовершенствовать существующий перевод,
+ <li>Создать привлекательные HTML-шаблоны оформления для вывода информации MediaInfo,
+ <li>Создать привлекательные значки для MediaInfo,
+ <li>Прислать мне мультимедийные файлы, которые некорректно обрабатываются MediaInfo,
+ <li>Прислать мне новые форматы контейнеров мультимедиа-файлов, чтобы я мог включить или усовершенствовать их поддержку программой,
+ <li>Написать несколько полезных функций (только, пожалуйста, используйте последнюю версию с CVS). MediaInfo написана на C++,
+ <li>Помочь с поддержкой существующих неподдерживаемых платформ (Linux, Win64...)
+ <li>... </li>
+</ul>
+Без колебаний <a href="mailto:zenitram@users.sourceforge.net">пишите мне</a>, если Вы заинтересованы в любом содействии проекту.
+</body>
+</html>
+

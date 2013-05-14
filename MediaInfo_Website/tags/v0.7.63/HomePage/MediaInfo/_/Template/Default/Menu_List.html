@@ -1,0 +1,47 @@
+<table cellpadding="0" cellspacing="0">
+    <tbody>
+        <tr>
+            <td class="Top_Middle"></td>
+            <?php
+            if ($Language=="fa")
+                echo '<td class="Top_Left"></td>';
+            else
+                echo '<td class="Top_Right"></td>';
+            ?>
+        </tr>
+    </tbody>
+</table>
+<table cellpadding="0" cellspacing="0">
+    <tbody>
+        <tr>
+            <td class="Menu0 Text">
+                <?php if ($Level!=1 || $Page_Exploded[2]!="About.html") echo '<a href="/'.$Language.'">'.$Menu_About.'</a>'; else echo $Menu_About; ?>
+            </td>
+        </tr>
+        <tr>
+            <td class="Menu1 Text">
+                <?php if ($Level!=1 || $Page_Exploded[2]!="Download.html") echo '<a href="/'.$Language.'/Download">'.$Menu_Download.'</a>'; else echo $Menu_Download; ?>
+            </td>
+        </tr>
+        <tr>
+            <td class="Menu2 Text">
+                <?php if ($Level!=1 || $Page_Exploded[2]!="Screenshots.html") echo '<a href="/'.$Language.'/Screenshots">'.$Menu_Screenshots.'</a>'; else echo $Menu_Screenshots; ?>
+            </td>
+        </tr>
+        <tr>
+            <td class="Menu3 Text">
+                <?php if ($Level!=1 || $Page_Exploded[2]!="Donate.html") echo '<a href="/'.$Language.'/Donate">'.$Menu_Donate.'</a>'; else echo $Menu_Donate; ?>
+            </td>
+        </tr>
+        <tr>
+            <td class="Menu4 Text">
+                <?php if ($Level!=1 || $Page_Exploded[2]!="Support.html") echo '<a href="/'.$Language.'/Support">'.$Menu_Support.'</a>'; else echo $Menu_Support; ?>
+            </td>
+        </tr>
+        <tr>
+            <td class="Menu5 Text">
+                <?php if ($Level!=1 || $Page_Exploded[2]!="Testimonials.html") echo '<a href="/'.$Language.'/Testimonials">'.$Menu_Testimonials.'</a>'; else echo $Menu_Testimonials; ?>
+            </td>
+        </tr>
+    </tbody>
+</table>

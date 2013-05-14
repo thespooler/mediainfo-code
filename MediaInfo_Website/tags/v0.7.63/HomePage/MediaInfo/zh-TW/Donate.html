@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <title>Help MediaInfo</title>
+</head>
+<body>
+<?php
+if (isset($Donated))
+{
+ echo '
+<div class="Info">
+Dear donor, thank you for your support.<br/><br/>
+If you want to remove the "Donate" button from the Windows GUI, you can download and launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.
+<br/>
+</div>
+<br/>
+ ';
+}
+?>
+
+<h1>贊助</h1>
+<h2>為何要贊助?</h2>
+MediaInfo 是套自由軟體.<br/>
+那麼, 為何要贊助? 感謝, 支持, 還是幫忙, 隨你選.
+
+<h2>用信用卡透過 Paypal 贊助</h2>
+<div class="Address">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="TW">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+$ <select name="amount"><option value="2.00">2</option><option value="5.00">5</option><option selected value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> US
+<input type="hidden" name="currency_code" value="USD">
+
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
+<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+<br/>
+<input type="image" src="https://www.paypal.com/zh_HK/HK/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - ??????????????!">
+<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+<br/>
+<br/>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick-subscriptions">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="TW">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+<input type="hidden" name="no_note" value="1">
+or $ <select name="a3"><option selected value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> US/month
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="src" value="1">
+<input type="hidden" name="p3" value="1">
+<input type="hidden" name="t3" value="M">
+<input type="hidden" name="sra" value="1">
+<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
+<br/>
+<input type="image" src="https://www.paypal.com/zh_HK/HK/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal - ??????????????!">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+
+<h2>沒錢. 那又怎樣呢? 別走開! ;-)</h2>
+這沒啥好丟臉的.<br/>
+您依舊可以透過下列方式貢獻 MediaInfo 專案:
+<ul>
+ <li>用您的語言翻譯或是改善 MediaInfo.</li>
+ <li>製作漂亮的網頁模板給 MediaInfo 輸出.</li>
+ <li>製作漂亮的圖示給 MediaInfo 使用.</li>
+ <li>用您的語言翻譯或是改善網頁.</li>
+ <li>寄給我 MediaInfo 不能正確處理的多媒體檔案.</li>
+ <li>寄給我多媒體容器的格式, 這樣我就可能可以實做地更好.</li>
+ <li>設計些好的函式 (但請使用 CVS 的最新版). 這是用 C++ 寫的</li>
+ <li>支援尚未支援的平台 (Linux, Win64...)</li>
+ <li>...</li>
+</ul>
+別猶豫, 快<a href="mailto:zenitram@users.sourceforge.net">聯絡我</a>吧!
+</body>
+</html>

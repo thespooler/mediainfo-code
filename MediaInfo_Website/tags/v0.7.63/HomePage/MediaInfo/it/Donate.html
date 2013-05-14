@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <title>Help MediaInfo</title>
+</head>
+<body>
+<?php
+if (isset($Donated))
+{
+ echo '
+<div class="Info">
+Dear donor, thank you for your support.<br/><br/>
+If you want to remove the "Donate" button from the Windows GUI, you can download and launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.
+<br/>
+</div>
+<br/>
+ ';
+}
+?>
+
+<h1>Donazione</h1>
+<h2>Perch&eacute; donare?</h2>
+MediaInfo &egrave; un programma gratuito.<br/>
+Quindi perch&eacute; donare? Per ringraziarmi, per aiutarmi, per supportarmi,
+sta a voi la scelta.
+<h2>Donazioni con carte di credito via Paypal</h2>
+<div class="Address">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="IT">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+<select name="amount"><option value="1.00">1</option><option value="2.00">2</option><option selected value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> Euros
+<input type="hidden" name="currency_code" value="EUR">
+
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
+<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+<br/>
+<input type="image" src="https://www.paypal.com/it_IT/IT/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - Il sistema di pagamento online più facile e sicuro!">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+<br/>
+<br/>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick-subscriptions">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="IT">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+<input type="hidden" name="no_note" value="1">
+or <select name="a3"><option selected value="1.00">1</option><option value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> Euros/month
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="src" value="1">
+<input type="hidden" name="p3" value="1">
+<input type="hidden" name="t3" value="M">
+<input type="hidden" name="sra" value="1">
+<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
+<br/>
+<input type="image" src="https://www.paypal.com/it_IT/IT/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal - Il sistema di pagamento online più facile e sicuro!">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+<h2>Non avete soldi? Che fare? non preoccuparti! ;-)</h2>
+Non &egrave; un problema.<br/>
+Puoi contribuire al progetto MediaInfo in diversi modi:
+<ul>
+  <li>Traducete o migliorate MediaInfo nella vostra lingua d'origine.</li>
+  <li>Create bei settaggi HTML per MediaInfo.</li>
+  <li>Create belle icone per MediaInfo.</li>
+  <li>Traducete o migliorate il sito nella vostra lingua d'origine.</li>
+  <li>Inviatemi file multimediali che non sono supportati bene da MediaInfo.</li>
+  <li>Mandatemi i dati dei contenitori multimediali, sicch&eacute; possa implementarli
+    in MediaInfo.</li>
+  <li>Programmate utili funzioni (in questo caso vi prego di utilizzare l'ultima
+    versione di CVS). E' C++</li>
+  <li>Supporto per le piattaforme non supportate (Linux, Win64...)</li>
+  <li>...</li>
+</ul>
+Non esitate, <a href="mailto:zenitram@users.sourceforge.net">contattatemi</a>!
+</body>
+</html>

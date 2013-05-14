@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr style="vertical-align: top">
+   <td style="padding: 0px 15px 5px 5px">
+    <a href="Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png" width="457" height="367" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="First">Що таке MediaInfo?</h2>
+    <strong>MediaInfo</strong> дозволяє отримувати
+    технічну та тегову інформацію з ваших відео і аудіо файлів.<br/>
+    Це є вільне програмне забезпечення (безкоштовний та вільний доступ до вихідного коду: GPL або LGPL ліцензії)<br/>
+    <br/>
+    <a style="font-weight: bold" href="<?php echo $Link;?>">Загрузити!</a><br/>
+    (версія <?php echo $Version;?><?php if (isset($Installer)) echo ', Графічний інтерфейс, з установщиком';?><?php if(isset($OS)) echo ', for '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    Примітка 1: Ви можете <a href="http://sourceforge.net/project/filemodule_monitor.php?filemodule_id=90341">відслідковувати</a> чи <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">дивитися замітки про версії</a> на <a href="http://sourceforge.net/projects/mediainfo">SourceForge project page</a><br/>
+    Примітка 2: Інші версії (ОС, інтерфейс...) також <a href="Download">доступні</a>
+    </br/>
+    (<a href="Download/Windows"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="os Windows"/></a>
+    <a href="Download/Mac_OS"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Mac OS" title="Mac OS" class="os MacOS"/></a>
+    <a href="Download/Debian"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Debian" title="Debian" class="os Debian"/></a>
+    <a href="Download/Ubuntu"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Ubuntu" title="Ubuntu" class="os Ubuntu"/></a>
+    <a href="Download/Ubuntu"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Linux Mint" title="Linux Mint" class="os Linux_Mint"/></a>
+    <a href="Download/RedHat"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux" class="os RedHat"/></a>
+    <a href="Download/CentOS"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="CentOS" title="CentOS" class="os CentOS"/></a>
+    <a href="Download/Fedora"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Fedora" title="Fedora" class="os Fedora"/></a>
+    <a href="http://packman.links2linux.org/package/mediainfo"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="openSUSE" title="openSUSE" class="os openSUSE"/></a>
+    <a href="Download/Mandriva"><img src="../_/Image/Default/Blank.gif" width="16" height="16" alt="Mandriva" title="Mandriva" class="os Mandriva"/></a>
+    <a href="http://aur.archlinux.org/packages.php?K=mediainfo"><img src="../_/Image/Default/Blank.gif" alt="ArchLinux" title="ArchLinux" class="os ArchLinux" width="16" height="16"/></a>)
+    <br/>
+    Ви можете <a href="Donate">пожертвувати</a> для підтримки подальших розробок.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr style="vertical-align: top">
+   <td style="padding: 0px 15px 5px 5px">
+<h2>Яку інформацію я можу отримати за допомогою MediaInfo?</h2>
+<ul>
+ <li>Основна: назва, автор, режисер, альбом, номер звукової дорожки, дата, тривалість...</li>
+ <li>Відео: кодек, співвідношення сторін, частота кадрів, швидкість потоку...</li>
+ <li>Аудіо: кодек, частота дискретизації, канали, мову, швидкість потоку...</li>
+ <li>Текст: мова субтитрів</li>
+ <li>Частини: намерація частин, список частин</li>
+</ul>
+<h2>Які формати (контейнери) підтримує MediaInfo?</h2>
+<ul>
+ <li>Відео: MKV, OGM, AVI, <a href="http://mediaarea.net/en/DIVX">DivX</a>, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Кодеки: <a href="http://mediaarea.net/en/DIVX">DivX</a>, <a href="http://mediaarea.net/en/XVID">XviD</a>, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Аудіо: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Субтитри: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>Що я можу робити з MediaInfo?</h2>
+<ul>
+ <li>Аналізувати безліч <a href="Support/Formats"> форматів відео- і аудіо- фалів</a></li>
+ <li>Різні методи відображення інформації (текст, таблиця, дерево, HTML...)</li>
+ <li>Ви можете змінювати відображення</li>
+ <li>Експорт інформації у текст, CSV, HTML...</li>
+ <li>Використовувати графічний інтерфейс, командну строку, чи DLL</li>
+ <li>Інтеграція в оболонку MS-Windows (drag 'n' drop і контекстне меню)</li>
+ <li>Інтернаціоналізація: Будь-яка мова відображується в будь-якій операційній системі</li>
+ <li>Можливість локалізації (але необхідні добровольці)</li>
+</ul>
+<p ><font size="-2">(перекладач: <a href="http://translation.if.ua">Hrynyshyn Pavlo Vasylovych</font></a>)</p>
+   </td>
+   <td>
+<?php
+if (!isset($Donated)) include $Path."/_/Ad/InContent_336_280_Google.html";
+?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

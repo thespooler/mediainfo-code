@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html;charset=UTF-8" http-equiv="content-type"/>
+    <title>FAQ</title>
+</head>
+<body>
+<div>
+<h1>Frequently Asked Questions (FAQ)</h1>
+<ul>
+ <li><a href="#General">General</a>
+  <ul>
+   <li><a href="#URL">What is the canonical URL of the website?</a></li>
+   <li><a href="#OpenCandy">The installer tries to connect to the Internet!!</a></li>
+   <li><a href="#Internet">MediaInfo tries to connect to the Internet!</a></li>
+   <li><a href="#MultipleNames">In the SourceForge repository, there are multiple filenames. Which one should I download?</a></li>
+   <li><a href="#MultipleVersions">In the SourceForge repository, there are multiple file versions. Which one should I download?</a></li>
+   <li><a href="#NoSupport">Why is <em>format</em> not supported?</a></li>
+   <li><a href="#NoDetection">A file is not properly detected. What should I do?</a></li>
+   <li><a href="#NoTranslation">I would like to have MediaInfo translated into my language. Why don't you translate it into my language?</a></li>
+   <li><a href="#BinaryPrefix">What's KiB, MiB, GiB?</a></li>
+   <li><a href="#NoQuestion">My question is not here. What should I do?</a></li>
+  </ul>
+ </li>
+ <li><a href="#GUI">MediaInfo Graphical Interface (GUI)</a>
+  <ul>
+   <li><a href="#Licence_GUI">What is the licence?</a></li>
+   <li><a href="#BuildFromSources_GUI">How do I compile from source?</a></li>
+   <li><a href="#GUI_Linux">Why isn't there a GUI version of MediaInfo for Linux?</a></li>
+  </ul>
+ </li>
+ <li><a href="#Cmd">MediaInfo Command Line Interface (CLI)</a>
+  <ul>
+   <li><a href="#Licence_Cmd">What is the licence?</a></li>
+   <li><a href="#Cmd_Options">Why aren't there more options for the command line?</a></li>
+   <li><a href="#BuildFromSources_Cmd">How do I compile from source?</a></li>
+  </ul>
+ </li>
+ <li><a href="#Dll">MediaInfo Library (DLL)</a>
+  <ul>
+   <li><a href="#Licence_Dll">What is the licence?</a></li>
+   <li><a href="#NoSoftware">Why doesn't the DLL work with <em>software name</em>?</a></li>
+   <li><a href="#SDK">How do I import data from your DLL?</a></li>
+   <li><a href="#StaticLib">I'd rather have static libraries</a></li>
+   <li><a href="#BuildFromSources_DLL">How do I compile from source?</a></li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+<h2><a name="General"></a>General</h2>
+<div class="Paragraph_Block">
+<h3><a name="URL"></a>What is the canonical URL of the website?</h3>
+<div class="Paragraph_Block">
+http://mediainfo.sourceforge.net<br/>
+</div>
+
+<h3><a name="OpenCandy"></a>The installer tries to connect to the Internet!</h3>
+<div class="Paragraph_Block">
+<a href="http://www.opencandy.com/what/">OpenCandy</a> is used by the Windows GUI installer for recommending other software you may find valuable during the installation .<br/>
+You can look at the <a href="http://www.opencandy.com/privacy-policy/">OpenCandy privacy policy</a>.<br/>
+If you don't have an OpenCandy screen during the install, or if you don't click on "Yes, Install" (this is NOT the default action) in this screen, nothing is done.<br/>
+If even with these explanations you don't want OpenCandy stuff, you can:
+<ul>
+ <li>Pay me every month for not having it (I spend a lot of time on MediaInfo, and I try to live from this work)</li>
+ <li>Use the <a href="/Download/Windows">package without the installer</a></li>
+ <li>Use your own installer (this is open source, you can do it)</li>
+ <li>Donate! Donors (whatever the donation) don't have the OpenCandy screen</li>
+</ul>
+Keep in mind that nothing is installed without your consent.<br/>
+More information is available at the <a href="/powered_by_opencandy">Powered by OpenCandy</a> page.<br/>
+</div>
+
+<h3><a name="Internet"></a>MediaInfo tries to connect to the Internet!</h3>
+<div class="Paragraph_Block">
+Yes, it tries (if "Check for newest version" is checked).<br/>
+When this checkbox is checked, MediaInfo connects to mediaarea.eu website too for <strong>anonymous</strong> statistics. (how often MediaInfo is used, which OS/Language/Country is the most used...)<br/>
+If you don't want to autorize anonymous statistics, uncheck the "Check for newest version" checkbox.
+</div>
+
+<h3><a name="MultipleNames"></a>In the SourceForge repository, there are multiple filenames. Which one should I download?</h3>
+<div class="Paragraph_Block">
+It depends on what you require:
+<ul>
+ <li>A graphical interface : MediaInfo GUI</li>
+ <li>A Command line interface : MediaInfo CLI</li>
+ <li>A DLL to interface with other software : MediaInfo DLL</li>
+</ul>
+<br/>
+After this, you must select your operating system:
+<ul>
+ <li>Win : Windows 95 to Windows XP</li>
+ <li>Lin : Linux distribution</li>
+</ul>
+<br/>
+And your platform:
+<ul>
+ <li>686 : Intel Pentium, AMD Athlon</li>
+ <li>AMD64 : Intel EMT64  enabled CPU, AMD Athlon64</li>
+</ul>
+</div>
+
+<h3><a name="MultipleVersions"></a>In the SourceForge repository, there are multiple file versions. Which one should I download?</h3>
+<div class="Paragraph_Block">
+Always the latest version, except if:
+<ul>
+ <li>The version is tagged "beta". You can download this, but be warned, this is not a stable version.</li>
+ <li>The person who asked you to download specified the version. Download this version, as the developer may not have tested the latest version</li>
+</ul>
+</div>
+
+<h3><a name="NoSupport"></a>Why is <em>format</em> not supported?</h3>
+<div class="Paragraph_Block">
+Because I don't have specifications for it!<br/>
+If you have documentation about the format, please <a href="mailto:zenitram@users.sourceforge.net">contact me</a>.
+</div>
+
+<h3><a name="NoDetection"></a>A file is not properly detected. What should I do?</h3>
+<div class="Paragraph_Block">
+Please <a href="https://sourceforge.net/tracker/?group_id=86862&amp;atid=581184">open a ticket</a>. I'd like a copy of your file.
+</div>
+
+<h3><a name="NoTranslation"></a>I would like to have MediaInfo translated into my language. Why don't you translate it into my language?</h3>
+<div class="Paragraph_Block">
+Because I don't speak your language! ;-)<br/>
+If you have an hour, you can translate it (in the options dialog box), and send me the file (from ./plugins/ directory). This is not difficult; you only need some knowledge of English.
+</div>
+
+<h3><a name="BinaryPrefix"></a>What's KiB, MiB, GiB?</h3>
+<div class="Paragraph_Block">
+These are <a href="http://en.wikipedia.org/wiki/Binary_prefix">binary prefixes</a>.<br/>
+For example, 1 KiB is 1024 bytes, 1 KB is 1000 bytes.<br/>
+The difference is not important with small files (only 2.4% for "K"), but becomes more and more important with bigger numbers (1 GB is only ~0.93 GiB, 1 TB is only 0.90 TiB!).<br/>
+MediaInfo makes every attempt to be precise and does not tolerate errors of such magnitude when posting numbers even though Microsoft continues to confuse the issue in its operating system.<br/>
+See the <a href="http://en.wikipedia.org/wiki/Binary_prefix#IEC_standard_prefixes">Binary prefix Wikipedia page</a> for more information.<br/>
+Anyway you can:
+<ul>
+ <li>use the complete output with raw values (-f in the CLI or "advanced mode" in the GUI) --> "File size: 4700000000" instead of "File size: 4.37 GiB"</li>
+ <li>use your own language file (--Language=file://xxx.csv in the CLI, choose your own language file in the GUI). Language files are in the GUI package, you can edit " GiB" and other fields as you desire).<br/>
+</ul>
+</div>
+
+<h3><a name="Thousand separator"></a>Why are there spaces in numbers?</h3>
+<div class="Paragraph_Block">
+Yes, there is a space in "1 920 pixels" for example.<br/>
+This is the <a href="http://en.wikipedia.org/wiki/Thousands_separator#Examples_of_use">international standard</a> ("SI style").<br/>
+This standard is the official one for 96% of the world population (<a href="http://en.wikipedia.org/wiki/SI">All countries except U.S.A.</a>).
+I currently don't plan to change this default display although you can:
+<ul>
+ <li>use the complete output with raw values (-f in the CLI or "advanced mode" in the GUI) --> "Width: 1920"</li>
+ <li>use your own language file (--Language=file://xxx.csv in the CLI, choose your own language file in the GUI). Language files are in the GUI package, you can edit the "Thousand_Separator" field as you desire).<br/>
+</ul>
+</div>
+
+<h3><a name="NoQuestion"></a>My question is not here. What should I do?</h3>
+<div class="Paragraph_Block">
+You might get help on the <a href="http://sourceforge.net/forum/forum.php?forum_id=297610">forums</a>.
+</div>
+</div>
+
+<h2><a name="GUI"></a>MediaInfo GUI</h2>
+<div class="Paragraph_Block">
+<h3><a name="Licence_GUI"></a>What is the licence?</h3>
+<div class="Paragraph_Block">
+MediaInfoGUI licence is GPL.
+</div>
+
+<h3><a name="BuildFromSources_GUI"></a>How do I compile from source?</h3>
+<div class="Paragraph_Block">
+The source code can be downloaded <a href="/Download/Source">here</a>.<br/>
+You need Borland C++ 6 to compile it.<br/>
+There is a <a href="/Support/Build_From_Sources/ThirdParty">help file to assist in compiling dependencies</a>.
+</div>
+
+<h3><a name="GUI_Linux"></a>Why isn't there a GUI version of MediaInfo for Linux?</h3>
+<div class="Paragraph_Block">
+VCL (the graphical library of Borland) is not portable (this is the only one), so I can't adapt the GUI for Linux.<br/>
+If you know how to program with wxWidgets (a standard graphical library), and are interested in adapting MediaInfo to wxWidgets, then I am interested. Please <a href="mailto:zenitram@users.sourceforge.net">contact me</a>!<br/>
+</div>
+</div>
+
+<h2><a name="Cmd"></a>MediaInfo Cmd</h2>
+<div class="Paragraph_Block">
+<h3><a name="Licence_Cmd"></a>What is the licence?</h3>
+<div class="Paragraph_Block">
+MediaInfoCmd licence is GPL.
+</div>
+
+<h3><a name="Cmd_Options"></a>Why aren't there more options for the command line?</h3>
+<div class="Paragraph_Block">
+I didn't spend much time coding it, due to less interest from users.<br/>
+You can add a <a href="http://sourceforge.net/tracker/?group_id=86862&amp;atid=581184">feature request</a>.
+</div>
+
+<h3><a name="BuildFromSources_Cmd"></a>How do I compile from source?</h3>
+<div class="Paragraph_Block">
+The source code can be downloaded <a href="/Download/Source">here</a>.<br/>
+Note : there are a lot of dependencies, so you may have difficulty compiling them. There is a <a href="/Support/Build_From_Sources/ThirdParty">help file to assist in compiling dependencies</a>.
+</div>
+</div>
+
+<h2><a name="Dll"></a>MediaInfo DLL</h2>
+<div class="Paragraph_Block">
+<h3><a name="Licence_Dll"></a>What is the licence?</h3>
+<div class="Paragraph_Block">
+MediaInfoDLL licence is LGPL.
+</div>
+
+<h3><a name="NoSoftware"></a>Why doesn't the DLL work with <em>software name</em>?</h3>
+<div class="Paragraph_Block">
+Maybe the software doesn't support the latest version of the DLL.<br/>
+<ul>
+ <li>Try asking the software developer to modify his software</li>
+ <li>Try downloading an older version of the DLL</li>
+</ul>
+</div>
+
+<h3><a name="SDK"></a>How do I import data from your DLL?</h3>
+<div class="Paragraph_Block">
+Download the DLL package. There are some examples, in many different languages (standard C, standard C++, GCC, MinGW, Borland C++ Builder, Microsoft Visual C++, Microsoft Visual Basic, Microsoft C#, Microsoft J#)<br/>
+There is also an <a href="/Support/SDK">SDK</a>.
+</div>
+
+<h3><a name="StaticLib"></a>I'd rather have static libraries</h3>
+<div class="Paragraph_Block">
+This is only possible with C++.<br/>
+On the download page, there is package with:
+<ul>
+ <li>Library compiled with Borland C++ builder 6</li>
+ <li>Library compiled with Microsoft Visual C++ 9 (aka 2005). Warning : the project is statically linked to the multithreaded C++ library, and options are C++ compliant (Be careful. In standard C++, wchar_t is a type, not a short int).</li>
+</ul>
+If you want to use other compilers or options, you must <a href="/Support/Build_From_Sources">compile from source</a>.
+</div>
+
+<h3><a name="BuildFromSources_DLL"></a>How do I compile from source?</h3>
+<div class="Paragraph_Block">
+The source code can be downloaded <a href="/Download/Source">here</a>.<br/>
+Note : there are a lot of dependencies, so you may have difficulty compiling them. There is a <a href="/Support/Build_From_Sources/ThirdParty">help file to assist in compiling dependencies</a>.
+</div>
+</div>
+
+</body>
+</html>

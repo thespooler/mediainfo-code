@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Help MediaInfo</title>
+</head>
+<body>
+<?php
+if (isset($Donated))
+{
+ echo '
+<div class="Info">
+Dear donor, thank you for your support.<br/><br/>
+If you want to remove the "Donate" button from the Windows GUI, you can download and launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.
+<br/>
+</div>
+<br/>
+ ';
+}
+?>
+
+<h1>Datek</h1>
+<h2>Dlaczego wspierać?</h2>
+MediaInfo jest darmowym programem.<br/>
+Po co więc płacić? Z wdzięczności. Żeby zmotywowac do dalszej pracy. Żeby pomóc. Wybierz co chcesz.
+
+<h2>Wpłata kartą przez Paypal</h2>
+<div class="Address">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="PL">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+<select name="amount"><option value="5.00">5</option><option value="10.00">10</option><option selected value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> Zloty
+<input type="hidden" name="currency_code" value="PLN">
+
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/?Donated=true">
+<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/Donate">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+<br/>
+<input type="image" src="https://www.paypal.com/pl_PL/PL/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal — Plac wygodnie i bezpiecznie">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+<br/>
+<br/>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick-subscriptions">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="PL">
+<input type="hidden" name="item_name" value="Donation for MediaInfo">
+<input type="hidden" name="no_note" value="1">
+or <select name="a3"><option selected value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> Zloty/month
+<input type="hidden" name="currency_code" value="PLN">
+<input type="hidden" name="src" value="1">
+<input type="hidden" name="p3" value="1">
+<input type="hidden" name="t3" value="M">
+<input type="hidden" name="sra" value="1">
+<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
+<br/>
+<input type="image" src="https://www.paypal.com/pl_PL/PL/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal — Plac wygodnie i bezpiecznie">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+
+<h2>Nie masz pieniędzy? Nie szkodzi. Nie uciekaj! ;-)</h2>
+To nie wstyd.<br/>
+Wciąż masz coś do zaoferowania. Możesz przecież:
+<ul>
+ <li>Przetłumaczyć MediaInfo na swój język ojczysty lub poprawić istniejące tłumaczenie.
+ <li>Utworzyć piękny szablon HTML dla eksportu informacji z MediaInfo.
+ <li>Utworzyc ładne ikony dla MediaInfo.
+ <li>Przetłumaczyć tę stronę na swój ojczysty jezyk lub poprawić istniejące tłumaczenie.
+ <li>Wysłać mi pliki multimedialne, z którymi MediaInfo kiepsko sobie radzi.
+ <li>Wysłać mi formaty zawartości mediów, które być może uda mi się lepiej zaimplementować.
+ <li>Zaprogramować przydatne funkcje (proszę tylko użyć najnowszej wersji CVS). To jest C++
+ <li>Wesprzeć nieobsługiwane dotąd platformy (Linux, Win64...)
+ <li>...
+</ul>
+Nie wahaj się <a href="mailto:zenitram@users.sourceforge.net">skontaktowć ze mną</a>!
+</body>
+</html>
