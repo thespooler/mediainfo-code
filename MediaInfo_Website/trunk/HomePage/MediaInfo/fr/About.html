@@ -6,8 +6,8 @@
 <body>
 <table>
  <tbody>
-  <tr style="vertical-align: top">
-   <td style="padding: 0px 15px 5px 5px">
+  <tr class="about-tr">
+   <td class="about-td">
     <a href="Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_fr_Extract.png" width="433" height="368" alt="" title="Captures d'écran - L'écran principal"/></a>
    </td>
    <td>
@@ -15,9 +15,9 @@
     <strong>MediaInfo</strong> fournit des informations techniques et les tags à propos de vos fichiers video et audio.<br/>
     C'est un logiciel "libre" (libre de ne rien payer, et libre accès au code source, licence BSD)<br/>
     <br/>
-    <a style="font-weight: bold" href="<?php echo $Link;?>">Téléchargez le!</a><br/>
+    <strong><a href="<?php echo $Link;?>">Téléchargez le!</a></strong><br/>
     (version <?php echo $Version;?><?php if (isset($Installer)) echo ', avec Interface graphique, avec un installeur automatique';?><?php if(isset($OS)) echo ', pour '.$OS;?><?php if(isset($Bits)) echo ' bits';?><?php if (isset($Size)) echo ', '.$Size.' Mo';?>)<br/>
-    <span style="font-size: xx-small">(L'installeur comprend un système de distribution de logiciels. <a href="/Bundled">En savoir plus</a>.)</span><br/>
+    <small>(L'installeur comprend un système de distribution de logiciels. <a href="/Bundled">En savoir plus</a>.)</small><br/>
     <br/>
     D'autres versions (packaging, OS, interface...) sont aussi <a href="Download">disponibles</a>
     <br/>
@@ -46,8 +46,8 @@
 </table>
 <table>
  <tbody>
-  <tr style="vertical-align: top">
-   <td style="padding: 0px 15px 5px 5px">
+  <tr class="about-tr">
+   <td class="about-td">
 <h2>Quelles informations puis-je avoir avec MediaInfo?</h2>
 <ul>
  <li>General : titre, auteur, réalisateur, album, numéro de piste, date, durée...</li>

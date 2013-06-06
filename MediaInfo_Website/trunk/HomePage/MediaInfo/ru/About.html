@@ -6,8 +6,8 @@
 <body>
 <table>
  <tbody>
-  <tr style="vertical-align: top">
-   <td style="padding: 0px 15px 5px 5px">
+  <tr class="about-tr">
+   <td class="about-td">
     <a href="Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png" width="457" height="367" alt="Основной интерфейс" title="Скриншот - Основной интерфейс"/></a>
    </td>
    <td>
@@ -15,7 +15,7 @@
     <strong>MediaInfo</strong> позволяет получать техническую информацию из видео- или аудио- файлов.<br/>
     Это - свободное программное обеспечение (распространяется бесплатно и с исходным кодом, доступным по лицензии GPL или LGPL)<br/>
     <br/>
-    <a style="font-weight: bold" href="<?php echo $Link;?>">Загрузить!</a><br/>
+    <strong><a href="<?php echo $Link;?>">Загрузить!</a></strong><br/>
     (версия <?php echo $Version;?><?php if (isset($Installer)) echo ', Графический интерфейс, с установщиком';?><?php if(isset($OS)) echo ', для '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
     Прим. 1: Вы можете <a href="http://sourceforge.net/project/filemodule_monitor.php?filemodule_id=90341">отслеживать</a> или <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">просмотреть заметки о версиях</a> на <a href="http://sourceforge.net/projects/mediainfo">SourceForge сайте проекта</a><br/>
     Прим. 2: Другие версии (ОС, интерфейс...) также <a href="Download">доступны</a>
@@ -39,8 +39,8 @@
 </table>
 <table>
  <tbody>
-  <tr style="vertical-align: top">
-   <td style="padding: 0px 15px 5px 5px">
+  <tr class="about-tr">
+   <td class="about-td">
 <h2>Какую информацию я могу получить с помощью MediaInfo?</h2>
 <ul>
  <li>Основная: название, автор, режиссер, альбом, номер звуковой дорожки, дата, продолжительность...</li>
