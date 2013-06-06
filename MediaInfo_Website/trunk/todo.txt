@@ -3,4 +3,3 @@
 * clean up td/tr for menu and the general layout
 * add new screenshots
 * use fancybox for the screenshots gallery
-* fix Farsi text direction
