@@ -125,7 +125,7 @@
                 else if ($OS_Version=='12.10')                              $OS_Version='13.04 (Raring )';
                 $OS='Ubuntu '.$OS_Version.', '.$CPU;
             } else {
-                $Version='0.7.62'; //Ubuntu
+                $Version='0.7.63'; //Ubuntu
                 $Link=$Language.'/Download/Ubuntu';
                 $OS='Ubuntu';
             }
@@ -199,7 +199,7 @@
                 else if ($OS_Version=='13.04')                              $OS_Version='15 (Olivia)';
                 $OS='Linux Mint '.$OS_Version.', '.$CPU;
             } else {
-                $Version='0.7.62'; //Ubuntu
+                $Version='0.7.63'; //Ubuntu
                 $Link=$Language.'/Download/Ubuntu';
                 $OS='Ubuntu';
             }
@@ -208,7 +208,7 @@
         else if (stristr($_SERVER['HTTP_USER_AGENT'], "centos")) {
                  if (stristr($_SERVER['HTTP_USER_AGENT'], "el4"))       $OS_Version='4';
             else if (stristr($_SERVER['HTTP_USER_AGENT'], "el5"))       $OS_Version='5';
-            else if (stristr($_SERVER['HTTP_USER_AGENT'], "el6"))       $OS_Version='5';
+            else if (stristr($_SERVER['HTTP_USER_AGENT'], "el6"))       $OS_Version='6';
 
                  if (stristr($_SERVER['HTTP_USER_AGENT'], "i386"))      $CPU='i386';
             else if (stristr($_SERVER['HTTP_USER_AGENT'], "i486"))      $CPU='i386';
@@ -227,7 +227,7 @@
                 else if ($Link==$Language.'/Download/CentOS#6.x86_64')      $Version='0.7.63';
                 $OS='CentOS '.$OS_Version.', '.$CPU;
             } else {
-                $Version='0.7.62'; //CentOS
+                $Version='0.7.63'; //CentOS
                 $Link=$Language.'/Download/CentOS';
                 $OS='CentOS';
             }
@@ -255,7 +255,7 @@
                 else if ($Link==$Language.'/Download/RHEL#6.x86_64')        $Version='0.7.63';
                 $OS='RHEL '.$OS_Version.', '.$CPU;
             } else {
-                $Version='0.7.62'; //RHEL
+                $Version='0.7.63'; //RHEL
                 $Link=$Language.'/Download/RHEL';
                 $OS='RHEL';
             }
@@ -324,7 +324,7 @@
                 else if ($OS_Version=='18')                                 $OS='18 (Spherical Cow)';
                 $OS='Fedora '.$OS_Version.', '.$CPU;
             } else {
-                $Version='0.7.62'; //Fedora
+                $Version='0.7.63'; //Fedora
                 $Link=$Language.'/Download/Fedora';
                 $OS='Fedora';
             }
@@ -354,7 +354,7 @@
                 else if ($Link==$Language.'/Download/openSUSE#12.3.x86_64') $Version='0.7.63';
                 $OS='openSUSE '.$OS_Version.', '.$CPU;
             } else {
-                $Version='0.7.62'; //openSUSE
+                $Version='0.7.63'; //openSUSE
                 $Link=$Language.'/Download/openSUSE';
                 $OS='openSUSE';
             }
@@ -390,7 +390,7 @@
                 else if ($Link==$Language.'/Download/Mandriva#2011.x86_64') $Version='0.7.63';
                 $OS='Mandriva '.$OS_Version.', '.$CPU;
             } else {
-                $Version='0.7.62'; //Mandriva
+                $Version='0.7.63'; //Mandriva
                 $Link=$Language.'/Download/Mandriva';
                 $OS='Mandriva';
             }
@@ -411,7 +411,7 @@
             $OS='Arch Linux';
             $Size='2';
         } else {
-            $Version='0.7.62'; //Linux
+            $Version='0.7.63'; //Linux
             $Link=$Language.'/Download';
             $OS='Linux';
             $Size='2';
