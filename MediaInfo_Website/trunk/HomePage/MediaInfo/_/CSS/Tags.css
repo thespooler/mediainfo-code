@@ -1,7 +1,10 @@
+/*csslint box-sizing: false, ids: false*/
+
 #Tags table {
     background-color: #F7F7F7;
     border: 1px solid black;
     border-collapse: collapse;
+    box-sizing: content-box;
     font-size: x-small;
     width: 100%;
 }
