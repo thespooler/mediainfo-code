@@ -96,13 +96,13 @@ ul {
 }
 
 .Top_Left {
-    background: url("/_/Image/Default/Top_Left.png") no-repeat;
+    background-position: 0 0 !important;
     width: 9px;
     height: 19px;
 }
 
 .Top_Right {
-    background: url("/_/Image/Default/Top_Right.png") no-repeat;
+    background-position: 0 -29px !important;
     width: 9px;
     height: 19px;
 }
@@ -263,53 +263,50 @@ ul {
 
 
 /* Flags */
-.flag {
-    background: url("/_/Image/Default/flags.png") no-repeat;
+.sprite {
+    background: url("/_/Image/Default/sprite-all.png") no-repeat;
 }
 
-.Albania     { background-position: 0 0; }
-.Belarus     { background-position: -26px 0; }
-.Brazil      { background-position: -52px 0; }
-.Bulgaria    { background-position: -78px 0; }
-.Catalonia   { background-position: -104px 0; }
-.China       { background-position: -130px 0; }
-.Croatia     { background-position: -156px 0; }
-.France      { background-position: -182px 0; }
-.Georgia     { background-position: -208px 0; }
-.Germany     { background-position: -234px 0; }
-.Hungary     { background-position: -260px 0; }
-/*.Indonesia   { background-position: -286px 0; }*/
-.Iran        { background-position: -312px 0; }
-.Italy       { background-position: -338px 0; }
-.Japan       { background-position: -364px 0; }
-.Korea       { background-position: -390px 0; }
-.Lithuania   { background-position: -416px 0; }
-.Netherlands { background-position: -442px 0; }
-.Poland      { background-position: -468px 0; }
-.Portugal    { background-position: -494px 0; }
-.Russia      { background-position: -520px 0; }
-.Spain       { background-position: -546px 0; }
-.Sweden      { background-position: -572px 0; }
-.Taiwan      { background-position: -598px 0; }
-.Thailand    { background-position: -624px 0; }
-.UK          { background-position: -650px 0; }
-.Ukraine     { background-position: -676px 0; }
-.Unknown     { background-position: -702px 0; }
+.Albania     { background-position: 0 -58px; }
+.Belarus     { background-position: -26px -58px; }
+.Brazil      { background-position: -52px -58px; }
+.Bulgaria    { background-position: -78px -58px; }
+.Catalonia   { background-position: -104px -58px; }
+.China       { background-position: -130px -58px; }
+.Croatia     { background-position: -156px -58px; }
+.France      { background-position: -182px -58px; }
+.Georgia     { background-position: -208px -58px; }
+.Germany     { background-position: -234px -58px; }
+.Hungary     { background-position: -260px -58px; }
+/*.Indonesia   { background-position: -286px -58px; }*/
+.Iran        { background-position: -312px -58px; }
+.Italy       { background-position: -338px -58px; }
+.Japan       { background-position: -364px -58px; }
+.Korea       { background-position: -390px -58px; }
+.Lithuania   { background-position: -416px -58px; }
+.Netherlands { background-position: -442px -58px; }
+.Poland      { background-position: -468px -58px; }
+.Portugal    { background-position: -494px -58px; }
+.Russia      { background-position: -520px -58px; }
+.Spain       { background-position: -546px -58px; }
+.Sweden      { background-position: -572px -58px; }
+.Taiwan      { background-position: -598px -58px; }
+.Thailand    { background-position: -624px -58px; }
+.UK          { background-position: -650px -58px; }
+.Ukraine     { background-position: -676px -58px; }
+.Unknown     { background-position: -702px -58px; }
 
 
 /* Operating Systems images */
-.os {
-    background: url("/_/Image/OS/os.png") no-repeat;
-}
 
-.ArchLinux  { background-position: 0 0; }
-.CentOS     { background-position: -17px  0; }
-.Debian     { background-position: -34px  0; }
-.Fedora     { background-position: -51px  0; }
-.Linux_Mint { background-position: -68px  0; }
-.MacOS      { background-position: -87px  0; }
-.Mandriva   { background-position: -104px 0; }
-.RedHat     { background-position: -121px 0; }
-.Ubuntu     { background-position: -138px 0; }
-.Windows    { background-position: -155px 0; }
-.openSUSE   { background-position: -172px 0; }
+.ArchLinux  { background-position: 0 -83px; }
+.CentOS     { background-position: -17px  -83px; }
+.Debian     { background-position: -34px  -83px; }
+.Fedora     { background-position: -51px  -83px; }
+.Linux_Mint { background-position: -68px  -83px; }
+.MacOS      { background-position: -87px  -83px; }
+.Mandriva   { background-position: -104px -83px; }
+.RedHat     { background-position: -121px -83px; }
+.Ubuntu     { background-position: -138px -83px; }
+.Windows    { background-position: -155px -83px; }
+.openSUSE   { background-position: -172px -83px; }
