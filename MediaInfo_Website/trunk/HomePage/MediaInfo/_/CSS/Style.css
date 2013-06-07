@@ -210,6 +210,14 @@ ul {
     font-weight: bold;
 }
 
+.table-header {
+    background-color: #99CCFF;
+}
+
+.table-OS {
+    background-color: #FFCC99;
+}
+
 .First {
     margin-top: 0;
 }
