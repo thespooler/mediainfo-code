@@ -1,5 +1,3 @@
-* fix validation errors
-* move inline css to the css file
-* clean up td/tr for menu and the general layout
+* clean up td/tr for menu and the general layout; stop using a table for the menu
 * add new screenshots
 * use fancybox for the screenshots gallery
