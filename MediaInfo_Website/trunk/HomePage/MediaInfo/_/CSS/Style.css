@@ -89,6 +89,11 @@ ul {
     width: 250px;
 }
 
+.Menu th,
+.Menu td {
+    padding: 0;
+}
+
 .Top_Middle {
     background: url("/_/Image/Default/Top_Middle.png") repeat-x;
     width: 228px;
