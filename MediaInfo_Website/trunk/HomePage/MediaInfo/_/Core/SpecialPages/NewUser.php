@@ -1,6 +1,6 @@
 <?php
 //-Special case : new.html
-if ($Page=="" || $Page=="/") {
+if (empty($Page) || $Page=="/") {
     header("Location: http://".$_SERVER['HTTP_HOST']."/".$Language);
     exit;
 }

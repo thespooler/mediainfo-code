@@ -148,7 +148,7 @@ if (!isset($Edit)) {
         }
     }
 
-    if ($NotUpdated=="" && isset($Page_Exploded[$Level+1]) && isset($Updates[$Page_Exploded[$Level+1]]))
+    if (empty($NotUpdated) && isset($Page_Exploded[$Level+1]) && isset($Updates[$Page_Exploded[$Level+1]]))
         $NotUpdated=$Updates[$Page_Exploded[$Level+1]];
 }
 
