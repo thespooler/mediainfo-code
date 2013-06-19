@@ -1,6 +1,3 @@
-#HTML is parsed by PHP
-AddType application/x-httpd-php .html
-
 # Apache Configuration File
 
 # (!) Using `.htaccess` files slows down Apache, therefore, if you have access
@@ -178,7 +175,8 @@ Options -MultiViews
     AddType text/vtt                                    vtt
     AddType text/x-component                            htc
     AddType text/x-vcard                                vcf
-
+    # HTML is parsed by PHP (MediaInfo custom)
+    AddType application/x-httpd-php                     html
 </IfModule>
 
 # ------------------------------------------------------------------------------
