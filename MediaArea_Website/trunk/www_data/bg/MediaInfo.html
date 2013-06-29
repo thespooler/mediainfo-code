@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+    <a href="MediaInfo/Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png" width="457" height="367" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="First">Какво е MediaInfo?</h2>
+    <strong>MediaInfo</strong> предоставя подробна техническа информация и инфромазия за таговете на даден видео или аудио файл.<br/>
+    Програмата е с безплатен лиценз (без такси и със свободен достъп до сорс кода: GPL или LGPL лиценз)<br/>
+    <br/>
+    <strong><a href="<?php echo $Link;?>">Download it!</a></strong><br/>
+    (version <?php echo $Version;?><?php if (isset($Installer)) echo ', Графичен интерфейс с инсталатор';?><?php if(isset($OS)) echo ', за '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    Забележка 1: Можете да <a href="http://mediainfo.sourceforge.net/Log">следите</a> или <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">да видите бележките по новите версии</a> на страницата на нашия проект <a href="http://sourceforge.net/projects/mediainfo">в SourceForge</a><br/>
+    Забележка 2: Достъпни са и други версии (за различни операционни системи и с различни интерфейси на <a href="Download">страницата за изтегляне</a><br/>
+    <br/>
+    Можете да <a href="Donate">направите дарение</a>, за да подкрепите по-нататъшното дарение.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+<h2>Каква информация можете да получите чрез MediaInfo?</h2>
+<ul>
+ <li>Обща: заглавие, автор, продуцент, албум, номер на песента, дата, продължителност...</li>
+ <li>Видео: кодек, мащаб, кадри в секунда, bitrate...</li>
+ <li>Аудио: кодек, честота, канали, език, bitrate...</li>
+ <li>Текст: език на субтитрите</li>
+ <li>Глави: брой глави в DVD филм, списък на главите</li>
+</ul>
+<h2>Какви формати поддържа MediaInfo?</h2>
+<ul>
+ <li>Видео: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Кодеци: DivX, XviD, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Аудио: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Субтитри: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>Какви възможности Ви предоставя MediaInfo?</h2>
+<ul>
+ <li>Да преглеждате множество <a href="Support/Formats">видео и аудио формати</a></li>
+ <li>Различни методи за преглеждане на информацията (текстови, на отделни страници, дървовиден, като HTML...)</li>
+ <li>Можете да настройвате тези изгледи според нуждите си</li>
+ <li>Да изнасяте информацията като текст, CSV, HTML...</li>
+ <li>Да използвате програмата с графичен интерфейс, команден ред или DLL</li>
+ <li>Интеграция в контекстните менюта на Windows и поддръжка на влачене-и-пускане</li>
+ <li>Поддръжка на множество езици</li>
+ <li>Възможност за превеждане на други езици от доброволци</li>
+</ul>
+   </td>
+   <td>
+<?php
+if (!isset($Donated)) include $Path."/_/Ad/InContent_336_280_Google.html";
+?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

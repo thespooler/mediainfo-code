@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+    <a href="MediaInfo/Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png" width="457" height="367" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="First">Apa itu MediaInfo?</h2>
+    <strong>MediaInfo</strong> memberikan informasi teknikal dan data mengenai berkas video dan audio.<br/>
+    MediaInfo adalah software yang gratis dan bebas untuk dimodifikasi (Anda bisa mengakses kode sumber berlisensi GPL maupun LGPL)<br/>
+    <br/>
+    <strong><a href="<?php echo $Link;?>">Unduh!</a></strong><br/>
+    (Versi <?php echo $Version;?><?php if (isset($Installer)) echo ', dengan tampilan antarmuka grafis, dengan penginstal';?><?php if(isset($OS)) echo ', untuk '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    Catatan 1 : Anda bisa <a href="http://mediainfo.sourceforge.net/Log">memantau</a> ataupun <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">membaca catatan terbitan</a> pada <a href="http://sourceforge.net/projects/mediainfo">halaman proyek SourceForge</a><br/>
+    Catatan 2 : Versi untuk sistem operasi (OS) lain dan antarmuka lain juga <a href="Download">tersedia</a><br/>
+    <br/>
+    Anda bisa <a href="Donate">menyumbang </a> untuk mendukung pengembangan lebih lanjut.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+<h2>Indormasi apa saja yang bisa saya dapat dari MediaInfo?</h2>
+<ul>
+ <li>Umum : Judul, pembuat, direktor, album, nomor trek, tanggal, durasi...</li>
+ <li>Video: codec, aspect, fps, bitrate...</li>
+ <li>Audio: codec, sample rate, channels, language, bitrate...</li>
+ <li>Subtitel: Bahasa dari subtitel</li>
+ <li>Bab (chapter): Nama chapter, nomor chapter</li>
+</ul>
+<h2>Format apa saja yang didukung MediaInfo</h2>
+<ul>
+ <li>Video: MKV, OGM, AVI, <a href="http://mediaarea.net/en/DIVX">DivX</a>, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Codecs: <a href="http://mediaarea.net/en/DIVX">DivX</a>, <a href="http://mediaarea.net/en/XVID">XviD</a>, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Subtitel:: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>Apa yang dapat saya lakukan dengannya?</h2>
+<ul>
+ <li>Membaca pelbagai <a href="Support/Formats"> format video dan audio</a></li>
+ <li>Berbagai metoda berbeda untuk melihat informasi (teks, sheet, pohon, HTML)</li>
+ <li>Anda bis mengustomisasi tampilan</li>
+ <li>Ekspor tampilan dalam CSV, HTML...</li>
+ <li>Antarmuka grafis, baris perintah maupun DLL</li>
+ <li>Integrasi dengan MS-Windows shell (geser dan jatuhkan, menu konteks)</li>
+ <li>Internasionalisasi : Berbagai bahasa dalam berbagai versi di sistem Anda</li>
+ <li>Kemampuan lokalisasi (kami membutuhkan bantuan tanpa-biaya)</li>
+</ul>
+   </td>
+   <td>
+<?php
+if (!isset($Donated)) include $Path."/_/Ad/InContent_336_280_Google.html";
+?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

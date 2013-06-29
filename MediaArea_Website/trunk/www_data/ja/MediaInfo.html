@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+    <a href="MediaInfo/Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_ja_Extract.png" width="457" height="327" alt="GUI_Easy_ja_Extract" title="スクリーン ショット - メイン インターフェイス"/></a>
+   </td>
+   <td>
+    <h2 class="First">MediaInfo とは?</h2>
+    <strong>MediaInfo</strong> はビデオ、オーディオ ファイルが使用するコーデックについてのタグ及び技術的な詳細情報を調査し見易くフレンドリーな形式でイクスポートできるツールです<br/>
+    MediaInfo は<strong>フリー</strong>です ( <strong>無料</strong>で使用できて
+    <strong>自由</strong>にソースコードへアクセスできることを意味します: 適用ライセンスは GPL 及び LGPL です )<br/>
+    <br/>
+    <strong><a href="<?php echo $Link;?>">ダウンロード !</a></strong><br/>
+    ( バージョン <?php echo $Version;?><?php if (isset($Installer)) echo ', GUI グラフィカル ユーザー インターフェイス, インストーラ付き';?><?php if(isset($OS)) echo ', '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    補足 1: <a href="http://mediainfo.sourceforge.net/Log">モニター</a> 、 <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">リリースノート</a> は以下 <a href="http://sourceforge.net/projects/mediainfo">SourceForge project ページ</a>でご確認いただけます。<br/>
+    補足 2: 全てのバージョン (OS, インターフェイス...) は <a href="Download">こちら</a>へどうぞ
+    <br/>
+    (<a href="Download/Windows"><img src="/_/Image/Default/Blank.gif" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"/></a>
+    <a href="Download/Mac_OS"><img src="/_/Image/Default/Blank.gif" width="16" height="16" alt="Mac OS" title="Mac OS" class="sprite MacOS"/></a>
+    <a href="Download/Debian"><img src="/_/Image/Default/Blank.gif" width="16" height="16" alt="Debian" title="Debian" class="sprite Debian"/></a>
+    <a href="Download/Ubuntu"><img src="/_/Image/Default/Blank.gif" width="16" height="16" alt="Ubuntu" title="Ubuntu" class="sprite Ubuntu"/></a>
+    <a href="Download/Ubuntu"><img src="/_/Image/Default/Blank.gif" width="16" height="16" alt="Linux Mint" title="Linux Mint" class="sprite Linux_Mint"/></a>
+    <a href="Download/RedHat"><img src="/_/Image/Default/Blank.gif" width="16" height="16" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux" class="sprite RedHat"/></a>
+    <a href="Download/CentOS"><img src="/_/Image/Default/Blank.gif" width="16" height="16" alt="CentOS" title="CentOS" class="sprite CentOS"/></a>
+    <a href="Download/Fedora"><img src="/_/Image/Default/Blank.gif" width="16" height="16" alt="Fedora" title="Fedora" class="sprite Fedora"/></a>
+    <a href="http://packman.links2linux.org/package/mediainfo"><img src="/_/Image/Default/Blank.gif" width="16" height="16" alt="openSUSE" title="openSUSE" class="sprite openSUSE"/></a>
+    <a href="Download/Mandriva"><img src="/_/Image/Default/Blank.gif" width="16" height="16" alt="Mandriva" title="Mandriva" class="sprite Mandriva"/></a>
+    <a href="http://aur.archlinux.org/packages.php?K=mediainfo"><img src="/_/Image/Default/Blank.gif" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux" width="16" height="16"/></a>)
+    <br/>
+    開発を加速させる <a href="Donate">寄付</a> :) 歓迎いたします
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+<h2>MediaInfo で調査できる情報は？</h2>
+<ul>
+ <li>全般情報: タイトル, 製作者, ディレクター, アルバム, トラック番号, 日付, プレイ時間...</li>
+ <li>ビデオ: コーデック, 解像度, fps, ビットレート...</li>
+ <li>オーディオ: コーデック, サンプル レート, チャンネル, 言語, ビット レート...</li>
+ <li>テキスト: 字幕の言語</li>
+ <li>チャプター: チャプター番号、チャプターリスト</li>
+</ul>
+<h2>MediaInfo がサポートするフォーマット（コンテナ）は？</h2>
+<ul>
+ <li>ビデオ: MKV, OGM, AVI, <a href="http://mediaarea.net/en/DIVX">DivX</a>, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Codecs: <a href="http://mediaarea.net/en/DIVX">DivX</a>, <a href="http://mediaarea.net/en/XVID">XviD</a>, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>オーディオ: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>字幕: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>その他、特長はありますか？</h2>
+<ul>
+ <li>多彩な<a href="Support/Formats"> ビデオ、オーディオフォーマット</a>を読み込むことが出来ます</li>
+ <li>異なるメソッドにて好みのビューで閲覧 （テキスト、 シート、 ツリー、 HTML...）</li>
+ <li>ビューはカスタマイズ可能です</li>
+ <li>閲覧情報をテキスト、 CSV、 HTML でイクスポート</li>
+ <li>グラフィカル インターフェイス、コマンド ライン、DLL を用意</li>
+ <li>MS-Windows のシェルに統合できます （ドラッグ 'n' ドロップとコンテキスト メニュー）</li>
+ <li>国際化: あなたの OS 言語に併せた表示が可能です</li>
+ <li>ローカリゼーション（ボランティア募集中）</li>
+</ul>
+   </td>
+   <td>
+<?php
+if (!isset($Donated)) include $Path."/_/Ad/InContent_336_280_Google.html";
+?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

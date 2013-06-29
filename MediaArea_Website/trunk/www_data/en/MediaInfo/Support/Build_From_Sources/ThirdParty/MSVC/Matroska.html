@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matroska (MSVC)</title>
+</head>
+<body>
+<h1>Matroska (MSVC)</h1>
+<h2>Download</h2>
+<ul>
+ <li>Download <code><a href="http://dl.matroska.org/downloads/libmatroska/libmatroska-0.7.7.tar.bz2">http://dl.matroska.org/downloads/libmatroska/libmatroska-0.7.7.tar.bz2</a></code></li>
+</ul>
+
+<h2>Adaptation</h2>
+<ul>
+ <li>Copy <code>%EBML_SOURCE%/ebml</code> in <code>%SOURCE_HOME%/ebml</code></li>
+</ul>
+
+<h2>Project</h2>
+<ul>
+ <li>Open <code>%SOURCE_HOME%/make/vc7/lib/vc7.sln</code></li>
+</ul>
+
+<h2>Project Options</h2>
+<ul>
+ <li>C/C++, Language, wchar_t : <code>Yes</code></li>
+</ul>
+
+<h2>Compile</h2>
+<ul>
+ <li>Build <code>Release</code></li>
+</ul>
+
+<h2>Install</h2>
+<ul>
+ <li>Copy <code>%SOURCE_HOME%/Matroska</code> to <code>Shared/Include/Matroska</code></li>
+ <li>Copy <code>libmatroska.lib</code> to <code>Shared/Library/MSVC/Matroska.lib</code></li>
+</ul>
+</body>
+</html>

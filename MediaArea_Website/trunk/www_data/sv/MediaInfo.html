@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+    <a href="MediaInfo/Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png" width="457" height="367" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="First">Vad är  MediaInfo?</h2>
+    <strong>MediaInfo </strong>tillhandahåller teknisk information om video och ljudfiler.<br/>
+    Detta är ett gratis program (gratis att användas och gratis att använda källkoden, GPL eller LGPL licens)<br/>
+    <br/>
+    <strong><a href="<?php echo $Link;?>">Ladda ner!</a></strong><br/>
+    (version <?php echo $Version;?><?php if (isset($Installer)) echo ', Användargränsnitt, med installation';?><?php if(isset($OS)) echo ', för '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    Notering 1: Du kan <a href="http://mediainfo.sourceforge.net/Log">följa</a> eller <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">läsa</a> vad som är nytt på <a href="http://sourceforge.net/projects/mediainfo">SourceForge projektsida</a><br/>
+    Notering 2: andra versioner (OS, gränsnitt...) finns <a href="Download">här</a> <br/>
+    <br/>
+    Du kan <a href="Donate">donera</a> för att stödja en fortsatt utveckling.</td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+<h2>Vilken information kan jag få från MediaInfo?</h2>
+<ul>
+ <li>Allmäna: titel, författare, regissör, album, spår-nummer, datum, längd...</li>
+ <li>Video: codec, aspect,  fps, bitrate...</li>
+ <li>Ljud: codec, samplingshastighet, kanaler, språk, bitrate...</li>
+ <li>Text: språk på undertexten</li>
+ <li>Kapitel: antal kapitel, kapitellista</li>
+</ul>
+<h2>Vilka format stödjer MediaInfo? </h2>
+<ul><li>Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Codecs: DivX, XviD, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Ljud: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Undertexter: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>Vad kan jag göra med den här? </h2>
+<ul>
+ <li>Läsa många <a href="Support/Formats">video och ljudformat</a> </li>
+ <li>Mångfald betyder sättet att visa informationen( text, blad, träd, HTML...)</li>
+ <li>Du  kan skräddarsy dessa sätt</li>
+ <li>Möjlighet att exportera: text, CSV, HTML...</li>
+ <li>Användargränsnitt,  command line eller DLL</li>
+ <li>Integrera med MS-Windows shell(drag'n' drop och Context meny) </li>
+ <li>Internationell: Visa vilket språk som helst på vilken OS version som helst</li>
+ <li>Lokala språk (men frivilliga behövs)</li>
+</ul>
+   </td>
+   <td>
+<?php
+if (!isset($Donated)) include $Path."/_/Ad/InContent_336_280_Google.html";
+?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

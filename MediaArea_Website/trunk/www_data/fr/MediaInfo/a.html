@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Aider MediaInfo</title>
+</head>
+<body>
+<?php
+if (isset($Donated))
+{
+ echo '
+<div class="Info">
+Dear donor, thank you for your support.<br/><br/>
+If you want to remove the "Donate" button from the Windows GUI, you can download and launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.
+<br/>
+</div>
+<br/>
+ ';
+}
+?>
+<?php
+function visitorCountry(){
+    $ip = getenv('REMOTE_ADDR');
+    $d = file_get_contents("http://www.ipinfodb.com/ip_query_country.php?ip=$ip&output=xml");
+
+    //Use backup server if cannot make a connection
+    if (!$d){
+        $backup = file_get_contents("http://backup.ipinfodb.com/ip_query.php?ip=$ip&output=xml");
+        $answer = new SimpleXMLElement($backup);
+        if (!$backup) return false; // Failed to open connection
+    }else{
+        $answer = new SimpleXMLElement($d);
+    }
+
+    return $answer->CountryCode;
+}
+
+$Country_Detected=false;
+$Country = visitorCountry();
+echo $Country;
+exit;
+
+?>
+
+<h1>Soutenir MediaInfo</h1>
+<h2>Pourquoi faire un don ?</h2>
+MediaInfo est un logiciel libre et gratuit.<br/>
+Mais alors pourquoi donner? Pour <em>remercier</em>, pour <em>soutenir</em>, pour <em>aider</em>, au choix.
+Je prend plaisir à développer ce logiciel; programmer est un jeu amusant et plaisant, je le fais parce que je suis curieux de connaitre les formats. Mais j'y passe énormément (trop ;-) ) de temps; le développement a nécessité des centaines d'heures de recherche et de développement. Je répond à toutes les questions, je rédige la documentation et rend la bibliothèque compatible avec tous les logiciels tiers (et ce n'est pas pour moi! ;-) ); je publie le plus régulièrement possible des nouvelles versions. Tout cela  prend beaucoup de temps.
+Pour me <strong>remercier</strong> de ce travail, et <strong>si vous êtes satisfaits de MediaInfo</strong>, faire une donation est très appréciable et est une excellente manière de participer au développement.</p>
+
+<h2>Don par carte bancaire ou avec PayPal (tous pays)</h2>
+Vous pouvez choisir un montant à donner ou une souscription mensuelle:
+<?php
+if ($Country_Detected)
+ echo '
+ <div class="Address">
+ ';
+if (!$Country_Detected)
+ echo '
+ <table>
+ <tr>
+  <td class="Address centered">
+France (en Euros)<br/>
+ ';
+if (!$Country_Detected || $Country=='FR') echo '
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="FR">
+<input type="hidden" name="item_name" value="Don pour MediaInfo">
+<select name="amount"><option value="1.00">1</option><option value="2.00">2</option><option selected value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> Euros
+<input type="hidden" name="currency_code" value="EUR">
+
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/Paid">
+<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/fr/Donate">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+<br/>
+<input type="image" src="https://www.paypal.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+<br/>
+<br/>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick-subscriptions">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="FR">
+<input type="hidden" name="item_name" value="Don pour MediaInfo">
+<input type="hidden" name="no_note" value="1">
+ou <select name="a3"><option selected value="1.00">1</option><option value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> Euros/mois
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="src" value="1">
+<input type="hidden" name="p3" value="1">
+<input type="hidden" name="t3" value="M">
+<input type="hidden" name="sra" value="1">
+<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
+<br/>
+<input type="image" src="https://www.paypal.com/fr_FR/FR/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+';
+if (!$Country_Detected) echo '
+  </td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </td>
+  ';
+if (!$Country_Detected)
+ echo '
+ <td class="Address centered">
+Québec (en Dollars canadiens)<br/>
+ ';
+if (!$Country_Detected || $Country=='CA') echo '
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="CA">
+<input type="hidden" name="item_name" value="Don pour MediaInfo">
+$ <select name="amount"><option value="2.00">2</option><option value="5.00">5</option><option selected value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> CAD
+<input type="hidden" name="currency_code" value="CAD">
+
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/Paid">
+<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/fr/Donate">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+<br/>
+<input type="image" src="https://www.paypal.com/fr_XC/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+<br/>
+<br/>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick-subscriptions">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="CA">
+<input type="hidden" name="item_name" value="Don pour MediaInfo">
+<input type="hidden" name="no_note" value="1">
+ou $ <select name="a3"><option selected value="2.00">2</option><option value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> CAD/mois
+<input type="hidden" name="currency_code" value="CAD">
+<input type="hidden" name="src" value="1">
+<input type="hidden" name="p3" value="1">
+<input type="hidden" name="t3" value="M">
+<input type="hidden" name="sra" value="1">
+<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
+<br/>
+<input type="image" src="https://www.paypal.com/fr_XC/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+<img alt="" src="https://www.paypal.com/fr_XC/i/scr/pixel.gif" width="1" height="1">
+</form>
+';
+if (!$Country_Detected) echo '
+  </td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </td>';
+if (!$Country_Detected)
+ echo '
+  <td class="Address centered">
+Autre (en Dollars des Etats-Unis)<br/>
+ ';
+if (!$Country_Detected) echo '
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="item_name" value="Don pour MediaInfo">
+$ <select name="amount"><option value="2.00">2</option><option value="5.00">5</option><option selected value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> USD
+<input type="hidden" name="currency_code" value="USD">
+
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="http://mediainfo.sourceforge.net/Paid">
+<input type="hidden" name="cancel_return" value="http://mediainfo.sourceforge.net/fr/Donate">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+<br/>
+<input type="image" src="https://www.paypal.com/fr_XC/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+<img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+<br/>
+<br/>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick-subscriptions">
+<input type="hidden" name="business" value="zen@mediaarea.net">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="item_name" value="Don pour MediaInfo">
+<input type="hidden" name="no_note" value="1">
+ou $ <select name="a3"><option value="2.00">2</option><option selected value="5.00">5</option><option value="10.00">10</option><option value="20.00">20</option><option value="50.00">50</option><option value="100.00">100</option><option value="200.00">200</option><option value="500.00">500</option></select> USD/mois
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="src" value="1">
+<input type="hidden" name="p3" value="1">
+<input type="hidden" name="t3" value="M">
+<input type="hidden" name="sra" value="1">
+<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHostedGuest">
+<br/>
+<input type="image" src="https://www.paypal.com/fr_XC/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+<img alt="" src="https://www.paypal.com/fr_XC/i/scr/pixel.gif" width="1" height="1">
+</form>
+';
+if ($Country_Detected)
+ echo '
+</div>
+';
+if (!$Country_Detected)
+ echo '
+  </td>
+ </tr>
+</table>
+';
+?>
+<h2>Don par virement bancaire (<a href="http://fr.wikipedia.org/wiki/Zone_euro">zone Euro</a> uniquement)</h2>
+Il est possible de faire un virement bancaire en Euros, voici les coordonnées bancaires :
+<div class="Address">
+Titulaire du compte : Jérôme Martinez<br/>
+Code banque : 30003<br/>
+Code Agence : 01338<br/>
+Numéro du compte : 00050633256<br/>
+Clé : 56<br/>
+IBAN : FR76 3000 3013 3800 0506 3325 656<br/>
+BIC-ADRESSE SWIFT : SOGEFRPP<br/>
+</div>
+N'oubliez pas de mettre votre adresse e-mail dans la description du virement!
+
+<h2>Don par chèque (France uniquement)</h2>
+Il est possible d'envoyer un chèque à l'ordre de Jérôme Martinez (créateur du projet), adressé à l'adresse suivante :
+<div class="Address">Jérôme Martinez<br/>Chemin du Vernay<br/>73190 Curienne<br/>France</div>
+N'oubliez pas de mettre un petit mot avec votre adresse e-mail afin que je vous confirme la réception!
+
+<h2>Pas de sous. Et alors? Partez pas! ;-)</h2>
+Ce n'est pas grave :)<br/>
+Vous pouvez toujours contribuer à MediaInfo en faisant autre chose :
+<ul>
+  <li>Traduire (ou améliorer la traduction) MediaInfo dans une autre langue (pas le français, le developeur est français ;-) )</li>
+  <li>Créer de magnifiques exemple HTML pour un affichage dans MediaInfo.</li>
+  <li>Créer de magnifiques icônes pour le logiciel.</li>
+  <li>Traduire (ou améliorer la traduction) de la page web (même en Francais, je n'ai pas le temps de tout traduire...).</li>
+  <li>M'envoyer des fichiers multimédia qui ne sont pas pris en charge par MediaInfo.</li>
+  <li>M'envoyer de la documentation sur les formats de fichier non supportés, j'essayerai d'implémenter le format dans MediaInfo.</li>
+  <li>Programmer des fonctions que je n'ai pas encore faites. C'est en C++ standart (sauf l'interface graphique faite en Borland C++)</li>
+  <li>Adapter pour des plates-formes non supportées (Linux, Win64...)</li>
+  <li>...</li>
+</ul>
+N'hésitez pas à <a href="mailto:zenitram@users.sourceforge.net">me contacter</a>!
+</body>
+</html>

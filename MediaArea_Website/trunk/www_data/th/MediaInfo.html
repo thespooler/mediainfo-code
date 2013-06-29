@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+    <a href="MediaInfo/Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png" width="457" height="367" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="First">MediaInfo คืออะไร?</h2>
+    <strong>MediaInfo</strong> เป็นโปรแกรมที่ใช้แสดงข้อมูลด้านเทคนิคและข้อมูล tag ของไฟล์วีดีโอและไฟล์เสียง<br/>
+    นี่เป็นโปรแกรมฟรี ฟรีทั้งราคาและฟรีสำหรับการเข้าถึงซอร์สโค้ด: GPL หรือ LGPL licence)<br/>
+    <br/>
+    <strong><a href="<?php echo $Link;?>">ดาวน์โหลด!</a></strong><br/>
+    (เวอร์ชัน <?php echo $Version;?><?php if (isset($Installer)) echo ', กราฟฟิกอินเทอร์เฟซพร้อมชุดติดตั้ง';?><?php if(isset($OS)) echo ' สำหรับ '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    หมายเหตุ 1: คุณสามารถ <a href="http://mediainfo.sourceforge.net/Log">ติดตามผล</a> หรือ <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">ดูความก้าวหน้า</a> ในการพัฒนาโปรแกรมได้ที่ <a href="http://sourceforge.net/projects/mediainfo">SourceForge project page</a><br/>
+    หมายเหตุ 2: เวอร์ชันอื่นๆ (ระบบปฏิบัติการ, อินเทอร์เฟซ...) <a href="Download"> ก็มีนะครับ</a><br/>
+    <br/>
+    คุณสามารถ <a href="Donate">บริจาค</a> เพื่อช่วยสนับสนุนการพัฒนาได้นะครับ
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+<h2>ข้อมูลอะไรที่ฉันจะได้จาก MediaInfo?</h2>
+<ul>
+ <li>ทั่วไป: ชื่อเพลงหรือชื่อเรื่อง, ผู้เขียน, director, อัลบัม, เลขที่แทร็ค, วันที่, ระยะเวลา...</li>
+ <li>วีดีโอ: codec, aspect, fps, บิตเรต...</li>
+ <li>เสียง: codec, แซมเปิลเรต, ช่องสัญญาณ, ภาษา, บิตเรต...</li>
+ <li>ข้อความ: ภาษาของคำบรรยาย</li>
+ <li>เชปเตอร์: เลขที่เชปเตอร์, รายการของเชปเตอร์</li>
+</ul>
+<h2>รูปแบบ (container) อะไรบ้างที่ MediaInfo สนับสนุน?</h2>
+<ul>
+ <li>วีดีโอ: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Codecs: DivX, XviD, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>เสียง: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>คำบรรยาย: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>ฉันจะสามารถทำอะไรกับโปรแกรมนี้ได้บ้าง?</h2>
+<ul>
+ <li>อ่านข้อมูลของ <a href="Support/Formats"> ไฟล์วีดีโอและไฟล์เสียง</a></li>
+ <li>เลือกวิธีการแสดงผลข้อมูล (ข้อความ, ชีต, tree, HTML...)</li>
+ <li>คุณสามารถกำหนดวิธีการแสดงผลเองได้</li>
+ <li>ส่งออกข้อมูลเป็นข้อความ, CSV, HTML...</li>
+ <li>เลือกใช้โปรแกรมแบบกราฟฟิก หรือ บรรทัดคำสั่ง(Command Line), หรือ DLL</li>
+ <li>ใช้งานร่วมกับ MS-Windows(ลากไปปล่อย(drag 'n' drop), และ Context menu)</li>
+ <li>Internationalisation: สนับสนุนการแสดงผลภาษาต่างๆ ที่มีในระบบปฏิบัติการของคุณ</li>
+ <li>มีระบบหลายภาษา ทั้งในเมนูโปรแกรมและเว็บไซต์(แต่เรายังต้องการอาสาสมัครในภาษาต่างๆ อยู่นะครับ)</li>
+</ul>
+   </td>
+   <td>
+<?php
+if (!isset($Donated)) include $Path."/_/Ad/InContent_336_280_Google.html";
+?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

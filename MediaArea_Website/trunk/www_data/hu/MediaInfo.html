@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+    <a href="MediaInfo/Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png" width="457" height="367" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="First">Mi a MediaInfo?</h2>
+    A <strong>MediaInfo</strong> műszaki és jelölési (tag) adatokat szolgáltat mozgókép- és hangfájlokról.<br/>
+    A program szabad szoftver (ingyenes, forráskódja szabadon elérhető GPL vagy LGPL engedéllyel).<br/>
+    <br/>
+    <strong><a href="<?php echo $Link;?>">Töltse le!</a></strong><br/>
+    (version <?php echo $Version;?><?php if (isset($Installer)) echo ', grafikus kezelőfelület, telepítővel';?><?php if(isset($OS)) {$OS=str_replace('Windows', 'Windowshoz', $OS); echo ', '.$OS;}?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    1. megjegyzés: a <a href="http://sourceforge.net/projects/mediainfo">SourceForge project page</a> honlapon <a href="http://mediainfo.sourceforge.net/Log">figyelemmel követhetjük</a> vagy megtekinthetjük a <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">megjegyzéseket</a>.<br/>
+    2. megjegyzés: egyéb változatok (operációs rendszer, kezelőfelület...) is <a href="Download">elérhetők</a>.<br/>
+    <br/>
+    <a href="Donate">Adományokkal</a> támogathatja a további fejlesztést.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+<h2>Milyen adatokat szolgáltat a MediaInfo?</h2>
+<ul>
+ <li>Általános: cím, szerző, rendező, album, sáv szám, dátum, hossz...</li>
+ <li>Mozgókép: kódek, képarány, képsebesség, adatsebesség...</li>
+ <li>Hang: kódek, mintavételezési gyakoriság, csatornák, nyelv, adatsebesség...</li>
+ <li>Szöveg: a feliratozás nyelve</li>
+ <li>Fejezet: fejezetek száma, fejezetek listája</li>
+</ul>
+<h2>Milyen formátumokat (gyűjtőket) ismer a MediaInfo?</h2>
+<ul>
+ <li>Mozgókép: MKV, OGM, AVI, <a href="http://mediaarea.net/en/DIVX">DivX</a>, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Kódekek: <a href="http://mediaarea.net/en/DIVX">DivX</a>, <a href="http://mediaarea.net/en/XVID">XviD</a>, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Hang: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Felirat: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>Mire használható?</h2>
+<ul>
+ <li>Sokféle mozgókép- és hangfájl <a href="Support/Formats">formátumot</a> olvas</li>
+ <li>Többféle adat megjelenítési mód (szöveges, táblázatos, fa, HTML...)</li>
+ <li>Ezek a módok testreszabhatók</li>
+ <li>Exportálási képességek: szöveg, CSV, HTML...</li>
+ <li>Grafikus kezelőfelület, parancssor vagy DLL</li>
+ <li>Beépül a Windows rendszerhéjba (fogd-és-vidd, helyi menü)</li>
+ <li>Nemzetközi: bármely nyelv, bármely operációs rendszeren</li>
+ <li>Honosítási lehetőség (önkénteseket várunk)</li>
+</ul>
+   </td>
+   <td>
+<?php
+if (!isset($Donated)) include $Path."/_/Ad/InContent_336_280_Google.html";
+?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+    <a href="MediaInfo/Screenshots/GUI_Main"><img src="/_/Image/Default/Screenshot/GUI_Easy_en_Extract.png" width="457" height="367" alt="Ndërfaqe kryesore" title="Screenshot - Ndërfaqe kryesore"/></a>
+   </td>
+   <td>
+    <h2 class="First">Ç'është MediaInfo?</h2>
+    <strong>MediaInfo</strong> paraqet informacione teknike dhe etiketuese për skedat filmike e zanore.<br/>
+    Ky softuer jepet falas (pa pagesë dhe me akses të lirë në kodin burimor: licenca GPL ose LGPL)<br/>
+    <br/>
+    <strong><a href="<?php echo $Link;?>">Shkarkoje!</a></strong><br/>
+    (versioni <?php echo $Version;?><?php if (isset($Installer)) echo ', Ndërfaqe Grafike, me Instalues';?><?php if(isset($OS)) echo ', për '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    Shënimi 1: <a href="http://mediainfo.sourceforge.net/Log">monitoro</a> ose <a href="http://sourceforge.net/project/showfiles.php?group_id=86862">shiko të rejat e fundit</a> në <a href="http://sourceforge.net/projects/mediainfo">faqen e projektit SourceForge</a><br/>
+    Shënimi 2: edhe versionet e tjera (OS, ndërfaqe...) janë <a href="Download">këtu</a><br/>
+    <br/>
+    Mund të <a href="Donate">kontribuosh</a> për të përkrahur zhvillimin e mëtejshëm.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+<h2>Ç'informacione mund të marr nga MediaInfo?</h2>
+<ul>
+ <li>Kryesore: titulli, autori, regjisori, albumi, numri i kolonës, data, kohëzgjatja...</li>
+ <li>Video: kodeku, aspekti, fps, raporti i bitit...</li>
+ <li>Audio: kodeku, raporti i shëmbëllimit, kanale, gjuha, raporti i bitit...</li>
+ <li>Tekst: gjuha e titrave</li>
+ <li>Kapituj: numri i kapitujve, lista e kapitujve</li>
+</ul>
+<h2>Ç'formate (mbajtës) përkrah MediaInfo?</h2>
+<ul>
+ <li>Video: MKV, OGM, AVI, <a href="http://mediaarea.net/DIVX">DivX</a>, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Kodekë: <a href="http://mediaarea.net/DIVX">DivX</a>, <a href="http://mediaarea.net/XVID">XviD</a>, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Titra: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>Ç'mund të bëj me të?</h2>
+<ul>
+ <li>Lexon <a href="Support/Formats"> formatet e shumë skedave filmike e zanore</a></li>
+ <li>Paraqet informacione me metoda të ndryshme (tekst, fletë, pemë, HTML...)</li>
+ <li>Pamja mund të porositet</li>
+ <li>Eksporton informacionet si tekst, CSV, HTML...</li>
+ <li>Ndërfaqe Grafike, Vijë Komande ose DLL</li>
+ <li>Integrim me bazën e MS-Windows (kap e hidh, konteksti i menysë)</li>
+ <li>Ndërkombëtar: çdo gjuhë shfaqet sipas versionit të Sistemit Operativ</li>
+ <li>Me aftësi për t'u lokalizuar (por nevojiten vullnetarë)</li>
+</ul>
+   </td>
+   <td>
+<?php
+if (!isset($Donated)) include $Path."/_/Ad/InContent_336_280_Google.html";
+?>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

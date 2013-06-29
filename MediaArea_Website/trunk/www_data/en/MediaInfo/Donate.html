@@ -1,0 +1,96 @@
+<?php
+//Paypal functions
+include $Path.'/_/Ad/Paypal_Display.html';
+header("Cache-Control: no-cache, must-revalidate, max-age=0");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Donate to MediaInfo</title>
+</head>
+<body>
+<?php
+if (isset($Donated)) {
+ echo '
+<div class="Info">
+Dear donor, thank you for your support.<br/><br/>
+If you want to remove the "Donate" button from the Windows GUI, you can download and launch the <a href="http://download.mediaarea.net/Donated.zip">donation button removal executable</a>.
+<br/>
+</div>
+<br/>
+ ';
+}
+?>
+
+<h1>Donate to MediaInfo - Please!</h1>
+<h2>MediaInfo is free software, so why donate?</h2>
+Since MediaInfo is freeware, there are no sales or other revenues;
+thus your donation is the best way to encourage the author and
+to enable him to continue developing the project.<br/>
+In order for MediaInfo to continue in full-time development your support is requested,
+and your help will be greatly appreciated.
+
+<h2>Via Credit Cards or Paypal</h2>
+Donations can be made via Credit Cards or Paypal - once off or as a monthly subscription. <br/>
+Please choose your preferred method below.<br/>
+<table>
+ <tr>
+  <td class="Address centered">
+   U.S.A. / Others<br/>
+   (in <strong>U.S. Dollars</strong>)<br/>
+   <?php Paypal_Donate_Display(isset($Official), "US", "en_US", "USD", "US$", "", 1, 10, 2, "Donation for MediaInfo", "month", "or", "PayPal - The safer, easier way to pay online!"); ?>
+  </td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </td>
+  <td class="Address centered">
+   Great Britain<br/>
+   (in <strong>Pounds</strong>)<br/>
+   <?php Paypal_Donate_Display(isset($Official), "GB", "en_GB", "GBP", "", "£", 1, 5, 1, "Donation for MediaInfo", "month", "or", "PayPal - The safer, easier way to pay online!"); ?>
+  </td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </td>
+  <td class="Address centered">
+   Australia<br/>
+   (in <strong>Australian Dollars</strong>)<br/>
+   <?php Paypal_Donate_Display(isset($Official), "AU", "en_AU", "AUD", "", "AU$", 1, 10, 2, "Donation for MediaInfo", "month", "or", "PayPal - The safer, easier way to pay online!"); ?>
+  </td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </td>
+  <td class="Address centered">
+   Canada<br/>
+   (in <strong>Canadian Dollars</strong>)<br/>
+   <?php Paypal_Donate_Display(isset($Official), "CA", "en_US", "CAD", "", "CA$", 1, 10, 2, "Donation for MediaInfo", "month", "or", "PayPal - The safer, easier way to pay online!"); ?>
+  </td>
+ </tr>
+</table>
+
+<h2>Via Flattr</h2>
+<?php include $Path."/_/Ad/Flattr.html"; ?>
+
+<h2>Via wire transfer (<a href="http://en.wikipedia.org/wiki/Eurozone">Eurozone</a> only)</h2>
+Donations can be made within Eurozone via wire transfer.
+<br/>My Bank information -
+<div class="Address">
+IBAN : FR76 3000 3013 3800 0506 3325 656<br/>
+BIC-ADRESSE SWIFT : SOGEFRPP<br/>
+</div>
+Don't forget to put your e-mail address in the wire transfer description!
+
+<h2>Financially embarrassed? Nothing in your pockets except your fingers? You can still contribute! ;-)</h2>
+You can participate in a worthwhile way in the MediaInfo project without needing cash through such activities as:
+<ul>
+    <li>Translating MediaInfo into your native language or make improvements to the existing translations,</li>
+    <li>Translating this website into your native language or make improvements to the existing translations,</li>
+    <li>Creating beautiful HTML templates for MediaInfo's output,</li>
+    <li>Creating beautiful icons for MediaInfo,</li>
+    <li>Sending me multimedia files which are not well handled by MediaInfo,</li>
+    <li>Sending me formats of multimedia containers - I might be able to implement them better,</li>
+    <li>Programming some useful functions (use the latest version of SVN please). MediaInfo is written in C++,</li>
+    <li>Helping to support currently non-supported platforms (Linux, Win64...),</li>
+    <li>What else can you think of?</li>
+</ul>
+Don't hesitate to <a href="mailto:zenitram@users.sourceforge.net">contact me</a> if you're interested in contributing in any way!
+</body>
+</html>
