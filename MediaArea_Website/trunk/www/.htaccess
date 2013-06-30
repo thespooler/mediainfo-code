@@ -216,13 +216,6 @@ AddDefaultCharset utf-8
     RewriteEngine On
   # RewriteBase /
 
-    # Hostname
-    RewriteCond %{HTTPS}        !=on
-    RewriteCond %{HTTP_HOST}    !^mediaarea.net$ [NC]
-    RewriteCond %{HTTP_HOST}    !^127.0.0.1:8080$
-    RewriteCond %{HTTP_HOST}    !^$
-    RewriteRule ^(.*)$          http://mediaarea.net/$1 [L,R=301]
-
     # Known file names
     RewriteRule ^favicon.ico /_/Image/favicon.ico [L]
     RewriteRule ^apple-touch-icon.png /_/Image/apple-touch-icon.png [L]
