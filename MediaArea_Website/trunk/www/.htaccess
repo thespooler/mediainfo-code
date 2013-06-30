@@ -86,10 +86,9 @@ Options -MultiViews
 
 # Force IE to render pages in the highest available mode in the various
 # cases when it may not: http://hsivonen.iki.fi/doctype/ie-mode.pdf.
-# Use, if installed, Google Chrome Frame.
 
 <IfModule mod_headers.c>
-    Header set X-UA-Compatible "IE=edge,chrome=1"
+    Header set X-UA-Compatible "IE=edge"
     # `mod_headers` can't match based on the content-type, however, we only
     # want to send this header for HTML pages and not for the other resources
     <FilesMatch "\.(appcache|crx|css|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svg|svgz|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
@@ -177,6 +176,7 @@ Options -MultiViews
     AddType text/x-vcard                                vcf
     # HTML is parsed by PHP (MediaInfo custom)
     AddType application/x-httpd-php                     html
+
 </IfModule>
 
 # ------------------------------------------------------------------------------
@@ -212,38 +212,40 @@ AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
     Options +FollowSymlinks
+  # Options +SymLinksIfOwnerMatch
     RewriteEngine On
+  # RewriteBase /
 
-    #Hostname
+    # Hostname
     RewriteCond %{HTTPS}        !=on
     RewriteCond %{HTTP_HOST}    !^mediaarea.net$ [NC]
     RewriteCond %{HTTP_HOST}    !^127.0.0.1:8080$
     RewriteCond %{HTTP_HOST}    !^$
     RewriteRule ^(.*)$          http://mediaarea.net/$1 [L,R=301]
 
-	# Well know file names
-	RewriteRule ^favicon.ico /_/Image/favicon.ico [L]
+    # Known file names
+    RewriteRule ^favicon.ico /_/Image/favicon.ico [L]
     RewriteRule ^apple-touch-icon.png /_/Image/apple-touch-icon.png [L]
     RewriteRule ^apple-touch-icon-57x57-precomposed.png /_/Image/apple-touch-icon-57x57-precomposed.png [L]
     RewriteRule ^apple-touch-icon-72x72-precomposed.png /_/Image/apple-touch-icon-72x72-precomposed.png [L]
     RewriteRule ^apple-touch-icon-114x114-precomposed.png /_/Image/apple-touch-icon-114x114-precomposed.png [L]
     RewriteRule ^apple-touch-icon-144x144-precomposed.png /_/Image/apple-touch-icon-144x144-precomposed.png [L]
     RewriteRule ^apple-touch-icon-precomposed.png /_/Image/apple-touch-icon-precomposed.png [L]
-    
-	# Sub-sites
+
+    # Sub-sites
     RewriteCond %{REQUEST_URI} !/drm(.*)$
     RewriteCond %{REQUEST_URI} !/mediainfo_new(.*)$
     RewriteCond %{REQUEST_URI} !/mediainfo_check(.*)$
     RewriteCond %{REQUEST_URI} !/mediatab(.*)$
     RewriteCond %{REQUEST_URI} !/online(.*)$
 
-	# Exceptions
+    # Exceptions
     RewriteCond %{REQUEST_URI} !/_/(.*)$
     RewriteCond %{REQUEST_URI} !/robots.txt
     RewriteCond %{REQUEST_URI} !/sitemap.xml
     RewriteCond %{REQUEST_URI} !/index.php
-	
-	# /xxx -->php.php?page=xxx
+
+    # /xxx -->php.php?page=xxx
     RewriteRule ^(.*)$ /index.php [L]
 </IfModule>
 
