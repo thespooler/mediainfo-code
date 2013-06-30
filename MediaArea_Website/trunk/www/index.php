@@ -46,7 +46,7 @@ while ($i<10 && isset($PageFinal_Exploded[$i+1])) {
         $Temp.=$Page_Exploded[$j]."/";
     $Menu_Link[$Level]=$Page_Exploded[$i];
     $Temp.="_.html";
-	if (file_exists($Path.$Temp))
+    if (file_exists($Path.$Temp))
         include $Path.$Temp;
     else {
         //Not found, use english
