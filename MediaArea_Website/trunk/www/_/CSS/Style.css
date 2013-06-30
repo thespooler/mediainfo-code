@@ -44,6 +44,21 @@ ul {
     margin-top: 0;
 }
 
+/* Bootstrap overrides start*/
+.thumbnails > li > a {
+    display: inline-block;
+}
+
+.thumbnails {
+    margin-left: -10px;
+}
+
+.thumbnail,
+.thumbnail:hover {
+    border: none;
+}
+/* Bootstrap overrides end*/
+
 .Path {
     color: white;
 }
@@ -183,7 +198,7 @@ table.Menu {
 .Contents h3,
 .Contents h4 {
     border-width: 0 0 1px;
-    margin: 1em 0 0;
+    /*margin: 1em 0 0;*/
 }
 
 .Contents h2 {

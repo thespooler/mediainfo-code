@@ -12,7 +12,22 @@
 '; }?>
         </tbody>
     </table>
+<?php
+if ($Page_Exploded[count($Page_Exploded)-1] == 'Screenshots.html') {
+    echo '
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write(\'<script src="/_/JavaScript/jquery-1.10.1.min.js"><\/script>\')</script>
     <script src="/_/JavaScript/pack.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".fancybox-thumb").fancybox({
+                helpers: {
+                    thumbs: { width: 100, height: 74 }
+                }
+            });
+        });
+    </script>'
+; }?>
     <?php if (isset($Footer_ToAdd)) echo $Footer_ToAdd; ?>
     <?php include $Path."/_/Ad/GoogleAnalytics.html"; ?>
 </body>
