@@ -216,6 +216,9 @@ AddDefaultCharset utf-8
     RewriteEngine On
   # RewriteBase /
 
+    # www_data forbidden
+    RewriteRule ^www_data/ - [F,L]
+
     # Known file names
     RewriteRule ^favicon.ico /_/Image/favicon.ico [L]
     RewriteRule ^apple-touch-icon.png /_/Image/apple-touch-icon.png [L]
@@ -225,20 +228,16 @@ AddDefaultCharset utf-8
     RewriteRule ^apple-touch-icon-144x144-precomposed.png /_/Image/apple-touch-icon-144x144-precomposed.png [L]
     RewriteRule ^apple-touch-icon-precomposed.png /_/Image/apple-touch-icon-precomposed.png [L]
 
-    # Sub-sites
+    # /xxx -->php.php?page=xxx
     RewriteCond %{REQUEST_URI} !/drm(.*)$
     RewriteCond %{REQUEST_URI} !/mediainfo_new(.*)$
     RewriteCond %{REQUEST_URI} !/mediainfo_check(.*)$
     RewriteCond %{REQUEST_URI} !/mediatab(.*)$
     RewriteCond %{REQUEST_URI} !/online(.*)$
-
-    # Exceptions
     RewriteCond %{REQUEST_URI} !/_/(.*)$
     RewriteCond %{REQUEST_URI} !/robots.txt
     RewriteCond %{REQUEST_URI} !/sitemap.xml
     RewriteCond %{REQUEST_URI} !/index.php
-
-    # /xxx -->php.php?page=xxx
     RewriteRule ^(.*)$ /index.php [L]
 </IfModule>
 

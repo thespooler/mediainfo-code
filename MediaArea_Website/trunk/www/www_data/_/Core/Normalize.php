@@ -13,7 +13,7 @@ if (!isset($Page_Exploded[1])) {
 //Mac
 if (stristr($_SERVER['HTTP_USER_AGENT'], "macintosh") && count($Page_Exploded)>1 && stristr($Page_Exploded[count($Page_Exploded)-1], "MediaInfo.html")) {
         $Page_Exploded[count($Page_Exploded)-1]="MediaInfo_MacAppStore.html";
-        $Page=implode("/", $Page_Exploded);
+		$Page=implode("/", $Page_Exploded);
 }
 
  //Test if this is with language

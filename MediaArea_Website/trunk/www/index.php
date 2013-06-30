@@ -2,7 +2,7 @@
 //Config (base)
 if (!isset($_SERVER["SCRIPT_FILENAME"]))
     exit("error");
-$Path=$_SERVER["SCRIPT_FILENAME"]; $Path=substr($Path, 0, strrpos($Path, "/")); $Path.="/../www_data";
+$Path=$_SERVER["SCRIPT_FILENAME"]; $Path=substr($Path, 0, strrpos($Path, "/")); $Path.="/www_data";
 include $Path.'/_/Core/Config.php';
 include $Path.'/_/Core/Old.php';
 
