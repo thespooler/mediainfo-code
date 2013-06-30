@@ -1,11 +1,9 @@
 <tr style="height: 20px">
     <td>
     </td>
-    <td>
-    </td>
 </tr>
-<tr>
-    <?php if (!empty($NotUpdated)) echo '<td class="Note" colspan="2">'; ?>
+<?php if (!empty($NotUpdated)) echo '<tr>
+    <td class="Note" colspan="2">'; ?>
         <?php
         if ($NotUpdated=="Not translated")
             echo 'This page has not yet been translated, if you are interested to translate this page, please <a href="mailto:zenitram@users.sourceforge.net"> contact me</a>';
@@ -16,5 +14,6 @@
         else if (!empty($NotUpdated))
             echo 'This page has not yet been updated from the actual english page, if you are interested to translate this page, please <a href="mailto:zenitram@users.sourceforge.net">contact me</a><br/>
         Items not updated :'.$NotUpdated; ?>
-    <?php if (!empty($NotUpdated)) echo '</td>'; ?>
+    <?php if (!empty($NotUpdated)) echo '</td>
 </tr>
+'; ?>

@@ -1,15 +1,14 @@
                 </td>
             </tr>
         <?php include $Path."/_/Template/Default/Help.html"; ?>
- <?php if (!isset($Donated)) { echo '<tr>
+ <tr>
     <td>
     </td>
     <td>
     </td>
-    <td class="centered">'; include $Path."/_/Ad/BottomOfThePage_728_90_Google.html"; echo '
+    <td class="centered"><?php if (!isset($Donated)) {include $Path."/_/Ad/BottomOfThePage_728_90_Google.html"; }?>
     </td>
 </tr>
-'; }?>
         </tbody>
     </table>
 <?php
