@@ -3,6 +3,17 @@
 //HTTP
 header("Cache-Control: no-cache, must-revalidate, max-age=0");
 
+//HTTPS detection
+if (isset($_SERVER['HTTPS'])) 
+{
+	if ($_SERVER['HTTPS'] == 'on')
+        $IsSecure=1;
+	else
+        $IsSecure=0;
+}
+else
+    $IsSecure=0;
+
 //User config
 if (isset($_COOKIE["Language"]))
     $Language=$_COOKIE["Language"];

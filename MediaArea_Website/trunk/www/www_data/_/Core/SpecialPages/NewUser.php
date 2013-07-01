@@ -1,7 +1,7 @@
 <?php
 //-Special case : new.html
 if (empty($Page) || $Page=="/" || $Page=="/MediaInfo") {
-    header ("Location: http://".$_SERVER['HTTP_HOST']."/".$Language."/MediaInfo");
+    header ("Location: ".($IsSecure?"https://":"http://").$_SERVER['HTTP_HOST']."/".$Language."/MediaInfo");
     exit;
 }
 
@@ -9,7 +9,7 @@ if (empty($Page) || $Page=="/" || $Page=="/MediaInfo") {
 if ($Page{strlen($Page)-1}=="/") {
     $Page=rtrim($Page, "/");
     header ("HTTP/1.1 301 Moved Permanently");
-    header ("Location: http://".$_SERVER['HTTP_HOST'].$Page);
+    header ("Location: ".($IsSecure?"https://":"http://").$_SERVER['HTTP_HOST'].$Page);
     exit;
 }
 
