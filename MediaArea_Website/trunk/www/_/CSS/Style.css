@@ -30,15 +30,6 @@ img {
     border: 0;
 }
 
-pre {
-    background-color: #FFFFC0;
-    border-style: inset;
-    border-width: thin;
-    font-size: small;
-    margin: 0 5% 0 0;
-    padding: 0 5% 0 0;
-}
-
 ul {
     margin-bottom: 0;
     margin-top: 0;
