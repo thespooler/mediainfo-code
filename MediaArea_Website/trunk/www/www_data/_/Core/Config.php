@@ -4,11 +4,11 @@
 header("Cache-Control: no-cache, must-revalidate, max-age=0");
 
 //HTTPS detection
-if (isset($_SERVER['HTTPS'])) 
+if (isset($_SERVER['HTTPS']))
 {
-	if ($_SERVER['HTTPS'] == 'on')
+    if ($_SERVER['HTTPS'] == 'on')
         $IsSecure=1;
-	else
+    else
         $IsSecure=0;
 }
 else
