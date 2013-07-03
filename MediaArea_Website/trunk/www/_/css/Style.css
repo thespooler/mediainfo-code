@@ -295,6 +295,13 @@ table.Menu {
     vertical-align: middle;
 }
 
+.centeredImg {
+    display: block;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .FlagsAround {
     background-color: #F0F0F0;
     font: bold 20px Verdana, Arial, Helvetica, sans-serif; /* override font from doxygen.css */
