@@ -220,13 +220,13 @@ AddDefaultCharset utf-8
     RewriteRule ^www_data/ - [F,L]
 
     # Known file names
-    RewriteRule ^favicon.ico /_/Image/favicon.ico [L]
-    RewriteRule ^apple-touch-icon.png /_/Image/apple-touch-icon.png [L]
-    RewriteRule ^apple-touch-icon-57x57-precomposed.png /_/Image/apple-touch-icon-57x57-precomposed.png [L]
-    RewriteRule ^apple-touch-icon-72x72-precomposed.png /_/Image/apple-touch-icon-72x72-precomposed.png [L]
-    RewriteRule ^apple-touch-icon-114x114-precomposed.png /_/Image/apple-touch-icon-114x114-precomposed.png [L]
-    RewriteRule ^apple-touch-icon-144x144-precomposed.png /_/Image/apple-touch-icon-144x144-precomposed.png [L]
-    RewriteRule ^apple-touch-icon-precomposed.png /_/Image/apple-touch-icon-precomposed.png [L]
+    RewriteRule ^favicon.ico /_/img/favicon.ico [L]
+    RewriteRule ^apple-touch-icon.png /_/img/apple-touch-icon.png [L]
+    RewriteRule ^apple-touch-icon-57x57-precomposed.png /_/img/apple-touch-icon-57x57-precomposed.png [L]
+    RewriteRule ^apple-touch-icon-72x72-precomposed.png /_/img/apple-touch-icon-72x72-precomposed.png [L]
+    RewriteRule ^apple-touch-icon-114x114-precomposed.png /_/img/apple-touch-icon-114x114-precomposed.png [L]
+    RewriteRule ^apple-touch-icon-144x144-precomposed.png /_/img/apple-touch-icon-144x144-precomposed.png [L]
+    RewriteRule ^apple-touch-icon-precomposed.png /_/img/apple-touch-icon-precomposed.png [L]
 
     # /xxx -->php.php?page=xxx
     RewriteCond %{REQUEST_URI} !/drm(.*)$

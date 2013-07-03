@@ -6,7 +6,7 @@ rem npm install -g uglify-js
 pushd %~dp0
 
 echo minifying and combining css and js files...
-type CSS\bootstrap.css CSS\normalize.css CSS\jquery.fancybox.css CSS\jquery.fancybox-thumbs.css CSS\Style.css CSS\Tags.css | cleancss --s0 -e -o CSS\pack.css
-cmd /c uglifyjs JavaScript\jquery.fancybox.js JavaScript\jquery.fancybox-thumbs.js JavaScript\jquery.mousewheel.js JavaScript\Tags.js --compress --mangle -o JavaScript\pack.js
+type css\bootstrap.css css\normalize.css css\jquery.fancybox.css css\jquery.fancybox-thumbs.css css\Style.css css\Tags.css | cleancss --s0 -e -o css\pack.css
+cmd /c uglifyjs js\jquery.fancybox.js js\jquery.fancybox-thumbs.js js\jquery.mousewheel.js js\Tags.js --compress --mangle -o js\pack.js
 
 popd

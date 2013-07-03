@@ -315,7 +315,7 @@ table.Menu {
 
 /* Flags */
 .sprite {
-    background: url("/_/Image/Default/sprite-all.png") no-repeat;
+    background: url("/_/img/Default/sprite-all.png") no-repeat;
 }
 
 .Albania     { background-position: 0 0; }
