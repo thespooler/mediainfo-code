@@ -261,7 +261,7 @@ table.Menu {
     padding: 4px 4px 4px 20px;
 }
 
-.Address.centered {
+.Address.center {
     width: 25%;
 }
 
@@ -290,7 +290,7 @@ table.Menu {
     color: red;
 }
 
-.centered {
+.center {
     text-align: center;
     vertical-align: middle;
 }
