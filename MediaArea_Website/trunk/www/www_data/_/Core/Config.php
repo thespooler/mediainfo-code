@@ -23,8 +23,6 @@ if (isset($_COOKIE["Donated"]))
     $Donated=$_COOKIE["Donated"]; //time()
 if (isset($_COOKIE["NewVersionRequested"]))
     $NewVersionRequested='Y';
-if (isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], "/Log")+4==strlen($_SERVER['HTTP_REFERER']))
-    $NoStats='Y';
 
 //Page = "/a/b/c"
 if (!isset($_SERVER["REQUEST_URI"]))

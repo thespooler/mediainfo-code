@@ -9,7 +9,7 @@ if (isset($Donated)) {
         $Link=$_COOKIE["WantedDownload"];
         $Link=str_replace("http://downloads.sourceforge.net/mediainfo/", "http://download.mediaarea.net/binary/mediainfo-gui/".$Version."/", $Link);
     } else
-        $Link="http://mediainfo.sourceforge.net/Download";
+        $Link="http://mediaarea.net/Download";
 
     //Saving info
     $Html_Head_Meta_HttpEquiv_Refresh='<meta http-equiv="refresh" content="0;url='.$Link.'"/>';
