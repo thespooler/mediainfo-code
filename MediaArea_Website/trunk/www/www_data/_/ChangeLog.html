@@ -29,6 +29,51 @@ parse_str(strtok("?"), $Argument);
 <pre>
 MediaInfo change log:
 
+Version 0.7.64, 2013-07-05
+--------------
++ New canonical URL of the website: http://MediaArea.net/MediaInfo
++ Portuguese, Basque and Russian translations updated
++ E-AC-3: support of streams having substreams (e.g. more than 6 channels)
++ JPEG: detection of YUVA, RGB, RGBA and YCCK color spaces
++ MPEG Audio: detection of Id3v1 inside an MPEG Audio frame
++ Matroska: support of HEVC/H.265 (based on specifications draft from DivX inc)
++ Canopus: detection of scan mode, scan order, pixel aspect ratio
++ MD5 generation option (work in progress)
++ Id3v2: reading of all Id3v2 blocks (no more only the first one) at the beginning of the file
++ MPEG-4: support of few additional iTunes tags, thanks to Kurtnoise
++ AVI: detection of Ut Video, thanks to Kurtnoise
++ MXF: detection of Dolby E even if EssenceCompression is not SMPTE 337
++ AIFF: detection of Dolby E
++ AIFF: detection of not aligned Dolby E
++ ARIB B24/B37: Caption_conversion_type display (HD, SD, Mobile)
++ MPEG-TS: displaying CEA-708 service and CEA-608 presence if the corresponding ATSC descriptor is present
++ MPEG-TS: quicker analysis in the case of quick parsing option
++ #F412, Matroska: Handling of files having no DocType
+x #B761, MPEG-TS/ARIB: crash with some streams, thanks to maki
+x #B765, Matroska: was parsing the complete file if a stream indicated in the header is not present
+x #B763, MXF: detection of incoherency of channel count between bitstream and wrapper
+x #B762, Matroska: detecting 23.976 frame rate (instead of 23.962 fps due to imprecise timestamp)
+x #B759, QuickTime: detection of time codes having tcmi not embedded in tmcd box
+x #B766, RMVB: a/v delay is incorrect, currently disabling it
+x #B768, MPEG-4, crash with some MPEG-4 files
+x #B769, MPEG-4, crash with some MPEG-4 files
+x #B764, AVC: wrong parsing of some streams having pic_scaling_matrix
+x AVC, crash with some AVC streams
+x AAC, infinite loop with some AAC streams
+x FLV, infinite loop with some FLV files
+x Matroska: crash with some malformed files
+x MOV: crash/long parsing with some malformed files
+x AC-3: crashes and freezes fix
+x Java 64-bit: Count_Get(StreamKind) was always returning 0
+x Python 64-bit: Count_Get(StreamKind) was always returning 0
+x DTS: some streams were not detected
+x DTS: some memory leaks with 14-bit streams
+x SMPTE ST 302: memory leaks
+x SMPTE ST 337: memory leaks
+x Total failure if MEDIAINFO_REFERENCES_NO #define was used
+x QuickTime: Time code name is in "Title" field
+x MPEG-4/QuickTime: handling of weird "negative" frame duration is stts
+
 Version 0.7.63, 2013-05-13
 --------------
 + Switched to a BSD-2-Clause license
@@ -95,102 +140,6 @@ x P2 Clip: wrong uppercase/lowercase in the file name of source files.
 x MOV: PCM endianness was sometimes wrong
 x MPEG-4: JPEG interlacement was sometimes wrong
 x MPEG Video: wrong DAR information in case of DAR change between begin and end of the file
-
-Version 0.7.61, 2012-10-22
---------------
-+ x64 and i386 Windows installers are merged, now only one installer
-+ Italian translation updated
-+ Bigger default window
-+ MPEG-TS: SCTE 35 and KLV streams are better displayed (in Menu part)
-+ MPEG-TS: Menu part contains the list of PID with unknown format
-+ MPEG-TS: Menu part lists PID in the PMT order instead of increasing order
-+ Display of both container and stream scan type and scan order
-+ DV100: scan order
-+ MXF: scan order
-+ MPEG-TS: Maximum and minimum overal bit rate (only if parse speed is set to 1)
-+ MPEG-TS, MPEG-S, MXF, AVI, WM: StreamOrder field added
-+ MXF: better support of malformed VANC streams
-+ MPEG Video: improved detection of the GOP (more frames are used), "Variable" value
-+ MPEG-PS: FirstPacketOrder info added
-+ SkipBinaryData option
-x #3564456, Matroska: some (other) streams were wrongly detected sa VFR
-x #3570092, Id3v2: support of old COM and ULT fields
-x CEA-708: crash with some malformed streams
-x MPEG-TS: crash when PCR is corrupted (same value at different offsets)
-x QuickTIme: wrong channel count report in case of buggy chan atom. Now the stream description has priority over chan atom
-x E-AC-3: duration was wrong in some cases
-x Matroska: random wrong analysis in case of SimpleBlock mode
-x #3574436, MOV: hang on files having buggy "alis" atom
-x MPEG-TS: bit rate mode detection was sometimes too much strict about CBR
-x DV: wrong detection in case of buggy audio header (if present and set to 0xFF)
-x MPEG-4: crash in case of buggy aperture size atom
-x MediaInfo_Const.h was missing in the DLL package for Mac
-x MPEG-PS: detection of phantom streams
-x WAV: detection of malformed >4GB WAV files was no more working
-x DTS: computing bit rate from frame size instead of targeted transmission rate
-x DTS: setting the bit rate to "unknown" for Master Audio instead of instantaneous bit rate
-x DTS: Display of endianess and word size was not coherent
-
-Version 0.7.60, 2012-09-02
---------------
-+ #3285550, GUI: added shell extension icon
-+ MPEG-TS/PS: improved detection of buggy time stamps
-+ DPX: color primaries and transfer characteristics
-+ MPEG-TS: Added support of scrambled streams without transport_scrambling_control bit set (e.g. PlayReady)
-+ MPEG-TS: Name of some scrambling algorithms
-+ MPEG-TS: detection of CBR/VBR at container level
-+ MPEG Video: better detection of variable GOP
-x Matroska: some streams were wrongly detected sa VFR
-x #3538378, XML output: invalid characters, now if there is an invalid character, data is transported in base64
-x LXF: wrong video bit rate with some files
-x AC-3/E-AC-3: hang up with some Little Endian streams
-x AAC: wrong min and max bit rate in case of partial (default) parsing, disabling it
-x AVC: crash or hang up with some malformed/scrambled streams
-x Opus: wrong duration in case of non-48kHz stream
-x MOV: 25 fps + drop frame time codes were not handled correctly
-
-Version 0.7.59, 2012-08-08
---------------
-+ License: Switched back to LGPLv2+Exceptions
-+ #3555183, PCX support, thanks to Lionel Duchateau
-+ #3555182, PSD support, thanks to Lionel Duchateau
-+ #3555181, Matroska: ALAC detection, thanks to Lionel Duchateau
-+ #3540425, OGG/MKV: Opus speech format support, thanks to Lionel Duchateau
-+ #3531808, AVI: detecting more inconsistencies in stream durations
-+ GXF: crash with Time code tracks without frame rate info
-+ MPEG-4: stream order (hidden by default), in order to provide the same numbers as mkvtoolnix 5.2+ Track ID
-+ QuickTime: default channel map is "L R" for stereo streams (as it seems to be in QuickTime player)
-+ MPEG-4: support of WMA (version 1, version 2, Pro, Lossless) in MPEG-4
-+ FLV: handling of metadata with an underscore before the real metadata name
-+ MXF: support of files with header missing TrackNumber in the descriptor (if it is present only in footer)
-+ MXF: Language from DMS-1
-+ ProRes: analysis of the ProRes raw stream (including scan order for interlaced content)
-+ colour_primaries, transfer_characteristics, matrix_coefficients: canonicalization of results
-+ MPEG-4 Visual: colour_primaries, transfer_characteristics, matrix_coefficients
-+ ProRes: colour_primaries, transfer_characteristics, matrix_coefficients
-+ GIF: Display Aspect Ratio
-x #3533984, different behavior depending of compilation options (so Linux version was missing some info)
-x MPEG-4: audio/video delay was wrong in case of negative delay
-x CEA-608: Memory leaks removed
-x AVC: crash in case of analyzing some invalid SEI
-x MPEG Audio: crash with some files having Lyrics 2 tags
-x MPEG Audio: crash with some files having APE tags
-x AVI: secondary genre comes after primary genres in the "Genre" field
-x FLV: better handling of files containing more than 1 meta chunk
-x MPEG-TS/MPEG-PS: was aborting during full parsing in the case of very damaged streams
-x Vorbis: infinite loop if codebook_entries>=256
-x Id3v2: crash with some unsynchronized frames, especially with UTF-16 comments
-x Id3v2: Wrong mime type of covers
-x MPEG-PS: crash in case of language info in descriptors
-x Java binding: crash with MediaInfo::Inform() (Windows 32-bit only)
-x MPEG-TS: false-positive in case of some MPEG-4 files with wrong extension
-x FLV: crash in some specific cases (malformed files)
-x 3548314, MVC: Scan type was wrong with MVC-only (without the underlying AVC stream) stream
-x 3553588, MPLS: stream duration was wrong with standalone (without the referenced M2TS) files
-x 3553588, MPLS: incoherent behavior with MPLS having more than one PlayListItem
-x 3554154, MPEG-TS: crash with some corrupted streams
-x MOV: all EIA/CEA-608 captions were not well detected
-x Matroska: Trying to better detect VFR streams, frame rate was wrong in case of interlaced content
 </pre>
 </div>
             </td>
