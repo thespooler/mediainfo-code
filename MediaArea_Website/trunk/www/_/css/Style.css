@@ -80,10 +80,6 @@ ul {
     padding: 10px;
 }
 
-.Invisible {
-    display: none;
-}
-
 .Warning {
     background-color: #F88;
     color: black;
