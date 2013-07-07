@@ -1,16 +1,22 @@
                 </td>
             </tr>
         <?php include $Path."/_/Template/Default/Help.html"; ?>
- <tr>
-    <td>
-    </td>
-    <td>
-    </td>
-    <td class="center"><?php if (!isset($Donated)) {include $Path."/_/Ad/BottomOfThePage_728_90_Google.html"; }?>
-    </td>
-</tr>
         </tbody>
     </table>
+<?php if (!isset($Donated))
+{
+echo '<table>
+ <tbody>
+  <tr>
+   <td style="width: 250px">
+   </td>
+   <td class="Banner_Top_Background">'; include $Path."/_/Ad/BottomOfThePage_970_90_Google.html"; echo '
+   </td>
+  </tr>
+ </tbody>
+</table>
+';
+}?>
 <?php
 if ($Page_Exploded[count($Page_Exploded)-1] == 'Screenshots.html') {
     echo '
