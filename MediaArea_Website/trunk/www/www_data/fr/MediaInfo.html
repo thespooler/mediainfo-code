@@ -13,14 +13,13 @@
    <td>
     <h2 class="First">Qu'est-ce que MediaInfo?</h2>
     <strong>MediaInfo</strong> fournit des informations techniques et les tags à propos de vos fichiers video et audio.<br/>
-    C'est un logiciel "libre" (libre de ne rien payer, et libre accès au code source, licence BSD)<br/>
     <br/>
-    <strong><a href="<?php echo $Link;?>">Téléchargez le!</a></strong><br/>
-    (version <?php echo $Version;?><?php if (isset($Installer)) echo ', avec Interface graphique, avec un installeur automatique';?><?php if(isset($OS)) echo ', pour '.$OS;?><?php if(isset($Bits)) echo ' bits';?><?php if (isset($Size)) echo ', '.$Size.' Mo';?>)<br/>
-    <small>(L'installeur comprend un système de distribution de logiciels. <a href="/Bundled">En savoir plus</a>.)</small><br/>
-    <br/>
-    D'autres versions (packaging, OS, interface...) sont aussi <a href="MediaInfo/Download">disponibles</a>
-    <br/>
+    <a class="btn btn-inverse btn-large download-main" href="<?php echo $Link;?>">
+        <i class="icon-white icon-download-alt pull-left"></i> Télécharger MediaInfo!
+    </a>
+    <p>(version <?php echo $Version;?><?php if (isset($Installer)) echo ', avec Interface graphique, avec un installeur automatique';?><?php if(isset($OS)) echo ', pour '.$OS;?><?php if(isset($Bits)) echo ' bits';?><?php if (isset($Size)) echo ', '.$Size.' Mo';?>)<br/>
+    <small>(L'installeur comprend un système de distribution de logiciels. <a href="/Bundled">En savoir plus</a>.)</small></p>
+    <p>D'autres versions (packaging, OS, interface...) sont aussi <a href="MediaInfo/Download">disponibles</a><br/>
     (<a href="MediaInfo/Download/Windows"><img src="/_/img/blank.gif" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"/></a>
     <a href="MediaInfo/Download/Mac_OS"><img src="/_/img/blank.gif" width="16" height="16" alt="Mac OS" title="Mac OS" class="sprite MacOS"/></a>
     <a href="MediaInfo/Download/Debian"><img src="/_/img/blank.gif" width="16" height="16" alt="Debian" title="Debian" class="sprite Debian"/></a>
@@ -35,10 +34,8 @@
     <br/>
     Vous pouvez voir les <a href="/MediaInfo/ChangeLog">notes de version</a><br/>
     Vous pouvez <a href="Donate">faire un don</a> pour soutenir les developements futurs.<br/>
-    <br/>
-    <br/>
+    </p>
     Sponsorisé par: <a href="http://www.digi-metrics.com"><img src="/_/img/Company/Digimetrics.png" alt="Digimetrics" title="Digimetrics" width="340" height="90"/></a>
-    <br/>
     <br/>
    </td>
   </tr>
@@ -75,9 +72,10 @@
  <li>Possibilité d'afficher n'importe quel langue sur n'importe quel version du système d'exploitation (Internationalisation)</li>
  <li>Possibilité d'avoir l'interface dans n'importe quelle langue (Localisation) (mais j'ai besoin de traducteurs)</li>
 </ul>
+<h2>Licence</h2>
+C'est un logiciel <a href="http://fr.wikipedia.org/wiki/Open_source">open-source</a> - à l'exception de l'interface graphique pour Mac - c'est-à-dire fournissant la possibilité de libre redistribution, d'accès au code source et aux travaux dérivés (<a href="MediaInfo/License">licence de style BSD</a>).<br/>
 <h2>Outils tiers</h2>
 <a href="http://mediatab.mediaarea.net/">MediaTab</a> met MediaInfo dans vos propriétés de fichiers (Windows)<br/>
-<a href="http://mediainspector.massanti.com/">Media Inspector</a> a une interface graphique native et mieux faite pour Mac<br/>
    </td>
    <td>
    </td>
