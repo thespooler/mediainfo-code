@@ -91,11 +91,11 @@ ul {
             box-sizing: border-box;
     padding: 0 16px 0 0;
     vertical-align: top;
-    width: 250px;
+    width: 300px;
 }
 
 table.Menu {
-    width: 250px;
+    width: 300px;
 }
 
 .Menu th,
@@ -358,3 +358,18 @@ table.Menu {
 .Ubuntu     { background-position: -138px -25px; }
 .Windows    { background-position: -155px -25px; }
 .openSUSE   { background-position: -172px -25px; }
+
+
+@media all and (max-width: 1150px) {
+    .TopLeftLogo  {
+        display: none;
+    }
+    .MediaInfo_Windows_Easy_en_thumb_about {
+        width: 224px;
+        height: 146px;
+    }
+    .Digimetrics_about {
+        width: 170px;
+        height: 45px;
+    }
+}
