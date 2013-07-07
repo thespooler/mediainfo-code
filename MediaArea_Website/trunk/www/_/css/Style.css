@@ -215,16 +215,10 @@ table.Menu {
     background-color: #B8B8B8;
 }
 
-.download-main {
-    font-size: xx-large;
-    font-weight: bold;
+.download-main,
+.download-main:hover {
+    text-decoration: none;
 }
-
-.download-main-mac {
-    font-size: x-large;
-    font-weight: bold;
-}
-
 .table-header {
     background-color: #99CCFF;
 }

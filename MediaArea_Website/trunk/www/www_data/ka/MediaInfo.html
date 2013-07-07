@@ -15,8 +15,11 @@
     <strong>MediaInfo</strong> განკუთვნილია აუდიო ან  ვიდეო ფაილების ტექნიკური და ტეგური  ინფორმაციის მისაღებათ.<br/>
     ეს არუს უფასო პროგრამა( უსასყიდლო და ხელმისაწვდომი)<br/>
     <br/>
-    <a class="download-main" href="<?php echo $Link;?>">გადმოწერეთ MediaInfo!</a><br/>
-    (version <?php echo $Version;?><?php if (isset($Installer)) echo ', Graphical User Interface with installer';?><?php if(isset($OS)) echo ', for '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    <a class="btn btn-inverse btn-large download-main" href="<?php echo $Link;?>">
+        <i class="icon-white icon-download-alt pull-left"></i> გადმოწერეთ MediaInfo!
+    </a>
+    <p>(version <?php echo $Version;?><?php if (isset($Installer)) echo ', Graphical User Interface with installer';?><?php if(isset($OS)) echo ', for '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)</a></p>
+
     <small>(the installer is bundled with a software distribution network. <a href="/Bundled">Learn more</a>.)</small><br/>
     <br/>
     სხვა ვერსიები (packaging, OS, ინტერფეისი...) არის ასევე <a href="MediaInfo/Download">ხელმისაწვდომი</a>
