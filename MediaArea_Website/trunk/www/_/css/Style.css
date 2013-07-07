@@ -360,15 +360,15 @@ table.Menu {
 .openSUSE   { background-position: -172px -25px; }
 
 
-@media all and (max-width: 1150px) {
-    .TopLeftLogo  {
+@media (max-width: 1200px) {
+    .TopLeftLogo {
         display: none;
     }
-    .MediaInfo_Windows_Easy_en_thumb_about {
+    .thumb-about {
         width: 224px;
         height: 146px;
     }
-    .Digimetrics_about {
+    .Digimetrics-about {
         width: 170px;
         height: 45px;
     }
