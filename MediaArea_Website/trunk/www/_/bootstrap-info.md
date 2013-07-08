@@ -9,3 +9,13 @@ Base CSS
 
 Components
   Thumbnails
+
+Miscellaneous
+  Component animations
+
+JS Components
+  Collapse
+
+jQuery plugins
+  Transitions
+  Collapse
