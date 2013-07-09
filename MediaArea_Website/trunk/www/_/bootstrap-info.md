@@ -9,6 +9,7 @@ Base CSS
 
 Components
   Thumbnails
+  Alerts
 
 Miscellaneous
   Component animations

@@ -78,13 +78,7 @@ ul {
     color: black;
 }
 
-.Info {
-    background: #AAF;
-    color: black;
-    padding: 10px;
-}
-
-.Warning {
+.warning {
     background-color: #F88;
     color: black;
 }
@@ -213,10 +207,6 @@ table.Menu {
 
 .about-tr {
     vertical-align: top;
-}
-
-.old-files {
-    background-color: #B8B8B8;
 }
 
 .download-main,
