@@ -65,7 +65,16 @@ ul {
 }
 
 .Digimetrics-about {
+    background: url("/_/img/Company/Digimetrics.png") no-repeat;
     vertical-align: middle;
+    width: 340px;
+    height: 90px;
+}
+
+.thumb-about {
+    background: url("/_/img/Screenshot/MediaInfo_Windows_Easy_en-thumb-about.png") no-repeat;
+    width: 448px;
+    height: 292px;
 }
 
 .Banner_Top_Background {
@@ -359,11 +368,13 @@ table.menu {
         display: none;
     }
     .thumb-about {
+        background: url("/_/img/Screenshot/MediaInfo_Windows_Easy_en-small-about.png") no-repeat;
         width: 224px;
         height: 146px;
     }
     .Digimetrics-about {
-        width: 170px;
-        height: 45px;
+        background: url("/_/img/Company/Digimetrics-small.png") no-repeat;
+        width: 166px;
+        height: 32px;
     }
 }
