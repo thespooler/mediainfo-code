@@ -82,14 +82,8 @@ ul {
     width: 100%;
 }
 
-.note {
-    background: #AAA;
-    color: black;
-}
-
 .warning {
     background-color: #F88;
-    color: black;
 }
 
 .sidebar {
