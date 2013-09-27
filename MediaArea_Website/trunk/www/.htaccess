@@ -1,4 +1,4 @@
-# Apache Configuration File
+# Apache Server Configs v1.1.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
 
 # (!) Using `.htaccess` files slows down Apache, therefore, if you have access
@@ -222,11 +222,6 @@ AddDefaultCharset utf-8
 
     # Known file names
     RewriteRule ^favicon.ico /_/img/favicon.ico [L]
-    RewriteRule ^apple-touch-icon.png /_/img/apple-touch-icon.png [L]
-    RewriteRule ^apple-touch-icon-57x57-precomposed.png /_/img/apple-touch-icon-57x57-precomposed.png [L]
-    RewriteRule ^apple-touch-icon-72x72-precomposed.png /_/img/apple-touch-icon-72x72-precomposed.png [L]
-    RewriteRule ^apple-touch-icon-114x114-precomposed.png /_/img/apple-touch-icon-114x114-precomposed.png [L]
-    RewriteRule ^apple-touch-icon-144x144-precomposed.png /_/img/apple-touch-icon-144x144-precomposed.png [L]
     RewriteRule ^apple-touch-icon-precomposed.png /_/img/apple-touch-icon-precomposed.png [L]
 
     # /xxx -->php.php?page=xxx
