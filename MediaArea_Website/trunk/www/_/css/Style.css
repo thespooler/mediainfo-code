@@ -207,6 +207,10 @@ table.menu {
     vertical-align: top;
 }
 
+.old-files {
+    background-color: #B8B8B8;
+}
+
 .download-main,
 .download-main:hover {
     text-decoration: none;
@@ -230,7 +234,7 @@ table.menu {
     border-width: 0 0 1px 1px;
     color: #000020;
     display: block;
-    padding: 1px 0 .5em .5em;
+    padding: 1px 0 0.5em 0.5em;
 }
 
 .address {
