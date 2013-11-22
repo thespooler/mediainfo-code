@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Using a buffer instead of a file name</title>
+</head>
+<body>
+<div>
+<ul>
+ <li><a href="#Filtering">Filtering</a>
+  <ul>
+   <li><a href="#Introduction">Introduction</a></li>
+   <li><a href="#Steps">Steps</a>
+    <ul>
+     <li><a href="#Filtering_Add">Adding a filter</a></li>
+     <li><a href="#Filtering_Remove">Removing a filter</a></li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+<h1><a name="Filtering"></a>Filtering</h2>
+<h2><a name="Introduction"></a>Introduction</h2>
+MediaInfo has a specific feature, which permit to filter streams from a stream having multiple substreams, for speed improvement or for only having what you really want in the result from MediaInfo.<br/>
+Currently, this feature is supported with the following parsers:
+<ul>
+ <li>MPEP-TS (MPEG Transport Stream)</li>
+</ul>
+
+<h2><a name="Steps"></a>Steps</h2>
+<h3><a name="Filtering_Add"></a>Adding a filter</h3>
+<code><a href="Doxygen/class_media_info_lib_1_1_media_info.html#909ccd23569fa9beb11194e6549c1618">MediaInfo::Options</a>("File_Filter", "***The program number***")</code><br/>
+
+<h3><a name="Filtering_Add"></a>Adding a filter</h3>
+<code><a href="Doxygen/class_media_info_lib_1_1_media_info.html#909ccd23569fa9beb11194e6549c1618">MediaInfo::Options</a>("File_Filter", "***The program number***;0")</code><br/>
+NOT YET IMPLEMENTED.
+
+</body>
+</html>

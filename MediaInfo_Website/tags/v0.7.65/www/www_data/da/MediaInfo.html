@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+    <a href="MediaInfo/Screenshots"><img class="thumb-about" src="/_/img/blank.gif" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="first">Hvad er MediaInfo?</h2>
+    <strong>MediaInfo</strong> leverer teknisk og tag-information om en video- eller lydfil.<br/>
+    Det er frit software (gratis og fri adgang til kildekode: GPL- eller LGPL-licens)<br/>
+    <br/>
+    <strong><a href="<?php echo $Link;?>">Download det!</a></strong><br/>
+    (version <?php echo $Version;?><?php if (isset($Installer)) echo ', Graphical User Interface with installer';?><?php if(isset($OS)) echo ', for '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    Bemærk 1: Du kan <a href="/MediaInfo/ChangeLog">overvåge</a><br/>
+    Bemærk 2: Andre versioner (OS, grænseflade...) er også <a href="MediaInfo/Download">tilgængelige</a>
+    <br/>
+    (<a href="MediaInfo/Download/Windows"><img src="/_/img/blank.gif" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"/></a>
+    <a href="MediaInfo/Download/Mac_OS"><img src="/_/img/blank.gif" width="16" height="16" alt="Mac OS" title="Mac OS" class="sprite MacOS"/></a>
+    <a href="MediaInfo/Download/Debian"><img src="/_/img/blank.gif" width="16" height="16" alt="Debian" title="Debian" class="sprite Debian"/></a>
+    <a href="MediaInfo/Download/Ubuntu"><img src="/_/img/blank.gif" width="16" height="16" alt="Ubuntu" title="Ubuntu" class="sprite Ubuntu"/></a>
+    <a href="MediaInfo/Download/Ubuntu"><img src="/_/img/blank.gif" width="16" height="16" alt="Linux Mint" title="Linux Mint" class="sprite Linux_Mint"/></a>
+    <a href="MediaInfo/Download/RedHat"><img src="/_/img/blank.gif" width="16" height="16" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux" class="sprite RedHat"/></a>
+    <a href="MediaInfo/Download/CentOS"><img src="/_/img/blank.gif" width="16" height="16" alt="CentOS" title="CentOS" class="sprite CentOS"/></a>
+    <a href="MediaInfo/Download/Fedora"><img src="/_/img/blank.gif" width="16" height="16" alt="Fedora" title="Fedora" class="sprite Fedora"/></a>
+    <a href="http://packman.links2linux.org/package/mediainfo"><img src="/_/img/blank.gif" width="16" height="16" alt="openSUSE" title="openSUSE" class="sprite openSUSE"/></a>
+    <a href="MediaInfo/Download/Mandriva"><img src="/_/img/blank.gif" width="16" height="16" alt="Mandriva" title="Mandriva" class="sprite Mandriva"/></a>
+    <a href="http://aur.archlinux.org/packages.php?K=mediainfo"><img src="/_/img/blank.gif" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux" width="16" height="16"/></a>)
+    <br/>
+    <br/>
+    Du kan <a href="Donate">donére</a> for at støtte yderligere udvikling.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+<h2>Hvilken information kan jeg få fra MediaInfo?</h2>
+<ul>
+ <li>Generelt: titel, forfatter, instruktør, album, spornummer, dato, varighed...</li>
+ <li>Video: codec, størrelsesforhold, billedrate, bitrate...</li>
+ <li>Lyd: codec, samplingsrate, kanaler, sprog, bitrate...</li>
+ <li>Tekst: sprog for undertekster</li>
+ <li>Kapitler: antal kapitler, liste med kapitler</li>
+</ul>
+<h2>Hvilket format (container) understøtter MediaInfo?</h2>
+<ul>
+ <li>Video: MKV, OGM, AVI, <a href="http://mediaarea.net/en/DIVX">DivX</a>, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Codecs: <a href="http://mediaarea.net/en/DIVX">DivX</a>, <a href="http://mediaarea.net/en/XVID">XviD</a>, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Lyd: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Undertekster: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>Hvad kan jeg bruge det til?</h2>
+<ul>
+ <li>Læse mange <a href="MediaInfo/Support/Formats"> video- og lydfilformater</a></li>
+ <li>Forskellige visningsmetoder til information (tekst, ark, træstruktur, HTML...)</li>
+ <li>Du kan tilpasse disse visninger</li>
+ <li>Eksportere information som tekst, CSV, HTML...</li>
+ <li>Grafisk brugergrænseflade, kommandolinje, eller DLL</li>
+ <li>Integration med MS-Windows shell (træk og slip, og genvejsmenu)</li>
+ <li>Internationalisering: Et hvert sprog vises på hvilket som helst operativsystem</li>
+ <li>Mulighed for oversættelse (men frivillige behøves)</li>
+</ul>
+   </td>
+   <td>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

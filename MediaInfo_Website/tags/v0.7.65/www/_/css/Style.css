@@ -1,0 +1,373 @@
+/*csslint box-sizing: false, qualified-headings: false, unique-headings: false*/
+
+body {
+    background-color: white;
+    color: black;
+    font: small Verdana, Arial, Helvetica, sans-serif;
+    padding: 0;
+}
+
+em {
+    font-style: italic;
+}
+
+h1 {
+    font-size: medium;
+}
+
+h2,
+h3,
+h4 {
+    font-size: small;
+}
+
+h2 {
+    background-color: #F0F0F0;
+}
+
+ul {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* Bootstrap overrides start*/
+.thumbnails > li > a {
+    display: inline-block;
+}
+
+.thumbnails {
+    margin-left: -10px;
+}
+
+.thumbnail,
+.thumbnail:hover {
+    border: none;
+}
+/* Bootstrap overrides end*/
+
+.Path {
+    color: white;
+}
+
+.Path a {
+    color: white;
+    text-decoration: none;
+}
+
+.Path a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.Digimetrics-about {
+    background: url("/_/img/Company/Digimetrics.png") no-repeat;
+    vertical-align: middle;
+    width: 340px;
+    height: 90px;
+}
+
+.thumb-about {
+    background: url("/_/img/Screenshot/MediaInfo_Windows_Easy_en-thumb-about.png") no-repeat;
+    width: 448px;
+    height: 292px;
+}
+
+.Banner_Top_Background {
+    text-align: center;
+    width: 100%;
+}
+
+.warning {
+    background-color: #F88;
+}
+
+.sidebar {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 16px 0 0;
+    vertical-align: top;
+    width: 300px;
+}
+
+table.menu {
+    width: 300px;
+}
+
+.menu th,
+.menu td {
+    padding: 0;
+}
+
+.Top_Middle_ltr,
+.Top_Middle_rtl {
+    background-color: LightGray;
+    width: 237px;
+    height: 19px;
+}
+
+.Top_Middle_ltr {
+    -webkit-border-top-right-radius: 12px;
+    -moz-border-radius-topright: 12px;
+    border-top-right-radius: 12px;
+}
+
+.Top_Middle_rtl {
+    -webkit-border-top-left-radius: 12px;
+    -moz-border-radius-topleft: 12px;
+    border-top-left-radius: 12px;
+}
+
+.menu .text {
+    color: black;
+    font: bold small Verdana, Arial, Helvetica, sans-serif; /* override font from doxygen.css */
+    text-align: center;
+    width: 237px;
+    height: 30px;
+}
+
+.text a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.text a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.menu0,
+.menu0:hover,
+.menu1,
+.menu1:hover,
+.menu2,
+.menu2:hover,
+.menu3,
+.menu3:hover,
+.menu4,
+.menu4:hover,
+.menu5,
+.menu5:hover {
+    color: black;
+    -webkit-transition: background-color 0.15s linear;
+       -moz-transition: background-color 0.15s linear;
+         -o-transition: background-color 0.15s linear;
+            transition: background-color 0.15s linear;
+}
+
+.menu0       { background-color: #DBD696; }
+.menu1       { background-color: #D696DB; }
+.menu2       { background-color: #DBAE96; }
+.menu3       { background-color: #96D3DB; }
+.menu4       { background-color: #BADB96; }
+.menu5       { background-color: #D1C3CD; }
+.menu0:hover { background-color: #CFC873; }
+.menu1:hover { background-color: #C973CF; }
+.menu2:hover { background-color: #CF9473; }
+.menu3:hover { background-color: #73C5CF; }
+.menu4:hover { background-color: #A3CF73; }
+.menu5:hover { background-color: #C2AFBD; }
+
+.contents table {
+    width: 100%;
+}
+
+.contents h1 {
+    margin: 0;
+}
+
+.contents h2,
+.contents h3,
+.contents h4 {
+    border-width: 0 0 1px;
+    /*margin: 1em 0 0;*/
+}
+
+.contents h2 {
+    border-color: #FC8;
+    border-style: solid;
+}
+
+.contents h3 {
+    border-color: #FD9;
+    border-style: dashed;
+}
+
+.contents h4 {
+    border-color: #FEA;
+    border-style: dashed;
+}
+
+.about-td {
+    padding: 0 15px 5px 5px;
+}
+
+.about-tr {
+    vertical-align: top;
+}
+
+.old-files {
+    background-color: #B8B8B8;
+}
+
+.download-main,
+.download-main:hover {
+    text-decoration: none;
+}
+.table-header {
+    background-color: #99CCFF;
+}
+
+.table-OS {
+    background-color: #FFCC99;
+}
+
+.first {
+    margin-top: 0;
+}
+
+.paragraph-block {
+    background-color: white;
+    border-color: #595D96;
+    border-style: none none dotted dotted;
+    border-width: 0 0 1px 1px;
+    color: #000020;
+    display: block;
+    padding: 1px 0 0.5em 0.5em;
+}
+
+.address {
+    background-color: #F7F5EF;
+    border-color: #FF9000;
+    border-style: dashed dashed dashed solid;
+    border-width: 1px 1px 1px 3px;
+    color: #02021E;
+    margin-right: 60%;
+    padding: 4px 4px 4px 20px;
+}
+
+.address.center {
+    width: 25%;
+}
+
+.cppcode,
+.cpplisting {
+    background-color: #D5E1E8;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid #84b0c7;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+}
+
+.cpplisting {
+    white-space: pre;
+    width: 99%;
+}
+
+.cpplisting_comment {
+    color: green;
+}
+
+.cpplisting_toprovide {
+    color: red;
+}
+
+.center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.center-img {
+    display: block;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.flags-around {
+    background-color: #F0F0F0;
+    font: bold 20px Verdana, Arial, Helvetica, sans-serif; /* override font from doxygen.css */
+    text-align: center;
+}
+
+.flags-around a {
+    -webkit-transition: background-color 0.15s linear;
+       -moz-transition: background-color 0.15s linear;
+         -o-transition: background-color 0.15s linear;
+            transition: background-color 0.15s linear;
+}
+
+.flags-around a:hover {
+    background-color: #D0D0D0;
+}
+
+
+/* Flags */
+.sprite {
+    background: url("/_/img/sprite-all.png") no-repeat;
+}
+
+.Albania     { background-position: 0 0; }
+.Belarus     { background-position: -26px 0; }
+.Brazil      { background-position: -52px 0; }
+.Bulgaria    { background-position: -78px 0; }
+.Catalonia   { background-position: -104px 0; }
+.China       { background-position: -130px 0; }
+.Croatia     { background-position: -156px 0; }
+.France      { background-position: -182px 0; }
+.Georgia     { background-position: -208px 0; }
+.Germany     { background-position: -234px 0; }
+.Hungary     { background-position: -260px 0; }
+/*.Indonesia   { background-position: -286px 0; }*/
+.Iran        { background-position: -312px 0; }
+.Italy       { background-position: -338px 0; }
+.Japan       { background-position: -364px 0; }
+.Korea       { background-position: -390px 0; }
+.Lithuania   { background-position: -416px 0; }
+.Netherlands { background-position: -442px 0; }
+.Poland      { background-position: -468px 0; }
+.Portugal    { background-position: -494px 0; }
+.Russia      { background-position: -520px 0; }
+.Spain       { background-position: -546px 0; }
+.Sweden      { background-position: -572px 0; }
+.Taiwan      { background-position: -598px 0; }
+.Thailand    { background-position: -624px 0; }
+.UK          { background-position: -650px 0; }
+.Ukraine     { background-position: -676px 0; }
+.Unknown     { background-position: -702px 0; }
+
+
+/* Operating Systems images */
+
+.ArchLinux  { background-position: 0 -25px; }
+.CentOS     { background-position: -17px  -25px; }
+.Debian     { background-position: -34px  -25px; }
+.Fedora     { background-position: -51px  -25px; }
+.Linux_Mint { background-position: -68px  -25px; }
+.MacOS      { background-position: -87px  -25px; }
+.Mandriva   { background-position: -104px -25px; }
+.RedHat     { background-position: -121px -25px; }
+.Ubuntu     { background-position: -138px -25px; }
+.Windows    { background-position: -155px -25px; }
+.openSUSE   { background-position: -172px -25px; }
+
+
+@media (max-width: 1200px) {
+    .TopLeftLogo {
+        display: none;
+    }
+    .thumb-about {
+        background: url("/_/img/Screenshot/MediaInfo_Windows_Easy_en-small-about.png") no-repeat;
+        width: 224px;
+        height: 146px;
+    }
+    .Digimetrics-about {
+        background: url("/_/img/Company/Digimetrics-small.png") no-repeat;
+        width: 166px;
+        height: 32px;
+    }
+}

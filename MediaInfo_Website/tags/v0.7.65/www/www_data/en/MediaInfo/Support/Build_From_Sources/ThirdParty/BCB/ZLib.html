@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ZLib (BCB)</title>
+</head>
+<body>
+<h1>ZLib (BCB)</h1>
+<h2>Download</h2>
+<ul>
+ <li>Download <code><a href="http://www.zlib.net/zlib-1.2.8.tar.gz">http://www.zlib.net/zlib-1.2.8.tar.gz</a></code></li>
+</ul>
+
+<h2>Project</h2>
+<ul>
+ <li>Create new project (Library)</li>
+ <li>Add (<code>%SOURCE_HOME%/</code>): All .c files except <code>example.c</code> and <code>minigzip.c</code></li>
+</ul>
+
+<h2>Project Options</h2>
+<ul>
+ <li> Compiler : <code>Release</code></li>
+ <li>C++, Exception handling : Disable all</li>
+ <li>Directories, Conditional : <code>WIN32;_WIN32</code></li>
+</ul>
+
+<h2>Compile</h2>
+<ul>
+ <li>Ctrl+F9</li>
+</ul>
+
+<h2>Install</h2>
+<ul>
+ <li>Copy <code>%SOURCE_HOME%/zlib.h</code> to <code>Shared/Include/ZLib/zlib.h</code></li>
+ <li>Copy <code>%SOURCE_HOME%/zconf.h</code> to <code>Shared/Include/ZLib/zconf.h</code></li>
+ <li>Copy <code>%Your_Project_Name%.lib</code> to <code>Shared/Library/BCB/ZLib.lib</code></li>
+</ul>
+</body>
+</html>

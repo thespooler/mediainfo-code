@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="<?php echo $Language; ?>">
+<head>
+    <meta charset="utf-8">
+    <title><?php echo $Title; ?></title>
+    <meta name="description" lang="<?php echo $Language; ?>" content="<?php echo $Description; ?>"/>
+    <meta name="keywords" lang="<?php echo $Language; ?>" content="<?php echo $Keywords; ?>"/>
+    <link rel="icon" type="image/png" href="/_/img/favicon.png"/>
+    <!--[if IE]><link rel="shortcut icon" href="/_/img/favicon.ico"><![endif]-->
+    <meta name="msapplication-TileColor" content="white">
+    <meta name="msapplication-TileImage" content="/_/img/apple-touch-icon-144x144-precomposed.png">
+    <link rel="stylesheet" href="/_/css/pack.css"/>
+    <!--[if lt IE 9]>
+    <script src="/_/js/html5shiv.js"></script>
+    <script src="/_/js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="alternate" title="MediaInfo" hreflang="de" href="/de"/>
+    <link rel="alternate" title="MediaInfo" hreflang="en" href="/en"/>
+    <link rel="alternate" title="MediaInfo" hreflang="fr" href="/fr"/>
+    <link rel="alternate" title="MediaInfo" hreflang="hu" href="/hu"/>
+    <link rel="alternate" title="MediaInfo" hreflang="it" href="/it"/>
+    <link rel="alternate" title="MediaInfo" hreflang="ru" href="/ru"/>
+    <link rel="author" href="mailto:info@mediaarea.net" title="<?php echo $MailTo; ?>"/>
+    <?php if (isset($Head_ToAdd)) echo $Head_ToAdd; ?>
+</head>

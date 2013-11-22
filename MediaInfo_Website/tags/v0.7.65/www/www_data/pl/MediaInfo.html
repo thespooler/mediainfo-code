@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>About MediaInfo</title>
+</head>
+<body>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+    <a href="MediaInfo/Screenshots"><img class="thumb-about" src="/_/img/blank.gif" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="first">Co to jest MediaInfo?</h2>
+    <strong>MediaInfo</strong> dostarcza informacji technicznych i pochodzących ze znaczników o plikach audio i wideo.<br/>
+    Jest programem darmowym (bezpłatnym i z otwartym kodem źródłowym na licencji GPL lub LGPL)<br/>
+    <br/>
+    <strong><a href="<?php echo $Link;?>">Pobierz!</a></strong><br/>
+    (wersja <?php echo $Version;?><?php if (isset($Installer)) echo ', interfejs graficzny wraz z programem instalacyjnym';?><?php if(isset($OS)) echo ' dla '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) {$Size=str_replace('.', ',', $Size); echo ', '.$Size.' MB';}?>)<br/>
+    Uwaga 1: Możesz <a href="/MediaInfo/ChangeLog">śledzić</a><br/>
+    Uwaga 2: <a href="MediaInfo/Download">Dostępne</a> są inne wersje (alternatywne systemy operacyjne, interfejsy...)<br/>
+    <br/>
+    Możesz zmotywować autora do dalszej pracy <a href="Donate">dowolną kwotą</a>.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+<h2>Czego można się dowiedzieć z pomocą MediaInfo?</h2>
+<ul>
+ <li>Ogólne: tytuł, autor, reżyser, album, numer nagrania, data, czas trwania...</li>
+ <li>Wideo: kodek, proporcje obrazu, ilość klatek na sekundę, przypływność bitów...</li>
+ <li>Audio: kodek, częstotliwość próbkowania, liczba kanałów, język, przypływność bitów...</li>
+ <li>Tekst: język napisów</li>
+ <li>Rozdziały: liczba rozdziałów, lista rozdziałów</li>
+</ul>
+<h2>Jakie formaty (zawartość) obsługuje MediaInfo?</h2>
+<ul>
+ <li>Wideo: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (kodeki: DivX, XviD, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Napisy: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>Jakie możliwości oferuje program?</h2>
+<ul>
+ <li>Odczyt plików w wielu <a href="MediaInfo/Support/Formats">formatach wideo i audio</a></li>
+ <li>Przeglądanie informacji na wiele sposobów (w postaci tekstu, drzewa, karty, HTML...)</li>
+ <li>Możliwość dostosowania sposobu prezentacji wyników do własnych upodobań</li>
+ <li>Eksport informacji w postaci tekstu, CSV, HTML...</li>
+ <li>Interfejs graficzny, wiersz poleceń, względnie biblioteka DLL</li>
+ <li>Integracja z powłoką Windows (przeciągnij i upuść, menu kontekstowe)</li>
+ <li>Umiędzynarodowienie: dowolny język wyświetlany w dowolnej wersji systemu operacyjnego</li>
+ <li>Lokalizację (wymaga ochotników)</li>
+</ul>
+   </td>
+   <td>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>
+
+

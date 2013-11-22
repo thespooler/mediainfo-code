@@ -1,0 +1,8 @@
+* remove a name="" since it's deprecated and use id in the parent element
+* get rid of table layout...
+* add padding for body
+* CMD Output: Width 60-70%, center the pre maybe
+* play with IE10 icon background color
+* fix screenshots thumbs to be responsive
+* show the remove GUI button only for Windows
+* make menu use the translated strings if available
