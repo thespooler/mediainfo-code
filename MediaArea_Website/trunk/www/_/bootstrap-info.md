@@ -1,4 +1,4 @@
-http://twitter.github.io/bootstrap/customize.html
+http://getbootstrap.com/2.3.2/customize.html
 
 Enabled components in v2.3.2:
 
