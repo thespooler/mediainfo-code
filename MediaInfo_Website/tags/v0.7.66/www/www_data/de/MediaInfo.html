@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+    <a href="MediaInfo/Screenshots"><img class="thumb-about" src="/_/img/blank.gif" alt="Das Hauptfenster" title="Screenshot - Das Hauptfenster"/></a>
+   </td>
+   <td>
+    <h2 class="first">Was ist MediaInfo?</h2>
+    <p><strong>MediaInfo</strong> liefert technische und zusätzliche Tag-Informationen über Video- und Audiodateien.</p>
+    <a class="btn btn-inverse btn-large download-main" href="<?php echo $Link;?>">
+        <i class="icon-white icon-download-alt pull-left"></i> MediaInfo herunterladen!
+    </a>
+    <p>(Version <?php echo $Version;?><?php if (isset($Installer)) echo ', Grafische Benutzeroberfläche, mit Installationsroutine';?><?php if(isset($OS)) echo ', für '.$OS;?><?php if(isset($Bits)) echo ' bits';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    <small>(Das Installationsprogramm enthält ein System von Software-Verteilung. <a href="/Bundled">Erfahren Sie mehr</a>.)</small></p>
+    <p>Sie können die Versionsinformationen auf <a href="/MediaInfo/ChangeLog">Neuigkeiten</a> überwachen.<br/>
+    Andere Versionen (Betriebssystem, Benutzeroberfläche...) sind ebenfalls <a href="MediaInfo/Download">verfügbar</a>
+    (<a href="MediaInfo/Download/Windows"><img src="/_/img/blank.gif" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"/></a>
+    <a href="MediaInfo/Download/Mac_OS"><img src="/_/img/blank.gif" width="16" height="16" alt="Mac OS" title="Mac OS" class="sprite MacOS"/></a>
+    <a href="MediaInfo/Download/Debian"><img src="/_/img/blank.gif" width="16" height="16" alt="Debian" title="Debian" class="sprite Debian"/></a>
+    <a href="MediaInfo/Download/Ubuntu"><img src="/_/img/blank.gif" width="16" height="16" alt="Ubuntu" title="Ubuntu" class="sprite Ubuntu"/></a>
+    <a href="MediaInfo/Download/Ubuntu"><img src="/_/img/blank.gif" width="16" height="16" alt="Linux Mint" title="Linux Mint" class="sprite Linux_Mint"/></a>
+    <a href="MediaInfo/Download/RedHat"><img src="/_/img/blank.gif" width="16" height="16" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux" class="sprite RedHat"/></a>
+    <a href="MediaInfo/Download/CentOS"><img src="/_/img/blank.gif" width="16" height="16" alt="CentOS" title="CentOS" class="sprite CentOS"/></a>
+    <a href="MediaInfo/Download/Fedora"><img src="/_/img/blank.gif" width="16" height="16" alt="Fedora" title="Fedora" class="sprite Fedora"/></a>
+    <a href="http://packman.links2linux.org/package/mediainfo"><img src="/_/img/blank.gif" width="16" height="16" alt="openSUSE" title="openSUSE" class="sprite openSUSE"/></a>
+    <a href="MediaInfo/Download/Mandriva"><img src="/_/img/blank.gif" width="16" height="16" alt="Mandriva" title="Mandriva" class="sprite Mandriva"/></a>
+    <a href="http://aur.archlinux.org/packages.php?K=mediainfo"><img src="/_/img/blank.gif" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux" width="16" height="16"/></a>)
+    <br/>
+    Sie können <a href="MediaInfo/Donate">spenden</a>, um die Weiterentwicklung unterstützen.
+    </p>
+    <p>
+    Gesponsort von: <a href="http://www.digi-metrics.com"><img class="Digimetrics-about" src="/_/img/blank.gif" alt="Digimetrics" title="Digimetrics"/></a>
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+<h2>Welche Informationen liefert MediaInfo?</h2>
+<ul>
+ <li>Grundsätzliches: Titel, Autor, Regisseur, Album, Titelnummer, Datum, Spieldauer...</li>
+ <li>Video: Codec, Bildseitenverhältnis, Bildfrequenz, Bitrate...</li>
+ <li>Audio: Codec, Samplingrate, Kanäle, Sprache, Bitrate...</li>
+ <li>Text: Sprache der Untertitel</li>
+ <li>Kapitel: Anzahl der Kapitel, Kapitelübersicht</li>
+</ul>
+<h2>Welche Formate (Container) unterstützt MediaInfo?</h2>
+<ul>
+ <li>Video: MKV, OGM, AVI, <a href="http://mediaarea.net/en/DIVX">DivX</a>, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Codecs: <a href="http://mediaarea.net/en/DIVX">DivX</a>, <a href="http://mediaarea.net/en/XVID">XviD</a>, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Untertitel: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>Was kann das Programm?</h2>
+<ul>
+ <li>Liest viele <a href="MediaInfo/Support/Formats"> Video- und Audioformate</a></li>
+ <li>Verschiedene Darstellungsmöglichkeiten der Informationen (Text, Tabelle, Baumstruktur, HTML...)</li>
+ <li>Diese Darstellungen können selbst angepasst werden</li>
+ <li>Informationen können als Text, CSV, HTML... ausgegeben werden</li>
+ <li>Grafische Benutzeroberfläche, Aufruf per Kommandozeile, oder über die DLL</li>
+ <li>Integration in MS-Windows (Drag'n'Drop, Kontextmenü)</li>
+ <li>Internationalisierung : Jede Sprache wird unter jedem Betriebssystem unterstützt</li>
+ <li>Lokalisierbar (<a href="mailto:info@mediaarea.net">Übersetzer gesucht!</a>)</li>
+</ul>
+<h2>Licence</h2>
+Dies ist ein <a href="http://de.wikipedia.org/wiki/Open_Source">Open-Source</a>-Software - mit Ausnahme der GUI für Mac - das heißt, die Möglichkeit, die kostenlose Verteilung des Quellcodes und abgeleitete Werke (<a href="MediaInfo/License">BSD-artigen Lizenz</a>).<br/>
+   </td>
+   <td>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

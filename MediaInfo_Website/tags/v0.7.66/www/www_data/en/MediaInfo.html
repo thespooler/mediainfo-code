@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+    <a href="MediaInfo/Screenshots"><img class="thumb-about" src="/_/img/blank.gif" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="first">What is MediaInfo?</h2>
+    <p><strong>MediaInfo</strong> is a convenient unified display of the most relevant technical and tag data for video and audio files.</p>
+    <a class="btn btn-inverse btn-large download-main" href="<?php echo $Link;?>">
+        <i class="icon-white icon-download-alt pull-left"></i> Download MediaInfo!
+    </a>
+    <p>(version <?php echo $Version;?><?php if (isset($Installer)) echo ', Graphical User Interface with installer';?><?php if(isset($OS)) echo ', for '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    <small>(the installer is bundled with a software distribution network. <a href="/Bundled">Learn more</a>.)</small></p>
+    <p>
+    Other versions (packaging, OS, interface...) are also <a href="MediaInfo/Download"> available</a>
+    <br/>
+    (<a href="MediaInfo/Download/Windows"><img src="/_/img/blank.gif" width="16" height="16" alt="Microsoft Windows" title="Microsoft Windows" class="sprite Windows"/></a>
+    <a href="MediaInfo/Download/Mac_OS"><img src="/_/img/blank.gif" width="16" height="16" alt="Mac OS" title="Mac OS" class="sprite MacOS"/></a>
+    <a href="MediaInfo/Download/Debian"><img src="/_/img/blank.gif" width="16" height="16" alt="Debian" title="Debian" class="sprite Debian"/></a>
+    <a href="MediaInfo/Download/Ubuntu"><img src="/_/img/blank.gif" width="16" height="16" alt="Ubuntu" title="Ubuntu" class="sprite Ubuntu"/></a>
+    <a href="MediaInfo/Download/Ubuntu"><img src="/_/img/blank.gif" width="16" height="16" alt="Linux Mint" title="Linux Mint" class="sprite Linux_Mint"/></a>
+    <a href="MediaInfo/Download/RedHat"><img src="/_/img/blank.gif" width="16" height="16" alt="RedHat Entreprise Linux" title="RedHat Entreprise Linux" class="sprite RedHat"/></a>
+    <a href="MediaInfo/Download/CentOS"><img src="/_/img/blank.gif" width="16" height="16" alt="CentOS" title="CentOS" class="sprite CentOS"/></a>
+    <a href="MediaInfo/Download/Fedora"><img src="/_/img/blank.gif" width="16" height="16" alt="Fedora" title="Fedora" class="sprite Fedora"/></a>
+    <a href="http://packman.links2linux.org/package/mediainfo"><img src="/_/img/blank.gif" width="16" height="16" alt="openSUSE" title="openSUSE" class="sprite openSUSE"/></a>
+    <a href="MediaInfo/Download/Mandriva"><img src="/_/img/blank.gif" width="16" height="16" alt="Mandriva" title="Mandriva" class="sprite Mandriva"/></a>
+    <a href="http://aur.archlinux.org/packages.php?K=mediainfo"><img src="/_/img/blank.gif" alt="ArchLinux" title="ArchLinux" class="sprite ArchLinux" width="16" height="16"/></a>)
+    <br/>
+    See <a href="/MediaInfo/ChangeLog">change log</a><br/>
+    Please <a href="MediaInfo/Donate">donate</a> to support further development.
+    </p>
+    <p>
+    Sponsored by: <a href="http://www.digi-metrics.com"><img class="Digimetrics-about" src="/_/img/blank.gif" alt="Digimetrics" title="Digimetrics"/></a>
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+<h2>The MediaInfo data display includes:</h2>
+<ul>
+ <li>Container: format, profile, commercial name of the format, duration, overall bit rate, writing application and library, title, author, director, album, track number, date, duration...</li>
+ <li>Video: format, codec id, aspect, frame rate, bit rate, color space, chroma subsampling, bit depth, scan type, scan order...</li>
+ <li>Audio: format, codec id, sample rate, channels, bit depth, language, bit rate...</li>
+ <li>Text: format, codec id, language of subtitle...</li>
+ <li>Chapters: count of chapters, list of chapters...</li>
+</ul>
+<h2>MediaInfo analyticals include:</h2>
+<ul>
+ <li>Container: MPEG-4, QuickTime, Matroska, AVI, MPEG-PS (including unprotected DVD), MPEG-TS (including unprotected Blu-ray), MXF, GXF, LXF, WMV, FLV, Real...</li>
+ <li>Tags: Id3v1, Id3v2, Vorbis comments, APE tags...</li>
+ <li>Video: MPEG-1/2 Video, H.263, MPEG-4 Visual (including DivX, XviD), H.264/AVC, Dirac...</li>
+ <li>Audio: MPEG Audio (including MP3), AC3, DTS, AAC, Dolby E, AES3, FLAC...</li>
+ <li>Subtitles: CEA-608, CEA-708, DTVCC, SCTE-20, SCTE-128, ATSC/53, CDP, DVB Subtitle, Teletext, SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>MediaInfo features include:</h2>
+<ul>
+ <li>Read many <a href="MediaInfo/Support/Formats"> video and audio file formats</a></li>
+ <li>View information in different formats (text, sheet, tree, HTML...)</li>
+ <li>Customise these viewing formats</li>
+ <li>Export information as text, CSV, HTML...</li>
+ <li>Graphical user interface, command line interface, or library (.dll/.so/.dylib) versions available</li>
+ <li>Integrate with the shell (drag 'n' drop, and Context menu)</li>
+ <li>Internationalisation: display any language on any operating system</li>
+ <li>Localisation capability (for which volunteers are needed - please <a href="mailto:info@mediaarea.net">contact me</a>!)</li>
+</ul>
+<h2>License:</h2>
+It is <a href="http://en.wikipedia.org/wiki/Open_source">open-source</a> software - with one exception for Mac App Store GUI - which means that it is free of charge to the end user and developers have freedom to study, to improve and to redistribute the program (<a href="MediaInfo/License">BSD-style license</a>).<br/>
+<h2>Third-party tools</h2>
+  <a href="http://skwire.dcmembers.com/fp/?page=playtime">PlayTime</a> quickly calculates the total play time of a list of most any music or movie file.<br/>
+  <a href="http://mediatab.mediaarea.net/">MediaTab</a> integrates MediaInfo into Windows Explorer Property tab.<br/>
+   </td>
+   <td>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

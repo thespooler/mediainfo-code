@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WxWidgets (BCB)</title>
+</head>
+<body>
+<h1>WxWidgets (BCB)</h1>
+<h2>Download</h2>
+<ul>
+ <li>Download <code><a href="http://prdownloads.sourceforge.net/wxwindows/wxWidgets-2.6.2.zip">http://prdownloads.sourceforge.net/wxwindows/wxWidgets-2.6.2.zip</a></code></li>
+</ul>
+<h2>Compile</h2>
+<ul>
+ <li>
+  With command line, in directory <code>%SOURCE_HOME%/build/msw</code>:<br/>
+  <code>make -f makefile.bcc -DBUILD=release -DSHARED=0 -DUNICODE=1 -DMSLU=1 -DUSE_GUI=1 -DRUNTIME_LIBS=static -DMONOLITHIC=1</code>
+ </li>
+</ul>
+
+<h2>Install</h2>
+<ul>
+ <li>Copy <code>%SOURCE_HOME%/include/wx/</code> to <code>/Shared/Include/wx/</code></li>
+ <li>Copy <code>%SOURCE_HOME%/lib/bcc_lib/mswu/setup.h</code> to <code>/Shared/Include/wx/setup.h</code></li>
+ <li>Copy <code>%SOURCE_HOME%/lib/bcc_lib/wxmsw26u.lib</code> to <code>/Shared/Library/BCB/WxWidgets.lib</code></li>
+</ul>
+</body>
+</html>

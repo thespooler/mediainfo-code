@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+    <a href="MediaInfo/Screenshots"><img class="thumb-about" src="/_/img/blank.gif" alt="Main Interface" title="Screenshot - The main interface"/></a>
+   </td>
+   <td>
+    <h2 class="first">Kas yra MediaInfo?</h2>
+    <strong>MediaInfo</strong> teikia techninę ir papildomą informaciją apie video arba audio failus.<br/>
+    Tai yra laisva programinė įranga (nemokama ir su leidimu prieiti prie programos pirminio teksto: GPL arba LGPL licencija)<br/>
+    <br/>
+    <strong><a href="<?php echo $Link;?>">Parsisiųsk!</a></strong><br/>
+    (versija <?php echo $Version;?><?php if (isset($Installer)) echo ', Grafinė aplinka, su diegikliu';?><?php if(isset($OS)) echo ', '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if(isset($OS)) echo ' aplinkai';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
+    Pastaba 1: Jūs galite <a href="/MediaInfo/ChangeLog">tikrinti</a><br/>
+    Pastaba 2: Kitos versijos (OS, sąsaja...) yra <a href="MediaInfo/Download">prieinamos</a><br/>
+    <br/>
+    Jūs galite <a href="MediaInfo/Donate">aukoti</a> tolimesnio plėtojimo palaikymui.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<table>
+ <tbody>
+  <tr class="about-tr">
+   <td class="about-td">
+<h2>Kokią informaciją aš gausiu iš MediaInfo?</h2>
+<ul>
+ <li>Bendra: antraštė, autorius, direktorius, albumas, takelio numeris, data, trukmė...</li>
+ <li>Video: kodekas, aspektas, kps, bitreitas...</li>
+ <li>Audio: kodekas, atrankos tempą, kanalai, kalba, bitreitas...</li>
+ <li>Tekstas: subtitrų kalba</li>
+ <li>Skyrius: skyrių skaičius, skyrių sąrašas</li>
+</ul>
+<h2>Kokį formatą (talpyklą) palaiko MediaInfo?</h2>
+<ul>
+ <li>Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...<br/>
+     (Kodekai: DivX, XviD, MSMPEG4, ASP, H.264, AVC...)</li>
+ <li>Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</li>
+ <li>Subtitrai: SRT, SSA, ASS, SAMI...</li>
+</ul>
+<h2>Kas aš galiu daryti?</h2>
+<ul>
+ <li>Nuskaityti daug <a href="MediaInfo/Support/Formats"> video ir audio failų formatų</a></li>
+ <li>Skirtingi informacijos peržiūros metodai (tekstas, lapas, medis, HTML...)</li>
+ <li>Šias peržiūras galite nustatyti pagal save</li>
+ <li>Informacijos eksportavimas kaip tekstas, CSV, HTML...</li>
+ <li>Grafinė sąsaja, arba Komandinė eilutė, arba DLL</li>
+ <li>Integraciją į MS-Windows apvalkalą (“nutemk ir įmesk”, ir Kontekstinis meniu)</li>
+ <li>Internacionalizacija: bet kurios kalbos rodymas bet kurioje Jūsų Operacinės Sistemos versijoje</li>
+ <li>Lokalizavimo galimybė (bet reikalingi savanoriai)</li>
+</ul>
+   </td>
+   <td>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</body>
+</html>

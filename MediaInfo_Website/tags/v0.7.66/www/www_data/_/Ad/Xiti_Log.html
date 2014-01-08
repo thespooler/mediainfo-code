@@ -1,0 +1,39 @@
+<?php
+Function Xiti_CleanUp($Name) {
+$Name=strtr($Name,"àâäîïôöùûüéèêëç","aaaiioouuueeeec");
+$Name=eregi_replace("[^a-z0-9_.:~\\\/\-]","_",$Name);
+return($Name);
+}
+//-Argument
+$Xiti_Name="";
+if (isset($Argument["Name"]) && strlen($Argument["Name"])<20)
+ $Xiti_Name.=$Argument["Name"];
+else
+ $Xiti_Name.='Unknown';
+$Xiti_Name.='-';
+if (isset($Argument["Version"]) && strlen($Argument["Version"])<10)
+ $Xiti_Name.=$Argument["Version"];
+else
+ $Xiti_Name.='Unknown';
+$Xiti_Name.='_Lib-';
+if (isset($Argument["Lib"]) && strlen($Argument["Lib"])<10)
+ $Xiti_Name.=$Argument["Lib"];
+else
+ $Xiti_Name.='Unknown';
+?>
+<a href="http://www.xiti.com/xiti.asp?s=245696" title="Mesurez votre audience" rel="nofollow">
+<script>
+<!--
+Xt_param = 's=245696&p=<?=Xiti_CleanUp($Xiti_Name)?>';
+try {Xt_r = top.document.referrer;}
+catch(e) {Xt_r = document.referrer; }
+Xt_h = new Date();
+Xt_i = '<img width="39" height="25" ';
+Xt_i += 'src="http://logv30.xiti.com/hit.xiti?'+Xt_param;
+Xt_i += '&hl='+Xt_h.getHours()+'x'+Xt_h.getMinutes()+'x'+Xt_h.getSeconds();
+if(parseFloat(navigator.appVersion)>=4)
+{Xt_s=screen;Xt_i+='&r='+Xt_s.width+'x'+Xt_s.height+'x'+Xt_s.pixelDepth+'x'+Xt_s.colorDepth;}
+document.write(Xt_i+'&ref='+Xt_r.replace(/[<>"]/g, '').replace(/&/g, '$')+'" title="Analyse d\'audience">');
+//-->
+</script>
+</a>

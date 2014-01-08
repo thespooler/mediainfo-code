@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Building from source</title>
+</head>
+<body>
+<h1>Building from source</h1>
+<h2>Supported compilers</h2>
+<ul>
+ <li>
+  MSVC : Microsoft Visual C++ 9 (aka 2005)<br/>
+  (for Visual Studio 7 (aka 2002) or 8 (aka 2003), edit .sln and .xxproj for compatibility.<br/>
+  - .sln : "...Format Version 9.00" to 7.00<br/>
+  - .xxproj : "Version="8.00" or  "Version="7.10" to 7.00<br/>
+  This is not fully tested, but should easily adapt to your compiler)
+ </li>
+ <li>
+  BCB : Borland C++ Builder 6
+ </li>
+ <li>
+  DevCpp : Dev-C++ (Dev-Cpp is an IDE for MinGW)<br/>
+  (I am working on this release, not stable)
+ </li>
+ <li>
+  MinGW : MinGW on Windows<br/>
+  (I am working on this release, not stable)
+ </li>
+ <li>
+  GCC : Linux GCC<br/>
+  (I am working on this release, not stable)
+ </li>
+</ul>
+
+<h2>Needed</h2>
+<ul>
+ <li><a href="Build_From_Sources/ThirdParty">Build third-party libraries</a></li>
+ <li><a href="Build_From_Sources/MediaInfoLib">Build MediaInfo library</a></li>
+</ul>
+<h2>Optional</h2>
+<ul>
+ <li>Build MediaInfo DLL</li>
+ <li>Build MediaInfo Cmd</li>
+ <li>Build MediaInfo GUI</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<?php
+//Paypal functions
+include $Path.'/_/Ad/Paypal_Display.html';
+
+//Donated
+if (isset($Donated)) {
+    //Replace the target of the download
+    if (isset($_COOKIE["WantedDownload"])) {
+        $Link=$_COOKIE["WantedDownload"];
+        $Link=str_replace("http://downloads.sourceforge.net/mediainfo/", "http://download.mediaarea.net/binary/mediainfo-gui/".$Version."/", $Link);
+    } else
+        $Link="http://mediaarea.net/Download";
+
+    //Saving info
+    $Html_Head_Meta_HttpEquiv_Refresh='<meta http-equiv="refresh" content="0;url='.$Link.'"/>';
+    $Page_Status="Donated";
+}
+
+    //Paypal
+    if (isset($_POST) && isset($_POST["amount"]) && ((int)($_POST["amount"])) != 0) {
+        $Amount=(int)($_POST["amount"]);
+        $Currency_Code="USD";
+        $Currency_Before="$";
+        $Currency_After="";
+    if (isset($_POST["currency_code"])) {
+        $Currency_Code=$_POST["currency_code"];
+        if ($Currency_Code=="USD")
+            $Currency_Before="US$ ";
+        if ($Currency_Code=="CAD")
+            $Currency_Before="CA$ ";
+        if ($Currency_Code=="AUD")
+            $Currency_Before="AU$ ";
+        if ($Currency_Code=="GBP") {
+            $Currency_Before="";
+            $Currency_After=" £";
+        }
+        if ($Currency_Code=="EUR") {
+            $Currency_Before="";
+            $Currency_After=" €";
+        }
+    }
+
+    //Replace the target of the download
+    if (isset($_COOKIE["WantedDownload"]))
+        $Link=$_COOKIE["WantedDownload"];
+    else
+        $Link="http://mediainfo.sourceforge.net/Download";
+
+    $Page_Status="Paypal";
+
+
+    //Free download
+    if (isset($_POST) && isset($_POST["amount"])) { //Free
+        //Replace the target of the download
+        if (isset($_COOKIE["WantedDownload"]))
+            $Link=$_COOKIE["WantedDownload"];
+        else
+            $Link="http://mediainfo.sourceforge.net/Download";
+
+        //Saving info
+        $Html_Head_Meta_HttpEquiv_Refresh='<meta http-equiv="refresh" content="2;url='.$Link.'"/>';
+
+        $Page_Status="Free";
+
+        /*if (isset($_COOKIE["WantedDownload"]))
+            $Target=$_COOKIE["WantedDownload"];
+        else
+            $Target="http://mediainfo.sourceforge.net/Download";
+        header ("HTTP/1.1 302 Found");
+        header("Location: ".$Target);
+        exit;*/
+    }
+
+    //Donation proposal
+    else
+        $Page_Status="Proposal";
+    }
+?>
