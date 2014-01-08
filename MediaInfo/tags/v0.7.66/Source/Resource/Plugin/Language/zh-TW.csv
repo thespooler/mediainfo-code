@@ -1,0 +1,1032 @@
+  Language_ISO639;zh-TW
+  Author_Email;kenelin@gmail.com
+  Author_Name;Kene Lin
+  Author_OldNames;Initial translator
+  Language_Name;è¯èªž (å°ç£)
+  Config_Text_ColumnSize;40
+  Config_Text_Separator; : 
+  Config_Text_NumberTag; #
+  Config_Text_FloatSeparator;.
+  Config_Text_ThousandsSeparator; 
+ audio stream1; éŸ³è¨Šä¸²æµ
+ audio stream2; éŸ³è¨Šä¸²æµ
+ audio stream3; éŸ³è¨Šä¸²æµ
+ bit1; bit
+ bit2; bits
+ bit3; bits
+ bps; bps
+ Bps; Bps
+ Byte1; Byte
+ Byte2; Bytes
+ Byte3; Bytes
+ channel1; è²é“
+ channel2; è²é“
+ channel3; è²é“
+ chapter1; ç« ç¯€
+ chapter2; ç« ç¯€
+ chapter3; ç« ç¯€
+ chapters stream1; ç« ç¯€ä¸²æµ
+ chapters stream2; ç« ç¯€ä¸²æµ
+ chapters stream3; ç« ç¯€ä¸²æµ
+ day1; æ—¥
+ day2; æ—¥
+ day3; æ—¥
+ dB1; dB
+ dB2; dB
+ dB3; dB
+ file1; æª”æ¡ˆ
+ file2; æª”æ¡ˆ
+ file3; æª”æ¡ˆ
+ frame1; å½±æ ¼
+ frame2; å½±æ ¼
+ frame3; å½±æ ¼
+ fps1; fps
+ fps2; fps
+ fps3; fps
+ GB; GB
+ Gb; Gb
+ Gbps; Gbps
+ GBps; GBps
+ GHz; GHz
+ GiB; GiB
+ GibiByte1; GibiBytes
+ GibiByte2; GibiBytes
+ GibiByte3; GibiBytes
+ GiBps; GiBps
+ GigaBit1; GigaBit
+ GigaBit2; GigaBits
+ GigaBit3; GigaBits
+ GigaByte1; GigaByte
+ GigaByte2; GigaBytes
+ GigaByte3; GigaBytes
+ hour1; å°æ™‚
+ hour2; å°æ™‚
+ hour3; å°æ™‚
+ Hz; Hz
+ image stream1; åœ–ç‰‡ä¸²æµ
+ image stream2; åœ–ç‰‡ä¸²æµ
+ image stream3; åœ–ç‰‡ä¸²æµ
+ KB; KB
+ Kb; Kb
+ KBps; KBps
+ Kbps; Kbps
+ KHz; KHz
+ KiB; KiB
+ KibiBit1; KibiBit
+ KibiBit2; KibiBits
+ KibiBit3; KibiBits
+ KibiByte1; KibiByte
+ KibiByte2; KibiBytes
+ KibiByte3; KibiBytes
+ KiBps; KiBps
+ KiloBit1; KiloBit
+ KiloBit2; KiloBits
+ KiloBit3; KiloBits
+ KiloByte1; KiloByte
+ KiloByte2; KiloBytes
+ KiloByte3; KiloBytes
+ MB; MB
+ Mb; Mb
+ Mbps; Mbps
+ MBps; MebiBytes
+ MebiBit1; MebiBit
+ MebiBit2; MebiBits
+ MebiBit3; MebiBits
+ MebiByte1; MebiByte
+ MebiByte2; MebiBytes
+ MebiByte3; MebiBytes
+ MegaBit1; MegaBit
+ MegaBit2; MegaBits
+ MegaBit3; MegaBits
+ MegaByte1; MegaByte
+ MegaByte2; MegaBytes
+ MegaByte3; MegaBytes
+ MHz; MHz
+ MiB; MiB
+ Mib; Mib
+ MiBps; MiBps
+ millisecond1; æ¯«ç§’
+ millisecond2; æ¯«ç§’
+ millisecond3; æ¯«ç§’
+ minute1; åˆ†
+ minute2; åˆ†
+ minute3; åˆ†
+ month1; æœˆ
+ month2; æœˆ
+ month3; æœˆ
+ pixel1; åƒç´ 
+ pixel2; åƒç´ 
+ pixel3; åƒç´ 
+ second1; ç§’
+ second2; ç§’
+ second3; ç§’
+ text stream1; å­—å¹•ä¸²æµ
+ text stream2; å­—å¹•ä¸²æµ
+ text stream3; å­—å¹•ä¸²æµ
+ video frames1; è¦–è¨Šå½±æ ¼
+ video frames2; è¦–è¨Šå½±æ ¼
+ video frames3; è¦–è¨Šå½±æ ¼
+ video stream1; è¦–è¨Šä¸²æµ
+ video stream2; è¦–è¨Šä¸²æµ
+ video stream3; è¦–è¨Šä¸²æµ
+ warppoint0; æ²’æœ‰è·³èºé»ž
+ warppoint1; è·³èºé»ž
+ warppoint2; è·³èºé»ž
+ warppoint3; è·³èºé»ž
+ week1; é€±
+ week2; é€±
+ week3; é€±
+ year1; å¹´
+ year2; å¹´
+ year3; å¹´
+, ;, 
+: ;: 
+About;é—œæ–¼
+About_Hint;å¦‚ä½•è¯çµ¡ä½œè€…ä»¥åŠå°‹æ‰¾æœ€æ–°ç‰ˆ
+Accompaniment;ä¼´å¥
+ActiveFormatDescription;
+ActiveFormatDescription_MuxingMode;
+Actor;ä¸»æ¼”
+Actor_Character;ä¸»æ¼”è§’è‰²
+Added_Date;åŠ å…¥æ™‚é–“
+Address;åœ°å€
+Advanced;é€²éšŽ
+Advanced mode;é€²éšŽæ¨¡å¼
+Album;å°ˆè¼¯
+Album_ReplayGain_Gain;å°ˆè¼¯æ’­æ”¾å¢žç›Š
+Album_ReplayGain_Peak;å°ˆè¼¯æ’­æ”¾å¢žç›Šå°–å³°å€¼
+Alignment;æŽ’åˆ—æ–¹å¼
+Alignment_Aligned;å°é½Šäº¤éŒ¯è¨Šè™Ÿ
+Alignment_Split;æ©«è¶Šäº¤éŒ¯è¨Šè™Ÿ
+All;å…¨éƒ¨
+Archival_Location;æª”æ¡ˆä½ç½®
+Arranger;ç·¨æ›²
+ArtDirector;è—è¡“æŒ‡å°Ž
+AspectRatio;é•·å¯¬æ¯”ä¾‹
+AssistantDirector;å‰¯å°Žæ¼”
+at;æ–¼
+At least one file;(æ‚¨æœ€å°‘è¦é–‹å•Ÿä¸€å€‹æª”æ¡ˆ)
+Audio;éŸ³è¨Š
+Audio stream(s);éŸ³è¨Šä¸²æµ
+Audio_Codec_List;éŸ³è¨Šç·¨è§£ç¢¼å™¨
+Audio_No;ç„¡éŸ³è¨Š
+Audio1;ç¬¬ä¸€éŸ³è¨Šä¸²æµ
+Audio2;ç¬¬äºŒéŸ³è¨Šä¸²æµ
+AudioCount;éŸ³è¨Šä¸²æµæ•¸
+Author;ä½œè€…
+BarCode;æ¢ç¢¼
+Basic;åŸºæœ¬
+Basic_Note;æ³¨æ„: æƒ³çŸ¥é“æ›´å¤šé—œæ–¼æ­¤æª”æ¡ˆçš„è³‡è¨Š, æ‚¨å¾—é¸æ“‡ä¸åŒçš„è¦–é»ž (è¡¨æ ¼, æ¨¹ç‹€åœ– ...)
+BitDepth;
+BitRate;æµé‡
+BitRate_Maximum;æœ€å¤§æµé‡
+BitRate_Minimum;æœ€å°æµé‡
+BitRate_Mode;æµé‡æ¨¡å¼
+BitRate_Mode_CBR;å¸¸æ•¸å¼
+BitRate_Mode_VBR;å¯è®Šå¼
+BitRate_Nominal;æ­£å¸¸æµé‡
+BitRate_Encoded;
+Bits-(Pixel*Frame);ä½å…ƒ/(åƒç´ *å½±æ ¼)
+BufferSize;
+Cancel;å–æ¶ˆ
+Channel(s);è²é“æ•¸
+ChannelPositions;è²é“ä½ç½®
+Chapter(s);ç« ç¯€
+Chapters;ç« ç¯€
+Chapters stream(s);ç« ç¯€ä¸²æµ
+Chapters_Codec_List;ç« ç¯€ç·¨è§£ç¢¼å™¨
+Chapters_No;ç„¡ç« ç¯€
+ChaptersCount;ç« ç¯€ä¸²æµæ•¸
+CheckNewVersion;æª¢æŸ¥æ–°ç‰ˆæœ¬
+Choose custom;é¸æ“‡è‡ªè¨‚
+Choose custom sheet;é¸æ“‡ä½ è¦çš„è‡ªè¨‚è¡¨æ ¼
+Choose custom text;é¸æ“‡ä½ è¦çš„è‡ªè¨‚æ–‡å­—
+Choose export format;é¸æ“‡ä½ è¦çš„è¼¸å‡ºæ ¼å¼
+Choose file(s);é¸æ“‡ä½ è¦é–‹å•Ÿçš„æª”æ¡ˆ
+Choose filename;é¸æ“‡ä½ è¦çš„æª”å
+Choose language;é¸æ“‡ä½ è¦çš„èªžç³»
+Choregrapher;å‹•ä½œæŒ‡å°Ž
+Chroma;å½©åº¦
+ChromaSubsampling;
+Close;é—œé–‰
+Close all before open;é–‹å•Ÿå‰é—œé–‰å…¶å®ƒæª”æ¡ˆ
+Codec;ç·¨è§£ç¢¼å™¨
+Codec_Description;ç·¨è§£ç¢¼å™¨æè¿°
+Codec_Info;ç·¨è§£ç¢¼å™¨è©³ç´°è³‡è¨Š
+Codec_Settings;ç·¨è§£ç¢¼å™¨è¨­å®š
+Codec_Settings_PacketBitStream;ç·¨è§£ç¢¼å™¨è¨­å®š, Packet bitstream
+Codec_Settings_BVOP;ç·¨è§£ç¢¼å™¨è¨­å®š, BVOP
+Codec_Settings_QPel;ç·¨è§£ç¢¼å™¨è¨­å®š, QPel
+Codec_Settings_GMC;ç·¨è§£ç¢¼å™¨è¨­å®š, GMC
+Codec_Settings_Matrix;ç·¨è§£ç¢¼å™¨è¨­å®š, Matrix
+Codec_Settings_Floor;ç·¨è§£ç¢¼å™¨è¨­å®š, Floor
+Codec_Settings_CABAC;ç·¨è§£ç¢¼å™¨è¨­å®š, CABAC
+Codec_Settings_Firm;ç·¨è§£ç¢¼å™¨è¨­å®š, Firm
+Codec_Settings_Endianness;ç·¨è§£ç¢¼å™¨è¨­å®š, Endianness
+Codec_Settings_Sign;ç·¨è§£ç¢¼å™¨è¨­å®š, Sign
+Codec_Settings_Law;ç·¨è§£ç¢¼å™¨è¨­å®š, Law
+Codec_Settings_ITU;ç·¨è§£ç¢¼å™¨è¨­å®š, ITU
+Codec_Profile;ç·¨è§£ç¢¼å™¨è¨­å®š
+Codec_Url;ç·¨è§£ç¢¼å™¨çš„ç¶²å€
+CodecID;ç·¨è§£ç¢¼å™¨è­˜åˆ¥å­—
+CodecID_Description;ç·¨è§£ç¢¼å™¨æè¿°
+Collection;æ”¶è—
+Colorimetry;æ¯”è‰²æ³•
+ColorSpace;
+colour_primaries;è‰²å½©åŽŸè‰²
+Comment;è¨»é‡‹
+CommissionedBy;å§”è¨—
+Compilation;
+CompleteName;å®Œæ•´æª”å
+Composer;ä½œæ›²è€…
+Compression_Mode;
+Compression_Mode_Lossless;
+Compression_Mode_Lossy;
+Compression_Ratio;å£“ç¸®æ¯”
+Conductor;æŒ‡æ®
+Container and general information;å®¹å™¨æ ¼å¼èˆ‡ä¸€èˆ¬è¨Šæ¯
+ContentType;å…§å®¹åž‹æ…‹
+CoProducer;è£½ä½œå”åŠ›
+Copyright;è‘—ä½œæ¬Š
+CostumeDesigner;æœè£è¨­è¨ˆ
+Count;æ‰€æœ‰ç¨®é¡ž
+Country;åœ‹å®¶
+Cover;å°é¢
+Cover_Datas;å°é¢è³‡æ–™
+Cover_Description;å°é¢æè¿°
+Cover_Mime;å°é¢ MIME
+Cover_Type;å°é¢é¡žåž‹
+Cropped;è£åˆ‡ç¶­åº¦
+Custom;è‡ªè¨‚
+Customize;è‡ªè¨‚
+Date;æ—¥æœŸ
+Debug;åµéŒ¯
+Decimal point;å°æ•¸é»ž
+Delay;å»¶é²
+Delay_Source;
+Delay_Source_Container;
+Delay_Source_Stream;
+Delete;åˆªé™¤
+Description;æ•˜è¿°
+Digitized_Date;æ•¸ä½åŒ–æ—¥æœŸ
+Dimensions;ç¶­åº¦
+Director;å°Žæ¼”
+DirectorOfPhotography;æ”å½±å°Žæ¼”
+DisplayAspectRatio;é¡¯ç¤ºé•·å¯¬æ¯”ä¾‹
+DisplayAspectRatio_Original;åŽŸå§‹é¡¯ç¤ºé•·å¯¬æ¯”ä¾‹
+DistributedBy;ç™¼å¸ƒè€…
+Donate;è´ŠåŠ©
+DotsPerInch;æ¯å‹é»žæ•¸ (DPI)
+Duration;æ™‚é–“é•·åº¦
+Duration_End;çµæŸæ™‚é–“
+Duration_Start;é–‹å§‹æ™‚é–“
+Edit;ç·¨è¼¯
+EditedBy;ç·¨è¼¯è€…
+EMail;é›»å­ä¿¡ç®±
+Encoded_Application;ä½¿ç”¨ç·¨ç¢¼ç¨‹å¼
+Encoded_Date;ç·¨ç¢¼æ—¥æœŸ
+Encoded_Library;ç·¨ç¢¼å‡½å¼åº«
+Encoded_Library_Settings;ç·¨ç¢¼è¨­å®š
+Encoded_Original;ä¾†æº
+EncodedBy;ç·¨ç¢¼è€…
+EPG_Positions;EPG é›»å­ç¯€ç›®è¡¨ä½ç½® (å…§éƒ¨)
+Error_File;è®€å–æª”æ¡ˆéŒ¯èª¤
+ExecutiveProducer;ç›£è£½
+Exit;é›¢é–‹
+Exit_Hint;é€€å‡ºæ­¤ç¨‹å¼
+Export;åŒ¯å‡º
+Export_Hint;ä»¥è‡ªè¨‚æ ¼å¼åŒ¯å‡º
+Extensions;æ ¼å¼å‰¯æª”å
+Family;æ—ç³»
+Fax;å‚³çœŸ
+File;æª”æ¡ˆ
+File size;æª”æ¡ˆå¤§å°
+File_Append;æŽ¥åœ¨ç¾å­˜çš„æª”æ¡ˆä¹‹å¾Œ (æ³¨æ„: åŒåƒæ•¸æ™‚è¦å°å¿ƒ)
+File_Created_Date;å»ºç«‹æ—¥æœŸ
+File_Created_Date_Local;å»ºç«‹æ—¥æœŸ (æœ¬åœ°æ™‚é–“)
+File_Hint;é¸æ“‡è¦æª¢è¦–çš„å¤šåª’é«”æª”æ¡ˆ
+File_Modified_Date;æœ€å¾Œç·¨è¼¯æ—¥æœŸ
+File_Modified_Date_Local;æœ€å¾Œç·¨è¼¯æ—¥æœŸ (æœ¬åœ°æ™‚é–“)
+FileExtension;å‰¯æª”å
+FileName;æª”æ¡ˆ
+FileSize;æª”æ¡ˆå¤§å°
+Folder;è³‡æ–™å¤¾
+Folder (R);è³‡æ–™å¤¾ (R)
+Folder (R)_Hint;é¸æ“‡è¦æª¢è¦–çš„è³‡æ–™å¤¾ (éžè¿´æ‰€æœ‰è³‡æ–™å¤¾)
+Folder (Recursively);è³‡æ–™å¤¾ (éžè¿´)
+Folder_Hint;é¸æ“‡è¦æª¢è¦–çš„è³‡æ–™å¤¾
+FolderName;è³‡æ–™å¤¾
+Format;æ ¼å¼
+Format_Commercial;
+Format_Commercial_IfAny;
+Format_Description;æ ¼å¼æ•˜è¿°
+Format_Info;æ ¼å¼è©³ç´°è³‡è¨Š
+Format_Profile;æ ¼å¼é¡žåž‹
+Format_Settings;æ ¼å¼è¨­å®š
+Format_Settings_PacketBitStream;æ ¼å¼è¨­å®š, Packet Bitstream
+Format_Settings_BVOP;æ ¼å¼è¨­å®š, BVOP
+Format_Settings_QPel;æ ¼å¼è¨­å®š, QPel
+Format_Settings_GMC;æ ¼å¼è¨­å®š, GMC
+Format_Settings_Matrix;æ ¼å¼è¨­å®š, Matrix
+Format_Settings_Matrix_Custom;è‡ªè¨‚
+Format_Settings_Matrix_Default;é è¨­
+Format_Settings_Floor;æ ¼å¼è¨­å®š, Floor
+Format_Settings_CABAC;æ ¼å¼è¨­å®š, CABAC
+Format_Settings_Firm;æ ¼å¼è¨­å®š, Firm
+Format_Settings_Endianness;æ ¼å¼è¨­å®š, Endianness
+Format_Settings_RefFrames;æ ¼å¼è¨­å®š, RefFrames
+Format_Settings_Sign;æ ¼å¼è¨­å®š, Sign
+Format_Settings_Law;æ ¼å¼è¨­å®š, Law
+Format_Settings_ITU;æ ¼å¼è¨­å®š, ITU
+Format_Settings_SBR;æ ¼å¼è¨­å®š, SBR
+Format_Settings_PS;æ ¼å¼è¨­å®š, PS
+Format_Settings_Pulldown;æ ¼å¼è¨­å®š, Pulldown
+Format_Settings_Mode;
+Format_Settings_FrameMode;
+Format_Settings_Emphasis;
+Format_Settings_ModeExtension;
+Format_Settings_GOP;
+Format_Version;æ ¼å¼ç‰ˆæœ¬
+Format_Url;è©²æ ¼å¼çš„ç¶²å€
+FrameCount;å½±æ ¼æ•¸
+FrameRate;å½±æ ¼é »çŽ‡
+FrameRate_Mode;å½±æ ¼é »çŽ‡æ¨¡å¼
+FrameRate_Mode_CFR;å¸¸æ•¸å¼
+FrameRate_Mode_VFR;å¯è®Šå¼
+FrameRate_Minimum;æœ€å°å½±æ ¼é »çŽ‡
+FrameRate_Nominal;æ­£å¸¸å½±æ ¼é »çŽ‡
+FrameRate_Maximum;æœ€å¤§å½±æ ¼é »çŽ‡
+FrameRate_Original;åŽŸå§‹å½±æ ¼é »çŽ‡
+General;ä¸€èˆ¬
+Genre;é¡žåž‹
+Genre_000;è—èª¿ (Blues)
+Genre_001;å¤å…¸æ–æ»¾ (Classic Rock)
+Genre_002;é„‰æ‘ (Country)
+Genre_003;èˆžæ›² (Dance)
+Genre_004;è¿ªå£«å¯ (Disco)
+Genre_005;ç˜‹å®¢ (Funk)
+Genre_006;é ¹å»¢ (Grunge)
+Genre_007;å˜»å“ˆ (Hip-Hop)
+Genre_008;çˆµå£« (Jazz)
+Genre_009;é‡‘å±¬ (Metal)
+Genre_010;æ–°ä¸–ç´€ (New Age)
+Genre_011;è€æ­Œ (Oldies)
+Genre_012;å…¶å®ƒé¡žåž‹ (Other)
+Genre_013;æµè¡Œæ¨‚ (Pop)
+Genre_014;ç¯€å¥è—èª¿ (R&B)
+Genre_015;é¥’èˆŒ (Rap)
+Genre_016;é›·é¬¼ (Reggae)
+Genre_017;æ–æ»¾ (Rock)
+Genre_018;é›»éŸ³ (Techno)
+Genre_019;å·¥æ¥­ (Industrial)
+Genre_020;å¦é¡ž (Alternative)
+Genre_021;æ–¯å¡ (Ska)
+Genre_022;æ­»äº¡é‡‘å±¬ (Death Metal)
+Genre_023;æƒ¡ä½œåŠ‡ (Pranks)
+Genre_024;åŽŸè²å¸¶ (Soundtrack)
+Genre_025;æ­å¼-é›»éŸ³ (Euro-Techno)
+Genre_026;ç’°å¢ƒ (Ambient)
+Genre_027;å‚¬å“ˆ (Trip-Hop)
+Genre_028;äººè² (Vocal)
+Genre_029;çˆµå£«+ç˜‹å®¢ (Jazz+Funk)
+Genre_030;èžåˆ (Fusion)
+Genre_031;çŽ„å¹» (Trance)
+Genre_032;å¤å…¸æ¨‚ (Classical)
+Genre_033;å™¨æ¨‚ (Instrumental)
+Genre_034;è¿·å¹» (Acid)
+Genre_035;æµ©å®¤ (House)
+Genre_036;éŠæˆ² (Game)
+Genre_037;éŸ³æ•ˆç´ æ (Sound Clip)
+Genre_038;ç¦éŸ³ (Gospel)
+Genre_039;å™ªéŸ³ (Noise)
+Genre_040;å¦é¡žæ–æ»¾ (AlternRock)
+Genre_041;è²æ–¯ (Bass)
+Genre_042;éˆé­‚æ¨‚ (Soul)
+Genre_043;é¾å…‹ (Punk)
+Genre_044;ç©ºé–“ (Space)
+Genre_045;å†¥æƒ³ (Meditative)
+Genre_046;å™¨æ¨‚æµè¡Œ (Instrumental Pop)
+Genre_047;å™¨æ¨‚æ–æ»¾ (Instrumental Rock)
+Genre_048;æ°‘æ—éŸ³æ¨‚ (Ethnic)
+Genre_049;æ­Œå¾· (Gothic)
+Genre_050;é»‘æ½® (Darkwave)
+Genre_051;é›»éŸ³-å·¥æ¥­ (Techno-Industrial)
+Genre_052;é›»å­ (Electronic)
+Genre_053;æµè¡Œ-æ°‘æ­Œ (Pop-Folk)
+Genre_054;æ­å¼èˆžæ›² (Eurodance)
+Genre_055;å¤¢å¹» (Dream)
+Genre_056;å—æ–¹æ–æ»¾ (Southern Rock)
+Genre_057;å–œåŠ‡ (Comedy)
+Genre_058;ç‹‚ç†± (Cult)
+Genre_059;å¹«æ´¾ (Gangsta)
+Genre_060;æŽ’è¡Œæ¦œ (Top 40)
+Genre_061;åŸºç£é¥’èˆŒ (Christian Rap)
+Genre_062;æµè¡Œ/ç˜‹å®¢ (Pop/Funk)
+Genre_063;å¢æž— (Jungle)
+Genre_064;ç¾Žæ´²åŽŸä½æ°‘ (Native American)
+Genre_065;é…’é¤¨ (Cabaret)
+Genre_066;æ–°æ½® (New Wave)
+Genre_067;è¿·å¹» (Psychedelic)
+Genre_068;éŠ³èˆž (Rave)
+Genre_069;ç§€å ´éŸ³æ¨‚ (Showtunes)
+Genre_070;é å‘Šç‰‡ (Trailer)
+Genre_071;ä½Žå‚³çœŸ (Lo-Fi)
+Genre_072;éƒ¨è½ (Tribal)
+Genre_073;è¿·å¹»é¾å…‹ (Acid Punk)
+Genre_074;è¿·å¹»çˆµå£« (Acid Jazz)
+Genre_075;æ³¢å¡ (Polka)
+Genre_076;æ‡·èˆŠ (Retro)
+Genre_077;éŸ³æ¨‚åŠ‡ (Musical)
+Genre_078;æ–æ»¾ (Rock & Roll)
+Genre_079;ç¡¬å¼æ–æ»¾ (Hard Rock)
+Genre_080;æ°‘æ­Œ (Folk)
+Genre_081;æ°‘æ­Œæ–æ»¾ (Folk-Rock)
+Genre_082;National Folk
+Genre_083;æ–æ“º (Swing)
+Genre_084;å¿«é€Ÿèžåˆ (Fast Fusion)
+Genre_085;å’†å‹ƒ (Bebop)
+Genre_086;æ‹‰ä¸ (Latin)
+Genre_087;å¾©èˆˆ (Revival)
+Genre_088;å…‹çˆ¾ç‰¹ (Celtic)
+Genre_089;è—è‰ (Bluegrass)
+Genre_090;å‰è¡› (Avantgarde)
+Genre_091;æ­Œå¾·æ–æ»¾ (Gothic Rock)
+Genre_092;å‰è¡›æ–æ»¾ (Progressive Rock)
+Genre_093;è¿·å¹»æ–æ»¾ (Psychedelic Rock)
+Genre_094;äº¤éŸ¿æ–æ»¾ (Symphonic Rock)
+Genre_095;æ…¢æ–æ»¾ (Slow Rock)
+Genre_096;å¤§æ¨‚åœ˜ (Big Band)
+Genre_097;åˆå”± (Chorus)
+Genre_098;è¼•éŸ³æ¨‚ (Easy Listening)
+Genre_099;åŽŸå‘³ (Acoustic)
+Genre_100;å¹½é»˜ (Humour)
+Genre_101;æ¼”èªª (Speech)
+Genre_102;æ³•åœ‹é¦™é Œ (Chanson)
+Genre_103;æ­ŒåŠ‡ (Opera)
+Genre_104;å®¤å…§æ¨‚ (Chamber Music)
+Genre_105;å¥é³´æ›² (Sonata)
+Genre_106;äº¤éŸ¿æ¨‚ (Symphony)
+Genre_107;Booty Bass
+Genre_108;ä¸»æ•™ (Primus)
+Genre_109;æƒ…è‰² (Porn Groove)
+Genre_110;è«·åˆº (Satire)
+Genre_111;Slow Jam
+Genre_112;ä¿±æ¨‚éƒ¨ (Club)
+Genre_113;æŽ¢æˆˆ (Tango)
+Genre_114;æ£®å·´ (Samba)
+Genre_115;æ°‘ä¿—æ¨‚ (Folklore)
+Genre_116;æŠ’æƒ… (Ballad)
+Genre_117;å¼·åŠ›æŠ’æƒ… (Power Ballad)
+Genre_118;ç¯€å¥éˆé­‚ (Rhythmic Soul)
+Genre_119;è‡ªç”±é¢¨ (Freestyle)
+Genre_120;äºŒé‡å¥ (Duet)
+Genre_121;é¾å…‹æ–æ»¾ (Punk Rock)
+Genre_122;ç¨é¼“ (Drum Solo)
+Genre_123;ç„¡ä¼´å¥ (A capella)
+Genre_124;æ­å¼-æµ©å®¤ (Euro-House)
+Genre_125;èˆžå»³ (Dance Hall)
+Genre_126;æžœäºž (Goa)
+Genre_127;é¼“æ‰“è²æ–¯ (Drum & Bass)
+Genre_128;ä¿±æ¨‚éƒ¨-æµ©å®¤ (Club-House)
+Genre_129;ç¡¬æ´¾ (Hardcore)
+Genre_130;é©šæ‚š (Terror)
+Genre_131;ç¨ç«‹è£½ä½œ (Indie)
+Genre_132;è‹±å¼æ–æ»¾ (Britpop)
+Genre_133;é»‘äººé¾å…‹ (Negerpunk)
+Genre_134;æ³¢è˜­é¾å…‹ (Polsk Punk)
+Genre_135;æ‰“æ“Šæ¨‚ (Beat)
+Genre_136;åŸºç£å¹«æ´¾é¥’èˆŒ (Christian Gangsta Rap)
+Genre_137;é‡é‡‘å±¬ (Heavy Metal)
+Genre_138;é»‘é‡‘å±¬ (Black Metal)
+Genre_139;è·¨ç•Œ (Crossover)
+Genre_140;ç•¶ä»£åŸºç£ (Contemporary Christian)
+Genre_141;åŸºç£æ–æ»¾ (Christian Rock)
+Genre_142;ç¾Žå€«æ ¼ (Merengue)
+Genre_143;èŽŽèŽŽ (Salsa)
+Genre_144;æ•²æ“Šé‡‘å±¬ (Thrash Metal)
+Genre_145;å‹•ç•«æ­Œæ›² (Anime)
+Genre_146;æ—¥æœ¬æµè¡Œæ¨‚ (JPop)
+Genre_147;æ–°æ½®é›»å­ (Synthpop)
+Genre_148;
+Genre_149;
+Genre_150;
+Genre_151;
+Genre_152;
+Genre_153;
+Genre_154;
+Genre_155;
+Genre_156;
+Genre_157;
+Genre_158;
+Genre_159;
+Genre_160;
+Genre_161;
+Genre_162;
+Genre_163;
+Genre_164;
+Genre_165;
+Genre_166;
+Genre_167;
+Genre_168;
+Genre_169;
+Genre_170;
+Genre_171;
+Genre_172;
+Genre_173;
+Genre_174;
+Genre_175;
+Genre_176;
+Genre_177;
+Genre_178;
+Genre_179;
+Genre_180;
+Genre_181;
+Genre_182;
+Genre_183;
+Genre_184;
+Genre_185;
+Genre_186;
+Genre_187;
+Genre_188;
+Genre_189;
+Genre_190;
+Genre_191;
+Go to WebSite;å‰å¾€ç¶²ç«™
+Grouping;
+h;æ™‚
+Header file;å»ºç«‹æ¨™é ­æª”æ¡ˆ
+Height;ç•«é¢é«˜åº¦
+Height_Original;
+Help;èªªæ˜Ž
+Hint;æç¤º
+How many audio streams?;æœ‰å¤šå°‘éŸ³è¨Šä¸²æµ?
+How many chapters streams?;æœ‰å¤šå°‘ç« ç¯€ä¸²æµ?
+How many text streams?;æœ‰å¤šå°‘å­—å¹•ä¸²æµ?
+How many video streams?;æœ‰å¤šå°‘è¦–è¨Šä¸²æµ?
+HTML;ç¶²é 
+ID;è­˜åˆ¥å­—
+Image;åœ–ç‰‡
+Image stream(s);åœ–ç‰‡ä¸²æµ
+Image_Codec_List;åœ–ç‰‡ç·¨è§£ç¢¼å™¨
+ImageCount;åœ–ç‰‡ä¸²æµæ•¸
+Info;ç›¸é—œè³‡è¨Š
+Instruments;æ¨‚å™¨
+Interlacement;äº¤éŒ¯
+Interlaced_Interlaced;æœ‰äº¤éŒ¯
+Interlaced_TFF;å‰å ´å„ªå…ˆ
+Interlaced_BFF;å¾Œå ´å„ªå…ˆ
+Interlaced_PPF;æ¼¸é€²å¼
+Interlaced_Progressive;æ¼¸é€²å¼
+Interleaved;
+Interleave_Duration;äº¤éŒ¯è¨Šè™Ÿ, æŒçºŒæ™‚é–“
+Interleave_Preload;äº¤éŒ¯è¨Šè™Ÿ, é å…ˆè¼‰å…¥æ™‚é–“
+Interleave_VideoFrames;äº¤éŒ¯è¨Šè™Ÿ, æŒçºŒæ™‚é–“
+InternetMediaType;
+IRCA;IRCA
+ISBN;ISBN
+ISRC;ISRC
+Keywords;é—œéµå­—
+Known codecs;å·²çŸ¥ç·¨è§£ç¢¼å™¨
+Known formats;å·²çŸ¥æ ¼å¼
+Known parameters;å·²çŸ¥åƒæ•¸
+Label;æ¨™ç±¤
+Language;èªžç³»
+Language_More;èªžç³», è©³ç´°è³‡è¨Š
+Language_aa;ä¼Šç´¢åŒ¹äºžèªž (Afar)
+Language_ab;é˜¿å¸ƒå“ˆèŒ²èªž (Abkhazian)
+Language_ae;å¤æ³¢æ–¯èªž (Avestan)
+Language_af;å—éžèªž (Afrikaans)
+Language_ak;é˜¿åŽèªž (Akan)
+Language_am;é˜¿å§†å“ˆæ‹‰èªž (Amharic)
+Language_an;é˜¿æ‹‰è²¢èªž (Aragonese)
+Language_ar;é˜¿æ‹‰ä¼¯èªž (Arabic)
+Language_as;é˜¿è–©å§†èªž (Assamese)
+Language_av;é˜¿ç“¦çˆ¾èªž (Avaric)
+Language_ay;è‰¾é¦¬æ‹‰èªž (Aymara)
+Language_az;äºžå¡žæ‹œç„¶èªž (Azerbaijani)
+Language_ba;å·´ä»€å™¶çˆ¾èªž (Bashkir)
+Language_be;ç™½ä¿„ç¾…æ–¯èªž (Belarusian)
+Language_bg;ä¿åŠ åˆ©äºžèªž (Bulgarian)
+Language_bh;æ¯”å“ˆçˆ¾èªž (Bihari)
+Language_bi;å¿…æ–¯æ‹‰é¦¬èªž (Bislama)
+Language_bm;ç­å·´æ‹‰èªž (Bambara)
+Language_bn;å­ŸåŠ æ‹‰èªž (Bengali)
+Language_bo;è¥¿è—èªž (Tibetan)
+Language_br;å¸ƒé‡Œå¤šå°¼èªž (Breton)
+Language_bs;æ³¢æ–¯å°¼äºžèªž (Bosnian)
+Language_ca;åŠ æ³°éš†å°¼äºžèªž (Catalan)
+Language_ce;è»Šè‡£èªž (Chechen)
+Language_ch;æŸ¥èŽ«ç¾…èªž (Chamorro)
+Language_co;ç§‘è¥¿å˜‰èªž (Corsican)
+Language_cr;å…‹é‡Œèªž (Cree)
+Language_cs;æ·å…‹èªž (Czech)
+Language_cu;å¤æ•™æœƒæ–¯æ‹‰å¤«èªž (Slave)
+Language_cv;æ¥šç“¦ä»€èªž (Chuvash)
+Language_cy;å¨çˆ¾æ–¯èªž (Welsh)
+Language_da;ä¸¹éº¥èªž (Danish)
+Language_de;å¾·èªž (German)
+Language_dv;è¿ªç¶­å¸Œèªž (Divehi)
+Language_dz;ä¸ä¸¹èªž (Dzongkha)
+Language_ee;åŸƒç¶­èªž (Ewe)
+Language_el;å¸Œè‡˜èªž (Greek)
+Language_en;è‹±èªž (English)
+Language_en-gb;è‹±èªž (è‹±åœ‹) (English, Great Britain)
+Language_en-us;è‹±èªž (ç¾Žåœ‹) (English, United States)
+Language_eo;ä¸–ç•Œèªž (Esperanto)
+Language_es;è¥¿ç­ç‰™èªž (Spanish)
+Language_et;æ„›æ²™å°¼äºžèªž (Estonian)
+Language_eu;å·´æ–¯å…‹èªž (Basque)
+Language_fa;æ³¢æ–¯èªž (Persian)
+Language_ff;å¯Œæ‹‰èµ«èªž (Fulah)
+Language_fi;èŠ¬è˜­èªž (Finnish)
+Language_fj;æ–æ¿Ÿèªž (Fijian)
+Language_fo;æ³•ç¾…æ–¯èªž (Faroese)
+Language_fr;æ³•èªž (French)
+Language_fy;å¼—åˆ©ç„¶ç¾¤å³¶èªž (Frisian)
+Language_ga;æ„›çˆ¾è˜­èªž (Irish)
+Language_gd;è˜‡æ ¼è˜­è“‹çˆ¾èªž (Gaelic)
+Language_gl;åŠ é‡Œè¥¿äºžèªž (Galician)
+Language_gn;å·´æ‹‰åœ­èªž (Guarani)
+Language_gu;å¤å‰æ‹‰ç‰¹èªž (Gujarati)
+Language_gv;æ›¼å³¶èªž (Manx)
+Language_ha;è±ªæ’’èªž (Hausa)
+Language_he;å¸Œä¼¯ä¾†èªž (Hebrew)
+Language_hi;å°åœ°èªž (Hindi)
+Language_ho;å¸Œé‡Œæœ¨æ‰˜èªž (Hiri Motu)
+Language_hr;å…‹ç¾…åŸƒè¥¿äºžèªž (Croatian)
+Language_ht;æµ·åœ°èªž (Haitian)
+Language_hu;åŒˆç‰™åˆ©èªž (Hungarian)
+Language_hy;äºžç¾Žå°¼äºžèªž (Armenian)
+Language_hz;èµ«é›·ç¾…èªž (Herero)
+Language_ia;åœ‹éš›èªž (Auxiliary Language Association)
+Language_id;å°å°¼èªž (Indonesian)
+Language_ie;åœ‹éš›èªž (Interlingue)
+Language_ig;ä¼Šæ ¼åšèªž (Igbo)
+Language_ii;å››å·å½èªž (Sichuan Yi)
+Language_ik;å› ç´å¿…èªž (Inupiaq)
+Language_Info;èªžç³»è³‡è¨Š
+Language_io;ä¼Šå¤šèªž (Ido)
+Language_is;å†°å³¶èªž (Icelandic)
+Language_it;ç¾©å¤§åˆ©èªž (Italian)
+Language_iu;ä¼ŠåŠªç‰¹èªž (Inuktitut)
+Language_ja;æ—¥èªž (Japanese)
+Language_jv;çˆªå“‡èªž (Javanese)
+Language_ka;å–¬æ²»äºžèªž (Georgian)
+Language_kg;å‰›æžœèªž (Kongo)
+Language_ki;åŸºåº«å°¤èªž (Kikuyu)
+Language_kj;è²¢è€¶ç‘ªèªž (Kuanyama)
+Language_kk;å“ˆè–©å…‹èªž (Kazakh)
+Language_kl;æ ¼é™µè˜­èªž (Kalaallisut)
+Language_km;é«˜æ£‰èªž (Khmer)
+Language_kn;åŽç´é”èªž (Kannada)
+Language_ko;éŸ“èªž (Korean)
+Language_kr;å¡åŠªé‡Œèªž (Kanuri)
+Language_ks;å…‹ä»€ç±³çˆ¾èªž (Kashmiri)
+Language_ku;åº«å¾·èªž (Kurdish)
+Language_kv;ç§‘ç±³èªž (Komi)
+Language_kw;åº·ç“¦è€³èªž (Cornish)
+Language_ky;å‰çˆ¾å‰æ–¯èªž (Kirghiz)
+Language_la;æ‹‰ä¸èªž (Latin)
+Language_lb;ç›§æ£®å ¡èªž (Luxembourgish)
+Language_lg;å¹²é”èªž (Ganda)
+Language_li;æž—å ¡èªž (Limburgish)
+Language_ln;ç­åœ–èªž (Lingala)
+Language_lo;å¯®åœ‹èªž (Lao)
+Language_lt;ç«‹é™¶å®›èªž (Lithuanian)
+Language_lu;ç›§å·´å¡ä¸¹åŠ èªž (Luba-Katanga)
+Language_lv;æ‹‰è„«ç¶­äºžèªž (Latvian)
+Language_mg;é¦¬é”åŠ è¥¿èªž (Malagasy)
+Language_mh;é¦¬ç´¹çˆ¾èªž (Marshallese)
+Language_mi;æ¯›åˆ©èªž (Maori)
+Language_mk;é¦¬å…¶é “èªž (Macedonian)
+Language_ml;é¦¬æ‹‰é›…æ‹‰å§†èªž (Malayalam)
+Language_mn;è’™å¤èªž (Mongolian)
+Language_mo;æ‘©é”ç¶­äºžèªž (Moldavian)
+Language_mr;é¦¬æ‹‰å¡”èªž (Marathi)
+Language_ms;é¦¬ä¾†èªž (Malay)
+Language_mt;é¦¬çˆ¾ä»–èªž (Maltese)
+Language_mul;å¤šé‡èªžç³»
+Language_my;ç·¬ç”¸èªž (Burmese)
+Language_na;è«¾é­¯èªž (Nauru)
+Language_nb;æŒªå¨æ³¢å…‹é»˜çˆ¾èªž (Norwegian Bokmal)
+Language_nd;åŒ—æ©å¾·è²å‹’èªž (Ndebele)
+Language_ne;å°¼æ³Šçˆ¾èªž (Nepali)
+Language_ng;æ©æ±åŠ èªž (Ndonga)
+Language_nl;è·è˜­èªž (Dutch)
+Language_nn;æ–°æŒªå¨èªž (Norwegian Bokmal)
+Language_no;æŒªå¨èªž (Norwegian)
+Language_nr;å—æ©å¾·è²å‹’èªž (Ndebele)
+Language_nv;ç´ç“¦éœèªž (Navaho)
+Language_ny;å°¼æšè³ˆèªž (Nyanja)
+Language_oc;å¥§å…‹è¥¿å¦èªž (Occitan)
+Language_oj;å¥§å‰å¸ƒç“¦èªž (Ojibwa)
+Language_om;æ¾³æ´›èŽ«èªž (Oromo)
+Language_or;å¥§é‡Œé›…èªž (Oriya)
+Language_os;å¥§å¡žæ¢¯èªž (Ossetic)
+Language_pa;æ—é®æ™®èªž (Panjabi)
+Language_pi;å·´åˆ©èªž (Pali)
+Language_pl;æ³¢è˜­èªž (Polish)
+Language_ps;é˜¿å¯Œæ±—èªž (Pushto)
+Language_pt;è‘¡è„ç‰™èªž (Portuguese)
+Language_pt-br;è‘¡è„ç‰™èªž (å·´è¥¿) (Portuguese, Brazil)
+Language_qu;å°åŠ èªž (Quechua)
+Language_rm;ç¾…æ›¼èªž (Raeto-Romance)
+Language_rn;å¯è˜­åœ°èªž (Rundi)
+Language_ro;ç¾…é¦¬å°¼äºžèªž (Romanian)
+Language_ru;ä¿„èªž (Russian)
+Language_rw;ç›§å®‰é”èªž (Kinyarwanda)
+Language_sa;æ¢µèªž (Sanskrit)
+Language_sc;è–©ä¸å°¼äºžèªž (Sardinian)
+Language_sd;ä¿¡å¾·èªž (Sindhi)
+Language_se;è–©ç±³èªž (Northern Sami)
+Language_sg;æ¡‘æˆˆèªž (Sango)
+Language_si;éŒ«è˜­èªž (Sinhala)
+Language_sk;æ–¯æ´›ä¼å…‹èªž (Slovak)
+Language_sl;æ–¯æ´›ç¶­å°¼äºžèªž (Slovenian)
+Language_sm;è–©æ‘©äºžèªž (Samoan)
+Language_sn;ç´¹ç´èªž (Shona)
+Language_so;ç´¢é¦¬åˆ©èªž (Somali)
+Language_sq;é˜¿çˆ¾å·´å°¼äºžèªž (Albanian)
+Language_sr;å¡žçˆ¾ç¶­äºžèªž (Serbian)
+Language_ss;å²ç“¦æ¿Ÿè˜­èªž (Swati)
+Language_st;ç´¢æ‰˜èªž (Sotho)
+Language_su;å·½ä»–èªž (Sundanese)
+Language_sv;ç‘žå…¸èªž (Swedish)
+Language_sw;æ–¯è¯è¥¿é‡Œèªž (Swahili)
+Language_ta;å¦ç±³çˆ¾èªž (Tamil)
+Language_te;æ³°ç›§å›ºèªž (Telugu)
+Language_tg;å¡”å‰å…‹èªž (Tajik)
+Language_th;æ³°èªž (Thai)
+Language_ti;é”ç±³äºžèªž (Tigrinya)
+Language_tk;åœŸåº«æ›¼èªž (Turkmen)
+Language_tl;è²å¾‹è³“èªž (Tagalog)
+Language_tn;èŒ¨ç“¦ç´èªž (Tswana)
+Language_to;æ±åŠ èªž (Tonga)
+Language_tr;åœŸè€³å…¶èªž (Turkish)
+Language_ts;è°åŠ èªž (Tsonga)
+Language_tt;éŸƒé¼èªž (Tatar)
+Language_tw;å¥‡æ—èªž (Twi)
+Language_ty;å¤§æºªåœ°èªž (Tahitian)
+Language_ug;ç¶­å¾çˆ¾èªž (Uighur)
+Language_uk;çƒå…‹è˜­èªž (Ukrainian)
+Language_ur;æ™¤é­¯éƒ½èªž (Urdu)
+Language_uz;çƒèŒ²åˆ¥å…‹èªž (Uzbek)
+Language_ve;æ–‡é”èªž (Venda)
+Language_vi;è¶Šå—èªž (Vietnamese)
+Language_vo;æ²ƒæ‹‰åœå…‹èªž (Volapuk)
+Language_wa;è¯éš†èªž (Walloon)
+Language_wo;æ²ƒæ´›å¤«èªž (Wolof)
+Language_xh;ç§‘è–©èªž (Xhosa)
+Language_yi;æ„åœ°ç·’èªž (Yiddish)
+Language_yo;åº«å“‡èªž (Yoruba)
+Language_za;å£¯èªž (Zhuang)
+Language_zh;è¯èªž (Chinese)
+Language_zh-cn;è¯èªž (ä¸­åœ‹) (Chinese, China)
+Language_zh-tw;è¯èªž (å°ç£) (Chinese, Taiwan)
+Language_zu;ç¥–é­¯èªž (Zulu)
+LawRating;åˆ†ç´š
+LCCN;LCCN
+Library;åˆæˆå‡½å¼åº«
+Lightness;äº®åº¦
+List;æ¸…å–®
+Lyrics;æ­Œè©ž
+Lyricist;ä½œè©žè€…
+Mastered_Date;å¾Œè£½æ—¥æœŸ
+MasteredBy;å¾Œè£½è€…
+matrix_coefficients;çŸ©é™£ä¿‚æ•¸
+MediaInfo_About;æ”¯æ´éžå¸¸è©³ç›¡çš„å¤šåª’é«”æª”æ¡ˆè³‡è¨Š:\r\nMatroska, OGG (åŒ…å« OGM)\r\nMPEG-1 (åŒ…å« VCD)\r\nMPEG-2 (åŒ…å« DVD, SVCD)\r\nMPEG-4 (åŒ…å« iTunes M4A)\r\nQuicktime\r\nRealMedia\r\nWindowsMedia (åŒ…å« WMV, WMA)\r\nMicrosoft RIFF (åŒ…å« AVI, WAV)\r\nç´”è²éŸ³æ ¼å¼ (AC3, DTS, AAC, AU, AIFF...)
+Menu;é¸å–®
+Menu stream(s);é¸å–®ä¸²æµ
+Menu_Codec_List;é¸å–®ç·¨è§£ç¢¼å™¨
+Menu_No;ç„¡é¸å–®
+MenuCount;é¸å–®ä¸²æµæ•¸
+Menu_Hint;æ›´å¤šå¯èƒ½
+MenuID;é¸å–®ID
+mn;åˆ†
+Mood;æƒ…ç·’
+More;æ›´å¤š
+Movie;é›»å½±åç¨±
+ms;æ¯«ç§’
+MSDI;MSDI
+MusicBy;é…æ¨‚è€…
+MuxingMode;åˆæˆæ¨¡å¼
+MuxingMode_MoreInfo;æ›´å¤šæœ‰é—œæ­¤åˆæˆæ¨¡å¼çš„è³‡è¨Š
+MuxingMode_PackedBitstream;Packed bitstream
+Name;åç¨±
+Nationality;åœ‹ç±
+NetworkName;ç¶²è·¯åç¨±
+New;æ–°å¢ž
+Newest version;æª¢æŸ¥æœ€æ–°çš„ç‰ˆæœ¬ (éœ€è¦ç¶²è·¯é€£ç·š)
+NewVersion_Menu;æœ‰æ–°ç‰ˆæœ¬
+NewVersion_Question_Title;æœ‰æ–°ç‰ˆæœ¬ç™¼å¸ƒ!
+NewVersion_Question_Content;æœ‰æ–°ç‰ˆæœ¬ (v%Version%) äº†, æ‚¨æƒ³ä¸‹è¼‰å—Ž?
+No;å¦
+Not yet;é‚„æ²’å¥½
+NumColors;è‰²å½©æ•¸
+OK;ç¢ºèª
+One output file per input file;ä¸€å€‹è¼¸å…¥æª”å°æ‡‰ä¸€å€‹è¼¸å‡ºæª”
+Open;é–‹å•Ÿ
+OpenCandy_01;æ­£åœ¨ä¸‹è¼‰ ________
+OpenCandy_02;__% å®Œæˆ
+OpenCandy_03;ç¶²è·¯é€£ç·šè¢«ä¸­æ–·
+OpenCandy_04;________ ä¸‹è¼‰å®Œæˆ
+OpenCandy_05;æŒ‰ä¸€ä¸‹å®‰è£ ________
+OpenCandy_06;æ‚¨ç¢ºå®šè¦å–æ¶ˆå®‰è£å—Ž?\r\nå¦‚æžœæ‚¨æƒ³ç¨å¾Œå†è£, è«‹é¸ 'No'.\r\nè«‹ç•™æ„: æ‚¨å¯ä»¥å¾žé¸å–®ä¸Šé¸æ“‡ 'é›¢é–‹', åˆ°ä¸‹æ¬¡é‡é–‹æ©Ÿå†ç¹¼çºŒå®‰è£.
+OpenCandy_07;________ çš„ä¸‹è¼‰å·²æš«åœ.\r\nè«‹æŒ‰ç³»çµ±åˆ—çš„åœ–ç¤ºä»¥ç¹¼çºŒä¸‹è¼‰.
+OpenCandy_08;ç™¼ç”Ÿäº†åš´é‡çš„éŒ¯èª¤. _________ çš„ä¸‹è¼‰å³å°‡ä¸­æ­¢.
+OpenCandy_09;æš«åœä¸‹è¼‰
+OpenCandy_10;å–æ¶ˆå®‰è£
+OpenCandy_11;ç¹¼çºŒä¸‹è¼‰
+OpenCandy_12;é›¢é–‹å®‰è£ç¨‹å¼
+OpenCandy_13;___________ - ç”± ____________ æŽ¨è–¦
+OpenCandy_14;æ­£åœ¨ä¸‹è¼‰ _________
+OpenCandy_15;___________, ç”± ___________ æŽ¨è–¦çµ¦æ‚¨çš„è»Ÿé«”, æ­£ä¾æ‚¨çš„è¦æ±‚ä¸‹è¼‰. æº–å‚™å¥½å®‰è£æ™‚æˆ‘å€‘æœƒé€šçŸ¥æ‚¨.
+OpenCandy_16;___________ å·²æº–å‚™å¥½å®‰è£
+OpenCandy_17;___________ ç¾å·²ä¸‹è¼‰å®Œå…¨. è«‹æŒ‰ 'å®‰è£' ç¹¼çºŒ.
+OpenCandy_18;å·²ä¸‹è¼‰ ___________ (ç¸½å…±å¤§å° ___________ )
+OpenCandy_19;ç”± OpenCandy æä¾›
+OpenCandy_20;åˆ° OpenCandy.com äº†è§£æ›´å¤šè³‡è¨Š
+OpenCandy_21;å®‰è£
+OpenCandy_22;___________ å®‰è£
+OpenCandy_23;é€™æœƒå–æ¶ˆ ___________ çš„å®‰è£\r\næ‚¨ç¢ºå®šè¦é›¢é–‹å—Ž?
+OpenCandy_24;æš«åœ
+OpenCandy_25;æ‚¨çš„ä¸‹è¼‰å·²æš«åœ. ç•¶æ‚¨æº–å‚™å¥½ç¹¼çºŒä¸‹è¼‰æ™‚, è«‹æŒ‰ 'ç¹¼çºŒ'.
+OpenCandy_26;ç¹¼çºŒ
+OpenCandy_27;ç«‹å³å®‰è£
+OpenCandy_28;æš«åœä¸‹è¼‰
+OpenCandy_29;ç¹¼çºŒä¸‹è¼‰
+OpenCandy_30;å–æ¶ˆå®‰è£
+OpenCandy_31;è«‹é¸æ“‡å®‰è£é¸é …
+OpenCandy_32;å®‰è£ ___________
+OpenCandy_33;ä¸è¦å®‰è£
+OpenCandy_34;è«‹é¸æ“‡å®‰è£é¸é …
+OpenCandy_35;______ æŽ¨è–¦æ­¤è»Ÿé«”
+OpenCandy_36;æ‚¨ç•¶å‰çš„å®‰è£ç„¡æ³•ä¸­æ–·
+Options;é¸é …
+Options_Hint;åå¥½è¨­å®š
+Original;ä¾†æº
+OriginalNetworkName;ä¾†æºç¶²è·¯åç¨±
+OriginalSourceForm;ä¾†æºæ ¼å¼
+OriginalSourceMedium;ä¾†æºåª’ä»‹
+Other;å…¶å®ƒ
+Output;è¼¸å‡º
+Output format;è¼¸å‡ºæ ¼å¼
+OverallBitRate;æ•´é«”æµé‡
+OverallBitRate_Maximum;æœ€å¤§æ•´é«”æµé‡
+OverallBitRate_Minimum;æœ€å°æ•´é«”æµé‡
+OverallBitRate_Mode;æ•´é«”æµé‡æ¨¡å¼
+OverallBitRate_Nominal;æ­£å¸¸æ•´é«”æµé‡
+Part;éƒ¨åˆ†
+Part_Count;ç¸½æ•¸
+Performer;æ¼”å‡ºè€…
+Period;æ™‚æœŸ
+Phone;é›»è©±
+PixelAspectRatio;åƒç´ é•·å¯¬æ¯”ä¾‹
+PixelAspectRatio_Original;åŽŸå§‹åƒç´ é•·å¯¬æ¯”ä¾‹
+PlayCounter;æ’­æ”¾è¨ˆæ•¸å™¨
+Played_Count;å·²æ’­æ”¾æ•¸
+Played_First_Date;é¦–æ¬¡æ’­æ”¾
+Played_Last_Date;å‰æ¬¡æ’­æ”¾
+PlayTime;æ’­æ”¾é•·åº¦
+Position;é †åº
+Position_Total;ç¸½æ•¸
+Preferences;åå¥½è¨­å®š
+Producer;è£½ä½œ
+ProductionDesigner;ç¾Žè¡“æŒ‡å°Ž
+ProductionStudio;è£½ä½œä¸­å¿ƒ
+Publisher;ç™¼å¸ƒè€…
+Purchased_Date;è³¼è²·æ—¥æœŸ
+Quote character;å¼•è™Ÿå­—å…ƒ
+RadioStation;é›»å°
+Rating;åˆ†ç´š
+Recorded_Date;éŒ„è£½æ—¥æœŸ
+Recorded_Location;éŒ„è£½åœ°é»ž
+Released_Date;ç™¼è¡Œæ—¥æœŸ
+RemixedBy;é‡æ··è€…
+ReplayGain_Gain;æ’­æ”¾å¢žç›Š
+ReplayGain_Peak;æ’­æ”¾å¢žç›Šå°–å³°å€¼
+Resolution;é¡è‰²æ·±åº¦
+s;ç§’
+SamplingRate;å–æ¨£çŽ‡
+Save;å„²å­˜
+ScanType;æŽƒæåž‹æ…‹
+ScanType_Original;
+ScanOrder;æŽƒæé †åº
+ScanOrder_StoredDisplayedInverted;
+ScanOrder_Original;
+ScreenplayBy;ç·¨åŠ‡
+Season;å­£æœŸ
+see below;è©³è¦‹ä¸‹è¿°
+Send HeaderFile;è«‹å°‡æ¨™é ­æª”å¯„åˆ°é€™çµ¦æˆ‘: http://sourceforge.net/projects/mediainfo/ (Bug section)
+Separator_Columns;æ›åˆ—å­—å…ƒ
+Separator_Lines;æ›è¡Œå­—å…ƒ
+ServiceChannel;æœå‹™é »é“
+ServiceName;æœå‹™åç¨±
+ServiceProvider;æœå‹™æä¾›è€…
+ServiceType;æœå‹™é¡žåž‹
+Set;é›†åˆ
+Set_Count;é›†åˆæ•¸
+Setup;è¨­å®š
+Sharpness;éŠ³åˆ©åº¦
+Sheet;è¡¨æ ¼
+Sheet (Complete);è¡¨æ ¼ (å®Œæ•´)
+Shell extension;å¿«é¡¯åŠŸèƒ½è¡¨ (åœ¨æª”æ¡ˆç¸½ç®¡è£¡, æŒ‰å³éµæœƒå‡ºç¾ MediaInfo çš„é¸é …)
+Shell extension, folder;ä¹Ÿå°è³‡æ–™å¤¾ä½¿ç”¨
+Shell InfoTip;è³‡è¨Šæç¤º (åœ¨æª”æ¡ˆç¸½ç®¡è£¡, å°‡æ»‘é¼ ç§»åˆ°æª”æ¡ˆä¸Šæœƒé¡¯ç¤ºç›¸é—œè¨Šæ¯)
+Show menu;é¡¯ç¤ºé¸å–®
+Show toolbar;é¡¯ç¤ºå·¥å…·åˆ—
+Sort;æŽ’åº
+SamplingCount;
+SoundEngineer;éŸ³éŸ¿å·¥ç¨‹å¸«
+Source;
+Source_Duration;
+Source_FrameCount;
+Source_SamplingCount;
+Source_StreamSize;
+Source_StreamSize_Encoded;
+Standard;æ¨™æº–
+Stream;ä¸²æµ
+Stream_MoreInfo;æ›´å¤šæœ‰é—œæ­¤ä¸²æµçš„è³‡è¨Š
+StreamCount;æ­¤ä¸²æµæ•¸é‡
+StreamID;ä¸²æµID
+StreamKind;ä¸²æµé¡žåž‹
+StreamKindID;ä¸²æµè­˜åˆ¥å­—
+StreamKindPos;ä¸²æµè­˜åˆ¥å­—
+StreamSize;ä¸²æµå¤§å°
+StreamSize_Encoded;
+StreamSize_Proportion;æ­¤ä¸²æµçš„æ¯”ä¾‹
+Subject;ä¸»é¡Œ
+SubTrack;å­éŸ³è»Œ
+Summary;æ‘˜è¦
+Supported formats;æ”¯æ´æ ¼å¼
+Supported?;æ˜¯å¦æ”¯æ´?
+Synopsis;æ‘˜è¦
+SystemId;è­˜åˆ¥å­—
+Tagged_Application;æ¨™è¨˜ç¨‹å¼
+Tagged_Date;æ¨™è¨˜æ—¥æœŸ
+Technician;æŠ€å¸«
+TermsOfUse;ä½¿ç”¨æ¢æ¬¾
+Text;æ–‡å­—
+Text - Custom;æ–‡å­— - è‡ªè¨‚
+Text (HTML);æ–‡å­— (ç¶²é )
+Text stream(s);å­—å¹•ä¸²æµ
+Text streams;å­—å¹•ä¸²æµ
+Text_Codec_List;å­—å¹•ç·¨è§£ç¢¼å™¨
+Text_No;ç„¡å­—å¹•
+Text1;ç¬¬ä¸€å­—å¹•ä¸²æµ
+Text2;ç¬¬äºŒå­—å¹•ä¸²æµ
+Text3;ç¬¬ä¸‰å­—å¹•ä¸²æµ
+TextCount;å­—å¹•ä¸²æµæ•¸
+ThanksTo;æ„Ÿè¬
+Thousands separator;åƒä½åˆ†éš”ç¬¦è™Ÿ
+Title;æ¨™é¡Œ
+Title_More;æ¨™é¡Œ, è©³ç´°è³‡è¨Š
+TimeCode;
+TimeCode_FirstFrame;
+TimeCode_Settings;
+TimeCode_Source;
+TimeStamp;
+TimeZone;æ™‚å€
+Total;ç¸½å’Œ
+Track;éŸ³è»Œ
+Track_Count;éŸ³è»Œæ•¸
+transfer_characteristics;å‚³è¼¸ç‰¹æ€§
+Translator;ç¿»è­¯
+Tree;æ¨¹ç‹€åœ–
+Tree & Text;æ¨¹ç‹€åœ–èˆ‡æ–‡å­—
+Type;
+UniqueID;
+Unknown;æœªçŸ¥
+Url;ç›¸é—œç¶²å€
+Video;è¦–è¨Š
+Video stream(s);è¦–è¨Šä¸²æµ
+Video_Codec_List;è¦–è¨Šç·¨è§£ç¢¼å™¨
+Video_Delay;è¦–è¨Šå»¶é²
+Video_No;ç„¡è¦–è¨Š
+Video0_Delay;è¦–è¨Š0å»¶é²
+Video1;ç¬¬ä¸€è¦–è¨Šä¸²æµ
+VideoCount;è¦–è¨Šä¸²æµæ•¸
+View;æª¢è¦–
+View_Hint;æ”¹è®Šæª¢è¦–è³‡è¨Šçš„æ–¹æ³•
+Warning : more streams in the files;æ³¨æ„: æª”æ¡ˆä¸­é‚„æœ‰æ›´å¤šä¸²æµ
+Web;ç¶²é 
+WebSite_Audio;å‰å¾€æ­¤éŸ³è¨Šç·¨è§£ç¢¼å™¨çš„ç¶²ç«™
+WebSite_Audio_More;å‰å¾€ç¶²ç«™ (%Url%) æ‰¾å°‹æ­¤éŸ³è¨Šç·¨è§£ç¢¼å™¨
+WebSite_General;å‰å¾€æ­¤æ’­æ”¾ç¨‹å¼çš„ç¶²ç«™
+WebSite_General_More;å‰å¾€æ­¤æ’­æ”¾ç¨‹å¼çš„ç¶²ç«™
+WebSite_Text;å‰å¾€æ­¤æ–‡å­—ç·¨è§£ç¢¼å™¨çš„ç¶²ç«™
+WebSite_Text_More;å‰å¾€ç¶²ç«™ (%Url%) æ‰¾å°‹æ­¤æ–‡å­—ç·¨è§£ç¢¼å™¨
+WebSite_Url;http://MediaArea.net/MediaInfo/zh-TW
+WebSite_Video;å‰å¾€æ­¤è¦–è¨Šç·¨è§£ç¢¼å™¨çš„ç¶²ç«™
+WebSite_Video_More;å‰å¾€ç¶²ç«™ (%Url%) æ‰¾å°‹æ­¤è¦–è¨Šç·¨è§£ç¢¼å™¨
+Width;ç•«é¢å¯¬åº¦
+Width_Original;
+WriteMe;å¯«ä¿¡çµ¦ä½œè€…
+WriteToTranslator;å¯«ä¿¡çµ¦è­¯è€…
+Written_Date;æ’°å¯«æ—¥æœŸ
+Written_Location;æ’°å¯«åœ°é»ž
+WrittenBy;æ’°å¯«äºº
+Yes;æ˜¯
+Your system;æ‚¨çš„ç³»çµ±
+ZZ_Automatic_Percent;91
+ZZ_AutomaticLanguage_Percent;95

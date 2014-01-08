@@ -1,0 +1,1032 @@
+  Language_ISO639;ka
+  Author_Email;
+  Author_Name;G Release
+  Author_OldNames;
+  Language_Name;áƒ¥áƒáƒ áƒ—áƒ£áƒšáƒ˜
+  Config_Text_ColumnSize;40
+  Config_Text_Separator; : 
+  Config_Text_NumberTag; #
+  Config_Text_FloatSeparator;.
+  Config_Text_ThousandsSeparator; 
+ audio stream1; áƒáƒ£áƒ“áƒ˜áƒ áƒœáƒáƒ™áƒáƒ“áƒ˜1
+ audio stream2; áƒáƒ£áƒ“áƒ˜áƒ áƒœáƒáƒ™áƒáƒ“áƒ˜2
+ audio stream3; áƒáƒ£áƒ“áƒ˜áƒ áƒœáƒáƒ™áƒáƒ“áƒ˜3
+ bit1; áƒ‘áƒ˜áƒ¢áƒ˜
+ bit2; áƒ‘áƒ˜áƒ¢áƒ˜
+ bit3; áƒ‘áƒ˜áƒ¢áƒ˜
+ bps; bps
+ Bps; Bps
+ Byte1; áƒ‘áƒáƒ˜áƒ¢áƒ˜
+ Byte2; áƒ‘áƒáƒ˜áƒ¢áƒ˜
+ Byte3; áƒ‘áƒáƒ˜áƒ¢áƒ˜
+ channel1; áƒáƒ áƒ®áƒ˜
+ channel2; áƒáƒ áƒ®áƒ”áƒ‘áƒ˜
+ channel3; áƒáƒ áƒ®áƒ”áƒ‘áƒ˜
+ chapter1; áƒ¡áƒ”áƒ¥áƒªáƒ˜áƒ
+ chapter2; áƒ¡áƒ”áƒ¥áƒªáƒ˜áƒ
+ chapter3; áƒ¡áƒ”áƒ¥áƒªáƒ˜áƒ”áƒ‘áƒ˜
+ chapters stream1; áƒ¡áƒ”áƒ¥áƒªáƒ˜áƒ”áƒ‘áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ˜
+ chapters stream2; áƒ¡áƒ”áƒ¥áƒªáƒ˜áƒ”áƒ‘áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ”áƒ‘áƒ˜
+ chapters stream3; áƒ¡áƒ”áƒ¥áƒªáƒ˜áƒ”áƒ‘áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ”áƒ‘áƒ˜
+ day1; áƒ“áƒ¦áƒ”
+ day2; áƒ“áƒ¦áƒ”áƒ”áƒ‘áƒ˜
+ day3; áƒ“áƒ¦áƒ”áƒ”áƒ‘áƒ˜
+ dB1; áƒ“áƒ‘
+ dB2; áƒ“áƒ‘
+ dB3; áƒ“áƒ‘
+ file1; áƒ¤áƒáƒ˜áƒšáƒ˜
+ file2; áƒ¤áƒáƒ˜áƒšáƒ”áƒ‘áƒ˜
+ file3; áƒ¤áƒáƒ˜áƒšáƒ”áƒ‘áƒ˜
+ frame1; áƒ™áƒáƒ“áƒ áƒ˜
+ frame2; áƒ™áƒáƒ“áƒ áƒ˜
+ frame3; áƒ™áƒáƒ“áƒ áƒ”áƒ‘áƒ˜
+ fps1; áƒ™áƒáƒ“áƒ /áƒ¬áƒ›
+ fps2; áƒ™áƒáƒ“áƒ /áƒ¬áƒ›
+ fps3; áƒ™áƒáƒ“áƒ /áƒ¬áƒ›
+ GB; áƒ’áƒ‘
+ Gb; áƒ’áƒ‘
+ Gbps; áƒ’áƒ˜áƒ’áƒáƒ‘áƒ˜áƒ¢/áƒ¬áƒ›
+ GBps; áƒ’áƒ˜áƒ’áƒáƒ‘áƒáƒ˜áƒ¢/áƒ¬áƒ›
+ GHz; áƒ’áƒ°áƒª
+ GiB; áƒ’áƒ‘áƒáƒ˜áƒ¢áƒ˜
+ GibiByte1; áƒ’áƒ˜áƒ’áƒáƒ‘áƒáƒ˜áƒ¢áƒ˜
+ GibiByte2; áƒ’áƒ˜áƒ’áƒáƒ‘áƒáƒ˜áƒ¢áƒ˜
+ GibiByte3; áƒ’áƒ˜áƒ’áƒáƒ‘áƒáƒ˜áƒ¢áƒ˜
+ GiBps; áƒ’áƒ‘áƒáƒ˜áƒ¢/áƒ¬áƒ›
+ GigaBit1; áƒ’áƒ˜áƒ’áƒáƒ‘áƒ˜áƒ¢áƒ˜
+ GigaBit2; áƒ’áƒ˜áƒ’áƒáƒ‘áƒ˜áƒ¢áƒ˜
+ GigaBit3; áƒ’áƒ˜áƒ’áƒáƒ‘áƒ˜áƒ¢áƒ˜
+ GigaByte1; áƒ’áƒ˜áƒ’áƒáƒ‘áƒáƒ˜áƒ¢áƒ˜
+ GigaByte2; áƒ’áƒ˜áƒ’áƒáƒ‘áƒáƒ˜áƒ¢áƒ˜
+ GigaByte3; áƒ’áƒ˜áƒ’áƒáƒ‘áƒáƒ˜áƒ¢áƒ˜
+ hour1; áƒ¡áƒáƒáƒ—áƒ˜
+ hour2; áƒ¡áƒáƒáƒ—áƒ”áƒ‘áƒ˜
+ hour3; áƒ¡áƒáƒáƒ—áƒ”áƒ‘áƒ˜
+ Hz; áƒ°áƒª
+ image stream1; áƒ¡áƒ£áƒ áƒáƒ—áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ˜
+ image stream2; áƒ¡áƒ£áƒ áƒáƒ—áƒ”áƒ‘áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ˜
+ image stream3; áƒ¡áƒ£áƒ áƒáƒ—áƒ”áƒ‘áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ˜
+ KB; áƒ™áƒ‘
+ Kb; áƒ™áƒ‘
+ KBps; áƒ™áƒ‘áƒáƒ˜áƒ¢/áƒ¬áƒ›
+ Kbps; áƒ™áƒ‘áƒ˜áƒ¢/áƒ¬áƒ›
+ KHz; áƒ™áƒ°áƒª
+ KiB; áƒ™áƒ‘áƒáƒ˜áƒ¢áƒ˜
+ KibiBit1; áƒ™áƒ˜áƒ‘áƒ˜áƒ‘áƒ˜áƒ¢áƒ˜
+ KibiBit2; áƒ™áƒ˜áƒ‘áƒ˜áƒ‘áƒ˜áƒ¢áƒ˜
+ KibiBit3; áƒ™áƒ˜áƒ‘áƒ˜áƒ‘áƒ˜áƒ¢áƒ˜
+ KibiByte1; áƒ™áƒ˜áƒ‘áƒ˜áƒ‘áƒáƒ˜áƒ¢áƒ˜
+ KibiByte2; áƒ™áƒ˜áƒ‘áƒ˜áƒ‘áƒáƒ˜áƒ¢áƒ˜
+ KibiByte3; áƒ™áƒ˜áƒ‘áƒ˜áƒ‘áƒáƒ˜áƒ¢áƒ˜
+ KiBps; áƒ™áƒ‘áƒáƒ˜áƒ¢/áƒ¬áƒ›
+ KiloBit1; áƒ™áƒ˜áƒšáƒáƒ‘áƒ˜áƒ¢áƒ˜
+ KiloBit2; áƒ™áƒ˜áƒšáƒáƒ‘áƒ˜áƒ¢áƒ˜
+ KiloBit3; áƒ™áƒ˜áƒšáƒáƒ‘áƒ˜áƒ¢áƒ˜
+ KiloByte1; áƒ™áƒ˜áƒšáƒáƒ‘áƒáƒ˜áƒ¢áƒ˜
+ KiloByte2; áƒ™áƒ˜áƒšáƒáƒ‘áƒáƒ˜áƒ¢áƒ˜
+ KiloByte3; áƒ™áƒ˜áƒšáƒáƒ‘áƒáƒ˜áƒ¢áƒ˜
+ MB; áƒ›áƒ‘
+ Mb; áƒ›áƒ‘
+ Mbps; áƒ›áƒ‘áƒ˜áƒ¢/áƒ¬áƒ›
+ MBps; áƒ›áƒ‘áƒáƒ˜áƒ¢/áƒ¬áƒ›
+ MebiBit1; áƒ›áƒ”áƒ‘áƒ˜áƒ‘áƒ˜áƒ¢áƒ˜
+ MebiBit2; áƒ›áƒ”áƒ‘áƒ˜áƒ‘áƒ˜áƒ¢áƒ˜
+ MebiBit3; áƒ›áƒ”áƒ‘áƒ˜áƒ‘áƒ˜áƒ¢áƒ˜
+ MebiByte1; áƒ›áƒ”áƒ‘áƒ˜áƒ‘áƒáƒ˜áƒ¢áƒ˜
+ MebiByte2; áƒ›áƒ”áƒ‘áƒ˜áƒ‘áƒáƒ˜áƒ¢áƒ˜
+ MebiByte3; áƒ›áƒ”áƒ‘áƒ˜áƒ‘áƒáƒ˜áƒ¢áƒ˜
+ MegaBit1; áƒ›áƒ”áƒ’áƒáƒ‘áƒ˜áƒ¢áƒ˜
+ MegaBit2; áƒ›áƒ”áƒ’áƒáƒ‘áƒ˜áƒ¢áƒ˜
+ MegaBit3; áƒ›áƒ”áƒ’áƒáƒ‘áƒ˜áƒ¢áƒ˜
+ MegaByte1; áƒ›áƒ”áƒ’áƒáƒ‘áƒáƒ˜áƒ¢áƒ˜
+ MegaByte2; áƒ›áƒ”áƒ’áƒáƒ‘áƒáƒ˜áƒ¢áƒ˜
+ MegaByte3; áƒ›áƒ”áƒ’áƒáƒ‘áƒáƒ˜áƒ¢áƒ˜
+ MHz; áƒ›áƒ°áƒª
+ MiB; áƒ›áƒ‘áƒáƒ˜áƒ¢áƒ˜
+ Mib; áƒ›áƒ˜áƒ‘
+ MiBps; áƒ›áƒ‘áƒáƒ˜áƒ¢/áƒ¬áƒ›
+ millisecond1; millisecond
+ millisecond2; milliseconds
+ millisecond3; milliseconds
+ minute1; áƒ¬áƒ£áƒ—áƒ˜
+ minute2; áƒ¬áƒ£áƒ—áƒ˜
+ minute3; áƒ¬áƒ£áƒ—áƒ˜
+ month1; áƒ—áƒ•áƒ”
+ month2; áƒ—áƒ•áƒ”áƒ”áƒ‘áƒ˜
+ month3; áƒ—áƒ•áƒ”áƒ”áƒ‘áƒ˜
+ pixel1; áƒžáƒ˜áƒ¥áƒ¡áƒ”áƒšáƒ˜
+ pixel2; áƒžáƒ˜áƒ¥áƒ¡áƒ”áƒšáƒ”áƒ‘áƒ˜
+ pixel3;áƒžáƒ˜áƒ¥áƒ¡áƒ”áƒšáƒ”áƒ‘áƒ˜
+ second1; áƒ¬áƒáƒ›áƒ˜
+ second2; áƒ¬áƒáƒ›áƒ˜
+ second3; áƒ¬áƒáƒ›áƒ˜
+ text stream1; áƒ¢áƒ”áƒ¥áƒ¡áƒ¢ áƒœáƒáƒ™áƒáƒ“áƒ˜
+ text stream2; áƒ¢áƒ”áƒ¥áƒ¡áƒ¢ áƒœáƒáƒ™áƒáƒ“áƒ˜
+ text stream3; áƒ¢áƒ”áƒ¥áƒ¡áƒ¢ áƒœáƒáƒ™áƒáƒ“áƒ˜
+ video frames1; áƒ•áƒ˜áƒ“áƒ”áƒ áƒ™áƒáƒ“áƒ áƒ˜
+ video frames2; áƒ•áƒ˜áƒ“áƒ”áƒ áƒ™áƒáƒ“áƒ áƒ˜
+ video frames3; áƒ•áƒ˜áƒ“áƒ”áƒ áƒ™áƒáƒ“áƒ áƒ˜
+ video stream1; áƒ•áƒ˜áƒ“áƒ”áƒ áƒœáƒáƒ™áƒáƒ“áƒ˜
+ video stream2; áƒ•áƒ˜áƒ“áƒ”áƒ áƒœáƒáƒ™áƒáƒ“áƒ˜
+ video stream3; áƒ•áƒ˜áƒ“áƒ”áƒ áƒœáƒáƒ™áƒáƒ“áƒ˜
+ warppoint0;áƒ’áƒáƒ áƒ“áƒáƒ›áƒáƒ•áƒáƒšáƒ˜ áƒžáƒ£áƒœáƒ¥áƒ¢áƒ˜áƒ¡ áƒ’áƒáƒ áƒ”áƒ¨áƒ”
+ warppoint1; áƒ’áƒáƒ áƒ“áƒáƒ›áƒáƒ•áƒáƒšáƒ˜ áƒžáƒ£áƒœáƒ¥áƒ¢áƒ˜
+ warppoint2; áƒ’áƒáƒ áƒ“áƒáƒ›áƒáƒ•áƒáƒšáƒ˜ áƒžáƒ£áƒœáƒ¥áƒ¢áƒ˜
+ warppoint3; áƒ’áƒáƒ áƒ“áƒáƒ›áƒáƒ•áƒáƒšáƒ˜ áƒžáƒ£áƒœáƒ¥áƒ¢áƒ˜
+ week1; áƒ™áƒ•áƒ˜áƒ áƒ
+ week2; áƒ™áƒ•áƒ˜áƒ áƒ
+ week3; áƒ™áƒ•áƒ˜áƒ áƒ
+ year1; áƒ¬áƒ”áƒšáƒ˜
+ year2; áƒ¬áƒ”áƒšáƒ˜
+ year3; áƒ¬áƒ”áƒšáƒ˜
+, ;, 
+: ;: 
+About; áƒáƒ›áƒ˜áƒ¡ áƒ¨áƒ”áƒ¡áƒáƒ®áƒ”áƒ‘
+About_Hint;áƒ áƒáƒ’áƒáƒ  áƒ“áƒáƒ›áƒ˜áƒ™áƒáƒ•áƒ¨áƒ˜áƒ áƒ“áƒ”áƒ— áƒ›áƒ” áƒ“áƒ áƒ•áƒ˜áƒžáƒáƒ•áƒáƒ— áƒ£áƒáƒ®áƒšáƒ”áƒ¡áƒ˜ áƒ•áƒ”áƒ áƒ¡áƒ˜áƒ
+Accompaniment;áƒ£áƒ–áƒ áƒ£áƒœáƒ•áƒ”áƒšáƒ§áƒáƒ¤áƒ
+ActiveFormatDescription;
+ActiveFormatDescription_MuxingMode;
+Actor;áƒ¨áƒ”áƒ›áƒ¡áƒ áƒ£áƒšáƒ”áƒ‘áƒ”áƒšáƒ˜
+Actor_Character;áƒ áƒáƒšáƒ˜
+Added_Date;áƒ“áƒáƒ›áƒáƒ¢áƒ”áƒ‘áƒ˜áƒ¡ áƒ—áƒáƒ áƒ˜áƒ¦áƒ˜
+Address;áƒ›áƒ˜áƒ¡áƒáƒ›áƒáƒ áƒ—áƒ˜
+Advanced;áƒ“áƒáƒ›áƒáƒ¢áƒ”áƒ‘áƒ˜áƒ—
+Advanced mode;áƒ“áƒáƒ›áƒáƒ¢áƒ”áƒ‘áƒ˜áƒ—áƒ˜ áƒ áƒ”áƒŸáƒ˜áƒ›áƒ˜
+Album;áƒáƒšáƒ‘áƒáƒ›áƒ˜
+Album_ReplayGain_Gain;áƒáƒšáƒ‘áƒáƒ›áƒ¨áƒ˜ áƒ®áƒ›áƒ˜áƒ¡ áƒ“áƒáƒ›áƒáƒ áƒ”áƒ’áƒ£áƒšáƒ˜áƒ áƒ”áƒ‘áƒ”áƒšáƒ˜
+Album_ReplayGain_Peak;Album replay gain peak
+Alignment;Alignment
+Alignment_Aligned;Aligned on interleaves
+Alignment_Split;Split accross interleaves
+All;áƒ§áƒ•áƒ”áƒšáƒ
+Archival_Location;Archival location
+Arranger;Arranger
+ArtDirector;ArtDirector
+AspectRatio;áƒáƒ¡áƒžáƒ”áƒ¥áƒ¢áƒ˜áƒ¡ áƒ áƒáƒ¢áƒ˜áƒ
+AssistantDirector;AssistantDirector
+at;at
+At least one file;(áƒ¨áƒ”áƒœ áƒ£áƒœáƒ“áƒ áƒ’áƒáƒ®áƒ¡áƒœáƒ áƒ¡áƒ£áƒš áƒªáƒáƒ¢áƒ áƒ”áƒ áƒ—áƒ˜ áƒ¤áƒáƒ˜áƒšáƒ˜)
+Audio;áƒáƒ£áƒ“áƒ˜áƒ
+Audio stream(s);áƒáƒ£áƒ“áƒ˜áƒ áƒœáƒáƒ™áƒáƒ“áƒ”áƒ‘áƒ˜
+Audio_Codec_List;áƒáƒ£áƒ“áƒ˜áƒ áƒ™áƒáƒ“áƒ”áƒ™áƒ”áƒ‘áƒ˜
+Audio_No;áƒáƒ  áƒáƒ áƒ˜áƒ¡ áƒáƒ£áƒ“áƒ˜áƒ
+Audio1;áƒžáƒ˜áƒ áƒ•áƒ”áƒšáƒ˜ áƒáƒ£áƒ“áƒ˜áƒ áƒœáƒáƒ™áƒáƒ“áƒ˜
+Audio2;áƒ›áƒ”áƒáƒ áƒ” áƒáƒ£áƒ“áƒ˜áƒ˜áƒ áƒœáƒáƒ™áƒáƒ“áƒ˜
+AudioCount;áƒáƒ£áƒ“áƒ˜áƒ áƒœáƒáƒ™áƒáƒ“áƒ”áƒ‘áƒ˜áƒ¡ áƒ áƒáƒáƒ“áƒ”áƒœáƒáƒ‘áƒ
+Author;áƒáƒ•áƒ¢áƒáƒ áƒ˜
+BarCode;BarCode
+Basic;áƒ«áƒ˜áƒ áƒ˜áƒ—áƒáƒ“áƒ˜
+Basic_Note;áƒ¨áƒ”áƒœáƒ˜áƒ¨áƒ•áƒœáƒ : áƒáƒ› áƒ¤áƒáƒ˜áƒšáƒ˜áƒ¡ áƒ›áƒ”áƒ¢áƒ˜ áƒ˜áƒœáƒ¤áƒáƒ áƒ›áƒáƒªáƒ˜áƒ˜áƒ¡ áƒ’áƒáƒ¡áƒáƒ’áƒ”áƒ‘áƒáƒ“ áƒ—áƒ¥áƒ•áƒ”áƒœ áƒ£áƒœáƒ“áƒ áƒáƒ˜áƒ áƒ©áƒ˜áƒáƒ— áƒ’áƒáƒœáƒ¡áƒ®áƒ•áƒáƒ•áƒ”áƒ‘áƒ£áƒšáƒ˜ áƒ®áƒ”áƒ“áƒ•áƒ˜áƒ¡ áƒ¢áƒ˜áƒžáƒ˜ (Sheet, Tree...)
+BitDepth;Bit depth
+BitRate;áƒ‘áƒ˜áƒ¢ áƒ áƒ”áƒ˜áƒ¢áƒ˜
+BitRate_Maximum;áƒ›áƒáƒ¥áƒ¡áƒ˜áƒ›áƒáƒšáƒ£áƒ áƒ˜ áƒ‘áƒ˜áƒ¢ áƒ áƒ”áƒ˜áƒ¢áƒ˜
+BitRate_Minimum;áƒ›áƒ˜áƒœáƒ˜áƒ›áƒáƒšáƒ£áƒ áƒ˜ áƒ‘áƒ˜áƒ¢  áƒ áƒ”áƒ˜áƒ¢áƒ˜
+BitRate_Mode;áƒ‘áƒ˜áƒ¢ áƒ áƒ”áƒ˜áƒ¢áƒ˜áƒ¡ áƒ áƒ”áƒŸáƒ˜áƒ›áƒ˜
+BitRate_Mode_CBR;Constant
+BitRate_Mode_VBR;Variable
+BitRate_Nominal;Nominal bit rate
+BitRate_Encoded;
+Bits-(Pixel*Frame);Bits/(Pixel*Frame)
+BufferSize;áƒ‘áƒ£áƒ¤áƒ”áƒ áƒ˜áƒ¡ áƒ–áƒáƒ›áƒ
+Cancel;áƒ’áƒáƒ©áƒ”áƒ áƒ”áƒ‘áƒ
+Channel(s);áƒáƒ áƒ®áƒ˜(áƒ”áƒ‘áƒ˜)
+ChannelPositions;Channel positions
+Chapter(s);áƒ¡áƒ”áƒ¥áƒªáƒ˜áƒ(áƒ”áƒ‘áƒ˜)
+Chapters;áƒ¡áƒ”áƒ¥áƒªáƒ˜áƒ”áƒ‘áƒ˜
+Chapters stream(s);áƒ¡áƒ”áƒ¥áƒªáƒ˜áƒ”áƒ‘áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ˜(áƒ”áƒ‘áƒ˜)
+Chapters_Codec_List;áƒ¡áƒ”áƒ¥áƒªáƒ˜áƒ”áƒ‘áƒ˜áƒ¡ áƒ™áƒáƒ“áƒ”áƒ™áƒ”áƒ‘áƒ˜
+Chapters_No;áƒ¡áƒ”áƒ¥áƒªáƒ˜áƒ áƒáƒ  áƒáƒ áƒ£áƒ¡
+ChaptersCount;áƒœáƒáƒ™áƒáƒ“áƒ”áƒ‘áƒ˜áƒ¡ áƒ¡áƒ”áƒ¥áƒªáƒ˜áƒ”áƒ‘áƒ˜áƒ¡ áƒ áƒáƒáƒ“áƒ”áƒœáƒáƒ‘áƒ
+CheckNewVersion;áƒáƒ®áƒáƒšáƒ˜ áƒ•áƒ”áƒ áƒ¡áƒ˜áƒ˜áƒ¡ áƒ¨áƒ”áƒ›áƒáƒ¬áƒ›áƒ”áƒ‘áƒ
+Choose custom;áƒáƒ áƒ©áƒ”áƒ•áƒ
+Choose custom sheet;Choose your desired custom sheet
+Choose custom text;Choose your desired custom text
+Choose export format;Choose your desired export format
+Choose file(s);áƒ’áƒáƒ®áƒ¡áƒœáƒ˜áƒ—áƒ•áƒ˜áƒ¡ áƒáƒ˜áƒ áƒ©áƒ˜áƒ”áƒ— áƒ¤áƒáƒ˜áƒšáƒ”áƒ‘áƒ˜
+Choose filename;Choose your desired filename
+Choose language;áƒáƒ˜áƒ áƒ©áƒ˜áƒ”áƒ— áƒ—áƒ¥áƒ•áƒ”áƒœáƒ˜ áƒ¡áƒáƒ¡áƒ£áƒ áƒ•áƒ”áƒšáƒ˜ áƒ”áƒœáƒ
+Choregrapher;Choregrapher
+Chroma;Chroma
+ChromaSubsampling;Chroma subsampling
+Close;áƒ“áƒáƒ®áƒ£áƒ áƒ•áƒ
+Close all before open;áƒ“áƒáƒ®áƒ£áƒ áƒ” áƒ§áƒ•áƒ”áƒšáƒ áƒ’áƒáƒ®áƒ¡áƒœáƒáƒ›áƒ“áƒ”
+Codec;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜
+Codec_Description;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒáƒ¦áƒ¬áƒ”áƒ áƒ
+Codec_Info;áƒ™áƒáƒ“áƒ”áƒ™áƒ”áƒ‘áƒ˜áƒ¡ áƒ“áƒ”áƒ¢áƒáƒšáƒ”áƒ‘áƒ˜
+Codec_Settings;áƒ™áƒáƒ“áƒ”áƒ™áƒ”áƒ‘áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜
+Codec_Settings_PacketBitStream;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Packet bitstream
+Codec_Settings_BVOP;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, BVOP
+Codec_Settings_QPel;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, QPel
+Codec_Settings_GMC;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, GMC
+Codec_Settings_Matrix;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Matrix
+Codec_Settings_Floor;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Floor
+Codec_Settings_CABAC;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, CABAC
+Codec_Settings_Firm;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Firm
+Codec_Settings_Endianness;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Endianness
+Codec_Settings_Sign;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Sign
+Codec_Settings_Law;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Law
+Codec_Settings_ITU;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, ITU
+Codec_Profile;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒžáƒ áƒáƒ¤áƒ˜áƒšáƒ˜
+Codec_Url;áƒ™áƒáƒ“áƒ”áƒ™áƒ”áƒ‘áƒ˜áƒ¡ áƒ•áƒ”áƒ‘áƒ›áƒ˜áƒ¡áƒáƒ›áƒáƒ áƒ—áƒ˜
+CodecID;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ ID
+CodecID_Description;áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒáƒ¦áƒ¬áƒ”áƒ áƒ
+Collection;áƒ™áƒáƒšáƒ”áƒ¥áƒªáƒ˜áƒ
+Colorimetry;Colorimetry
+ColorSpace;Color space
+colour_primaries;Color primaries
+Comment;áƒ™áƒáƒ›áƒ”áƒœáƒ¢áƒáƒ áƒ˜
+CommissionedBy;Commissioned by
+Compilation;Compilation
+CompleteName;áƒ¡áƒ áƒ£áƒšáƒ˜ áƒ¡áƒáƒ®áƒ”áƒšáƒ˜
+Composer;Composer
+Compression_Mode;áƒ¨áƒ”áƒ™áƒ£áƒ›áƒ¨áƒ•áƒ˜áƒ¡ áƒ áƒ”áƒŸáƒ˜áƒ›áƒ˜
+Compression_Mode_Lossless;Lossless
+Compression_Mode_Lossy;Lossy
+Compression_Ratio;áƒ¨áƒ”áƒ™áƒ£áƒ›áƒ¨áƒ•áƒ˜áƒ¡ áƒ áƒáƒ¢áƒ˜áƒ
+Conductor;Conductor
+Container and general information;áƒ™áƒáƒœáƒ¢áƒ”áƒ˜áƒœáƒ”áƒ áƒ˜ áƒ“áƒ áƒ›áƒ—áƒáƒ•áƒáƒ áƒ˜ áƒ˜áƒœáƒ¤áƒáƒ áƒ›áƒáƒªáƒ˜áƒ
+ContentType;áƒ™áƒáƒœáƒ¢áƒ”áƒœáƒ¢áƒ˜áƒ¡ áƒ¢áƒ˜áƒžáƒ˜
+CoProducer;Coproducer
+Copyright;áƒ§áƒ•áƒ”áƒšáƒ áƒ£áƒ¤áƒšáƒ”áƒ‘áƒ áƒ“áƒáƒªáƒ£áƒšáƒ˜áƒ
+CostumeDesigner;Costume designer
+Count;áƒáƒœáƒ’áƒáƒ áƒ˜áƒ¨áƒ˜
+Country;áƒ¥áƒ•áƒ”áƒ§áƒáƒœáƒ
+Cover;Cover
+Cover_Datas;Cover datas
+Cover_Description;Cover description
+Cover_Mime;Cover MIME
+Cover_Type;Cover type
+Cropped;Crop dimensions
+Custom;áƒ¡áƒ¢áƒáƒœáƒ“áƒáƒ áƒ¢áƒ£áƒšáƒ˜
+Customize;áƒ›áƒáƒ áƒ’áƒ”áƒ‘áƒ
+Date;áƒ—áƒáƒ áƒ˜áƒ’áƒ˜
+Debug;áƒ’áƒáƒ›áƒáƒ áƒ—áƒ•áƒ
+Decimal point;Decimal point
+Delay;Delay
+Delay_Source;Delay, origin
+Delay_Source_Container;Container
+Delay_Source_Stream;Raw stream
+Delete;áƒ¬áƒáƒ¨áƒšáƒ
+Description;áƒáƒ¦áƒ¬áƒ”áƒ áƒ
+Digitized_Date;Digitized date
+Dimensions;Dimensions
+Director;áƒ“áƒ˜áƒ áƒ”áƒ¥áƒ¢áƒáƒ áƒ˜
+DirectorOfPhotography;Director of photography
+DisplayAspectRatio;áƒ’áƒáƒ›áƒáƒ¡áƒáƒ®áƒ£áƒšáƒ”áƒ‘áƒ˜áƒ¡ áƒáƒ¡áƒžáƒ”áƒ¥áƒ¢ áƒ áƒáƒ¢áƒ˜áƒ
+DisplayAspectRatio_Original;Original display aspect ratio
+DistributedBy;áƒ’áƒáƒ•áƒ áƒªáƒ”áƒšáƒ”áƒ‘áƒ˜áƒ¡ áƒáƒ•áƒ¢áƒáƒ áƒ˜
+Donate;áƒ¨áƒ”áƒ›áƒáƒ¬áƒ˜áƒ áƒ£áƒšáƒáƒ‘áƒ
+DotsPerInch;Dots per inch
+Duration;áƒ®áƒáƒœáƒ’áƒ áƒ«áƒšáƒ˜áƒ•áƒáƒ‘áƒ
+Duration_End;áƒ“áƒáƒ¡áƒáƒ¡áƒ¬áƒ áƒ£áƒšáƒ˜áƒ¡ áƒ“áƒ áƒ
+Duration_Start;áƒ“áƒáƒ¬áƒ§áƒ”áƒ‘áƒ˜áƒ¡ áƒ“áƒ áƒ
+Edit;áƒ áƒ”áƒ“áƒáƒ¥áƒ¢áƒ˜áƒ áƒ”áƒ‘áƒ
+EditedBy;áƒ áƒ”áƒ“áƒáƒ¥áƒ¢áƒ˜áƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒáƒ•áƒ¢áƒáƒ áƒ˜
+EMail;áƒ”áƒš-áƒ¤áƒáƒ¡áƒ¢áƒ
+Encoded_Application;áƒ“áƒáƒ›áƒ¬áƒ”áƒ áƒ˜ áƒáƒžáƒšáƒ˜áƒ™áƒáƒªáƒ˜áƒ
+Encoded_Date;áƒ”áƒœáƒ™áƒáƒ“áƒ˜áƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒ—áƒáƒ áƒ˜áƒ¦áƒ˜
+Encoded_Library;áƒ“áƒáƒ¬áƒ”áƒ áƒ˜áƒšáƒ˜áƒ
+Encoded_Library_Settings;áƒ”áƒœáƒ™áƒáƒ“áƒ˜áƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜
+Encoded_Original;Original support
+EncodedBy;áƒ”áƒœáƒ™áƒáƒ“áƒ˜áƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒáƒ•áƒ¢áƒáƒ áƒ˜
+EPG_Positions;EPG positions (internal)
+Error_File;áƒ¤áƒáƒ˜áƒšáƒ˜áƒ¡ áƒ¬áƒáƒ™áƒ˜áƒ—áƒ•áƒ˜áƒ¡ áƒ“áƒ áƒáƒ¡ áƒáƒ¦áƒ›áƒáƒ©áƒ”áƒœáƒ˜áƒšáƒ˜áƒ áƒ¨áƒ”áƒªáƒ“áƒáƒ›áƒ
+ExecutiveProducer;Executive producer
+Exit;áƒ’áƒáƒ¡áƒ•áƒšáƒ
+Exit_Hint;áƒžáƒ áƒáƒ’áƒ áƒáƒ›áƒ˜áƒ¡ áƒ“áƒáƒ¢áƒáƒ•áƒ”áƒ‘áƒ
+Export;áƒ’áƒáƒ¢áƒáƒœáƒ
+Export_Hint;Export in a customized format
+Extensions;Extensions usually used
+Family;áƒ’áƒ•áƒáƒ áƒ˜
+Fax;áƒ¤áƒáƒ¥áƒ¡áƒ˜
+File;áƒ¤áƒáƒ˜áƒšáƒ˜
+File size;áƒ¤áƒáƒ˜áƒšáƒ˜áƒ¡ áƒ–áƒáƒ›áƒ
+File_Append;Append to the existing file (Warning : be careful to have the same parameters)
+File_Created_Date;áƒ¤áƒáƒ˜áƒšáƒ˜áƒ¡ áƒ¨áƒ”áƒ¥áƒ›áƒœáƒ˜áƒ¡ áƒ—áƒáƒ áƒ˜áƒ¦áƒ˜
+File_Created_Date_Local;áƒ¤áƒáƒ˜áƒšáƒ˜áƒ¡ áƒ¨áƒ”áƒ¥áƒ›áƒœáƒ˜áƒ¡ áƒ—áƒáƒ áƒ˜áƒ¦áƒ˜ (áƒšáƒáƒ™áƒáƒšáƒ£áƒ áƒ˜)
+File_Hint;Select a multimedia file to examine
+File_Modified_Date;áƒ¤áƒáƒ˜áƒšáƒ˜áƒ¡ áƒ‘áƒáƒšáƒ áƒ›áƒáƒ“áƒ˜áƒ¤áƒ˜áƒ™áƒáƒªáƒ˜áƒ˜áƒ¡ áƒ—áƒáƒ áƒ˜áƒ¦áƒ˜
+File_Modified_Date_Local;File last modification date (local)
+FileExtension;File extension
+FileName;áƒ¤áƒáƒ˜áƒšáƒ˜áƒ¡ áƒ¡áƒáƒ®áƒ”áƒšáƒ˜
+FileSize;áƒ¤áƒáƒ˜áƒšáƒ˜áƒ¡ áƒ–áƒáƒ›áƒ
+Folder;áƒ¤áƒáƒšáƒ“áƒ”áƒ áƒ˜
+Folder (R);áƒ¤áƒáƒšáƒ“áƒ”áƒ  (R)
+Folder (R)_Hint;Select a folder to examine (with all folders recursively)
+Folder (Recursively);Folder (Recursively)
+Folder_Hint;áƒ’áƒáƒœáƒ®áƒ˜áƒšáƒ•áƒ˜áƒ¡áƒ—áƒ•áƒ˜áƒ¡ áƒáƒ˜áƒ áƒ©áƒ˜áƒ”áƒ— áƒ¤áƒáƒšáƒ“áƒ”áƒ áƒ˜
+FolderName;áƒ¤áƒáƒšáƒ“áƒ”áƒ áƒ˜áƒ¡ áƒ¡áƒáƒ®áƒ”áƒšáƒ˜
+Format;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜
+Format_Commercial;Commercial name
+Format_Commercial_IfAny;
+Format_Description;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒáƒ¦áƒ¬áƒ”áƒ áƒ
+Format_Info;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒ“áƒ”áƒ¢áƒáƒšáƒ”áƒ‘áƒ˜
+Format_Profile;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒ áƒáƒ¤áƒ˜áƒšáƒ˜
+Format_Settings;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜
+Format_Settings_PacketBitStream;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Packet bitstream
+Format_Settings_BVOP;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, BVOP
+Format_Settings_QPel;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, QPel
+Format_Settings_GMC;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, GMC
+Format_Settings_Matrix;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Matrix
+Format_Settings_Matrix_Custom;Custom
+Format_Settings_Matrix_Default;Default
+Format_Settings_Floor;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Floor
+Format_Settings_CABAC;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, CABAC
+Format_Settings_Firm;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Firm
+Format_Settings_Endianness;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Endianness
+Format_Settings_RefFrames;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, ReFrames
+Format_Settings_Sign;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Sign
+Format_Settings_Law;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Law
+Format_Settings_ITU;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, ITU
+Format_Settings_SBR;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, SBR
+Format_Settings_PS;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, PS
+Format_Settings_Pulldown;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, Pulldown
+Format_Settings_Mode;áƒ áƒ”áƒŸáƒ˜áƒ›áƒ˜
+Format_Settings_FrameMode;áƒ™áƒáƒ“áƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒ áƒ”áƒŸáƒ˜áƒ›áƒ˜
+Format_Settings_Emphasis;Emphasis
+Format_Settings_ModeExtension;Mode extension
+Format_Settings_GOP;áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜áƒ¡ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜, GOP
+Format_Version;áƒ¤áƒáƒ áƒœáƒáƒ¢áƒ˜áƒ¡ áƒ•áƒ”áƒ áƒ¡áƒ˜áƒ
+Format_Url;áƒ•áƒ”áƒ‘-áƒ’áƒ•áƒ”áƒ áƒ“áƒ˜áƒ¡ áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜
+FrameCount;Frame count
+FrameRate;áƒ™áƒáƒ“áƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒ¡áƒ˜áƒ®áƒ¨áƒ˜áƒ áƒ”
+FrameRate_Mode;áƒ™áƒáƒ“áƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒ¡áƒ˜áƒ®áƒ¨áƒ˜áƒ áƒ˜áƒ¡ áƒ áƒ”áƒŸáƒ˜áƒ›áƒ˜
+FrameRate_Mode_CFR;áƒ›áƒ£áƒ“áƒ›áƒ˜áƒ•áƒ˜
+FrameRate_Mode_VFR;Variable
+FrameRate_Minimum;áƒ™áƒáƒ“áƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒ¡áƒ˜áƒ®áƒ¨áƒ˜áƒ áƒ˜áƒ¡ áƒ›áƒ˜áƒœáƒ˜áƒ›áƒ£áƒ›áƒ˜
+FrameRate_Nominal;áƒ™áƒáƒ“áƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒ¡áƒ˜áƒ®áƒ¨áƒ˜áƒ áƒ˜áƒ¡ áƒœáƒáƒ›áƒ˜áƒœáƒáƒšáƒ£áƒ áƒ˜
+FrameRate_Maximum;áƒ™áƒáƒ“áƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒ¡áƒ˜áƒ®áƒ¨áƒ˜áƒ áƒ˜áƒ¡ áƒ›áƒáƒ¥áƒ¡áƒ˜áƒ›áƒ£áƒ›áƒ˜
+FrameRate_Original;áƒ™áƒáƒ“áƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒáƒ áƒ˜áƒ’áƒ˜áƒœáƒáƒšáƒ˜ áƒ¡áƒ˜áƒ®áƒ¨áƒ˜áƒ áƒ”
+General;áƒ›áƒ—áƒáƒ•áƒáƒ áƒ˜
+Genre;áƒŸáƒáƒœáƒ áƒ˜
+Genre_000;Blues
+Genre_001;Classic Rock
+Genre_002;Country
+Genre_003;Dance
+Genre_004;Disco
+Genre_005;Funk
+Genre_006;Grunge
+Genre_007;Hip-Hop
+Genre_008;Jazz
+Genre_009;Metal
+Genre_010;New Age
+Genre_011;Oldies
+Genre_012;Other
+Genre_013;Pop
+Genre_014;R&B
+Genre_015;Rap
+Genre_016;Reggae
+Genre_017;Rock
+Genre_018;Techno
+Genre_019;Industrial
+Genre_020;Alternative
+Genre_021;Ska
+Genre_022;Death Metal
+Genre_023;Pranks
+Genre_024;Soundtrack
+Genre_025;Euro-Techno
+Genre_026;Ambient
+Genre_027;Trip-Hop
+Genre_028;Vocal
+Genre_029;Jazz+Funk
+Genre_030;Fusion
+Genre_031;Trance
+Genre_032;Classical
+Genre_033;Instrumental
+Genre_034;Acid
+Genre_035;House
+Genre_036;Game
+Genre_037;Sound Clip
+Genre_038;Gospel
+Genre_039;Noise
+Genre_040;AlternRock
+Genre_041;Bass
+Genre_042;Soul
+Genre_043;Punk
+Genre_044;Space
+Genre_045;Meditative
+Genre_046;Instrumental Pop
+Genre_047;Instrumental Rock
+Genre_048;Ethnic
+Genre_049;Gothic
+Genre_050;Darkwave
+Genre_051;Techno-Industrial
+Genre_052;Electronic
+Genre_053;Pop-Folk
+Genre_054;Eurodance
+Genre_055;Dream
+Genre_056;Southern Rock
+Genre_057;Comedy
+Genre_058;Cult
+Genre_059;Gangsta
+Genre_060;Top 40
+Genre_061;Christian Rap
+Genre_062;Pop/Funk
+Genre_063;Jungle
+Genre_064;Native American
+Genre_065;Cabaret
+Genre_066;New Wave
+Genre_067;Psychadelic
+Genre_068;Rave
+Genre_069;Showtunes
+Genre_070;Trailer
+Genre_071;Lo-Fi
+Genre_072;Tribal
+Genre_073;Acid Punk
+Genre_074;Acid Jazz
+Genre_075;Polka
+Genre_076;Retro
+Genre_077;Musical
+Genre_078;Rock & Roll
+Genre_079;Hard Rock
+Genre_080;Folk
+Genre_081;Folk-Rock
+Genre_082;National Folk
+Genre_083;Swing
+Genre_084;Fast Fusion
+Genre_085;Bebob
+Genre_086;Latin
+Genre_087;Revival
+Genre_088;Celtic
+Genre_089;Bluegrass
+Genre_090;Avantgarde
+Genre_091;Gothic Rock
+Genre_092;Progressive Rock
+Genre_093;Psychedelic Rock
+Genre_094;Symphonic Rock
+Genre_095;Slow Rock
+Genre_096;Big Band
+Genre_097;Chorus
+Genre_098;Easy Listening
+Genre_099;Acoustic
+Genre_100;Humour
+Genre_101;Speech
+Genre_102;Chanson
+Genre_103;Opera
+Genre_104;Chamber Music
+Genre_105;Sonata
+Genre_106;Symphony
+Genre_107;Booty Bass
+Genre_108;Primus
+Genre_109;Porn Groove
+Genre_110;Satire
+Genre_111;Slow Jam
+Genre_112;Club
+Genre_113;Tango
+Genre_114;Samba
+Genre_115;Folklore
+Genre_116;Ballad
+Genre_117;Power Ballad
+Genre_118;Rhythmic Soul
+Genre_119;Freestyle
+Genre_120;Duet
+Genre_121;Punk Rock
+Genre_122;Drum Solo
+Genre_123;A capella
+Genre_124;Euro-House
+Genre_125;Dance Hall
+Genre_126;Goa
+Genre_127;Drum & Bass
+Genre_128;Club-House
+Genre_129;Hardcore
+Genre_130;Terror
+Genre_131;Indie
+Genre_132;Britpop
+Genre_133;Negerpunk
+Genre_134;Polsk Punk
+Genre_135;Beat
+Genre_136;Christian Gangsta Rap
+Genre_137;Heavy Metal
+Genre_138;Black Metal
+Genre_139;Crossover
+Genre_140;Contemporary Christian
+Genre_141;Christian Rock
+Genre_142;Merengue
+Genre_143;Salsa
+Genre_144;Trash Metal
+Genre_145;Anime
+Genre_146;JPop
+Genre_147;Synthpop
+Genre_148;
+Genre_149;
+Genre_150;
+Genre_151;
+Genre_152;
+Genre_153;
+Genre_154;
+Genre_155;
+Genre_156;
+Genre_157;
+Genre_158;
+Genre_159;
+Genre_160;
+Genre_161;
+Genre_162;
+Genre_163;
+Genre_164;
+Genre_165;
+Genre_166;
+Genre_167;
+Genre_168;
+Genre_169;
+Genre_170;
+Genre_171;
+Genre_172;
+Genre_173;
+Genre_174;
+Genre_175;
+Genre_176;
+Genre_177;
+Genre_178;
+Genre_179;
+Genre_180;
+Genre_181;
+Genre_182;
+Genre_183;
+Genre_184;
+Genre_185;
+Genre_186;
+Genre_187;
+Genre_188;
+Genre_189;
+Genre_190;
+Genre_191;
+Go to WebSite;áƒ’áƒáƒ“áƒáƒ“áƒ˜áƒ— áƒ•áƒ”áƒ‘-áƒ’áƒ•áƒ”áƒ áƒ“áƒ«áƒ”
+Grouping;áƒ“áƒáƒ¯áƒ’áƒ£áƒ¤áƒ”áƒ‘áƒ
+h;h
+Header file;áƒ°áƒ”áƒ“áƒ”áƒ áƒ˜áƒ¡ áƒ¤áƒáƒ˜áƒšáƒ˜áƒ¡ áƒ¨áƒ”áƒ¥áƒ›áƒœáƒ
+Height;áƒ¡áƒ˜áƒ›áƒáƒ¦áƒšáƒ”
+Height_Original;áƒáƒ áƒ˜áƒ’áƒ˜áƒœáƒáƒšáƒ˜ áƒ¡áƒ˜áƒ›áƒáƒ¦áƒšáƒ”
+Help;áƒ“áƒáƒ®áƒ›áƒáƒ áƒ”áƒ‘áƒ
+Hint;Hint
+How many audio streams?;áƒ áƒáƒ›áƒ“áƒ”áƒœáƒ˜ áƒáƒ£áƒ“áƒ˜áƒ áƒœáƒáƒ™áƒáƒ“áƒ˜áƒ?
+How many chapters streams?;áƒ áƒáƒ›áƒ“áƒ”áƒœáƒ˜ áƒžáƒ£áƒœáƒ¥áƒ¢áƒ˜áƒ?
+How many text streams?;áƒ áƒáƒ›áƒ“áƒ”áƒœáƒ˜ áƒ¢áƒ”áƒ¡áƒ¢áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ˜áƒ?
+How many video streams?;áƒ áƒáƒ›áƒ“áƒ”áƒœáƒ˜ áƒ•áƒ˜áƒ“áƒ”áƒáƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ˜áƒ?
+HTML;HTML
+ID;ID
+Image;áƒ¡áƒ£áƒ áƒáƒ—áƒ˜
+Image stream(s);áƒ¡áƒ£áƒ áƒáƒ—áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ˜
+Image_Codec_List;áƒ¡áƒ£áƒ áƒáƒ—áƒ˜áƒ¡ áƒ™áƒáƒ“áƒ”áƒ™áƒ”áƒ‘áƒ˜
+ImageCount;Count of image streams
+Info;áƒ˜áƒœáƒ¤áƒáƒ áƒ›áƒáƒªáƒ˜áƒ
+Instruments;áƒ˜áƒœáƒ¡áƒ¢áƒ áƒ£áƒ›áƒ”áƒœáƒ¢áƒ”áƒ‘áƒ˜
+Interlacement;Interlacement
+Interlaced_Interlaced;Interlaced
+Interlaced_TFF;Top Field First
+Interlaced_BFF;Bottom Field First
+Interlaced_PPF;Progressive
+Interlaced_Progressive;Progressive
+Interleaved;Interleaved
+Interleave_Duration;Interleave, duration
+Interleave_Preload;Interleave, preload duration
+Interleave_VideoFrames;Interleave, duration
+InternetMediaType;Internet media type
+IRCA;IRCA
+ISBN;ISBN
+ISRC;ISRC
+Keywords;áƒ¡áƒáƒ™áƒ•áƒáƒœáƒ«áƒ áƒ¡áƒ˜áƒ¢áƒ§áƒ•áƒ”áƒ‘áƒ˜
+Known codecs;áƒªáƒœáƒáƒ‘áƒ˜áƒšáƒ˜ áƒ™áƒáƒ“áƒ”áƒ™áƒ”áƒ‘áƒ˜
+Known formats;áƒªáƒœáƒáƒ‘áƒ˜áƒšáƒ˜ áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ”áƒ‘áƒ˜
+Known parameters;áƒªáƒœáƒáƒ‘áƒ˜áƒšáƒ˜ áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜
+Label;Label
+Language;áƒ˜áƒœáƒ¢áƒ”áƒ áƒ¤áƒ”áƒ˜áƒ¡áƒ˜áƒ¡ áƒ”áƒœáƒ
+Language_More;áƒ›áƒ”áƒ¢áƒ˜ áƒ˜áƒœáƒ¤áƒáƒ áƒ›áƒáƒªáƒ˜áƒ áƒ”áƒœáƒ”áƒ‘áƒ–áƒ”
+Language_aa;Afar
+Language_ab;Abkhazian
+Language_ae;Avestan
+Language_af;Afrikaans
+Language_ak;Akan
+Language_am;Amharic
+Language_an;Aragonese
+Language_ar;Arabic
+Language_as;Assamese
+Language_av;Avaric
+Language_ay;Aymara
+Language_az;Azerbaijani
+Language_ba;Bashkir
+Language_be;Belarusian
+Language_bg;Bulgarian
+Language_bh;Bihari
+Language_bi;Bislama
+Language_bm;Bambara
+Language_bn;Bengali
+Language_bo;Tibetan
+Language_br;Breton
+Language_bs;Bosnian
+Language_ca;Catalan
+Language_ce;Chechen
+Language_ch;Chamorro
+Language_co;Corsican
+Language_cr;Cree
+Language_cs;Czech
+Language_cu;Slave
+Language_cv;Chuvash
+Language_cy;Welsh
+Language_da;Danish
+Language_de;German
+Language_dv;Divehi
+Language_dz;Dzongkha
+Language_ee;Ewe
+Language_el;Greek
+Language_en;English
+Language_en-gb;English (Great Britain)
+Language_en-us;English (United States)
+Language_eo;Esperanto
+Language_es;Spanish
+Language_et;Estonian
+Language_eu;Basque
+Language_fa;Persian
+Language_ff;Fulah
+Language_fi;Finnish
+Language_fj;Fijian
+Language_fo;Faroese
+Language_fr;French
+Language_fy;Frisian
+Language_ga;Irish
+Language_gd;Gaelic
+Language_gl;Galician
+Language_gn;Guarani
+Language_gu;Gujarati
+Language_gv;Manx
+Language_ha;Hausa
+Language_he;Hebrew
+Language_hi;Hindi
+Language_ho;Hiri Motu
+Language_hr;Croatian
+Language_ht;Haitian
+Language_hu;Hungarian
+Language_hy;Armenian
+Language_hz;Herero
+Language_ia;Auxiliary Language Association
+Language_id;Indonesian
+Language_ie;Interlingue
+Language_ig;Igbo
+Language_ii;Sichuan Yi
+Language_ik;Inupiaq
+Language_Info;áƒ˜áƒœáƒ¤áƒáƒ áƒ›áƒáƒªáƒ˜áƒ áƒ”áƒœáƒáƒ–áƒ”
+Language_io;Ido
+Language_is;Icelandic
+Language_it;Italian
+Language_iu;Inuktitut
+Language_ja;Japanese
+Language_jv;Javanese
+Language_ka;Georgian
+Language_kg;Kongo
+Language_ki;Kikuyu
+Language_kj;Kuanyama
+Language_kk;Kazakh
+Language_kl;Kalaallisut
+Language_km;Khmer
+Language_kn;Kannada
+Language_ko;Korean
+Language_kr;Kanuri
+Language_ks;Kashmiri
+Language_ku;Kurdish
+Language_kv;Komi
+Language_kw;Cornish
+Language_ky;Kirghiz
+Language_la;Latin
+Language_lb;Luxembourgish
+Language_lg;Ganda
+Language_li;Limburgish
+Language_ln;Lingala
+Language_lo;Lao
+Language_lt;Lithuanian
+Language_lu;Luba-Katanga
+Language_lv;Latvian
+Language_mg;Malagasy
+Language_mh;Marshallese
+Language_mi;Maori
+Language_mk;Macedonian
+Language_ml;Malayalam
+Language_mn;Mongolian
+Language_mo;Moldavian
+Language_mr;Marathi
+Language_ms;Malay
+Language_mt;Maltese
+Language_mul;Multiple languages
+Language_my;Burmese
+Language_na;Nauru
+Language_nb;Norwegian Bokmal
+Language_nd;Ndebele
+Language_ne;Nepali
+Language_ng;Ndonga
+Language_nl;Dutch
+Language_nn;Norwegian Nynorsk
+Language_no;Norwegian
+Language_nr;Ndebele
+Language_nv;Navaho
+Language_ny;Nyanja
+Language_oc;Occitan
+Language_oj;Ojibwa
+Language_om;Oromo
+Language_or;Oriya
+Language_os;Ossetic
+Language_pa;Panjabi
+Language_pi;Pali
+Language_pl;Polish
+Language_ps;Pushto
+Language_pt;Portuguese
+Language_pt-br;Portuguese (Brazil)
+Language_qu;Quechua
+Language_rm;Raeto-Romance
+Language_rn;Rundi
+Language_ro;Romanian
+Language_ru;Russian
+Language_rw;Kinyarwanda
+Language_sa;Sanskrit
+Language_sc;Sardinian
+Language_sd;Sindhi
+Language_se;Northern Sami
+Language_sg;Sango
+Language_si;Sinhala
+Language_sk;Slovak
+Language_sl;Slovenian
+Language_sm;Samoan
+Language_sn;Shona
+Language_so;Somali
+Language_sq;Albanian
+Language_sr;Serbian
+Language_ss;Swati
+Language_st;Sotho
+Language_su;Sundanese
+Language_sv;Swedish
+Language_sw;Swahili
+Language_ta;Tamil
+Language_te;Telugu
+Language_tg;Tajik
+Language_th;Thai
+Language_ti;Tigrinya
+Language_tk;Turkmen
+Language_tl;Tagalog
+Language_tn;Tswana
+Language_to;Tonga
+Language_tr;Turkish
+Language_ts;Tsonga
+Language_tt;Tatar
+Language_tw;Twi
+Language_ty;Tahitian
+Language_ug;Uighur
+Language_uk;Ukrainian
+Language_ur;Urdu
+Language_uz;Uzbek
+Language_ve;Venda
+Language_vi;Vietnamese
+Language_vo;Volapuk
+Language_wa;Walloon
+Language_wo;Wolof
+Language_xh;Xhosa
+Language_yi;Yiddish
+Language_yo;Yoruba
+Language_za;Zhuang
+Language_zh;Chinese
+Language_zh-cn;Chinese (China)
+Language_zh-tw;Chinese (Taiwan)
+Language_zu;Zulu
+LawRating;Law rating
+LCCN;LCCN
+Library;Muxing library
+Lightness;Lightness
+List;áƒ¡áƒ˜áƒ
+Lyrics;Lyrics
+Lyricist;Lyricist
+Mastered_Date;Mastered date
+MasteredBy;Mastered by
+matrix_coefficients;Matrix coefficients
+MediaInfo_About;Supply very detailled information\r\nabout a multimedia file:\r\nMatroska, OGG (including OGM)\r\nMPEG1 (including VCD)\r\nMPEG2 (including DVD and SVCD)\r\nMPEG4 (including Itunes M4A)\r\nQuicktime\r\nRealMedia\r\nWindowsMedia (including WMV, WMA)\r\nMicrosoft RIFF (including AVI, WAV)\r\nSound-only formats (AC3, DTS, AAC, AU, AIFF...)
+Menu;áƒ›áƒ”áƒœáƒ˜áƒ£
+Menu stream(s);áƒœáƒáƒ™áƒáƒ“áƒ”áƒ‘áƒ˜áƒ¡ áƒ›áƒ”áƒœáƒ˜áƒ£
+Menu_Codec_List;áƒ™áƒáƒ“áƒ”áƒ™áƒ”áƒ‘áƒ˜áƒ¡ áƒ›áƒ”áƒœáƒ˜áƒ£
+Menu_No;áƒáƒ  áƒáƒ áƒ˜áƒ¡ áƒ›áƒ”áƒœáƒ˜áƒ£
+MenuCount;áƒœáƒáƒ™áƒáƒ“áƒ”áƒ‘áƒ˜áƒ¡ áƒ›áƒ”áƒœáƒ˜áƒ£áƒ¡ áƒ áƒáƒáƒ“áƒ”áƒœáƒáƒ‘áƒ
+Menu_Hint;áƒ£áƒ¤áƒ áƒ áƒ›áƒ”áƒ¢áƒ˜ áƒ¨áƒ”áƒ¡áƒáƒ«áƒšáƒ”áƒ‘áƒšáƒáƒ‘áƒ”áƒ‘áƒ˜
+MenuID;áƒ›áƒ”áƒœáƒ˜áƒ£áƒ¡ ID
+mn;áƒ›áƒœ
+Mood;áƒ®áƒáƒ¡áƒ˜áƒáƒ—áƒ˜
+More;áƒ›áƒ”áƒ¢áƒ˜
+Movie;áƒ¤áƒ˜áƒšáƒ›áƒ˜áƒ¡ áƒ¡áƒáƒ®áƒ”áƒšáƒ˜
+ms;ms
+MSDI;MSDI
+MusicBy;áƒ™áƒáƒ›áƒžáƒáƒ–áƒ˜áƒ¢áƒáƒ áƒ˜
+MuxingMode;Muxing mode
+MuxingMode_MoreInfo;Muxing mode, more info
+MuxingMode_PackedBitstream;Packed bitstream
+Name;áƒ¡áƒáƒ®áƒ”áƒšáƒ˜
+Nationality;Nationality
+NetworkName;Network name
+New;áƒáƒ®áƒáƒšáƒ˜áƒ›áƒáƒ˜áƒ—áƒ®áƒáƒ•áƒ¡áƒ˜áƒœáƒ¢áƒ”áƒ áƒœáƒ”áƒ¢áƒ¡
+Newest version;áƒ©áƒ”áƒáƒ›áƒáƒ¬áƒ›áƒ” áƒ’áƒáƒœáƒáƒ®áƒšáƒ”áƒ‘áƒ ( )
+NewVersion_Menu;áƒžáƒ áƒáƒ’áƒ áƒáƒ›áƒ˜áƒ¡ áƒáƒ®áƒáƒšáƒ˜ áƒ•áƒ”áƒ áƒ¡áƒ˜áƒ áƒ®áƒ”áƒšáƒ›áƒ˜áƒ¡áƒáƒ¬áƒ•áƒ“áƒáƒ›áƒ˜áƒ
+NewVersion_Question_Title;áƒžáƒ áƒáƒ’áƒ áƒáƒ›áƒ˜áƒ¡ áƒáƒ®áƒáƒšáƒ˜ áƒ•áƒ”áƒ áƒ¡áƒ˜áƒ áƒ’áƒáƒ›áƒáƒ•áƒ˜áƒ“áƒ!
+NewVersion_Question_Content;áƒáƒ®áƒáƒšáƒ˜ áƒ•áƒ”áƒ áƒ¡áƒ˜áƒ(v%Version%) áƒ£áƒ™áƒ•áƒ” áƒ®áƒ”áƒšáƒ›áƒ˜áƒ¡áƒáƒ¬áƒ•áƒ“áƒáƒ›áƒ˜áƒ, áƒ’áƒáƒ“áƒ›áƒáƒ¬áƒ”áƒ áƒ áƒ’áƒ¡áƒ£áƒ áƒ¡?
+No;áƒáƒ áƒ
+Not yet;áƒ¯áƒ”áƒ  áƒáƒ áƒ
+NumColors;áƒ¤áƒ”áƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒ áƒ˜áƒªáƒ®áƒ•áƒ˜
+OK;áƒ™áƒáƒ áƒ’áƒ˜
+One output file per input file;One output file per input file
+Open;áƒ’áƒáƒ®áƒ¡áƒœáƒ
+OpenCandy_01;áƒ’áƒáƒ“áƒ›áƒáƒ¬áƒ”áƒ áƒ˜áƒšáƒ˜áƒ ________
+OpenCandy_02;__% áƒ›áƒ–áƒáƒ“áƒáƒ
+OpenCandy_03;Internet connection interrupted
+OpenCandy_04;________ áƒ’áƒáƒ“áƒ›áƒáƒ¬áƒ”áƒ áƒ áƒ¨áƒ”áƒ¡áƒ áƒ£áƒšáƒ”áƒ‘áƒ˜áƒ
+OpenCandy_05;áƒ¡áƒ¬áƒ áƒáƒ¤áƒ˜ áƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒáƒªáƒ˜áƒ ________
+OpenCandy_06;Are you sure you wish to cancel the install?\r\nIf you wish to postpone the install until later, select 'No'.\r\nNote: You may select Exit from the menu to defer installation until after the next time you reboot.
+OpenCandy_07;áƒ’áƒáƒ“áƒ›áƒáƒ¬áƒ”áƒ áƒ˜áƒšáƒ˜ ________ áƒ“áƒáƒžáƒáƒ£áƒ–áƒ”áƒ‘áƒ£áƒšáƒ˜ áƒ˜áƒ¥áƒœáƒ.\r\náƒ“áƒáƒáƒ­áƒ˜áƒ áƒ” áƒ®áƒ”áƒšáƒáƒ®áƒšáƒ áƒ›áƒªáƒ“áƒ”áƒšáƒáƒ‘áƒ˜áƒ¡ áƒ˜áƒ™áƒáƒœáƒ¡,áƒ áƒáƒ› áƒ’áƒáƒáƒ’áƒ áƒ«áƒ”áƒšáƒ áƒ’áƒáƒ“áƒ›áƒáƒ¬áƒ”áƒ áƒ.
+OpenCandy_08;A critical error has occurred. Installation of _________ will be aborted.
+OpenCandy_09;áƒ’áƒáƒ“áƒ›áƒáƒ¬áƒ”áƒ áƒ˜áƒ¡ áƒ“áƒáƒžáƒáƒ£áƒ–áƒ”áƒ‘áƒ
+OpenCandy_10;áƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒáƒªáƒ˜áƒ˜áƒ¡ áƒ¨áƒ”áƒ©áƒ”áƒ áƒ”áƒ‘áƒ
+OpenCandy_11;áƒ’áƒáƒ“áƒ›áƒáƒ¬áƒ”áƒ áƒ˜áƒ¡ áƒ’áƒáƒ’áƒ áƒ«áƒ”áƒšáƒ”áƒ‘áƒ
+OpenCandy_12;áƒ¡áƒáƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒáƒªáƒ˜áƒáƒ“áƒáƒœ áƒ’áƒáƒ¡áƒ•áƒšáƒ
+OpenCandy_13;___________ - áƒ áƒáƒ™áƒáƒ›áƒ”áƒœáƒ“áƒ˜áƒ áƒ”áƒ‘áƒ£áƒšáƒ˜áƒ ____________ -áƒ¡áƒ’áƒáƒœ
+OpenCandy_14;áƒ’áƒáƒ“áƒ›áƒáƒ¬áƒ”áƒ áƒ˜áƒšáƒ˜áƒ _________
+OpenCandy_15;___________, áƒ”áƒ¡ áƒžáƒ áƒáƒ’áƒ áƒáƒ›áƒ áƒ áƒ”áƒ™áƒáƒ›áƒ”áƒœáƒ“áƒ˜áƒ áƒ‘áƒ”áƒ£áƒšáƒ˜áƒ ___________-áƒ¡áƒ’áƒáƒœ, is now downloading at your requestWe will let you know when it is ready to be installed.
+OpenCandy_16;___________ áƒ›áƒ–áƒáƒ“áƒáƒ áƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒáƒªáƒ˜áƒ˜áƒ¡áƒ—áƒ•áƒ˜áƒ¡
+OpenCandy_17;___________ áƒ£áƒ™áƒ•áƒ” áƒ¡áƒ áƒ£áƒšáƒáƒ“ áƒ’áƒáƒ“áƒ›áƒáƒ¬áƒ”áƒ áƒ˜áƒšáƒ˜áƒ. áƒ“áƒáƒáƒ™áƒšáƒ˜áƒ™áƒ”áƒ— 'áƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒáƒªáƒ˜áƒáƒ¡' ,áƒ áƒáƒ› áƒ“áƒáƒáƒ§áƒ”áƒœáƒáƒ— áƒžáƒ áƒáƒ’áƒ áƒáƒ›áƒ.
+OpenCandy_18;___________ áƒ’áƒáƒœ ___________ áƒ’áƒáƒ“áƒ›áƒáƒ¬áƒ”áƒ áƒ˜áƒšáƒ˜áƒ
+OpenCandy_19;áƒžáƒ áƒáƒ’áƒ áƒáƒ›áƒ˜áƒ áƒ”áƒ‘áƒ OpenCandy
+OpenCandy_20;áƒ’áƒáƒ˜áƒ’áƒ” áƒ›áƒ”áƒ¢áƒ˜ OpenCandy.com-áƒ–áƒ”
+OpenCandy_21;áƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒáƒªáƒ˜áƒ
+OpenCandy_22;áƒ“áƒáƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒ˜áƒ áƒ”áƒ‘áƒ£áƒšáƒ˜áƒ ___________
+OpenCandy_23;This will cancel the installation of ___________\r\nAre you sure you wish to exit?
+OpenCandy_24;áƒžáƒáƒ£áƒ–áƒ
+OpenCandy_25;áƒ’áƒáƒ“áƒ›áƒáƒ¬áƒ”áƒ áƒ˜áƒšáƒ˜ áƒ“áƒáƒžáƒáƒ£áƒ–áƒ“áƒ. áƒ“áƒáƒáƒ­áƒ˜áƒ áƒ”áƒ— 'áƒ’áƒáƒ’áƒ áƒ«áƒ”áƒšáƒ”áƒ‘áƒ' áƒ áƒáƒªáƒ áƒ¨áƒ”áƒœ áƒ˜áƒ¥áƒœáƒ”áƒ‘áƒ˜ áƒ›áƒ–áƒáƒ“ áƒ’áƒáƒ“áƒ›áƒáƒ¬áƒ”áƒ áƒ˜áƒ¡áƒ—áƒ•áƒ˜áƒ¡.
+OpenCandy_26;áƒ’áƒáƒ’áƒ áƒ«áƒ”áƒšáƒ”áƒ‘áƒ
+OpenCandy_27;áƒ“áƒáƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒ˜áƒ áƒ” áƒáƒ®áƒšáƒáƒ•áƒ”
+OpenCandy_28;áƒ“áƒáƒžáƒáƒ£áƒ–áƒ”áƒ‘áƒ
+OpenCandy_29;áƒ’áƒáƒ’áƒ áƒ«áƒ”áƒšáƒ”áƒ‘áƒ
+OpenCandy_30;áƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒáƒªáƒ˜áƒ˜áƒ¡ áƒ¨áƒ”áƒ©áƒ”áƒ áƒ”áƒ‘áƒ
+OpenCandy_31;áƒáƒ˜áƒ áƒ©áƒ˜áƒ”áƒ— áƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒ¢áƒáƒ áƒ˜áƒ¡ áƒáƒžáƒªáƒ˜áƒ”áƒ‘áƒ˜
+OpenCandy_32;áƒ“áƒáƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒ˜áƒ áƒ“áƒ ___________
+OpenCandy_33;áƒáƒ  áƒ“áƒáƒáƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒ˜áƒ áƒ
+OpenCandy_34;áƒáƒ˜áƒ áƒ©áƒ˜áƒ”áƒ— áƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒáƒªáƒ˜áƒ˜áƒ¡ áƒáƒžáƒªáƒ˜áƒ”áƒ‘áƒ˜
+OpenCandy_35;______ áƒ’áƒ˜áƒ áƒ©áƒ”áƒ•áƒ— áƒáƒ› áƒžáƒ áƒáƒ’áƒ áƒáƒ›áƒáƒ¡
+OpenCandy_36;áƒ›áƒ˜áƒ›áƒ“áƒ˜áƒœáƒáƒ áƒ” áƒ˜áƒœáƒ¡áƒ¢áƒáƒšáƒáƒªáƒ˜áƒ áƒáƒ  áƒ˜áƒ¥áƒœáƒ”áƒ‘áƒ áƒ¨áƒ”áƒ©áƒ”áƒ áƒ”áƒ‘áƒ£áƒšáƒ˜
+Options;áƒáƒžáƒªáƒ˜áƒ”áƒ‘áƒ˜
+Options_Hint;áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜
+Original;áƒáƒ áƒ˜áƒ’áƒ˜áƒœáƒáƒšáƒ˜
+OriginalNetworkName;Original network name
+OriginalSourceForm;Original source form
+OriginalSourceMedium;Original source medium
+Other;áƒ¡áƒ®áƒ•áƒ
+Output;áƒ’áƒáƒ›áƒáƒ•áƒáƒšáƒ˜
+Output format;áƒ’áƒáƒ›áƒáƒ•áƒáƒšáƒ˜áƒ¡ áƒ¤áƒáƒ áƒ›áƒáƒ¢áƒ˜
+OverallBitRate;áƒ¡áƒáƒ”áƒ áƒ—áƒ áƒ‘áƒ˜áƒ¢ áƒ áƒ”áƒ˜áƒ¢áƒ˜
+OverallBitRate_Maximum;áƒ›áƒáƒ¥áƒ¡áƒ˜áƒ›áƒáƒšáƒ£áƒ áƒ˜ áƒ‘áƒ˜áƒ¢ áƒ áƒ”áƒ˜áƒ¢áƒ˜áƒ¡ áƒ›áƒ—áƒšáƒ˜áƒáƒœáƒáƒ‘áƒ 
+OverallBitRate_Minimum;áƒ›áƒ˜áƒœáƒ˜áƒ›áƒáƒšáƒ£áƒ áƒ˜ áƒ‘áƒ˜áƒ¢ áƒ áƒ”áƒ˜áƒ¢áƒ˜áƒ¡ áƒ›áƒ—áƒšáƒ˜áƒáƒœáƒáƒ‘áƒ
+OverallBitRate_Mode;áƒ‘áƒ˜áƒ¢ áƒ áƒ”áƒ˜áƒ¢áƒ˜áƒ¡ áƒ áƒ”áƒŸáƒ˜áƒ›áƒ˜ áƒ›áƒ—áƒšáƒ˜áƒáƒœáƒáƒ‘áƒáƒ¨áƒ˜
+OverallBitRate_Nominal;Nominal Overall bit rate
+Part;áƒœáƒáƒ¬áƒ˜áƒšáƒ˜
+Part_Count;áƒ¡áƒ£áƒš áƒ¯áƒáƒ›áƒ¨áƒ˜
+Performer;Performer
+Period;áƒžáƒ”áƒ áƒ˜áƒáƒ“áƒ˜
+Phone;áƒ¢áƒ”áƒšáƒ”áƒ¤áƒáƒœáƒ˜
+PixelAspectRatio;áƒžáƒ˜áƒ¥áƒ¡áƒ”áƒšáƒ˜áƒ¡ áƒáƒ¡áƒžáƒ”áƒ¥áƒ¢ áƒ áƒáƒ¢áƒ˜áƒ
+PixelAspectRatio_Original;áƒžáƒ˜áƒ¥áƒ¡áƒ”áƒšáƒ˜áƒ¡ áƒáƒ áƒ˜áƒ’áƒ˜áƒœáƒáƒšáƒ˜ áƒáƒ¡áƒžáƒ”áƒ¥áƒ¢ áƒ áƒáƒ¢áƒ˜áƒ
+PlayCounter;PlayCounter
+Played_Count;Times played
+Played_First_Date;áƒžáƒ˜áƒ áƒ•áƒ”áƒšáƒáƒ“ áƒ©áƒáƒ áƒ—áƒ£áƒšáƒ˜
+Played_Last_Date;áƒ‘áƒáƒšáƒáƒ¡ áƒ©áƒáƒ áƒ—áƒ£áƒšáƒ˜
+PlayTime;áƒ®áƒáƒœáƒ’áƒ áƒ«áƒšáƒ˜áƒ•áƒáƒ‘áƒ
+Position;Position
+Position_Total;áƒ¯áƒáƒ›áƒ¨áƒ˜
+Preferences;áƒžáƒáƒ áƒáƒ›áƒ”áƒ¢áƒ áƒ”áƒ‘áƒ˜
+Producer;áƒžáƒ áƒáƒ“áƒ£áƒ¡áƒ”áƒ áƒ˜
+ProductionDesigner;áƒžáƒ áƒáƒ“áƒ£áƒ¥áƒªáƒ˜áƒ¡ áƒ“áƒ˜áƒ–áƒáƒ˜áƒœáƒ”áƒ áƒ˜
+ProductionStudio;áƒžáƒ áƒáƒ“áƒ£áƒ¥áƒªáƒ˜áƒ˜áƒ¡ áƒ¡áƒ¢áƒ£áƒ“áƒ˜áƒ
+Publisher;áƒ’áƒáƒ›áƒáƒ›áƒªáƒ”áƒ›áƒ”áƒšáƒ˜
+Purchased_Date;
+Quote character;Quote character
+RadioStation;áƒ áƒáƒ“áƒ˜áƒ áƒ¡áƒáƒ“áƒ’áƒ£áƒ áƒ˜
+Rating;áƒ áƒ”áƒ˜áƒ¢áƒ˜áƒœáƒ’áƒ˜
+Recorded_Date;áƒ©áƒáƒ¬áƒ”áƒ áƒ˜áƒ¡ áƒ—áƒáƒ áƒ˜áƒ¦áƒ˜
+Recorded_Location;áƒ©áƒáƒ¬áƒ”áƒ áƒ˜áƒ¡ áƒáƒ“áƒ’áƒ˜áƒšáƒ˜
+Released_Date;áƒ’áƒáƒ›áƒáƒ¨áƒ•áƒ”áƒ‘áƒ˜áƒ¡ áƒ—áƒáƒ áƒ˜áƒ¦áƒ˜
+RemixedBy;áƒ áƒ”áƒ›áƒ˜áƒ¥áƒ¡áƒ˜áƒ¡ áƒáƒ•áƒ¢áƒáƒ áƒ˜
+ReplayGain_Gain;Replay gain
+ReplayGain_Peak;Replay gain peak
+Resolution;áƒ’áƒáƒ¤áƒáƒ áƒ—áƒáƒ”áƒ‘áƒ
+s;s
+SamplingRate;Sampling rate
+Save;áƒ“áƒáƒ›áƒáƒ®áƒ¡áƒáƒ•áƒ áƒ”áƒ‘áƒ
+ScanType;áƒ¡áƒ™áƒáƒœáƒ˜áƒ áƒ”áƒ‘áƒ˜áƒ¡ áƒ¢áƒ˜áƒžáƒ˜
+ScanType_Original;
+ScanOrder;Scan order
+ScanOrder_StoredDisplayedInverted;
+ScanOrder_Original;
+ScreenplayBy;Screenplay by
+Season;áƒ¡áƒ”áƒ–áƒáƒœáƒ˜
+see below;see below
+Send HeaderFile;Please send me the Header file here : http://sourceforge.net/projects/mediainfo/ (Bug section)
+Separator_Columns;columns separator
+Separator_Lines;lines separator
+ServiceChannel;áƒ¡áƒ”áƒ áƒ•áƒ˜áƒ¡áƒ˜áƒ¡ áƒáƒ áƒ®áƒ”áƒ‘áƒ˜áƒ¡ áƒ áƒáƒáƒ“áƒ”áƒœáƒáƒ‘áƒ
+ServiceName;áƒ¡áƒ”áƒ áƒ•áƒ˜áƒ¡áƒ˜áƒ¡ áƒ¡áƒáƒ®áƒ”áƒšáƒ˜
+ServiceProvider;áƒ¡áƒ”áƒ áƒ•áƒ˜áƒ¡ áƒžáƒ áƒáƒ•áƒáƒ˜áƒ“áƒ”áƒ áƒ˜
+ServiceType;Service type
+Set;Set
+Set_Count;Set count
+Setup;áƒ˜áƒœáƒ¡áƒ¢áƒšáƒáƒªáƒ˜áƒ
+Sharpness;Sharpness
+Sheet;áƒªáƒ®áƒ áƒ˜áƒšáƒ˜
+Sheet (Complete);áƒªáƒ®áƒ˜áƒ áƒ˜áƒšáƒ˜ (áƒ¡áƒ áƒ£áƒšáƒ˜)
+Shell extension;Explorer extension (in Windows Explorer, right click on a file, there will be a MediaInfo option)
+Shell extension, folder;For folders too
+Shell InfoTip;Explorer Tooltip (in Windows Explorer, move the mouse over the file, info will be displayed)
+Show menu;áƒ›áƒáƒ©áƒ•áƒ”áƒœáƒ” áƒ›áƒ”áƒœáƒ˜áƒ£
+Show toolbar;áƒ›áƒáƒ©áƒ•áƒ”áƒœáƒ” áƒžáƒáƒœáƒ”áƒšáƒ˜
+Sort;áƒ“áƒáƒšáƒáƒ’áƒ”áƒ‘áƒ˜áƒ¡ áƒ¨áƒ”áƒ¡áƒáƒ‘áƒáƒ›áƒ˜áƒ¡áƒáƒ‘áƒ
+SamplingCount;áƒœáƒ˜áƒ›áƒ£áƒ¨áƒ”áƒ‘áƒ˜áƒ¡ áƒ áƒáƒáƒ“áƒ”áƒœáƒáƒ‘áƒ
+SoundEngineer;áƒ®áƒœáƒ˜áƒ¡ áƒ˜áƒœáƒŸáƒ˜áƒœáƒ”áƒ áƒ˜
+Source;
+Source_Duration;
+Source_FrameCount;
+Source_SamplingCount;
+Source_StreamSize;
+Source_StreamSize_Encoded;
+Standard;áƒ¡áƒ¢áƒáƒœáƒ“áƒáƒ áƒ¢áƒ˜
+Stream;áƒœáƒáƒ™áƒáƒ“áƒ˜
+Stream_MoreInfo;áƒ£áƒ¤áƒ áƒ áƒ›áƒ”áƒ¢áƒ˜ áƒ˜áƒœáƒ¤áƒáƒ áƒ›áƒáƒªáƒ˜áƒ áƒœáƒáƒ™áƒáƒ“áƒ–áƒ”
+StreamCount;áƒáƒ› áƒœáƒáƒ™áƒáƒ“áƒ˜áƒ¡ áƒ¡áƒáƒ®áƒ”áƒáƒ‘áƒ˜áƒ¡ áƒ áƒáƒáƒ“áƒ”áƒœáƒáƒ‘áƒ
+StreamID;áƒœáƒáƒ™áƒáƒ“áƒ˜áƒ¡ ID
+StreamKind;áƒœáƒáƒ™áƒáƒ“áƒ”áƒ‘áƒ˜áƒ¡ áƒ¡áƒáƒ®áƒ”áƒáƒ‘áƒ”áƒ‘áƒ˜
+StreamKindID;Stream identifier
+StreamKindPos;Stream identifier
+StreamSize;áƒœáƒáƒ™áƒáƒ“áƒ˜ áƒ–áƒáƒ›áƒ
+StreamSize_Encoded;
+StreamSize_Proportion;Proportion of this stream
+Subject;Subject
+SubTrack;SubTrack
+Summary;Summary
+Supported formats;Supported formats
+Supported?;áƒ›áƒ®áƒáƒ áƒ“áƒáƒ­áƒ”áƒ áƒ?
+Synopsis;Synopsis
+SystemId;Id
+Tagged_Application;Tagging application
+Tagged_Date;Tagged date
+Technician;áƒ¢áƒ”áƒ¥áƒœáƒ˜áƒ™áƒ£áƒ áƒ˜
+TermsOfUse;Terms of use
+Text;áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜
+Text - Custom;áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜ - áƒ¡áƒ¢áƒáƒœáƒ“áƒáƒ áƒ¢áƒ£áƒšáƒ˜
+Text (HTML);áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜ (HTML)
+Text stream(s);áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ”áƒ‘áƒ˜
+Text streams;áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ”áƒ‘áƒ˜
+Text_Codec_List;áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜áƒ¡ áƒ™áƒáƒ“áƒ”áƒ™áƒ”áƒ‘áƒ˜
+Text_No;áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜ áƒáƒ áƒáƒ
+Text1;1-áƒšáƒ˜ áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ˜
+Text2;2-áƒšáƒ˜ áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ˜
+Text3;áƒ›áƒ”-3 áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ˜
+TextCount;áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜áƒ¡ áƒœáƒáƒ™áƒáƒ“áƒ”áƒ‘áƒ˜áƒ¡ áƒ áƒáƒáƒ“áƒ”áƒœáƒáƒ‘áƒ
+ThanksTo;áƒ›áƒáƒ“áƒšáƒáƒ‘áƒáƒ¡ áƒ•áƒ£áƒ®áƒ“áƒ˜áƒ—
+Thousands separator;Thousands separator
+Title;áƒ¡áƒáƒ—áƒáƒ£áƒ áƒ˜
+Title_More;áƒ¡áƒáƒ—áƒáƒ£áƒ áƒ–áƒ” áƒ›áƒ”áƒ¢áƒ˜ áƒ˜áƒœáƒ¤áƒáƒ áƒ›áƒáƒªáƒ˜áƒ
+TimeCode;
+TimeCode_FirstFrame;
+TimeCode_Settings;
+TimeCode_Source;
+TimeStamp;
+TimeZone;Timezone
+Total;áƒ¯áƒáƒ›áƒ¨áƒ˜
+Track;áƒ¢áƒ áƒ”áƒ™áƒ˜áƒ¡ áƒ¡áƒáƒ®áƒ”áƒšáƒ˜
+Track_Count;Track count
+transfer_characteristics;Transfer characteristics
+Translator;áƒ›áƒ—áƒáƒ áƒ’áƒ›áƒœáƒ”áƒšáƒ˜
+Tree;áƒ¡áƒ•áƒ”áƒ¢áƒ˜
+Tree & Text;áƒ¡áƒ•áƒ”áƒ¢áƒ˜ & áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜
+Type;
+UniqueID;áƒ£áƒœáƒ˜áƒ™áƒáƒšáƒ£áƒ áƒ˜ ID
+Unknown;áƒ£áƒªáƒœáƒáƒ‘áƒ˜áƒ
+Url;Url
+Video;áƒ•áƒ˜áƒ“áƒ”áƒ
+Video stream(s);áƒ•áƒ˜áƒ“áƒ”áƒ áƒœáƒáƒ™áƒáƒ“áƒ˜(áƒ”áƒ‘áƒ˜)
+Video_Codec_List;áƒ•áƒ˜áƒ“áƒ”áƒáƒ¡ áƒ™áƒáƒ“áƒ”áƒ™áƒ”áƒ‘áƒ˜
+Video_Delay;Delay relative to video
+Video_No;áƒáƒ  áƒáƒ áƒ˜áƒ¡ áƒ•áƒ˜áƒ“áƒ”áƒ
+Video0_Delay;Video0 delay
+Video1;1-áƒšáƒ˜ áƒ•áƒ˜áƒ“áƒ”áƒ áƒœáƒáƒ™áƒáƒ“áƒ˜
+VideoCount;áƒ•áƒ˜áƒ“áƒ”áƒ áƒœáƒáƒ™áƒáƒ“áƒ”áƒ‘áƒ˜áƒ¡ áƒáƒœáƒ’áƒáƒ áƒ˜áƒ¨áƒ˜
+View;áƒ©áƒ•áƒ”áƒœáƒ”áƒ‘áƒ
+View_Hint;áƒ®áƒ”áƒ“áƒ•áƒ˜áƒ¡ áƒ¢áƒ˜áƒžáƒ˜áƒ¡ áƒ¨áƒ”áƒªáƒšáƒ
+Warning : more streams in the files;áƒ’áƒáƒ¤áƒ áƒ—áƒ®áƒ˜áƒšáƒ”áƒ‘áƒ : áƒ¤áƒáƒ˜áƒšáƒ¨áƒ˜ áƒ‘áƒ”áƒ•áƒ áƒ˜ áƒœáƒáƒ™áƒáƒ“áƒ”áƒ‘áƒ˜áƒ
+Web;áƒ•áƒ”áƒ‘-áƒ’áƒ•áƒ”áƒ áƒ“áƒ˜
+WebSite_Audio;áƒ¨áƒ”áƒ“áƒ˜ áƒáƒ› áƒáƒ£áƒ“áƒ˜áƒáƒ¡ áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒ•áƒ”áƒ‘-áƒ’áƒ•áƒ”áƒ áƒ“áƒ–áƒ”
+WebSite_Audio_More;áƒ¨áƒ”áƒ“áƒ˜ áƒáƒ› áƒ•áƒ”áƒ‘-áƒ’áƒ•áƒ”áƒ áƒ“áƒ–áƒ” (%Url%) ,áƒ áƒáƒ› áƒ˜áƒžáƒáƒ•áƒ áƒáƒ› áƒáƒ£áƒ“áƒ˜áƒáƒ¡ áƒ™áƒáƒ“áƒ”áƒ™áƒ˜
+WebSite_General;áƒáƒ› áƒ¤áƒáƒ˜áƒšáƒ˜áƒ¡ áƒ¤áƒšáƒ”áƒ˜áƒ”áƒ áƒ˜áƒ¡ áƒ•áƒ”áƒ‘-áƒ’áƒ•áƒ”áƒ áƒ“áƒ–áƒ” áƒ’áƒáƒ“áƒáƒ¡áƒ•áƒšáƒ
+WebSite_General_More;áƒáƒ› áƒ¤áƒáƒ˜áƒšáƒ˜áƒ¡ áƒ¤áƒšáƒ”áƒ˜áƒ”áƒ áƒ˜áƒ¡ áƒ•áƒ”áƒ‘-áƒ’áƒ•áƒ”áƒ áƒ“áƒ–áƒ” áƒ’áƒáƒ“áƒáƒ¡áƒ•áƒšáƒ
+WebSite_Text;áƒ¨áƒ”áƒ“áƒ˜ áƒáƒ› áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜áƒ¡ áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒ•áƒ”áƒ‘-áƒ’áƒ•áƒ”áƒ áƒ“áƒ–áƒ”
+WebSite_Text_More;áƒ¨áƒ”áƒ“áƒ˜ áƒáƒ› áƒ•áƒ”áƒ‘-áƒ’áƒ•áƒ”áƒ áƒ“áƒ–áƒ” (%Url%) ,áƒ áƒáƒ› áƒ˜áƒžáƒáƒ•áƒ áƒáƒ› áƒ¢áƒ”áƒ¥áƒ¡áƒ¢áƒ˜áƒ¡ áƒ™áƒáƒ“áƒ”áƒ™áƒ˜
+WebSite_Url;http://MediaArea.net/MediaInfo
+WebSite_Video;áƒ¨áƒ”áƒ“áƒ˜ áƒáƒ› áƒ•áƒ˜áƒ“áƒ”áƒ áƒ™áƒáƒ“áƒ”áƒ™áƒ˜áƒ¡ áƒ•áƒ”áƒ‘-áƒ’áƒ•áƒ”áƒ áƒ“áƒ–áƒ”
+WebSite_Video_More;áƒ¨áƒ”áƒ“áƒ˜ áƒáƒ› áƒ•áƒ”áƒ‘-áƒ’áƒ•áƒ”áƒ áƒ“áƒ–áƒ” (%Url%) ,áƒ áƒáƒ› áƒ˜áƒžáƒáƒ•áƒ áƒáƒ› áƒ•áƒ˜áƒ“áƒ”áƒáƒ¡ áƒ™áƒáƒ“áƒ”áƒ™áƒ˜
+Width;áƒ¡áƒ˜áƒ’áƒáƒœáƒ”
+Width_Original;áƒáƒ áƒ˜áƒ’áƒ˜áƒœáƒáƒšáƒ˜ áƒ¡áƒ˜áƒ’áƒáƒœáƒ”
+WriteMe;áƒ›áƒ˜áƒ¬áƒ”áƒ áƒ”áƒ— áƒáƒ•áƒ¢áƒáƒ áƒ¡
+WriteToTranslator;áƒ›áƒ˜áƒ¬áƒ”áƒ áƒ”áƒ— áƒ›áƒ—áƒáƒ áƒ’áƒ›áƒœáƒ”áƒšáƒ¡
+Written_Date;áƒ“áƒáƒ¬áƒ”áƒ áƒ˜áƒ¡ áƒ—áƒáƒ áƒ˜áƒ¦áƒ˜
+Written_Location;áƒ“áƒáƒ¬áƒ”áƒ áƒ˜áƒ¡ áƒáƒ“áƒ’áƒ˜áƒšáƒ˜
+WrittenBy;áƒ“áƒáƒ¬áƒ”áƒ áƒ˜áƒšáƒ˜áƒ
+Yes;áƒ“áƒ˜áƒáƒ®
+Your system;áƒ—áƒ¥áƒ•áƒ”áƒœáƒ˜ áƒ¡áƒ˜áƒ¡áƒ¢áƒ”áƒ›áƒ
+ZZ_Automatic_Percent;93
+ZZ_AutomaticLanguage_Percent;97
