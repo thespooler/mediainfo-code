@@ -72,6 +72,12 @@ ul {
     height: 292px;
 }
 
+.thumb-about-mac {
+    background: url("/_/img/Screenshot/MediaInfo_Mac_Easy_en-thumb-about.png") no-repeat;
+    width: 446px;
+    height: 300px;
+}
+
 .Banner_Top_Background {
     text-align: center;
     width: 100%;
