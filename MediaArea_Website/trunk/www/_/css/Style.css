@@ -371,6 +371,11 @@ table.menu {
         width: 224px;
         height: 146px;
     }
+    .thumb-about-mac {
+        background: url("/_/img/Screenshot/MediaInfo_Mac_Easy_en-thumb-small-about.png") no-repeat;
+        width: 224px;
+        height: 151px;
+    }
     .Digimetrics-about {
         background: url("/_/img/Company/Digimetrics-small.png") no-repeat;
         width: 166px;
