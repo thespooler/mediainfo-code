@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WxWidgets (MinGW32)</title>
+</head>
+<body>
+<h1>WxWidgets (MinGW32)</h1>
+<h2>Download</h2>
+<ul>
+ <li>Download <code><a href="http://prdownloads.sourceforge.net/wxwindows/wxWidgets-2.6.1.zip">http://prdownloads.sourceforge.net/wxwindows/wxWidgets-2.6.1.zip</a></code></li>
+</ul>
+
+<h2>Compile</h2>
+<ul>
+ <li>
+  With command line, in directory <code>%SOURCE_HOME%/build/msw</code>:<br/>
+  <code>make -f makefile.gcc BUILD=release SHARED=0 UNICODE=1 MSLU=1 USE_GUI=0 RUNTIME_LIBS=static MONOLITHIC=1</code>
+ </li>
+</ul>
+
+<h2>Install</h2>
+<ul>
+ <li>Copy <code>%SOURCE_HOME%/include/wx</code> to <code>/Shared/Include/wx</code></li>
+ <li>Copy <code>%SOURCE_HOME%/lib/gcc_lib/baseu/setup.h</code> to <code>/Shared/Include/wx/setup.h</code></li>
+ <li>Copy <code>%SOURCE_HOME%/lib/gcc_lib/libwxbase26u.a</code> to <code>/Shared/Library/GCC_MinGW32/WxBase.a</code></li>
+</ul>
+
+<h2>Adaptation</h2>
+<h3>Option : Create a multi-compiler setup.h</h3>
+<ul>
+ <li>Copy <code>%SOURCE_HOME%/lib/vc_lib/baseu/setup.h</code> to <code>/Shared/Include/wx/setup.mingw.base.unicode.h</code></li>
+ <li>Create a file <code>setup.h</code> and put it in <code>/Shared/Include/wx/</code>:
+  <pre>
+/*
+* wx/setup.h modified to support multiple compilers in one setup.h
+*/
+#if defined(_MSC_VER)
+ #if _MSC_VER &gt;= 1400
+  #pragma warning(disable : 4996) //MSVC8 : "deprecated" warning
+ #endif
+ #include &lt;wx/setup.msvc.base.h&gt;
+ #endif
+#elif defined(__BORLANDC__)
+ #include &lt;wx/setup.bcc.base.h&gt;
+#elif defined(__MINGW32__)
+ #include &lt;wx/setup.mingw32.base.h&gt;
+#elif defined(__CYGWIN__)
+ #include &lt;wx/setup.cygwin.base.h&gt;
+#else //Assume GCC/Linux
+ #include &lt;wx/setup.gcc.base.h&gt;
+#endif
+  </pre>
+ </li>
+</ul>
+</body>
+</html>

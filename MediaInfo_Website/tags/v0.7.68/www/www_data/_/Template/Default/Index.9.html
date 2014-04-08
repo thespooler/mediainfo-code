@@ -1,0 +1,39 @@
+                </td>
+            </tr>
+        <?php include $Path."/_/Template/Default/Help.html"; ?>
+        </tbody>
+    </table>
+<?php if (!isset($Donated))
+{
+echo '<table>
+ <tbody>
+  <tr>
+   <td style="width: 250px">
+   </td>
+   <td class="Banner_Top_Background">'; include $Path."/_/Ad/BottomOfThePage_970_90_Google.html"; echo '
+   </td>
+  </tr>
+ </tbody>
+</table>
+';
+}?>
+<?php
+if ($Page_Exploded[count($Page_Exploded)-1] == 'Screenshots.html') {
+    echo '
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write(\'<script src="/_/js/jquery-1.11.0.min.js"><\/script>\')</script>
+    <script src="/_/js/pack.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".fancybox-thumb").fancybox({
+                helpers: {
+                    thumbs: { width: 100, height: 74 }
+                }
+            });
+        });
+    </script>'
+; }?>
+    <?php if (isset($Footer_ToAdd)) echo $Footer_ToAdd; ?>
+    <?php include $Path."/_/Ad/GoogleAnalytics.html"; ?>
+</body>
+</html>
