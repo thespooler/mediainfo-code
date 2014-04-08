@@ -8,6 +8,11 @@
 <div>
 <h1>Frequently Asked Questions (FAQ)</h1>
 <ul>
+ <li><a href="#Analysis">Analysis</a>
+  <ul>
+   <li><a href="#BFF_TFF">MediaInfo states video is Bottom Filed First when it is actually Top Field First</a></li>
+  </ul>
+ </li>
  <li><a href="#General">General</a>
   <ul>
    <li><a href="#URL">What is the canonical URL of the website?</a></li>
@@ -47,6 +52,21 @@
  </li>
 </ul>
 </div>
+
+<h2><a name="Analysis"></a>Analysis</h2>
+<div class="paragraph-block">
+<h3><a name="BFF_TFF"></a>MediaInfo states video is Bottom Filed First when it is actually Top Field First</h3>
+<div class="paragraph-block">
+Most of such comments come from ProRes having displayed and stored order inverted, for a reason I ignore.<br/>
+MediaInfo shows how displayed order is wanted by the container, and sometimes the container says that stored order is TFF and displayed order is BFF ('fiel' atom in QuickTime header).<br/>
+In that case, display of MediaInfo is:
+<code><br/>
+Scan&nbsp;type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Interlaced<br/>
+Scan&nbsp;order&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Bottom&nbsp;Field&nbsp;First<br/>
+Scan&nbsp;order,&nbsp;stored/displayed&nbsp;inverted&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Yes<br/>
+</code>
+Meaning that displayed order is BFF but raw stream stored order is TFF. Some player do not obey the inversion metadata from the QuickTime container so you can sometimes see TFF.
+Update: <a href="https://sourceforge.net/p/mediainfo/bugs/841/">There is a discussion about a technical report</a> and the output may change in the future</div>
 
 <h2><a name="General"></a>General</h2>
 <div class="paragraph-block">
