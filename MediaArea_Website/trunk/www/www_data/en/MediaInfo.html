@@ -17,7 +17,7 @@
         <i class="icon-white icon-download-alt pull-left"></i> Download MediaInfo!
     </a>
     <p>(version <?php echo $Version;?><?php if (isset($Installer)) echo ', Graphical User Interface with installer';?><?php if(isset($OS)) echo ', for '.$OS;?><?php if(isset($Bits)) echo ' bit';?><?php if (isset($Size)) echo ', '.$Size.' MB';?>)<br/>
-    <small>(the installer is bundled with a software distribution network. <a href="/Bundled">Learn more</a>.)</small></p>
+    <?php if(!isset($Donated)) echo '<small>(the installer is bundled with a software distribution network. <a href="/Bundled">Learn more</a>.)</small>';?></p>
     <p>
     Other versions (packaging, OS, interface...) are also <a href="MediaInfo/Download"> available</a>
     <br/>
